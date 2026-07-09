@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-10 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-10</h1>
+<hr />
+<h2>1. GigaWiper：新型 Windows 破坏性后门捆绑磁盘擦除、伪勒索和间谍功能</h2>
+<ul>
+<li><strong>评分：92</strong> — 新型破坏性恶意软件组合三种旧工具，关联伊朗威胁行为者，危害极高</li>
+<li><strong>来源：The Hacker News</strong></li>
+<li><strong>摘要：</strong> Microsoft 分析了一种名为 GigaWiper 的破坏性 Windows 后门，该工具将三种旧的破坏性程序合并为一套工具集，提供磁盘全擦除、覆盖 Windows 驱动器或运行伪勒索软件（加密文件但不保存解密密钥）的命令。Binary Defense 将其识别为 BLUERABBIT，四个哈希和命令服务器与报告匹配，关联疑似伊朗威胁行为者。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/new-gigawiper-windows-backdoor-bundles.html</li>
+</ul>
+<hr />
+<h2>2. Microsoft 修补 RoguePlanet Defender 漏洞（CVE-2026-50656），可获取 SYSTEM 权限</h2>
+<ul>
+<li><strong>评分：90</strong> — Defender 引擎竞争条件漏洞可在最新 Windows 上获取 SYSTEM 权限，且被公开近一个月后才修补</li>
+<li><strong>来源：The Hacker News</strong></li>
+<li><strong>摘要：</strong> Microsoft 修补了 Defender 中名为 RoguePlanet 的权限提升漏洞（CVE-2026-50656，CVSS 7.8），该漏洞位于恶意软件防护引擎（mpengine.dll）中。研究者 Chaotic Eclipse 发现此竞争条件漏洞可在最新 Windows 系统上以 SYSTEM 权限启动 shell，且漏洞在修复前已公开披露近一个月。已在引擎版本 1.1.26060.3008 中修复。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/microsoft-patches-rogueplanet-defender.html</li>
+</ul>
+<hr />
+<h2>3. 欧盟议会批准 Chat Control 1.0 监控法案</h2>
+<ul>
+<li><strong>评分：88</strong> — 大规模监控立法影响 5 亿+ 欧盟公民隐私，意义重大且争议极高</li>
+<li><strong>来源：Hacker News (news.ycombinator.com)</strong></li>
+<li><strong>摘要：</strong> 欧盟议会批准了 Chat Control 1.0 监控法案，该法案要求对数字通信进行大规模监控扫描。议员 Patrick Breyer 对此表示强烈反对，认为此举将严重损害公民隐私权，尤其是儿童权益。该法案在 Hacker News 上引发 432 条讨论和 889 点热度。</li>
+<li><strong>原文链接：</strong> https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/</li>
+</ul>
+<hr />
+<h2>4. Friendly Fire：AI 编程代理可被欺骗执行恶意代码</h2>
+<ul>
+<li><strong>评分：85</strong> — 新型攻击手法让本应检测漏洞的 AI 代理自身成为攻击载体，影响 Claude Code 和 OpenAI Codex</li>
+<li><strong>来源：The Hacker News</strong></li>
+<li><strong>摘要：</strong> AI Now Institute 发布了名为"Friendly Fire"的概念验证攻击，证明 Anthropic 的 Claude Code 和 OpenAI 的 Codex 在自主自审批模式下可被欺骗执行攻击者代码。本应扫描不可信代码查找漏洞的 AI 代理反而成为了攻击向量本身，影响 Claude Code（Sonnet 4.6/5、Opus 4.8 多版本）和 OpenAI Codex（GPT-5.5）。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/friendly-fire-ai-agents-built-to-catch.html</li>
+</ul>
+<hr />
+<h2>5. GhostApproval：符号链接漏洞让恶意仓库在 AI 编程助手中执行代码</h2>
+<ul>
+<li><strong>评分：82</strong> — 六大主流 AI 编程助手受影响的新漏洞模式，三个已修复两个未修复</li>
+<li><strong>来源：The Hacker News</strong></li>
+<li><strong>摘要：</strong> Wiz 研究人员发现名为 GhostApproval 的漏洞模式，影响六大 AI 编程助手（Amazon Q Developer、Claude Code、Augment、Cursor、Google Antigravity、Windsurf）。恶意仓库利用未检查的符号链接，当助手请求编辑看似无害的文件时，符号链接将写入重定向到关键系统文件。三个工具已发布修复，两个未修复，Anthropic 争议其是否为 bug。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/ghostapproval-symlink-flaws-could-let.html</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条新闻，最高分 92 分。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
