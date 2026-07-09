@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-07 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-07</h1>
+<blockquote>
+<p>数据来源：The Hacker News / BleepingComputer / Cyber Security News / Help Net Security / Hacker News<br />
+生成时间：2026-07-07 06:55 CST</p>
+</blockquote>
+<hr />
+<h2>TOP 5 精选新闻</h2>
+<h3>1. Januscape：潜伏16年的 Linux KVM 虚拟机逃逸漏洞 (CVE-2026-53359)</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>评分</strong></td>
+<td><strong>95 / 100</strong></td>
+</tr>
+<tr>
+<td><strong>来源</strong></td>
+<td>The Hacker News / Hacker News</td>
+</tr>
+<tr>
+<td><strong>评分理由</strong></td>
+<td>潜伏16年未发现的内核级 UAF 漏洞，可实现 Guest-to-Host VM 逃逸，影响所有 Intel/AMD x86 架构 KVM 环境，Google kvmCTF 悬赏高达 $250,000。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>摘要</strong>：安全研究人员发现了一个编号为 CVE-2026-53359 的 use-after-free 漏洞，存在于 Linux KVM 虚拟化模块中长达 16 年。该漏洞允许客户虚拟机破坏宿主机内核内存，实现从虚拟机到宿主机的逃逸，影响所有 Intel 和 AMD x86 系统。该漏洞以 "Januscape" 命名，已作为零日漏洞提交至 Google 的 kvmCTF 漏洞奖励计划。这意味着所有公有云和私有云中运行 KVM 的环境均面临风险——攻击者可从一台被攻破的虚拟机横向突破至宿主机，进而控制同宿主机上的所有其他虚拟机。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html">原文链接</a> | <a href="https://github.com/V4bel/Januscape">GitHub 技术细节</a></p>
+<hr />
+<h3>2. Adobe ColdFusion 最高严重性漏洞 CVE-2026-48282 正被野外活跃利用</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>评分</strong></td>
+<td><strong>92 / 100</strong></td>
+</tr>
+<tr>
+<td><strong>来源</strong></td>
+<td>BleepingComputer</td>
+</tr>
+<tr>
+<td><strong>评分理由</strong></td>
+<td>CVSS 最高严重级别漏洞，已确认被野外活跃利用，ColdFusion 广泛应用于政府和企业 Web 应用。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>摘要</strong>：据漏洞情报公司 KEVIntel 确认，攻击者正在野外积极利用 Adobe ColdFusion 的一个最高严重性漏洞 CVE-2026-48282。该漏洞是本月初 Adobe 披露的 11 个 ColdFusion 关键漏洞（其中 6 个为 CVSS 10.0）之一。ColdFusion 长期以来是 APT 组织和勒索软件团伙的高优先级攻击目标，此次活跃利用表明攻击者已迅速将 PoC 武器化。所有运行 ColdFusion 的组织应立即应用补丁并检查是否存在入侵迹象。</p>
+<p>🔗 <a href="https://www.bleepingcomputer.com/news/security/max-severity-adobe-coldfusion-flaw-now-exploited-in-attacks/">原文链接</a></p>
+<hr />
+<h3>3. Gitea Docker 镜像严重漏洞 CVE-2026-20896 (CVSS 9.8) 披露仅13天即遭大规模探测</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>评分</strong></td>
+<td><strong>88 / 100</strong></td>
+</tr>
+<tr>
+<td><strong>来源</strong></td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td><strong>评分理由</strong></td>
+<td>CVSS 9.8 近乎满分漏洞，无需认证即可提权，DevOps 平台广泛使用，利用门槛极低、攻击面大。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>摘要</strong>：威胁行为者正在积极利用 Gitea Docker 镜像中的一个严重漏洞 CVE-2026-20896（CVSS 9.8）。该漏洞源于 Gitea DevOps 平台无条件信任来自任意来源 IP 的 "X-WEBAUTH-USER" HTTP 头部，使未认证的客户端可获取管理员级别访问权限。漏洞披露仅 13 天后即观测到大规模探测活动，说明攻击者的武器化速度极快。所有使用 Gitea Docker 部署的团队需立即升级，并检查是否存在异常的认证日志。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html">原文链接</a></p>
+<hr />
+<h3>4. 伊朗关联 APT 组织 Cavern Manticore 使用全新 C2 框架攻击以色列政府与 IT 部门</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>评分</strong></td>
+<td><strong>85 / 100</strong></td>
+</tr>
+<tr>
+<td><strong>来源</strong></td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td><strong>评分理由</strong></td>
+<td>国家级 APT 攻击，全新模块化 C2 框架 "Cavern"，与 MuddyWater/Lyceum 存在战术重叠，目标为政府和关键 IT 基础设施。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>摘要</strong>：一个与伊朗情报与安全部 (MOIS) 关联的黑客组织被发现使用名为 "Cavern"（亦称 Cav3rn）的全新模块化命令与控制 (C2) 框架，针对以色列 IT 服务提供商和政府机构发动攻击。该威胁集群被追踪为 "Cavern Manticore"，在战术上与已知的伊朗 APT 组织 MuddyWater 和 Lyceum 存在显著重叠。Cavern 框架的模块化设计使其具备高度灵活性和隐蔽性，该组织的活动表明伊朗对以色列的网络情报收集行动正在升级。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html">原文链接</a></p>
+<hr />
+<h3>5. TrojPix：通过视频线缆电磁辐射从物理隔离系统中窃取数据</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>评分</strong></td>
+<td><strong>83 / 100</strong></td>
+</tr>
+<tr>
+<td><strong>来源</strong></td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td><strong>评分理由</strong></td>
+<td>新颖的物理隔离 (air-gap) 突破技术，数据窃取速率高达 8.1 Mbps、距离达 208 米，对军工/政府隔离网络构成重大威胁。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>摘要</strong>：山东大学研究人员展示了一种名为 "TrojPix" 的新型数据窃取技术，可通过操纵屏幕像素产生微弱的射频信号，经由视频线缆（HDMI/DisplayPort）向外辐射，从物理隔离 (air-gapped) 的系统中窃取数据。该技术可在 208 米距离内以高达 8.1 Mbps 的速率传输数据，足以窃取文本、密钥甚至压缩图像。TrojPix 不需要攻击者在目标系统上安装任何特殊硬件，仅需软件层面的像素操控即可实现。对于军工、政府和关键基础设施中的物理隔离网络而言，此类旁路攻击代表了防御边界的新挑战。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/new-trojpix-attack-leaks-data-from-air.html">原文链接</a></p>
+<hr />
+<h2>其他值得关注的安全动态</h2>
+<table>
+<thead>
+<tr>
+<th>新闻</th>
+<th>来源</th>
+<th>评分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SilverFox ValleyRAT 活动：Go RAT + AV Killer + 内核 Rootkit 组合攻击</td>
+<td>Cyber Security News</td>
+<td>82</td>
+</tr>
+<tr>
+<td>The Gentlemen 勒索软件使用 21 种远程执行技术加密全网</td>
+<td>Cyber Security News</td>
+<td>81</td>
+</tr>
+<tr>
+<td>Microsoft Teams 虚假 IT 支持电话传播 EtherRAT 恶意软件</td>
+<td>BleepingComputer</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Microsoft Exchange SSRF 漏洞 PoC 公开，Exchange 服务器面临风险</td>
+<td>Cyber Security News</td>
+<td>77</td>
+</tr>
+<tr>
+<td>Gemini Live 语音会话漏洞：通过配置错误的临时令牌实现工具注入</td>
+<td>Cyber Security News</td>
+<td>76</td>
+</tr>
+<tr>
+<td>ClamAV 修复 7 个可追溯到二十年前的扫描器漏洞</td>
+<td>Help Net Security</td>
+<td>75</td>
+</tr>
+<tr>
+<td>OpenSSH 10.4 发布：多项安全修复及后量子签名支持</td>
+<td>Help Net Security</td>
+<td>72</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>统计</h2>
+<ul>
+<li>本次共筛选 <strong>15</strong> 条新闻</li>
+<li>最高分 <strong>95</strong> 分</li>
+<li>数据覆盖：The Hacker News (10条) / BleepingComputer (5条) / Cyber Security News (8条) / Help Net Security (4条) / Hacker News (2条)</li>
+</ul>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>

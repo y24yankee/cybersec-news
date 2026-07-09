@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Security Poster W27</title>
+    <style>
+        :root {
+            --bg: #0b1120;
+            --card: #111827;
+            --card-border: #1f2937;
+            --text: #f3f4f6;
+            --muted: #9ca3af;
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.35);
+            --critical: #ef4444;
+            --high: #f59e0b;
+            --medium: #10b981;
+            --gold: #fbbf24;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .poster {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px;
+        }
+        .header {
+            text-align: center;
+            padding: 48px 32px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 50%, var(--accent-glow), transparent 60%);
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        .eyebrow {
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        .title {
+            font-size: 42px;
+            font-weight: 800;
+            margin: 0 0 12px;
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(90deg, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            color: var(--muted);
+            font-size: 18px;
+            position: relative;
+            z-index: 1;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        .stat-label {
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .news-card {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .rank-badge {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .rank-critical { background: rgba(239, 68, 68, 0.15); color: var(--critical); border: 1px solid rgba(239, 68, 68, 0.3); }
+        .rank-high { background: rgba(245, 158, 11, 0.15); color: var(--high); border: 1px solid rgba(245, 158, 11, 0.3); }
+        .rank-medium { background: rgba(16, 185, 129, 0.15); color: var(--medium); border: 1px solid rgba(16, 185, 129, 0.3); }
+        .score {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--gold);
+        }
+        .news-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 12px;
+            line-height: 1.4;
+        }
+        .news-summary {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 0 0 20px;
+            flex-grow: 1;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 13px;
+            border-top: 1px solid var(--card-border);
+            padding-top: 14px;
+        }
+        .source { color: var(--muted); }
+        .source-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .source-link:hover { text-decoration: underline; }
+        .footer {
+            text-align: center;
+            margin-top: 48px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: 1fr; }
+            .poster { padding: 24px; }
+            .title { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="header">
+            <div class="eyebrow">Cybersecurity Weekly Brief</div>
+            <h1 class="title">本周网络安全高危新闻精选</h1>
+            <p class="subtitle">2026.06.28 – 2026.07.05 · 评分 &gt; 85 分 · 共 16 条</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">16</div>
+                <div class="stat-label">高危新闻</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">96</div>
+                <div class="stat-label">最高评分</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">27</div>
+                <div class="stat-label">ISO 周次</div>
+            </div>
+        </div>
+
+        <div class="grid">
+            
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-critical">🔴 TOP 1</div>
+                <div class="score">96</div>
+            </div>
+            <h3 class="news-title">JadePuffer 勒索软件首次完全由 AI Agent 自动执行</h3>
+            <p class="news-summary">Sysdig 研究人员发现 JadePuffer 勒索行动利用自主 AI Agent 完成从侦察、凭据窃取、横向移动、权限维持到数据加密的完整攻击链。攻击通过 Langflow 的 CVE-2025-3248 未授权 RCE 漏洞获得初始访问，随后入侵 PostgreSQL 与 MySQL/Nacos 配置服务，最终加密 1,342 条服务配置并留下勒索信。AI Agent 能根据失败实时调整策略，例如在一次序列中仅用 31 秒就从登录失败修复到成功执行。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-05 · BleepingComputer</span>
+                <a class="source-link" href="https://www.bleepingcomputer.com/news/security/jadepuffer-ransomware-used-ai-agent-to-automate-entire-attack/" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-critical">🔴 TOP 2</div>
+                <div class="score">93</div>
+            </div>
+            <h3 class="news-title">CISA将SharePoint RCE漏洞CVE-2026-45659列入已知被利用漏洞目录</h3>
+            <p class="news-summary">CISA将CVE-2026-45659（CVSS 8.8）加入已知被利用漏洞（KEV）目录。该漏洞源于不信任数据的反序列化，任何拥有最低Site Member权限的认证攻击者即可触发远程代码执行，无需管理员权限。微软已于2026年5月修补该漏洞，但已有在野利用案例。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-03 · The Hacker News / BleepingComputer</span>
+                <a class="source-link" href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-critical">🔴 TOP 3</div>
+                <div class="score">92</div>
+            </div>
+            <h3 class="news-title">Progress Kemp LoadMaster 预认证 RCE 漏洞遭活跃利用</h3>
+            <p class="news-summary">Progress Kemp LoadMaster 负载均衡器中存在一个严重的 OS 命令注入漏洞（CVE-2026-8037，CVSS 9.6），攻击者可在未认证状态下通过构造恶意输入实现远程代码执行。watchTowr Labs 追踪发现，自 6 月 29 日起该漏洞已遭活跃利用，攻击者通过 `escape_quotes()` 函数绕过过滤。LoadMaster 作为边界设备部署于大量企业网络中，风险极高。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-02 · The Hacker News / BleepingComputer</span>
+                <a class="source-link" href="https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-critical">🔴 TOP 4</div>
+                <div class="score">92</div>
+            </div>
+            <h3 class="news-title">美国政府实体向 Kairos 支付约 100 万美元数据敲诈赎金</h3>
+            <p class="news-summary">Ransom-ISAC 的案例研究显示，某美国政府实体（线索指向俄亥俄州 Union County）向名为 Kairos 的团伙支付约 100 万美元以防止被盗文件泄露。谈判聊天记录显示，Kairos 并未部署任何加密器或锁机程序，仅通过窃取 2TB、约 160 万个文件进行敲诈，其中包含检察官办公室等敏感文件夹。研究指出，2025 年 Sophos 报告显示仅约半数勒索事件仍使用加密，数据敲诈正成为主要施压手段。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-05 · The Hacker News</span>
+                <a class="source-link" href="https://thehackernews.com/2026/07/us-government-entity-paid-kairos-group.html" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-critical">🔴 TOP 5</div>
+                <div class="score">91</div>
+            </div>
+            <h3 class="news-title">ToddyCat APT组织Umbrij恶意软件滥用OAuth窃取Gmail</h3>
+            <p class="news-summary">卡巴斯基将新型恶意软件Umbrij归因于ToddyCat APT组织。该恶意软件通过"Shadow Token via Remote Debug"（STRD）技术，利用无头Chromium浏览器连接远程调试端口获取OAuth授权码，从而通过Google API隐蔽访问受害者Gmail通信，绕过传统安全检测。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-03 · The Hacker News</span>
+                <a class="source-link" href="https://thehackernews.com/2026/07/toddycat-linked-umbrij-malware-abuses.html" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-critical">🔴 TOP 6</div>
+                <div class="score">90</div>
+            </div>
+            <h3 class="news-title">美国国土安全部 HSIN 情报共享平台遭黑客入侵</h3>
+            <p class="news-summary">美国国土安全部（DHS）证实其国土安全信息网络（HSIN）遭受网络攻击，该平台是联邦、州、地方及私营部门合作伙伴之间共享敏感情报的关键基础设施。DHS 已启动调查，目前尚不清楚攻击者获取了哪些信息以及受影响范围。这是近年来针对美国政府情报共享平台最严重的攻击之一。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-02 · BleepingComputer</span>
+                <a class="source-link" href="https://www.bleepingcomputer.com/news/security/dhs-confirms-hackers-breached-hsin-info-sharing-platform/" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-critical">🔴 TOP 7</div>
+                <div class="score">90</div>
+            </div>
+            <h3 class="news-title">CISA警告：Windows BlueHammer漏洞已被勒索软件团伙利用</h3>
+            <p class="news-summary">CISA确认CVE-2026-33825（BlueHammer，CVSS 7.8）已被勒索软件团伙在野利用。该漏洞存在于Microsoft Defender防病毒引擎的威胁修复模块中，允许本地攻击者将权限提升至SYSTEM级别。微软已于2026年4月修补，但三个月后仍被积极利用。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-03 · BleepingComputer</span>
+                <a class="source-link" href="https://www.bleepingcomputer.com/news/security/cisa-windows-bluehammer-flaw-now-exploited-by-ransomware-gangs/" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-critical">🔴 TOP 8</div>
+                <div class="score">90</div>
+            </div>
+            <h3 class="news-title">欧洲议会成员遭 Pegasus 间谍软件攻击</h3>
+            <p class="news-summary">Citizen Lab 披露，一名欧洲议会成员（同时是 Pegasus 调查委员会成员）的手机被 NSO Group 的 Pegasus 间谍软件入侵。攻击发生在该委员会调查间谍软件滥用期间，凸显针对民选官员和调查记者的国家级监控威胁持续升级。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-04 · Hacker News / Citizen Lab</span>
+                <a class="source-link" href="https://citizenlab.ca/research/member-of-committee-investigating-spyware-hacked-with-pegasus/" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-critical">🔴 TOP 9</div>
+                <div class="score">90</div>
+            </div>
+            <h3 class="news-title">朝鲜黑客通过 PolinRider 活动发布 108 个恶意包与浏览器扩展</h3>
+            <p class="news-summary">与 Contagious Interview 活动相关的朝鲜威胁行为者发起 PolinRider 行动，累计发布 108 个独特恶意包和扩展（对应 162 个恶意发布工件），包括 19 个 npm 库、10 个 Composer 包、61 个 Go 模块和 1 个 Chrome 扩展。攻击者通过入侵维护者账户或修改合法仓库，在配置文件中追加恶意 JavaScript 加载器，并连接 TRON、Aptos、BNB Smart Chain 下载第二阶段载荷 DEV#POPPER RAT 与 OmniStealer。Socket 警告该活动仍在持续。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-05 · The Hacker News</span>
+                <a class="source-link" href="https://thehackernews.com/2026/07/north-korean-hackers-publish-108.html" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-high">🟠 TOP 10</div>
+                <div class="score">89</div>
+            </div>
+            <h3 class="news-title">FortiBleed 凭证窃取活动被关联至 Lynx 勒索软件团伙</h3>
+            <p class="news-summary">此前被曝光的 FortiBleed 大规模凭证窃取活动（涉及 86,000+ 台 Fortinet 防火墙、窃取 1.1 亿+ 凭证）已被 SOCRadar 关联至 INC 和 Lynx 勒索软件组织。这表明被盗的 Fortinet 凭证正被用于后续的网络入侵和勒索软件部署。Fortinet 是全球市场份额第一的防火墙厂商，影响范围极广。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-02 · BleepingComputer / SOCRadar</span>
+                <a class="source-link" href="https://www.bleepingcomputer.com/news/security/fortibleed-credential-theft-campaign-linked-to-lynx-ransomware/" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-high">🟠 TOP 11</div>
+                <div class="score">89</div>
+            </div>
+            <h3 class="news-title">Google与FBI联合摧毁NetNut住宅代理僵尸网络（200万设备）</h3>
+            <p class="news-summary">Google与FBI、Lumen等合作伙伴联合行动，大幅削弱了NetNut（又名Popa）住宅代理网络。该网络劫持了至少200万台家用设备（包括智能电视和流媒体盒子），将恶意流量伪装为普通家庭用户的网络访问。FBI已查封数百个关联域名。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-03 · The Hacker News / Krebs on Security</span>
+                <a class="source-link" href="https://thehackernews.com/2026/07/google-disrupts-netnut-residential.html" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-high">🟠 TOP 12</div>
+                <div class="score">89</div>
+            </div>
+            <h3 class="news-title">Armored Likho 针对政府与电力部门发起网络攻击</h3>
+            <p class="news-summary">Kaspersky 发现新威胁组织 Armored Likho，利用 BusySnake 窃密工具和 Go2Tunnel 持久化远控，针对俄罗斯、巴西和哈萨克斯坦的政府机构及电力行业发起网络间谍活动与金融犯罪混合行动。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-04 · The Hacker News</span>
+                <a class="source-link" href="https://thehackernews.com/2026/07/armored-likho-targets-government.html" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-high">🟠 TOP 13</div>
+                <div class="score">88</div>
+            </div>
+            <h3 class="news-title">Adobe 紧急修复 ColdFusion 和 Campaign Classic 7 个 CVSS 10.0 满分漏洞</h3>
+            <p class="news-summary">Adobe 发布紧急安全更新，修复 ColdFusion Web 应用开发平台和 Campaign Classic 营销自动化平台中的 7 个最高严重性漏洞，全部获得 CVSS 10.0 满分评分。漏洞类型包括无限制文件上传（CVE-2026-48276、CVE-2026-48283）、输入验证缺陷（CVE-2026-48277、CVE-2026-48281、CVE-2026-48316）及路径遍历（CVE-2026-48282），均可导致任意代码执行。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-02 · The Hacker News / BleepingComputer</span>
+                <a class="source-link" href="https://thehackernews.com/2026/07/adobe-patches-7-cvss-100-flaws-in.html" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-high">🟠 TOP 14</div>
+                <div class="score">88</div>
+            </div>
+            <h3 class="news-title">"Bad Epoll" Linux 内核提权漏洞影响 Android 与 Chrome 沙箱</h3>
+            <p class="news-summary">安全研究员 Jaeyoung Chung 披露了 Linux 内核 epoll 子系统中的 "Bad Epoll" 漏洞（CVE-2026-46242），普通用户可利用该竞争条件漏洞提升至 root 权限。受影响的系统包括 Linux 桌面、服务器以及部分 Android 设备，内核 6.4 及以上版本受影响。该漏洞的特殊危险性在于可从 Chrome 渲染器沙箱内部触发，而大多数 Linux 内核提权漏洞无法做到这一点。目前补丁已发布，但尚无野外利用迹象。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-05 · The Hacker News</span>
+                <a class="source-link" href="https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-high">🟠 TOP 15</div>
+                <div class="score">87</div>
+            </div>
+            <h3 class="news-title">ConsentFix 与 ClickFix：3 秒内劫持 Microsoft 365 账户</h3>
+            <p class="news-summary">Huntress Labs 披露 ConsentFix 与 ClickFix 攻击可在约 3 秒内通过伪造 OAuth 授权提示和点击诱导窃取 Microsoft 365 令牌，绕过传统多因素认证。该手法利用用户已登录的 M365 会话和恶意应用同意流程，威胁企业云办公环境。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-04 · BleepingComputer</span>
+                <a class="source-link" href="https://www.bleepingcomputer.com/news/security/consentfix-and-clickfix-how-microsoft-365-accounts-are-hijacked-in-3-seconds/" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank-badge rank-high">🟠 TOP 16</div>
+                <div class="score">86</div>
+            </div>
+            <h3 class="news-title">Avalon 恶意软件框架集成 CrownX 勒索软件功能</h3>
+            <p class="news-summary">安全研究人员发现新型模块化恶意软件框架 Avalon，通过多阶段钓鱼链分发，包含凭证收集、横向移动、远程访问和 CrownX 勒索软件执行组件。攻击以假冒法律文件邮件为入口，诱导下载受密码保护的 Proton Drive 压缩包中的恶意 ISO 镜像。</p>
+            <div class="card-footer">
+                <span class="source">📅 2026-07-04 · The Hacker News</span>
+                <a class="source-link" href="https://thehackernews.com/2026/07/new-avalon-malware-framework-packs.html" target="_blank">查看原文</a>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="footer">
+            本海报由自动化系统生成 · 数据来源：每日网络安全新闻推送 · 仅供内部参考
+        </div>
+    </div>
+</body>
+</html>

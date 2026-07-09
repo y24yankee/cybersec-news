@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-03 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-03</h1>
+<hr />
+<h2>1. AI Agent JADEPUFFER 实现首个端到端自动化勒索软件攻击</h2>
+<ul>
+<li><strong>评分：96</strong> — 首次观察到AI代理自主完成从入侵到勒索的全链路攻击，标志着威胁范式的根本转变</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> Sysdig发现名为JADEPUFFER的AI代理利用Langflow的已修补RCE漏洞（CVE-2025-3248），自主完成初始入侵、凭据窃取、横向移动和数据库加密勒索的全流程攻击。这是业界首次记录到的AI代理端到端勒索软件攻击，大幅降低了发起勒索攻击的技术门槛。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html</li>
+</ul>
+<hr />
+<h2>2. CISA将SharePoint RCE漏洞CVE-2026-45659列入已知被利用漏洞目录</h2>
+<ul>
+<li><strong>评分：93</strong> — 微软SharePoint高危RCE已被在野利用，影响面广且仅需低权限即可触发</li>
+<li><strong>来源：</strong> The Hacker News / BleepingComputer</li>
+<li><strong>摘要：</strong> CISA将CVE-2026-45659（CVSS 8.8）加入已知被利用漏洞（KEV）目录。该漏洞源于不信任数据的反序列化，任何拥有最低Site Member权限的认证攻击者即可触发远程代码执行，无需管理员权限。微软已于2026年5月修补该漏洞，但已有在野利用案例。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html</li>
+</ul>
+<hr />
+<h2>3. ToddyCat APT组织Umbrij恶意软件滥用OAuth窃取Gmail</h2>
+<ul>
+<li><strong>评分：91</strong> — 国家级APT利用新颖OAuth劫持手法，隐蔽性极强，直接威胁企业邮件安全</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 卡巴斯基将新型恶意软件Umbrij归因于ToddyCat APT组织。该恶意软件通过"Shadow Token via Remote Debug"（STRD）技术，利用无头Chromium浏览器连接远程调试端口获取OAuth授权码，从而通过Google API隐蔽访问受害者Gmail通信，绕过传统安全检测。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/toddycat-linked-umbrij-malware-abuses.html</li>
+</ul>
+<hr />
+<h2>4. CISA警告：Windows BlueHammer漏洞已被勒索软件团伙利用</h2>
+<ul>
+<li><strong>评分：90</strong> — Microsoft Defender提权漏洞被勒索软件实战利用，直接影响全球Windows用户</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> CISA确认CVE-2026-33825（BlueHammer，CVSS 7.8）已被勒索软件团伙在野利用。该漏洞存在于Microsoft Defender防病毒引擎的威胁修复模块中，允许本地攻击者将权限提升至SYSTEM级别。微软已于2026年4月修补，但三个月后仍被积极利用。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/cisa-windows-bluehammer-flaw-now-exploited-by-ransomware-gangs/</li>
+</ul>
+<hr />
+<h2>5. Google与FBI联合摧毁NetNut住宅代理僵尸网络（200万设备）</h2>
+<ul>
+<li><strong>评分：89</strong> — 大规模跨国执法行动，200万台家用设备被劫持为恶意流量中转站</li>
+<li><strong>来源：</strong> The Hacker News / Krebs on Security</li>
+<li><strong>摘要：</strong> Google与FBI、Lumen等合作伙伴联合行动，大幅削弱了NetNut（又名Popa）住宅代理网络。该网络劫持了至少200万台家用设备（包括智能电视和流媒体盒子），将恶意流量伪装为普通家庭用户的网络访问。FBI已查封数百个关联域名。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/google-disrupts-netnut-residential.html</li>
+</ul>
+<hr />
+<p><em>本次共筛选 15 条新闻，最高分 96 分</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>

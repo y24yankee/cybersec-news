@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-09 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-09</h1>
+<hr />
+<h2>1. 🟥 GhostLock：15年潜伏的Linux内核提权漏洞 (CVE-2026-43499)</h2>
+<p><strong>评分：95 分</strong> | <strong>来源：The Hacker News / BleepingComputer</strong> | <strong>评分理由：潜伏15年的Linux内核默认启用漏洞，97%成功率提权至root并逃逸容器，已有公开利用代码，影响几乎所有Linux发行版</strong></p>
+<p>安全研究人员披露了被追踪为 CVE-2026-43499、命名为"GhostLock"的关键 Linux 内核漏洞。该漏洞存在于 futex 子系统的 rt_mutex 代码中，是一个默认启用的 use-after-free 缺陷，自 2011 年起就潜伏在内核中。任何已登录用户无需特殊权限或网络访问即可利用此漏洞，以 97% 的可靠性获取完整 root 权限并逃逸容器隔离。Google 通过 kernelCTF 奶酪程序奖励了 $92,337，且已有公开利用代码发布，紧急修补迫在眉睫。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html">The Hacker News 原文</a></p>
+<hr />
+<h2>2. 🟥 Ubiquiti UniFi 最高严重等级漏洞 (CVE-2026-50746，CVSS 10.0)</h2>
+<p><strong>评分：93 分</strong> | <strong>来源：The Hacker News / BleepingComputer</strong> | <strong>评分理由：CVSS 10.0 满分命令注入漏洞 + 多个 CVSS 9.9 提权漏洞，影响广泛部署的 UniFi 企业/SMB网络设备</strong></p>
+<p>Ubiquiti 发布安全更新修补了 UniFi Connect、Talk、Access、Protect 和 OS 中的多个严重漏洞，其中包括一个 CVSS 10.0 满分的命令注入漏洞 (CVE-2026-50746) 和多个 CVSS 9.9 的特权提升缺陷。拥有网络访问权限的攻击者可利用这些漏洞执行任意命令并提升权限。UniFi 设备在企业和小型商业网络中广泛部署，影响范围极大。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html">The Hacker News 原文</a></p>
+<p>🔗 <a href="https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/">BleepingComputer 原文</a></p>
+<hr />
+<h2>3. 🟥 CISA KEV 新增4个活跃利用漏洞（含多个 CVSS 10.0）</h2>
+<p><strong>评分：92 分</strong> | <strong>来源：The Hacker News / BleepingComputer</strong> | <strong>评分理由：4个漏洞被确认在野活跃利用，含Adobe ColdFusion和Langflow等CVSS 10.0满分漏洞，CISA强制联邦机构限期修补</strong></p>
+<p>CISA 将四个被确认活跃利用的漏洞添加到已知被利用漏洞 (KEV) 目录中，并要求联邦机构在周五前完成修补。其中包含 Adobe ColdFusion 的 CVSS 10.0 路径穿越/RCE 漏洞 (CVE-2026-48282)、Joomlack Page Builder 的未认证文件上传/RCE (CVE-2026-56290)、JoomShaper SP Page Builder 的危险文件上传 (CVE-2026-48908)，以及 Langflow AI 框架的认证绕过漏洞 (CVE-2026-55255)。多个 CVSS 10.0 漏洞同时被确认活跃利用，风险极高。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/cisa-adds-4-actively-exploited-adobe.html">The Hacker News 原文</a></p>
+<p>🔗 <a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-max-severity-coldfusion-flaw-by-friday/">BleepingComputer ColdFusion 报道</a></p>
+<p>🔗 <a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-langflow-auth-bypass-flaw/">BleepingComputer Langflow 报道</a></p>
+<hr />
+<h2>4. 🟧 Ghost Phishing EvilTokens：AES加密恶意页面绕过URL检测的新型钓鱼</h2>
+<p><strong>评分：89 分</strong> | <strong>来源：The Hacker News</strong> | <strong>评分理由：利用AES-GCM加密使恶意页面在URL层面不可检测的新型钓鱼技术，针对欧美企业M365账户，攻击手法极具创新性</strong></p>
+<p>名为"EvilTokens"的攻击行动正在使用一种"Ghost Phishing"（幽灵钓鱼）技术，针对美国和欧洲企业。恶意页面使用 AES-GCM 加密保持加密状态，仅在受害者浏览器中渲染时才解密，从而完全绕过基于 URL 的安全检测。该钓鱼工具包利用 Microsoft Device Code Phishing 技术，无需直接窃取密码即可 compromising Microsoft 365 账户，代表了钓鱼攻击技术的重大演进。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/new-ghost-phishing-wave-is-breaking.html">The Hacker News 原文</a></p>
+<hr />
+<h2>5. 🟧 日本KDDI电信巨头数据泄露：1420万用户邮箱密码暴露</h2>
+<p><strong>评分：88 分</strong> | <strong>来源：BleepingComputer</strong> | <strong>评分理由：日本最大电信运营商之一KDDI遭入侵，1420万用户邮箱和密码泄露，波及6家ISP，为日本近年最大规模数据泄露之一</strong></p>
+<p>日本电信巨头 KDDI 披露，攻击者入侵了其面向互联网服务提供商提供的电子邮件平台，导致超过 1420 万用户的邮箱地址和密码（部分为哈希或加密形式）被泄露。该事件不仅影响 KDDI 自身用户，还波及使用该邮件系统的其他 5 家 ISP，是日本近年来最大规模的数据泄露事件之一。漏洞源于第三方软件缺陷，凸显了供应链安全风险。</p>
+<p>🔗 <a href="https://www.bleepingcomputer.com/news/security/japanese-telecom-giant-kddi-says-data-breach-affects-12-million-people/">BleepingComputer 原文</a></p>
+<hr />
+<h2>其他值得关注的新闻</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>新闻标题</th>
+<th>评分</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>HalluSquatting：利用AI编码助手幻觉预注册恶意包名构建僵尸网络</td>
+<td>85</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>7</td>
+<td>GitHub Copilot 通过工作流级构建被越狱，100%成功率产出有害代码</td>
+<td>82</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Roundcube漏洞被中国APT利用监视学术研究人员</td>
+<td>84</td>
+<td>BleepingComputer</td>
+</tr>
+<tr>
+<td>9</td>
+<td>SCMBANKER恶意软件利用ClickFix诱饵劫持墨西哥银行用户会话</td>
+<td>80</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>10</td>
+<td>NPM/PyPI假冒Paysafe/Skrill SDK窃取开发者凭证</td>
+<td>78</td>
+<td>BleepingComputer</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Entra Passkey注册语音钓鱼针对M365用户</td>
+<td>76</td>
+<td>BleepingComputer</td>
+</tr>
+<tr>
+<td>12</td>
+<td>AI编码代理触发端点安全检测规则（Claude Code/Cursor等）</td>
+<td>75</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>13</td>
+<td>GitHub "Verified"签名提交可被重写产生新哈希</td>
+<td>74</td>
+<td>The Hacker News</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p>本次共筛选 <strong>13</strong> 条新闻，最高分 <strong>95</strong> 分（GhostLock Linux内核漏洞）
+数据来源：The Hacker News (10条) · BleepingComputer (5条) · Hacker News (0条直接安全新闻)
+报告生成时间：2026-07-09 06:55 CST</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>

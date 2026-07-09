@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-06 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-06</h1>
+<blockquote>
+<p>数据截止时间：2026-07-06 06:55 CST</p>
+</blockquote>
+<hr />
+<h2>1. curl 库爆出 CVSS 9.1 严重漏洞 CVE-2026-8924，暂无补丁</h2>
+<ul>
+<li><strong>评分：</strong> 91 分</li>
+<li><strong>评分理由：</strong> curl 是全球部署最广泛的网络传输库之一，嵌入无数应用、容器镜像和嵌入式系统中，CVSS 9.1 严重级别且目前 0% 补丁覆盖率。</li>
+<li><strong>来源：</strong> CVE Brief / The Hacker News</li>
+<li><strong>摘要：</strong> 2026 年 7 月 5 日（周日）公开披露的 curl 严重漏洞 CVE-2026-8924（CVSS 9.1）影响该库的广泛使用场景——从 Web 服务器、API 客户端到容器化应用和嵌入式设备。该漏洞与当日另外 48 个高危 CVE 一同披露，但补丁覆盖率为 0%。安全专家建议立即盘点所有应用和容器镜像中的 curl 使用情况，并在补丁发布前采用网络分段和访问控制等补偿措施。这是继近期 Linux 内核 Bad Epoll 漏洞后，又一影响面极广的基础设施级漏洞。</li>
+<li><strong>原文链接：</strong> https://cvebrief.com/</li>
+</ul>
+<hr />
+<h2>2. SimpleHelp 远程支持软件 CVSS 9.5 漏洞 CVE-2026-48558 遭活跃利用</h2>
+<ul>
+<li><strong>评分：</strong> 88 分</li>
+<li><strong>评分理由：</strong> CVSS 9.5 最高严重级别，攻击者可远程利用，目前已确认遭在野活跃攻击，目标为广泛部署的远程支持平台。</li>
+<li><strong>来源：</strong> CVE Brief / Help Net Security</li>
+<li><strong>摘要：</strong> SimpleHelp 远程支持软件的高危漏洞 CVE-2026-48558（CVSS 9.5）已被确认遭活跃利用。该漏洞与 Microsoft SharePoint CVE-2026-45659 并列为当日最高评分漏洞，攻击者持续将远程访问工具和协作平台作为重点攻击目标。CVE Brief 指出这是远程支持类工具面临的最新一起在野攻击事件，建议用户立即限制 SimpleHelp 服务器的公网暴露面，等待官方补丁发布。Oracle EBS Payments 系统同期也报告了在野利用。</li>
+<li><strong>原文链接：</strong> https://www.helpnetsecurity.com/2026/07/05/week-in-review-simplehelp-vulnerability-exploited-oracle-ebs-payments-flaw-under-attack/</li>
+</ul>
+<hr />
+<h2>3. FatFs 嵌入式文件系统 7 个漏洞影响数百万 IoT 设备</h2>
+<ul>
+<li><strong>评分：</strong> 86 分</li>
+<li><strong>评分理由：</strong> 影响数百万安防摄像头、无人机、工业控制器和硬件加密钱包，"物理访问即越狱"的严重程度，且多数设备难以更新。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 安全公司 runZero 披露了 FatFs 文件系统中的 7 个漏洞，该文件系统广泛用于在嵌入式设备上读写 FAT/exFAT 格式的 USB 驱动器和 SD 卡。受影响设备包括安防摄像头、无人机、工业控制器和硬件加密货币钱包，数量达数百万级别。在最严重的场景下，攻击者只需通过特制的 USB 驱动器或 SD 卡物理接触设备，即可破坏内存并执行任意代码。runZero 警告称，对许多受影响设备而言，"任何物理访问都等于越狱"。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html</li>
+</ul>
+<hr />
+<h2>4. 新 APT 组织 Armored Likho 攻击政府机构和电力部门</h2>
+<ul>
+<li><strong>评分：</strong> 82 分</li>
+<li><strong>评分理由：</strong> 此前未记录的 APT 组织针对关键基础设施（政府和电力部门）进行网络间谍活动，融合经济动机与国家层面利益。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 卡巴斯基发现并命名了一个此前未记录的高级持续性威胁（APT）组织——Armored Likho，该组织针对俄罗斯、巴西和哈萨克斯坦的政府机构及电力部门发动网络攻击。攻击者使用名为 BusySnake 的模糊化模块化 RAT 和信息窃取工具，设计上可规避动态分析沙箱。该组织的独特之处在于同时融合了经济动机驱动的行动与定向网络间谍活动，可能与 BI.ZONE 此前追踪的威胁集群存在关联。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/armored-likho-targets-government.html</li>
+</ul>
+<hr />
+<h2>5. 欧洲议会议员调查间谍软件滥用期间遭 Pegasus 反复入侵</h2>
+<ul>
+<li><strong>评分：</strong> 81 分</li>
+<li><strong>评分理由：</strong> 高政治敏感性——被入侵者正担任欧盟商业监控软件调查委员会委员，机密文件和委员会审议内容可能遭泄露。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> Citizen Lab 披露，前欧洲议会议员（MEP）Stelios Kouloglou 在担任调查欧盟商业监控软件滥用委员会成员期间，遭 Pegasus 间谍软件反复入侵。取证分析确认攻击者可访问该议员的机密文件及委员会内部审议内容。虽然尚未有国家政府被明确归因，但此次攻击与之前针对流亡俄罗斯/白俄罗斯记者和活动人士的活动存在重叠。此次披露正值欧盟持续加强对商业间谍软件监管之际，凸显了"调查者反被调查"的讽刺局面。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/european-parliament-member.html</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 15 条候选新闻（The Hacker News 8 条、BleepingComputer 5 条、CVE Brief/HNS 2 条），最高分 91 分。</strong></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>

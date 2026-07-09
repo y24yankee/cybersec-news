@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-04 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-04</h1>
+<h2>TOP 5 网络安全新闻</h2>
+<h3>1. 欧洲议会成员遭 Pegasus 间谍软件攻击</h3>
+<ul>
+<li><strong>评分：</strong> 90/100</li>
+<li><strong>来源：</strong> Hacker News / Citizen Lab</li>
+<li><strong>摘要：</strong> Citizen Lab 披露，一名欧洲议会成员（同时是 Pegasus 调查委员会成员）的手机被 NSO Group 的 Pegasus 间谍软件入侵。攻击发生在该委员会调查间谍软件滥用期间，凸显针对民选官员和调查记者的国家级监控威胁持续升级。</li>
+<li><strong>原文链接：</strong> https://citizenlab.ca/research/member-of-committee-investigating-spyware-hacked-with-pegasus/</li>
+<li><strong>评分理由：</strong> 涉及国家级间谍软件攻击欧盟立法机构核心成员，兼具政治敏感性、国家级威胁和高严重性。</li>
+</ul>
+<h3>2. Armored Likho 针对政府与电力部门发起网络攻击</h3>
+<ul>
+<li><strong>评分：</strong> 89/100</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> Kaspersky 发现新威胁组织 Armored Likho，利用 BusySnake 窃密工具和 Go2Tunnel 持久化远控，针对俄罗斯、巴西和哈萨克斯坦的政府机构及电力行业发起网络间谍活动与金融犯罪混合行动。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/armored-likho-targets-government.html</li>
+<li><strong>评分理由：</strong> 新 APT 组织针对关键基础设施和政府机构，融合网络间谍与金融动机，影响范围重大。</li>
+</ul>
+<h3>3. Linux "Bad Epoll" 内核漏洞可导致本地提权至 root（CVE-2026-46242）</h3>
+<ul>
+<li><strong>评分：</strong> 88/100</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 研究人员 Jaeyoung Chung 披露 Linux 内核 use-after-free 漏洞 "Bad Epoll"，允许普通用户提升为 root 权限，影响 Linux 服务器、桌面和 Android 设备。该漏洞位于事件轮询子系统，相关代码区域此前曾被 Anthropic 的 AI 模型 Mythos 发现过另一个缺陷。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html</li>
+<li><strong>评分理由：</strong> 本地提权至 root 影响 Linux 与 Android 两大生态，且为内核级漏洞，修复窗口紧迫。</li>
+</ul>
+<h3>4. ConsentFix 与 ClickFix：3 秒内劫持 Microsoft 365 账户</h3>
+<ul>
+<li><strong>评分：</strong> 87/100</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> Huntress Labs 披露 ConsentFix 与 ClickFix 攻击可在约 3 秒内通过伪造 OAuth 授权提示和点击诱导窃取 Microsoft 365 令牌，绕过传统多因素认证。该手法利用用户已登录的 M365 会话和恶意应用同意流程，威胁企业云办公环境。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/consentfix-and-clickfix-how-microsoft-365-accounts-are-hijacked-in-3-seconds/</li>
+<li><strong>评分理由：</strong> 针对 M365 企业用户的新型 MFA 绕过技术，攻击速度极快，影响大量云办公租户。</li>
+</ul>
+<h3>5. Avalon 恶意软件框架集成 CrownX 勒索软件功能</h3>
+<ul>
+<li><strong>评分：</strong> 86/100</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 安全研究人员发现新型模块化恶意软件框架 Avalon，通过多阶段钓鱼链分发，包含凭证收集、横向移动、远程访问和 CrownX 勒索软件执行组件。攻击以假冒法律文件邮件为入口，诱导下载受密码保护的 Proton Drive 压缩包中的恶意 ISO 镜像。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/new-avalon-malware-framework-packs.html</li>
+<li><strong>评分理由：</strong> 新型一体化恶意软件框架覆盖入侵到勒索全流程，代表当前企业勒索攻击的演进趋势。</li>
+</ul>
+<hr />
+<h2>候选新闻统计</h2>
+<ul>
+<li><strong>The Hacker News：</strong> 5 条</li>
+<li><strong>BleepingComputer：</strong> 5 条</li>
+<li><strong>Hacker News：</strong> 3 条（安全相关）</li>
+<li><strong>本次共筛选：</strong> 13 条候选新闻</li>
+<li><strong>最高分：</strong> 90 分（欧洲议会成员遭 Pegasus 间谍软件攻击）</li>
+</ul>
+<hr />
+<p><em>报告生成时间：2026-07-04 06:55 CST</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>

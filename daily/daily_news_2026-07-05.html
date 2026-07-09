@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-05 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-05</h1>
+<blockquote>
+<p>数据截止时间：2026-07-05 06:55 CST</p>
+</blockquote>
+<hr />
+<h2>1. JadePuffer 勒索软件首次完全由 AI Agent 自动执行</h2>
+<ul>
+<li><strong>评分：</strong> 96 分</li>
+<li><strong>评分理由：</strong> 首个被公开记录的端到端由大语言模型 Agent 驱动的勒索软件攻击，标志着"代理化威胁行为者"时代的开始。</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> Sysdig 研究人员发现 JadePuffer 勒索行动利用自主 AI Agent 完成从侦察、凭据窃取、横向移动、权限维持到数据加密的完整攻击链。攻击通过 Langflow 的 CVE-2025-3248 未授权 RCE 漏洞获得初始访问，随后入侵 PostgreSQL 与 MySQL/Nacos 配置服务，最终加密 1,342 条服务配置并留下勒索信。AI Agent 能根据失败实时调整策略，例如在一次序列中仅用 31 秒就从登录失败修复到成功执行。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/jadepuffer-ransomware-used-ai-agent-to-automate-entire-attack/</li>
+</ul>
+<hr />
+<h2>2. 美国政府实体向 Kairos 支付约 100 万美元数据敲诈赎金</h2>
+<ul>
+<li><strong>评分：</strong> 92 分</li>
+<li><strong>评分理由：</strong> 罕见的政府实体支付赎金案例，且 Kairos 为纯数据窃取勒索团伙，反映勒索模式正从加密转向纯数据敲诈。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> Ransom-ISAC 的案例研究显示，某美国政府实体（线索指向俄亥俄州 Union County）向名为 Kairos 的团伙支付约 100 万美元以防止被盗文件泄露。谈判聊天记录显示，Kairos 并未部署任何加密器或锁机程序，仅通过窃取 2TB、约 160 万个文件进行敲诈，其中包含检察官办公室等敏感文件夹。研究指出，2025 年 Sophos 报告显示仅约半数勒索事件仍使用加密，数据敲诈正成为主要施压手段。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/us-government-entity-paid-kairos-group.html</li>
+</ul>
+<hr />
+<h2>3. 朝鲜黑客通过 PolinRider 活动发布 108 个恶意包与浏览器扩展</h2>
+<ul>
+<li><strong>评分：</strong> 90 分</li>
+<li><strong>评分理由：</strong> 国家级供应链攻击覆盖 npm、Packagist、Go 与 Chrome 多个生态，并滥用 VS Code 任务与 Git 历史重写隐蔽持久化。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 与 Contagious Interview 活动相关的朝鲜威胁行为者发起 PolinRider 行动，累计发布 108 个独特恶意包和扩展（对应 162 个恶意发布工件），包括 19 个 npm 库、10 个 Composer 包、61 个 Go 模块和 1 个 Chrome 扩展。攻击者通过入侵维护者账户或修改合法仓库，在配置文件中追加恶意 JavaScript 加载器，并连接 TRON、Aptos、BNB Smart Chain 下载第二阶段载荷 DEV#POPPER RAT 与 OmniStealer。Socket 警告该活动仍在持续。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/north-korean-hackers-publish-108.html</li>
+</ul>
+<hr />
+<h2>4. "Bad Epoll" Linux 内核提权漏洞影响 Android 与 Chrome 沙箱</h2>
+<ul>
+<li><strong>评分：</strong> 88 分</li>
+<li><strong>评分理由：</strong> CVE-2026-46242 为 Linux 内核 use-after-free 本地提权漏洞，PoC 成功率约 99%，且可从 Chrome 渲染器沙箱内触发，影响面极广。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 安全研究员 Jaeyoung Chung 披露了 Linux 内核 epoll 子系统中的 "Bad Epoll" 漏洞（CVE-2026-46242），普通用户可利用该竞争条件漏洞提升至 root 权限。受影响的系统包括 Linux 桌面、服务器以及部分 Android 设备，内核 6.4 及以上版本受影响。该漏洞的特殊危险性在于可从 Chrome 渲染器沙箱内部触发，而大多数 Linux 内核提权漏洞无法做到这一点。目前补丁已发布，但尚无野外利用迹象。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html</li>
+</ul>
+<hr />
+<h2>5. YouTube Studio AI 助手存在提示注入，可泄露创作者私密视频</h2>
+<ul>
+<li><strong>评分：</strong> 82 分</li>
+<li><strong>评分理由：</strong> 大型平台 AI 功能存在提示注入与信任模型缺陷，影响全球数百万 YouTube 创作者及其未发布/私密内容。</li>
+<li><strong>来源：</strong> Hacker News / javoriuski.com</li>
+<li><strong>摘要：</strong> 研究人员发现 YouTube Studio 的 "Ask Studio" AI 助手存在提示注入漏洞：攻击者在视频评论区留下恶意指令后，创作者点击 YouTube 提供的 AI 摘要建议提示，AI 就会将攻击者内容当作自身分析输出。进一步利用可让 AI 生成包含私密视频标题的恶意链接，从而泄露创作者未发布内容、未宣布项目等敏感信息。研究人员报告后，Google 将其归类为"需要社会工程"而未按安全漏洞处理。</li>
+<li><strong>原文链接：</strong> https://javoriuski.com/post/youtube</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 13 条候选新闻（The Hacker News 5 条、BleepingComputer 5 条、Hacker News 4 条），最高分 96 分。</strong></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-02 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-02</h1>
+<blockquote>
+<p>生成时间：2026-07-02 06:55 CST | 来源：The Hacker News / BleepingComputer / Hacker News</p>
+</blockquote>
+<hr />
+<h2>🔴 TOP 1 | Progress Kemp LoadMaster 预认证 RCE 漏洞遭活跃利用 (评分: 92)</h2>
+<p><strong>来源:</strong> The Hacker News / BleepingComputer<br />
+<strong>CVE:</strong> CVE-2026-8037 | <strong>CVSS:</strong> 9.6 (Critical)</p>
+<p>Progress Kemp LoadMaster 负载均衡器中存在一个严重的 OS 命令注入漏洞（CVE-2026-8037，CVSS 9.6），攻击者可在未认证状态下通过构造恶意输入实现远程代码执行。watchTowr Labs 追踪发现，自 6 月 29 日起该漏洞已遭活跃利用，攻击者通过 <code>escape_quotes()</code> 函数绕过过滤。LoadMaster 作为边界设备部署于大量企业网络中，风险极高。</p>
+<p><strong>评分理由:</strong> 预认证 RCE + 边界设备 + 已活跃利用，严重性极高。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html">原文链接</a></p>
+<hr />
+<h2>🔴 TOP 2 | 美国国土安全部 HSIN 情报共享平台遭黑客入侵 (评分: 90)</h2>
+<p><strong>来源:</strong> BleepingComputer</p>
+<p>美国国土安全部（DHS）证实其国土安全信息网络（HSIN）遭受网络攻击，该平台是联邦、州、地方及私营部门合作伙伴之间共享敏感情报的关键基础设施。DHS 已启动调查，目前尚不清楚攻击者获取了哪些信息以及受影响范围。这是近年来针对美国政府情报共享平台最严重的攻击之一。</p>
+<p><strong>评分理由:</strong> 国家级关键情报共享基础设施遭入侵，影响政府、执法及私营部门。</p>
+<p>🔗 <a href="https://www.bleepingcomputer.com/news/security/dhs-confirms-hackers-breached-hsin-info-sharing-platform/">原文链接</a></p>
+<hr />
+<h2>🔴 TOP 3 | FortiBleed 凭证窃取活动被关联至 Lynx 勒索软件团伙 (评分: 89)</h2>
+<p><strong>来源:</strong> BleepingComputer / SOCRadar</p>
+<p>此前被曝光的 FortiBleed 大规模凭证窃取活动（涉及 86,000+ 台 Fortinet 防火墙、窃取 1.1 亿+ 凭证）已被 SOCRadar 关联至 INC 和 Lynx 勒索软件组织。这表明被盗的 Fortinet 凭证正被用于后续的网络入侵和勒索软件部署。Fortinet 是全球市场份额第一的防火墙厂商，影响范围极广。</p>
+<p><strong>评分理由:</strong> 大规模凭证窃取（8.6万+设备）直接关联勒索软件运营，全球企业面临后续入侵风险。</p>
+<p>🔗 <a href="https://www.bleepingcomputer.com/news/security/fortibleed-credential-theft-campaign-linked-to-lynx-ransomware/">原文链接</a></p>
+<hr />
+<h2>🟠 TOP 4 | Adobe 紧急修复 ColdFusion 和 Campaign Classic 7 个 CVSS 10.0 满分漏洞 (评分: 88)</h2>
+<p><strong>来源:</strong> The Hacker News / BleepingComputer</p>
+<p>Adobe 发布紧急安全更新，修复 ColdFusion Web 应用开发平台和 Campaign Classic 营销自动化平台中的 7 个最高严重性漏洞，全部获得 CVSS 10.0 满分评分。漏洞类型包括无限制文件上传（CVE-2026-48276、CVE-2026-48283）、输入验证缺陷（CVE-2026-48277、CVE-2026-48281、CVE-2026-48316）及路径遍历（CVE-2026-48282），均可导致任意代码执行。</p>
+<p><strong>评分理由:</strong> 7 个 CVSS 10.0 满分漏洞，任意代码执行，影响企业级平台，建议立即修补。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/adobe-patches-7-cvss-100-flaws-in.html">原文链接</a></p>
+<hr />
+<h2>🟠 TOP 5 | 大规模密码喷洒攻击：8,100 万次 Microsoft 365 登录尝试 (评分: 82)</h2>
+<p><strong>来源:</strong> BleepingComputer / The Hacker News</p>
+<p>安全研究人员发现一起大规模、持续进行的自动化密码喷洒攻击，攻击者利用 Azure CLI 和旧版 OAuth 流程，在两周内对 Microsoft 365（Entra ID）环境发起了超过 8,100 万次登录尝试。攻击来源 IP 关联至托管服务商 LSHIY，至少已攻破 78 个账户。该攻击规模前所未有，表明攻击者正在进化其凭据攻击手段。</p>
+<p><strong>评分理由:</strong> 8,100 万次攻击规模空前，利用 Azure CLI 绕过防御，影响全球 M365 用户。</p>
+<p>🔗 <a href="https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-365-accounts-with-81-million-login-attempts/">原文链接</a></p>
+<hr />
+<h2>📊 本次筛选统计</h2>
+<ul>
+<li>本次共筛选 <strong>15</strong> 条候选新闻（The Hacker News 10 条、BleepingComputer 5 条、Hacker News 0 条）</li>
+<li>最高分 <strong>92</strong> 分（Progress Kemp LoadMaster RCE）</li>
+<li>Hacker News 今日首页无直接网络安全相关热门帖子，最接近的话题为 Anthropic Claude Fable 5 恢复上线的 AI 出口管制讨论（248 points）</li>
+</ul>
+<hr />
+<h2>📋 其他值得关注的新闻</h2>
+<table>
+<thead>
+<tr>
+<th>评分</th>
+<th>标题</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>85</td>
+<td>Unpatched Argo CD Flaw - Kubernetes 集群接管风险（18个月未修复）</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>78</td>
+<td>900+ Oracle E-Business Suite 实例暴露于持续攻击中</td>
+<td>BleepingComputer</td>
+</tr>
+<tr>
+<td>75</td>
+<td>"Phantom Squatting" - AI 幻觉域名被用于钓鱼和恶意软件</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>74</td>
+<td>首个 AI 生成的浏览器勒索软件（DeepSeek）</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Scattered Spider 19岁嫌疑人被引渡至美国受审</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>70</td>
+<td>ChocoPoC 恶意软件通过伪造 PoC 利用代码攻击安全研究员</td>
+<td>BleepingComputer</td>
+</tr>
+<tr>
+<td>68</td>
+<td>Anthropic 恢复 Claude Fable 5 - 美国解除 AI 出口管制</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>65</td>
+<td>日本久保田（Kubota）遭黑客入侵，攻击者潜伏超一个月</td>
+<td>BleepingComputer</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>本报告由自动化系统生成，新闻来源均为公开可查。评分基于严重性、新颖性、影响范围和时效性综合评定。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
