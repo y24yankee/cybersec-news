@@ -10,10 +10,10 @@ Build the cybersec news portal (static site) for GitHub Pages.
 Idempotent: safe to re-run after each automation run.
 
 Sources (authoritative paths, see automation cwds):
-  DAILY_SRC  = C:\\Users\\yyankee\\WorkBuddy\\automation-cybersec-daily
-  WEEKLY_SRC = C:\\Users\\yyankee\\WorkBuddy\\automation-cybersec-weekly
+  DAILY_SRC  = D:\\WorkBuddy\\automation-cybersec-daily
+  WEEKLY_SRC = D:\\WorkBuddy\\automation-cybersec-weekly
 Output:
-  SITE       = C:\\Users\\yyankee\\WorkBuddy\\cybersec-news-site
+  SITE       = D:\\WorkBuddy\\cybersec-news-site
 """
 
 import os
@@ -25,7 +25,7 @@ import markdown
 
 DAILY_SRC = r"D:\WorkBuddy\automation-cybersec-daily"
 WEEKLY_SRC = r"D:\WorkBuddy\automation-cybersec-weekly"
-SITE = r"C:\Users\yyankee\WorkBuddy\cybersec-news-site"
+SITE = r"D:\WorkBuddy\cybersec-news-site"
 DAILY_OUT = os.path.join(SITE, "daily")
 WEEKLY_OUT = os.path.join(SITE, "weekly")
 
