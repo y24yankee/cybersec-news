@@ -23,8 +23,8 @@ import datetime
 
 import markdown
 
-DAILY_SRC = r"C:\Users\yyankee\WorkBuddy\automation-cybersec-daily"
-WEEKLY_SRC = r"C:\Users\yyankee\WorkBuddy\automation-cybersec-weekly"
+DAILY_SRC = r"D:\WorkBuddy\automation-cybersec-daily"
+WEEKLY_SRC = r"D:\WorkBuddy\automation-cybersec-weekly"
 SITE = r"C:\Users\yyankee\WorkBuddy\cybersec-news-site"
 DAILY_OUT = os.path.join(SITE, "daily")
 WEEKLY_OUT = os.path.join(SITE, "weekly")
