@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-11 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-11</h1>
+<blockquote>
+<p>统计日期：2026年7月11日（周六） | 数据来源：The Hacker News、BleepingComputer、Hacker News</p>
+</blockquote>
+<hr />
+<h2>🔴 1. GhostLock：潜伏15年的Linux内核UAF漏洞，影响所有发行版</h2>
+<p><strong>评分：95/100</strong> | <strong>来源：Hacker News / Nebula Security</strong></p>
+<p>Linux内核rtmutex子系统存在一个已潜伏超过15年的栈上use-after-free漏洞（CVE-2026-43499），影响从v2.6.39到v7.1-rc1的所有Linux发行版。该漏洞无需特殊内核配置或特权即可触发，普通用户可利用其实现本地提权至root并进行容器逃逸。Nebula Security的VEGA团队发现该漏洞并构建了97%稳定性的完整提权攻击链，获得Google kernelCTF 92,337美元赏金。修复补丁已于2026年4月合入，完整PoC代码已公开。</p>
+<p><strong>评分理由：</strong> 影响所有Linux发行版长达15年、无需特权即可root提权+容器逃逸，危害极大。</p>
+<p>🔗 <a href="https://nebusec.ai/research/ionstack-part-2/">Nebula Security技术分析</a>
+🔗 <a href="https://news.ycombinator.com/item?id=48864969">Hacker News讨论</a></p>
+<hr />
+<h2>🔴 2. Gitea Docker镜像严重认证绕过漏洞正被积极利用</h2>
+<p><strong>评分：92/100</strong> | <strong>来源：BleepingComputer / The Hacker News</strong></p>
+<p>Gitea官方Docker镜像存在严重认证绕过漏洞（CVE-2026-20896），攻击者仅需设置<code>X-WEBAUTH-USER</code> HTTP请求头即可冒充任意用户包括管理员。漏洞原因在于默认配置中<code>REVERSE_PROXY_TRUSTED_PROXIES=*</code>信任所有来源IP。目前全球约6,200个Gitea实例暴露在公网，Sysdig确认漏洞在被公开披露前不到两周即被积极利用。新加坡网络安全局(CSA)已发布紧急警告，Gitea已在1.26.3/1.26.4版本修复。</p>
+<p><strong>评分理由：</strong> 严重认证绕过+正被积极利用+大量公网暴露实例+国家级安全机构警告。</p>
+<p>🔗 <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-auth-bypass-in-gitea-docker-image/">BleepingComputer报道</a>
+🔗 <a href="https://github.com/go-gitea/gitea/security/advisories/GHSA-f75j-4cw6-rmx4">GitHub安全公告</a></p>
+<hr />
+<h2>🟠 3. Progress ShareFile紧急关停通知：Storage Zone Controller面临"可信外部安全威胁"</h2>
+<p><strong>评分：90/100</strong> | <strong>来源：The Hacker News / BleepingComputer</strong></p>
+<p>Progress Software于7月10日紧急通知所有ShareFile客户立即关闭运行Storage Zone Controller的Windows服务器，原因是发现了"可信的外部安全威胁"。公司已暂时禁用受影响账户的访问权限，但未披露威胁的具体性质、攻击者身份或是否有控制器已被入侵。该事件由一名客户将Progress的邮件转发至Reddit r/sysadmin后曝光。Progress表示正与内部和外部安全专家合作调查。</p>
+<p><strong>评分理由：</strong> 厂商主动要求关停服务器极为罕见，暗示威胁严重程度极高，企业文件共享平台影响面广。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html">The Hacker News报道</a>
+🔗 <a href="https://www.bleepingcomputer.com/news/security/progress-urges-sharefile-customers-to-shut-down-servers-over-credible-threat/">BleepingComputer报道</a></p>
+<hr />
+<h2>🟠 4. WP-SHELLSTORM：大规模WordPress后门行动曝光，140万网站被列为目标</h2>
+<p><strong>评分：88/100</strong> | <strong>来源：The Hacker News</strong></p>
+<p>一个名为WP-SHELLSTORM的webshell访问经纪团伙因操作服务器被遗留在公网无密码访问达22天，导致其完整的攻击工具、活动日志和超过140万个目标网站名单暴露。研究人员确认至少25,195个网站已被植入后门，活跃webshell超过5,700个。该团伙利用包括Breeze缓存插件(CVE-2026-3844)和Joomla JCE编辑器(CVE-2026-48907)在内的27个已知漏洞进行自动化大规模攻击。工具链中使用的VShell后门与中国UNC5174组织存在关联。</p>
+<p><strong>评分理由：</strong> 大规模网站入侵行动曝光、超2.5万网站已受控、利用已知漏洞规模化攻击。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/exposed-hacker-server-reveals-wp.html">The Hacker News详细报道</a>
+🔗 <a href="https://socradar.io/blog/wp-shellstorm-expose-1-4m-wordpress-sites/">SOCRadar分析报告</a></p>
+<hr />
+<h2>🟠 5. "Ill Bloom"加密货币钱包漏洞：弱随机数已致超500万美元被盗</h2>
+<p><strong>评分：86/100</strong> | <strong>来源：The Hacker News</strong></p>
+<p>安全公司Coinspect披露了名为"Ill Bloom"的加密货币钱包漏洞——部分钱包软件（可追溯至2018年）使用弱随机数生成器创建恢复助记词，使得攻击者能够枚举所有可能的助记词并窃取资金。已确认5月27日一次协同攻击中，431个钱包被盗约310万美元；后续另一钱包再损失210万美元USDT。截至目前已发现2,114个暴露地址，受影响链包括Bitcoin、Ethereum、Tron、Polygon等。Coinspect已发现5个受影响的钱包实现但未公开名称。</p>
+<p><strong>评分理由：</strong> 已确认超500万美元实际损失、影响多链生态、钱包不可修复只能迁移。</p>
+<p>🔗 <a href="https://thehackernews.com/2026/07/attackers-exploit-ill-bloom.html">The Hacker News报道</a>
+🔗 <a href="https://illbloom.org/">Ill Bloom检测工具</a></p>
+<hr />
+<h2>📊 今日统计</h2>
+<ul>
+<li><strong>本次共筛选</strong>：15条候选新闻（来自3个来源）</li>
+<li><strong>最高分</strong>：95分（GhostLock Linux内核漏洞）</li>
+<li><strong>平均分</strong>：90.2分</li>
+<li><strong>关键主题</strong>：Linux内核提权、认证绕过、企业软件紧急威胁、大规模网站入侵、加密货币安全</li>
+</ul>
+<hr />
+<p><em>报告生成时间：2026-07-11 06:55 CST | 自动化任务：每日网络安全新闻推送</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
