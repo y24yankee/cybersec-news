@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-12 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-12</h1>
+<h2>1. Progress 紧急敦促 ShareFile 客户关闭 Storage Zone Controller 服务器</h2>
+<ul>
+<li><strong>评分：</strong> 95/100</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> Progress Software 检测到针对 ShareFile Storage Zone Controller 的“可信外部安全威胁”，已要求使用本地存储控制器的企业立即关闭相关 Windows 服务器。此举类似于此前 MOVEit 漏洞被 Clop 勒索团伙大规模利用的情形，目前 Progress 尚未确认是否为零日漏洞或已有数据被访问。</li>
+<li><strong>评分理由：</strong> 企业文件共享平台面临可信威胁，潜在影响与 MOVEit 事件相当，且官方要求立即关服，严重性极高。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/progress-urges-sharefile-customers-to-shut-down-servers-over-credible-threat/</li>
+</ul>
+<h2>2. jscrambler npm 包 8.14.0 版本被植入 Rust 信息窃取器</h2>
+<ul>
+<li><strong>评分：</strong> 93/100</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 热门 JavaScript 混淆工具 jscrambler 的 npm 8.14.0 版本被入侵，安装时会通过 preinstall 钩子释放原生 Rust 窃密载荷，可窃取 AWS/Azure/GCP 凭证、加密货币钱包、浏览器密码以及 Claude/Cursor 等 AI 工具配置。Linux 版本还具备 eBPF 持久化能力，8.15.0 已发布清理版本。</li>
+<li><strong>评分理由：</strong> 供应链投毒事件直接作用于开发者构建环境，具备跨平台窃密和 eBPF 持久化，影响大量 CI/CD 和开发者机器。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html</li>
+</ul>
+<h2>3. Gitea Docker 镜像存在关键认证绕过漏洞 CVE-2026-20896 且已被利用</h2>
+<ul>
+<li><strong>评分：</strong> 91/100</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> 攻击者正积极利用 Gitea 官方 Docker 镜像的关键认证绕过漏洞 CVE-2026-20896，受影响的默认配置会信任任意来源 IP 的 X-WEBAUTH-USER 头，从而允许未经身份验证者冒充任意用户（包括管理员）。全球约有 6,200 个 Gitea 实例暴露在互联网上，官方已发布 1.26.3/1.26.4 修复版本。</li>
+<li><strong>评分理由：</strong> 关键认证绕过且已观测到野外利用，无需密码即可接管管理员账户，对自托管代码平台风险极高。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-auth-bypass-in-gitea-docker-image/</li>
+</ul>
+<h2>4. Zimbra 经典 Web 客户端存在关键 XSS 漏洞</h2>
+<ul>
+<li><strong>评分：</strong> 89/100</li>
+<li><strong>来源：</strong> BleepingComputer / The Hacker News</li>
+<li><strong>摘要：</strong> Zimbra 发布 10.1.19 版本修复经典 Web 客户端（Classic Web Client）中的存储型 XSS 漏洞，攻击者可通过特制邮件在用户打开时执行恶意代码，窃取会话数据、账户设置或邮箱信息。该漏洞由 Google Threat Analysis Group 报告，Zimbra 被广泛用于数亿用户、数千企业及政府机构，且历史上多次遭受俄罗斯 APT 组织利用。</li>
+<li><strong>评分理由：</strong> 影响范围巨大（数亿用户、政企机构），且由 Google TAG 上报，存在被国家级威胁行为体利用的高风险。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/</li>
+</ul>
+<h2>5. U-Boot 引导加载程序发现 6 个漏洞可导致固件级攻击</h2>
+<ul>
+<li><strong>评分：</strong> 87/100</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> Binarly 研究人员在广泛使用的 U-Boot 引导加载程序 FIT 签名验证代码中发现 6 个漏洞，其中部分可导致设备启动时执行任意代码，绕过安全保护并植入持久化固件恶意软件。受影响的代码自 2013.07 版本起存在，可能影响 50 多个稳定版本及大量下游设备，包括 BMC、网络设备、工业系统和物联网设备。</li>
+<li><strong>评分理由：</strong> 固件层漏洞影响广泛且难以检测，可在操作系统启动前获得高权限，但尚未确认大规模野外利用。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/new-u-boot-flaws-could-enable-stealthy-firmware-attacks/</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条新闻，最高分 95 分。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
