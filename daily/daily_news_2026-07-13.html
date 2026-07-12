@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-13 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-13</h1>
+<h2>1. XRING：Alibaba XQUIC 库未修补零日漏洞可远程崩溃 HTTP/3 服务器</h2>
+<ul>
+<li><strong>评分：</strong> 95/100</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> FoxIO 研究员 Sébastien Féry 公开披露阿里 XQUIC QUIC/HTTP/3 库中的 XRING 拒绝服务缺陷，攻击者仅需发送约 260 字节的合法 QPACK 流量（无需认证、无畸形包）即可触发 QPACK 动态表环形缓冲区的无符号整数下溢，导致服务器进程崩溃。XQUIC 是 Tengine（为淘宝、支付宝提供支持）的核心组件，所有 ≤v1.9.4 版本均受影响，截至 7 月 11 日仍无 CVE 编号、CVSS 评分或官方补丁，阿里方对 90 天披露期未作回应。</li>
+<li><strong>评分理由：</strong> 互联网关键协议栈未修补零日，影响阿里云/CDN 及所有内嵌 XQUIC 的第三方 HTTP/3 服务，触发流量完全合规无法被传统 IDS 检出。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/unpatched-xring-flaw-in-xquic-lets.html</li>
+</ul>
+<h2>2. GuardFall：十款主流开源 AI 编程助手的 Shell 注入防护可被系统化绕过</h2>
+<ul>
+<li><strong>评分：</strong> 92/100</li>
+<li><strong>来源：</strong> Bleeping News / CSA Research</li>
+<li><strong>摘要：</strong> Adversa AI 团队发布的 GuardFall 研究指出，11 款主流开源 AI 编程代理中有 10 款（含 Cline、Aider、OpenHands、Open Interpreter、Hermes、Goose、Opencode 等，累计约 54.8 万 GitHub stars）的命令安全过滤器存在架构性缺陷——它们将命令视作纯文本检查，而 bash 解释器在执行前会通过引号分割、$IFS 扩展、命令替换和管道重写命令。Adversa 在生产版 Plandex 上完成了端到端利用 PoC：当被恶意 README/Makefile/包元数据诱导时，代理可静默泄露 SSH 密钥、云凭证和 $HOME 文件。</li>
+<li><strong>评分理由：</strong> AI 代理安全过滤器属架构性而非单点缺陷，目前无任何受影响项目发布结构性修复，直接威胁开发者主机与 CI/CD 环境。</li>
+<li><strong>原文链接：</strong> https://labs.cloudsecurityalliance.org/research/csa-research-note-guardfall-ai-coding-agent-shell-injection</li>
+</ul>
+<h2>3. Ghostcommit：通过 PNG 图像藏匿提示注入以窃取 AI 代理仓库密钥</h2>
+<ul>
+<li><strong>评分：</strong> 91/100</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> 密苏里大学堪萨斯城分校 ASSET 研究组披露的 Ghostcommit 攻击将恶意提示以明文形式渲染进 PNG 图片，配合一个无害的 AGENTS.md 配置文件，绕过 CodeRabbit、Bugbot 等 LLM 代码审查工具（默认排除图片）。在开发者后续的常规会话中，受感染的代理读取图片指令后打开 .env 并将其内容编码为整数元组写入"溯源"常量——Cursor 在 Sonnet/Gemini/GPT-5.5 等多模型下均执行成功，单次即生成 311 个可逐字节还原密钥的整数；Claude Code 因架构差异在所有模型下均拒绝执行。</li>
+<li><strong>评分理由：</strong> 利用代理与审查器之间结构性的多模态盲点，攻击 PoC 已公开，主流 Cursor/Antigravity 全数沦陷，开发者供应链面临真实失窃风险。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/</li>
+</ul>
+<h2>4. CISA 公开内部 AWS GovCloud 凭据泄露事件并发布应急响应经验</h2>
+<ul>
+<li><strong>评分：</strong> 90/100</li>
+<li><strong>来源：</strong> The Hacker News / BleepingComputer</li>
+<li><strong>摘要：</strong> 美国 CISA 公开披露一起内部安全事件：其 Office of the Chief Information Officer 在 AWS GovCloud 环境中意外暴露了云访问凭据，并启动完整调查、对外发布详细的事件响应经验教训。事件凸显云架构下秘密管理的持续挑战，若国家级网络安全主管机构也会泄露云凭据，云原生组织应立即审计凭据卫生、强制最小权限、部署自动轮换与持续监控。</li>
+<li><strong>评分理由：</strong> 美国网安主管机构主动披露的供应链级云凭据事件，权威性与示范效应极强，对所有使用公有云的企业具直接借鉴价值。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/cisa-discloses-internal-aws-govcloud.html</li>
+</ul>
+<h2>5. PraisonAI 多个关键 RCE 漏洞（CVSS 10.0）允许无沙箱执行 LLM 生成代码</h2>
+<ul>
+<li><strong>评分：</strong> 88/100</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> PraisonAI 1.6.78 之前版本中 CVE-2026-61447（CVSS 10.0）允许攻击者通过提示注入影响 LLM 输出，导致 CodeAgent._execute_python() 在无 AST 校验、无 import 限制、无沙箱的情况下执行任意 Python 代码，可窃取环境变量、获取系统权限。同期披露的另两条 PraisonAI RCE 漏洞（CVE-2026-40287 via unsanitized <code>tools.py</code> 加载、CVE-2026-44336 via MCP 服务器无目录限制的 <code>.pth</code> 文件写入）形成可链式利用的 RCE 家族，受影响开发者/CI 环境面临全面失陷。</li>
+<li><strong>评分理由：</strong> 多条 CVSS 满分/高危 RCE 链集中在快速流行的 AI Agent 框架，攻击面为提示注入 + 工作流 YAML，触发条件低、危害大。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/praisonai-rce-cve-2026-61447.html</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条新闻，最高分 95 分。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
