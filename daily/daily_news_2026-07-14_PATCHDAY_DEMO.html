@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-14（补丁日板块验证样例） | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-14（补丁日板块验证样例）</h1>
+<blockquote>
+<p>⚠️ 本文件为「微软补丁安全级别」板块手动验证样例（最终版）。补丁数据取自最新已发布的 <strong>2026 年 6 月 CVRF</strong>（2026-07 补丁尚未发布）；补丁板块为文末独立单元、不进入 Top5，Top5 仅含近期真实安全新闻。仅用于预览排版效果，非正式推送。</p>
+</blockquote>
+<hr />
+<h2>🔝 Top 5 安全新闻</h2>
+<h3>1. FortiClient EMS 凭证收割攻击持续活跃，已窃 1.1 亿条凭证 ｜ 评分 94</h3>
+<ul>
+<li><strong>来源</strong>：cn-sec.com</li>
+<li><strong>摘要</strong>：攻击者利用 FortiClient EMS 访问控制漏洞 CVE-2026-35616（CVSS 9.1，无需认证，已列入 CISA KEV）大规模窃取 FortiGate 管理凭证，已扫描 43 万台设备、窃取超 1.1 亿条凭证、致 354 个组织域沦陷。建议立即升级并轮换所有管理凭证。</li>
+<li><strong>原文</strong>：https://cn-sec.com/archives/5331803.html</li>
+</ul>
+<h3>2. Linux 内核 "Bad Epoll" 漏洞（CVE-2026-46242）PoC 已公开，本地用户可秒获 root ｜ 评分 92</h3>
+<ul>
+<li><strong>来源</strong>：zone.ci</li>
+<li><strong>摘要</strong>：藏于 epoll 机制三年的竞态+释放后重用漏洞，影响 Linux 服务器/桌面/Android（内核 6.4+），PoC 已公开、成功率近 99%。任何本地用户可数秒内提权至 root。</li>
+<li><strong>原文</strong>：https://zone.ci/secarticles/wx/553477.html</li>
+</ul>
+<h3>3. Cursor AI 编辑器 DuneSlide 零点击 RCE（CVE-2026-50548/50549，CVSS 9.8）｜ 评分 90</h3>
+<ul>
+<li><strong>来源</strong>：cn-sec.com</li>
+<li><strong>摘要</strong>：通过提示注入在开发者克隆仓库/浏览网页/审查 PR 时驱动 AI Agent 执行任意命令，沙箱逃逸链可接管开发者主机窃取源码与密钥。Cursor 3.0 已修复，但大量 2.x 用户未升级。</li>
+<li><strong>原文</strong>：https://cn-sec.com/archives/5324782.html</li>
+</ul>
+<h3>4. GhostApproval：六大 AI 编程助手可被诱骗静默写入受控 SSH 密钥 ｜ 评分 88</h3>
+<ul>
+<li><strong>来源</strong>：new.qq.com</li>
+<li><strong>摘要</strong>：Wiz 披露六款主流 AI 编程助手（含 Claude Code、Cursor、Windsurf 等）存在符号链接欺骗漏洞，可借无害文件名掩盖真实写入路径，将攻击者公钥写入 ~/.ssh/authorized_keys 实现持久控制。Augment、Windsurf 尚未发布补丁。</li>
+<li><strong>原文</strong>：https://new.qq.com/rain/a/20260711A044WW00</li>
+</ul>
+<hr />
+<blockquote>
+<p>📌 本次共筛选 4 条新闻（验证样例，补丁板块为文末独立单元、不计入 Top5），最高分 94 分。补丁严重级别仅在文末独立板块呈现，避免与新闻混排或刷屏。</p>
+</blockquote>
+<hr />
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p>数据源：微软 MSRC Security Update Guide <strong>公共免认证 REST API</strong> — <code>GET https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jun</code>（HTTP 200，无需 Key/Token）。解析方式：Bash(curl) 下载 CVRF XML + Python 提取。</p>
+</blockquote>
+<h3>一、本月补丁总览（2026-06）</h3>
+<table>
+<thead>
+<tr>
+<th>严重级别</th>
+<th>数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 Critical</td>
+<td><strong>89</strong></td>
+</tr>
+<tr>
+<td>🟠 Important</td>
+<td><strong>292</strong></td>
+</tr>
+<tr>
+<td>🟡 Moderate</td>
+<td><strong>328</strong></td>
+</tr>
+<tr>
+<td>🟢 Low</td>
+<td><strong>29</strong></td>
+</tr>
+<tr>
+<td><strong>合计 CVE</strong></td>
+<td><strong>1281</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>CVSS≥9.0 高危项</strong>：<strong>57</strong> 个</li>
+<li><strong>已被在野利用（0day / Exploited:Yes）</strong>：<strong>0</strong> 个（本月无在野利用记录）</li>
+</ul>
+<h3>二、核心风险一句话总结</h3>
+<p>本月以 Critical 远程代码执行类漏洞为主（89 个 Critical），虽无在野利用 0day，但 57 个 CVSS≥9.0 高危项意味着一旦被武器化风险极高，建议优先修补 CVSS 满分（10.0）项并纳入本月补丁周期。</p>
+<h3>三、CVSS≥9.0 高危 CVE 清单（Top 15，按 CVSS 降序）</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>CVE 编号</th>
+<th>CVSS</th>
+<th>严重级别</th>
+<th>在野利用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>CVE-2026-45480</td>
+<td>10.0</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CVE-2026-48567</td>
+<td>10.0</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>3</td>
+<td>CVE-2026-47647</td>
+<td>9.9</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>4</td>
+<td>CVE-2026-48584</td>
+<td>9.9</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>5</td>
+<td>CVE-2026-52931</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>6</td>
+<td>CVE-2026-53043</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>7</td>
+<td>CVE-2026-52956</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>8</td>
+<td>CVE-2026-53017</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>9</td>
+<td>CVE-2026-54906</td>
+<td>9.8</td>
+<td>Low*</td>
+<td>否</td>
+</tr>
+<tr>
+<td>10</td>
+<td>CVE-2026-53086</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>11</td>
+<td>CVE-2026-52934</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>12</td>
+<td>CVE-2026-53049</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>13</td>
+<td>CVE-2026-53045</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>14</td>
+<td>CVE-2026-53107</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+<tr>
+<td>15</td>
+<td>CVE-2026-53010</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>* CVE-2026-54906 的聚合严重级别标注为 Low，但 CVSS 9.8——属 CVRF 按产品分级的常见口径差异，仅作提示；完整 57 个清单可按需展开。</p>
+</blockquote>
+<h3>四、参考链接</h3>
+<ul>
+<li>MSRC Security Update Guide：https://msrc.microsoft.com/update-guide/</li>
+<li>CVRF API（公共免认证）：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jun</li>
+</ul>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
