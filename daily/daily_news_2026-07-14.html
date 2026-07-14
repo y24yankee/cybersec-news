@@ -50,7 +50,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   <article class="card">
 <h1>网络安全日报 2026-07-14</h1>
 <blockquote>
-<p>📅 今日为 <strong>微软 2026 年 7 月补丁日（Patch Tuesday）</strong>，文末附独立「微软补丁安全级别」板块。</p>
+<p>📅 今日为微软 7 月补丁日当天，但<strong>正式补丁尚未发布</strong>（预计北京时间 7/15 凌晨发布）。文末补丁板块已更正为发布提醒，正式「微软补丁安全级别」板块将于明日（7/15）推送带出。</p>
 </blockquote>
 <hr />
 <h2>🔝 Top 5 安全新闻</h2>
@@ -96,146 +96,12 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <hr />
 <h2>📊 本次共筛选 15 条新闻，最高分 94 分</h2>
 <hr />
-<h2>🛡️ 微软补丁安全级别（Patch Tuesday — 2026 年 7 月）</h2>
+<h2>🛡️ 微软补丁安全级别（Patch Tuesday）</h2>
 <blockquote>
-<p><strong>数据来源：</strong> <a href="https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul">微软 MSRC Security Update Guide CVRF API</a>（公共免认证） | 更新日期：2026-07-12</p>
+<p>⚠️ <strong>更正说明：</strong> 本板块的自动生成数据已被撤下。原因：微软 7 月正式 Patch Tuesday 补丁在本文生成时（北京时间 7/14 上午）<strong>尚未发布</strong>。当时 MSRC API 上 <code>2026-Jul</code> 条目仅为标题含 "<strong>Early</strong>" 的<strong>预发布占位文档</strong>（"July 2026 Early Security Updates"，以 Azure Linux 开源组件更新为主），并非正式补丁日数据，故不作为正式统计。</p>
 </blockquote>
-<h3>📈 本月 CVE 总数与严重级别分布</h3>
-<table>
-<thead>
-<tr>
-<th>严重级别</th>
-<th>数量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Critical（严重）</strong></td>
-<td>9</td>
-</tr>
-<tr>
-<td><strong>Important（重要）</strong></td>
-<td>81</td>
-</tr>
-<tr>
-<td><strong>Moderate（中等）</strong></td>
-<td>48</td>
-</tr>
-<tr>
-<td><strong>Low（低危）</strong></td>
-<td>5</td>
-</tr>
-<tr>
-<td><strong>其他（Azure Linux 3.0 开源组件更新）</strong></td>
-<td>431</td>
-</tr>
-<tr>
-<td><strong>🔢 合计</strong></td>
-<td><strong>574</strong></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>ℹ️ 本次为 2026 年迄今最大的 Patch Tuesday 之一（上月 6 月为 206 个 CVE 的历史纪录），微软执行副总裁 Pavan Davuluri 已公开警告 AI 辅助漏洞发现将导致补丁量结构性持续攀升。</p>
-</blockquote>
-<h3>🔴 高危 CVE 清单（CVSS ≥ 9.0）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE 编号</th>
-<th>CVSS 分值</th>
-<th>严重级别</th>
-<th>受影响产品</th>
-<th>漏洞类型</th>
-<th>在野利用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-57100</td>
-<td><strong>9.9</strong></td>
-<td>Critical</td>
-<td>Microsoft Entra Provisioning Service</td>
-<td>权限提升 (EoP)</td>
-<td>❌</td>
-</tr>
-<tr>
-<td>CVE-2026-45499</td>
-<td><strong>9.9</strong></td>
-<td>Critical</td>
-<td>Azure OpenAI</td>
-<td>权限提升 (EoP)</td>
-<td>❌</td>
-</tr>
-<tr>
-<td>CVE-2026-38968</td>
-<td><strong>9.8</strong></td>
-<td>Critical</td>
-<td>ntopng (Azure Linux)</td>
-<td>会话劫持（可预测会话标识符）</td>
-<td>❌</td>
-</tr>
-<tr>
-<td>CVE-2026-41106</td>
-<td><strong>9.3</strong></td>
-<td>Critical</td>
-<td>Microsoft 365 Copilot</td>
-<td>权限提升 (EoP)</td>
-<td>❌</td>
-</tr>
-<tr>
-<td>CVE-2026-9547</td>
-<td><strong>9.1</strong></td>
-<td>Critical</td>
-<td>Azure Linux OpenSSH</td>
-<td>SSH 主机验证不当</td>
-<td>❌</td>
-</tr>
-<tr>
-<td>CVE-2026-8926</td>
-<td><strong>9.1</strong></td>
-<td>Critical</td>
-<td>Azure Linux curl</td>
-<td>netrc + URL 中用户名字段密码泄露</td>
-<td>❌</td>
-</tr>
-<tr>
-<td>CVE-2026-8924</td>
-<td><strong>9.1</strong></td>
-<td>Important</td>
-<td>Azure Linux curl</td>
-<td>尾部点域名超级 Cookie</td>
-<td>❌</td>
-</tr>
-<tr>
-<td>CVE-2026-14740</td>
-<td><strong>9.1</strong></td>
-<td>Important</td>
-<td>Azure Linux Perl DBI</td>
-<td>越界读取（SQL 注释删除时）</td>
-<td>❌</td>
-</tr>
-<tr>
-<td>CVE-2026-58289</td>
-<td><strong>9.0</strong></td>
-<td>Important</td>
-<td>Microsoft Edge (Chromium)</td>
-<td>远程代码执行 (RCE)</td>
-<td>❌</td>
-</tr>
-</tbody>
-</table>
-<h3>🔑 本月核心风险总结</h3>
-<p><strong>一句话：</strong> 本月补丁的核心风险集中在 <strong>Azure/Entra/M365 云服务权限提升</strong> 和 <strong>Linux 子系统组件级高危漏洞</strong>——CVE-2026-57100（Entra Provisioning EoP 9.9）和 CVE-2026-45499（Azure OpenAI EoP 9.9）是最优先修复项，攻击者无需用户交互即可提升至最高权限；同时，Azure Linux 3.0 的 SSH、curl、Perl DBI 等基础组件存在严重漏洞，影响所有基于 Azure Linux 的容器化服务。</p>
-<h3>📌 其他值得关注的非 CVSS≥9.0 补丁</h3>
-<ul>
-<li><strong>Windows Defender (mpengine.dll)</strong>：微软推送了 RoguePlanet（CVE-2026-50656）补丁的后续"纵深防御"更新，安全研究员 Nightmare Eclipse 称该更新引入 8 字节数据泄露及 SpyNet 联动磁盘耗尽风险，已在协调调查中。</li>
-<li><strong>Kerberos RC4 永久移除</strong>：本次累计更新正式删除 Windows Server 域控制器上的 RC4 回滚机制，任何仍使用 RC4 的服务账户可能因认证失败导致业务中断。建议先审计再打补丁。</li>
-<li><strong>Windows 远程桌面服务（RDS）</strong>：多项 RDS 漏洞已修复，含 Critical 级别，面向互联网暴露 RDP 的系统应立即更新。</li>
-<li><strong>Microsoft Office/365</strong>：Word、Excel、Outlook 多项 RCE 漏洞修复，通过恶意文档触发，典型钓鱼攻击利用路径。</li>
-<li><strong>Visual Studio / .NET SDK</strong>：7 个 Visual Studio CVE 合入本次更新。</li>
-</ul>
-<p>🔗 <a href="https://msrc.microsoft.com/update-guide/">微软 MSRC Security Update Guide</a> | <a href="https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul">CVRF API 原始数据</a></p>
+<p><strong>📅 微软 2026 年 7 月正式补丁（Patch Tuesday）预计于北京时间 7/15 凌晨发布。</strong> 正式的「微软补丁安全级别」板块（含真实分级统计、CVSS≥9.0 高危清单、在野利用标注）将于 <strong>7/15 早间推送</strong> 首次带出。</p>
+<p>🔗 <a href="https://msrc.microsoft.com/update-guide/">微软 MSRC Security Update Guide</a></p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>

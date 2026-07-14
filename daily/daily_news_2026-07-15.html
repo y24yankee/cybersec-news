@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-15 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-15</h1>
+<blockquote>
+<p>本次共筛选 <strong>15 条</strong> 新闻，最高分 <strong>92 分</strong>。</p>
+</blockquote>
+<hr />
+<h2>Top 5 网络安全新闻</h2>
+<h3>1. SAP 修复 NetWeaver ABAP 严重漏洞（CVSS 9.9）</h3>
+<ul>
+<li><strong>评分</strong>：92 分</li>
+<li><strong>来源</strong>：The Hacker News / BleepingComputer</li>
+<li><strong>摘要</strong>：SAP 发布 7 月安全更新，其中 NetWeaver Application Server ABAP 的越界写入漏洞（CVE-2026-44747）CVSS 高达 9.9，可导致内存损坏并引发未授权数据访问或修改。NetWeaver 是大量企业 ERP 的核心组件，影响面广泛。</li>
+<li><strong>评分理由</strong>：CVSS 9.9 的内存破坏漏洞，影响企业关键 ERP 基础设施，且补丁刚发布，利用窗口尚未完全关闭。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html</li>
+</ul>
+<h3>2. SonicWall SMA1000 零日漏洞遭主动利用</h3>
+<ul>
+<li><strong>评分</strong>：90 分</li>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>摘要</strong>：SonicWall 警告威胁分子正在利用 SMA1000 系列中的两个漏洞（CVE-2026-15409、CVE-2026-15410）进行零日攻击，并已发布紧急安全更新。SMA1000 是远程接入安全网关，被攻击将直接威胁企业边界。</li>
+<li><strong>评分理由</strong>：已确认野外利用，涉及企业 VPN/安全接入设备，可直接作为网络入侵入口。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/</li>
+</ul>
+<h3>3. Progress ShareFile 零日漏洞导致 Storage Zone 紧急下线</h3>
+<ul>
+<li><strong>评分</strong>：88 分</li>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>摘要</strong>：Progress Software 确认 ShareFile Storage Zone Controller 的高严重性零日漏洞（CVE-2026-56155）是迫使紧急下线 Storage Zone 的原因，目前已发布补丁。该漏洞属于权限提升类，可影响企业文件共享数据。</li>
+<li><strong>评分理由</strong>：真实引发服务紧急关停的零日事件，涉及企业文件共享与敏感数据，时效性极强。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/</li>
+</ul>
+<h3>4. Claude for Chrome 漏洞可被恶意扩展利用读取 Gmail</h3>
+<ul>
+<li><strong>评分</strong>：86 分</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Manifold Security 发现，运行在 claude.ai 上的浏览器扩展可伪造 Claude for Chrome 任务，进而读取用户 Gmail、Google Docs 和 Calendar 数据。若开启“无需询问即可执行”模式，攻击可完全自动化，无需用户确认。</li>
+<li><strong>评分理由</strong>：AI 扩展与浏览器沙箱边界出现新攻击面，且可导致邮箱/文档数据泄露，代表新兴 AI Agent 安全风险。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/07/claude-for-chrome-flaw-lets-other.html</li>
+</ul>
+<h3>5. 近 300 个 GitHub 仓库伪装正版软件分发恶意软件</h3>
+<ul>
+<li><strong>评分</strong>：85 分</li>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>摘要</strong>：威胁分子发布近 300 个伪造 GitHub 仓库，冒充合法软件和安全项目，通过 starjacking、假冒 README 等手段诱骗用户下载 infostealer 恶意软件。此类供应链攻击针对开发者群体，隐蔽性强。</li>
+<li><strong>评分理由</strong>：大规模供应链/社会工程攻击，利用开发者对 GitHub 的信任，传播信息窃取木马。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/nearly-300-github-repos-pose-as-legit-software-to-push-malware/</li>
+</ul>
+<hr />
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p>本板块为独立补丁拆解，不计入 Top 5 新闻。</p>
+</blockquote>
+<ul>
+<li><strong>官方发布状态</strong>：已确认正式版。MSRC CVRF <code>2026-Jul</code> 文档标题为 <strong>"July 2026 Security Updates"</strong>，状态 <code>Final</code>，初始发布时间为 2026-07-14 07:00 UTC。</li>
+<li><strong>CVE 总数</strong>：本月 Microsoft 安全更新共修复 <strong>622 个 Microsoft CVE</strong>（另含 428 个非 Microsoft Chromium CVE 重新发布）。</li>
+<li><strong>分级统计</strong>：</li>
+<li><strong>Critical</strong>：62 个</li>
+<li><strong>Important</strong>：553 个</li>
+<li><strong>Moderate</strong>：6 个</li>
+<li><strong>Low</strong>：1 个</li>
+</ul>
+<h3>在野利用 CVE（0day）</h3>
+<p>本月有 <strong>2 个 CVE 被确认已在野利用</strong>，建议优先修复：</p>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-56155</td>
+<td>Important</td>
+<td>7.8</td>
+<td>Active Directory Federation Services 权限提升漏洞</td>
+</tr>
+<tr>
+<td>CVE-2026-56164</td>
+<td>Moderate</td>
+<td>5.3</td>
+<td>Microsoft SharePoint Server 权限提升漏洞</td>
+</tr>
+</tbody>
+</table>
+<h3>高危 CVE 清单（CVSS ≥ 9.0，按严重程度展示前 8 条）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-45499</td>
+<td>Critical</td>
+<td>9.9</td>
+<td>Azure OpenAI 权限提升漏洞</td>
+</tr>
+<tr>
+<td>CVE-2026-57100</td>
+<td>Critical</td>
+<td>9.9</td>
+<td>Microsoft Entra 预配服务权限提升漏洞</td>
+</tr>
+<tr>
+<td>CVE-2026-57092</td>
+<td>Critical</td>
+<td>9.9</td>
+<td>Microsoft Windows VMSwitch 权限提升漏洞</td>
+</tr>
+<tr>
+<td>CVE-2026-50522</td>
+<td>Critical</td>
+<td>9.8</td>
+<td>Microsoft SharePoint 远程代码执行漏洞</td>
+</tr>
+<tr>
+<td>CVE-2026-58644</td>
+<td>Critical</td>
+<td>9.8</td>
+<td>Microsoft SharePoint 远程代码执行漏洞</td>
+</tr>
+<tr>
+<td>CVE-2026-50518</td>
+<td>Critical</td>
+<td>9.8</td>
+<td>Windows DHCP Server 远程代码执行漏洞</td>
+</tr>
+<tr>
+<td>CVE-2026-55010</td>
+<td>Critical</td>
+<td>9.8</td>
+<td>Minecraft Bedrock 专用服务器远程代码执行漏洞</td>
+</tr>
+<tr>
+<td>CVE-2026-56159</td>
+<td>Critical</td>
+<td>9.8</td>
+<td>DHCP Server Service 远程代码执行漏洞</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>其余 CVSS ≥ 9.0 漏洞</strong>：共 <strong>14 个</strong>，包含 Microsoft Copilot、Exchange Server、GDI+、Dynamics 365 等组件。完整清单见 MSRC Security Update Guide。</p>
+</blockquote>
+<h3>核心风险总结</h3>
+<p>本月补丁规模为微软史上最大（622 个 Microsoft CVE），虽仅 2 个在野利用漏洞且 CVSS 不属最高，但 Critical 级漏洞数量达 62 个，CVSS ≥ 9.0 的高危项集中在 SharePoint、DHCP、Azure OpenAI/Entra、Windows 网络驱动等关键边界/身份/服务组件，企业应在 CISA 强制时限内优先修复面向公网的服务与身份基础设施。</p>
+<h3>参考链接</h3>
+<ul>
+<li>MSRC Security Update Guide： https://msrc.microsoft.com/update-guide/</li>
+<li>MSRC CVRF API（2026-Jul）： https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</li>
+</ul>
+<hr />
+<p><em>本次共筛选 15 条新闻，最高分 92 分。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
