@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-16 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-16</h1>
+<h2>Top 5 安全新闻</h2>
+<h3>1. 🔴 微软史上最大补丁日：622 个 CVE，3 个零日（2 个已被在野利用）</h3>
+<p><strong>评分：95 | 来源：CrowdStrike / Tenable / MSRC</strong>
+微软 2026 年 7 月 Patch Tuesday 打破纪录，一次性修复 622 个 CVE（其中 62 个 Critical）。两个零日漏洞已被在野利用：CVE-2026-56155（AD FS 本地提权，CVSS 7.8）和 CVE-2026-56164（SharePoint 无认证远程提权，CVSS 5.3）；另有 CVE-2026-50661（BitLocker 绕过，公开披露但未遭攻击）。第三个在野利用漏洞 CVE-2026-58644（SharePoint RCE，CVSS 9.8）同样被标记为 Exploited:Yes。企业应立即修补 AD FS 和 SharePoint 服务器。
+<strong>原文链接：</strong> https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/</p>
+<h3>2. 🔴 Jscrambler npm 包遭供应链攻击：5 个版本植入 Rust 信息窃取器，瞄准开发者 AI 工具凭据</h3>
+<p><strong>评分：92 | 来源：StepSecurity / Socket Security / BleepingComputer</strong>
+攻击者劫持 jscrambler npm 发布凭据，于 7 月 11 日连推 5 个恶意版本（8.14.0–8.20.0），内嵌跨平台 Rust 信息窃取器。该窃取器专门收割 AWS/Azure/GCP 云凭据、Claude Desktop/Cursor/VS Code AI 工具 API 密钥、MetaMask/Phantom 加密钱包种子短语及 Bitwarden 密码库。恶意载荷伪装为 7.8MB 的 "intro.js" 文件（实为 ELF/PE/Mach-O 三平台原生二进制容器），安装时自动执行。安全版本为 8.22.0。安装过受影响版本的开发环境应视为已被入侵。
+<strong>原文链接：</strong> https://www.stepsecurity.io/blog/jscrambler-npm-package-publishes-malicious-preinstall-binary</p>
+<h3>3. 🔴 Progress ShareFile 紧急指令：立即关闭 Storage Zone Controller 服务器</h3>
+<p><strong>评分：90 | 来源：BleepingComputer / The Register / Beazley Security</strong>
+Progress Software 向所有 ShareFile Storage Zone Controller（SZC）客户发出紧急邮件，要求立即手动关闭托管 SZC 的 Windows 服务器，称检测到"可信的外部安全威胁"。Progress 已临时禁用基于 SZC 的账户访问，但表示仅云端封锁不够，必须物理断电。7 月 14 日 Progress 确认 SZC 5.x/6.x 存在高级路径遍历漏洞，已发布补丁（5.12.5 / 6.0.2）。受影响企业应升级并审计日志中的异常 .aspx 文件和未知存储路径。
+<strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/progress-urges-sharefile-customers-to-shut-down-servers-over-credible-threat/</p>
+<h3>4. 🟠 Ghostcommit：将提示注入隐藏在 PNG 图片中，绕过 AI 代码审查窃取仓库密钥</h3>
+<p><strong>评分：85 | 来源：BleepingComputer / ASSET Research Group</strong>
+密苏里大学 ASSET Research Group 披露 Ghostcommit 攻击技术：通过在 PR 中提交引用恶意 PNG 图片的 AGENTS.md 文件，将提示注入指令嵌入图片而非文本，成功绕过 CodeRabbit 和 Bugbot（两者不审查图片文件）。AI 编码代理读取图片后，将 .env 文件内容编码为整数数组写入代码，攻击者从公开 commit 解码还原全部密钥。Cursor 和 Antigravity 多模型下均泄漏密钥；Claude Code 在所有模型下均拒绝执行。该攻击首次将多模态提示注入与供应链攻击结合。
+<strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/</p>
+<h3>5. 🟠 Cursor AI 编辑器零日漏洞 7 个月未修复：恶意 git.exe 可静默执行</h3>
+<p><strong>评分：82 | 来源：Mindgard / dev.to / Hacker News</strong>
+Mindgard 公开披露 Cursor for Windows 的路径解析零日漏洞：当开发者打开项目目录时，Cursor 在多个路径搜索 Git 可执行文件，错误地包含当前工作目录。攻击者只需在仓库根目录放置恶意 git.exe，Cursor 便自动反复执行，无需任何确认。该漏洞于 2025 年 12 月 15 日报告，历经 70+ 版本更新仍未修复。同时 Cursor 在 2026 年还暴露了 DuneSlide（CVE-2026-50548/50549，CVSS 9.8）沙箱逃逸 RCE。Windows 开发者应在隔离环境中打开不可信仓库，企业应部署 AppLocker 限制工作区目录内的可执行文件。
+<strong>原文链接：</strong> https://dev.to/thegatewayguy/cursor-has-an-unpatched-0-day-its-been-7-months-59mk</p>
+<hr />
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p><strong>DocumentTitle:</strong> July 2026 Security Updates ✅ （正式发布，非 Early 预发布）</p>
+</blockquote>
+<h3>本月 CVE 总数与分级统计</h3>
+<table>
+<thead>
+<tr>
+<th>严重级别</th>
+<th>Microsoft CVE 数量</th>
+<th>Mariner (Azure Linux)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical</strong></td>
+<td>62</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Important</strong></td>
+<td>553</td>
+<td>47</td>
+</tr>
+<tr>
+<td><strong>Moderate</strong></td>
+<td>6</td>
+<td>56</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td><strong>622</strong></td>
+<td><strong>114</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：本次 CVRF 文档含 1164 条 Vulnerability 记录（含 Chromium/Edge 427 条、Mariner 114 条、第三方 1 条），微软官方 CVE 计数为 622。微软 CVE 中提权漏洞占 41%，RCE 占 27%。</p>
+</blockquote>
+<h3>已被在野利用的 CVE（优先修补）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>漏洞描述</th>
+<th>在野利用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CVE-2026-56155</strong></td>
+<td>Important</td>
+<td>7.8</td>
+<td>AD FS 权限提升 — 低权限本地用户可获管理员权限</td>
+<td>✅ Exploited:Yes</td>
+</tr>
+<tr>
+<td><strong>CVE-2026-56164</strong></td>
+<td>Moderate</td>
+<td>5.3</td>
+<td>SharePoint Server 权限提升 — 无认证远程攻击者可提权</td>
+<td>✅ Exploited:Yes</td>
+</tr>
+<tr>
+<td><strong>CVE-2026-58644</strong></td>
+<td>Critical</td>
+<td>9.8</td>
+<td>SharePoint Server RCE — 不信任数据反序列化远程代码执行</td>
+<td>✅ Exploited:Yes</td>
+</tr>
+</tbody>
+</table>
+<h3>CVSS ≥ 9.0 高危 CVE 清单（前 8 条）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>CVSS</th>
+<th>严重级别</th>
+<th>在野利用</th>
+<th>漏洞描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-45499</td>
+<td>9.9</td>
+<td>Critical</td>
+<td>No</td>
+<td>Azure OpenAI 提权</td>
+</tr>
+<tr>
+<td>CVE-2026-57100</td>
+<td>9.9</td>
+<td>Critical</td>
+<td>No</td>
+<td>Entra Provisioning Service 提权</td>
+</tr>
+<tr>
+<td>CVE-2026-57092</td>
+<td>9.9</td>
+<td>Critical</td>
+<td>No</td>
+<td>Windows VMSwitch 提权（VM 逃逸至宿主机）</td>
+</tr>
+<tr>
+<td>CVE-2026-58644</td>
+<td>9.8</td>
+<td>Critical</td>
+<td><strong>Yes</strong></td>
+<td>SharePoint RCE</td>
+</tr>
+<tr>
+<td>CVE-2026-50522</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>No</td>
+<td>SharePoint RCE</td>
+</tr>
+<tr>
+<td>CVE-2026-56190</td>
+<td>9.8</td>
+<td>Important</td>
+<td>No</td>
+<td>RDP 远程代码执行</td>
+</tr>
+<tr>
+<td>CVE-2026-55944</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>No</td>
+<td>Dynamics NAV/Business Central RCE（无认证）</td>
+</tr>
+<tr>
+<td>CVE-2026-50518</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>No</td>
+<td>Windows DHCP Server RCE</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>此外还有 CVSS 9.8 的：SQL Server ODBC 提权、Windows FTP Service RCE、RDP Client RCE、MSMQ RCE、DHCP Server Service RCE、Minecraft Bedrock RCE、Windows Server Network driver RCE 等。CVSS 9.6 的有 Copilot RCE、Exchange Server Spoofing、GDI+ RCE。</p>
+</blockquote>
+<h3>公开披露但未遭在野利用的零日</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>CVSS</th>
+<th>严重级别</th>
+<th>漏洞描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-50661</td>
+<td>6.1</td>
+<td>Important</td>
+<td>Windows BitLocker 安全功能绕过（需物理访问）</td>
+</tr>
+</tbody>
+</table>
+<h3>⚡ 一句话核心风险总结</h3>
+<p><strong>本月微软补丁日创历史纪录，3 个 CVE 已在野利用（AD FS 提权、SharePoint 远程提权、SharePoint RCE），其中 SharePoint 承受 17 个 CVE 且多个 RCE 可无认证远程触发；企业应立即优先修补身份与协作服务器，再处理网络暴露的 RDP/DHCP/FTP 等 RCE 缺陷。</strong></p>
+<h3>参考链接</h3>
+<ul>
+<li>MSRC Security Update Guide: https://msrc.microsoft.com/update-guide</li>
+<li>CVRF API (2026-Jul): https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</li>
+<li>CrowdStrike 分析: https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/</li>
+<li>Tenable 分析: https://www.tenable.com/blog/microsofts-july-2026-patch-tuesday-addresses-569-cves-cve-2026-56155-cve-2026-56164</li>
+</ul>
+<hr />
+<p>本次共筛选 5 条新闻，最高分 95 分</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
