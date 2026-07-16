@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-17 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-17</h1>
+<hr />
+<h2>1. 两名 Scattered Spider 黑客因 TfL 网络攻击被判 5.5 年 — 英国史上最严重网络犯罪定罪</h2>
+<p><strong>评分：90 | 来源：The Hacker News / NCA / The Register</strong>
+Owen Flowers（18岁）和 Thalha Jubair（20岁）在 Woolwich Crown Court 各被判刑 5.5 年，因 2024 年攻击伦敦交通局（TfL）导致 148 个系统瘫痪、27,000 名员工被迫现场重置密码、损失 £2900 万。这是英国《计算机滥用法》Section 3ZA（最严重条款）首次成功定罪黑客。Flowers 还承认攻击两家美国医疗机构，面临美国高达 95 年刑期指控。</p>
+<blockquote>
+<p>评分理由：首次适用英国最严网络犯罪条款定罪，攻击关键基础设施造成巨额损失，具有重大法律先例意义。
+- 原文链接：https://thehackernews.com/2026/07/two-scattered-spider-hackers-get-55.html</p>
+</blockquote>
+<hr />
+<h2>2. TELEPUZ 新型模块化恶意软件通过 ClickFix 传播 — 区块链智能合约作为 C2 后备通道</h2>
+<p><strong>评分：88 | 来源：The Hacker News / Elastic Security Labs</strong>
+Elastic Security Labs 披露 TELEPUZ，一种用 C 编写的轻量级模块化恶意软件，自 2026 年 4 月末通过 ClickFix 社工攻击传播。感染链为 PowerShell → Vidar Stealer (Go 变体) → TELEPUZ DLL。它通过取消 NTDLL 钩子、禁用 AMSI/ETW 来规避防御，并用 Telegram 频道描述、Steam 社区资料、DNS 查询和 <strong>Polygon 区块链智能合约</strong> 作为 C2 后备地址——首次将公链用作恶意软件 C2 僵尸掉落解析器。疑似 MaaS 运营，每日持续上传 VirusTotal。</p>
+<blockquote>
+<p>评分理由：新型恶意软件首次将区块链智能合约用于 C2 通道，ClickFix 已成为主流初始访问向量，技术新颖性高。
+- 原文链接：https://thehackernews.com/2026/07/new-telepuz-malware-spreads-via.html</p>
+</blockquote>
+<hr />
+<h2>3. Chrome CVE-2026-15773 沙箱逃逸漏洞（CVSS 9.6）— 远程攻击者可突破浏览器沙箱</h2>
+<p><strong>评分：85 | 来源：WASOC / Armis CVE / NVD</strong>
+Google Chrome Core 组件存在 Use-After-Free 漏洞（CVE-2026-15773），CVSS 9.6（Critical），影响 Windows 上所有低于 150.0.7871.125 的 Chrome 版本。远程攻击者无需权限，仅需诱导用户访问恶意 HTML 页面即可逃逸浏览器沙箱，获得操作系统级执行权限。影响所有 Chromium 内核浏览器（Chrome、Edge、Brave、Vivaldi）。已在 Chrome 150.0.7871.125 中修复。</p>
+<blockquote>
+<p>评分理由：CVSS 9.6 Critical 沙箱逃逸，影响所有主流 Chromium 浏览器用户，仅需用户访问恶意网页即可触发。
+- 原文链接：https://cve.armis.com/CVE-2026-15773</p>
+</blockquote>
+<hr />
+<h2>4. Zoom CVSS 9.8 远程账户劫持漏洞 + Splunk 多个高危漏洞紧急修补</h2>
+<p><strong>评分：84 | 来源：CyberMaterial / MGI Computers / Keio University</strong>
+Zoom Workplace for Windows 修补 CVE-2026-53412（CVSS 9.8），远程未经认证攻击者可劫持用户账户。同时修补 3 个高危漏洞（TOCTOU 竞态条件、2 个权限提升）。Splunk 修补 CVE-2026-20296（命令防护绕过）、CVE-2026-20297（路径穿越）、CVE-2026-20298（信息泄露），以及 Golang/OpenSSL 等第三方库的多个高危漏洞。两个平台目前均无在野利用报告。</p>
+<blockquote>
+<p>评分理由：Zoom CVSS 9.8 Critical 未经认证账户劫持影响全球企业通信平台；Splunk 作为日志/安全运营核心平台同样影响面广。
+- 原文链接：https://mgicomputers.com/tech-news/splunk-zoom-patch-critical-vulnerabilities</p>
+</blockquote>
+<hr />
+<h2>5. CISA 命令联邦机构紧急修补 Oracle E-Business Suite 在野利用漏洞</h2>
+<p><strong>评分：81 | 来源：CyberMaterial / CISA</strong>
+CISA 发布紧急指令，要求联邦机构在周六前修补 Oracle E-Business Suite 中正在被在野利用的关键漏洞，该漏洞允许未经认证攻击者入侵金融应用系统。受影响机构必须立即安装 Oracle 安全更新或将系统断网。该指令依据 BOD 25-01 发布，属于强制执行。</p>
+<blockquote>
+<p>评分理由：CISA 紧急指令 + 在野利用 + 未经认证攻击金融系统，影响联邦机构核心业务应用。
+- 原文链接：https://www.cybermaterial.com/p/cyber-briefing-20260716</p>
+</blockquote>
+<hr />
+<h2>其他候选新闻（未进入 Top5）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>新闻标题</th>
+<th>评分</th>
+<th>来源</th>
+<th>简要说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>n8n CVE-2026-59208 跨 Issuer 账户劫持漏洞</td>
+<td>82</td>
+<td>THN / Strix</td>
+<td>Token Exchange 仅按 JWT sub 匹配账户、忽略 iss，导致跨 Issuer 冒充登录</td>
+</tr>
+<tr>
+<td>7</td>
+<td>11 个恶意 NuGet 包伪装游戏工具投放间谍载荷</td>
+<td>78</td>
+<td>THN</td>
+<td>.NET CLI 工具伪装为游戏辅助/面板，下载 Python 二阶段载荷 "pepesoft.exe"</td>
+</tr>
+<tr>
+<td>8</td>
+<td>恶意 Braintree.Net NuGet 包窃取信用卡数据和商户 API 密钥</td>
+<td>76</td>
+<td>DBappSecurity</td>
+<td>仿冒官方支付 SDK，仅在生产环境激活窃取行为，334 次真实安装</td>
+</tr>
+<tr>
+<td>9</td>
+<td>AWS CloudFront 中断影响 Hugging Face 等多家平台</td>
+<td>72</td>
+<td>CyberMaterial</td>
+<td>VPC Origins 包处理子系统故障导致 5xx 错误，影响 UK National Lottery 等</td>
+</tr>
+<tr>
+<td>10</td>
+<td>CISA/NSA 联合发布 CVD 协调漏洞披露指南</td>
+<td>70</td>
+<td>CyberMaterial</td>
+<td>五国网络安全机构联合敦促软件供应商建立正式 CVD 程序</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p>本次共筛选 <strong>15</strong> 条候选新闻，最高分 <strong>90</strong> 分。Patch Tuesday 板块已于 2026-07-15 和 2026-07-16 推送中完整覆盖（622 CVE / 3 在野利用 0day / 62 Critical），本日不再重复生成。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
