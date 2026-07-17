@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-18 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-18</h1>
+<blockquote>
+<p>📊 本次共筛选 15 条候选新闻，最高分 95 分。</p>
+</blockquote>
+<hr />
+<h2>🔝 Top 5 新闻</h2>
+<h3>1. CISA 将 FortiSandbox 三漏洞链列入 KEV 目录，确认已被在野利用 | 评分：95</h3>
+<p><strong>来源：</strong> CISA / BleepingComputer / Defused Cyber</p>
+<p><strong>摘要：</strong> 美国 CISA 于 7 月 16 日将 Fortinet FortiSandbox 产品三个漏洞（CVE-2026-39808/25089/39813）正式纳入已知被利用漏洞（KEV）目录。该漏洞链包含身份验证绕过（CVE-2026-39813）及两个 CVSS 9.8/9.1 的未认证 OS 命令注入漏洞，攻击者可通过特制 HTTP 请求远程执行任意命令，无需凭证或用户交互。安全公司 Defused 自 6 月 16 日起观测到野外利用，约 2,400 个 FortiSandbox 实例暴露在互联网。CISA 依据 BOD 26-04 指令要求联邦机构在 7 月 19 日前完成修补。</p>
+<p><strong>评分理由：</strong> 企业级安全沙箱设备被三重漏洞链攻陷，CVSS 最高 9.8 且已在野利用，CISA 紧急指令限期修复。</p>
+<p><strong>原文链接：</strong> https://www.cisa.gov/known-exploited-vulnerabilities-catalog</p>
+<hr />
+<h3>2. Cisco Talos 披露 UAT-11795：Starland RAT 利用 Polygon 智能合约做 C2 回退 | 评分：93</h3>
+<p><strong>来源：</strong> Cisco Talos / BleepingComputer</p>
+<p><strong>摘要：</strong> Cisco Talos 于 7 月 16 日披露一个俄语经济动机攻击组织 UAT-11795，自 2025 年 6 月起针对美国和欧洲用户分发木马化安装程序（MobaXterm、WebEx、Zoom、DBeaver、FACEIT），内置新颖的 Python RAT（Starland）和内存级 PowerShell C2 植入（WLDR Agent）。最具创新性的是其 C2 回退机制：当主 C2 被封锁时，恶意软件通过 Polygon 智能合约（0x6ae382ed...）查询 XOR 加密的备用域名，实现去中心化 C2 韧性。此外还携带 CastleStealer 和 Remcos RAT 作为二级载荷。</p>
+<p><strong>评分理由：</strong> 首个公开记录的使用区块链智能合约实现 C2 回退的在野恶意软件，技术新颖性极高，影响范围广。</p>
+<p><strong>原文链接：</strong> https://blog.talosintelligence.com/uat-11795-deploys-novel-starland-rat-and-bespoke-wldr-c2-implant-in-financially-motivated-campaign/</p>
+<hr />
+<h3>3. Spirals：新型 Rust 勒索软件 24 小时内完成完整入侵周期 | 评分：90</h3>
+<p><strong>来源：</strong> Symantec / BleepingComputer</p>
+<p><strong>摘要：</strong> Symantec 威胁猎人团队 7 月 16 日披露名为 Spirals 的全新 Rust 勒索软件家族。攻击者通过面向互联网的 IIS 服务器上的 ASP.NET Web Shell 获取初始访问，在不到 24 小时内完成横向移动、凭证窃取（SAM/LSASS）、关闭 23 个备份/数据库/虚拟化服务，最终使用 PsExec 全网部署加密载荷。加密算法采用 AES-128 + ECDH P-256，超过 5MB 文件使用间歇加密加速。目前仅发现一个南亚 IT 服务公司受害，但研究人员评估运营者具备大规模攻击能力。</p>
+<p><strong>评分理由：</strong> 全新 Rust 勒索软件家族 24 小时即完成从入侵到加密的完整 TTP，攻击速度之快远超行业平均水平。</p>
+<p><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/new-spirals-ransomware-encrypts-victim-network-in-under-24-hours/</p>
+<hr />
+<h3>4. ClickLock：新型 macOS 窃密木马每 210ms 杀死应用直到受害者交出密码 | 评分：86</h3>
+<p><strong>来源：</strong> Group-IB / NCSC-FI</p>
+<p><strong>摘要：</strong> 安全厂商 Group-IB 和芬兰 NCSC-FI 报告了一种名为 ClickLock 的新型 macOS 信息窃取木马。该恶意软件采用极具侵略性的社工手法：感染后每 210 毫秒杀死受害者正在运行的应用程序，直到用户被迫在弹出的伪造系统对话框中输入登录密码。ClickLock 通过终端命令传播，安装持久化 LaunchAgent，窃取 8 款浏览器、31 个加密货币钱包扩展、7 个密码管理器及 macOS Keychain 中的凭证。自 5 月以来已在 33 个国家感染超过 100 名受害者。</p>
+<p><strong>评分理由：</strong> 独特的"杀死应用逼交密码"社工技术在前，且覆盖 macOS 全生态敏感数据，技术手法新颖且危害严重。</p>
+<p><strong>原文链接：</strong> https://www.cybersecbrief.com/news/cybersec/cybersec-2026-07-17</p>
+<hr />
+<h3>5. VMware Avi Load Balancer 7 个漏洞 + FreePBX 未认证 RCE 紧急修复 | 评分：83</h3>
+<p><strong>来源：</strong> Canadian Centre for Cyber Security</p>
+<p><strong>摘要：</strong> 加拿大网络安全中心 7 月 17 日发布三项安全公告：Broadcom VMware Avi Load Balancer 存在 7 个 CVE（VMSA-2026-0005），涵盖 CVE-2026-47865 至 CVE-2026-47871；开源电话系统 FreePBX 16/17 存在通过 socket.io 命名空间绕过实现的未认证 RCE 及未认证 SQL 注入漏洞；Google Chrome Desktop 需更新至 150.0.7871.128+。三者均建议立即升级至最新版本。</p>
+<p><strong>评分理由：</strong> 企业级负载均衡器和广泛部署的开源 PBX 系统同时爆发严重漏洞，影响面大且均有未认证 RCE 风险。</p>
+<p><strong>原文链接：</strong> https://cyfar.ca/posts/cyber-centre-daily-advisory-digest-2026-07-17-3-advisories</p>
+<hr />
+<h2>🛡️ 微软补丁安全级别（Patch Tuesday — 2026 年 7 月）</h2>
+<blockquote>
+<p>⚠️ 数据来源：MSRC CVRF API <code>2026-Jul</code>，DocumentTitle 确认为正式 <code>July 2026 Security Updates</code>（非 Early 预发布版本）。CVRF 最近更新于 2026-07-17T17:42:44Z。</p>
+</blockquote>
+<h3>📊 本月补丁总览</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microsoft 产品 CVE 总数</strong></td>
+<td><strong>756</strong></td>
+</tr>
+<tr>
+<td>├─ Critical（严重）</td>
+<td>70</td>
+</tr>
+<tr>
+<td>├─ Important（重要）</td>
+<td>614</td>
+</tr>
+<tr>
+<td>├─ Moderate（中等）</td>
+<td>65</td>
+</tr>
+<tr>
+<td>└─ Low（低危）</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Azure Linux OSS（不计入 MS 分类）</td>
+<td>450</td>
+</tr>
+<tr>
+<td><strong>CVRF 总条目</strong></td>
+<td><strong>1,206</strong></td>
+</tr>
+<tr>
+<td>CVSS ≥ 9.0 唯一 CVE</td>
+<td><strong>30</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>🔴 已被在野利用的零日漏洞（3 个）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE 编号</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>产品</th>
+<th>简述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CVE-2026-58644</strong></td>
+<td>Critical</td>
+<td>9.8</td>
+<td>SharePoint Server</td>
+<td>不受信任数据反序列化漏洞，攻击者可通过网络远程执行代码，攻击复杂度低</td>
+</tr>
+<tr>
+<td><strong>CVE-2026-56155</strong></td>
+<td>Important</td>
+<td>7.8</td>
+<td>Active Directory Federation Services</td>
+<td>访问控制粒度不足导致本地权限提升</td>
+</tr>
+<tr>
+<td><strong>CVE-2026-56164</strong></td>
+<td>Moderate</td>
+<td>5.3</td>
+<td>SharePoint Server</td>
+<td>关键功能缺少身份验证，导致未授权访问</td>
+</tr>
+</tbody>
+</table>
+<h3>⚡ Top 8 CVSS ≥ 9.0 高危 CVE</h3>
+<table>
+<thead>
+<tr>
+<th>CVE 编号</th>
+<th>CVSS</th>
+<th>在野利用</th>
+<th>受影响产品</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-45499</td>
+<td>9.9</td>
+<td>否</td>
+<td>Azure OpenAI 权限提升</td>
+</tr>
+<tr>
+<td>CVE-2026-57100</td>
+<td>9.9</td>
+<td>否</td>
+<td>Microsoft Entra 权限提升</td>
+</tr>
+<tr>
+<td>CVE-2026-57092</td>
+<td>9.9</td>
+<td>否</td>
+<td>Windows 网络组件</td>
+</tr>
+<tr>
+<td>CVE-2026-42990</td>
+<td>9.8</td>
+<td>否</td>
+<td>Windows TCP/IP 远程代码执行</td>
+</tr>
+<tr>
+<td>CVE-2026-49172</td>
+<td>9.8</td>
+<td>否</td>
+<td>Windows Hyper-V 远程代码执行</td>
+</tr>
+<tr>
+<td>CVE-2026-54990</td>
+<td>9.8</td>
+<td>否</td>
+<td>Azure 服务远程代码执行</td>
+</tr>
+<tr>
+<td>CVE-2026-50522</td>
+<td>9.8</td>
+<td>否</td>
+<td>Windows 远程桌面服务远程代码执行</td>
+</tr>
+<tr>
+<td><strong>CVE-2026-58644</strong></td>
+<td><strong>9.8</strong></td>
+<td><strong>是</strong></td>
+<td><strong>SharePoint Server 远程代码执行</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>其余 22 个 CVSS ≥ 9.0 的 CVE（完整列表见 <a href="https://msrc.microsoft.com/update-guide/vulnerability">MSRC Security Update Guide</a>）。</p>
+</blockquote>
+<h3>📝 核心风险总结</h3>
+<p>本月补丁量接近历史纪录（756 个 Microsoft CVE，含 70 个 Critical），攻击面集中在 <strong>SharePoint Server（1 个在野利用 RCE + 1 个未授权访问）</strong>、<strong>Azure/Entra 云服务权限提升</strong>、以及 <strong>Windows 网络栈（TCP/IP、Hyper-V、RDS）远程代码执行</strong>。SharePoint CVE-2026-58644（CVSS 9.8，已利用）结合 CISA 同期 KEV 警报，构成当前最紧迫的修复优先级。建议补丁窗口 ≤ 72 小时。</p>
+<p>📎 <strong>MSRC CVRF API：</strong> https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul<br />
+📎 <strong>Security Update Guide：</strong> https://msrc.microsoft.com/update-guide</p>
+<hr />
+<p><em>本报告由自动化工作流于 2026-07-18 07:00 CST 生成。共筛选 15 条候选新闻，最高分 95 分。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
