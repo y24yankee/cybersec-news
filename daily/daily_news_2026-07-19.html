@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-19 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-19</h1>
+<h2>Top 5 安全新闻</h2>
+<h3>1. WordPress 核心 wp2shell 预认证 RCE（CVE-2026-63030 / CVE-2026-60137）</h3>
+<ul>
+<li><strong>评分：96/100</strong> — 默认安装即可利用、影响亿级站点、公开 PoC 已出现，属于本年度最严重的 WordPress 核心漏洞之一。</li>
+<li><strong>来源：</strong> The Hacker News / Hacker News</li>
+<li><strong>摘要：</strong> WordPress 在 7 月 17 日紧急发布 6.9.5、7.0.2 与 6.8.6，修复被称为 wp2shell 的预认证远程代码执行链。CVE-2026-63030 是 REST API batch 路由混淆漏洞，CVE-2026-60137 是 WP_Query 的 SQL 注入；两者串联后，匿名 HTTP 请求即可在默认安装（无需插件、无需账号）上执行任意代码。官方已启用强制自动更新，但关闭了自动更新的高价值站点仍需手动确认版本。</li>
+<li><strong>原文链接：</strong></li>
+<li>https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html</li>
+<li>https://news.ycombinator.com/item?id=48951744</li>
+</ul>
+<h3>2. 7-Zip 修复 XZ 压缩处理 RCE 漏洞（CVE-2026-14266）</h3>
+<ul>
+<li><strong>评分：92/100</strong> — 7-Zip 全球装机量极大、无自动更新机制、历史漏洞曾被 APT 利用，社会工程学投递恶意压缩包即可触发。</li>
+<li><strong>来源：</strong> Bleeping Computer</li>
+<li><strong>摘要：</strong> 7-Zip 26.02 修复了一个堆缓冲区溢出漏洞 CVE-2026-14266。攻击者通过诱导用户打开特制压缩包或访问恶意网页，可在当前用户权限下执行任意代码。该漏洞由 Lunbun 研究员 Landon Peng 发现并提交给 Zero Day Initiative，目前尚无活跃利用报告，但 7-Zip 缺乏自动更新，管理员需手动部署。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/</li>
+</ul>
+<h3>3. NadMesh 僵尸网络专门狩猎暴露的 AI 服务与 MCP 端点</h3>
+<ul>
+<li><strong>评分：88/100</strong> — 针对 AI 基础设施（Ollama、ComfyUI、Langflow、Gradio 等）的新型威胁，运营面板显示已窃取 3,811 个唯一 AWS 密钥，反映 AI/ML 服务暴露面正在快速武器化。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 奇安信 XLab 披露名为 NadMesh 的 Go 语言僵尸网络，自 7 月初开始扫描暴露的 AI 服务与 Model Context Protocol（MCP）端点。其优先利用列表中 MCP 排在首位，实际观测流量还包括 Docker API、Jenkins、Redis 与 Telnet 弱口令。被入侵主机会回传环境变量、Kubernetes 服务账户令牌、AWS 凭据及模型访问权限。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/new-nadmesh-botnet-hunts-exposed-ai.html</li>
+</ul>
+<h3>4. OpenSSL "HollowByte" 漏洞：11 字节 TLS 请求即可冻结服务器内存</h3>
+<ul>
+<li><strong>评分：86/100</strong> — 影响 OpenSSL 这一基础 TLS 库，且以无 CVE、无公告、无变更日志的“静默修复”方式存在，常规漏洞管理流程极易遗漏。</li>
+<li><strong>来源：</strong> The Hacker News / Bleeping Computer / Hacker News</li>
+<li><strong>摘要：</strong> Okta 红队公开了 OpenSSL 的 HollowByte 拒绝服务漏洞细节：攻击者只需发送 11 字节的恶意 TLS 请求头，即可让未修复服务器为永远不会到达的消息体预留最多 131 KB 内存，在 glibc 系统上该内存直到进程重启才会释放。OpenSSL 已在 6 月 9 日的多个分支版本中静默修复，但并未分配 CVE 或发布安全公告。</li>
+<li><strong>原文链接：</strong></li>
+<li>https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html</li>
+<li>https://www.bleepingcomputer.com/news/security/hollowbyte-ddos-flaw-bloats-openssl-server-memory-with-11-byte-payload/</li>
+<li>https://news.ycombinator.com/item?id=48958560</li>
+</ul>
+<h3>5. 微软警告 ACR Stealer 攻击激增</h3>
+<ul>
+<li><strong>评分：82/100</strong> — 针对企业客户的活跃信息窃取即服务（MaaS）活动，结合 ClickFix 社会工程、WebDAV 与 MSHTA 等常见企业攻击链，窃取浏览器凭据与云文档。</li>
+<li><strong>来源：</strong> Bleeping Computer</li>
+<li><strong>摘要：</strong> 微软观察到 4 月下旬至 6 月中旬 ACR Stealer（疑似 Amatera Stealer  rebranding）攻击显著增加。攻击者通过 ClickFix 诱骗用户执行命令，利用 WebDAV 共享或 MSHTA 加载恶意 DLL/PowerShell，进而窃取浏览器密码、Cookie、认证令牌、OneDrive/SharePoint 文件等。部分变种使用公共区块链服务作为 dead-drop 解析器。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/</li>
+</ul>
+<hr />
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p>数据来源：MSRC CVRF API <code>2026-Jul</code>，文档标题为 <strong>"July 2026 Security Updates"</strong>（正式补丁，非 Early），最后更新于 2026-07-18。</p>
+</blockquote>
+<h3>总体统计</h3>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th style="text-align: right;">总数</th>
+<th style="text-align: right;">Critical</th>
+<th style="text-align: right;">Important</th>
+<th style="text-align: right;">Moderate</th>
+<th style="text-align: right;">Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft CVE</td>
+<td style="text-align: right;">628</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">559</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>CBL-Mariner / Azure Linux OSS</td>
+<td style="text-align: right;">133</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>Chromium（Edge）</td>
+<td style="text-align: right;">448</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>其他</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: right;"><strong>1210</strong></td>
+<td style="text-align: right;"><strong>70</strong></td>
+<td style="text-align: right;"><strong>616</strong></td>
+<td style="text-align: right;"><strong>68</strong></td>
+<td style="text-align: right;"><strong>7</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>已被在野利用的 CVE（全部列出）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th style="text-align: right;">严重级别</th>
+<th style="text-align: right;">CVSS</th>
+<th style="text-align: left;">标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-58644</td>
+<td style="text-align: right;">Critical</td>
+<td style="text-align: right;">9.8</td>
+<td style="text-align: left;">Microsoft SharePoint Remote Code Execution Vulnerability</td>
+</tr>
+<tr>
+<td>CVE-2026-56155</td>
+<td style="text-align: right;">Important</td>
+<td style="text-align: right;">7.8</td>
+<td style="text-align: left;">Active Directory Federation Services Elevation of Privilege Vulnerability</td>
+</tr>
+<tr>
+<td>CVE-2026-56164</td>
+<td style="text-align: right;">Moderate</td>
+<td style="text-align: right;">5.3</td>
+<td style="text-align: left;">Microsoft SharePoint Server Elevation of Privilege Vulnerability</td>
+</tr>
+</tbody>
+</table>
+<h3>重点关注：Critical 且可远程/无认证利用的 CVSS≥9.0 CVE</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">CVE</th>
+<th style="text-align: right;">CVSS</th>
+<th style="text-align: left;">标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">CVE-2026-58644</td>
+<td style="text-align: right;">9.8</td>
+<td style="text-align: left;">Microsoft SharePoint Remote Code Execution Vulnerability（已在野利用）</td>
+</tr>
+<tr>
+<td style="text-align: right;">CVE-2026-50522</td>
+<td style="text-align: right;">9.8</td>
+<td style="text-align: left;">Microsoft SharePoint Remote Code Execution Vulnerability</td>
+</tr>
+<tr>
+<td style="text-align: right;">CVE-2026-50518</td>
+<td style="text-align: right;">9.8</td>
+<td style="text-align: left;">Windows DHCP Server Remote Code Execution Vulnerability</td>
+</tr>
+<tr>
+<td style="text-align: right;">CVE-2026-56159</td>
+<td style="text-align: right;">9.8</td>
+<td style="text-align: left;">DHCP Server Service Remote Code Execution Vulnerability</td>
+</tr>
+<tr>
+<td style="text-align: right;">CVE-2026-49172</td>
+<td style="text-align: right;">9.8</td>
+<td style="text-align: left;">Windows FTP Service Remote Code Execution Vulnerability</td>
+</tr>
+<tr>
+<td style="text-align: right;">CVE-2026-50447</td>
+<td style="text-align: right;">9.8</td>
+<td style="text-align: left;">Windows Message Queuing Service (MSMQ) Remote Code Execution Vulnerability</td>
+</tr>
+</tbody>
+</table>
+<h3>其余 CVSS≥9.0 微软 CVE</h3>
+<p>另有 <strong>14 个</strong> Microsoft CVE 的 CVSS≥9.0（主要涉及 Azure OpenAI、Entra、VMSwitch、RDP、Exchange、GDI+、Edge 等），完整清单可参考 MSRC Security Update Guide：
+- https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul
+- https://msrc.microsoft.com/update-guide</p>
+<h3>一句话核心风险总结</h3>
+<p>本月补丁以 <strong>SharePoint 与 AD FS 在野利用</strong>为最高优先级，同时暴露了 DHCP、FTP、MSMQ、RDP、网络驱动等大量可远程触发的 Critical RCE；CISA 已将 CVE-2026-58644 加入 KEV 并设定 7 月 19 日联邦机构修复截止日期，补丁验证与密钥轮换窗口极为紧迫。</p>
+<hr />
+<p><em>本次共筛选 5 条新闻，最高分 96 分。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
