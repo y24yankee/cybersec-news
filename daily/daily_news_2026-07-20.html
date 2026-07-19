@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-20 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-20</h1>
+<blockquote>
+<p>今日份 5 条重点新闻来自 3 个来源（The Hacker News / Bleeping Computer / Hacker News），共筛选 15 条候选，最终评出 Top 5。</p>
+<p>📅 微软 7 月补丁日（Patch Tuesday）数据已稳定——CVRF 最后更新于 2026-07-18，相关数据已在 2026-07-18 / 2026-07-19 推送中完整呈现，本日不再重复；距下次 Patch Tuesday（2026-08-12）还有 23 天。</p>
+</blockquote>
+<hr />
+<h2>Top 5 安全新闻</h2>
+<h3>1. CERT-UA 正式命名 UAC-0145：俄军 GRU 旗下 Sandworm 子集群借 ClickFix 攻击乌克兰</h3>
+<ul>
+<li><strong>评分：95/100</strong> — 国家级 APT 集群被正式命名与归属，攻击链横跨 Windows + Android、采用 EtherHiding（以太坊智能合约）C2 与 ClickFix 社会工程学，是 2026 年最具地缘政治意义的事件之一。</li>
+<li><strong>来源：</strong> The Hacker News（基于 CERT-UA 官方预警，2026-07-19）</li>
+<li><strong>摘要：</strong> 乌克兰国家计算机应急响应小组 CERT-UA 在 7 月 19 日发布的预警中，将近期针对乌克兰目标、利用 ClickFix 假 CAPTCHA 投放数据窃取木马的活动正式归属至 UAC-0145——一个属于 Sandworm（亦即 APT44/Seashell Blizzard/UAC-0002 子集群）、隶属于俄罗斯总参谋部情报总局（GRU）的子集群。攻击者至少入侵 10 个合法网站，使用 Cloaking.House 流量过滤服务与定制工具 SMARTAXE，根据访问者画像动态注入伪造 CAPTCHA；CAPTCHA 后续域名通过 EtherHiding 技术（以太坊智能合约 <code>eth_call</code>）解析。Windows 端投递的载荷包括 FLUIDLEECH / LOADLOOP（loader）、GHETTOVIBE（VBS 持久化）、SCOUTCURL（PowerShell 侦察）、FREAKYPOLL（Python 后门）；移动端则通过 Signal / WhatsApp 等即时通信应用投放伪装为安全工具的 APK，内嵌代号 COWARDDUCK 的全功能 Android 后门，可窃取通讯录、地理位置及多种办公/压缩/配置文件，并通过 Dropbox API 与 Steam Community 等合法服务回传。</li>
+<li><strong>原文链接：</strong></li>
+<li>https://thehackernews.com/2026/07/uac-0145-uses-clickfix-captchas-to.html</li>
+<li>https://thecyberexpress.com/clickfix-attacks-fuel-uac-0145-cyber-campaigns/</li>
+<li>https://www.discernion.com/article/uac-0145-uses-clickfix-captchas-to-infect-ukrainian-devices-with-malware</li>
+</ul>
+<h3>2. Volexity 披露 UTA0533：SonicWall SMA 1000 零日链被预披露利用长达三周，CVSS 满分</h3>
+<ul>
+<li><strong>评分：93/100</strong> — CVE-2026-15409 拿到 CVSS 10.0（满分），与 CVE-2026-15410（7.2）串联实现未认证 RCE→root；Volexity 复盘显示活动最早可追溯到 2026-06-22，比 SonicWall 7 月 14 日公开披露早约三周，针对网络边界 VPN 设备的"先入侵、再披露"是 2026 年最危险的一类攻击。</li>
+<li><strong>来源：</strong> Bleeping Computer / The Hacker News（Volexity 原始报告 2026-07-17，THN/媒体跟进 2026-07-19）</li>
+<li><strong>摘要：</strong> Volexity 在其博客《Proxying to Compromise》中披露其追踪为 UTA0533 的新威胁集群：自 6 月 22 日起即开始将 SonicWall Secure Mobile Access（SMA）1000 系列 VPN 设备作为零日目标。攻击链结合 /wsproxy 接口的未认证 SSRF（CVE-2026-15409，CVSS 10.0）与 Appliance Management Console 中 <code>remove_hotfix</code> 流程的路径遍历/代码注入（CVE-2026-15410，CVSS 7.2），打开 localhost WebSocket 通道后用热修复卸载工具的内部逻辑以 root 身份执行命令。攻击者后续投放 ROOTRUN（setuid 二进制）、Python 加载器 KNUCKLEBALL、内嵌开源代理 Suo5 与定制 Behinder 变种 ORANGETAIL，并重写 NGINX Unit 配置与启动脚本实现持久化；CouchDB 默认凭据被用于读取 product_uuid（控制台 Basic 认证派生源）。攻击者使用 ExpressVPN / Mullvad 出口节点，跨越 200+ IP 实施手动键盘操作（横向移动时甚至泄露出 KALI 等攻击者主机名）。SonicWall 已发布 12.4.3-03453 / 12.5.0-02835 平台热修复；CISA 已于 7 月 14 日将两个 CVE 加入 KEV，联邦机构截止日 7 月 17 日。Dark Reading / Rapid7 同期将同套漏洞利用关联到 INC Ransomware 团伙，与 UTA0533 是否为同一组织目前尚未定论。</li>
+<li><strong>原文链接：</strong></li>
+<li>https://www.volexity.com/blog/2026/07/17/proxying-to-compromise-sonicwall-secure-mobile-access-0-day-exploitation/</li>
+<li>https://thehackernews.com/2026/07/from-17000-to-11-million-assets-how.html?hl=en_US</li>
+<li>https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-sonicwall-sma-1000-flaws/</li>
+<li>https://insight.tmcnet.com/insight/pre-disclosure-zero-days-hit-remote-access-infrastructure-bf2689</li>
+</ul>
+<h3>3. Ecopetrol 披露重大网络攻击：3,300 账户数据外泄，拉美最大能源企业直面勒索</h3>
+<ul>
+<li><strong>评分：88/100</strong> — 受害方为哥伦比亚最大企业、占该国 60% 油气产量、市值 330 亿美元的关键基础设施上市公司，15 家子公司云存储遭波及、含数据窃取 + 勒索 + 已阻止的勒索软件三重攻击链。</li>
+<li><strong>来源：</strong> Reuters / Yahoo Finance / Ecopetrol 官方披露（2026-07-17）</li>
+<li><strong>摘要：</strong> 哥伦比亚国家控股的能源巨头 Ecopetrol 于 7 月 17 日发布市场公告，承认外部未识别攻击者获取了公司及约 15 家子公司云文件存储环境的未授权访问权限，下载了与约 3,300 个用户账户相关的数据，并随后提出公开曝光数据的勒索要求；公司同时披露其安全控制成功阻断了后续的勒索软件部署。Ecopetrol 表示截至披露时未发现关键运营、产能或核心服务受到实质性干扰，也未识别直接财务损失，但"无法保证"该事件不会对其业务、声誉与财务状况产生"重大不利"影响。公司已撤销未授权访问、阻断批量下载机制、向哥伦比亚总检察院报案并启动与保险机构、资本市场团队的协调流程。</li>
+<li><strong>原文链接：</strong></li>
+<li>https://finance.yahoo.com/energy/articles/colombias-ecopetrol-says-cyberattack-stole-042239536.html</li>
+<li>https://www.nasdaq.com/press-release/ecopetrol-reports-cybersecurity-incident-2026-07-17</li>
+<li>https://www.financecolombia.com/ecopetrol-hacked</li>
+</ul>
+<h3>4. CitrixBleed 2 被初始访问中介武器化，1–6 月已导致 DragonForce 勒索软件落地</h3>
+<ul>
+<li><strong>评分：85/100</strong> — 经典 CitrixBleed 模式再现，多行业受害者被同一剧本打穿，Huntress 报告显示已出现真实勒索软件落地（DragonForce），时间窗口横跨 2026 年上半年。</li>
+<li><strong>来源：</strong> Cybersecurity Dive（Huntress 报告，2026-07-18）</li>
+<li><strong>摘要：</strong> Huntress 在 7 月 17 日发布的报告中指出，2026 年 1–6 月期间观察到约 6 起高度一致的事件，全部利用 Citrix NetScaler 中类似 CitrixBleed 的内存越读/输入校验缺陷（CitrixBleed 2，CVE-2025-6546 系列相关）作为初始入口；得手后攻击者执行本地权限提升脚本、创建 rogue 本地管理员账户，并使用合法远程管理工具（ScreenConnect、Zoho Assist）建立持久化通道。其中最严重的一起直接部署 DragonForce 勒索软件，特点是"在权限提升脚本执行后立即加密"，给防御方几乎没有响应窗口。Sophos 此前以 STAC3725 命名同一剧本，并发现伴随 QEMU 滥用的横向活动。Huntress 强烈建议所有仍使用 NetScaler ADC / Gateway 的企业立即修补并辅以额外检测措施。</li>
+<li><strong>原文链接：</strong></li>
+<li>https://www.cybersecuritydive.com/news/initial-access-broker-citrixbleed2-flaw-DragonForce/824961/</li>
+</ul>
+<h3>5. 雅培（Abbott）实验室遭双重网络攻击：ShinyHunters 勒索团伙声言窃取 3,000 万+ 患者数据</h3>
+<ul>
+<li><strong>评分：82/100</strong> — 受害方为拥有 12.2 万员工、业务遍及 160+ 国家的财富 500 强医疗科技巨头；据称超过 3,000 万条患者数据被窃，反映医疗行业并购后遗留系统治理风险。</li>
+<li><strong>来源：</strong> Bleeping Computer / MedTech Dive（2026-07-16 / 07-17）</li>
+<li><strong>摘要：</strong> Bleeping Computer 7 月 17 日报道，ShinyHunters 勒索组织已在泄露网站列出雅培实验室（Abbott Laboratories），威胁若不在 7 月 21 日前谈判即公开数据。雅培 7 月 16 日声明确认其癌症诊断业务（2026 年初以 210 亿美元收购的 Exact Sciences）遗留系统存在未授权访问；据 BleepingComputer 报道，ShinyHunters 声称通过语音钓鱼（vishing）拿下多名员工并以 Entra SSO 账户进入系统，初期外泄规模声称超过 3,000 万条患者记录。雅培同时被披露其 LabCentral 客户门户存在第二起独立入侵事件，受影响方与攻击者身份仍在调查。公司强调癌症诊断业务以外的核心业务、产品供应与制造未受影响，但 MedTech Dive 指出这一事件揭示了"并购后系统整合期"的安全治理薄弱环节。</li>
+<li><strong>原文链接：</strong></li>
+<li>https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/</li>
+</ul>
+<hr />
+<h2>备注</h2>
+<ul>
+<li><strong>本次共筛选 15 条新闻候选，最高分 95 分（UAC-0145 Sandworm GRU 归因事件）。</strong></li>
+<li>关键主题：国家级 APT 命名（Sovereign APT attribution）、网络边界设备零日预披露（Pre-disclosure edge zero-day）、关键基础设施勒索与数据外泄（Critical-infrastructure extortion）、内存漏洞武器化（CitrixBleed-2 class）、医疗行业并购后遗留系统风险（M&amp;A tech-debt breach）。</li>
+<li>上榜新闻中涉及在野利用的 CVE 包括：CVE-2026-15409 / CVE-2026-15410（SonicWall SMA 1000，CVSS 10.0/7.2）、CVE-2026-58644（SharePoint RCE，CVSS 9.8，已在 Top 5 之外的昨日与 7-18 推送中重点覆盖）。</li>
+<li>下次 Patch Tuesday：2026-08-12（距今 23 天）。</li>
+</ul>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>

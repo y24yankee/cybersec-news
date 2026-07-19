@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Security Poster W29 — 2026-07-13 ~ 2026-07-19</title>
+    <style>
+        :root {
+            --bg: #0b1120;
+            --card: #111827;
+            --card-hover: #161f30;
+            --card-border: #1f2937;
+            --text: #f3f4f6;
+            --muted: #9ca3af;
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.35);
+            --critical: #ef4444;
+            --critical-bg: rgba(239, 68, 68, 0.12);
+            --high: #f59e0b;
+            --high-bg: rgba(245, 158, 11, 0.10);
+            --medium-high: #eab308;
+            --medium: #10b981;
+            --medium-bg: rgba(16, 185, 129, 0.10);
+            --gold: #fbbf24;
+            --patch-panel-bg: #0f1a2e;
+            --patch-border: #1e3a5f;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .poster {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px 40px;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            text-align: center;
+            padding: 48px 32px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 50% 50%, var(--accent-glow), transparent 60%);
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        .eyebrow {
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        .title {
+            font-size: 44px;
+            font-weight: 800;
+            margin: 0 0 12px;
+            position: relative; z-index: 1;
+            background: linear-gradient(90deg, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            color: var(--muted);
+            font-size: 18px;
+            position: relative; z-index: 1;
+        }
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin-top: 24px;
+            position: relative; z-index: 1;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 12px 20px;
+            text-align: center;
+            min-width: 90px;
+        }
+        .stat-num { font-size: 28px; font-weight: 800; color: var(--gold); }
+        .stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+        /* ===== PATCH PANEL ===== */
+        .patch-panel {
+            background: var(--patch-panel-bg);
+            border: 2px solid var(--patch-border);
+            border-radius: 20px;
+            padding: 36px 40px;
+            margin-bottom: 44px;
+            position: relative;
+        }
+        .patch-panel::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: 22px;
+            padding: 2px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #3b82f6);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        .patch-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+        .patch-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .patch-title { font-size: 26px; font-weight: 800; margin: 0; }
+        .patch-badge {
+            display: inline-block;
+            background: var(--critical);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 6px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .patch-overview {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+        .patch-stat-card {
+            flex: 1; min-width: 110px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        .patch-stat-card.critical { border-color: var(--critical); }
+        .patch-stat-card.important { border-color: var(--high); }
+        .patch-stat-card .ps-num { font-size: 32px; font-weight: 800; }
+        .patch-stat-card.critical .ps-num { color: var(--critical); }
+        .patch-stat-card.important .ps-num { color: var(--high); }
+        .patch-stat-card .ps-label { font-size: 12px; color: var(--muted); }
+        .patch-table-wrap { overflow-x: auto; margin-bottom: 24px; }
+        .patch-table {
+            width: 100%; border-collapse: collapse; font-size: 13px;
+        }
+        .patch-table th {
+            text-align: left; color: var(--muted); font-weight: 600;
+            font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+            padding: 10px 12px; border-bottom: 1px solid var(--card-border);
+        }
+        .patch-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(31,41,55,0.5);
+            color: var(--text);
+        }
+        .patch-table tr:hover td { background: rgba(255,255,255,0.03); }
+        .patch-tag-exploited {
+            background: var(--critical);
+            color: #fff;
+            font-size: 11px; font-weight: 700;
+            padding: 2px 8px; border-radius: 4px;
+        }
+        .patch-tag-disclosed {
+            background: var(--high);
+            color: #000;
+            font-size: 11px; font-weight: 700;
+            padding: 2px 8px; border-radius: 4px;
+        }
+        .patch-summary {
+            background: rgba(239,68,68,0.08);
+            border-left: 3px solid var(--critical);
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .patch-links {
+            display: flex; gap: 16px; flex-wrap: wrap;
+        }
+        .patch-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 12px;
+            padding: 6px 12px;
+            border: 1px solid var(--patch-border);
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .patch-link:hover { background: var(--patch-border); }
+
+        /* ===== SECTION HEADERS ===== */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 44px 0 24px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--card-border);
+        }
+        .section-header .tier-icon { font-size: 28px; }
+        .section-header h2 { font-size: 22px; font-weight: 700; margin: 0; }
+        .section-header .tier-count {
+            font-size: 13px; color: var(--muted);
+            background: var(--card); padding: 4px 12px; border-radius: 20px;
+        }
+
+        /* ===== NEWS GRID ===== */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .news-card {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 22px 24px;
+            transition: all 0.2s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .news-card:hover {
+            background: var(--card-hover);
+            border-color: #374151;
+            transform: translateY(-2px);
+        }
+        .card-rank {
+            position: absolute;
+            top: 16px; right: 16px;
+            font-size: 12px; font-weight: 800;
+            color: var(--muted);
+            background: rgba(255,255,255,0.05);
+            padding: 3px 9px; border-radius: 6px;
+        }
+        .card-score {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .score-extreme { background: var(--critical-bg); color: var(--critical); }
+        .score-high { background: var(--high-bg); color: var(--high); }
+        .score-medium-high { background: rgba(234,179,8,0.12); color: var(--medium-high); }
+        .score-medium { background: var(--medium-bg); color: var(--medium); }
+        .card-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin: 0 0 8px;
+            line-height: 1.4;
+            padding-right: 30px;
+        }
+        .card-summary {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.55;
+            margin-bottom: 14px;
+            flex: 1;
+        }
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: var(--muted);
+            padding-top: 12px;
+            border-top: 1px solid rgba(31,41,55,0.5);
+        }
+        .card-source {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .card-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 12px;
+            transition: color 0.2s;
+        }
+        .card-link:hover { color: #60a5fa; text-decoration: underline; }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            text-align: center;
+            padding: 36px;
+            border-top: 1px solid var(--card-border);
+            margin-top: 48px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+        .footer strong { color: var(--accent); }
+
+        @media (max-width: 768px) {
+            .poster { padding: 24px 16px; }
+            .title { font-size: 28px; }
+            .news-grid { grid-template-columns: 1fr; }
+            .patch-overview { flex-direction: column; }
+            .header { padding: 32px 16px; }
+            .patch-panel { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="poster">
+
+    <!-- ===== HEADER ===== -->
+    <div class="header">
+        <div class="eyebrow">Weekly Cybersecurity Intelligence</div>
+        <h1 class="title">Security Poster W29</h1>
+        <p class="subtitle">2026-07-13 — 2026-07-19 | ISO Week 29</p>
+        <div class="stats-bar">
+            <div class="stat-item"><div class="stat-num">27</div><div class="stat-label">News Items</div></div>
+            <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Extreme</div></div>
+            <div class="stat-item"><div class="stat-num">11</div><div class="stat-label">High</div></div>
+            <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Med-High</div></div>
+            <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Medium</div></div>
+            <div class="stat-item"><div class="stat-num">96</div><div class="stat-label">Top Score</div></div>
+        </div>
+    </div>
+
+    <!-- ===== PATCH TUESDAY PANEL ===== -->
+    <div class="patch-panel">
+        <div class="patch-header">
+            <div class="patch-icon">🛡️</div>
+            <div>
+                <h2 class="patch-title">本月微软补丁安全级别 <span class="patch-badge">PATCH WEEK</span></h2>
+                <span style="color:var(--muted);font-size:13px;">2026年7月 Patch Tuesday · 数据截至 2026-07-18 UTC</span>
+            </div>
+        </div>
+        <p style="font-size:14px;color:var(--muted);margin:0 0 20px;">
+            数据来源：MSRC CVRF API <code>2026-Jul</code>，文档标题确认为正式 <strong>"July 2026 Security Updates"</strong>（非 Early 预发布版本）
+        </p>
+
+        <div class="patch-overview">
+            <div class="patch-stat-card critical">
+                <div class="ps-num">62</div><div class="ps-label">Critical</div>
+            </div>
+            <div class="patch-stat-card important">
+                <div class="ps-num">559</div><div class="ps-label">Important</div>
+            </div>
+            <div class="patch-stat-card">
+                <div class="ps-num">6</div><div class="ps-label">Moderate</div>
+            </div>
+            <div class="patch-stat-card">
+                <div class="ps-num">1</div><div class="ps-label">Low</div>
+            </div>
+            <div class="patch-stat-card" style="border-color: var(--accent);">
+                <div class="ps-num" style="color: var(--accent);">628</div>
+                <div class="ps-label">MS CVE Total</div>
+            </div>
+            <div class="patch-stat-card" style="border-color: var(--critical);">
+                <div class="ps-num" style="color: var(--critical);">3</div>
+                <div class="ps-label">In the Wild</div>
+            </div>
+        </div>
+
+        <h3 style="font-size:16px;margin:0 0 14px;">🔴 已被在野利用的零日漏洞（全部列出）</h3>
+        <div class="patch-table-wrap">
+            <table class="patch-table">
+                <thead>
+                    <tr><th>CVE</th><th>严重级别</th><th>CVSS</th><th>受影响产品</th><th>漏洞简述</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>CVE-2026-58644</strong></td>
+                        <td><span class="patch-tag-exploited">Critical</span></td>
+                        <td style="color:var(--critical);font-weight:700;">9.8</td>
+                        <td>Microsoft SharePoint Server</td>
+                        <td>不受信任数据反序列化 → 远程代码执行，攻击复杂度低，CISA KEV 限期修复</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CVE-2026-56155</strong></td>
+                        <td><span class="patch-tag-exploited">Important</span></td>
+                        <td style="color:var(--high);font-weight:700;">7.8</td>
+                        <td>AD FS (Active Directory Federation Services)</td>
+                        <td>访问控制粒度不足 → 低权限本地用户可提升至管理员</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CVE-2026-56164</strong></td>
+                        <td><span class="patch-tag-exploited">Moderate</span></td>
+                        <td style="color:var(--muted);font-weight:700;">5.3</td>
+                        <td>Microsoft SharePoint Server</td>
+                        <td>关键功能缺少身份验证 → 无认证远程攻击者可提权</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="font-size:16px;margin:24px 0 14px;">⚡ CVSS ≥ 9.0 且可远程/无认证利用的 CVE</h3>
+        <div class="patch-table-wrap">
+            <table class="patch-table">
+                <thead>
+                    <tr><th>CVE</th><th>CVSS</th><th>受影响产品</th><th>说明</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>CVE-2026-58644</strong></td><td style="color:var(--critical);font-weight:700;">9.8</td><td>SharePoint Server RCE</td><td>已在野利用，反序列化导致远程代码执行</td></tr>
+                    <tr><td>CVE-2026-50522</td><td style="color:var(--critical);font-weight:700;">9.8</td><td>SharePoint RCE</td><td>第二个 SharePoint 远程代码执行漏洞</td></tr>
+                    <tr><td>CVE-2026-50518</td><td style="color:var(--critical);font-weight:700;">9.8</td><td>Windows DHCP Server RCE</td><td>DHCP 服务远程代码执行</td></tr>
+                    <tr><td>CVE-2026-56159</td><td style="color:var(--critical);font-weight:700;">9.8</td><td>DHCP Server Service RCE</td><td>DHCP 服务第二个远程代码执行漏洞</td></tr>
+                    <tr><td>CVE-2026-49172</td><td style="color:var(--critical);font-weight:700;">9.8</td><td>Windows FTP Service RCE</td><td>FTP 服务远程代码执行</td></tr>
+                    <tr><td>CVE-2026-50447</td><td style="color:var(--critical);font-weight:700;">9.8</td><td>MSMQ RCE</td><td>消息队列服务远程代码执行</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="patch-summary">
+            <strong>⚡ 核心风险：</strong>本月以 SharePoint 与 AD FS 在野利用为最高优先级，同时暴露了 DHCP、FTP、MSMQ、RDP、网络驱动等大量可远程触发的 Critical RCE。CISA 已将 CVE-2026-58644 加入 KEV 并设定联邦机构修复截止日期，补丁验证与密钥轮换窗口极为紧迫。建议补丁窗口 ≤ 72 小时，优先修补面向公网的 SharePoint、DHCP、AD FS 服务。
+        </div>
+        <div class="patch-links">
+            <a class="patch-link" href="https://msrc.microsoft.com/update-guide" target="_blank">📘 MSRC 安全更新指南</a>
+            <a class="patch-link" href="https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul" target="_blank">📡 CVRF API (2026-Jul)</a>
+            <a class="patch-link" href="https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/" target="_blank">🔬 CrowdStrike 分析</a>
+        </div>
+    </div>
+
+    <!-- ===== EXTREME: 93-96 ===== -->
+    <div class="section-header">
+        <span class="tier-icon">🔴</span>
+        <h2>Extreme Severity · 93–96</h2>
+        <span class="tier-count">6 items</span>
+    </div>
+    <div class="news-grid">
+
+        <div class="news-card">
+            <span class="card-rank">#1</span>
+            <span class="card-score score-extreme">🔴 96</span>
+            <h3 class="card-title">WordPress 核心 wp2shell 预认证 RCE（CVE-2026-63030 + CVE-2026-60137）</h3>
+            <p class="card-summary">WordPress 紧急发布 6.9.5 / 7.0.2 / 6.8.6，修复被称为 wp2shell 的预认证远程代码执行链。REST API batch 路由混淆 + WP_Query SQL 注入串联后，匿名 HTTP 请求即可在默认安装（无需插件、无需账号）上执行任意代码。官方已启用强制自动更新，影响亿级站点。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 The Hacker News</span>
+                <a class="card-link" href="https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#2</span>
+            <span class="card-score score-extreme">🔴 95</span>
+            <h3 class="card-title">XRING：Alibaba XQUIC 库未修补零日漏洞可远程崩溃 HTTP/3 服务器</h3>
+            <p class="card-summary">FoxIO 研究员公开披露阿里 XQUIC QUIC/HTTP/3 库中的 XRING DoS 缺陷，攻击者仅需发送约 260 字节合法 QPACK 流量即可触发无符号整数下溢，导致服务器进程崩溃。XQUIC 是 Tengine（淘宝、支付宝）核心组件，所有 ≤v1.9.4 版本均受影响，截至披露日无 CVE、无补丁。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 The Hacker News · 07/13</span>
+                <a class="card-link" href="https://thehackernews.com/2026/07/unpatched-xring-flaw-in-xquic-lets.html" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#3</span>
+            <span class="card-score score-extreme">🔴 95</span>
+            <h3 class="card-title">微软史上最大补丁日：622 个 CVE，3 个零日在野利用</h3>
+            <p class="card-summary">微软 2026 年 7 月 Patch Tuesday 打破纪录，一次性修复 622 个 CVE（62 个 Critical）。CVE-2026-56155（AD FS 本地提权）、CVE-2026-56164（SharePoint 远程提权）与 CVE-2026-58644（SharePoint RCE CVSS 9.8）已被在野利用。企业应立即修补 AD FS 和 SharePoint 服务器。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 CrowdStrike / Tenable · 07/16</span>
+                <a class="card-link" href="https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#4</span>
+            <span class="card-score score-extreme">🔴 95</span>
+            <h3 class="card-title">CISA 将 FortiSandbox 三漏洞链列入 KEV 目录，确认在野利用</h3>
+            <p class="card-summary">CISA 将 Fortinet FortiSandbox 产品三个漏洞（CVE-2026-39808/25089/39813）正式纳入 KEV 目录。漏洞链含身份验证绕过及两个 CVSS 9.8/9.1 的未认证 OS 命令注入，约 2,400 个实例暴露在互联网。CISA 指令联邦机构在 7 月 19 日前完成修补。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 CISA / BleepingComputer · 07/18</span>
+                <a class="card-link" href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#5</span>
+            <span class="card-score score-extreme">🔴 94</span>
+            <h3 class="card-title">十二国联合预警：俄罗斯 FSB Center 16 大规模利用路由器漏洞攻击全球关键基础设施</h3>
+            <p class="card-summary">美、英、澳、加等 12 国 18 家情报与网络安全机构联合公告，确认俄罗斯 FSB 第 16 中心（Ghost Blizzard / Energetic Bear）正大规模扫描弱 SNMP 密码路由器，利用 Cisco Smart Install 漏洞入侵能源、通信、国防、医疗及金融部门。此前 FrostArmada 已感染 18,000 台路由器。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 BleepingComputer / CISA-NSA-FBI · 07/14</span>
+                <a class="card-link" href="https://www.bleepingcomputer.com/news/security/us-and-allies-share-defense-tips-against-russian-hackers-targeting-critical-infrastructure/" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#6</span>
+            <span class="card-score score-extreme">🔴 93</span>
+            <h3 class="card-title">Cisco Talos 披露 UAT-11795：Starland RAT 利用 Polygon 智能合约做 C2 回退</h3>
+            <p class="card-summary">Cisco Talos 披露俄语经济动机攻击组织 UAT-11795，自 2025 年 6 月起分发木马化安装程序（MobaXterm、WebEx、Zoom 等），内置新颖 Python RAT。最具创新性的是通过 Polygon 智能合约查询 XOR 加密的备用域名实现去中心化 C2 韧性，为首个公开记录的公链 C2 在野案例。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 Cisco Talos / BleepingComputer · 07/18</span>
+                <a class="card-link" href="https://blog.talosintelligence.com/uat-11795-deploys-novel-starland-rat-and-bespoke-wldr-c2-implant-in-financially-motivated-campaign/" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== HIGH: 90-92 ===== -->
+    <div class="section-header">
+        <span class="tier-icon">🟠</span>
+        <h2>High Severity · 90–92</h2>
+        <span class="tier-count">11 items</span>
+    </div>
+    <div class="news-grid">
+
+        <div class="news-card">
+            <span class="card-rank">#7</span>
+            <span class="card-score score-high">🟠 92</span>
+            <h3 class="card-title">GuardFall：十款主流开源 AI 编程助手的 Shell 注入防护可被系统化绕过</h3>
+            <p class="card-summary">Adversa AI 团队研究指出，11 款主流 AI 编程代理中 10 款（含 Cline、Aider、OpenHands 等，~54.8 万 stars）的命令安全过滤器存在架构性缺陷——将命令视为纯文本检查，但 bash 可通过引号分割、$IFS 扩展和命令替换重写。PoC 证明可静默泄露 SSH 密钥和云凭证。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 CSA Research / Bleeping News · 07/13</span>
+                <a class="card-link" href="https://labs.cloudsecurityalliance.org/research/csa-research-note-guardfall-ai-coding-agent-shell-injection" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#8</span>
+            <span class="card-score score-high">🟠 92</span>
+            <h3 class="card-title">Jscrambler npm 供应链攻击：5 个版本植入 Rust 信息窃取器</h3>
+            <p class="card-summary">攻击者劫持 Jscrambler npm 凭据，连推 5 个恶意版本（8.14.0–8.20.0），内嵌跨平台 Rust 信息窃取器，专门收割 AWS/Azure/GCP 云凭据、Claude/Cursor/VS Code AI 工具 API 密钥、加密钱包种子短语及 Bitwarden 密码库。被下载 1,479 次，安装过的开发环境应视为已被入侵。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 StepSecurity / Socket · 07/16</span>
+                <a class="card-link" href="https://www.stepsecurity.io/blog/jscrambler-npm-package-publishes-malicious-preinstall-binary" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#9</span>
+            <span class="card-score score-high">🟠 92</span>
+            <h3 class="card-title">SAP 修复 NetWeaver ABAP 严重漏洞（CVSS 9.9）</h3>
+            <p class="card-summary">SAP 发布 7 月安全更新，NetWeaver Application Server ABAP 的越界写入漏洞 CVE-2026-44747 CVSS 高达 9.9，可导致内存损坏并引发未授权数据访问或修改。NetWeaver 是大量企业 ERP 的核心组件，影响面广泛。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 The Hacker News · 07/15</span>
+                <a class="card-link" href="https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#10</span>
+            <span class="card-score score-high">🟠 92</span>
+            <h3 class="card-title">7-Zip 修复 XZ 压缩处理 RCE 漏洞（CVE-2026-14266）</h3>
+            <p class="card-summary">7-Zip 26.02 修复堆缓冲区溢出漏洞 CVE-2026-14266，攻击者通过诱导用户打开特制压缩包或访问恶意网页即可执行任意代码。7-Zip 全球装机量极大且无自动更新机制，管理员需手动部署。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 BleepingComputer · 07/19</span>
+                <a class="card-link" href="https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#11</span>
+            <span class="card-score score-high">🟠 91</span>
+            <h3 class="card-title">Ghostcommit：通过 PNG 图像藏匿提示注入以窃取 AI 代理仓库密钥</h3>
+            <p class="card-summary">密苏里大学 ASSET 研究组披露 Ghostcommit 攻击：将恶意提示渲染进 PNG 图片，配合 AGENTS.md 配置文件绕过 CodeRabbit、Bugbot 等 LLM 代码审查工具。受感染的代理读取图片后打开 .env 并将其内容编码为整数元组写入代码——Cursor 在多个模型下均执行成功，单次生成 311 个可还原密钥的整数。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 BleepingComputer / ASSET · 07/13</span>
+                <a class="card-link" href="https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#12</span>
+            <span class="card-score score-high">🟠 90</span>
+            <h3 class="card-title">CISA 公开内部 AWS GovCloud 凭据泄露事件并发布应急响应经验</h3>
+            <p class="card-summary">美国 CISA 公开披露内部安全事件：其 OCIO 在 AWS GovCloud 环境中意外暴露了云访问凭据，已启动完整调查并对外发布详细的事件响应经验教训。凸显云架构下秘密管理的持续挑战——若国家级网安主管机构也会泄露云凭据，云原生组织应立即审计凭据卫生。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 The Hacker News · 07/13</span>
+                <a class="card-link" href="https://thehackernews.com/2026/07/cisa-discloses-internal-aws-govcloud.html" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#13</span>
+            <span class="card-score score-high">🟠 90</span>
+            <h3 class="card-title">欧盟与英国首次联合制裁俄罗斯 GRU/FSB 网络行动</h3>
+            <p class="card-summary">欧盟理事会对 9 名个人和 4 个实体实施制裁，英国同步制裁 24 名个人和实体。欧盟首次公开确认 FSB 第 16 中心控制 Turla 黑客组织，并关联到针对波兰能源网络（Sandworm/DynoWiper）和波兰国家核研究中心（NCBJ）的攻击。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 BleepingComputer · 07/14</span>
+                <a class="card-link" href="https://www.bleepingcomputer.com/news/security/eu-and-uk-hit-russia-with-first-joint-cyber-sanctions-package/" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#14</span>
+            <span class="card-score score-high">🟠 90</span>
+            <h3 class="card-title">SonicWall SMA1000 零日漏洞遭主动利用</h3>
+            <p class="card-summary">SonicWall 警告威胁分子正在利用 SMA1000 系列中的两个漏洞（CVE-2026-15409、CVE-2026-15410）进行零日攻击，已发布紧急安全更新。SMA1000 是远程接入安全网关，被攻击将直接威胁企业边界。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 BleepingComputer · 07/15</span>
+                <a class="card-link" href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#15</span>
+            <span class="card-score score-high">🟠 90</span>
+            <h3 class="card-title">Progress ShareFile 紧急指令：立即关闭 Storage Zone Controller 服务器</h3>
+            <p class="card-summary">Progress Software 向所有 ShareFile SZC 客户发出紧急邮件，要求立即手动关闭托管 SZC 的 Windows 服务器，称检测到"可信的外部安全威胁"。已确认高级路径遍历漏洞，发布补丁（5.12.5 / 6.0.2）。受影响企业应升级并审计日志中异常 .aspx 文件。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 BleepingComputer / Beazley Security · 07/16</span>
+                <a class="card-link" href="https://www.bleepingcomputer.com/news/security/progress-urges-sharefile-customers-to-shut-down-servers-over-credible-threat/" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#16</span>
+            <span class="card-score score-high">🟠 90</span>
+            <h3 class="card-title">两名 Scattered Spider 黑客因 TfL 网络攻击被判 5.5 年</h3>
+            <p class="card-summary">Owen Flowers（18岁）和 Thalha Jubair（20岁）因 2024 年攻击伦敦交通局（TfL）各被判刑 5.5 年——英国《计算机滥用法》Section 3ZA 首次成功定罪黑客。攻击导致 148 个系统瘫痪、27,000 名员工被迫现场重置密码，损失 £2900 万。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 The Hacker News / NCA · 07/17</span>
+                <a class="card-link" href="https://thehackernews.com/2026/07/two-scattered-spider-hackers-get-55.html" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#17</span>
+            <span class="card-score score-high">🟠 90</span>
+            <h3 class="card-title">Spirals：新型 Rust 勒索软件 24 小时内完成完整入侵周期</h3>
+            <p class="card-summary">Symantec 威胁猎人披露名为 Spirals 的全新 Rust 勒索软件家族。攻击者通过 IIS ASP.NET Web Shell 获取初始访问，在不到 24 小时内完成横向移动、凭证窃取（SAM/LSASS）、关闭 23 个服务，最终全网部署加密载荷。加密采用 AES-128 + ECDH P-256。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 Symantec / BleepingComputer · 07/18</span>
+                <a class="card-link" href="https://www.bleepingcomputer.com/news/security/new-spirals-ransomware-encrypts-victim-network-in-under-24-hours/" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== MEDIUM-HIGH: 87-89 ===== -->
+    <div class="section-header">
+        <span class="tier-icon">🟡</span>
+        <h2>Medium-High Severity · 87–89</h2>
+        <span class="tier-count">4 items</span>
+    </div>
+    <div class="news-grid">
+
+        <div class="news-card">
+            <span class="card-rank">#18</span>
+            <span class="card-score score-medium-high">🟡 88</span>
+            <h3 class="card-title">PraisonAI 多个关键 RCE（CVSS 10.0）允许无沙箱执行 LLM 生成代码</h3>
+            <p class="card-summary">PraisonAI 1.6.78 之前版本中 CVE-2026-61447（CVSS 10.0）允许通过提示注入影响 LLM 输出，导致 CodeAgent 在无 AST 校验、无 import 限制、无沙箱的情况下执行任意 Python 代码。同期另两条 RCE 形成可链式利用的 RCE 家族，开发者/CI 环境面临全面失陷。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 The Hacker News · 07/13</span>
+                <a class="card-link" href="https://thehackernews.com/2026/07/praisonai-rce-cve-2026-61447.html" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#19</span>
+            <span class="card-score score-medium-high">🟡 88</span>
+            <h3 class="card-title">CISA 将两个 Joomla 扩展 0day RCE 加入 KEV 目录，联邦机构限 3 日修复</h3>
+            <p class="card-summary">CISA 将 CVE-2026-48939（iCagenda）和 CVE-2026-56291（Balbooa Forms）加入 KEV 目录，要求联邦机构 3 日内修复。两个漏洞均允许未认证攻击者上传任意文件实现 RCE，在厂商发布补丁前已被自动化攻击利用为 0day。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 BleepingComputer / CISA · 07/14</span>
+                <a class="card-link" href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#20</span>
+            <span class="card-score score-medium-high">🟡 88</span>
+            <h3 class="card-title">TELEPUZ 新型模块化恶意软件通过 ClickFix 传播，区块链智能合约作 C2</h3>
+            <p class="card-summary">Elastic Security Labs 披露 TELEPUZ，一种 C 语言轻量级模块化恶意软件，自 4 月末通过 ClickFix 传播。它通过取消 NTDLL 钩子、禁用 AMSI/ETW 规避防御，并以 Telegram 频道、Steam 社区资料、DNS 查询及 Polygon 智能合约作为 C2 后备——首次将公链用作恶意软件 C2 僵尸掉落解析器。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 The Hacker News / Elastic · 07/17</span>
+                <a class="card-link" href="https://thehackernews.com/2026/07/new-telepuz-malware-spreads-via.html" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#21</span>
+            <span class="card-score score-medium-high">🟡 88</span>
+            <h3 class="card-title">NadMesh 僵尸网络专门狩猎暴露的 AI 服务与 MCP 端点</h3>
+            <p class="card-summary">奇安信 XLab 披露名为 NadMesh 的 Go 语言僵尸网络，自 7 月初开始扫描暴露的 AI 服务与 MCP 端点。其优先利用列表中 MCP 排在首位，实际观测还包括 Docker API、Jenkins、Redis 弱口令。已窃取 3,811 个唯一 AWS 密钥，反映 AI/ML 服务暴露面正在快速武器化。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 The Hacker News · 07/19</span>
+                <a class="card-link" href="https://thehackernews.com/2026/07/new-nadmesh-botnet-hunts-exposed-ai.html" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== MEDIUM: 85-86 ===== -->
+    <div class="section-header">
+        <span class="tier-icon">🟢</span>
+        <h2>Medium Severity · 85–86</h2>
+        <span class="tier-count">6 items</span>
+    </div>
+    <div class="news-grid">
+
+        <div class="news-card">
+            <span class="card-rank">#22</span>
+            <span class="card-score score-medium">🟢 86</span>
+            <h3 class="card-title">Claude for Chrome 漏洞可被恶意扩展利用读取 Gmail</h3>
+            <p class="card-summary">Manifold Security 发现，运行在 claude.ai 上的浏览器扩展可伪造 Claude for Chrome 任务，读取用户 Gmail、Google Docs 和 Calendar 数据。若开启"无需询问即可执行"模式，攻击可完全自动化，无需用户确认。代表新兴 AI Agent 安全风险。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 The Hacker News · 07/15</span>
+                <a class="card-link" href="https://thehackernews.com/2026/07/claude-for-chrome-flaw-lets-other.html" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#23</span>
+            <span class="card-score score-medium">🟢 86</span>
+            <h3 class="card-title">ClickLock：新型 macOS 窃密木马每 210ms 杀死应用直到受害者交出密码</h3>
+            <p class="card-summary">Group-IB 和芬兰 NCSC-FI 报告 ClickLock macOS 信息窃取木马。感染后每 210ms 杀死受害者正在运行的应用程序，直到用户被迫在伪造系统对话框中输入登录密码。窃取 8 款浏览器、31 个加密钱包扩展、7 个密码管理器及 macOS Keychain 凭证。已在 33 国感染超 100 人。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 Group-IB / NCSC-FI · 07/18</span>
+                <a class="card-link" href="https://www.cybersecbrief.com/news/cybersec/cybersec-2026-07-17" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#24</span>
+            <span class="card-score score-medium">🟢 86</span>
+            <h3 class="card-title">OpenSSL "HollowByte" 漏洞：11 字节 TLS 请求即可冻结服务器内存</h3>
+            <p class="card-summary">Okta 红队公开 OpenSSL HollowByte DoS 漏洞：攻击者仅需发送 11 字节恶意 TLS 请求头，即可让未修复服务器为永远不会到达的消息体预留最多 131 KB 内存。在 glibc 系统上该内存直到进程重启才释放。OpenSSL 已静默修复但未分配 CVE 或发布安全公告。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 The Hacker News / Okta · 07/19</span>
+                <a class="card-link" href="https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#25</span>
+            <span class="card-score score-medium">🟢 85</span>
+            <h3 class="card-title">日本最大出租车公司 Nihon Kotsu 遭网络攻击，调度系统全面瘫痪</h3>
+            <p class="card-summary">日本营收最大的出租车运营商 Nihon Kotsu（年营收约 10 亿美元，8,558 辆出租车）系统遭恶意软件感染。出租车调度、网络预约、电话派车全部瘫痪，波及东京、横滨等地区。孕妇"分娩出租车"专项服务也已暂停，尚无勒索组织宣称负责。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 BleepingComputer · 07/14</span>
+                <a class="card-link" href="https://www.bleepingcomputer.com/news/security/japans-largest-taxi-operator-shuts-systems-after-cyberattack/" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#26</span>
+            <span class="card-score score-medium">🟢 85</span>
+            <h3 class="card-title">近 300 个 GitHub 仓库伪装正版软件分发恶意软件</h3>
+            <p class="card-summary">威胁分子发布近 300 个伪造 GitHub 仓库，冒充合法软件和安全项目，通过 starjacking、假冒 README 等手段诱骗用户下载 infostealer 恶意软件。此类供应链攻击针对开发者群体，利用开发者对 GitHub 的信任，隐蔽性强。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 BleepingComputer · 07/15</span>
+                <a class="card-link" href="https://www.bleepingcomputer.com/news/security/nearly-300-github-repos-pose-as-legit-software-to-push-malware/" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <span class="card-rank">#27</span>
+            <span class="card-score score-medium">🟢 85</span>
+            <h3 class="card-title">Chrome CVE-2026-15773 沙箱逃逸（CVSS 9.6）— 远程攻击者可突破浏览器沙箱</h3>
+            <p class="card-summary">Google Chrome Core 组件 Use-After-Free 漏洞 CVE-2026-15773 CVSS 9.6，影响所有低于 150.0.7871.125 的 Chrome 版本。远程攻击者仅需诱导用户访问恶意 HTML 页面即可逃逸浏览器沙箱获得 OS 级执行权限。影响所有 Chromium 内核浏览器。</p>
+            <div class="card-meta">
+                <span class="card-source">📰 WASOC / Armis CVE · 07/17</span>
+                <a class="card-link" href="https://cve.armis.com/CVE-2026-15773" target="_blank">原文 →</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer">
+        <p>Generated by <strong>WorkBuddy Automation</strong> · 2026-07-19 19:00 CST</p>
+        <p style="font-size:11px;">Sources: The Hacker News, BleepingComputer, CISA, MSRC, Cisco Talos, CrowdStrike, Symantec, Elastic Security, Group-IB, and others.</p>
+    </div>
+
+</div>
+</body>
+</html>
