@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-21 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-21</h1>
+<hr />
+<h2>Top 5 网络安全新闻</h2>
+<h3>1. 🤖 Hugging Face 遭自主 AI 代理端到端入侵 — 全球最大 AI 开源平台首例确认的"代理型攻击者"事件 | 评分：96</h3>
+<p><strong>来源</strong>：Hugging Face 官方博客 / The Hacker News / BleepingComputer / Varonis / SecureBlink
+<strong>评分理由</strong>：首个公开确认的自主 AI 代理驱动入侵事件，攻击速度与防御不对称问题具里程碑意义</p>
+<p>全球最大 AI 开源平台 Hugging Face 于 7 月 16 日披露一起生产环境入侵事件：攻击者利用恶意数据集触发数据处理管线中的两个代码执行路径（remote-code dataset loader + template injection），在处理节点上获得代码执行权限，随后提升至节点级别权限、窃取云和集群凭证，并在周末期间横向移动至多个内部集群。整个入侵过程由自主 AI 代理系统端到端驱动，代理在短期沙盒中执行数千次操作，自迁移 C2 架设在公共服务上。</p>
+<p>事件引发"防御不对称"讨论：Hugging Face 安全团队最初尝试使用商业前沿大模型 API 分析超过 1.7 万条攻击日志，但因安全护栏无法区分安全调查与攻击行为而被拒绝；最终在自有基础设施上部署开源权重模型 GLM 5.2，数小时内完成取证。公司已关闭入口代码执行路径、重建受感染节点、轮换受影响凭证，但合作伙伴及客户数据是否受影响仍在评估中。</p>
+<p><strong>原文链接</strong>：
+- https://huggingface.co/blog/security-incident-july-2026
+- https://securityonline.info/hugging-face-ai-agent-breach/
+- https://www.varonis.com/blog/huggingface-breach</p>
+<hr />
+<h3>2. 🌐 NGINX CVE-2026-42533 严重堆缓冲区溢出 — 跨 15 年版本范围，研究者声称可绕过 ASLR 实现 RCE | 评分：91</h3>
+<p><strong>来源</strong>：The Hacker News / SecurityWeek / HKCERT / Beazley Security / Tenable
+<strong>评分理由</strong>：CVSS v4 9.2、影响从 0.9.6（2011）到 1.31.2 的全版本范围、研究者挑战官方"仅 DoS"结论</p>
+<p>F5 于 7 月 15 日修补 NGINX 三个内存安全漏洞，最严重的 CVE-2026-42533（CVSS v4 9.2 / v3 8.1）允许未认证远程攻击者通过精心构造的 HTTP 请求触发堆缓冲区溢出。漏洞存在于 NGINX 脚本引擎中，当 regex-based map 的输出变量与先前正则捕获引用（$1, $2）在同一字符串表达式中出现时，引擎的两遍评估机制在两次遍历之间共享捕获状态被覆写，导致测量遍分配的缓冲区过小。</p>
+<p>F5 官方评估称 RCE 仅在 ASLR 禁用或可绕过时可能。但独立研究者 Stan Shaw（cyberstan）公开挑战此结论：在默认 Ubuntu 24.04 上，单次未认证 GET 即可通过反向捕获覆写泄露堆上未初始化地址数据，提供构建 RCE payload 所需的全部地址信息，声称测试中 10/10 成功。他同时指出 F5 的临时缓解（使用命名捕获替代匿名捕获）留有第二条溢出路径。修复版本：NGINX 1.30.4 / 1.31.3 / Plus 37.0.3.1。</p>
+<p><strong>原文链接</strong>：
+- https://www.hkcert.org/security-news/critical-nginx-vulnerability-can-crash-workers-and-may-allow-remote-code-execution
+- https://beazley.security/alerts-advisories/critical-memory-corruption-vulnerabilities-in-nginx-cve-2026-42533-cve-2026--56434-cve-2026-60005
+- https://www.tenable.com/cve/CVE-2026-42533</p>
+<hr />
+<h3>3. 💎 SleeperGem RubyGems 供应链攻击 — 冒充微软 Git Credential Manager，精准避开 CI 瞄准开发者主机 | 评分：88</h3>
+<p><strong>来源</strong>：The Hacker News / StepSecurity / Aikido Security / isec.news
+<strong>评分理由</strong>：沉睡多年维护者账户被劫持复活、冒充微软官方工具、setuid root 揁权提升，报告日期仅 7 月 20 日</p>
+<p>安全研究人员于 7 月 20 日披露代号 SleeperGem 的 RubyGems 供应链攻击：三个恶意 gem 发布至 RubyGems.org——git_credential_manager（2.8.0–2.8.3，冒充微软 Git Credential Manager）、沉睡多年的 Dendreo（1.1.3/1.1.4，自 2020 年后无更新）和 fastlane-plugin-run_tests_firebase_testlab（0.3.2，无对应 GitHub tag）。</p>
+<p>每个恶意版本是一个 loader：从攻击者控制的 Forgejo 主机拉取第二阶段载荷，检查约 30 个 CI 环境变量后仅在开发者主机上执行（刻意避开 CI runner）。git_credential_manager v2.8.3 进一步安装后台守护进程、设置 cron 和 systemd user service 持久化、查询 sudo/wheel 组权限，若可免密 sudo 则植入 setuid root shell 于 <code>/usr/local/sbin/ping6</code>。恶意 gem 还被添加为 5 个包的依赖以扩大传播。至少两个维护者账户（LR-DEV 和 pinkroom）被入侵。</p>
+<p><strong>原文链接</strong>：
+- https://thehackernews.com/2026/07/sleepergem-uses-three-malicious.html
+- https://www.stepsecurity.io/blog/sleepergem-compromised-rubygems-drop-persistent-backdoor
+- https://www.isec.news/2026/07/20/malicious-ruby-gems-linked-to-sleepergem-supply-chain-attack</p>
+<hr />
+<h3>4. 🔑 Windows LegacyHive 零日漏洞 — Nightmare Eclipse 在 Patch Tuesday 数小时后发布 ProfSvc 揁权提升 PoC | 评分：85</h3>
+<p><strong>来源</strong>：SecurityWeek / BleepingComputer / Expert Insights / IT-Connect / Rescana
+<strong>评分理由</strong>：影响所有受支持 Windows 版本（含最新 7 月补丁）、研究者与微软持续对抗、PoC 虽已精简但仍可武器化</p>
+<p>安全研究者 Nightmare Eclipse（又名 Chaotic Eclipse）在微软 7 月 Patch Tuesday 发布数小时后公开名为 LegacyHive 的 Windows 零日漏洞 PoC。该漏洞位于 Windows User Profile Service（ProfSvc），允许标准用户加载任意注册表 hive（包括管理员账户的 usrclass.dat），实现本地提权。PoC 需要第二个标准用户凭据和第三个用户名（可为管理员），但研究者称原始版本无需额外凭据且可加载任意 hive——当前发布版本已刻意精简以延缓公开利用。</p>
+<p>这是 Nightmare Eclipse 自 4 月以来发布的第 8 个微软产品零日，其中 3 个（BlueHammer、RedSun、UnDefend）已被 CISA 加入 KEV 目录并在在野攻击中使用。微软表示正在调查，尚未分配 CVE 或发布补丁。</p>
+<p><strong>原文链接</strong>：
+- https://www.securityweek.com/nightmare-eclipse-drops-legacyhive-windows-zero-day/
+- https://expertinsights.com/news/nightmare-eclipse-releases-legacyhive-windows-zero-day
+- https://www.it-connect.tech/legacyhive-zero-day-hits-windows-just-after-july-patch-tuesday</p>
+<hr />
+<h3>5. 🧠 PromptFiction — Claude Desktop claude:// URL 方案自动提交恶意指令，无需用户确认 | 评分：83</h3>
+<p><strong>来源</strong>：Oasis Security / Dark Reading / HackRead / CyberNews.ae
+<strong>评分理由</strong>：首例"零交互"AI 代理 prompt 注入——单次点击即自动执行攻击者指令，可链式升级至 RCE</p>
+<p>Oasis Security 披露名为 PromptFiction 的 Claude Desktop 漏洞：应用注册 claude:// 自定义 URI 方案，点击含 <code>q</code> 参数的链接即自动打开 Claude Desktop 并提交预填充 prompt——<strong>无需用户按 Enter 确认</strong>。攻击者可将恶意指令隐藏在长 prompt 的折叠区域中，用户仅看到表面无害的请求（如"生成 ASCII 艺术"）。</p>
+<p>与 Oasis 此前发现的 Claudy Day 三漏洞链组合后，可实现：静默窃取历史对话、通过 Anthropic Files API 上传至攻击者账户、当 Filesystem Server 安装时可读写本地文件并植入远程调试代码实现 RCE。Anthropic 已在 Claude Desktop 1.1.2321 中修复，prompt 现需用户手动审查并发送。</p>
+<p><strong>原文链接</strong>：
+- https://www.oasis.security/resources/reports/claude-url-scheme-prompt-injection
+- https://hackread.com/promptfiction-flaw-auto-prompts-claude-desktop/
+- https://sectoday.tencent.com/api/article/X_q4Zp8B5M25NX6PNm2Y/link</p>
+<hr />
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p>📌 本板块数据来自 MSRC CVRF API 官方正式文档（DocumentTitle: "July 2026 Security Updates"，不含 Early），解析时间 2026-07-21。数据与此前 7 月 15–19 日推送一致，CVRF CurrentReleaseDate 为 2026-07-20T07:00:00Z，内容稳定。</p>
+</blockquote>
+<h3>本月 CVE 总数与分级统计</h3>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>CVE 数量</th>
+<th>Critical</th>
+<th>Important</th>
+<th>Moderate</th>
+<th>Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microsoft</strong></td>
+<td>628</td>
+<td>62</td>
+<td>559</td>
+<td>6</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Azure Linux (Mariner)</strong></td>
+<td>129</td>
+<td>8</td>
+<td>55</td>
+<td>59</td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Chromium</strong></td>
+<td>448</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td><strong>1,206</strong></td>
+<td><strong>70</strong></td>
+<td><strong>614</strong></td>
+<td><strong>65</strong></td>
+<td><strong>7</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>已被在野利用的 CVE（3 个）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>产品</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-56155</td>
+<td>Important</td>
+<td>7.8</td>
+<td>Active Directory Federation Services</td>
+<td>AD FS 提权漏洞——攻击者可提权至管理员</td>
+</tr>
+<tr>
+<td>CVE-2026-56164</td>
+<td>Moderate</td>
+<td>5.3</td>
+<td>SharePoint Server</td>
+<td>SharePoint 提权漏洞——未认证攻击者可网络提权</td>
+</tr>
+<tr>
+<td>CVE-2026-58644</td>
+<td><strong>Critical</strong></td>
+<td><strong>9.8</strong></td>
+<td>SharePoint Server</td>
+<td>SharePoint 远程代码执行——CISA KEV 已收录，要求联邦机构 7/19 前修补</td>
+</tr>
+</tbody>
+</table>
+<h3>高危 CVE 清单（CVSS ≥ 9.0，共 22 个 Microsoft CVE）</h3>
+<p><strong>已在野利用（1 个，全部列出）：</strong>
+- CVE-2026-58644 | Critical | 9.8 | Exploited:Yes | SharePoint RCE</p>
+<p><strong>Critical 级远程/无认证利用（7 个）：</strong>
+- CVE-2026-45499 | Critical | 9.9 | Azure OpenAI 提权
+- CVE-2026-57100 | Critical | 9.9 | Microsoft Entra Provisioning Service 提权
+- CVE-2026-57092 | Critical | 9.9 | Windows VMSwitch 提权
+- CVE-2026-50522 | Critical | 9.8 | SharePoint RCE
+- CVE-2026-50518 | Critical | 9.8 | Windows DHCP Server RCE
+- CVE-2026-55010 | Critical | 9.8 | Minecraft Bedrock Dedicated Server RCE
+- CVE-2026-55944 | Critical | 9.8 | Dynamics NAV / D365 Business Central RCE</p>
+<p><strong>其余 CVSS ≥ 9.0（14 个，以计数呈现）：</strong>
+- 含 Windows FTP Service RCE (9.8)、RDP Client RCE (9.8)、RDP Protocol RCE (9.8)、DHCP Server Service RCE (9.8)、SQL Server ODBC 提权 (9.8)、MSMQ RCE (9.8)、Windows Server Network Driver RCE (9.8)、Microsoft Copilot RCE (9.6)、Exchange Server Spoofing (9.6)、GDI+ RCE (9.6)、365 Copilot 提权 (9.3)、Windows Kernel 提权 (9.3)、SharePoint Security Feature Bypass (9.1)、Edge RCE (9.0)</p>
+<h3>一句话核心风险总结</h3>
+<p>本月微软创纪录 628 个 CVE 中有 <strong>3 个零日已在野利用</strong>——其中 SharePoint RCE (CVE-2026-58644, CVSS 9.8) 最为紧迫；Azure OpenAI 与 Entra Provisioning Service 各有 CVSS 9.9 提权漏洞，云身份基础设施风险突出。</p>
+<h3>参考链接</h3>
+<ul>
+<li>MSRC Security Update Guide: https://msrc.microsoft.com/update-guide</li>
+<li>CVRF API: https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</li>
+<li>CISA KEV 目录: https://www.cisa.gov/known-exploited-vulnerabilities-catalog</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条候选新闻，选取 Top 5，最高分 96 分。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
