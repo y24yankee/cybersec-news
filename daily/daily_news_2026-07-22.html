@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-22 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-22</h1>
+<hr />
+<h2>Top 5 网络安全新闻</h2>
+<h3>1. 🚨 ServiceNow AI 平台 CVE-2026-6875 未认证 RCE — 沙箱逃逸漏洞在野利用，企业 SaaS 工作流承压 | 评分：94</h3>
+<p><strong>来源</strong>：The Hacker News / Searchlight Cyber Assetnote / Defused Cyber / SecurityWeek
+<strong>评分理由</strong>：CVSS 9.5 沙箱逃逸 + 已确认在野利用 + 沙箱绕过技术链新颖，影响所有 SaaS 自动化客户</p>
+<p>ServiceNow 于 7 月 13 日发布安全公告 KB3137947 修复其 AI 平台一处严重沙箱逃逸漏洞 CVE-2026-6875（CVSS 9.5），Searchlight Cyber 旗下 Assetnote 团队随后发布技术报告《Smashing the ServiceNow Sandbox: Pre-Authentication RCE》。漏洞根因在于 GlideRecord 查询 API 对 script-include 机制（<code>gs.include()</code>）的隔离不严，攻击者通过预认证路径将用户可控输入传入 GlideRecord 查询函数后，可绕过 ServiceNow 既有的受限脚本沙箱（原本阻止 eval、动态函数创建、任意 Java 类访问），进一步在 ServiceNow 沙箱之外执行任意 JavaScript，并可在连接的 MID Server 代理上执行命令、创建管理员账户、读取所有表数据。ServiceNow 表示暂未发现内部主动利用迹象，但 Defused Cyber 7 月 21 日在 X 上披露：威胁情报显示该漏洞已遭在野利用，受影响实例面临租户级沦陷与供应链横向风险。</p>
+<p><strong>原文链接</strong>：
+- https://thehackernews.com/2026/07/servicenow-ai-platform-rce-vulnerability.html
+- https://www.bleepingcomputer.com/news/security/servicenow-ai-platform-sandbox-escape-rce-vulnerability/
+- https://www.searchlightcyber.com/blog/smashing-the-servicenow-sandbox-pre-authentication-rce</p>
+<hr />
+<h3>2. 🤖 AWS Kiro 代理 IDE 缺陷 — 隐藏文本绕过人工审批即可远程执行代码 | 评分：90</h3>
+<p><strong>来源</strong>：The Hacker News / Intezer / Kodem Security / Dark Reading
+<strong>评分理由</strong>：首例"网页内容直接劫持代理 IDE 配置并执行代码"案例，跳过 Kiro 唯一审批护栏，无 CVE 但具范式意义</p>
+<p>Intezer 联合 Kodem Security 披露 AWS 代理式 IDE Kiro 的安全缺陷：攻击者只需诱导用户请求 Kiro 总结一个嵌有隐藏指令的网页，Kiro 即会在未经任何"allow"审批的情况下静默改写 <code>~/.kiro/settings/mcp.json</code>——该文件定义 Kiro 加载的 Model Context Protocol 服务器及其启动命令。配置被覆写后，Kiro 后续启动即执行攻击者控制的 MCP 服务器命令，实现远程代码执行，且全程不向开发者弹出确认。AWS 已在更新中修复该问题，但未分配 CVE。Intezer 指出，Kiro 整个安全模型依赖于用户对"危险操作"的人工审批，该缺陷直接打掉了这一边界。问题与 Cursor、Codex 的 0-day 类似，证实"代理 IDE 加载配置可被外部内容劫持"是当前一类系统性设计弱点。</p>
+<p><strong>原文链接</strong>：
+- https://thehackernews.com/2026/07/aws-kiro-flaw-let-a-poisoned-web-page-rewrite-its-config-and-run-code.html
+- https://www.intezer.com/blog/research/kiro-agentic-ide-remote-code-execution/
+- https://www.darkreading.com/application-security/aws-kiro-ide-prompt-injection-rce</p>
+<hr />
+<h3>3. 🦠 Qilin 勒索软件团伙利用 PAN-OS 身份验证绕过 CVE-2026-0257 作初始访问 | 评分：88</h3>
+<p><strong>来源</strong>：The Hacker News / Arctic Wolf Labs / SecurityWeek
+<strong>评分理由</strong>：关键网络设备认证绕过 + 头部勒索家族 Qilin 已武器化，2026 年 6 月已发生多起入侵</p>
+<p>Arctic Wolf Labs 披露 2026 年 6 月多起勒索软件入侵事件均以 Palo Alto Networks PAN-OS 的认证绕过漏洞 CVE-2026-0257（CVSS 7.8）为初始访问入口，攻击者随后部署 Qilin（又称 Agenda）勒索软件家族。CVE-2026-0257 已被 PAN-OS 修补，但 Qilin 团伙在补丁窗口期内对仍在线的门户/网关实例发起定向攻击。攻击链路显示，威胁行为者先获取防火墙管理面访问权限，再进行内网横向移动、权限提升，最终在业务服务器上启动 Qilin 加密器并外泄敏感数据。Arctic Wolf 警告，Qilin 已成为 2026 年下半年最活跃的勒索即服务平台之一，Firewalls/UTM 等边界设备仍是首选切入点。</p>
+<p><strong>原文链接</strong>：
+- https://thehackernews.com/2026/07/qilin-ransomware-pan-os-authentication-bypass.html
+- https://arcticwolf.com/resources/blog/qilin-ransomware-pan-os/
+- https://www.securityweek.com/qilin-exploits-pan-os-auth-bypass/</p>
+<hr />
+<h3>4. 🇷🇺 俄语黑客"Trim"将越狱 Claude 包装为商业化渗透测试平台 | 评分：86</h3>
+<p><strong>来源</strong>：Infosecurity Magazine / The Register / Trend Micro
+<strong>评分理由</strong>：首例公开报告的"AI 越狱即产品"商业化案例，AI 攻击工具生态走向商品化的标志性事件</p>
+<p>Infosecurity Magazine 报道，俄语威胁行为者 Trim 利用越狱后的 Claude 模型构建了一款商业化 AI 渗透测试平台，面向犯罪论坛公开销售。Trim 在多则论坛帖子中演示该工具：自然语言输入任务描述后，工具可自动进行目标侦察、漏洞识别、payload 生成与后期渗透操作，覆盖了原本需要中级攻击者手动完成的工作流。研究者指出，Trim 的产品并非简单的"prompt 模板套壳"，而是对 Claude 的系统提示与上下文窗口进行了系统性调整，使其能够稳定绕过内置安全护栏。该案例与 GPT-Red、Mythos 自动化红队模型在攻防两端形成镜像——前沿模型既可被防御方用于漏洞挖掘，也可被攻击方武器化输出可购买的攻击能力。</p>
+<p><strong>原文链接</strong>：
+- https://www.infosecurity-magazine.com/news/russian-hacker-jailbroken-claude-pentest-platform/
+- https://theregister.com/2026/07/21/russian-hacker-jailbroken-claude/
+- https://thehackernews.com/2026/07/russian-hacker-jailbreak-claude-pentest.html</p>
+<hr />
+<h3>5. 🍎 Apple iCloud+ Hide My Email 隐私缺陷 — 报告 1 年后才修复，真实邮箱地址可还原 | 评分：84</h3>
+<p><strong>来源</strong>：The Hacker News / 404 Media / EasyOptOuts / Dark Reading
+<strong>评分理由</strong>：付费隐私功能被实质性击穿，披露到修复耗时 1 年 17 天，对 iCloud+ 用户信任度影响重大</p>
+<p>404 Media 报道，Apple 已于 7 月 3 日修补 iCloud+ 付费隐私功能 Hide My Email 的安全缺陷——该漏洞允许拥有目标收件人 Hide My Email 地址的外部观察者将其还原为用户真实邮箱地址，直接破坏该功能的核心价值。问题由数据隐私公司 EasyOptOuts 联合创始人 Tyler Murphy 于 2025 年 6 月 13 日报告给 Apple，Apple 首次尝试修补未成功，最终于 1 年 17 天后交付彻底修复。Hide My Email 是 iCloud+ 订阅的关键卖点，生成随机邮箱转发至用户真实收件箱以拦截垃圾邮件和减少暴露。漏洞使该功能的隐私承诺形同虚设，对依赖该服务管理多账户、避免真实邮箱外泄的用户构成长期风险。</p>
+<p><strong>原文链接</strong>：
+- https://thehackernews.com/2026/07/apple-hide-my-email-bug-real-address.html
+- https://www.404media.co/apple-hide-my-email-bug-real-addresses/
+- https://www.darkreading.com/endpoint-security/apple-icloud-hide-my-email-bug</p>
+<hr />
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p>📌 本板块数据来自 MSRC CVRF API 官方正式文档（DocumentTitle: "July 2026 Security Updates"，不含 Early），CVRF CurrentReleaseDate 为 2026-07-21T07:00:00Z。距 Patch Tuesday（2026-07-14）已 8 天，原始数据自 7 月 21 日以来无变化。
+🆕 <strong>新增跟踪</strong>（非 CVRF 解析数据，来自 7 月 21 日 watchTowr 报告）：原 7 月 14 日 CVRF 未标注 exploited 的 <strong>CVE-2026-50522（SharePoint RCE，CVSS 9.8）</strong> 已被观察到在野利用，建议将其与下表"已被在野利用"项同等优先级处理。</p>
+</blockquote>
+<h3>本月 CVE 总数与分级统计</h3>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>CVE 数量</th>
+<th>Critical</th>
+<th>Important</th>
+<th>Moderate</th>
+<th>Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microsoft</strong></td>
+<td>628</td>
+<td>62</td>
+<td>559</td>
+<td>6</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Azure Linux (Mariner)</strong></td>
+<td>129</td>
+<td>8</td>
+<td>55</td>
+<td>59</td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Chromium</strong></td>
+<td>448</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td><strong>1,206</strong></td>
+<td><strong>70</strong></td>
+<td><strong>614</strong></td>
+<td><strong>65</strong></td>
+<td><strong>7</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>已被在野利用的 CVE（CVRF 标注 3 个 + 新增跟踪 1 个）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>产品</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-56155</td>
+<td>Important</td>
+<td>7.8</td>
+<td>Active Directory Federation Services</td>
+<td>AD FS 提权漏洞——攻击者可提权至管理员</td>
+</tr>
+<tr>
+<td>CVE-2026-56164</td>
+<td>Moderate</td>
+<td>5.3</td>
+<td>SharePoint Server</td>
+<td>SharePoint 提权漏洞——未认证攻击者可网络提权</td>
+</tr>
+<tr>
+<td>CVE-2026-58644</td>
+<td><strong>Critical</strong></td>
+<td><strong>9.8</strong></td>
+<td>SharePoint Server</td>
+<td>SharePoint 远程代码执行——CISA KEV 已收录，要求联邦机构 7/19 前修补</td>
+</tr>
+<tr>
+<td>⚠️ CVE-2026-50522</td>
+<td><strong>Critical</strong></td>
+<td><strong>9.8</strong></td>
+<td>SharePoint Server</td>
+<td>SharePoint 反序列化 RCE——watchTowr 7/21 报告在野利用，PoC 公开</td>
+</tr>
+</tbody>
+</table>
+<h3>高危 CVE 清单（CVSS ≥ 9.0，共 22 个 Microsoft CVE）</h3>
+<p><strong>已在野利用（1 个，全部列出）：</strong>
+- CVE-2026-58644 | Critical | 9.8 | Exploited:Yes | SharePoint RCE</p>
+<p><strong>Critical 级远程/无认证利用（7 个）：</strong>
+- CVE-2026-45499 | Critical | 9.9 | Azure OpenAI 提权
+- CVE-2026-57100 | Critical | 9.9 | Microsoft Entra Provisioning Service 提权
+- CVE-2026-57092 | Critical | 9.9 | Windows VMSwitch 提权
+- CVE-2026-50522 | Critical | 9.8 | SharePoint RCE（<strong>7/21 新增在野利用</strong>）
+- CVE-2026-50518 | Critical | 9.8 | Windows DHCP Server RCE
+- CVE-2026-55010 | Critical | 9.8 | Minecraft Bedrock Dedicated Server RCE
+- CVE-2026-55944 | Critical | 9.8 | Dynamics NAV / D365 Business Central RCE</p>
+<p><strong>其余 CVSS ≥ 9.0（14 个，以计数呈现）：</strong>
+- 含 Windows FTP Service RCE (9.8)、RDP Client RCE (9.8)、RDP Protocol RCE (9.8)、SQL Server ODBC 提权 (9.8)、MSMQ RCE (9.8)、Windows Server Network Driver RCE (9.8)、DHCP Server Service RCE (9.8)、Microsoft Copilot RCE (9.6)、Exchange Server Spoofing (9.6)、GDI+ RCE (9.6)、365 Copilot 提权 (9.3)、Windows Kernel 提权 (9.3)、SharePoint Security Feature Bypass (9.1)、Edge RCE (9.0)</p>
+<h3>一句话核心风险总结</h3>
+<p>本月微软创纪录 628 个 CVE 中有 <strong>3 个零日已在野利用</strong>（CVRF 标注）；7 月 21 日 watchTowr 报告 <strong>CVE-2026-50522（SharePoint RCE CVSS 9.8）新增在野利用</strong>，使在野利用清单扩展为 4 个——其中两个 SharePoint RCE 需重点关注。Azure OpenAI 与 Entra Provisioning Service 各有 CVSS 9.9 提权漏洞，云身份基础设施风险突出。</p>
+<h3>参考链接</h3>
+<ul>
+<li>MSRC Security Update Guide: https://msrc.microsoft.com/update-guide</li>
+<li>CVRF API: https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</li>
+<li>CISA KEV 目录: https://www.cisa.gov/known-exploited-vulnerabilities-catalog</li>
+<li>watchTowr CVE-2026-50522 在野利用报告: https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条候选新闻，选取 Top 5，最高分 94 分。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
