@@ -49,71 +49,225 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-24</h1>
-<hr />
-<h2>Top 5 安全新闻</h2>
-<h3>1. CISA 本周密集新增 KEV：Check Point、SharePoint、WordPress Core、Langflow 均在野利用</h3>
+<blockquote>
+<p>生成时间：2026-07-24 07:00（北京时间）
+覆盖范围：2026-07-22 至 2026-07-24（过去 48 小时高信号事件）</p>
+</blockquote>
+<h2>今日 Top 5</h2>
+<h3>1. Check Point SmartConsole 认证绕过 0day（CVE-2026-16232）已遭在野利用 — 评分 96</h3>
 <ul>
-<li><strong>评分：90分</strong> | 理由：多个高危漏洞同时被确认在野利用，联邦机构被强制限期修补，防御优先级极高。</li>
-<li><strong>来源：</strong> CISA / The Hacker News / BleepingComputer</li>
-<li><strong>摘要：</strong> 截至 7 月 23 日，CISA 本周新增至少 4 个确认在野利用漏洞至 KEV 目录：</li>
-<li><strong>CVE-2026-16232</strong>（Check Point SmartConsole 认证绕过）— 7/22 新增，联邦修复截止 7/25；</li>
-<li><strong>CVE-2026-50522</strong>（Microsoft SharePoint 反序列化 RCE，CVSS 9.8）— 攻击者利用该漏洞窃取 IIS 机器密钥以实现补丁后持久化，7/22 新增 KEV；</li>
-<li><strong>CVE-2026-63030 / CVE-2026-60137</strong>（WordPress Core "wp2shell" 预认证 RCE 链）— 7/21 新增，影响默认安装的 WordPress 站点，PoC 已公开；</li>
-<li><strong>CVE-2026-0770</strong>（Langflow 认证绕过 → 未授权 root RCE）— 7/21 新增，KEVIntel 记录自 6/27 以来已有 220+ 次利用尝试，主要窃取 AWS 凭证。
-  此外，CISA 还新增了 <strong>CVE-2026-58644</strong>（SharePoint RCE，CVSS 9.8）和 <strong>CVE-2021-27137</strong>（DD-WRT 缓冲区溢出）。联邦民事行政分支机构（FCEB）被要求在 7/24–8/4 之间完成修复。</li>
-<li><strong>原文链接：</strong></li>
-<li>https://www.cisa.gov/news-events/alerts/2026/07/21/cisa-adds-four-known-exploited-vulnerabilities-catalog</li>
-<li>https://security-resilience.ai/ciso-briefing.html</li>
+<li><strong>来源</strong>：BleepingComputer + The Hacker News</li>
+<li><strong>摘要</strong>：Check Point 披露 SmartConsole GUI 管理面身份认证绕过漏洞（CVSS 9.3），未认证远程攻击者可通过获取 application login token 直接登录 Security Management Server 并获得完全管理员权限，进而改写防火墙策略、规则集与所有受管网关配置。CISA 已将该漏洞加入 KEV 目录，并要求联邦机构在 7 月 25 日（72 小时内）完成修复——这是近两年来 Check Point 第三次出现遭在野利用的认证类缺陷（前两次分别为 CVE-2026-50751 Qilin 利用、CVE-2024-24919 NailaoLocker 利用）。</li>
+<li><strong>理由</strong>：在野利用 + 安全厂商自身管理面被接管 + CVSS 9.3 + 72h 联邦截止，安全基础设施信任根遭穿透。</li>
+<li><strong>原文链接</strong>：</li>
+<li>https://www.bleepingcomputer.com/news/security/check-point-patches-smartconsole-zero-day-exploited-in-attacks/</li>
+<li>https://thehackernews.com/2026/07/check-point-patches-exploited.html</li>
+<li>https://blog.checkpoint.com/security/security-advisory-action-required-active-exploitation-of-check-point-smartconsole-authentication-bypass-cve-2026-16232/</li>
 </ul>
-<hr />
-<h3>2. FakeGit 行动：7,600 个恶意 GitHub 仓库推送 SmartLoader 与 StealC 恶意软件</h3>
+<h3>2. SharePoint 预认证反序列化 RCE（CVE-2026-50522）现已在野利用并窃取机器密钥 — 评分 94</h3>
 <ul>
-<li><strong>评分：88分</strong> | 理由：超大规模软件供应链攻击，累计 1,400 万+ 次下载，攻击者滥用 GitHub 信任机制。</li>
-<li><strong>来源：</strong> BleepingComputer</li>
-<li><strong>摘要：</strong> 一场名为 "FakeGit" 的大规模恶意行动通过 7,600 个伪造 GitHub 仓库传播 SmartLoader 和 StealC 恶意软件，累计下载量超过 1,400 万次。攻击者创建看似合法的项目仓库，利用 SEO 和社交网络分发吸引开发者下载。该行动代表了近期的 GitHub 恶意仓库趋势升级，与此前 TeamPCP 等供应链攻击组织的手法有相似之处，均利用开发者对开源平台的默认信任作为攻击入口。</li>
-<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/fakegit-campaign-uses-7600-github-repos-to-push-smartloader-malware/</li>
+<li><strong>来源</strong>：The Hacker News + BleepingComputer + CISA KEV</li>
+<li><strong>摘要</strong>：CISA 于 7 月 22 日将 CVE-2026-50522 加入 KEV 目录。该漏洞原本在 7 月 16 日披露、7 月 20 日公开 PoC，Defused 自 7 月 17 日起即观察到利用行为。攻击者通过伪造 <code>SecurityContextToken</code> cookie 向 <code>/_trust/default.aspx</code> 投递 BinaryFormatter payload 实现预认证 RCE，并主动外泄 IIS machine key 以获得"补丁后仍能持续访问"的能力——仅打补丁不足以清场。这是过去一个月内第四个遭活跃利用的 SharePoint CVE（前三个：CVE-2026-32201、CVE-2026-45659、CVE-2026-56164）。</li>
+<li><strong>理由</strong>：在野利用 + 公开 PoC + 持久化机制（机器密钥外泄使补丁无效）+ 大型 SharePoint 企业部署基线受影响。</li>
+<li><strong>原文链接</strong>：</li>
+<li>https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html（CISA/KEV 列表更新含 50522）</li>
+<li>https://www.bleepingcomputer.com/news/security/critical-sharepoint-rce-flaw-exploited-to-steal-machine-keys/</li>
+<li>https://ajking.io/threat-briefs/threat-brief-2026-07-23</li>
 </ul>
-<hr />
-<h3>3. Ubuntu snap-confine 本地权限提升漏洞 CVE-2026-8933</h3>
+<h3>3. RefluXFS：潜伏 9 年的 Linux XFS 竞态条件漏洞（CVE-2026-64600），Qualys 联合 Anthropic AI 挖出 — 评分 92</h3>
 <ul>
-<li><strong>评分：86分</strong> | 理由：影响 Ubuntu Desktop 默认安装（24.04/25.10/26.04），无需额外条件即可从普通用户提权至 root。</li>
-<li><strong>来源：</strong> The Hacker News / Qualys</li>
-<li><strong>摘要：</strong> Qualys 披露 snap-confine 组件中存在一个本地权限提升漏洞（CVE-2026-8933，CVSS 7.8），影响 Ubuntu Desktop 的默认安装版本。漏洞源于沙箱初始化过程中引入的竞争条件：攻击者可在 <code>/tmp</code> 目录创建后、所有权转移至 root 前的狭窄窗口内，挂载恶意 FUSE 文件系统或创建符号链接，将 snap-confine 的写操作重定向至 <code>/run/udev/rules.d/</code> 等敏感路径，从而以 root 权限执行任意命令。这是继 2022 年 "Oh Snap! More Lemmings" 之后，Qualys 再次在同一组件中发现严重提权漏洞。</li>
-<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/ubuntu-snap-confine-flaw-could-give.html</li>
+<li><strong>来源</strong>：The Hacker News + Qualys Threat Research</li>
+<li><strong>摘要</strong>：Qualys 披露 RefluXFS——一个自 Linux 4.11（2017 年）起就潜伏在 XFS 文件系统代码中的高危竞态条件漏洞。普通用户可通过块设备层覆盖 root 拥有的文件以获得持续 root 权限，覆盖行为不产生内核日志痕迹，绕过 SELinux enforcing 模式，重启后仍保留 root 访问。Red Hat Enterprise Linux、Fedora Server、Amazon Linux 等默认安装均受影响。该漏洞是 2026 年 AI 辅助漏洞挖掘的里程碑案例，由 Qualys 与 Anthropic Claude 协作定位。</li>
+<li><strong>理由</strong>：潜伏 9 年 + 默认 RHEL/Fedora/Amazon 安装受影响 + AI 协作挖掘标志事件 + 无日志痕迹绕过 SELinux + 重启后仍持久。</li>
+<li><strong>原文链接</strong>：</li>
+<li>https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html</li>
+<li>https://cybersecuritynews.com/refluxfs-linux-kernel-vulnerability/</li>
 </ul>
-<hr />
-<h3>4. Adobe Acrobat Chrome 扩展 HermeticReader 漏洞可窃取 WhatsApp Web 数据</h3>
+<h3>4. 俄罗斯 Laundry Bear（Void Blizzard）利用 Zimbra 0click 漏洞窃取邮件与 2FA 恢复码 — 评分 89</h3>
 <ul>
-<li><strong>评分：84分</strong> | 理由：314M 用户量级的浏览器扩展存在 UXSS 级跨域数据泄露，仅需用户访问恶意网页即可触发。</li>
-<li><strong>来源：</strong> The Hacker News / Guardio Labs</li>
-<li><strong>摘要：</strong> Guardio Labs 披露了 Adobe Acrobat Chrome 扩展（ID: efaidnbmnnnibpcajpcglclefindmkaj，安装量超 3.14 亿）中的一个通用跨站脚本（UXSS）类漏洞 CVE-2026-48294（CVSS 7.4），代号 "HermeticReader"。攻击者只需诱导受害者访问恶意网页，即可唤醒扩展内的 Hermes 引擎，绕过浏览器同源策略读取受害者 WhatsApp Web 的聊天列表、联系人名称、消息内容和个人资料信息。漏洞利用链巧妙利用了 HTML 规范中 <code>&lt;option&gt;</code> 元素无 value 属性时提交其文本内容的特性，将 WhatsApp 的整个渲染 DOM POST 至攻击者控制的端点。Adobe 已于 6 月修复该漏洞。</li>
-<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/adobe-acrobat-extension-flaw-let.html</li>
+<li><strong>来源</strong>：BleepingComputer + The Hacker News + NSA/CISA 联合咨询</li>
+<li><strong>摘要</strong>：CISA、NSA 与合作伙伴机构联合发布咨询公告，披露俄罗斯国家级威胁组织 Laundry Bear（亦称 Void Blizzard）利用 Zimbra Classic UI Webmail 客户端中的一个已修复存储型 XSS 漏洞（CVE-2025-66376）实现"打开邮件即触发"的零点击攻击链。载荷可读取受害邮箱最近 90 天的邮件、组织目录、浏览器保存的密码以及 2FA 恢复码，目标覆盖西方政府机构与商业邮箱。该攻击链由 Palo Alto Networks Unit 42 与 Proofpoint 同步披露。</li>
+<li><strong>理由</strong>：NSA/CISA 联合咨询 + 国家级攻击归因 + 2FA 恢复码被窃（绕过 MFA）+ 零点击邮件载荷 + 多机构同步披露。</li>
+<li><strong>原文链接</strong>：</li>
+<li>https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-zimbra-zero-click-flaw-for-email-theft/</li>
+<li>https://thehackernews.com/2026/07/russian-espionage-group-exploited.html</li>
 </ul>
-<hr />
-<h3>5. 韩国国家外交学院遭入侵，外交官个人信息泄露长达 10 个月</h3>
+<h3>5. Redis 认证 RCE 补丁绕过漏洞（QVD-2026-44936 / CVE-2026-25589 变种）— 评分 88</h3>
 <ul>
-<li><strong>评分：83分</strong> | 理由：国家级外交人员数据遭长期窃取，涉及驻外外交官，具备明显地缘情报价值。</li>
-<li><strong>来源：</strong> BleepingComputer</li>
-<li><strong>摘要：</strong> 韩国政府披露，国家外交学院（National Diplomatic Academy）的在线教育系统遭黑客入侵长达 10 个月，导致外交部现任及前任员工（包括驻外外交官）的个人信息被盗。这是一起针对外交系统的严重网络入侵事件，暴露了政府教育平台在威胁检测和访问监控方面的薄弱环节。具体攻击者身份和动机尚未公开 attribution，但此类针对外交人员的数据窃取通常与国家级网络情报活动相关。</li>
-<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/south-korea-discloses-data-breach-impacting-diplomats-worldwide/</li>
-</ul>
-<hr />
-<h2>其他值得关注</h2>
-<ul>
-<li><strong>GitHub 削减公开漏洞赏金 50% 以上</strong>（THN, 7/22）：Critical 奖金从 $20,000–$30,000+ 降至固定 $10,000，VIP 邀请制 tier 保留 $30,000+。背景是 AI 辅助生成的报告数量激增，平台希望减少噪音、提升质量。https://thehackernews.com/2026/07/github-cuts-public-bug-bounty-payouts.html</li>
-<li><strong>Windmill CVE-2026-29059 在野利用</strong>（THN, 7/22）：开源开发者平台 Windmill 的路径遍历漏洞（CVSS 7.5）被确认在野利用，约 170 个系统暴露，攻击者可读取 <code>/etc/passwd</code> 及环境变量中的 SUPERADMIN_SECRET。https://thehackernews.com/2026/07/hackers-exploit-windmill-flaw-to-read.html</li>
-<li><strong>瑞士 Stadler Rail 拒绝支付 $1,230 万赎金</strong>（BC, 7/22）：Everest 勒索软件团伙攻击其供应商数据交换平台，Stadler 明确拒绝支付。https://www.bleepingcomputer.com/news/security/swiss-rail-giant-stadler-rejects-123m-ransom-demand-after-cyberattack/</li>
-<li><strong>Chick-fil-A 披露凭证填充攻击导致的数据泄露</strong>（BC, 7/22）：美国快餐连锁品牌通知顾客其账户在凭证填充攻击中遭入侵。https://www.bleepingcomputer.com/news/security/chick-fil-a-discloses-data-breach-after-credential-stuffing-attacks/</li>
+<li><strong>来源</strong>：奇安信 CERT（secrss.com）+ Redis 官方发布说明</li>
+<li><strong>摘要</strong>：奇安信 CERT 监测到 Redis 官方修复的认证远程代码执行漏洞 QVD-2026-44936——这是 CVE-2026-25589（RESTORE 命令无效内存访问导致 RCE）的绕过变体，源于 Streams 消费者组处理共享 NACK 时的双重释放缺陷。攻击者可利用 XGROUP、XACK、RESTORE 等命令构造 payload 触发内存破坏，进而实现任意代码执行。CVSS 3.1 = 8.8（高危），PoC/EXP/技术细节均已公开，影响版本覆盖 Redis 6.2.22、7.4.9、8.6.4（即刚打过 CVE-2026-25589 补丁的版本仍可被绕过），全球百万级 Redis 实例暴露在公网 6379 端口之上。</li>
+<li><strong>理由</strong>：CVSS 8.8 + PoC/EXP 公开 + 已修补版本再次被绕过 + Redis 在缓存/消息队列/会话存储等核心场景广泛部署。</li>
+<li><strong>原文链接</strong>：</li>
+<li>https://www.secrss.com/articles/92412</li>
+<li>https://redis.io/docs/latest/operate/oss_and_stack/stack-with-enterprise/release-notes/redisce/redisos-8.2-release-notes/</li>
 </ul>
 <hr />
 <h2>微软补丁安全级别（Patch Tuesday）</h2>
-<p>📋 <strong>本月 Patch Tuesday 数据已于 7 月 15–21 日期间完整推送并覆盖。</strong> CVRF 文档 <code>2026-Jul</code> 标题为正式 "July 2026 Security Updates"（非 Early 预发布），当前版本稳定自 2026-07-21。此前已在 7/15、7/16、7/18、7/19、7/21、7/22、7/23 的日报中完整呈现 CVE 分级统计、在野利用清单及 CVSS≥9.0 高危项。</p>
-<p><strong>核心回顾：</strong> 628 Microsoft CVEs（Critical: 62 / Important: 559 / Moderate: 6 / Low: 1），3 个已确认在野利用（CVE-2026-56155、CVE-2026-56164、CVE-2026-58644），22 个 CVSS≥9.0。详见此前日报或 MSRC Security Update Guide：
-https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</p>
-<p><strong>下次 Patch Tuesday：</strong> 2026-08-12（距今天 19 天）。</p>
+<p><strong>判定</strong>：✅ 正式发布（July 2026 Security Updates — 非 Early 预发布）
+<strong>CVRF 数据</strong>：Microsoft CurrentReleaseDate = <code>2026-07-22T07:00:00Z</code>，DocumentTitle = <code>July 2026 Security Updates</code></p>
+<blockquote>
+<p>本板块为补丁日独立单元，承载全部 CVE 级明细；不与 Top5 新闻混排、不参与 Top5 评分。</p>
+</blockquote>
+<h3>本月补丁总览</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>总 CVE 数</strong></td>
+<td><strong>1,339</strong>（含微软主线 628 + Azure Linux Mariner 262 + Chromium 448 + 其他 1）</td>
+</tr>
+<tr>
+<td><strong>Microsoft 主线</strong></td>
+<td>628 个 CVE</td>
+</tr>
+<tr>
+<td><strong>Critical（微软）</strong></td>
+<td>62</td>
+</tr>
+<tr>
+<td><strong>Important（微软）</strong></td>
+<td>559</td>
+</tr>
+<tr>
+<td><strong>Moderate（微软）</strong></td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Low（微软）</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>已被在野利用（CVE 列表见下）</strong></td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>CVSS ≥ 9.0 的微软 CVE（去重后）</strong></td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+<h3>已被在野利用的 CVE（在野 0day / 重点关注）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE 编号</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>漏洞标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CVE-2026-58644</strong></td>
+<td>Critical</td>
+<td>9.8</td>
+<td>Microsoft SharePoint Remote Code Execution Vulnerability</td>
+</tr>
+<tr>
+<td><strong>CVE-2026-56155</strong></td>
+<td>Important</td>
+<td>7.8</td>
+<td>Active Directory Federation Services Elevation of Privilege</td>
+</tr>
+<tr>
+<td><strong>CVE-2026-56164</strong></td>
+<td>Moderate</td>
+<td>5.3</td>
+<td>Microsoft SharePoint Server Elevation of Privilege</td>
+</tr>
+</tbody>
+</table>
+<h3>CVSS ≥ 9.0 高危 CVE（按分值倒序，最多展示 8 条；其余见 MSRC 链接）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE 编号</th>
+<th>CVSS</th>
+<th>严重级别</th>
+<th>在野利用</th>
+<th>漏洞标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-45499</td>
+<td>9.9</td>
+<td>Critical</td>
+<td>否</td>
+<td>Azure OpenAI Elevation of Privilege</td>
+</tr>
+<tr>
+<td>CVE-2026-57100</td>
+<td>9.9</td>
+<td>Critical</td>
+<td>否</td>
+<td>Microsoft Entra Provisioning Service Elevation of Privilege</td>
+</tr>
+<tr>
+<td>CVE-2026-57092</td>
+<td>9.9</td>
+<td>Critical</td>
+<td>否</td>
+<td>Windows VMSwitch Elevation of Privilege</td>
+</tr>
+<tr>
+<td>CVE-2026-50522</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+<td>Microsoft SharePoint Remote Code Execution</td>
+</tr>
+<tr>
+<td>CVE-2026-58644</td>
+<td>9.8</td>
+<td>Critical</td>
+<td><strong>是</strong></td>
+<td>Microsoft SharePoint Remote Code Execution</td>
+</tr>
+<tr>
+<td>CVE-2026-50518</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+<td>Windows DHCP Server Remote Code Execution</td>
+</tr>
+<tr>
+<td>CVE-2026-55010</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+<td>Minecraft Bedrock Dedicated Server RCE</td>
+</tr>
+<tr>
+<td>CVE-2026-56159</td>
+<td>9.8</td>
+<td>Critical</td>
+<td>否</td>
+<td>DHCP Server Service Remote Code Execution</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>其余 14 个 CVSS ≥ 9.0 的 Microsoft CVE 已收录于 MSRC，详见下方链接。</p>
+</blockquote>
+<h3>一句话核心风险总结</h3>
+<blockquote>
+<p>本月补丁日是史上最大的 Microsoft 释出之一（1,339 个 CVE），核心风险集中在 <strong>SharePoint 预认证 RCE 0day 在野利用（CVE-2026-58644）</strong> 与 <strong>大规模 Windows/网络组件远程代码执行（DHCP、MSMQ、RDP、FTP 等）</strong>；Azure 云权限提升面（Entra、Azure OpenAI、VMSwitch）也出现 9.9 顶级分值漏洞，建议优先打补丁并对 SharePoint 农场强制轮换机器密钥。</p>
+</blockquote>
+<h3>数据来源链接</h3>
+<ul>
+<li><strong>MSRC Security Update Guide</strong>：https://msrc.microsoft.com/update-guide</li>
+<li><strong>CVRF API（本月）</strong>：<code>https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</code></li>
+<li><strong>CVRF API（更新列表）</strong>：<code>https://api.msrc.microsoft.com/cvrf/v3.0/updates</code></li>
+</ul>
 <hr />
-<p><em>本次共筛选 14 条候选新闻，最高分 90 分。</em></p>
-<p><em>日报生成时间：2026-07-24 07:00 CST</em></p>
+<h2>统计</h2>
+<p>本次共筛选 <strong>15</strong> 条候选新闻（来源 1 Hacker News / 来源 2 The Hacker News / 来源 3 Bleeping Computer 各 5 条），最高分 <strong>96</strong> 分（Check Point SmartConsole CVE-2026-16232）。</p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
