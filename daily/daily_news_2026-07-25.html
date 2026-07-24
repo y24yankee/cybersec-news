@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-25 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-25</h1>
+<blockquote>
+<p>数据来源：The Hacker News / Bleeping Computer / Hacker News<br />
+筛选时间：2026-07-25 07:00 CST<br />
+候选新闻：15 条 → 精选 Top 5</p>
+</blockquote>
+<hr />
+<h2>Top 5 网络安全新闻</h2>
+<h3>1. Certighost 漏洞：低权限 AD 用户可冒充域控制器实现 DCSync（CVSS 8.8）</h3>
+<p><strong>评分：92 分</strong> — 严重性：域控冒充可导致全域沦陷；新颖性：公开 PoC + 新攻击路径；影响范围：所有 Active Directory 环境</p>
+<p>研究人员公开了名为 "Certighost" 的工作漏洞利用代码，允许仅拥有普通域账户（无需管理员权限）的用户获取域控制器的证书并以此身份进行认证，进而发起 DCSync 攻击导出全域密码哈希。该漏洞编号为 CVE-2026-54121（CVSS 8.8），利用条件仅需网络访问和一个域账户。微软已发布补丁修复此漏洞，但已公开的利用代码意味着未修补系统面临即时风险。</p>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html</li>
+</ul>
+<hr />
+<h3>2. Bing 图片搜索 SVG 漏洞：可在微软服务器上以 SYSTEM 权限执行命令（CVSS 9.8 ×2）</h3>
+<p><strong>评分：90 分</strong> — 严重性：CVSS 9.8 + SYSTEM 级 RCE；新颖性：SVG 图片处理链攻击；影响范围：微软生产服务器</p>
+<p>安全研究员发现，向 Bing 图片搜索提交特制 SVG 文件后，可在微软的图片处理服务器上以 <code>NT AUTHORITY\SYSTEM</code> 权限执行任意命令。两个漏洞 CVE-2026-32194 和 CVE-2026-32191 均被评为 CVSS 9.8，由 XBOW 发现并报告。微软已在公开通告前完成服务端修复，用户无需采取行动，但该攻击路径揭示了图片处理管道的高危面。</p>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html</li>
+</ul>
+<hr />
+<h3>3. 黑客利用 Hermes AI 代理对泰国财政部实施自主后渗透攻击</h3>
+<p><strong>评分：89 分</strong> — 严重性：政府部委遭入侵；新颖性：首个公开确认的无监督 AI 代理后渗透攻击；影响范围：政府人员数据自 2012 年起泄露</p>
+<p>攻击者将开源 AI 代理 Hermes（Nous Research 开发）以 "YOLO" 模式部署在租用服务器上，对泰国财政部实施自主后渗透。该代理自动搜索 root 权限、爬取 2012 年至今的人事档案，并在 Web 服务器上暴露 585 个文件/470MB 攻击工具。此事件由 Hunt.io 和研究员 Bob Diachenko 发现，标志着 AI 代理首次在真实政府入侵中被用于无人值守的自主攻击。</p>
+<ul>
+<li><strong>来源</strong>：The Hacker News / Bleeping Computer</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/07/hacker-runs-hermes-ai-agent-unattended.html<br />
+  https://www.bleepingcomputer.com/news/security/hermes-ai-agent-used-to-automate-attack-on-thai-finance-ministry/</li>
+</ul>
+<hr />
+<h3>4. Kimi K3 AI 代理自主发现 Redis 0day 并构建 RCE 利用</h3>
+<p><strong>评分：88 分</strong> — 严重性：Redis 多个 RCE 0day；新颖性：AI 自主发现并武器化漏洞；影响范围：Redis 广泛部署于全球基础设施</p>
+<p>中国月之暗面（Moonshot AI）的 Kimi K3 模型被用于自主漏洞挖掘，成功发现 Redis 中的多个 0day 并构建可工作的 RCE 利用代码。涉及 RESTORE 命令内存缺陷、Streams 共享 NACK 释放后重用、以及 RedisBloom/TDigest 越界写入。Redis 于 7 月 23 日紧急发布 7 个安全版本（覆盖 6.2.22、7.4.9、8.6.4、8.8.0）。研究者建议立即升级并撤销非必要账户的 RESTORE 权限。</p>
+<ul>
+<li><strong>来源</strong>：The Hacker News / Hacker News</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html</li>
+</ul>
+<hr />
+<h3>5. Clop 勒索软件转向攻击 PTC Windchill 和 FlexPLM 实例进行数据勒索</h3>
+<p><strong>评分：87 分</strong> — 严重性：活跃数据勒索攻击；新颖性：制造业 PLM 系统成为新目标；影响范围：暴露在互联网上的企业 PLM 实例</p>
+<p>Clop 勒索软件团伙正在对互联网暴露的 PTC Windchill 和 FlexPLM 实例发起数据窃取勒索攻击。PTC Windchill 是制造业广泛使用的产品生命周期管理（PLM）平台，FlexPLM 则在零售和服装行业大量部署。攻击者利用这些系统的暴露面进行数据外泄，随后进行勒索。这标志着 Clop 从传统的文件传输类目标（如 MOVEit、GoAnywhere）向制造业 PLM 平台扩展。</p>
+<ul>
+<li><strong>来源</strong>：Bleeping Computer</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/clop-ransomware-targets-windchill-flexplm-in-data-theft-attacks/</li>
+</ul>
+<hr />
+<h2>候选新闻（未进入 Top 5）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>标题</th>
+<th>来源</th>
+<th>评分理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>BlueNoroff Zoom 钓鱼工具包：先画像加密钱包再投递恶意软件</td>
+<td>THN</td>
+<td>朝鲜 APT，新型钱包画像技术（86分）</td>
+</tr>
+<tr>
+<td>7</td>
+<td>ChatGPT AgentForger CSRF：单条钓鱼链接部署恶意 AI 代理</td>
+<td>THN</td>
+<td>AI 代理专属攻击面，已修复（85分）</td>
+</tr>
+<tr>
+<td>8</td>
+<td>黑客劫持酒店 Wi-Fi DNS 窃取 Microsoft 365 账户</td>
+<td>BC</td>
+<td>新型 DNS 劫持攻击差旅人群（84分）</td>
+</tr>
+<tr>
+<td>9</td>
+<td>安全摄像头登录页泄露 GitHub 管理员令牌</td>
+<td>HN</td>
+<td>IoT 供应链密钥泄露（83分）</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Chick-fil-A 数据泄露影响 13,000+ 客户</td>
+<td>BC</td>
+<td>大型连锁餐饮凭据填充攻击（80分）</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Europol 标记 4,340 个 URL 下架"The Com"极端内容</td>
+<td>BC</td>
+<td>执法行动规模大（78分）</td>
+</tr>
+<tr>
+<td>12</td>
+<td>OnTrac 物流公司遭网络入侵后通知客户数据泄露</td>
+<td>BC</td>
+<td>物流行业数据泄露（77分）</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Golden Chickens MaaS 回归：四个新恶意软件家族</td>
+<td>THN</td>
+<td>知名 MaaS 生态更新（76分）</td>
+</tr>
+<tr>
+<td>14</td>
+<td>NodeBB 修补 8 个 AI 发现的高危漏洞</td>
+<td>THN</td>
+<td>AI 渗透测试实战成果（75分）</td>
+</tr>
+<tr>
+<td>15</td>
+<td>微软：M365 大规模中断由维护 Bug 引起</td>
+<td>BC</td>
+<td>运维事故非安全事件（72分）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p><strong>CVRF 更新提示</strong>：微软于 2026-07-24 更新了七月补丁数据（CurrentReleaseDate: 2026-07-24T07:00:00Z），Microsoft CVE 数量从 628 → 642，Critical 从 62 → 76，CVSS≥9.0 从 22 → 32。以下为最新解析数据。</p>
+</blockquote>
+<h3>总览</h3>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>CVE 数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microsoft CVEs</strong></td>
+<td><strong>642</strong></td>
+</tr>
+<tr>
+<td>┗ Critical</td>
+<td>76</td>
+</tr>
+<tr>
+<td>┗ Important</td>
+<td>559</td>
+</tr>
+<tr>
+<td>┗ Moderate</td>
+<td>6</td>
+</tr>
+<tr>
+<td>┗ Low</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Azure Linux (Mariner)</td>
+<td>305</td>
+</tr>
+<tr>
+<td>Chromium</td>
+<td>460</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>总计</strong></td>
+<td><strong>1,408</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>已被在野利用的 CVE（3 个）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE 编号</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>漏洞名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CVE-2026-58644</strong></td>
+<td>Critical</td>
+<td>9.8</td>
+<td>Microsoft SharePoint 远程代码执行</td>
+</tr>
+<tr>
+<td><strong>CVE-2026-56155</strong></td>
+<td>Important</td>
+<td>7.8</td>
+<td>Active Directory Federation Services 权限提升</td>
+</tr>
+<tr>
+<td><strong>CVE-2026-56164</strong></td>
+<td>Moderate</td>
+<td>5.3</td>
+<td>Microsoft SharePoint Server 权限提升</td>
+</tr>
+</tbody>
+</table>
+<h3>高危 CVE 清单（CVSS ≥ 9.0，共 32 个，展示前 8）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE 编号</th>
+<th>CVSS</th>
+<th>严重级别</th>
+<th>在野利用</th>
+<th>漏洞名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-56163</td>
+<td>10.0</td>
+<td>Critical</td>
+<td>No</td>
+<td>Azure Kubernetes Service 权限提升</td>
+</tr>
+<tr>
+<td>CVE-2026-56191</td>
+<td>10.0</td>
+<td>Critical</td>
+<td>No</td>
+<td>Microsoft Exchange Online 篡改</td>
+</tr>
+<tr>
+<td>CVE-2026-57106</td>
+<td>10.0</td>
+<td>Critical</td>
+<td>No</td>
+<td>Data Quality 权限提升</td>
+</tr>
+<tr>
+<td>CVE-2026-62825</td>
+<td>10.0</td>
+<td>Critical</td>
+<td>No</td>
+<td>Azure Key Vault 权限提升</td>
+</tr>
+<tr>
+<td>CVE-2026-58630</td>
+<td>10.0</td>
+<td>Critical</td>
+<td>No</td>
+<td>Azure App Service on Azure Stack Hub 权限提升</td>
+</tr>
+<tr>
+<td>CVE-2026-58275</td>
+<td>10.0</td>
+<td>Critical</td>
+<td>No</td>
+<td>Azure DNS 权限提升</td>
+</tr>
+<tr>
+<td>CVE-2026-45499</td>
+<td>9.9</td>
+<td>Critical</td>
+<td>No</td>
+<td>Azure OpenAI 权限提升</td>
+</tr>
+<tr>
+<td>CVE-2026-57100</td>
+<td>9.9</td>
+<td>Critical</td>
+<td>No</td>
+<td>Microsoft Entra Provisioning Service 权限提升</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>其余 24 个 CVSS≥9.0 的 CVE 包括：CVE-2026-54120（Surface RCE 9.9）、CVE-2026-57092（VMSwitch EoP 9.9）、CVE-2026-50517（M365 Copilot RCE 9.9）、CVE-2026-56165（Microsoft Account RCE 9.8）、CVE-2026-42990（SQL Server ODBC EoP 9.8）、CVE-2026-49172（Windows FTP RCE 9.8）、CVE-2026-54990（RDP Client RCE 9.8）、CVE-2026-50522（SharePoint RCE 9.8）、CVE-2026-50447（MSMQ RCE 9.8）、CVE-2026-50518（DHCP Server RCE 9.8）、CVE-2026-55010（Minecraft BDS RCE 9.8）、CVE-2026-55944（Dynamics 365 RCE 9.8）、CVE-2026-56159（DHCP Server RCE 9.8）、CVE-2026-56190（RDP RCE 9.8）、CVE-2026-56188（Server Network Driver RCE 9.8）、CVE-2026-48561（Copilot RCE 9.6）、CVE-2026-55008（Exchange Server Spoofing 9.6）、CVE-2026-50380（GDI+ RCE 9.6）、CVE-2026-41106（M365 Copilot EoP 9.3）、CVE-2026-49798（Windows Kernel EoP 9.3）、CVE-2026-62835（Azure Portal Info Disclosure 9.3）、CVE-2026-55040（SharePoint Security Bypass 9.1）、CVE-2026-58289（Edge RCE 9.0）、CVE-2026-58644（SharePoint RCE 9.8 Exploited，已列于在野利用表）。</p>
+</blockquote>
+<h3>核心风险总结</h3>
+<p>本次七月补丁日为 2026 年迄今最大规模更新，Microsoft CVE 总数达 642（较初版 628 新增 14 个，Critical 从 62 升至 76），其中 <strong>3 个已被在野利用</strong>（SharePoint RCE CVSS 9.8 最为紧急）。CVSS≥9.0 的 CVE 达 32 个，涵盖 Azure Kubernetes Service、Exchange Online、Azure Key Vault、Azure DNS、Entra Provisioning 等云核心服务的权限提升漏洞——攻击者可借此横向移动并接管云租户。Azure OpenAI 和 M365 Copilot 各有 CVSS 9.9/9.6 的漏洞，反映 AI 服务正成为补丁重点。<strong>建议优先修补 3 个在野利用 CVE，其次处理 Azure 云服务 CVSS 10.0 权限提升项。</strong></p>
+<h3>参考链接</h3>
+<ul>
+<li>MSRC Security Update Guide：https://msrc.microsoft.com/update-guide/</li>
+<li>CVRF API（七月数据）：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</li>
+<li>CVRF 文档标题：July 2026 Security Updates（正式发布，非 Early 预发布）</li>
+</ul>
+<hr />
+<p><em>本次共筛选 15 条新闻，最高分 92 分。补丁板块数据来自 MSRC CVRF v3.0 API（2026-07-24 更新），经 Python 解析验证。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
