@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-07-26 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-07-26</h1>
+<h2>Top 5 网络安全新闻</h2>
+<h3>1. Fastjson 1.x 现无补丁 RCE（CVE-2026-16723，CVSS 9.0），攻击者已开始利用</h3>
+<ul>
+<li><strong>评分：94 分</strong></li>
+<li><strong>来源：The Hacker News / Alibaba 安全公告</strong></li>
+<li><strong>摘要：</strong> Alibaba Fastjson 1.2.68–1.2.83 在 Spring Boot 可执行 fat-JAR 部署下存在远程代码执行漏洞，默认配置即可触发，无需开启 AutoType、无需第三方 gadget。ThreatBook 与 Imperva 均已报告在野攻击活动，但截至 7 月 25 日 Fastjson 1.x 尚未发布补丁，临时缓解需启用 SafeMode 或迁移至 Fastjson2。</li>
+<li><strong>原文链接：</strong> https://github.com/alibaba/fastjson2/wiki/Security-Advisory:-Remote-Code-Execution-in-fastjson-1.2.68%E2%80%931.2.83</li>
+<li><strong>评分理由：</strong> 无补丁的 9.0 分 RCE 影响广泛使用的 Java JSON 库，且默认配置即可利用，攻击面大、时效性极高。</li>
+</ul>
+<h3>2. Cl0p 勒索软件团伙利用 PTC Windchill/FlexPLM 未授权 RCE（CVE-2026-12569，CVSS 9.3）实施数据窃取</h3>
+<ul>
+<li><strong>评分：92 分</strong></li>
+<li><strong>来源：The Hacker News / Ransom-ISAC</strong></li>
+<li><strong>摘要：</strong> Cl0p 关联攻击者正针对暴露在互联网的 PTC Windchill 与 FlexPLM 平台，利用 FlexPLM WSDL 端点的预认证信息泄露与 Windchill 登录 servlet 缺陷链，实现未授权远程代码执行并部署 JSP Web Shell，进而窃取工程/设计数据并实施双重勒索。目标涵盖制造、汽车、航空航天与零售行业。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html</li>
+<li><strong>评分理由：</strong> 制造业 PLM 中的预认证 9.3 分 RCE，由知名勒索团伙武器化，已在 CISA KEV 目录中，影响关键供应链数据。</li>
+</ul>
+<h3>3. GitLab 自管版 RCE PoC 公开：任意可推送用户均可执行 git 用户命令</h3>
+<ul>
+<li><strong>评分：88 分</strong></li>
+<li><strong>来源：The Hacker News / depthfirst</strong></li>
+<li><strong>摘要：</strong> 研究人员公开了针对 GitLab 自管版的完整 RCE 利用链：攻击者向项目提交特制 Jupyter Notebook 并查看 diff，通过 Ruby Oj JSON 解析器的两处内存损坏漏洞泄露堆指针并最终调用 system()，以 git 账户权限执行命令。GitLab 在 6 月 10 日修复了该问题，但将其列为 bug 修复而非安全修复，导致管理员可能未优先升级。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html</li>
+<li><strong>评分理由：</strong> 公开 PoC 使自托管代码平台面临实际威胁，且修复被误分类可能让许多实例仍处于未修补状态。</li>
+</ul>
+<h3>4. SourTrade 恶意广告让浏览器在本地“组装”恶意可执行文件</h3>
+<ul>
+<li><strong>评分：86 分</strong></li>
+<li><strong>来源：The Hacker News / BleepingComputer / Confiant</strong></li>
+<li><strong>摘要：</strong> 名为 SourTrade 的大规模恶意广告活动假冒 TradingView、Solana 和 Luno，通过 ServiceWorker 与 SharedWorker 让受害者的浏览器从合法 Bun 运行时与攻击者控制的字节片段在本地组装出 Windows 可执行文件。每次会话使用随机种子生成不同哈希，以规避基于静态签名的检测。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/07/malvertising-sends-malware-in-pieces.html</li>
+<li><strong>评分理由：</strong> 利用浏览器作为本地装配管道的投递手法新颖，覆盖 12 个国家、25 种语言，精准针对加密货币投资者。</li>
+</ul>
+<h3>5. Steam 论坛遭 ClickFix 攻击，诱导玩家运行 PowerShell 植入 XMRig 挖矿程序</h3>
+<ul>
+<li><strong>评分：82 分</strong></li>
+<li><strong>来源：BleepingComputer</strong></li>
+<li><strong>摘要：</strong> 攻击者在 Steam 讨论区冒充“游戏修复方案”，诱使玩家以管理员身份运行 PowerShell 命令。脚本伪装成 Windows 优化工具，实际会下载 XMRig 挖矿程序、添加 Defender 排除项并创建计划任务实现持久化。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/steam-forum-clickfix-attacks-infect-gamers-with-xmrig-cryptominers/</li>
+<li><strong>评分理由：</strong> 针对大型游戏社区的社会工程攻击，利用受害者手动执行绕过自动防护，具备一定规模传播潜力。</li>
+</ul>
+<hr />
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p>本月 CVRF 文档标题为 <strong>"July 2026 Security Updates"</strong>，已确认为正式补丁发布；数据与 7 月 25 日解析结果保持一致，无新增变更。</p>
+</blockquote>
+<p><strong>整体统计（Microsoft CVE）</strong>
+- CVE 总数：<strong>642</strong>
+- Critical（严重）：<strong>76</strong>
+- Important（重要）：<strong>559</strong>
+- Moderate（中危）：<strong>6</strong>
+- Low（低危）：<strong>1</strong></p>
+<p><strong>已在野利用（Exploited:Yes）</strong>
+| CVE | 严重级别 | CVSS | 说明 |
+|-----|----------|------|------|
+| CVE-2026-56155 | Important | 7.8 | Active Directory Federation Services 权限提升 |
+| CVE-2026-56164 | Moderate | 5.3 | Microsoft SharePoint Server 权限提升 |
+| CVE-2026-58644 | Critical | 9.8 | Microsoft SharePoint 远程代码执行 |</p>
+<p><strong>CVSS ≥ 9.0 高危项（精选）</strong>
+本月共有 <strong>32</strong> 个 Microsoft CVE 的 CVSS 分值达到或超过 9.0。其中：
+- <strong>6 项 CVSS 10.0 全部为 Azure/云服务权限提升</strong>：CVE-2026-56163（Azure Kubernetes Service）、CVE-2026-56191（Exchange Online）、CVE-2026-57106（Data Quality）、CVE-2026-62825（Azure Key Vault）、CVE-2026-58630（Azure App Service on Azure Stack Hub）、CVE-2026-58275（Azure DNS）。
+- <strong>CVSS 9.9</strong>：CVE-2026-45499（Azure OpenAI EoP）、CVE-2026-57100（Microsoft Entra Provisioning Service EoP）、CVE-2026-54120（Microsoft Surface RCE）、CVE-2026-57092（Windows VMSwitch EoP）、CVE-2026-50517（Microsoft 365 Copilot RCE）。
+- <strong>其余 CVSS ≥ 9.0 项共 21 个</strong>，可通过下方 MSRC 链接查看完整清单。</p>
+<p><strong>一句话核心风险总结</strong>
+本月补丁重点在于云端与身份基础设施：Azure 多项服务出现 CVSS 10.0 权限提升，SharePoint 在野 RCE（CVE-2026-58644）需优先修复，AD FS 与 SharePoint 的权限提升 0day 亦已被利用。</p>
+<p><strong>参考链接</strong>
+- MSRC Security Update Guide：https://msrc.microsoft.com/update-guide/
+- CVRF API（2026-Jul）：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</p>
+<hr />
+<p><strong>本次共筛选 11 条候选新闻，最高分 94 分。</strong></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
