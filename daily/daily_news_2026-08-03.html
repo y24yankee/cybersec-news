@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-03 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-03</h1>
+<blockquote>
+<p>数据来源：Hacker News、The Hacker News、Bleeping Computer 及相关权威媒体
+生成时间：2026-08-03 07:00 (北京时间)</p>
+</blockquote>
+<hr />
+<h2>Top 5 网络安全新闻</h2>
+<h3>1. FBI 与 EPA 联合警告：黑客攻击美国至少 7 个州的供水系统 PLC，已致水压下降与内涝</h3>
+<p><strong>评分：96 分</strong> | 严重性：关键基础设施遭国家级攻击，7 州受影响，FBI/EPA 联合 PSA | 来源：FBI / CBS News / BleepingComputer</p>
+<p>FBI 与 EPA 于 7 月 31 日发布公共安全通告（PSA），确认自 7 月 27 日起至少 7 个州的供水与污水处理系统遭到网络攻击。攻击者远程入侵互联网暴露的 Rockwell Automation/Allen-Bradley MicroLogix 1100/1400 系列 PLC，篡改 IP 地址和密码，导致监控与控制功能丧失，部分设施出现水压下降和内涝。明尼苏达州超 30 个地方供水系统受影响，密歇根州、威斯康星州、南达科他州、佐治亚州等相继报告同类事件，部分市政部门被迫转为人工管控。调查人员初步评估袭击可能与伊朗关联网络势力有关（CyberAv3ngers/IRGC-CEC 同类手法），但总统特朗普公开指责明尼苏达州政府而非伊朗。CISA 确认近期针对关键基础设施 PLC 的定向攻击频次显著上升。</p>
+<ul>
+<li>🔗 FBI PSA: https://www.fbi.gov/news/press-releases/malicious-cyber-actors-targeting-water-and-wastewater-sector-internet--facing-programmable-logic-controllers-causing-operational-disruptions</li>
+<li>🔗 CBS News: https://www.cbsnews.com/detroit/news/us-investigating-iran-cyberattack-minnesota-water-systems/</li>
+<li>🔗 BleepingComputer: https://www.bleepingcomputer.com/news/security/cisa-warns-of-cyberattacks-disrupting-us-water-utilities/</li>
+</ul>
+<hr />
+<h3>2. Ruby on Rails Active Storage CVE-2026-66066（CVSS 9.5）：未认证攻击者可读任意文件并升级为 RCE</h3>
+<p><strong>评分：93 分</strong> | 严重性：流行框架默认配置即可被利用，PoC 已公开，secret_key_base 泄露可致完整 RCE | 来源：BleepingComputer / SecurityWeek / NVD</p>
+<p>Ruby on Rails 修复了 Active Storage 组件中的严重漏洞 CVE-2026-66066（CVSS 4.0 评分 9.5）。当应用使用 libvips 处理图片上传时（官方 Rails Docker 镜像、Debian/Ubuntu 默认均使用 libvips），未认证攻击者可上传特制图片读取服务器上任意文件，包括环境变量中的 <code>secret_key_base</code>（Rails 主密钥）和数据库/云存储凭据。窃取主密钥后，攻击者可伪造会话 Cookie、签名全局 ID、操控序列化数据，直接实现完整 RCE（Akamai 将此攻击链命名为 "KindaRails2Shell"）。PoC 利用代码已快速流出，Rails 团队提前于 7 月 31 日发布完整技术细节和取证工具。影响版本：7.2.3.2、8.0.5.1、8.1.3.1 之前；Rails 7.2 将于 8 月 9 日 EOL。目前无在野利用证据，但需立即升级并轮换所有密钥。</p>
+<ul>
+<li>🔗 BleepingComputer: https://www.bleepingcomputer.com/news/security/rails-patches-critical-active-storage-flaw-with-rce-potential/</li>
+<li>🔗 SecurityWeek: https://www.securityweek.com/ruby-on-rails-patches-critical-vulnerability/</li>
+<li>🔗 NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-66066</li>
+</ul>
+<hr />
+<h3>3. 中国黑客通过 Telegram 指令操控 DeepSeek AI，对 460+ 目标发起自主攻击</h3>
+<p><strong>评分：91 分</strong> | 严重性：AI 自主化攻击范式确立，单条指令驱动全流程漏洞利用 | 来源：The Hacker News / BleepingComputer / Palo Alto Unit 42</p>
+<p>Palo Alto Networks Unit 42 披露，一名中文威胁行为者（别名 knaithe / KnYuan，疑位于珠海）通过开源 Hermes Agent 框架操控 DeepSeek 大模型，仅需一条 Telegram 指令，AI 即可自主完成目标枚举（FOFA 搜索）、漏洞选择（GitHub 下载 PoC）、利用尝试和决策切换。攻击涉及 7 条利用路径、8 个 CVE，针对 Langflow、n8n、Marimo、NetScaler 等平台共 460+ 目标发起攻击。AI 自主攻击多数因目标配置不符而失败，但在并行手动操作中，攻击者通过 NetScaler 内存读取漏洞 CVE-2026-3055 从 3 个组织窃取数据，通过 CVE-2026-39987 获得 11 台 Marimo 实例的命令执行权限。攻击者意外暴露 Hermes Agent 的 HTTP 服务（端口 8888），导致模型配置、API 密钥、利用脚本、目标列表和自主会话日志全部泄露。这是开源 AI Agent 框架（Hermes）驱动自主攻击的第二起独立案例。</p>
+<ul>
+<li>🔗 The Hacker News: https://thehackernews.com/2026/07/chinese-hacker-commands-deepseek-via.html</li>
+<li>🔗 BleepingComputer: https://www.bleepingcomputer.com/news/security/hacker-uses-deepseek-ai-to-autonomously-attack-vulnerable-servers/</li>
+</ul>
+<hr />
+<h3>4. 卡巴斯基披露新型勒索手法：黑客用 Windows 自带 BitLocker 加密磁盘，通过办公室打印机投递勒索信</h3>
+<p><strong>评分：88 分</strong> | 严重性：利用系统合法组件绕过 EDR 检测，物理勒索信施加心理压力 | 来源：Kaspersky / IT 之家 / cyber.netsecops.io</p>
+<p>卡巴斯基披露两起分别发生在哥伦比亚和墨西哥的勒索攻击（2026 年 5-6 月），攻击者（XEntry Team）未使用自研勒索木马，而是直接调用 Windows 内置 BitLocker 磁盘加密功能锁定系统，并通过办公室打印机打印物理勒索信。哥伦比亚事件入口为暴露在互联网的 RDP 设备，攻击者加密 8TB 存储中存放财务数据的磁盘；受害企业在取证人员介入前自行支付 3000 美元赎金，导致证据被清除。墨西哥事件源于开发者将含数据库凭据的代码误传 GitHub，攻击者登录配置不当的 SQL Server 后潜伏约 3 个月，降低安全设置、植入 Web 后门，最终通过计划任务和组策略在域内多台设备批量启用 BitLocker。BitLocker 作为合法系统组件不会被杀毒软件拦截，行为审计也难以即时判定异常，对防御方构成显著盲区。</p>
+<ul>
+<li>🔗 IT 之家/网易: https://www.163.com/dy/article/L3BGU3HE0511B8LM.html</li>
+<li>🔗 cyber.netsecops.io: https://cyber.netsecops.io/articles/ransomware-in-latin-america-uses-bitlocker-and-printers-for-extortion</li>
+<li>🔗 Baudrate (繁体): https://baudrate.tw/articles/bitlocker-33561644</li>
+</ul>
+<hr />
+<h3>5. Adobe Campaign Classic CVE-2026-48449（CVSS 10.0）：无需用户交互即可远程代码执行</h3>
+<p><strong>评分：87 分</strong> | 严重性：满分漏洞，零点击 RCE，企业营销平台广泛部署 | 来源：The Hacker News</p>
+<p>Adobe 发布安全更新修复 Campaign Classic（ACC）企业营销自动化平台中的满分漏洞 CVE-2026-48449（CVSS 10.0），类型为错误授权（Incorrect Authorization），可导致未认证攻击者无需任何用户交互即执行任意代码。Scope Changed 标志意味着利用可跨越应用边界。同批修复的还有 CVE-2026-48448（CVSS 8.6，SQL 注入致任意文件读取），可与 48449 组合实现完整入侵。Adobe 另修复 Adobe Bridge 的 8 个高危漏洞（权限提升和任意代码执行）。ACC 修复版本为 v7.4.3 build 9398（Windows/Linux）。Adobe 表示目前不知晓在野利用，但满分零点击漏洞的 PoC 一旦流出风险极高，使用 ACC 的企业应立即升级并确保平台不直接暴露于互联网。</p>
+<ul>
+<li>🔗 The Hacker News: https://thehackernews.com/2026/08/adobe-campaign-classic-cvss-100-flaw.html</li>
+</ul>
+<hr />
+<h2>候选新闻（未入选 Top 5）</h2>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>新闻标题</th>
+<th>评分</th>
+<th>来源</th>
+<th>未入选理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>ServiceNow CVE-2026-6875 持续在野利用（7 月 18 日起），Fortune 500 受害，仍未进 CISA KEV</td>
+<td>85</td>
+<td>AJ King Threat Brief</td>
+<td>已持续两周，非 24h 内新增</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Amgen 云数据泄露：患者健康信息与专有数据暴露</td>
+<td>84</td>
+<td>BleepingComputer</td>
+<td>影响范围相对有限</td>
+</tr>
+<tr>
+<td>8</td>
+<td>CRPxO 勒索组织批量攻击土耳其企业（土耳其航空、多家银行、Aselsan 国防、强生等）</td>
+<td>82</td>
+<td>Ransomware.live</td>
+<td>勒索泄露列表，技术新颖性较低</td>
+</tr>
+<tr>
+<td>9</td>
+<td>疑似中文 APT 使用 OctLurk/SilkLurk 后门攻击中亚政府</td>
+<td>80</td>
+<td>The Hacker News</td>
+<td>定向攻击，影响范围较窄</td>
+</tr>
+<tr>
+<td>10</td>
+<td>HollowFrame 加载器部署 Matryoshka 后门攻击律所</td>
+<td>78</td>
+<td>The Hacker News</td>
+<td>单一目标，影响范围有限</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Arch Linux 冻结 AUR 包领养以遏制恶意包涌入</td>
+<td>77</td>
+<td>BleepingComputer</td>
+<td>社区治理事件，非直接攻击</td>
+</tr>
+<tr>
+<td>12</td>
+<td>廉价 Android TV 盒伪装手机身份做广告欺诈并将宽带变为代理</td>
+<td>75</td>
+<td>The Hacker News</td>
+<td>供应链安全问题，技术性较低</td>
+</tr>
+<tr>
+<td>13</td>
+<td>设备代码钓鱼成 2026 年增长最快威胁（微软日均 10-15 个新活动）</td>
+<td>73</td>
+<td>The Hacker News</td>
+<td>趋势分析，非单日事件</td>
+</tr>
+<tr>
+<td>14</td>
+<td>朝鲜关联 macOS 恶意广告投放加密窃取恶意软件</td>
+<td>72</td>
+<td>The Hacker News</td>
+<td>与此前同类活动重叠</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Google Chrome 将默认拦截 New Tab 劫持扩展</td>
+<td>65</td>
+<td>BleepingComputer</td>
+<td>防御功能改进，非威胁事件</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<p>📅 <strong>微软本月补丁日（Patch Tuesday）为 8 月 11 日（当月第二个星期二）</strong>，预计北京时间 8 月 12 日凌晨 1-2 点发布。MSRC API 当前无 2026-Aug 条目，距下次补丁日还有 <strong>8 天</strong>。届时推送将带出正式「微软补丁安全级别」板块。</p>
+<hr />
+<p><em>本次共筛选 15 条候选新闻，最高分 96 分。</em>
+<em>数据来源：Hacker News (news.ycombinator.com)、The Hacker News (thehackernews.com)、Bleeping Computer (bleepingcomputer.com) 及 FBI/CBS/ABC/Kaspersky/Unit 42 等权威媒体。</em>
+<em>微信推送：企业微信 connector 当前未连接，推送不可用。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
