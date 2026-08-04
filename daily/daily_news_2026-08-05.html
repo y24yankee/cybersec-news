@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-05 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-05</h1>
+<blockquote>
+<p>自动化搜索与评分 · 数据来源：The Hacker News / Bleeping Computer / Hacker News (YC) / CISA KEV
+补丁日状态：2026-Aug 条目尚未出现在 MSRC 更新列表中（本月第二个星期二为 8 月 11 日，预计北京时间 8 月 12 日凌晨发布）</p>
+</blockquote>
+<hr />
+<h2>Top 5 新闻</h2>
+<h3>1. ChainDrop/npm 蠕虫感染 1,300+ 包、20 亿月下载量，窃取全栈凭据并植入 Claude Code / VS Code 钩子</h3>
+<p><strong>评分：94 分</strong> | 严重性：供应链蠕虫 + 全栈凭据窃取 | 新颖性：自传播蠕虫 + AI 开发工具持久化 | 影响范围：1,300+ 包 / 20 亿月下载 / 9 个组织</p>
+<p>自传播恶意软件 ChainDrop（Shai-Hulud 蠕虫家族）于 8 月 4 日大规模爆发，起因是 Keyv 维护者的 GitHub 账户被攻破，恶意代码随后通过 npm 发布机制自动扩散至 Deliveroo、Ornikar、OneReach、Picsart、Qlik、ServiceTitan 等组织的包中。Aikido 确认至少 868 个包 / 1,381 个版本被感染，SafeDep 更新计数达 1,684 个恶意版本 / 420 个包名。</p>
+<p>蠕虫通过 <code>preinstall</code> 脚本执行 <code>setup.mjs</code>，下载 Bun 运行时并执行 <code>Math_Symbol.js</code> 信息窃取载荷，收集 GitHub PAT、npm token、AWS 凭据、Kubernetes secrets、HashiCorp Vault token、数据库凭据、Stripe/Slack/Twilio/Azure/GCP 凭据等，加密后外泄至描述为 "Shai-Hulud: Here We Go Again" 的公开 GitHub 仓库。此外，Keyv 仓库中被植入了 <code>.claude/settings.json</code>（SessionStart 钩子）和 <code>.vscode/tasks.json</code>（folderOpen 任务），可在开发者信任工作区后触发载荷执行。</p>
+<p>值得注意：被感染的包携带有效的 OIDC 和 SLSA 来源证明，因为它们通过了项目合法的 GitHub Actions 发布流程——来源验证无法检测源代码被篡改。npm 12 默认禁用未批准的生命周期脚本，但旧版本客户端仍受影响。</p>
+<p><strong>来源：</strong> <a href="https://thehackernews.com/2026/08/keyv-linked-npm-worm-poisons-hundreds.html">The Hacker News</a> / <a href="https://www.bleepingcomputer.com/news/security/massive-chaindrop-npm-supply-chain-attack-infects-hundreds-of-packages/">BleepingComputer</a></p>
+<hr />
+<h3>2. CISA 将 IBM Langflow CVE-2026-9198（CVSS 9.8）列入 KEV —— AI Agent 平台无认证 RCE 已在野利用</h3>
+<p><strong>评分：92 分</strong> | 严重性：CVSS 9.8 无认证 RCE | 新颖性：AI 基础设施 0day | 影响范围：所有互联网暴露的 Langflow 实例 | 时效性：KEV 当日新增</p>
+<p>CISA 于 8 月 4 日将三个漏洞加入已知被利用漏洞（KEV）目录，其中最严重的是 IBM Langflow OSS 的 CVE-2026-9198（CVSS 9.8）。该漏洞利用链为：调用未认证的 <code>/api/v1/auto_login</code> 端点获取超级用户 token，再用该 token 访问 <code>/api/v1/validate/code</code> 通过 <code>exec()</code> 执行任意 Python 代码，在默认部署下实现完全的远程代码执行，无需任何凭据。</p>
+<p>Langflow 是团队用于搭建 AI Agent 的低代码工具，影响版本为 OSS 1.0.0 至 1.10.0，修复版本为 1.10.1。此前已有攻击者利用暴露的 Langflow 实例进行加密货币挖矿（6 月）和 AI Agent 自主勒索软件攻击（7 月），此次 KEV 列入确认了持续利用模式。同批加入 KEV 的还有 Apache Tomcat CVE-2026-34486（CVSS 7.5，EncryptInterceptor 绕过）和 N-able N-central 认证绕过漏洞。</p>
+<p><strong>来源：</strong> <a href="https://www.intelfusions.com/news/cisa-kev-langflow-tomcat-august-2026">IntelFusions</a> / <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a></p>
+<hr />
+<h3>3. Google 删除 3 个 ADK AI 工作流 —— 公开 GitHub Issue 即可操纵 AI Agent 越权触发特权工作流</h3>
+<p><strong>评分：88 分</strong> | 严重性：CI/CD 凭据泄露 + 任意代码执行 | 新颖性：GitHub Issue → AI Agent 提示注入 → 特权越权 | 影响范围：Google 官方仓库</p>
+<p>Pillar Security 发现 Google Agent Development Kit (ADK) Python 仓库存在 AI Agent 权限边界缺陷：攻击者只需提交一个公开 GitHub Issue，即可通过提示注入操纵公开的分诊 Agent（issue-analyze.yml），使其以 <code>adk-bot</code> 身份发布 <code>/adk-issue-fix</code> 命令。由于 <code>adk-bot</code> 被识别为协作者，该命令通过了特权工作流（issue-fix.yml）的 owner/member/collaborator 权限检查——受信任的 bot 身份成为了授权桥梁。</p>
+<p>研究人员在 CI runner 上实现了任意代码执行，并窃取了 bot 的个人访问令牌（PAT）、Google API 密钥和 GCP 服务账号凭据。特权任务还持有对 issues、仓库内容和 PR 的写权限。攻击路径通过 Git hooks（<code>core.hooksPath</code>）绕过了命令允许列表（仅允许 <code>gh</code> 和 <code>git</code> 命令）。</p>
+<p>Google 已删除 <code>issue-analyze.yml</code>、<code>issue-fix.yml</code> 和 <code>pr-analyze.yml</code> 三个工作流。该漏洞不影响已分发的 ADK Python 包本身，而是仓库自动化层面的缺陷。</p>
+<p><strong>来源：</strong> <a href="https://thehackernews.com/2026/08/google-deletes-3-adk-ai-workflows-after.html">The Hacker News</a> / <a href="https://www.pillar.security/blog/ill-just-call-you-agent-to-agent-privilege-boundary-failures-in-ci-cd-on-googles-adk-repository">Pillar Security</a></p>
+<hr />
+<h3>4. cPanel CVE-2026-58048（CVSS 9.4）—— 共享主机用户可以数据库 Root 权限执行 SQL，可延伸至 OS 级入侵</h3>
+<p><strong>评分：86 分</strong> | 严重性：CVSS 9.4 数据库权限提升 | 新颖性：数据库重命名流程的 SQL 模式丢失 | 影响范围：所有受支持的 cPanel &amp; WHM 版本 + WP Squared</p>
+<p>cPanel 修复了一个严重漏洞 CVE-2026-58048（CVSS 4.0: 9.4），允许已认证的共享主机客户在数据库 root 上下文中执行 SQL 命令，跨越 cPanel 账户与服务器管理数据库身份之间的权限边界。该漏洞位于数据库重命名流程中——重命名时 SQL 模式未被保留，导致 SQL 以 root 权限执行。根据操作系统和数据库引擎配置，这可能延伸至操作系统级别的入侵。</p>
+<p>漏洞影响所有受支持的 cPanel &amp; WHM 版本以及 WP Squared，需要有效的 cPanel 账户和 MySQL/MariaDB 功能访问权限。修复版本包括 11.110.0.137、11.118.0.71、11.126.0.78、11.134.0.48、11.136.0.32 和 WP Squared 138.1.6。临时缓解措施是撤销 cPanel 用户的 MySQL 功能。</p>
+<p>同一安全版本还修复了 CVE-2026-58047（HTTP 请求走私，CVSS 5.6）和 Exim <code>.forward</code> 文件权限提升问题。CISA 8 月 4 日的丰富化记录评估其技术影响为"完全"（total）。</p>
+<p><strong>来源：</strong> <a href="https://thehackernews.com/2026/08/new-cpanel-critical-flaw-could-let.html">The Hacker News</a> / <a href="https://support.cpanel.net/hc/en-us/articles/42285745783703-Security-CVE-2026-58048-Database-Privilege-Escalation">cPanel 安全公告</a></p>
+<hr />
+<h3>5. 77 个 Open VSX 仿冒扩展收集开发者环境与 CI/CD 元数据，可用于组织画像与定向攻击</h3>
+<p><strong>评分：85 分</strong> | 严重性：开发者供应链 + 侦察 | 新颖性："Evil Twin" 仿冒扩展模式 | 影响范围：77 个扩展 / 19 个深度侦察变体 / 多个组织命名空间</p>
+<p>Manifold Security 发现 77 个 Open VSX 市场（VSCodium、Gitpod、Eclipse Che 等使用）上的"Evil Twin"扩展，它们仿冒 AMD、Azure、Salesforce、Hyperledger、LEGO Education、IOTA 甚至美国政府机构命名空间的合法扩展。所有 77 个扩展通过共享数据外泄域名 <code>mangorbit[.]com</code>（7 月 15 日注册）关联。</p>
+<p>其中 58 个扩展仅发送主机名等少量系统信息，但另外 19 个在激活后约 4-5 秒收集大量数据：操作系统用户名、主机名、机器标识、编辑器版本、平台架构、时区、工作区完整路径，以及 <code>.git</code> 目录中的 Git 远程主机、组织、当前分支和 HEAD commit 哈希。它们还枚举最多 60 个已安装扩展，并收集 GitHub、GitLab、Azure DevOps、Buildkite、CircleCI、GitHub Codespaces 和 Gitpod 等 CI/CD 环境标识。</p>
+<p>这些扩展在listing中披露收集"匿名使用指标"并声明不访问源代码或凭据，但实际发送的数据超出披露范围，包括可能暴露私有仓库名称或路径的 CI 信息。部分变体支持持续传输 7 天，并可通过 DNS TXT 记录获取备用外泄 URL。扩展已于 8 月 3 日从 Open VSX 移除，但需开发者手动从系统中删除。</p>
+<p><strong>来源：</strong> <a href="https://www.bleepingcomputer.com/news/security/77-open-vsx-extensions-found-harvesting-developer-info/">BleepingComputer</a> / <a href="https://www.manifold.security/blog/open-vsx-evil-twin-extensions">Manifold Security</a></p>
+<hr />
+<h2>候选新闻一览（共筛选 15 条）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>标题</th>
+<th>评分</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ChainDrop/npm 蠕虫感染 1,300+ 包，植入 Claude Code/VS Code 钩子</td>
+<td>94</td>
+<td>THN + BC</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CISA 将 IBM Langflow CVE-2026-9198（CVSS 9.8）列入 KEV</td>
+<td>92</td>
+<td>IntelFusions/CISA</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Google ADK AI 工作流：GitHub Issue 触发特权 Agent</td>
+<td>88</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>4</td>
+<td>cPanel CVE-2026-58048（CVSS 9.4）SQL Root 权限提升</td>
+<td>86</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>5</td>
+<td>77 个 Open VSX 仿冒扩展收集开发者元数据</td>
+<td>85</td>
+<td>BC</td>
+</tr>
+<tr>
+<td>6</td>
+<td>CISA 将 N-able N-central CVE-2026-18577 列入 KEV</td>
+<td>84</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Greatness PhaaS 新增设备代码钓鱼绕过 MFA</td>
+<td>83</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>8</td>
+<td>XCSSET v40 变种通过 Xcode 项目投毒攻击 macOS 开发者</td>
+<td>83</td>
+<td>BC</td>
+</tr>
+<tr>
+<td>9</td>
+<td>RingCentral 钓鱼服务窃取 Microsoft 365 账户</td>
+<td>82</td>
+<td>BC</td>
+</tr>
+<tr>
+<td>10</td>
+<td>DOUBLECUP ClickFix 服务在浏览器缓存 PNG 中隐藏恶意软件</td>
+<td>81</td>
+<td>THN + BC</td>
+</tr>
+<tr>
+<td>11</td>
+<td>伪造 Adobe/Zoom 更新安装 ScreenConnect 持久化远控</td>
+<td>80</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>12</td>
+<td>"Vibe Hacking"：AI 成为每个攻击者的初级黑客</td>
+<td>78</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Fake Roblox Xeno 脚本启动器推送信息窃取/RAT 恶意软件</td>
+<td>76</td>
+<td>BC</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Android BTMOB RAT 恶意软件地下生态系统</td>
+<td>74</td>
+<td>BC</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Hacker News (YC) 安全话题近期无重大新帖</td>
+<td>—</td>
+<td>HN</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>评分说明</h2>
+<table>
+<thead>
+<tr>
+<th>评分维度</th>
+<th>权重</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>严重性</td>
+<td>最高</td>
+<td>漏洞利用、大规模攻击、国家级威胁 → 高分</td>
+</tr>
+<tr>
+<td>新颖性</td>
+<td>次高</td>
+<td>0day、新攻击手法 → 高分</td>
+</tr>
+<tr>
+<td>影响范围</td>
+<td>中</td>
+<td>影响用户量、企业数量 → 高分</td>
+</tr>
+<tr>
+<td>时效性</td>
+<td>加分</td>
+<td>24 小时内发生 → 加分</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>补丁数据不计入新闻评分，仅在 Patch Tuesday 正式发布后作为文末独立板块呈现。</p>
+</blockquote>
+<hr />
+<p>📅 微软本月补丁日（Patch Tuesday）预计于北京时间 8 月 12 日凌晨发布，届时推送将带出正式「微软补丁安全级别」板块。距下次补丁日还有 6 天。</p>
+<hr />
+<p><em>本次共筛选 15 条新闻，最高分 94 分</em>
+<em>报告生成时间：2026-08-05 07:00 CST（自动化推送）</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
