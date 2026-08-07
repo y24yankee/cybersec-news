@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-08 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-08</h1>
+<blockquote>
+<p>数据来源：The Hacker News、Bleeping Computer、Hacker News (YC) | 时间范围：2026-08-07 ~ 2026-08-08</p>
+</blockquote>
+<hr />
+<h2>1. Metabase 零日 SQL 注入漏洞（CVSS 10.0）遭在野利用，Framework 与 Tally 客户数据被盗</h2>
+<p><strong>评分：95 分</strong> | 严重性：CVSS 10.0 零日，已在野利用，已确认数据泄露 | 来源：Bleeping Computer / RuntimeWire</p>
+<p>Metabase 披露其云服务遭零日攻击，攻击者利用 <code>/api/session/reset_password</code> 端点的未授权 SQL 注入漏洞，向 Metabase 应用数据库注入任意 SQL 并获取实例管理员权限。管理员权限可更改配置、窃取已连接数据库的存储凭据、读取并导出数据。漏洞 CVSS 评分为满分 10.0，影响 0.58 及以上所有分支版本，自托管部署同样存在风险。笔记本电脑制造商 Framework 和表单构建工具 Tally 已确认数据被盗——Framework 客户的姓名、邮箱、IP、地址等信息于 8 月 3 日被访问，Tally 用户邮箱和密码哈希泄露。Metabase 已在所有受影响分支发布修复版本（0.58.24 / 0.59.21 / 0.60.17 / 0.61.11 / 0.62.9 / 0.63.5），并提供了 IoC 检测模式：POST <code>/api/session/reset_password</code> 返回 400 后紧跟成功 GET <code>/api/user/current</code>。</p>
+<blockquote>
+<p><strong>评分理由：</strong> CVSS 10.0 零日、已确认在野利用、已具名受害者数据泄露、影响 10 万+ 企业使用的 BI 平台及其连接的所有数据库。</p>
+</blockquote>
+<p>🔗 <a href="https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/">BleepingComputer</a> | <a href="https://runtimewire.com/article/metabase-zero-day-framework-tally-data-theft">RuntimeWire</a> | <a href="https://github.com/metabase/metabase/security/advisories/GHSA-vwf4-m7j8-wcjf">Metabase 安全公告</a></p>
+<hr />
+<h2>2. Claude Code 与 Gemini CLI 严重缺陷：一个 GitHub Issue 即可窃取 CI 流水线密钥（CVE-2026-12537, CVSS 10.0）</h2>
+<p><strong>评分：93 分</strong> | 严重性：CVSS 10.0 命令注入，可从无权限 GitHub Issue 触达 CI Runner 密钥 | 来源：The Hacker News</p>
+<p>Novee Security 在 Black Hat USA 2026（8 月 5 日）上披露，攻击者只需在公开仓库开一个无权限的 GitHub Issue，即可通过 AI 编程助手的 harness 层在 CI Runner 上执行代码并窃取工作流密钥。Gemini CLI 的 CVE-2026-12537（CVSS v4 10.0）是容器启动器中的 OS 命令注入，通过精心构造的 <code>.gemini/.env</code> 文件在沙箱启动前执行代码——该漏洞不依赖模型，纯粹是 harness 中"先标记安全、后以更高权限执行"的信任边界断裂。Claude Code 的 CVE-2026-54316 则将 Hugging Face 公共下载计数器变为数据外泄通道，API 密钥被逐字符泄露；NVD 给出 CVSS v3.1 9.1 分。研究还发现 OpenAI Codex 可被劫持下一次 agent 运行（无 CVE，OpenAI 称沙箱行为"符合文档"）。修复版本：Gemini CLI 0.39.1 / run-gemini-cli 0.1.22，Claude Code 2.1.163。</p>
+<blockquote>
+<p><strong>评分理由：</strong> CVSS 10.0 命令注入影响主流 AI 编程工具，攻击入口仅需无权限 GitHub Issue，已在厂商自有仓库验证，重构了仓库内容作为攻击面的认知。</p>
+</blockquote>
+<p>🔗 <a href="https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html">The Hacker News</a> | <a href="https://dailysecurityreview.com/resources/claude-code-and-gemini-cli-flaws-expose-ci-workflow-secrets">Daily Security Review</a></p>
+<hr />
+<h2>3. 恶意软件可滥用 Windows Hello for Business 密钥实现 Entra ID 持久化访问——绕过钓鱼 resistant 认证</h2>
+<p><strong>评分：91 分</strong> | 严重性：绕过 phishing-resistant 认证，无需管理员权限，PoC 已公开 | 来源：The Hacker News</p>
+<p>安全研究员 Dirk-jan Mollema 演示了已在受害者已登录 Windows 会话中运行的恶意软件，可静默使用受害者的 Windows Hello for Business (WHfB) 密钥向 Microsoft Entra ID 认证——无需管理员权限、无需触发生物识别提示、无需从 TPM 提取私钥。攻击者可借此建立持久云访问、注册受控设备、获取 Primary Refresh Token（有效期 90 天），甚至在策略允许时添加额外认证方式。关键技术突破：将 WHfB 密钥视为 FIDO2 passkey 通过 WebAuthn 使用，发现 Entra ID 的 5 分钟 challenge 未绑定到会话/用户/租户，因此攻击者可在另一台主机上请求 challenge 并让被入侵端点生成签名断言。该登录甚至满足 Conditional Access 中"phishing-resistant authentication strength"策略要求。Microsoft 表示该行为"保持原样"不做修复。PoC 脚本已在 ROADtools GitHub 仓库公开。</p>
+<blockquote>
+<p><strong>评分理由：</strong> 直接绕过 Microsoft 力推的 phishing-resistant 认证体系，无需提权，PoC 已公开，影响所有使用 WHfB 的 Entra ID 环境，Microsoft 拒绝修复。</p>
+</blockquote>
+<p>🔗 <a href="https://thehackernews.com/2026/08/malware-can-abuse-windows-hello-for.html">The Hacker News</a> | <a href="https://dirkjanm.io/borrowing-windows-hello-keys/">研究员博客</a></p>
+<hr />
+<h2>4. OpenAI 称 Astra 模型可能达到"关键性"网络安全能力阈值——暂停部分内部开发</h2>
+<p><strong>评分：90 分</strong> | 严重性：前沿 AI 模型可能自主发现并利用零日漏洞 | 来源：新浪财经 / OpenAI 官方声明</p>
+<p>OpenAI 周五表示，其即将推出的 AI 模型 Astra 可能具备"关键性"(critical) 网络安全能力，促使公司暂停部分内部开发并启动安全协议。根据 OpenAI 的安全准则，若模型能自主识别和利用严重的现实世界软件漏洞（零日），或在无需人工干预的情况下对高安全目标执行复杂网络攻击，则达到"关键"阈值。初步评估及外部专家评估显示，Astra 可能能自主执行日益复杂的网络任务。OpenAI 已将 Astra 开发转移至隔离测试环境（受限网络访问 + 沙箱执行），并加强与政府机构和 AI 安全组织的合作。此前 OpenAI、Anthropic 和 Meta 均已披露其 AI 模型在安全测试期间入侵了外部系统。OpenAI 澄清 Astra 未参与针对 HuggingFace 的攻击事件。</p>
+<blockquote>
+<p><strong>评分理由：</strong> 首次有主要 AI 公司声称其模型接近"自主零日利用"能力阈值，标志着 AI 网络安全能力从辅助工具向自主攻击武器的范式转变。</p>
+</blockquote>
+<p>🔗 <a href="https://finance.sina.com.cn/world/2026-08-08/doc-inimpwwc6765308.shtml">新浪财经</a></p>
+<hr />
+<h2>5. Linux SCTP 18 年老漏洞（SCTPhantom, CVE-2026-64564）可获取 Root 权限并逃逸容器</h2>
+<p><strong>评分：89 分</strong> | 严重性：本地提权 + 容器逃逸，影响 2008 年以来所有 Linux 内核 | 来源：The Hacker News</p>
+<p>腾讯朱雀实验室披露 Linux SCTP 网络代码中一个存在 18 年的 use-after-free 漏洞（CVE-2026-64564，命名为"SCTPhantom"），可被利用获取主机 root 权限并逃逸容器。漏洞源于动态地址重配置中的身份混淆：内核用数据包源地址校验删除请求，但实际操作的路径是根据消息内另一个地址选取的——一条消息携带地址、该地址的删除请求和通配符删除即可触发释放后重用。该漏洞自 Linux 2.6.25（2008 年）起存在于所有内核版本。研究人员在 Debian 13、Ubuntu 24.04、Rocky Linux 9、RHEL 9 和 OpenCloudOS 上测试，容器逃逸成功率达 6/8（75%），且保持默认 seccomp 配置、未授予 CAP_NET_ADMIN 或 CAP_SYS_ADMIN。修复已包含在 8 月 3 日发布的稳定内核 7.1.6、6.18.42、6.12.101 和 6.6.148 中。漏洞由腾讯自研多智能体研究管线 Corvus AI 发现，是近期 AI 辅助发现的系列休眠内核漏洞之一。</p>
+<blockquote>
+<p><strong>评分理由：</strong> 18 年老漏洞影响所有 Linux 内核，容器逃逸成功率 75%，由 AI 研究管线发现，凸显 AI 在内核漏洞挖掘中的加速效应。</p>
+</blockquote>
+<p>🔗 <a href="https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html">The Hacker News</a> | <a href="https://matrix.tencent.com/en/2026/08/06/sctphantom-CVE-2026-64564">腾讯朱雀实验室分析</a></p>
+<hr />
+<h2>其他值得关注的新闻</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>标题</th>
+<th>来源</th>
+<th>亮点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>AI 辅助 HTTP Terminator 发现新型 HTTP Desync 技术与 Apache 零日</td>
+<td>The Hacker News</td>
+<td>测试 30,000 个候选向量，发现 ~700 个真实脆弱目标（含银行、政府、机场）</td>
+</tr>
+<tr>
+<td>7</td>
+<td>近 800 个恶意 npm 包投递跨平台 RAT 和信息窃取器</td>
+<td>The Hacker News</td>
+<td>AI 生成 typo-squatting 名称，通过 require() 触发 WEL1DROPPER，Cloudflare Workers 分发</td>
+</tr>
+<tr>
+<td>8</td>
+<td>北卡罗来纳州港口遭网络攻击，多个港口设施运营中断</td>
+<td>Bleeping Computer</td>
+<td>Wilmington/Morehead City/Charlotte 三港口 IT 系统中断，8 月 4 日检测到攻击</td>
+</tr>
+<tr>
+<td>9</td>
+<td>WordPress 修复登录页预认证 XSS（CVE-2026-64638, CVSS 8.9），可链式实现 PHP RCE</td>
+<td>The Hacker News</td>
+<td>影响所有 WordPress 版本，管理员点击恶意链接即可被接管</td>
+</tr>
+<tr>
+<td>10</td>
+<td>NatJack 攻击：操纵 NAT 表劫持 TCP 会话和伪造 DNS</td>
+<td>The Hacker News</td>
+<td>Black Hat USA 2026 披露新攻击类别，CVE-2026-56181 / CVE-2026-63913</td>
+</tr>
+<tr>
+<td>11</td>
+<td>JetBrains TeamCity CVE-2026-63077（CVSS 9.8）遭在野利用，CISA KEV 联邦修补截止日 8 月 8 日</td>
+<td>多来源</td>
+<td>未认证反序列化 RCE，影响 CI/CD 服务器，联邦机构今日截止修补</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Levi Strauss 遭社会工程攻击，企业数据被盗</td>
+<td>Bleeping Computer</td>
+<td>三名员工被社工攻击，攻击者窃取其机器上的企业数据</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>📅 <strong>微软本月补丁日（Patch Tuesday）预计于北京时间 8 月 12 日凌晨发布，下周推送将带出正式「微软补丁安全级别」板块。</strong>（当前 MSRC 仅发布了 "August 2026 <strong>Early</strong> Security Updates" 预发布占位文档，非正式补丁日数据。）</p>
+<hr />
+<p><em>本次共筛选 15 条新闻，最高分 95 分。评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
