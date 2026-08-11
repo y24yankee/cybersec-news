@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-12 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-12</h1>
+<h2>Top 5 网络安全新闻</h2>
+<h3>1. Zoom 注释功能零点击远程代码执行漏洞（CVE-2026-53413，Zoomsday）</h3>
+<ul>
+<li><strong>评分：96 分</strong></li>
+<li><strong>评分理由：</strong> 零点击 RCE 覆盖 Zoom 全平台客户端，攻击者只需加入或主持会议即可接管任意参会者机器，且披露方称利用公开 AI 模型在不到 20 条提示词、一天内完成漏洞到利用。</li>
+<li><strong>来源：</strong> Hacker News / The Hacker News / A Security</li>
+<li><strong>摘要：</strong> 安全公司 A Security 在 Zoom 的屏幕注释功能中发现一个零点击远程代码执行漏洞 CVE-2026-53413（CVSS 8.3，A Security 按 CVSS 4.0 评为 9.0）。该漏洞源于注释数据反序列化时信任发送方提供的 32 位字符计数，导致固定 128 字节缓冲区溢出并可覆盖返回地址。攻击者无需受害者点击、下载或任何交互即可在 Windows、macOS、Linux、Android、iOS 客户端上执行任意代码。Zoom 已在 7.1.5 / 7.0.6 等版本中修复，截至披露时尚无在野利用报告。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-meeting.html</li>
+</ul>
+<h3>2. AI 辅助发现 SharePoint 无认证 RCE 利用链（CVE-2026-55040 / CVE-2026-63520）</h3>
+<ul>
+<li><strong>评分：94 分</strong></li>
+<li><strong>评分理由：</strong> 无认证即可冒充任意用户（含管理员）并进一步 RCE，且利用链由 AI agent 辅助发现，代表 AI 辅助漏洞研究的实战突破。</li>
+<li><strong>来源：</strong> The Hacker News / Rapid7</li>
+<li><strong>摘要：</strong> Rapid7 研究人员披露 Microsoft SharePoint Server（Subscription Edition / 2019 / 2016）存在一个 JWT 验证绕过漏洞 CVE-2026-55040（CVSS 9.1），可让远程无认证攻击者冒充目标域中的任意用户。进一步链接 Business Connectivity Services 的不安全 .NET 类型实例化漏洞 CVE-2026-63520（CVSS 8.1）后，可在无需凭据的情况下以 Windows 服务账户权限执行代码。研究显示该利用链在 3 月的研究冲刺中由 AI agent 辅助生成，历时 24 个活跃工作日、约 80,000 次工具调用。CISA 在 7 月 14 日 alert 中称该绕过尚未发现在野利用。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/researchers-disclose-ai-assisted.html</li>
+</ul>
+<h3>3. OpenAI 发布 GPT-5.6-Cyber 网络安全专用模型</h3>
+<ul>
+<li><strong>评分：92 分</strong></li>
+<li><strong>评分理由：</strong> 首款大规模面向漏洞研究与利用链开发的 frontier AI 模型，95% 的高级网络安全请求完成率，双重用途与防御差距议题兼具高度新颖性与政策影响。</li>
+<li><strong>来源：</strong> Hacker News / The Hacker News / OpenAI</li>
+<li><strong>摘要：</strong> OpenAI 通过 Daybreak Red  tier 发布 GPT-5.6-Cyber，该模型基于 GPT-5.6 Sol 微调，专门用于漏洞研究、渗透测试、事件响应和利用链开发，并降低对高风险的合法网络安全任务的拒绝率。OpenAI 内部评估显示其在“高级网络安全完成率”上达 95%，远高于 GPT-5.6 Sol 的 1.5%。该模型已用于发现 Chrome V8 引擎中 CVE-2026-15903 等漏洞。OpenAI 将其安全等级评定为 High（非 Critical），并通过 Accenture、CrowdStrike、Palo Alto Networks 等可信合作伙伴提供访问。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/openai-launches-gpt-56-cyber-with.html</li>
+</ul>
+<h3>4. 恶意 SIM 卡可在蜂窝 IoT 设备调制解调器中执行攻击者代码</h3>
+<ul>
+<li><strong>评分：90 分</strong></li>
+<li><strong>评分理由：</strong> 攻击面位于蜂窝通信标准层面，影响 EV 充电桩、工业路由器、车载 T-Box 等关键基础设施，且无法通过单一补丁解决。</li>
+<li><strong>来源：</strong> Hacker News / The Hacker News / University of Birmingham &amp; Fuzzware</li>
+<li><strong>摘要：</strong> 伯明翰大学与 Fuzzware 研究人员发现，支持 RUN AT 主动式命令的 SIM 卡可向设备调制解调器下发 AT 指令并执行攻击者代码。在 26 部手机和蜂窝模块中，9 个设备接受该命令，包括多个 Quectel 模块以及 OPPO Find X5、OPPO Reno 14 F 5G 和 ASUS Zenfone 9。研究团队演示了对商用 Autel EV 充电桩的完整接管。该问题根植于蜂窝标准定义的 SIM-to-modem 接口，Qualcomm 称将在未来设备默认关闭该接口，Quectel 表示已缓解文件访问缺陷并继续处理接口本身。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/a-malicious-sim-card-can-run-attacker.html</li>
+</ul>
+<h3>5. Windows Plug and Play 自动安装路径可被利用获得 SYSTEM 权限</h3>
+<ul>
+<li><strong>评分：89 分</strong></li>
+<li><strong>评分理由：</strong> 在完全补丁的 Windows 11 上通过受信任的 PnP 安装路径实现 SYSTEM 提权，结合 USB 重定向还可经 RDP 触发，信任边界破坏影响深远。</li>
+<li><strong>来源：</strong> Hacker News / The Hacker News / DEF CON 34</li>
+<li><strong>摘要：</strong> 研究人员 Alejandro Hernando 与 Borja Martinez 在 DEF CON 34 披露 "Plug And Pwn" 技术：Windows PnP 自动安装机制可被诱骗为仿冒 USB 设备安装已签名的厂商软件，并通过串接 Sierra Wireless、Sony FeliCa、Intel RealSense 等第三方安装组件中的弱点，在完全更新的 Windows 11 上实现 SYSTEM 代码执行。物理攻击需向目标机器呈现仿冒 USB 设备；在启用 supported Plug and Play 或低层 USB 重定向的 Remote Desktop 环境中，也可通过伪造 USB 流量远程触发。Microsoft 表示相关 USB 重定向默认不启用。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/researchers-turn-usb-auto-install-into.html</li>
+</ul>
+<hr />
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<p><strong>数据状态：</strong> 2026 年 8 月 12 日北京时间 07:00 运行时，MSRC 更新列表中 2026-Aug 条目标题为 <strong>"August 2026 Security Updates"</strong>（非 Early），已确认正式发布。</p>
+<h3>本月补丁概览</h3>
+<ul>
+<li><strong>Microsoft 产品 CVE 总数：</strong> 420</li>
+<li><strong>Critical（严重）：</strong> 62</li>
+<li><strong>Important（重要）：</strong> 356</li>
+<li><strong>Moderate（中等）：</strong> 1</li>
+<li><strong>Low（低）：</strong> 0</li>
+<li><strong>CVRF 全量条目：</strong> 790（含 Microsoft 420、CBL-Mariner 330、Chromium 2、Other 38）</li>
+</ul>
+<h3>在野利用零日</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>漏洞标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-68820</td>
+<td>Important</td>
+<td>7.0</td>
+<td>Windows Ancillary Function Driver for WinSock 特权提升漏洞</td>
+</tr>
+</tbody>
+</table>
+<h3>CVSS ≥ 9.0 的高危 CVE 清单（Microsoft）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>漏洞标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-63508</td>
+<td>Critical</td>
+<td>10.0</td>
+<td>Microsoft Planetary Computer Pro 特权提升</td>
+</tr>
+<tr>
+<td>CVE-2026-56162</td>
+<td>Critical</td>
+<td>10.0</td>
+<td>Azure SQL Database 特权提升</td>
+</tr>
+<tr>
+<td>CVE-2026-65667</td>
+<td>Critical</td>
+<td>10.0</td>
+<td>Microsoft Teams 特权提升</td>
+</tr>
+<tr>
+<td>CVE-2026-50515</td>
+<td>Critical</td>
+<td>9.9</td>
+<td>Azure Service Bus 远程代码执行</td>
+</tr>
+<tr>
+<td>CVE-2026-59115</td>
+<td>Critical</td>
+<td>9.9</td>
+<td>Microsoft Entra Provisioning Service 特权提升</td>
+</tr>
+<tr>
+<td>CVE-2026-50481</td>
+<td>Critical</td>
+<td>9.9</td>
+<td>Azure Active Directory 特权提升</td>
+</tr>
+<tr>
+<td>CVE-2026-62830</td>
+<td>Critical</td>
+<td>9.9</td>
+<td>Azure SRE Agent 特权提升</td>
+</tr>
+<tr>
+<td>CVE-2026-62873</td>
+<td>Critical</td>
+<td>9.8</td>
+<td>Microsoft 365 Admin Center 特权提升</td>
+</tr>
+</tbody>
+</table>
+<p><em>其余 12 个 Microsoft CVSS≥9.0 漏洞可在 MSRC Security Update Guide 中查看完整清单。</em></p>
+<h3>一句话核心风险总结</h3>
+<p>August 2026 Patch Tuesday 修复 420 个 Microsoft CVE（62 Critical、1 个在野利用的 afd.sys 特权提升零日），另有 20 个 Microsoft 漏洞 CVSS≥9.0，集中暴露于 Azure、Entra、Teams 及本地 SharePoint 等服务，建议优先处理 Critical 与已确认在野利用项。</p>
+<h3>参考链接</h3>
+<ul>
+<li>MSRC Security Update Guide：https://msrc.microsoft.com/update-guide/</li>
+<li>MSRC CVRF API（2026-Aug）：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 15 条新闻，最高分 96 分。</strong></p>
+<p><em>注：企业微信/微信小程序推送通道当前未连接，今日未能完成自动推送。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
