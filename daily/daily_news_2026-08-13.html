@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-13 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-13</h1>
+<blockquote>
+<p>数据采集时间：2026-08-13 06:55 CST（北京时间）</p>
+</blockquote>
+<hr />
+<h2>Top 5 网络安全新闻</h2>
+<h3>1. 737 款 Chrome VPN 扩展被曝通过 SOCKS5 代理劫持用户流量</h3>
+<ul>
+<li><strong>评分：92 分</strong></li>
+<li><strong>评分理由：大规模浏览器供应链滥用，假冒 66 个知名品牌，可完整嗅探用户浏览器会话。</strong></li>
+<li><strong>来源：</strong> The Hacker News / BleepingComputer / Socket</li>
+<li><strong>摘要：</strong>
+  安全研究人员发现 737 款免费 VPN/代理 Chrome 扩展通过同一 SOCKS5 基础设施（端口 1082）将用户全部浏览器流量转发到攻击者控制的代理服务器，涉及至少 40 个开发者账号、75,486 次安装。其中 274 款扩展冒充 Proton VPN、NordVPN、Surfshark、Cloudflare 1.1.1.1 等 66 个知名品牌，使攻击者处于 AitM（ adversary-in-the-middle）位置，可观察目标站点、TLS SNI 及明文 HTTP 请求体。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/737-chrome-vpn-extensions-caught.html</li>
+</ul>
+<hr />
+<h3>2. VMware vCenter 关键漏洞 CVE-2026-59310 遭在野利用，361 个 IP 遍布 47 国</h3>
+<ul>
+<li><strong>评分：90 分</strong></li>
+<li><strong>评分理由：CVSS 9.8 的核心虚拟化平台漏洞已被用于建立持久远程访问，影响范围跨全球。</strong></li>
+<li><strong>来源：</strong> The Hacker News / QUIRSO</li>
+<li><strong>摘要：</strong>
+  德国安全公司 QUIRSO 披露，攻击者正在积极利用 VMware vCenter 目录遍历漏洞 CVE-2026-59310（CVSS 9.8）在受害主机上部署恶意 cron 作业及 reverse_ssh 工具以实现持久化。首批受害系统于 8 月 3 日开始回连 C2，已识别 361 个独立受害者 IP，覆盖德国、美国、土耳其、伊朗、法国等 47 个国家。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html</li>
+</ul>
+<hr />
+<h3>3. OpenAI、Anthropic、Google 推理 API 存在设计缺陷，弱模型可解码强模型隐藏推理</h3>
+<ul>
+<li><strong>评分：89 分</strong></li>
+<li><strong>评分理由：主流大模型 API 的加密推理对象可被复用/重放，导致专有推理与敏感凭据泄露，属新型 AI 供应链风险。</strong></li>
+<li><strong>来源：</strong> The Hacker News / arXiv</li>
+<li><strong>摘要：</strong>
+  研究人员在论文《Stealing Reasoning Traces from Proprietary LLM APIs》中披露，OpenAI、Anthropic、Google 的加密/签名推理块可在会话、用户甚至模型之间重放；用同一厂商的较弱模型（如 Claude Haiku 4.5、GPT-5.6 Luna）即可解码强模型隐藏推理。研究团队从 6,708 条公开 agent 轨迹中恢复出 704 件隐私 artifact，包括 62 个 API 密钥、33 个密码、24 个访问令牌和 7 个私钥。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html</li>
+</ul>
+<hr />
+<h3>4. 恶意 LiteLLM 版本与 Trivy 供应链攻击关联，或已暴露 2,100+ 组织</h3>
+<ul>
+<li><strong>评分：88 分</strong></li>
+<li><strong>评分理由：AI 网关供应链被攻破，版本仅上线 40 分钟，却可能窃取海量云凭据，影响数千家机构。</strong></li>
+<li><strong>来源：</strong> The Hacker News / CloudSEK / Unit 42</li>
+<li><strong>摘要：</strong>
+  LiteLLM PyPI 版本 1.82.7/1.82.8 于 3 月 24 日短暂上线约 40 分钟，内含窃取云密钥、SSH 密钥、K8s 令牌和数据库密码的恶意代码。CloudSEK 最新分析称，攻击者窃取的约 43.4 万个文件可能与超过 2,500 个组织相关；FBI 已于 7 月 2 日发布 FLASH 预警，提醒相关凭据可能在事件后长期被武器化利用。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html</li>
+</ul>
+<hr />
+<h3>5. SAP Commerce Cloud 关键漏洞 CVE-2026-58231（CVSS 10.0）允许未认证 RCE</h3>
+<ul>
+<li><strong>评分：87 分</strong></li>
+<li><strong>评分理由：CVSS 满分的企业电商云平台未认证 RCE，可完全破坏保密性、完整性与可用性。</strong></li>
+<li><strong>来源：</strong> The Hacker News / SAP / Onapsis</li>
+<li><strong>摘要：</strong>
+  SAP 发布 8 月安全更新，修复 Commerce Cloud（Data Hub Adapter）中的 CVE-2026-58231（CVSS 10.0）。该漏洞因默认认证客户端授权检查与输入验证不足，允许未认证攻击者提交特制输入并在内部组件上执行任意代码。同日 SAP 还修复了另外 3 个 CVSS 9.1–9.9 的关键漏洞，涉及 Manufacturing Integration、ABAP Platform 等核心产品。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/sap-commerce-cloud-flaw-could-let.html</li>
+</ul>
+<hr />
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p>依据 MSRC CVRF 正式文档 <code>August 2026 Security Updates</code> 解析（CurrentReleaseDate: 2026-08-12T07:00:00Z），非 Early 预发布占位。</p>
+</blockquote>
+<h3>本月补丁 CVE 统计</h3>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th style="text-align: right;">CVE 总数</th>
+<th style="text-align: right;">Critical</th>
+<th style="text-align: right;">Important</th>
+<th style="text-align: right;">Moderate</th>
+<th style="text-align: right;">Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microsoft CVEs</strong></td>
+<td style="text-align: right;"><strong>420</strong></td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">356</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>CBL-Mariner</td>
+<td style="text-align: right;">330</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">206</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>Chromium</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Other</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>CVRF 文档总计</strong></td>
+<td style="text-align: right;"><strong>790</strong></td>
+<td style="text-align: right;">108</td>
+<td style="text-align: right;">397</td>
+<td style="text-align: right;">207</td>
+<td style="text-align: right;">32</td>
+</tr>
+</tbody>
+</table>
+<h3>在野利用 CVE（Exploited:Yes）</h3>
+<ul>
+<li><strong>CVE-2026-68820</strong> | Important | CVSS 7.0 | Windows Ancillary Function Driver for WinSock 特权提升漏洞</li>
+<li>Lazarus Group 已利用该 0day 针对法、德、巴、印四国国防与航空航天企业发动 Operation Dream Job 攻击，部署新后门 Troy。CISA 已于 8 月 11 日将其加入 KEV 目录。</li>
+</ul>
+<h3>Microsoft CVSS ≥ 9.0 高危 CVE 清单（共 20 个，列出前 8）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th style="text-align: right;">严重级别</th>
+<th style="text-align: right;">CVSS</th>
+<th style="text-align: left;">漏洞描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-63508</td>
+<td style="text-align: right;">Critical</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: left;">Microsoft Planetary Computer Pro 特权提升</td>
+</tr>
+<tr>
+<td>CVE-2026-56162</td>
+<td style="text-align: right;">Critical</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: left;">Azure SQL Database 特权提升</td>
+</tr>
+<tr>
+<td>CVE-2026-65667</td>
+<td style="text-align: right;">Critical</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: left;">Microsoft Teams 特权提升</td>
+</tr>
+<tr>
+<td>CVE-2026-50515</td>
+<td style="text-align: right;">Critical</td>
+<td style="text-align: right;">9.9</td>
+<td style="text-align: left;">Azure Service Bus 远程代码执行</td>
+</tr>
+<tr>
+<td>CVE-2026-59115</td>
+<td style="text-align: right;">Critical</td>
+<td style="text-align: right;">9.9</td>
+<td style="text-align: left;">Microsoft Entra Provisioning Service 特权提升</td>
+</tr>
+<tr>
+<td>CVE-2026-50481</td>
+<td style="text-align: right;">Critical</td>
+<td style="text-align: right;">9.9</td>
+<td style="text-align: left;">Azure Active Directory 特权提升</td>
+</tr>
+<tr>
+<td>CVE-2026-62830</td>
+<td style="text-align: right;">Critical</td>
+<td style="text-align: right;">9.9</td>
+<td style="text-align: left;">Azure SRE Agent 特权提升</td>
+</tr>
+<tr>
+<td>CVE-2026-62873</td>
+<td style="text-align: right;">Critical</td>
+<td style="text-align: right;">9.8</td>
+<td style="text-align: left;">Microsoft 365 Admin Center 特权提升</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>剩余 12 个 CVSS≥9.0 的 Microsoft CVE 涵盖 Windows DNS Server、QUIC、Deployment Services TFTP、iSCSI Target Service、Teams、SharePoint、AKS、Azure Confidential Ledger 等，详见 MSRC Security Update Guide。</p>
+</blockquote>
+<h3>一句话核心风险总结</h3>
+<p>本月微软正式补丁修复 420 个 Microsoft CVE，数量与上月持平；虽然仅确认 1 个在野利用（AFD.sys 本地提权），但存在 <strong>20 个 CVSS≥9.0</strong> 的高危漏洞，覆盖 Azure、Microsoft 365、Teams、DNS、QUIC、AKS 等核心服务，企业应优先修复 Critical 级别及面向公网的 RCE/EoP 项。</p>
+<h3>参考链接</h3>
+<ul>
+<li>MSRC Security Update Guide（2026-Aug）：https://msrc.microsoft.com/update-guide/releaseNote/2026-Aug</li>
+<li>MSRC CVRF API（2026-Aug）：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 15 条候选新闻，最高分 92 分。</strong></p>
+<blockquote>
+<p>注：CVE-2026-68820（Lazarus 在野利用的 Windows AFD.sys 提权 0day）已纳入上方「微软补丁安全级别」板块，未重复计入 Top 5 新闻。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
