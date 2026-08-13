@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-14 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-14</h1>
+<h2>Top 5 网络安全新闻</h2>
+<h3>1. <a href="https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html">未修补 GeoServer 0day 遭活跃利用，可导致远程代码执行</a> — 92 分</h3>
+<ul>
+<li><strong>评分</strong>：92 分（未修补 0day 已被活跃利用，地理空间服务器影响面广）</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：开源地理空间服务器 GeoServer 出现一个尚未分配 CVE 的 SQL 注入 0day，攻击者已利用其探测大量实例；当数据库以高权限账户运行时可导致远程代码执行。截至报道时官方补丁尚未发布，建议管理员限制访问并监控异常请求。</li>
+<li><strong>原文链接</strong>：<a href="https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html">https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html</a></li>
+</ul>
+<h3>2. <a href="https://thehackernews.com/2026/08/new-patchcord-backdoor-targets-afghan.html">PATCHCORD 后门针对阿富汗电信及印度关键基础设施</a> — 88 分</h3>
+<ul>
+<li><strong>评分</strong>：88 分（新的 C/C++ 后门瞄准南亚关键基础设施，疑似国家支持行动）</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Acronis Threat Research Unit 发现名为 PATCHCORD 的 C/C++ 后门被用于攻击阿富汗电信运营商和南亚关键基础设施，诱饵为伪造的阿富汗电信 VPN 安装包。同一行动还使用基于 Google Sheets 的 Go 语言后门 SHEETCORD 进行命令与控制通信。</li>
+<li><strong>原文链接</strong>：<a href="https://thehackernews.com/2026/08/new-patchcord-backdoor-targets-afghan.html">https://thehackernews.com/2026/08/new-patchcord-backdoor-targets-afghan.html</a></li>
+</ul>
+<h3>3. <a href="https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/">Jewelbug 组织入侵政府邮件系统并同步运营加密货币诈骗</a> — 84 分</h3>
+<ul>
+<li><strong>评分</strong>：84 分（政府/军事目标与加密诈骗并行，混合动机威胁升级）</li>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>摘要</strong>：Jewelbug 黑客组织在针对政府和军事机构进行间谍活动的同时，运营平行的加密货币诈骗活动，显示威胁行为者正将情报收集与牟利相结合。这种双轨模式增加了归因和事件响应的复杂度。</li>
+<li><strong>原文链接</strong>：<a href="https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/">https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/</a></li>
+</ul>
+<h3>4. <a href="https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/">Akira 勒索软件通过安全模式禁用 EDR 并窃取数据</a> — 82 分</h3>
+<ul>
+<li><strong>评分</strong>：82 分（活跃勒索软件展示绕过 EDR 的新技巧，数据窃取成功）</li>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>摘要</strong>：Akira 勒索软件附属机构通过将受感染系统重启到带网络连接的安全模式，成功禁用端点检测与响应（EDR）产品。虽然最终加密失败，但攻击者仍窃取了大量数据。</li>
+<li><strong>原文链接</strong>：<a href="https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/">https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/</a></li>
+</ul>
+<h3>5. <a href="https://thehackernews.com/2026/08/amnesiastealer-hijacks-chromium.html">AmnesiaStealer 劫持 macOS Chromium 会话实现实时浏览器控制</a> — 80 分</h3>
+<ul>
+<li><strong>评分</strong>：80 分（macOS 信息窃取器实现实时浏览器控制，威胁开发者与普通用户）</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Jamf Threat Labs 披露 Rust 编写的 AmnesiaStealer，通过伪造 GitHub 下载页面和 ClickFix 社工诱饵感染 macOS。该恶意软件分三阶段运行，最终可劫持 Chromium 会话并实时控制浏览器。</li>
+<li><strong>原文链接</strong>：<a href="https://thehackernews.com/2026/08/amnesiastealer-hijacks-chromium.html">https://thehackernews.com/2026/08/amnesiastealer-hijacks-chromium.html</a></li>
+</ul>
+<hr />
+<p>本次共筛选 15 条新闻，最高分 92 分。</p>
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p>数据来源：MSRC CVRF <code>2026-Aug</code>，校验 <code>DocumentTitle</code> 为 <strong>August 2026 Security Updates</strong>（非 Early），CurrentReleaseDate <code>2026-08-13T07:00:00Z</code>。</p>
+</blockquote>
+<ul>
+<li><strong>Microsoft CVE 总数</strong>：421 个（来源：CVRF DocumentNotes）</li>
+<li><strong>CVRF 收录 CVE 总数</strong>：790 个（含 Microsoft、CBL-Mariner、Chromium 等复用/非 Microsoft 条目）</li>
+<li><strong>严重级别分布（744 个带严重级别标签的条目）</strong>：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>级别</th>
+<th>数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>109</td>
+</tr>
+<tr>
+<td>Important</td>
+<td>396</td>
+</tr>
+<tr>
+<td>Moderate</td>
+<td>207</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>32</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>CVSS BaseScore ≥ 9.0</strong>：68 个</li>
+<li><strong>其中 Critical 且可远程/无认证利用（AV:N / PR:N）</strong>：55 个</li>
+<li><strong>在野利用（Exploited:Yes）</strong>：1 个</li>
+</ul>
+<h3>重点高危 CVE 清单（可见 8 条）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>向量</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68820">CVE-2026-68820</a></td>
+<td>Important</td>
+<td>7.0</td>
+<td>AV:L / AC:H / PR:L / UI:N / S:U / C:H / I:H / A:H</td>
+<td><strong>在野利用</strong>（Windows AFD.sys 本地提权）</td>
+</tr>
+<tr>
+<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63508">CVE-2026-63508</a></td>
+<td>Critical</td>
+<td>10.0</td>
+<td>AV:N / AC:L / PR:N / UI:N / S:C / C:H / I:H / A:N</td>
+<td>可远程、无认证利用</td>
+</tr>
+<tr>
+<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56162">CVE-2026-56162</a></td>
+<td>Critical</td>
+<td>10.0</td>
+<td>AV:N / AC:L / PR:N / UI:N / S:C / C:H / I:H / A:H</td>
+<td>可远程、无认证利用</td>
+</tr>
+<tr>
+<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65667">CVE-2026-65667</a></td>
+<td>Critical</td>
+<td>10.0</td>
+<td>AV:N / AC:L / PR:N / UI:N / S:C / C:H / I:H / A:N</td>
+<td>可远程、无认证利用</td>
+</tr>
+<tr>
+<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62873">CVE-2026-62873</a></td>
+<td>Critical</td>
+<td>9.8</td>
+<td>AV:N / AC:L / PR:N / UI:N / S:U / C:H / I:H / A:H</td>
+<td>可远程、无认证利用</td>
+</tr>
+<tr>
+<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62815">CVE-2026-62815</a></td>
+<td>Critical</td>
+<td>9.8</td>
+<td>AV:N / AC:L / PR:N / UI:N / S:U / C:H / I:H / A:H</td>
+<td>可远程、无认证利用</td>
+</tr>
+<tr>
+<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62878">CVE-2026-62878</a></td>
+<td>Critical</td>
+<td>9.8</td>
+<td>AV:N / AC:L / PR:N / UI:N / S:U / C:H / I:H / A:H</td>
+<td>可远程、无认证利用</td>
+</tr>
+<tr>
+<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62893">CVE-2026-62893</a></td>
+<td>Critical</td>
+<td>9.8</td>
+<td>AV:N / AC:L / PR:N / UI:N / S:U / C:H / I:H / A:H</td>
+<td>可远程、无认证利用</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>其余 61 个 CVSS ≥ 9.0 的 CVE 详见 <a href="https://msrc.microsoft.com/update-guide/releaseNote/2026-Aug">MSRC Security Update Guide</a> / <a href="https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug">CVRF API</a>。</p>
+</blockquote>
+<p><strong>一句话核心风险总结</strong>：本月补丁包含 421 个 Microsoft CVE，在野利用的 Windows AFD.sys 本地提权漏洞（CVE-2026-68820）需要优先处置；同时存在 55 个可远程、无认证利用的 Critical 漏洞，网络边界暴露面大的组织应抓紧补丁窗口。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
