@@ -180,8 +180,36 @@ footer {
   border-top: 1px solid var(--border);
 }
 </style>
+
+<style>
+.wh-topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid #1f2937}
+.wh-topbar .brand{font-weight:800;letter-spacing:.5px;color:#f3f4f6}
+.wh-topbar .brand .shield{color:#3b82f6}
+.wh-topbar .spacer{flex:1}
+.wh-topbar .home{font-size:14px;color:#9ca3af;text-decoration:none}
+.wh-topbar .home:hover{text-decoration:underline}
+.wh-nav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  margin:28px auto 44px;padding:14px 18px;max-width:820px;
+  background:rgba(17,24,39,.6);border:1px solid #1f2937;border-radius:14px}
+.wh-nav a{font-size:14px;color:#cbd5e1;text-decoration:none;padding:9px 16px;border-radius:10px;
+  border:1px solid #1f2937;transition:all .15s}
+.wh-nav a:hover{border-color:#3b82f6;color:#fff;text-decoration:none}
+.wh-nav .wh-nav-home{color:#9ca3af}
+.wh-nav .wh-nav-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+</style>
+
 </head>
 <body>
+
+<div class="wh-topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+
+
 <div class="container">
   <header>
     <h1>网络安全周报 · 第32周</h1>
@@ -703,6 +731,12 @@ footer {
     <p>去重说明：Metabase 零日（08-08 95分 → 08-09 96分，保留更高分版本）；N-able N-central CVE-2026-18577（08-04 88分 → 08-09 90分，保留最新进展版本）</p>
     <p>本周不含微软补丁板块（8月 Patch Tuesday 为 8/11，不在本周窗口内）</p>
   </footer>
+</div>
+
+<div class="wh-nav">
+  <a class="wh-nav-prev" href="weekly_security_poster_W31.html">← 上一期周报</a>
+  <a class="wh-nav-home" href="../index.html">🏠 首页</a>
+  <a class="wh-nav-next" href="weekly_security_poster_W33.html">下一期周报 →</a>
 </div>
 </body>
 </html>
