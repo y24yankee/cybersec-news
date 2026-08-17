@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-18 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-18</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 网络安全新闻</a></li>
+<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. 疑似中国关联 APT 利用 VMware vCenter 漏洞部署 Babuk 衍生勒索软件</h3>
+<ul>
+<li><strong>评分：93 分</strong> — 漏洞已确认在野利用、涉及国家背景 APT、跨 47 国 361 个受害 IP，并导致勒索软件落地，影响范围广且攻击链完整。</li>
+<li><strong>来源：</strong> The Hacker News / QUIRSO</li>
+<li><strong>摘要：</strong> 德国应急响应公司 QUIRSO 将 CVE-2026-59310（CVSS 9.8）的利用活动归因于疑似中国关联的 APT。攻击者通过目录遍历漏洞在 VMware vCenter Server Appliance 上获得 root 权限，部署 linuxFile 后门、reverse_ssh 持久化，并在 ESXi 主机上投放 .babyk 扩展的 Babuk 衍生勒索软件。首批利用活动出现在漏洞公开披露 5 天后，主要感染集中在德国、美国、土耳其、伊朗和法国。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html</li>
+</ul>
+<h3 id="s3">2. GitLab 紧急修复关键 GraphQL 漏洞，未认证攻击者可远程修改/删除公开项目</h3>
+<ul>
+<li><strong>评分：92 分</strong> — CVSS 9.4、未认证、可远程破坏数据，GitLab 为广泛使用的 DevOps 平台，且补丁为计划外紧急发布。</li>
+<li><strong>来源：</strong> The Hacker News / GitLab</li>
+<li><strong>摘要：</strong> GitLab 发布计划外安全更新修复 CVE-2026-19478。该漏洞存在于 GitLab CE/EE 的 GraphQL 接口，未认证攻击者在特定条件下可远程修改或删除公开项目及用户数据。受影响版本包括 18.2 至 18.11.11 之前、19.0 至 19.0.8 之前、19.1 至 19.1.6 之前、19.2 至 19.2.4 之前。GitLab.com 与 GitLab Dedicated 已修复，自托管实例需尽快升级。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html</li>
+</ul>
+<h3 id="s4">3. AI 生成的 GitHub Copilot "Autofix" 引入漏洞，Wiz Red Agent  autonomous 攻破 Snowflake Jira</h3>
+<ul>
+<li><strong>评分：91 分</strong> — 首次公开披露 AI 安全修复工具反而引入关键漏洞，并被 autonomous AI 安全代理利用，标志 AI 代码安全治理的新风险。</li>
+<li><strong>来源：</strong> Hacker News / Wiz Research</li>
+<li><strong>摘要：</strong> Wiz Research 的 "Red Agent" 在 Snowflake 公开仓库 snowflake-connector-net 中发现一个由 GitHub Copilot Autofix 共同提交的 PR 引入的 shell 注入漏洞。攻击者只需提交一个特制的 GitHub Issue 标题即可在 GitHub Actions runner 中执行任意命令，并窃取 Jira API Token。该漏洞仅存活 5 天即被 autonomous AI 代理发现并验证利用，凸显 AI 生成代码与快速发现窗口叠加后的安全挑战。</li>
+<li><strong>原文链接：</strong> https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug</li>
+<li><strong>Hacker News 讨论：</strong> https://news.ycombinator.com/item?id=49331423</li>
+</ul>
+<h3 id="s5">4. Clop 勒索团伙声称窃取 GE、Philips、Shell 数据，利用 PTC Windchill/FlexPLM 漏洞</h3>
+<ul>
+<li><strong>评分：90 分</strong> — 多家财富 500 强/能源巨头确认正在调查，CISA 已将 CVE-2026-12569 列入 KEV 并强制联邦机构限期修复。</li>
+<li><strong>来源：</strong> BleepingComputer / ReliaQuest / CISA</li>
+<li><strong>摘要：</strong> Clop 勒索团伙在其泄露站点新增 43 名受害者，声称通过 PTC Windchill 和 FlexPLM 的关键漏洞 CVE-2026-12569 窃取通用电气（GE）、飞利浦（Philips）和壳牌（Shell）等企业的数据。GE 与 Shell 表示正在调查，Philips 确认其一台内部企业服务器遭到入侵但已控制，称未影响客户环境。该漏洞已被 CISA 加入已知在野利用目录，德国 BSI 此前亦连夜向 PTC 客户发出紧急修补警告。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/philips-and-ge-investigating-clop-ransomware-data-theft-claims/</li>
+</ul>
+<h3 id="s6">5. 黑客声称从麦当劳、Vodafone 等大型企业 Azure 租户窃取 364 万员工记录</h3>
+<ul>
+<li><strong>评分：88 分</strong> — 涉及多家全球知名企业的大规模员工数据泄露声明，虽部分公司否认或质疑数据时效性，但暴露凭证驱动的云租户风险。</li>
+<li><strong>来源：</strong> BleepingComputer / Hudson Rock</li>
+<li><strong>摘要：</strong> 化名为 "TheHatman" 的威胁行为者自 7 月 31 日起在地下论坛出售声称从麦当劳、Gap、Vodafone、TCS、HCL、IHG、Kyndryl 等企业 Azure 租户窃取的 364 万条员工记录。威胁情报公司 Hudson Rock 分析后认为数据具有较高真实性，包含员工姓名、邮箱、职位、电话、地址及全局管理员账户等信息。TCS 与 Gap 已声明未发现系统被入侵，且相关数据为多年前的旧信息。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/hacker-claims-36-million-azure-account-records-stolen-from-major-companies/</li>
+</ul>
+<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p>数据来源：MSRC CVRF API（2026-Aug），CurrentReleaseDate 2026-08-17T07:00:00Z；文档标题已校验为正式 "August 2026 Security Updates"，不含 Early。</p>
+</blockquote>
+<ul>
+<li><strong>本月 CVRF 漏洞条目总数：798 项</strong></li>
+<li><strong>按最高严重级别统计：</strong></li>
+<li>Critical：110 项</li>
+<li>Important：398 项</li>
+<li>Moderate：207 项</li>
+<li>Low：32 项</li>
+<li>未标注标准级别：51 项（多为非 Microsoft 组件）</li>
+<li><strong>在野利用漏洞：</strong> 1 项</li>
+<li><strong>CVE-2026-68820</strong> | Important | CVSS 7.0 | Windows Ancillary Function Driver for WinSock 权限提升漏洞（Lazarus Operation Dream Job 活动相关）</li>
+<li><strong>CVSS ≥ 9.0 漏洞：68 项</strong>，以下列出可被远程/未认证利用的高危 Critical 项（可见清单 7 条）及全部在野利用项：
+  1. <strong>CVE-2026-63508</strong> | Critical | CVSS 10.0 | Microsoft Planetary Computer Pro 权限提升漏洞（AV:N/AC:L/PR:N/UI:N）
+  2. <strong>CVE-2026-56162</strong> | Critical | CVSS 10.0 | Azure SQL Database 权限提升漏洞（AV:N/AC:L/PR:N/UI:N）
+  3. <strong>CVE-2026-65667</strong> | Critical | CVSS 10.0 | Microsoft Teams 权限提升漏洞（AV:N/AC:L/PR:N/UI:N）
+  4. <strong>CVE-2026-62873</strong> | Critical | CVSS 9.8 | Microsoft 365 Admin Center 权限提升漏洞（AV:N/AC:L/PR:N/UI:N）
+  5. <strong>CVE-2026-62815</strong> | Critical | CVSS 9.8 | Microsoft QUIC 远程代码执行漏洞（AV:N/AC:L/PR:N/UI:N）
+  6. <strong>CVE-2026-62878</strong> | Critical | CVSS 9.8 | Windows DNS Server 远程代码执行漏洞（AV:N/AC:L/PR:N/UI:N）
+  7. <strong>CVE-2026-62893</strong> | Critical | CVSS 9.8 | Windows Deployment Services TFTP Server 远程代码执行漏洞（AV:N/AC:L/PR:N/UI:N）</li>
+<li><strong>其余 60 项 CVSS ≥ 9.0 漏洞：</strong> 详见 MSRC Security Update Guide / CVRF API 链接。</li>
+<li><strong>一句话核心风险总结：</strong> 8 月补丁包含 1 个已被 Lazarus 在野利用的 Windows AFD.sys 提权 0day，以及 68 个 CVSS ≥ 9.0 的高危项，其中多个 Critical 漏洞可被远程未认证利用，覆盖 Azure、Teams、DNS、QUIC 等核心服务，需优先修复。</li>
+<li><strong>参考链接：</strong></li>
+<li>MSRC Security Update Guide：https://msrc.microsoft.com/update-guide/releaseNote/2026-Aug</li>
+<li>CVRF API：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 14 条候选新闻，最高分 93 分。</strong></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-08-17.html">← 前一天 2026-08-17</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</div>
+
+</body>
+</html>
