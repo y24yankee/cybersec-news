@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,8 +63,18 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-10</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. GigaWiper：新型 Windows 破坏性后门捆绑磁盘擦除、伪勒索和间谍功能</a></li>
+<li><a href="#s2">2. Microsoft 修补 RoguePlanet Defender 漏洞（CVE-2026-50656），可获取 SYSTEM 权限</a></li>
+<li><a href="#s3">3. 欧盟议会批准 Chat Control 1.0 监控法案</a></li>
+<li><a href="#s4">4. Friendly Fire：AI 编程代理可被欺骗执行恶意代码</a></li>
+<li><a href="#s5">5. GhostApproval：符号链接漏洞让恶意仓库在 AI 编程助手中执行代码</a></li>
+</ol>
+</nav>
+
 <hr />
-<h2>1. GigaWiper：新型 Windows 破坏性后门捆绑磁盘擦除、伪勒索和间谍功能</h2>
+<h2 id="s1">1. GigaWiper：新型 Windows 破坏性后门捆绑磁盘擦除、伪勒索和间谍功能</h2>
 <ul>
 <li><strong>评分：92</strong> — 新型破坏性恶意软件组合三种旧工具，关联伊朗威胁行为者，危害极高</li>
 <li><strong>来源：The Hacker News</strong></li>
@@ -58,7 +82,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/new-gigawiper-windows-backdoor-bundles.html</li>
 </ul>
 <hr />
-<h2>2. Microsoft 修补 RoguePlanet Defender 漏洞（CVE-2026-50656），可获取 SYSTEM 权限</h2>
+<h2 id="s2">2. Microsoft 修补 RoguePlanet Defender 漏洞（CVE-2026-50656），可获取 SYSTEM 权限</h2>
 <ul>
 <li><strong>评分：90</strong> — Defender 引擎竞争条件漏洞可在最新 Windows 上获取 SYSTEM 权限，且被公开近一个月后才修补</li>
 <li><strong>来源：The Hacker News</strong></li>
@@ -66,7 +90,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/microsoft-patches-rogueplanet-defender.html</li>
 </ul>
 <hr />
-<h2>3. 欧盟议会批准 Chat Control 1.0 监控法案</h2>
+<h2 id="s3">3. 欧盟议会批准 Chat Control 1.0 监控法案</h2>
 <ul>
 <li><strong>评分：88</strong> — 大规模监控立法影响 5 亿+ 欧盟公民隐私，意义重大且争议极高</li>
 <li><strong>来源：Hacker News (news.ycombinator.com)</strong></li>
@@ -74,7 +98,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/</li>
 </ul>
 <hr />
-<h2>4. Friendly Fire：AI 编程代理可被欺骗执行恶意代码</h2>
+<h2 id="s4">4. Friendly Fire：AI 编程代理可被欺骗执行恶意代码</h2>
 <ul>
 <li><strong>评分：85</strong> — 新型攻击手法让本应检测漏洞的 AI 代理自身成为攻击载体，影响 Claude Code 和 OpenAI Codex</li>
 <li><strong>来源：The Hacker News</strong></li>
@@ -82,7 +106,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/friendly-fire-ai-agents-built-to-catch.html</li>
 </ul>
 <hr />
-<h2>5. GhostApproval：符号链接漏洞让恶意仓库在 AI 编程助手中执行代码</h2>
+<h2 id="s5">5. GhostApproval：符号链接漏洞让恶意仓库在 AI 编程助手中执行代码</h2>
 <ul>
 <li><strong>评分：82</strong> — 六大主流 AI 编程助手受影响的新漏洞模式，三个已修复两个未修复</li>
 <li><strong>来源：The Hacker News</strong></li>
@@ -94,5 +118,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-09.html">← 前一天 2026-07-09</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-11.html">后一天 2026-07-11 →</a>
+</div>
+
 </body>
 </html>

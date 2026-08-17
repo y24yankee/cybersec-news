@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,8 +63,15 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-04</h1>
-<h2>TOP 5 网络安全新闻</h2>
-<h3>1. 欧洲议会成员遭 Pegasus 间谍软件攻击</h3>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">TOP 5 网络安全新闻</a></li>
+<li><a href="#s7">候选新闻统计</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">TOP 5 网络安全新闻</h2>
+<h3 id="s2">1. 欧洲议会成员遭 Pegasus 间谍软件攻击</h3>
 <ul>
 <li><strong>评分：</strong> 90/100</li>
 <li><strong>来源：</strong> Hacker News / Citizen Lab</li>
@@ -58,7 +79,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://citizenlab.ca/research/member-of-committee-investigating-spyware-hacked-with-pegasus/</li>
 <li><strong>评分理由：</strong> 涉及国家级间谍软件攻击欧盟立法机构核心成员，兼具政治敏感性、国家级威胁和高严重性。</li>
 </ul>
-<h3>2. Armored Likho 针对政府与电力部门发起网络攻击</h3>
+<h3 id="s3">2. Armored Likho 针对政府与电力部门发起网络攻击</h3>
 <ul>
 <li><strong>评分：</strong> 89/100</li>
 <li><strong>来源：</strong> The Hacker News</li>
@@ -66,7 +87,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/armored-likho-targets-government.html</li>
 <li><strong>评分理由：</strong> 新 APT 组织针对关键基础设施和政府机构，融合网络间谍与金融动机，影响范围重大。</li>
 </ul>
-<h3>3. Linux "Bad Epoll" 内核漏洞可导致本地提权至 root（CVE-2026-46242）</h3>
+<h3 id="s4">3. Linux "Bad Epoll" 内核漏洞可导致本地提权至 root（CVE-2026-46242）</h3>
 <ul>
 <li><strong>评分：</strong> 88/100</li>
 <li><strong>来源：</strong> The Hacker News</li>
@@ -74,7 +95,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html</li>
 <li><strong>评分理由：</strong> 本地提权至 root 影响 Linux 与 Android 两大生态，且为内核级漏洞，修复窗口紧迫。</li>
 </ul>
-<h3>4. ConsentFix 与 ClickFix：3 秒内劫持 Microsoft 365 账户</h3>
+<h3 id="s5">4. ConsentFix 与 ClickFix：3 秒内劫持 Microsoft 365 账户</h3>
 <ul>
 <li><strong>评分：</strong> 87/100</li>
 <li><strong>来源：</strong> BleepingComputer</li>
@@ -82,7 +103,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/consentfix-and-clickfix-how-microsoft-365-accounts-are-hijacked-in-3-seconds/</li>
 <li><strong>评分理由：</strong> 针对 M365 企业用户的新型 MFA 绕过技术，攻击速度极快，影响大量云办公租户。</li>
 </ul>
-<h3>5. Avalon 恶意软件框架集成 CrownX 勒索软件功能</h3>
+<h3 id="s6">5. Avalon 恶意软件框架集成 CrownX 勒索软件功能</h3>
 <ul>
 <li><strong>评分：</strong> 86/100</li>
 <li><strong>来源：</strong> The Hacker News</li>
@@ -91,7 +112,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由：</strong> 新型一体化恶意软件框架覆盖入侵到勒索全流程，代表当前企业勒索攻击的演进趋势。</li>
 </ul>
 <hr />
-<h2>候选新闻统计</h2>
+<h2 id="s7">候选新闻统计</h2>
 <ul>
 <li><strong>The Hacker News：</strong> 5 条</li>
 <li><strong>BleepingComputer：</strong> 5 条</li>
@@ -104,5 +125,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-03.html">← 前一天 2026-07-03</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-05.html">后一天 2026-07-05 →</a>
+</div>
+
 </body>
 </html>

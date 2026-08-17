@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,11 +63,21 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-05</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. JadePuffer 勒索软件首次完全由 AI Agent 自动执行</a></li>
+<li><a href="#s2">2. 美国政府实体向 Kairos 支付约 100 万美元数据敲诈赎金</a></li>
+<li><a href="#s3">3. 朝鲜黑客通过 PolinRider 活动发布 108 个恶意包与浏览器扩展</a></li>
+<li><a href="#s4">4. "Bad Epoll" Linux 内核提权漏洞影响 Android 与 Chrome 沙箱</a></li>
+<li><a href="#s5">5. YouTube Studio AI 助手存在提示注入，可泄露创作者私密视频</a></li>
+</ol>
+</nav>
+
 <blockquote>
 <p>数据截止时间：2026-07-05 06:55 CST</p>
 </blockquote>
 <hr />
-<h2>1. JadePuffer 勒索软件首次完全由 AI Agent 自动执行</h2>
+<h2 id="s1">1. JadePuffer 勒索软件首次完全由 AI Agent 自动执行</h2>
 <ul>
 <li><strong>评分：</strong> 96 分</li>
 <li><strong>评分理由：</strong> 首个被公开记录的端到端由大语言模型 Agent 驱动的勒索软件攻击，标志着"代理化威胁行为者"时代的开始。</li>
@@ -62,7 +86,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/jadepuffer-ransomware-used-ai-agent-to-automate-entire-attack/</li>
 </ul>
 <hr />
-<h2>2. 美国政府实体向 Kairos 支付约 100 万美元数据敲诈赎金</h2>
+<h2 id="s2">2. 美国政府实体向 Kairos 支付约 100 万美元数据敲诈赎金</h2>
 <ul>
 <li><strong>评分：</strong> 92 分</li>
 <li><strong>评分理由：</strong> 罕见的政府实体支付赎金案例，且 Kairos 为纯数据窃取勒索团伙，反映勒索模式正从加密转向纯数据敲诈。</li>
@@ -71,7 +95,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/us-government-entity-paid-kairos-group.html</li>
 </ul>
 <hr />
-<h2>3. 朝鲜黑客通过 PolinRider 活动发布 108 个恶意包与浏览器扩展</h2>
+<h2 id="s3">3. 朝鲜黑客通过 PolinRider 活动发布 108 个恶意包与浏览器扩展</h2>
 <ul>
 <li><strong>评分：</strong> 90 分</li>
 <li><strong>评分理由：</strong> 国家级供应链攻击覆盖 npm、Packagist、Go 与 Chrome 多个生态，并滥用 VS Code 任务与 Git 历史重写隐蔽持久化。</li>
@@ -80,7 +104,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/north-korean-hackers-publish-108.html</li>
 </ul>
 <hr />
-<h2>4. "Bad Epoll" Linux 内核提权漏洞影响 Android 与 Chrome 沙箱</h2>
+<h2 id="s4">4. "Bad Epoll" Linux 内核提权漏洞影响 Android 与 Chrome 沙箱</h2>
 <ul>
 <li><strong>评分：</strong> 88 分</li>
 <li><strong>评分理由：</strong> CVE-2026-46242 为 Linux 内核 use-after-free 本地提权漏洞，PoC 成功率约 99%，且可从 Chrome 渲染器沙箱内触发，影响面极广。</li>
@@ -89,7 +113,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html</li>
 </ul>
 <hr />
-<h2>5. YouTube Studio AI 助手存在提示注入，可泄露创作者私密视频</h2>
+<h2 id="s5">5. YouTube Studio AI 助手存在提示注入，可泄露创作者私密视频</h2>
 <ul>
 <li><strong>评分：</strong> 82 分</li>
 <li><strong>评分理由：</strong> 大型平台 AI 功能存在提示注入与信任模型缺陷，影响全球数百万 YouTube 创作者及其未发布/私密内容。</li>
@@ -102,5 +126,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-04.html">← 前一天 2026-07-04</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-06.html">后一天 2026-07-06 →</a>
+</div>
+
 </body>
 </html>

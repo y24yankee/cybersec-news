@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,13 +63,20 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-20</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 安全新闻</a></li>
+<li><a href="#s7">备注</a></li>
+</ol>
+</nav>
+
 <blockquote>
 <p>今日份 5 条重点新闻来自 3 个来源（The Hacker News / Bleeping Computer / Hacker News），共筛选 15 条候选，最终评出 Top 5。</p>
 <p>📅 微软 7 月补丁日（Patch Tuesday）数据已稳定——CVRF 最后更新于 2026-07-18，相关数据已在 2026-07-18 / 2026-07-19 推送中完整呈现，本日不再重复；距下次 Patch Tuesday（2026-08-12）还有 23 天。</p>
 </blockquote>
 <hr />
-<h2>Top 5 安全新闻</h2>
-<h3>1. CERT-UA 正式命名 UAC-0145：俄军 GRU 旗下 Sandworm 子集群借 ClickFix 攻击乌克兰</h3>
+<h2 id="s1">Top 5 安全新闻</h2>
+<h3 id="s2">1. CERT-UA 正式命名 UAC-0145：俄军 GRU 旗下 Sandworm 子集群借 ClickFix 攻击乌克兰</h3>
 <ul>
 <li><strong>评分：95/100</strong> — 国家级 APT 集群被正式命名与归属，攻击链横跨 Windows + Android、采用 EtherHiding（以太坊智能合约）C2 与 ClickFix 社会工程学，是 2026 年最具地缘政治意义的事件之一。</li>
 <li><strong>来源：</strong> The Hacker News（基于 CERT-UA 官方预警，2026-07-19）</li>
@@ -65,7 +86,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li>https://thecyberexpress.com/clickfix-attacks-fuel-uac-0145-cyber-campaigns/</li>
 <li>https://www.discernion.com/article/uac-0145-uses-clickfix-captchas-to-infect-ukrainian-devices-with-malware</li>
 </ul>
-<h3>2. Volexity 披露 UTA0533：SonicWall SMA 1000 零日链被预披露利用长达三周，CVSS 满分</h3>
+<h3 id="s3">2. Volexity 披露 UTA0533：SonicWall SMA 1000 零日链被预披露利用长达三周，CVSS 满分</h3>
 <ul>
 <li><strong>评分：93/100</strong> — CVE-2026-15409 拿到 CVSS 10.0（满分），与 CVE-2026-15410（7.2）串联实现未认证 RCE→root；Volexity 复盘显示活动最早可追溯到 2026-06-22，比 SonicWall 7 月 14 日公开披露早约三周，针对网络边界 VPN 设备的"先入侵、再披露"是 2026 年最危险的一类攻击。</li>
 <li><strong>来源：</strong> Bleeping Computer / The Hacker News（Volexity 原始报告 2026-07-17，THN/媒体跟进 2026-07-19）</li>
@@ -76,7 +97,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li>https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-sonicwall-sma-1000-flaws/</li>
 <li>https://insight.tmcnet.com/insight/pre-disclosure-zero-days-hit-remote-access-infrastructure-bf2689</li>
 </ul>
-<h3>3. Ecopetrol 披露重大网络攻击：3,300 账户数据外泄，拉美最大能源企业直面勒索</h3>
+<h3 id="s4">3. Ecopetrol 披露重大网络攻击：3,300 账户数据外泄，拉美最大能源企业直面勒索</h3>
 <ul>
 <li><strong>评分：88/100</strong> — 受害方为哥伦比亚最大企业、占该国 60% 油气产量、市值 330 亿美元的关键基础设施上市公司，15 家子公司云存储遭波及、含数据窃取 + 勒索 + 已阻止的勒索软件三重攻击链。</li>
 <li><strong>来源：</strong> Reuters / Yahoo Finance / Ecopetrol 官方披露（2026-07-17）</li>
@@ -86,7 +107,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li>https://www.nasdaq.com/press-release/ecopetrol-reports-cybersecurity-incident-2026-07-17</li>
 <li>https://www.financecolombia.com/ecopetrol-hacked</li>
 </ul>
-<h3>4. CitrixBleed 2 被初始访问中介武器化，1–6 月已导致 DragonForce 勒索软件落地</h3>
+<h3 id="s5">4. CitrixBleed 2 被初始访问中介武器化，1–6 月已导致 DragonForce 勒索软件落地</h3>
 <ul>
 <li><strong>评分：85/100</strong> — 经典 CitrixBleed 模式再现，多行业受害者被同一剧本打穿，Huntress 报告显示已出现真实勒索软件落地（DragonForce），时间窗口横跨 2026 年上半年。</li>
 <li><strong>来源：</strong> Cybersecurity Dive（Huntress 报告，2026-07-18）</li>
@@ -94,7 +115,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong></li>
 <li>https://www.cybersecuritydive.com/news/initial-access-broker-citrixbleed2-flaw-DragonForce/824961/</li>
 </ul>
-<h3>5. 雅培（Abbott）实验室遭双重网络攻击：ShinyHunters 勒索团伙声言窃取 3,000 万+ 患者数据</h3>
+<h3 id="s6">5. 雅培（Abbott）实验室遭双重网络攻击：ShinyHunters 勒索团伙声言窃取 3,000 万+ 患者数据</h3>
 <ul>
 <li><strong>评分：82/100</strong> — 受害方为拥有 12.2 万员工、业务遍及 160+ 国家的财富 500 强医疗科技巨头；据称超过 3,000 万条患者数据被窃，反映医疗行业并购后遗留系统治理风险。</li>
 <li><strong>来源：</strong> Bleeping Computer / MedTech Dive（2026-07-16 / 07-17）</li>
@@ -103,7 +124,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li>https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/</li>
 </ul>
 <hr />
-<h2>备注</h2>
+<h2 id="s7">备注</h2>
 <ul>
 <li><strong>本次共筛选 15 条新闻候选，最高分 95 分（UAC-0145 Sandworm GRU 归因事件）。</strong></li>
 <li>关键主题：国家级 APT 命名（Sovereign APT attribution）、网络边界设备零日预披露（Pre-disclosure edge zero-day）、关键基础设施勒索与数据外泄（Critical-infrastructure extortion）、内存漏洞武器化（CitrixBleed-2 class）、医疗行业并购后遗留系统风险（M&amp;A tech-debt breach）。</li>
@@ -113,5 +134,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-19.html">← 前一天 2026-07-19</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-21.html">后一天 2026-07-21 →</a>
+</div>
+
 </body>
 </html>

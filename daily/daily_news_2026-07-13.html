@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,7 +63,17 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-13</h1>
-<h2>1. XRING：Alibaba XQUIC 库未修补零日漏洞可远程崩溃 HTTP/3 服务器</h2>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. XRING：Alibaba XQUIC 库未修补零日漏洞可远程崩溃 HTTP/3 服务器</a></li>
+<li><a href="#s2">2. GuardFall：十款主流开源 AI 编程助手的 Shell 注入防护可被系统化绕过</a></li>
+<li><a href="#s3">3. Ghostcommit：通过 PNG 图像藏匿提示注入以窃取 AI 代理仓库密钥</a></li>
+<li><a href="#s4">4. CISA 公开内部 AWS GovCloud 凭据泄露事件并发布应急响应经验</a></li>
+<li><a href="#s5">5. PraisonAI 多个关键 RCE 漏洞（CVSS 10.0）允许无沙箱执行 LLM 生成代码</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">1. XRING：Alibaba XQUIC 库未修补零日漏洞可远程崩溃 HTTP/3 服务器</h2>
 <ul>
 <li><strong>评分：</strong> 95/100</li>
 <li><strong>来源：</strong> The Hacker News</li>
@@ -57,7 +81,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由：</strong> 互联网关键协议栈未修补零日，影响阿里云/CDN 及所有内嵌 XQUIC 的第三方 HTTP/3 服务，触发流量完全合规无法被传统 IDS 检出。</li>
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/unpatched-xring-flaw-in-xquic-lets.html</li>
 </ul>
-<h2>2. GuardFall：十款主流开源 AI 编程助手的 Shell 注入防护可被系统化绕过</h2>
+<h2 id="s2">2. GuardFall：十款主流开源 AI 编程助手的 Shell 注入防护可被系统化绕过</h2>
 <ul>
 <li><strong>评分：</strong> 92/100</li>
 <li><strong>来源：</strong> Bleeping News / CSA Research</li>
@@ -65,7 +89,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由：</strong> AI 代理安全过滤器属架构性而非单点缺陷，目前无任何受影响项目发布结构性修复，直接威胁开发者主机与 CI/CD 环境。</li>
 <li><strong>原文链接：</strong> https://labs.cloudsecurityalliance.org/research/csa-research-note-guardfall-ai-coding-agent-shell-injection</li>
 </ul>
-<h2>3. Ghostcommit：通过 PNG 图像藏匿提示注入以窃取 AI 代理仓库密钥</h2>
+<h2 id="s3">3. Ghostcommit：通过 PNG 图像藏匿提示注入以窃取 AI 代理仓库密钥</h2>
 <ul>
 <li><strong>评分：</strong> 91/100</li>
 <li><strong>来源：</strong> BleepingComputer</li>
@@ -73,7 +97,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由：</strong> 利用代理与审查器之间结构性的多模态盲点，攻击 PoC 已公开，主流 Cursor/Antigravity 全数沦陷，开发者供应链面临真实失窃风险。</li>
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/</li>
 </ul>
-<h2>4. CISA 公开内部 AWS GovCloud 凭据泄露事件并发布应急响应经验</h2>
+<h2 id="s4">4. CISA 公开内部 AWS GovCloud 凭据泄露事件并发布应急响应经验</h2>
 <ul>
 <li><strong>评分：</strong> 90/100</li>
 <li><strong>来源：</strong> The Hacker News / BleepingComputer</li>
@@ -81,7 +105,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由：</strong> 美国网安主管机构主动披露的供应链级云凭据事件，权威性与示范效应极强，对所有使用公有云的企业具直接借鉴价值。</li>
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/cisa-discloses-internal-aws-govcloud.html</li>
 </ul>
-<h2>5. PraisonAI 多个关键 RCE 漏洞（CVSS 10.0）允许无沙箱执行 LLM 生成代码</h2>
+<h2 id="s5">5. PraisonAI 多个关键 RCE 漏洞（CVSS 10.0）允许无沙箱执行 LLM 生成代码</h2>
 <ul>
 <li><strong>评分：</strong> 88/100</li>
 <li><strong>来源：</strong> The Hacker News</li>
@@ -94,5 +118,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-12.html">← 前一天 2026-07-12</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-14.html">后一天 2026-07-14 →</a>
+</div>
+
 </body>
 </html>

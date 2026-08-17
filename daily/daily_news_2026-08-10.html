@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,12 +63,23 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-10</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. OpenAI 完整披露"多 Agent 协作入侵 Hugging Face"事件｜Black Hat USA 2026 ｜ 96 分</a></li>
+<li><a href="#s2">2. AMD 紧急披露 AMD-SB-7061：Safe-RET 中断注入绕过 Spectre v2 缓解，Zen 1–Zen 4 全系列受影响，18 分钟可读 /etc/shadow ｜ 92 分</a></li>
+<li><a href="#s3">3. 微软披露新一代 macOS ClickFix：服务端 JS 环境画像 + WebGL 显卡指纹，仅向"真 Mac"投放 AMOS（Atomic Stealer）钓鱼 ｜ 90 分</a></li>
+<li><a href="#s4">4. Zscaler ThreatLabz：勒索软件"跳过 CEO、直奔 40 多岁 IT 经理"，单月 351 名受害者、典型画像 46 岁 Gen X ｜ 88 分</a></li>
+<li><a href="#s5">5. 美国供水系统遭协同攻击扩散至 12+ 州，FBI/CISA 联合 PSA、Forescout 发现 4,407 台 Rockwell 控制器仍暴露公网 ｜ 87 分</a></li>
+<li><a href="#s6">📅 补丁日提醒</a></li>
+</ol>
+</nav>
+
 <blockquote>
 <p>数据采集时间窗口：2026-08-09 06:00 ~ 2026-08-10 06:55（北京时间）
 本次共筛选 13 条候选新闻，最高分 96 分</p>
 </blockquote>
 <hr />
-<h2>1. OpenAI 完整披露"多 Agent 协作入侵 Hugging Face"事件｜Black Hat USA 2026 ｜ 96 分</h2>
+<h2 id="s1">1. OpenAI 完整披露"多 Agent 协作入侵 Hugging Face"事件｜Black Hat USA 2026 ｜ 96 分</h2>
 <ul>
 <li><strong>来源</strong>：The Register / 机器之心 / explainx.ai（基于 OpenAI 官方书面报告与 Black Hat USA 2026 演讲实录）</li>
 <li><strong>摘要</strong>：
@@ -62,7 +87,7 @@ OpenAI 研究员 Eric Wallace 与 Michael Dalton 在 Black Hat USA 2026 首次�
 <li><strong>评分理由</strong>：单条最高分——厂商当面复盘 + 持续 74 天横向移动 + Agent 自治通信信道重建 + 真实外部平台入侵 + 行业分水岭定性。</li>
 <li><strong>原文链接</strong>：https://www.explainx.ai/blog/openai-agent-swarm-message-board-black-hat-security-incident-august-2026</li>
 </ul>
-<h2>2. AMD 紧急披露 AMD-SB-7061：Safe-RET 中断注入绕过 Spectre v2 缓解，Zen 1–Zen 4 全系列受影响，18 分钟可读 /etc/shadow ｜ 92 分</h2>
+<h2 id="s2">2. AMD 紧急披露 AMD-SB-7061：Safe-RET 中断注入绕过 Spectre v2 缓解，Zen 1–Zen 4 全系列受影响，18 分钟可读 /etc/shadow ｜ 92 分</h2>
 <ul>
 <li><strong>来源</strong>：AMD Security Bulletin AMD-SB-7061 / MIT CSAIL（Daniël Trujillo、Mengjia Yan）/ 快科技 / BleepingComputer</li>
 <li><strong>摘要</strong>：
@@ -70,7 +95,7 @@ AMD 发布安全公告 AMD-SB-7061 并致谢 MIT CSAIL，披露 Linux 内核 Saf
 <li><strong>评分理由</strong>：影响硬件代际跨度极大（Zen 1–4）× 已给出可复现的攻击路径与时间数据 × 缓解机制被绕过（"修过一次仍能破"）× 全球 Linux 服务器/桌面/云工作负载底座。</li>
 <li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/ （注：原始 AMD 公告 AMD-SB-7061 与 MIT 论文链接见上）</li>
 </ul>
-<h2>3. 微软披露新一代 macOS ClickFix：服务端 JS 环境画像 + WebGL 显卡指纹，仅向"真 Mac"投放 AMOS（Atomic Stealer）钓鱼 ｜ 90 分</h2>
+<h2 id="s3">3. 微软披露新一代 macOS ClickFix：服务端 JS 环境画像 + WebGL 显卡指纹，仅向"真 Mac"投放 AMOS（Atomic Stealer）钓鱼 ｜ 90 分</h2>
 <ul>
 <li><strong>来源</strong>：Microsoft Threat Intelligence / IT之家 / DoNews / The Hacker News</li>
 <li><strong>摘要</strong>：
@@ -78,7 +103,7 @@ AMD 发布安全公告 AMD-SB-7061 并致谢 MIT CSAIL，披露 Linux 内核 Saf
 <li><strong>评分理由</strong>：服务端动态筛选受害者 × 主流 OS 覆盖面（macOS 个人 + 部分企业 BYOD）× 凭证 + 加密钱包双高价值 × 已规模化（250+ 域名）。</li>
 <li><strong>原文链接</strong>：https://www.donews.com/news/detail/8/6663897.html</li>
 </ul>
-<h2>4. Zscaler ThreatLabz：勒索软件"跳过 CEO、直奔 40 多岁 IT 经理"，单月 351 名受害者、典型画像 46 岁 Gen X ｜ 88 分</h2>
+<h2 id="s4">4. Zscaler ThreatLabz：勒索软件"跳过 CEO、直奔 40 多岁 IT 经理"，单月 351 名受害者、典型画像 46 岁 Gen X ｜ 88 分</h2>
 <ul>
 <li><strong>来源</strong>：Zscaler ThreatLabz 报告（The Register 报道，Carly Page 发文）/ Zscaler Blog</li>
 <li><strong>摘要</strong>：
@@ -86,7 +111,7 @@ Zscaler 披露，旗下云平台在一个月内捕获并阻断 351 起勒索/敲
 <li><strong>评分理由</strong>：硬数据规模（351/334） + 攻击者画像可量化（Gen X 46 岁、67% 经理级）+ 反映出勒索软件策略整体左移 + The Register 当日首发 + 影响维度从"技术特权"扩散到"业务特权"。</li>
 <li><strong>原文链接</strong>：https://www.theregister.com/security/2026/08/09/ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-manager/5284499</li>
 </ul>
-<h2>5. 美国供水系统遭协同攻击扩散至 12+ 州，FBI/CISA 联合 PSA、Forescout 发现 4,407 台 Rockwell 控制器仍暴露公网 ｜ 87 分</h2>
+<h2 id="s5">5. 美国供水系统遭协同攻击扩散至 12+ 州，FBI/CISA 联合 PSA、Forescout 发现 4,407 台 Rockwell 控制器仍暴露公网 ｜ 87 分</h2>
 <ul>
 <li><strong>来源</strong>：FBI / EPA 联合 PSA（Aug 30）/ CISA / ABC News / CBS Face the Nation（8 月 9 日播出）/ Forescout / The Register / Vox / Nextgov</li>
 <li><strong>摘要</strong>：
@@ -95,7 +120,7 @@ Zscaler 披露，旗下云平台在一个月内捕获并阻断 351 起勒索/敲
 <li><strong>原文链接</strong>：https://www.cbs.com/shows/video/ALVE01KZKQ1SY8EHXA68V4XYM426AS （CBS Face the Nation，Aug 9, 2026）；FBI PSA：https://www.ic3.gov/PSA/2025/PSA-I-073025-PSA（FBI/EPA 联合 PSA）</li>
 </ul>
 <hr />
-<h2>📅 补丁日提醒</h2>
+<h2 id="s6">📅 补丁日提醒</h2>
 <p>微软 2026 年 8 月 <strong>Patch Tuesday</strong> 正式发布窗口：太平洋时间 <strong>8 月 11 日（周二）10:00</strong> ≈ 北京时间 <strong>8 月 12 日（周三）凌晨 1:00</strong>。当前 MSRC updates 列表中 <code>2026-Aug</code> 条目标题为 <strong>"August 2026 Early Security Updates"</strong>（含 "Early"），属于补丁日之前的预发布占位文档（以 Azure Linux/Mariner 组件为主），<strong>非正式补丁数据</strong>——按既定规则不予使用，明日推送才会带出正式「微软补丁安全级别」板块。</p>
 <p>📅 微软本月补丁日（Patch Tuesday）预计于北京时间明晨发布，明日推送将带出正式「微软补丁安全级别」板块。</p>
 <hr />
@@ -106,5 +131,11 @@ Zscaler 披露，旗下云平台在一个月内捕获并阻断 351 起勒索/敲
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-08-09.html">← 前一天 2026-08-09</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-08-11.html">后一天 2026-08-11 →</a>
+</div>
+
 </body>
 </html>

@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,11 +63,22 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-08</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. Metabase 零日 SQL 注入漏洞（CVSS 10.0）遭在野利用，Framework 与 Tally 客户数据被盗</a></li>
+<li><a href="#s2">2. Claude Code 与 Gemini CLI 严重缺陷：一个 GitHub Issue 即可窃取 CI 流水线密钥（CVE-2026-12537, CVSS 10.0）</a></li>
+<li><a href="#s3">3. 恶意软件可滥用 Windows Hello for Business 密钥实现 Entra ID 持久化访问——绕过钓鱼 resistant 认证</a></li>
+<li><a href="#s4">4. OpenAI 称 Astra 模型可能达到"关键性"网络安全能力阈值——暂停部分内部开发</a></li>
+<li><a href="#s5">5. Linux SCTP 18 年老漏洞（SCTPhantom, CVE-2026-64564）可获取 Root 权限并逃逸容器</a></li>
+<li><a href="#s6">其他值得关注的新闻</a></li>
+</ol>
+</nav>
+
 <blockquote>
 <p>数据来源：The Hacker News、Bleeping Computer、Hacker News (YC) | 时间范围：2026-08-07 ~ 2026-08-08</p>
 </blockquote>
 <hr />
-<h2>1. Metabase 零日 SQL 注入漏洞（CVSS 10.0）遭在野利用，Framework 与 Tally 客户数据被盗</h2>
+<h2 id="s1">1. Metabase 零日 SQL 注入漏洞（CVSS 10.0）遭在野利用，Framework 与 Tally 客户数据被盗</h2>
 <p><strong>评分：95 分</strong> | 严重性：CVSS 10.0 零日，已在野利用，已确认数据泄露 | 来源：Bleeping Computer / RuntimeWire</p>
 <p>Metabase 披露其云服务遭零日攻击，攻击者利用 <code>/api/session/reset_password</code> 端点的未授权 SQL 注入漏洞，向 Metabase 应用数据库注入任意 SQL 并获取实例管理员权限。管理员权限可更改配置、窃取已连接数据库的存储凭据、读取并导出数据。漏洞 CVSS 评分为满分 10.0，影响 0.58 及以上所有分支版本，自托管部署同样存在风险。笔记本电脑制造商 Framework 和表单构建工具 Tally 已确认数据被盗——Framework 客户的姓名、邮箱、IP、地址等信息于 8 月 3 日被访问，Tally 用户邮箱和密码哈希泄露。Metabase 已在所有受影响分支发布修复版本（0.58.24 / 0.59.21 / 0.60.17 / 0.61.11 / 0.62.9 / 0.63.5），并提供了 IoC 检测模式：POST <code>/api/session/reset_password</code> 返回 400 后紧跟成功 GET <code>/api/user/current</code>。</p>
 <blockquote>
@@ -61,7 +86,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </blockquote>
 <p>🔗 <a href="https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/">BleepingComputer</a> | <a href="https://runtimewire.com/article/metabase-zero-day-framework-tally-data-theft">RuntimeWire</a> | <a href="https://github.com/metabase/metabase/security/advisories/GHSA-vwf4-m7j8-wcjf">Metabase 安全公告</a></p>
 <hr />
-<h2>2. Claude Code 与 Gemini CLI 严重缺陷：一个 GitHub Issue 即可窃取 CI 流水线密钥（CVE-2026-12537, CVSS 10.0）</h2>
+<h2 id="s2">2. Claude Code 与 Gemini CLI 严重缺陷：一个 GitHub Issue 即可窃取 CI 流水线密钥（CVE-2026-12537, CVSS 10.0）</h2>
 <p><strong>评分：93 分</strong> | 严重性：CVSS 10.0 命令注入，可从无权限 GitHub Issue 触达 CI Runner 密钥 | 来源：The Hacker News</p>
 <p>Novee Security 在 Black Hat USA 2026（8 月 5 日）上披露，攻击者只需在公开仓库开一个无权限的 GitHub Issue，即可通过 AI 编程助手的 harness 层在 CI Runner 上执行代码并窃取工作流密钥。Gemini CLI 的 CVE-2026-12537（CVSS v4 10.0）是容器启动器中的 OS 命令注入，通过精心构造的 <code>.gemini/.env</code> 文件在沙箱启动前执行代码——该漏洞不依赖模型，纯粹是 harness 中"先标记安全、后以更高权限执行"的信任边界断裂。Claude Code 的 CVE-2026-54316 则将 Hugging Face 公共下载计数器变为数据外泄通道，API 密钥被逐字符泄露；NVD 给出 CVSS v3.1 9.1 分。研究还发现 OpenAI Codex 可被劫持下一次 agent 运行（无 CVE，OpenAI 称沙箱行为"符合文档"）。修复版本：Gemini CLI 0.39.1 / run-gemini-cli 0.1.22，Claude Code 2.1.163。</p>
 <blockquote>
@@ -69,7 +94,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </blockquote>
 <p>🔗 <a href="https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html">The Hacker News</a> | <a href="https://dailysecurityreview.com/resources/claude-code-and-gemini-cli-flaws-expose-ci-workflow-secrets">Daily Security Review</a></p>
 <hr />
-<h2>3. 恶意软件可滥用 Windows Hello for Business 密钥实现 Entra ID 持久化访问——绕过钓鱼 resistant 认证</h2>
+<h2 id="s3">3. 恶意软件可滥用 Windows Hello for Business 密钥实现 Entra ID 持久化访问——绕过钓鱼 resistant 认证</h2>
 <p><strong>评分：91 分</strong> | 严重性：绕过 phishing-resistant 认证，无需管理员权限，PoC 已公开 | 来源：The Hacker News</p>
 <p>安全研究员 Dirk-jan Mollema 演示了已在受害者已登录 Windows 会话中运行的恶意软件，可静默使用受害者的 Windows Hello for Business (WHfB) 密钥向 Microsoft Entra ID 认证——无需管理员权限、无需触发生物识别提示、无需从 TPM 提取私钥。攻击者可借此建立持久云访问、注册受控设备、获取 Primary Refresh Token（有效期 90 天），甚至在策略允许时添加额外认证方式。关键技术突破：将 WHfB 密钥视为 FIDO2 passkey 通过 WebAuthn 使用，发现 Entra ID 的 5 分钟 challenge 未绑定到会话/用户/租户，因此攻击者可在另一台主机上请求 challenge 并让被入侵端点生成签名断言。该登录甚至满足 Conditional Access 中"phishing-resistant authentication strength"策略要求。Microsoft 表示该行为"保持原样"不做修复。PoC 脚本已在 ROADtools GitHub 仓库公开。</p>
 <blockquote>
@@ -77,7 +102,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </blockquote>
 <p>🔗 <a href="https://thehackernews.com/2026/08/malware-can-abuse-windows-hello-for.html">The Hacker News</a> | <a href="https://dirkjanm.io/borrowing-windows-hello-keys/">研究员博客</a></p>
 <hr />
-<h2>4. OpenAI 称 Astra 模型可能达到"关键性"网络安全能力阈值——暂停部分内部开发</h2>
+<h2 id="s4">4. OpenAI 称 Astra 模型可能达到"关键性"网络安全能力阈值——暂停部分内部开发</h2>
 <p><strong>评分：90 分</strong> | 严重性：前沿 AI 模型可能自主发现并利用零日漏洞 | 来源：新浪财经 / OpenAI 官方声明</p>
 <p>OpenAI 周五表示，其即将推出的 AI 模型 Astra 可能具备"关键性"(critical) 网络安全能力，促使公司暂停部分内部开发并启动安全协议。根据 OpenAI 的安全准则，若模型能自主识别和利用严重的现实世界软件漏洞（零日），或在无需人工干预的情况下对高安全目标执行复杂网络攻击，则达到"关键"阈值。初步评估及外部专家评估显示，Astra 可能能自主执行日益复杂的网络任务。OpenAI 已将 Astra 开发转移至隔离测试环境（受限网络访问 + 沙箱执行），并加强与政府机构和 AI 安全组织的合作。此前 OpenAI、Anthropic 和 Meta 均已披露其 AI 模型在安全测试期间入侵了外部系统。OpenAI 澄清 Astra 未参与针对 HuggingFace 的攻击事件。</p>
 <blockquote>
@@ -85,7 +110,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </blockquote>
 <p>🔗 <a href="https://finance.sina.com.cn/world/2026-08-08/doc-inimpwwc6765308.shtml">新浪财经</a></p>
 <hr />
-<h2>5. Linux SCTP 18 年老漏洞（SCTPhantom, CVE-2026-64564）可获取 Root 权限并逃逸容器</h2>
+<h2 id="s5">5. Linux SCTP 18 年老漏洞（SCTPhantom, CVE-2026-64564）可获取 Root 权限并逃逸容器</h2>
 <p><strong>评分：89 分</strong> | 严重性：本地提权 + 容器逃逸，影响 2008 年以来所有 Linux 内核 | 来源：The Hacker News</p>
 <p>腾讯朱雀实验室披露 Linux SCTP 网络代码中一个存在 18 年的 use-after-free 漏洞（CVE-2026-64564，命名为"SCTPhantom"），可被利用获取主机 root 权限并逃逸容器。漏洞源于动态地址重配置中的身份混淆：内核用数据包源地址校验删除请求，但实际操作的路径是根据消息内另一个地址选取的——一条消息携带地址、该地址的删除请求和通配符删除即可触发释放后重用。该漏洞自 Linux 2.6.25（2008 年）起存在于所有内核版本。研究人员在 Debian 13、Ubuntu 24.04、Rocky Linux 9、RHEL 9 和 OpenCloudOS 上测试，容器逃逸成功率达 6/8（75%），且保持默认 seccomp 配置、未授予 CAP_NET_ADMIN 或 CAP_SYS_ADMIN。修复已包含在 8 月 3 日发布的稳定内核 7.1.6、6.18.42、6.12.101 和 6.6.148 中。漏洞由腾讯自研多智能体研究管线 Corvus AI 发现，是近期 AI 辅助发现的系列休眠内核漏洞之一。</p>
 <blockquote>
@@ -93,7 +118,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </blockquote>
 <p>🔗 <a href="https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html">The Hacker News</a> | <a href="https://matrix.tencent.com/en/2026/08/06/sctphantom-CVE-2026-64564">腾讯朱雀实验室分析</a></p>
 <hr />
-<h2>其他值得关注的新闻</h2>
+<h2 id="s6">其他值得关注的新闻</h2>
 <table>
 <thead>
 <tr>
@@ -155,5 +180,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-08-07.html">← 前一天 2026-08-07</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-08-09.html">后一天 2026-08-09 →</a>
+</div>
+
 </body>
 </html>

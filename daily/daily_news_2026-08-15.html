@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,43 +63,50 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-15</h1>
-<h2>Top 5 网络安全新闻</h2>
-<h3>1. SAP Commerce Cloud CVE-2026-58231 CVSS 10.0 无认证 RCE 已开始遭受在野攻击</h3>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 网络安全新闻</a></li>
+<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. SAP Commerce Cloud CVE-2026-58231 CVSS 10.0 无认证 RCE 已开始遭受在野攻击</h3>
 <ul>
 <li><strong>评分：94 分</strong>（理由：最高 severity、无认证 RCE、已被威胁情报公司 Defused 确认在野利用，且 SAP Commerce Cloud 服务全球顶级品牌。）</li>
 <li><strong>来源：</strong> BleepingComputer</li>
 <li><strong>摘要：</strong> SAP 于 8 月 Patch Day 修复的 Commerce Cloud Data Hub Adapter 权限控制缺陷（CVE-2026-58231，CVSS 10.0）在补丁发布三天后即遭在野利用。攻击者无需认证即可在受影响实例上执行任意代码。Shadowserver 监测到全球超过 4,200 个暴露的 SAP Commerce Cloud IP，主要分布于欧洲和北美。</li>
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/</li>
 </ul>
-<h3>2. RingCentral 数据泄露：ShinyHunters 泄露 160 万账户信息</h3>
+<h3 id="s3">2. RingCentral 数据泄露：ShinyHunters 泄露 160 万账户信息</h3>
 <ul>
 <li><strong>评分：91 分</strong>（理由：大规模已确认数据泄露，影响企业通信平台 160 万账户，且攻击者已公开 280 GB 数据。）</li>
 <li><strong>来源：</strong> BleepingComputer</li>
 <li><strong>摘要：</strong> 勒索组织 ShinyHunters 声称对 7 月入侵 RingCentral 负责，并在 RingCentral 拒绝支付赎金后在其暗网泄露站点公开 280 GB 数据。Have I Been Pwned 确认泄露影响 160 万个账户，暴露姓名、邮箱、电话号码和物理地址。RingCentral 称核心平台未受影响。</li>
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/ringcentral-data-breach-exposed-info-of-16-million-accounts/</li>
 </ul>
-<h3>3. VMware vCenter CVE-2026-59310 关键 RCE 已在 47 个国家 361 个 IP 上遭利用</h3>
+<h3 id="s4">3. VMware vCenter CVE-2026-59310 关键 RCE 已在 47 个国家 361 个 IP 上遭利用</h3>
 <ul>
 <li><strong>评分：90 分</strong>（理由：虚拟化管理控制面关键 RCE、无缓解措施、全球范围活跃利用，对数据中心构成系统性风险。）</li>
 <li><strong>来源：</strong> BleepingComputer</li>
 <li><strong>摘要：</strong> Broadcom 于 7 月 29 日披露的 vCenter Syslog Server 目录遍历漏洞（CVE-2026-59310）现已被用于活跃攻击。QUIRSO 称截至 8 月 7 日已在 47 个国家识别 361 个受害 IP，攻击者利用 reverse_ssh 建立持久远程访问。厂商未提供临时缓解方案，仅能通过紧急补丁修复。</li>
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/</li>
 </ul>
-<h3>4. macOS 屏幕共享漏洞 CVE-2026-65400 正被主动利用以获取 root 权限并部署门罗币矿机</h3>
+<h3 id="s5">4. macOS 屏幕共享漏洞 CVE-2026-65400 正被主动利用以获取 root 权限并部署门罗币矿机</h3>
 <ul>
 <li><strong>评分：88 分</strong>（理由：内置 macOS 功能认证绕过、已公开 PoC、正被在野利用并获取 root，影响范围广。）</li>
 <li><strong>来源：</strong> BleepingComputer</li>
 <li><strong>摘要：</strong> 荷兰 NCSC 警告，macOS 屏幕共享功能（VNC over TCP 5900）的认证绕过漏洞 CVE-2026-65400 正被在野利用。Apple 已于 8 月 6 日发布补丁，但多个面向互联网的系统仍暴露。攻击者可无需有效凭据远程控制屏幕、修改安全设置，已在观测案例中获取 root 并部署 Monero 矿机。</li>
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/hackers-exploit-macos-screen-sharing-flaw-to-deploy-monero-miner/</li>
 </ul>
-<h3>5. GeoServer 未修补零日 SQL 注入可导致 RCE，已观测主动利用</h3>
+<h3 id="s6">5. GeoServer 未修补零日 SQL 注入可导致 RCE，已观测主动利用</h3>
 <ul>
 <li><strong>评分：87 分</strong>（理由：开源地理服务器零日尚无补丁、公开披露数小时内即出现利用尝试、在特定配置下可致 RCE。）</li>
 <li><strong>来源：</strong> The Hacker News</li>
 <li><strong>摘要：</strong> 安全研究员 @q1uf3ng 于 8 月 12 日公开披露 GeoServer 中存在未授权 SQL 注入漏洞，在系统管理员数据库配置下可导致远程代码执行。watchTowr 表示在公开披露后数小时内即观测到来自少量 IP 的数百次探测。目前该漏洞尚未分配 CVE，也无官方补丁，建议限制公网访问。</li>
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html</li>
 </ul>
-<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
 <p>本月 MSRC CVRF 文档标题为 <strong>"August 2026 Security Updates"</strong>，已确认为正式发布版本，非 Early 预发布文档。</p>
 <ul>
 <li><strong>CVE 总数：</strong> 798</li>
@@ -97,7 +118,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>已被在野利用（Exploited:Yes）：</strong> 1 个</li>
 <li><strong>CVSS BaseScore ≥ 9.0：</strong> 68 个</li>
 </ul>
-<h3>在野利用 CVE</h3>
+<h3 id="s8">在野利用 CVE</h3>
 <table>
 <thead>
 <tr>
@@ -116,7 +137,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tr>
 </tbody>
 </table>
-<h3>高危 CVE 清单（Critical 且 CVSS ≥ 9.0，部分展示）</h3>
+<h3 id="s9">高危 CVE 清单（Critical 且 CVSS ≥ 9.0，部分展示）</h3>
 <table>
 <thead>
 <tr>
@@ -181,12 +202,18 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <p>其余 60 个 CVSS ≥ 9.0 的 CVE 详见 MSRC Security Update Guide：
 https://msrc.microsoft.com/update-guide</p>
 </blockquote>
-<h3>核心风险总结</h3>
+<h3 id="s10">核心风险总结</h3>
 <p>本月补丁规模庞大（798 个 CVE），虽仅 1 个公开确认在野利用（AFD.sys 提权，CVSS 7.0），但 Critical 级别漏洞多达 110 个，其中 68 个 CVSS ≥ 9.0，云组件（Azure Service Bus / Entra / SQL / AAD）和核心 Windows 服务（DNS、QUIC、Deployment Services）占据高危主体，建议优先修复面向公网和高价值资产的服务。</p>
 <hr />
 <p>本次共筛选 <strong>15 条</strong>候选新闻，最高分 <strong>94 分</strong>。候选来源包括 BleepingComputer、The Hacker News 与 Hacker News（news.ycombinator.com）。</p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-08-14.html">← 前一天 2026-08-14</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-08-16.html">后一天 2026-08-16 →</a>
+</div>
+
 </body>
 </html>

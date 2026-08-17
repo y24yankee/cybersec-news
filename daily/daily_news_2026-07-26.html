@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,8 +63,15 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-26</h1>
-<h2>Top 5 网络安全新闻</h2>
-<h3>1. Fastjson 1.x 现无补丁 RCE（CVE-2026-16723，CVSS 9.0），攻击者已开始利用</h3>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 网络安全新闻</a></li>
+<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. Fastjson 1.x 现无补丁 RCE（CVE-2026-16723，CVSS 9.0），攻击者已开始利用</h3>
 <ul>
 <li><strong>评分：94 分</strong></li>
 <li><strong>来源：The Hacker News / Alibaba 安全公告</strong></li>
@@ -58,7 +79,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://github.com/alibaba/fastjson2/wiki/Security-Advisory:-Remote-Code-Execution-in-fastjson-1.2.68%E2%80%931.2.83</li>
 <li><strong>评分理由：</strong> 无补丁的 9.0 分 RCE 影响广泛使用的 Java JSON 库，且默认配置即可利用，攻击面大、时效性极高。</li>
 </ul>
-<h3>2. Cl0p 勒索软件团伙利用 PTC Windchill/FlexPLM 未授权 RCE（CVE-2026-12569，CVSS 9.3）实施数据窃取</h3>
+<h3 id="s3">2. Cl0p 勒索软件团伙利用 PTC Windchill/FlexPLM 未授权 RCE（CVE-2026-12569，CVSS 9.3）实施数据窃取</h3>
 <ul>
 <li><strong>评分：92 分</strong></li>
 <li><strong>来源：The Hacker News / Ransom-ISAC</strong></li>
@@ -66,7 +87,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html</li>
 <li><strong>评分理由：</strong> 制造业 PLM 中的预认证 9.3 分 RCE，由知名勒索团伙武器化，已在 CISA KEV 目录中，影响关键供应链数据。</li>
 </ul>
-<h3>3. GitLab 自管版 RCE PoC 公开：任意可推送用户均可执行 git 用户命令</h3>
+<h3 id="s4">3. GitLab 自管版 RCE PoC 公开：任意可推送用户均可执行 git 用户命令</h3>
 <ul>
 <li><strong>评分：88 分</strong></li>
 <li><strong>来源：The Hacker News / depthfirst</strong></li>
@@ -74,7 +95,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html</li>
 <li><strong>评分理由：</strong> 公开 PoC 使自托管代码平台面临实际威胁，且修复被误分类可能让许多实例仍处于未修补状态。</li>
 </ul>
-<h3>4. SourTrade 恶意广告让浏览器在本地“组装”恶意可执行文件</h3>
+<h3 id="s5">4. SourTrade 恶意广告让浏览器在本地“组装”恶意可执行文件</h3>
 <ul>
 <li><strong>评分：86 分</strong></li>
 <li><strong>来源：The Hacker News / BleepingComputer / Confiant</strong></li>
@@ -82,7 +103,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/malvertising-sends-malware-in-pieces.html</li>
 <li><strong>评分理由：</strong> 利用浏览器作为本地装配管道的投递手法新颖，覆盖 12 个国家、25 种语言，精准针对加密货币投资者。</li>
 </ul>
-<h3>5. Steam 论坛遭 ClickFix 攻击，诱导玩家运行 PowerShell 植入 XMRig 挖矿程序</h3>
+<h3 id="s6">5. Steam 论坛遭 ClickFix 攻击，诱导玩家运行 PowerShell 植入 XMRig 挖矿程序</h3>
 <ul>
 <li><strong>评分：82 分</strong></li>
 <li><strong>来源：BleepingComputer</strong></li>
@@ -91,7 +112,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由：</strong> 针对大型游戏社区的社会工程攻击，利用受害者手动执行绕过自动防护，具备一定规模传播潜力。</li>
 </ul>
 <hr />
-<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
 <blockquote>
 <p>本月 CVRF 文档标题为 <strong>"July 2026 Security Updates"</strong>，已确认为正式补丁发布；数据与 7 月 25 日解析结果保持一致，无新增变更。</p>
 </blockquote>
@@ -122,5 +143,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-25.html">← 前一天 2026-07-25</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-27.html">后一天 2026-07-27 →</a>
+</div>
+
 </body>
 </html>

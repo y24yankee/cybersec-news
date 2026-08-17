@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,12 +63,19 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-15</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 网络安全新闻</a></li>
+<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
 <blockquote>
 <p>本次共筛选 <strong>15 条</strong> 新闻，最高分 <strong>92 分</strong>。</p>
 </blockquote>
 <hr />
-<h2>Top 5 网络安全新闻</h2>
-<h3>1. SAP 修复 NetWeaver ABAP 严重漏洞（CVSS 9.9）</h3>
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. SAP 修复 NetWeaver ABAP 严重漏洞（CVSS 9.9）</h3>
 <ul>
 <li><strong>评分</strong>：92 分</li>
 <li><strong>来源</strong>：The Hacker News / BleepingComputer</li>
@@ -62,7 +83,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由</strong>：CVSS 9.9 的内存破坏漏洞，影响企业关键 ERP 基础设施，且补丁刚发布，利用窗口尚未完全关闭。</li>
 <li><strong>原文链接</strong>：https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html</li>
 </ul>
-<h3>2. SonicWall SMA1000 零日漏洞遭主动利用</h3>
+<h3 id="s3">2. SonicWall SMA1000 零日漏洞遭主动利用</h3>
 <ul>
 <li><strong>评分</strong>：90 分</li>
 <li><strong>来源</strong>：BleepingComputer</li>
@@ -70,7 +91,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由</strong>：已确认野外利用，涉及企业 VPN/安全接入设备，可直接作为网络入侵入口。</li>
 <li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/</li>
 </ul>
-<h3>3. Progress ShareFile 零日漏洞导致 Storage Zone 紧急下线</h3>
+<h3 id="s4">3. Progress ShareFile 零日漏洞导致 Storage Zone 紧急下线</h3>
 <ul>
 <li><strong>评分</strong>：88 分</li>
 <li><strong>来源</strong>：BleepingComputer</li>
@@ -78,7 +99,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由</strong>：真实引发服务紧急关停的零日事件，涉及企业文件共享与敏感数据，时效性极强。</li>
 <li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/</li>
 </ul>
-<h3>4. Claude for Chrome 漏洞可被恶意扩展利用读取 Gmail</h3>
+<h3 id="s5">4. Claude for Chrome 漏洞可被恶意扩展利用读取 Gmail</h3>
 <ul>
 <li><strong>评分</strong>：86 分</li>
 <li><strong>来源</strong>：The Hacker News</li>
@@ -86,7 +107,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由</strong>：AI 扩展与浏览器沙箱边界出现新攻击面，且可导致邮箱/文档数据泄露，代表新兴 AI Agent 安全风险。</li>
 <li><strong>原文链接</strong>：https://thehackernews.com/2026/07/claude-for-chrome-flaw-lets-other.html</li>
 </ul>
-<h3>5. 近 300 个 GitHub 仓库伪装正版软件分发恶意软件</h3>
+<h3 id="s6">5. 近 300 个 GitHub 仓库伪装正版软件分发恶意软件</h3>
 <ul>
 <li><strong>评分</strong>：85 分</li>
 <li><strong>来源</strong>：BleepingComputer</li>
@@ -95,7 +116,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/nearly-300-github-repos-pose-as-legit-software-to-push-malware/</li>
 </ul>
 <hr />
-<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
 <blockquote>
 <p>本板块为独立补丁拆解，不计入 Top 5 新闻。</p>
 </blockquote>
@@ -108,7 +129,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>Moderate</strong>：6 个</li>
 <li><strong>Low</strong>：1 个</li>
 </ul>
-<h3>在野利用 CVE（0day）</h3>
+<h3 id="s8">在野利用 CVE（0day）</h3>
 <p>本月有 <strong>2 个 CVE 被确认已在野利用</strong>，建议优先修复：</p>
 <table>
 <thead>
@@ -134,7 +155,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tr>
 </tbody>
 </table>
-<h3>高危 CVE 清单（CVSS ≥ 9.0，按严重程度展示前 8 条）</h3>
+<h3 id="s9">高危 CVE 清单（CVSS ≥ 9.0，按严重程度展示前 8 条）</h3>
 <table>
 <thead>
 <tr>
@@ -198,9 +219,9 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <blockquote>
 <p><strong>其余 CVSS ≥ 9.0 漏洞</strong>：共 <strong>14 个</strong>，包含 Microsoft Copilot、Exchange Server、GDI+、Dynamics 365 等组件。完整清单见 MSRC Security Update Guide。</p>
 </blockquote>
-<h3>核心风险总结</h3>
+<h3 id="s10">核心风险总结</h3>
 <p>本月补丁规模为微软史上最大（622 个 Microsoft CVE），虽仅 2 个在野利用漏洞且 CVSS 不属最高，但 Critical 级漏洞数量达 62 个，CVSS ≥ 9.0 的高危项集中在 SharePoint、DHCP、Azure OpenAI/Entra、Windows 网络驱动等关键边界/身份/服务组件，企业应在 CISA 强制时限内优先修复面向公网的服务与身份基础设施。</p>
-<h3>参考链接</h3>
+<h3 id="s11">参考链接</h3>
 <ul>
 <li>MSRC Security Update Guide： https://msrc.microsoft.com/update-guide/</li>
 <li>MSRC CVRF API（2026-Jul）： https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</li>
@@ -210,5 +231,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-14.html">← 前一天 2026-07-14</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-16.html">后一天 2026-07-16 →</a>
+</div>
+
 </body>
 </html>

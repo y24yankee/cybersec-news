@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,12 +63,19 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-13</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 网络安全新闻</a></li>
+<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
 <blockquote>
 <p>数据采集时间：2026-08-13 06:55 CST（北京时间）</p>
 </blockquote>
 <hr />
-<h2>Top 5 网络安全新闻</h2>
-<h3>1. 737 款 Chrome VPN 扩展被曝通过 SOCKS5 代理劫持用户流量</h3>
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. 737 款 Chrome VPN 扩展被曝通过 SOCKS5 代理劫持用户流量</h3>
 <ul>
 <li><strong>评分：92 分</strong></li>
 <li><strong>评分理由：大规模浏览器供应链滥用，假冒 66 个知名品牌，可完整嗅探用户浏览器会话。</strong></li>
@@ -64,7 +85,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/737-chrome-vpn-extensions-caught.html</li>
 </ul>
 <hr />
-<h3>2. VMware vCenter 关键漏洞 CVE-2026-59310 遭在野利用，361 个 IP 遍布 47 国</h3>
+<h3 id="s3">2. VMware vCenter 关键漏洞 CVE-2026-59310 遭在野利用，361 个 IP 遍布 47 国</h3>
 <ul>
 <li><strong>评分：90 分</strong></li>
 <li><strong>评分理由：CVSS 9.8 的核心虚拟化平台漏洞已被用于建立持久远程访问，影响范围跨全球。</strong></li>
@@ -74,7 +95,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html</li>
 </ul>
 <hr />
-<h3>3. OpenAI、Anthropic、Google 推理 API 存在设计缺陷，弱模型可解码强模型隐藏推理</h3>
+<h3 id="s4">3. OpenAI、Anthropic、Google 推理 API 存在设计缺陷，弱模型可解码强模型隐藏推理</h3>
 <ul>
 <li><strong>评分：89 分</strong></li>
 <li><strong>评分理由：主流大模型 API 的加密推理对象可被复用/重放，导致专有推理与敏感凭据泄露，属新型 AI 供应链风险。</strong></li>
@@ -84,7 +105,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html</li>
 </ul>
 <hr />
-<h3>4. 恶意 LiteLLM 版本与 Trivy 供应链攻击关联，或已暴露 2,100+ 组织</h3>
+<h3 id="s5">4. 恶意 LiteLLM 版本与 Trivy 供应链攻击关联，或已暴露 2,100+ 组织</h3>
 <ul>
 <li><strong>评分：88 分</strong></li>
 <li><strong>评分理由：AI 网关供应链被攻破，版本仅上线 40 分钟，却可能窃取海量云凭据，影响数千家机构。</strong></li>
@@ -94,7 +115,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html</li>
 </ul>
 <hr />
-<h3>5. SAP Commerce Cloud 关键漏洞 CVE-2026-58231（CVSS 10.0）允许未认证 RCE</h3>
+<h3 id="s6">5. SAP Commerce Cloud 关键漏洞 CVE-2026-58231（CVSS 10.0）允许未认证 RCE</h3>
 <ul>
 <li><strong>评分：87 分</strong></li>
 <li><strong>评分理由：CVSS 满分的企业电商云平台未认证 RCE，可完全破坏保密性、完整性与可用性。</strong></li>
@@ -104,11 +125,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/sap-commerce-cloud-flaw-could-let.html</li>
 </ul>
 <hr />
-<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
 <blockquote>
 <p>依据 MSRC CVRF 正式文档 <code>August 2026 Security Updates</code> 解析（CurrentReleaseDate: 2026-08-12T07:00:00Z），非 Early 预发布占位。</p>
 </blockquote>
-<h3>本月补丁 CVE 统计</h3>
+<h3 id="s8">本月补丁 CVE 统计</h3>
 <table>
 <thead>
 <tr>
@@ -163,12 +184,12 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tr>
 </tbody>
 </table>
-<h3>在野利用 CVE（Exploited:Yes）</h3>
+<h3 id="s9">在野利用 CVE（Exploited:Yes）</h3>
 <ul>
 <li><strong>CVE-2026-68820</strong> | Important | CVSS 7.0 | Windows Ancillary Function Driver for WinSock 特权提升漏洞</li>
 <li>Lazarus Group 已利用该 0day 针对法、德、巴、印四国国防与航空航天企业发动 Operation Dream Job 攻击，部署新后门 Troy。CISA 已于 8 月 11 日将其加入 KEV 目录。</li>
 </ul>
-<h3>Microsoft CVSS ≥ 9.0 高危 CVE 清单（共 20 个，列出前 8）</h3>
+<h3 id="s10">Microsoft CVSS ≥ 9.0 高危 CVE 清单（共 20 个，列出前 8）</h3>
 <table>
 <thead>
 <tr>
@@ -232,9 +253,9 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <blockquote>
 <p>剩余 12 个 CVSS≥9.0 的 Microsoft CVE 涵盖 Windows DNS Server、QUIC、Deployment Services TFTP、iSCSI Target Service、Teams、SharePoint、AKS、Azure Confidential Ledger 等，详见 MSRC Security Update Guide。</p>
 </blockquote>
-<h3>一句话核心风险总结</h3>
+<h3 id="s11">一句话核心风险总结</h3>
 <p>本月微软正式补丁修复 420 个 Microsoft CVE，数量与上月持平；虽然仅确认 1 个在野利用（AFD.sys 本地提权），但存在 <strong>20 个 CVSS≥9.0</strong> 的高危漏洞，覆盖 Azure、Microsoft 365、Teams、DNS、QUIC、AKS 等核心服务，企业应优先修复 Critical 级别及面向公网的 RCE/EoP 项。</p>
-<h3>参考链接</h3>
+<h3 id="s12">参考链接</h3>
 <ul>
 <li>MSRC Security Update Guide（2026-Aug）：https://msrc.microsoft.com/update-guide/releaseNote/2026-Aug</li>
 <li>MSRC CVRF API（2026-Aug）：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</li>
@@ -247,5 +268,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-08-12.html">← 前一天 2026-08-12</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-08-14.html">后一天 2026-08-14 →</a>
+</div>
+
 </body>
 </html>

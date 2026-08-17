@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,8 +63,15 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-19</h1>
-<h2>Top 5 安全新闻</h2>
-<h3>1. WordPress 核心 wp2shell 预认证 RCE（CVE-2026-63030 / CVE-2026-60137）</h3>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 安全新闻</a></li>
+<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">Top 5 安全新闻</h2>
+<h3 id="s2">1. WordPress 核心 wp2shell 预认证 RCE（CVE-2026-63030 / CVE-2026-60137）</h3>
 <ul>
 <li><strong>评分：96/100</strong> — 默认安装即可利用、影响亿级站点、公开 PoC 已出现，属于本年度最严重的 WordPress 核心漏洞之一。</li>
 <li><strong>来源：</strong> The Hacker News / Hacker News</li>
@@ -59,21 +80,21 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li>https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html</li>
 <li>https://news.ycombinator.com/item?id=48951744</li>
 </ul>
-<h3>2. 7-Zip 修复 XZ 压缩处理 RCE 漏洞（CVE-2026-14266）</h3>
+<h3 id="s3">2. 7-Zip 修复 XZ 压缩处理 RCE 漏洞（CVE-2026-14266）</h3>
 <ul>
 <li><strong>评分：92/100</strong> — 7-Zip 全球装机量极大、无自动更新机制、历史漏洞曾被 APT 利用，社会工程学投递恶意压缩包即可触发。</li>
 <li><strong>来源：</strong> Bleeping Computer</li>
 <li><strong>摘要：</strong> 7-Zip 26.02 修复了一个堆缓冲区溢出漏洞 CVE-2026-14266。攻击者通过诱导用户打开特制压缩包或访问恶意网页，可在当前用户权限下执行任意代码。该漏洞由 Lunbun 研究员 Landon Peng 发现并提交给 Zero Day Initiative，目前尚无活跃利用报告，但 7-Zip 缺乏自动更新，管理员需手动部署。</li>
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/</li>
 </ul>
-<h3>3. NadMesh 僵尸网络专门狩猎暴露的 AI 服务与 MCP 端点</h3>
+<h3 id="s4">3. NadMesh 僵尸网络专门狩猎暴露的 AI 服务与 MCP 端点</h3>
 <ul>
 <li><strong>评分：88/100</strong> — 针对 AI 基础设施（Ollama、ComfyUI、Langflow、Gradio 等）的新型威胁，运营面板显示已窃取 3,811 个唯一 AWS 密钥，反映 AI/ML 服务暴露面正在快速武器化。</li>
 <li><strong>来源：</strong> The Hacker News</li>
 <li><strong>摘要：</strong> 奇安信 XLab 披露名为 NadMesh 的 Go 语言僵尸网络，自 7 月初开始扫描暴露的 AI 服务与 Model Context Protocol（MCP）端点。其优先利用列表中 MCP 排在首位，实际观测流量还包括 Docker API、Jenkins、Redis 与 Telnet 弱口令。被入侵主机会回传环境变量、Kubernetes 服务账户令牌、AWS 凭据及模型访问权限。</li>
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/new-nadmesh-botnet-hunts-exposed-ai.html</li>
 </ul>
-<h3>4. OpenSSL "HollowByte" 漏洞：11 字节 TLS 请求即可冻结服务器内存</h3>
+<h3 id="s5">4. OpenSSL "HollowByte" 漏洞：11 字节 TLS 请求即可冻结服务器内存</h3>
 <ul>
 <li><strong>评分：86/100</strong> — 影响 OpenSSL 这一基础 TLS 库，且以无 CVE、无公告、无变更日志的“静默修复”方式存在，常规漏洞管理流程极易遗漏。</li>
 <li><strong>来源：</strong> The Hacker News / Bleeping Computer / Hacker News</li>
@@ -83,7 +104,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li>https://www.bleepingcomputer.com/news/security/hollowbyte-ddos-flaw-bloats-openssl-server-memory-with-11-byte-payload/</li>
 <li>https://news.ycombinator.com/item?id=48958560</li>
 </ul>
-<h3>5. 微软警告 ACR Stealer 攻击激增</h3>
+<h3 id="s6">5. 微软警告 ACR Stealer 攻击激增</h3>
 <ul>
 <li><strong>评分：82/100</strong> — 针对企业客户的活跃信息窃取即服务（MaaS）活动，结合 ClickFix 社会工程、WebDAV 与 MSHTA 等常见企业攻击链，窃取浏览器凭据与云文档。</li>
 <li><strong>来源：</strong> Bleeping Computer</li>
@@ -91,11 +112,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/</li>
 </ul>
 <hr />
-<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
 <blockquote>
 <p>数据来源：MSRC CVRF API <code>2026-Jul</code>，文档标题为 <strong>"July 2026 Security Updates"</strong>（正式补丁，非 Early），最后更新于 2026-07-18。</p>
 </blockquote>
-<h3>总体统计</h3>
+<h3 id="s8">总体统计</h3>
 <table>
 <thead>
 <tr>
@@ -150,7 +171,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tr>
 </tbody>
 </table>
-<h3>已被在野利用的 CVE（全部列出）</h3>
+<h3 id="s9">已被在野利用的 CVE（全部列出）</h3>
 <table>
 <thead>
 <tr>
@@ -181,7 +202,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tr>
 </tbody>
 </table>
-<h3>重点关注：Critical 且可远程/无认证利用的 CVSS≥9.0 CVE</h3>
+<h3 id="s10">重点关注：Critical 且可远程/无认证利用的 CVSS≥9.0 CVE</h3>
 <table>
 <thead>
 <tr>
@@ -223,16 +244,22 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tr>
 </tbody>
 </table>
-<h3>其余 CVSS≥9.0 微软 CVE</h3>
+<h3 id="s11">其余 CVSS≥9.0 微软 CVE</h3>
 <p>另有 <strong>14 个</strong> Microsoft CVE 的 CVSS≥9.0（主要涉及 Azure OpenAI、Entra、VMSwitch、RDP、Exchange、GDI+、Edge 等），完整清单可参考 MSRC Security Update Guide：
 - https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul
 - https://msrc.microsoft.com/update-guide</p>
-<h3>一句话核心风险总结</h3>
+<h3 id="s12">一句话核心风险总结</h3>
 <p>本月补丁以 <strong>SharePoint 与 AD FS 在野利用</strong>为最高优先级，同时暴露了 DHCP、FTP、MSMQ、RDP、网络驱动等大量可远程触发的 Critical RCE；CISA 已将 CVE-2026-58644 加入 KEV 并设定 7 月 19 日联邦机构修复截止日期，补丁验证与密钥轮换窗口极为紧迫。</p>
 <hr />
 <p><em>本次共筛选 5 条新闻，最高分 96 分。</em></p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-18.html">← 前一天 2026-07-18</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-20.html">后一天 2026-07-20 →</a>
+</div>
+
 </body>
 </html>

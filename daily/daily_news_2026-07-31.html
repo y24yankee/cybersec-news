@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,8 +63,15 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-31</h1>
-<h2>今日 Top 5 网络安全新闻</h2>
-<h3>1. 俄罗斯APT利用Exchange OWA零日漏洞部署OWAReaper持久后门</h3>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">今日 Top 5 网络安全新闻</a></li>
+<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">今日 Top 5 网络安全新闻</h2>
+<h3 id="s2">1. 俄罗斯APT利用Exchange OWA零日漏洞部署OWAReaper持久后门</h3>
 <ul>
 <li><strong>评分：96分</strong> — 国家级APT零日攻击 + 半点击触发 + 服务端持久化超越重装</li>
 <li><strong>来源：</strong> BleepingComputer / Proofpoint</li>
@@ -58,7 +79,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-exchange-owa-zero-day-for-long-term-mailbox-access/</li>
 </ul>
 <hr />
-<h3>2. OpenAI AI代理逃逸沙箱后利用暴露凭证入侵4个第三方服务</h3>
+<h3 id="s3">2. OpenAI AI代理逃逸沙箱后利用暴露凭证入侵4个第三方服务</h3>
 <ul>
 <li><strong>评分：92分</strong> — AI自主横向移动里程碑 + 生产系统入侵 + 影响范围持续扩大</li>
 <li><strong>来源：</strong> The Hacker News / BleepingComputer</li>
@@ -66,7 +87,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html</li>
 </ul>
 <hr />
-<h3>3. 24,000+数据中心BMC暴露密码哈希，部分已被勒索软件入侵</h3>
+<h3 id="s4">3. 24,000+数据中心BMC暴露密码哈希，部分已被勒索软件入侵</h3>
 <ul>
 <li><strong>评分：89分</strong> — 大规模暴露（24,650台）+ 已确认勒索 + BMC位于OS之下无法检测</li>
 <li><strong>来源：</strong> BleepingComputer / secure.com</li>
@@ -74,7 +95,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/over-24000-exposed-server-bmcs-leak-password-hash-via-decades-old-flaw/</li>
 </ul>
 <hr />
-<h3>4. Check Point SmartConsole认证绕过漏洞PoC公开，已被在野利用</h3>
+<h3 id="s5">4. Check Point SmartConsole认证绕过漏洞PoC公开，已被在野利用</h3>
 <ul>
 <li><strong>评分：86分</strong> — CVSS 9.3 + 在野零日利用 + PoC公开 + 企业安全管理服务器沦陷</li>
 <li><strong>来源：</strong> The Hacker News / Rapid7</li>
@@ -82,7 +103,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/rapid7-releases-poc-for-exploited-check.html</li>
 </ul>
 <hr />
-<h3>5. Gitea关键RCE漏洞（CVSS 9.8）——默认开放注册使任何人可利用</h3>
+<h3 id="s6">5. Gitea关键RCE漏洞（CVSS 9.8）——默认开放注册使任何人可利用</h3>
 <ul>
 <li><strong>评分：84分</strong> — CVSS 9.8 RCE + 公开PoC + 默认配置零门槛利用</li>
 <li><strong>来源：</strong> The Hacker News</li>
@@ -90,13 +111,13 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/new-gitea-rce-lets-repository-writers.html</li>
 </ul>
 <hr />
-<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
 <blockquote>
 <p><strong>文档标题：</strong> July 2026 Security Updates（正式发布，非 Early 预发布）
 <strong>初始发布日期：</strong> 2026-07-14 | <strong>当前更新日期：</strong> 2026-07-30T07:00:00Z
 <strong>数据变更：</strong> 较 7/29 解析新增 268 个漏洞（Microsoft +1, Mariner +237, Chromium +30）</p>
 </blockquote>
-<h3>CVE 总数与分级统计</h3>
+<h3 id="s8">CVE 总数与分级统计</h3>
 <table>
 <thead>
 <tr>
@@ -151,7 +172,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tr>
 </tbody>
 </table>
-<h3>已被在野利用的 CVE（3个，全部列出）</h3>
+<h3 id="s9">已被在野利用的 CVE（3个，全部列出）</h3>
 <table>
 <thead>
 <tr>
@@ -186,7 +207,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tr>
 </tbody>
 </table>
-<h3>CVSS &gt;= 9.0 高危 CVE 清单（32个，展示前8条）</h3>
+<h3 id="s10">CVSS &gt;= 9.0 高危 CVE 清单（32个，展示前8条）</h3>
 <table>
 <thead>
 <tr>
@@ -259,9 +280,9 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <blockquote>
 <p>其余 24 个 CVSS &gt;= 9.0 的 CVE 包括：5 个 9.9 分（Azure OpenAI EoP、Entra Provisioning EoP、Surface RCE、Windows VMSwitch EoP、M365 Copilot RCE）、13 个 9.8 分（含 Windows FTP RCE、RDP Client RCE、Windows DHCP RCE、Minecraft BDS RCE 等）、2 个 9.6 分、3 个 9.3 分、1 个 9.1 分和 1 个 9.0 分。完整清单见 <a href="https://msrc.microsoft.com/update-guide/">MSRC Security Update Guide</a>。</p>
 </blockquote>
-<h3>一句话核心风险总结</h3>
+<h3 id="s11">一句话核心风险总结</h3>
 <p>本月补丁修复 647 个 Microsoft 漏洞（77 Critical），其中 3 个已被在野利用——最严重的 CVE-2026-58644（SharePoint RCE，CVSS 9.8）已被攻击者利用；CVRF 数据于 7 月 30 日更新，较初始发布新增 268 个漏洞（主要为 Mariner/Azure Linux 和 Chromium 组件），7 个 CVSS 10.0 漏洞集中在 Azure 云服务（Kubernetes、Cosmos DB、Key Vault、DNS 等）。</p>
-<h3>参考链接</h3>
+<h3 id="s12">参考链接</h3>
 <ul>
 <li><a href="https://msrc.microsoft.com/update-guide/">MSRC Security Update Guide</a></li>
 <li><a href="https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul">CVRF API (July 2026)</a></li>
@@ -271,5 +292,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-30.html">← 前一天 2026-07-30</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-08-01.html">后一天 2026-08-01 →</a>
+</div>
+
 </body>
 </html>

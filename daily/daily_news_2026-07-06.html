@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,11 +63,21 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-06</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. curl 库爆出 CVSS 9.1 严重漏洞 CVE-2026-8924，暂无补丁</a></li>
+<li><a href="#s2">2. SimpleHelp 远程支持软件 CVSS 9.5 漏洞 CVE-2026-48558 遭活跃利用</a></li>
+<li><a href="#s3">3. FatFs 嵌入式文件系统 7 个漏洞影响数百万 IoT 设备</a></li>
+<li><a href="#s4">4. 新 APT 组织 Armored Likho 攻击政府机构和电力部门</a></li>
+<li><a href="#s5">5. 欧洲议会议员调查间谍软件滥用期间遭 Pegasus 反复入侵</a></li>
+</ol>
+</nav>
+
 <blockquote>
 <p>数据截止时间：2026-07-06 06:55 CST</p>
 </blockquote>
 <hr />
-<h2>1. curl 库爆出 CVSS 9.1 严重漏洞 CVE-2026-8924，暂无补丁</h2>
+<h2 id="s1">1. curl 库爆出 CVSS 9.1 严重漏洞 CVE-2026-8924，暂无补丁</h2>
 <ul>
 <li><strong>评分：</strong> 91 分</li>
 <li><strong>评分理由：</strong> curl 是全球部署最广泛的网络传输库之一，嵌入无数应用、容器镜像和嵌入式系统中，CVSS 9.1 严重级别且目前 0% 补丁覆盖率。</li>
@@ -62,7 +86,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://cvebrief.com/</li>
 </ul>
 <hr />
-<h2>2. SimpleHelp 远程支持软件 CVSS 9.5 漏洞 CVE-2026-48558 遭活跃利用</h2>
+<h2 id="s2">2. SimpleHelp 远程支持软件 CVSS 9.5 漏洞 CVE-2026-48558 遭活跃利用</h2>
 <ul>
 <li><strong>评分：</strong> 88 分</li>
 <li><strong>评分理由：</strong> CVSS 9.5 最高严重级别，攻击者可远程利用，目前已确认遭在野活跃攻击，目标为广泛部署的远程支持平台。</li>
@@ -71,7 +95,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://www.helpnetsecurity.com/2026/07/05/week-in-review-simplehelp-vulnerability-exploited-oracle-ebs-payments-flaw-under-attack/</li>
 </ul>
 <hr />
-<h2>3. FatFs 嵌入式文件系统 7 个漏洞影响数百万 IoT 设备</h2>
+<h2 id="s3">3. FatFs 嵌入式文件系统 7 个漏洞影响数百万 IoT 设备</h2>
 <ul>
 <li><strong>评分：</strong> 86 分</li>
 <li><strong>评分理由：</strong> 影响数百万安防摄像头、无人机、工业控制器和硬件加密钱包，"物理访问即越狱"的严重程度，且多数设备难以更新。</li>
@@ -80,7 +104,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html</li>
 </ul>
 <hr />
-<h2>4. 新 APT 组织 Armored Likho 攻击政府机构和电力部门</h2>
+<h2 id="s4">4. 新 APT 组织 Armored Likho 攻击政府机构和电力部门</h2>
 <ul>
 <li><strong>评分：</strong> 82 分</li>
 <li><strong>评分理由：</strong> 此前未记录的 APT 组织针对关键基础设施（政府和电力部门）进行网络间谍活动，融合经济动机与国家层面利益。</li>
@@ -89,7 +113,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/armored-likho-targets-government.html</li>
 </ul>
 <hr />
-<h2>5. 欧洲议会议员调查间谍软件滥用期间遭 Pegasus 反复入侵</h2>
+<h2 id="s5">5. 欧洲议会议员调查间谍软件滥用期间遭 Pegasus 反复入侵</h2>
 <ul>
 <li><strong>评分：</strong> 81 分</li>
 <li><strong>评分理由：</strong> 高政治敏感性——被入侵者正担任欧盟商业监控软件调查委员会委员，机密文件和委员会审议内容可能遭泄露。</li>
@@ -102,5 +126,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-05.html">← 前一天 2026-07-05</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-07.html">后一天 2026-07-07 →</a>
+</div>
+
 </body>
 </html>

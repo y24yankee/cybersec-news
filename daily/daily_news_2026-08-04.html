@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,8 +63,15 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-04</h1>
-<h2>Top 5 网络安全新闻</h2>
-<h3>1. INC Ransomware 主导利用 SonicWall SMA 1000 零日漏洞链</h3>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 网络安全新闻</a></li>
+<li><a href="#s7">候选新闻补充（未进入 Top 5）</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. INC Ransomware 主导利用 SonicWall SMA 1000 零日漏洞链</h3>
 <ul>
 <li><strong>评分：91 分</strong></li>
 <li><strong>评分理由：</strong> 零日漏洞链已被武器化、885 名受害者、可提取凭据与 MFA 种子并建立持久化访问，严重性与影响范围兼具。</li>
@@ -58,7 +79,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>摘要：</strong> INC Ransomware 被 Resecurity 认定为近期 SonicWall SMA 1000 系列 VPN 漏洞（CVE-2026-15409、CVE-2026-15410）的主要利用者，该组织自 8 月初加速活动，目前已宣称 885 名受害者。攻击者利用这两个被当作零日武器化的漏洞实现任意命令执行，并窃取高价值凭据、活跃会话数据库及 TOTP MFA 种子配置，以维持长期访问并横向移动。SonicWall 已于 7 月中旬发布补丁，建议立即升级并进行全面的威胁狩猎与凭据轮换。</li>
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/inc-ransomware-emerges-as-dominant.html</li>
 </ul>
-<h3>2. 英国 Police National Legal Database 遭入侵，超 10 万名警务人员联系信息泄露</h3>
+<h3 id="s3">2. 英国 Police National Legal Database 遭入侵，超 10 万名警务人员联系信息泄露</h3>
 <ul>
 <li><strong>评分：90 分</strong></li>
 <li><strong>评分理由：</strong> 超过 10 万名警察及政府司法人员联系信息被上传至暗网，直接影响执法机构安全与后续定向钓鱼风险。</li>
@@ -66,7 +87,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>摘要：</strong> 英国 Police National Legal Database（PNLD）确认其警察、政府及客户联系信息在 7 月 26 日被发现遭入侵后，已被 ExfilSquad 数据勒索组织发布在暗网上。泄露数据包括姓名、组织和工作邮箱，涉及超过 10 万名警务人员、刑事司法专业人员及政府合作伙伴；Ask the Police 用户提交问题的联系方式也受到影响。PNLD 表示尚无证据表明密码或其他安全凭据泄露，并已通知 ICO 与英国国家犯罪局（NCA）。</li>
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/exfilsquad-hackers-leak-info-of-over-100-000-uk-police-officers-staff/</li>
 </ul>
-<h3>3. N-able N-central 认证绕过漏洞 CVE-2026-18577 遭在野利用，初始补丁不完整</h3>
+<h3 id="s4">3. N-able N-central 认证绕过漏洞 CVE-2026-18577 遭在野利用，初始补丁不完整</h3>
 <ul>
 <li><strong>评分：88 分</strong></li>
 <li><strong>评分理由：</strong> RMM 平台是 MSP/IT 管理关键枢纽，认证绕过可导致下游大量终端被接管，且攻击者利用 Cloudflare 隧道保持持久化。</li>
@@ -74,7 +95,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>摘要：</strong> N-able 披露其 N-central 远程监控与管理平台存在认证绕过漏洞 CVE-2026-18577，已遭在野利用；该漏洞是 CVE-2026-18556 初始补丁不完整的后续绕过，影响 2026.3.1.7 之前的所有版本。攻击者获得远程管理员权限后，通过 Take Control 功能访问受管终端，并在设备上注册 Cloudflare 隧道服务作为系统服务，即使原 N-central 访问路径被撤销仍能维持访问。N-able 于 8 月 2 日发布热修复版本 2026.3.1.7，并公布了 6 个攻击者 IP 地址等 IOC。</li>
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html</li>
 </ul>
-<h3>4. Unit 42 披露 Google Password Manager 三大攻击路径，可劫持 Passkey 保护账户</h3>
+<h3 id="s5">4. Unit 42 披露 Google Password Manager 三大攻击路径，可劫持 Passkey 保护账户</h3>
 <ul>
 <li><strong>评分：87 分</strong></li>
 <li><strong>评分理由：</strong> 针对被广泛宣传为更安全的 Passkey 认证体系，研究揭示了 Chrome/Windows 环境下可静默绕过用户验证的后妥协攻击路径。</li>
@@ -82,7 +103,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>摘要：</strong> Palo Alto Networks Unit 42 披露了针对 Chrome 中 Google Password Manager 的三条攻击路径——Pass-ta-key、Silver Pass-ta-key 与 Golden Pass-ta-key。这些攻击不破坏底层密码学，而是利用 Chrome 如何存储设备密钥、重新注册设备以及依赖方是否验证 User Verified（UV）标志等实现缺陷，使已入侵端点的恶意软件能够在无指纹、PIN 或屏幕提示的情况下登录 Passkey 保护的账户。最强路径可直接提取 32 字节的 Security Domain Secret（SDS）以恢复同步的 Passkey 私钥。</li>
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/google-password-manager-attacks-could.html</li>
 </ul>
-<h3>5. 18 个恶意 npm 包向阿里巴巴开发者工具用户投递跨平台 RAT</h3>
+<h3 id="s6">5. 18 个恶意 npm 包向阿里巴巴开发者工具用户投递跨平台 RAT</h3>
 <ul>
 <li><strong>评分：86 分</strong></li>
 <li><strong>评分理由：</strong> 针对中国开发者的定向供应链攻击，通过冒充私有包实现跨平台 RAT 投递，具备横向移动与持久化能力。</li>
@@ -91,7 +112,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/18-malicious-npm-packages-deliver-cross.html</li>
 </ul>
 <hr />
-<h2>候选新闻补充（未进入 Top 5）</h2>
+<h2 id="s7">候选新闻补充（未进入 Top 5）</h2>
 <ul>
 <li><strong>Hacker News / JFrog：</strong> SQLite Critical CVEs or LLM Slop? —— JFrog 发现一批被 NVD 标记为 Critical 的 SQLite CVE 实际为 AI 生成的虚假漏洞，暴露当前 CVE 供应链的系统性噪声问题。https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/</li>
 <li><strong>Hacker News / Digdir：</strong> 挪威政府 IT 基础设施（ID-porten 等）遭遇 DDoS 攻击，导致公众登录政府服务出现大规模故障。https://status.digdir.no/incidents/d7hvqmf2yr3l</li>
@@ -105,5 +126,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-08-03.html">← 前一天 2026-08-03</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-08-05.html">后一天 2026-08-05 →</a>
+</div>
+
 </body>
 </html>

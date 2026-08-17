@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,13 +63,21 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-08</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">TOP 5 精选新闻</a></li>
+<li><a href="#s7">其他值得关注的安全动态</a></li>
+<li><a href="#s8">统计</a></li>
+</ol>
+</nav>
+
 <blockquote>
 <p>数据来源：The Hacker News / BleepingComputer / Hacker News
 生成时间：2026-07-08 06:55 CST</p>
 </blockquote>
 <hr />
-<h2>TOP 5 精选新闻</h2>
-<h3>1. 埃森哲 (Accenture) 确认遭入侵：35GB 源代码及云凭证被窃取并挂牌出售</h3>
+<h2 id="s1">TOP 5 精选新闻</h2>
+<h3 id="s2">1. 埃森哲 (Accenture) 确认遭入侵：35GB 源代码及云凭证被窃取并挂牌出售</h3>
 <table>
 <thead>
 <tr>
@@ -81,7 +103,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <p><strong>摘要</strong>：全球最大的 IT 服务与咨询公司之一 Accenture 于 2026 年 7 月 7 日正式确认发生安全事件，此前有威胁行为者在网络犯罪论坛发帖，声称窃取了超过 35GB 的数据，包括源代码仓库、基础设施文件以及 RSA/SSH 密钥等敏感凭证，并公开标价出售。这是又一起 IT 服务巨头供应链风险事件——Accenture 服务覆盖全球 200+ 财富 500 强企业，源代码与云凭证一旦外泄将放大至整个客户生态。事件影响面正在持续扩大，建议 Accenture 客户立即审查相关凭据并检查异常访问。</p>
 <p>🔗 <a href="https://www.bleepingcomputer.com/news/security/accenture-confirms-breach-after-hacker-offers-stolen-data-for-sale/">原文链接</a></p>
 <hr />
-<h3>2. Januscape：Linux 内核潜伏 16 年的 VM 逃逸漏洞 (CVE-2026-53359) 引发云逃逸恐慌</h3>
+<h3 id="s3">2. Januscape：Linux 内核潜伏 16 年的 VM 逃逸漏洞 (CVE-2026-53359) 引发云逃逸恐慌</h3>
 <table>
 <thead>
 <tr>
@@ -107,7 +129,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <p><strong>摘要</strong>：BleepingComputer 与 The Hacker News 同步披露一个存在于 Linux KVM 虚拟化模块长达 16 年的 use-after-free 漏洞，编号 CVE-2026-53359，名为 "Januscape"。该漏洞允许客户虚拟机破坏宿主机内核内存，实现从 Guest 到 Host 的虚拟机逃逸，影响所有 Intel 和 AMD x86 架构的 KVM 环境。该漏洞已作为零日漏洞提交至 Google 的 kvmCTF 漏洞奖励计划（悬赏 $250,000），意味着所有公有云和私有云中运行 KVM 的环境均面临被攻击者从一台被攻破虚拟机横向突破至宿主机的风险。Linux 上游已在最新内核中提供修复，建议云租户和自建 KVM 集群立即评估升级窗口。</p>
 <p>🔗 <a href="https://www.bleepingcomputer.com/news/linux/new-januscape-linux-kernel-flaw-allows-vm-escape-on-intel-amd-devices/">原文链接 (BleepingComputer)</a> | <a href="https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html">原文链接 (The Hacker News)</a></p>
 <hr />
-<h3>3. 中国背景黑客组织 UAT-7810 推出 LONGLEASH 恶意软件扩张全球 ORB 代理网络</h3>
+<h3 id="s4">3. 中国背景黑客组织 UAT-7810 推出 LONGLEASH 恶意软件扩张全球 ORB 代理网络</h3>
 <table>
 <thead>
 <tr>
@@ -133,7 +155,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <p><strong>摘要</strong>：Cisco Talos 最新研究披露，中国背景的黑客组织 UAT-7810 正在积极演化其工具链，通过自研的新型 LONGLEASH 恶意软件攻击互联网暴露的网络设备（主要为未打补丁的 Ruckus 路由器），持续扩张其 Operational Relay Box (ORB) 代理网络。ORB 网络作为攻击者的中转跳板，可掩盖真实来源 IP、绕过地理限制、并为后续定向攻击提供稳定的基础设施。LONGLEASH 标志着 UAT-7810 在恶意软件工程化上的进一步成熟，对全球范围内使用 Ruckus 设备的企业及政府机构构成持续性威胁。</p>
 <p>🔗 <a href="https://www.bleepingcomputer.com/news/security/chinese-hackers-develop-longleash-malware-to-expand-orb-network/">原文链接 (BleepingComputer)</a> | <a href="https://blog.talosintelligence.com/uat-7810/">Talos 技术分析</a></p>
 <hr />
-<h3>4. BeyondTrust 修复 Remote Support 与 PRA 中两个 CVSS 9.2 严重身份验证绕过漏洞 (CVE-2026-40138/40139)</h3>
+<h3 id="s5">4. BeyondTrust 修复 Remote Support 与 PRA 中两个 CVSS 9.2 严重身份验证绕过漏洞 (CVE-2026-40138/40139)</h3>
 <table>
 <thead>
 <tr>
@@ -159,7 +181,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <p><strong>摘要</strong>：BeyondTrust 发布安全更新，修复其 Remote Support (RS) 与 Privileged Remote Access (PRA) 产品中两个关键的预认证漏洞，编号分别为 CVE-2026-40138 和 CVE-2026-40139，CVSS 评分均为 9.2。这两个漏洞源于对认证数据的不当验证与处理，可让未经认证的远程攻击者绕过访问控制，直接获得对设备的高权限（包括提升后的特权账户）访问。BeyondTrust Remote Support / PRA 是全球托管服务提供商 (MSP) 和大型企业 IT 部门的核心远程运维工具，攻击面极大，建议所有相关用户立即检查版本并应用补丁。</p>
 <p>🔗 <a href="https://thehackernews.com/2026/07/beyondtrust-patches-critical-auth.html">原文链接 (The Hacker News)</a> | <a href="https://www.bleepingcomputer.com/news/security/beyondtrust-warns-of-critical-flaws-in-remote-access-software/">BleepingComputer 报道</a></p>
 <hr />
-<h3>5. CERT/CC 警告 Tenda 路由器固件存在隐藏管理员后门 (CVE-2026-11405)</h3>
+<h3 id="s6">5. CERT/CC 警告 Tenda 路由器固件存在隐藏管理员后门 (CVE-2026-11405)</h3>
 <table>
 <thead>
 <tr>
@@ -185,7 +207,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <p><strong>摘要</strong>：CERT/CC 发出警告，多个版本的 Tenda 路由器固件中存在未公开的身份验证后门，编号 CVE-2026-11405。后门位于 <code>/bin/httpd</code> Web 服务器二进制中的 <code>login()</code> 函数，可让攻击者在没有任何有效凭据的情况下绕过密码验证，获得设备的完整管理员权限。Tenda FH1201、W15E、AC10、AC5 和 AC6 等多个产品线均受影响——这些型号在中端消费级和中小企业 (SMB) 路由器市场占据相当份额。考虑到目前尚未公开固件修复，所有相关用户应将设备从互联网直接暴露中隔离，并监控异常的 Web 管理访问。</p>
 <p>🔗 <a href="https://thehackernews.com/2026/07/certcc-warns-of-hidden-admin-backdoor.html">原文链接 (The Hacker News)</a> | <a href="https://www.bleepingcomputer.com/news/security/hidden-backdoor-in-tenda-router-firmware-grants-admin-access/">BleepingComputer 报道</a></p>
 <hr />
-<h2>其他值得关注的安全动态</h2>
+<h2 id="s7">其他值得关注的安全动态</h2>
 <table>
 <thead>
 <tr>
@@ -248,7 +270,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tbody>
 </table>
 <hr />
-<h2>统计</h2>
+<h2 id="s8">统计</h2>
 <ul>
 <li>本次共筛选 <strong>15</strong> 条新闻</li>
 <li>最高分 <strong>94</strong> 分</li>
@@ -257,5 +279,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-07.html">← 前一天 2026-07-07</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-09.html">后一天 2026-07-09 →</a>
+</div>
+
 </body>
 </html>

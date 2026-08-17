@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,12 +63,20 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-14</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">🔝 Top 5 安全新闻</a></li>
+<li><a href="#s7">📊 本次共筛选 15 条新闻，最高分 94 分</a></li>
+<li><a href="#s8">🛡️ 微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
 <blockquote>
 <p>📅 今日为微软 7 月补丁日当天，但<strong>正式补丁尚未发布</strong>（预计北京时间 7/15 凌晨发布）。文末补丁板块已更正为发布提醒，正式「微软补丁安全级别」板块将于明日（7/15）推送带出。</p>
 </blockquote>
 <hr />
-<h2>🔝 Top 5 安全新闻</h2>
-<h3>1. 十二国联合预警：俄罗斯 FSB Center 16 大规模利用路由器漏洞攻击全球关键基础设施</h3>
+<h2 id="s1">🔝 Top 5 安全新闻</h2>
+<h3 id="s2">1. 十二国联合预警：俄罗斯 FSB Center 16 大规模利用路由器漏洞攻击全球关键基础设施</h3>
 <p><strong>评分：94/100</strong> | <strong>来源：</strong> BleepingComputer / CISA-NSA-FBI 联合公告</p>
 <blockquote>
 <p><strong>评分理由：</strong> 国家级威胁 + 多国联合公告 + 关键基础设施在野利用 + 即时防御行动要求。</p>
@@ -62,7 +84,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <p>美国、英国、澳大利亚、加拿大等 12 个国家的 18 家情报与网络安全机构于 7 月 13 日发布联合公告，确认俄罗斯联邦安全局（FSB）第 16 中心（Ghost Blizzard / Berserk Bear / Energetic Bear）正在大规模扫描互联网上使用默认或弱 SNMP 密码的路由器，利用 Cisco Smart Install 漏洞（CVE-2018-0171）入侵关键基础设施网络。受影响行业涵盖能源、通信、国防、医疗保健、金融服务及政府部门。公告要求所有关键部门立即升级至 SNMPv3、禁用 Cisco Smart Install、强化密码策略。此前 FrostArmada 行动（APT28）已感染全球 120 个国家 18,000 台路由器。</p>
 <p>🔗 <a href="https://www.bleepingcomputer.com/news/security/us-and-allies-share-defense-tips-against-russian-hackers-targeting-critical-infrastructure/">阅读原文</a></p>
 <hr />
-<h3>2. Jscrambler npm 供应链投毒：安全厂商自身包被劫持，窃取开发者全量敏感数据</h3>
+<h3 id="s3">2. Jscrambler npm 供应链投毒：安全厂商自身包被劫持，窃取开发者全量敏感数据</h3>
 <p><strong>评分：92/100</strong> | <strong>来源：</strong> BleepingComputer</p>
 <blockquote>
 <p><strong>评分理由：</strong> 供应链攻击 + 安全厂商自身被武器化 + 跨平台窃取覆盖云/AI/加密全栈 + 影响近 1500 次下载。</p>
@@ -70,7 +92,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <p>知名 JavaScript 代码保护公司 Jscrambler 于 7 月 12 日披露，攻击者利用泄露的 npm 发布凭证推送了恶意版本（8.14、8.16、8.17、8.20），在约 2 小时内被下载 1,479 次。恶意包在 <code>preinstall</code> 钩子中植入跨平台信息窃取器（ChaCha20-Poly1305 加密混淆），窃取目标包括：源代码和项目文件、Git/SSH/CI-CD 凭证、AWS/Azure/GCP 云密钥、Claude/Cursor/Windsurf/VS Code/Zed 等 AI 编码工具配置、MetaMask/Phantom 等加密钱包助记词、Slack/Discord/Telegram 通信数据。这是继上周 jscrambler 事件以来影响最严重的 npm 供应链攻击之一。</p>
 <p>🔗 <a href="https://www.bleepingcomputer.com/news/security/hackers-backdoor-jscrambler-npm-package-with-infostealer-malware/">阅读原文</a></p>
 <hr />
-<h3>3. 欧盟与英国首次联合制裁俄罗斯 GRU/FSB 网络行动，正式点名 Turla 等 APT 组织</h3>
+<h3 id="s4">3. 欧盟与英国首次联合制裁俄罗斯 GRU/FSB 网络行动，正式点名 Turla 等 APT 组织</h3>
 <p><strong>评分：90/100</strong> | <strong>来源：</strong> BleepingComputer</p>
 <blockquote>
 <p><strong>评分理由：</strong> 首次欧盟-英国联合网络制裁 + 地缘政治升级 + 关联关键基础设施攻击 + 溯源至 Turla/Sandworm 等顶级 APT。</p>
@@ -78,7 +100,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <p>欧盟理事会于 7 月 13 日宣布对 9 名个人和 4 个实体实施制裁，英国同步制裁 24 名个人和实体。制裁对象包括 GRU 高级官员 Vyacheslav Stafeyev、Ivan Senin、Ivan Kasyanenko，以及 IMPULS 公司（被控从俄罗斯大学招募黑客）和 Lumma Stealer 恶意软件运营者。欧盟首次公开确认 FSB 第 16 中心控制 Turla 黑客组织，并关联到针对波兰能源网络（Sandworm/DynoWiper，约 50 万人受影响）和波兰国家核研究中心（NCBJ）的攻击。制裁还覆盖散布反乌克兰叙事和干预摩尔多瓦/亚美尼亚选举的 Rybar LLC。</p>
 <p>🔗 <a href="https://www.bleepingcomputer.com/news/security/eu-and-uk-hit-russia-with-first-joint-cyber-sanctions-package/">阅读原文</a></p>
 <hr />
-<h3>4. CISA 将两个 Joomla 扩展 0day RCE 漏洞加入 KEV 目录，联邦机构限 3 日内修复</h3>
+<h3 id="s5">4. CISA 将两个 Joomla 扩展 0day RCE 漏洞加入 KEV 目录，联邦机构限 3 日内修复</h3>
 <p><strong>评分：88/100</strong> | <strong>来源：</strong> BleepingComputer</p>
 <blockquote>
 <p><strong>评分理由：</strong> KEV 目录新增 + 在野 0day 利用 + 广泛 CMS 攻击面 + 3 天修复强制令。</p>
@@ -86,7 +108,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <p>CISA 于 7 月 10 日将 CVE-2026-48939（iCagenda 日历扩展任意文件上传）和 CVE-2026-56291（Balbooa Forms 表单构建器任意文件上传）加入已知被利用漏洞（KEV）目录，设定最高优先级，要求联邦机构在 3 日内完成修复。两个漏洞均允许未认证攻击者上传任意文件（含 PHP 脚本），实现远程代码执行和完全网站接管。据 mySites.guru 报告，这两个漏洞在厂商发布补丁前均已被自动化攻击利用为 0day，其中 Balbooa Forms 的利用自 7 月 8 日即已开始。全球数十万 Joomla 站点面临风险。</p>
 <p>🔗 <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/">阅读原文</a></p>
 <hr />
-<h3>5. 日本最大出租车公司 Nihon Kotsu 遭网络攻击，调度系统全面瘫痪</h3>
+<h3 id="s6">5. 日本最大出租车公司 Nihon Kotsu 遭网络攻击，调度系统全面瘫痪</h3>
 <p><strong>评分：85/100</strong> | <strong>来源：</strong> BleepingComputer</p>
 <blockquote>
 <p><strong>评分理由：</strong> 重大关键民生服务中断 + 年营收 10 亿美元级企业 + 影响东京都市圈孕妇等弱势群体出行。</p>
@@ -94,9 +116,9 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <p>日本营收最大的出租车运营商 Nihon Kotsu（年营收约 10 亿美元，员工 18,228 人，运营 8,558 辆出租车）于 7 月 12 日凌晨确认系统遭恶意软件感染，被迫断开内部系统。出租车调度系统、网络预约、电话派车服务及内部系统全部瘫痪，波及东京、武藏野、三鹰、立川、横滨、埼玉等地区。该公司为孕妇提供的"分娩出租车"专项服务也已暂停。目前尚无勒索软件组织宣称负责，数据泄露可能性仍在调查中。</p>
 <p>🔗 <a href="https://www.bleepingcomputer.com/news/security/japans-largest-taxi-operator-shuts-systems-after-cyberattack/">阅读原文</a></p>
 <hr />
-<h2>📊 本次共筛选 15 条新闻，最高分 94 分</h2>
+<h2 id="s7">📊 本次共筛选 15 条新闻，最高分 94 分</h2>
 <hr />
-<h2>🛡️ 微软补丁安全级别（Patch Tuesday）</h2>
+<h2 id="s8">🛡️ 微软补丁安全级别（Patch Tuesday）</h2>
 <blockquote>
 <p>⚠️ <strong>更正说明：</strong> 本板块的自动生成数据已被撤下。原因：微软 7 月正式 Patch Tuesday 补丁在本文生成时（北京时间 7/14 上午）<strong>尚未发布</strong>。当时 MSRC API 上 <code>2026-Jul</code> 条目仅为标题含 "<strong>Early</strong>" 的<strong>预发布占位文档</strong>（"July 2026 Early Security Updates"，以 Azure Linux 开源组件更新为主），并非正式补丁日数据，故不作为正式统计。</p>
 </blockquote>
@@ -105,5 +127,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-13.html">← 前一天 2026-07-13</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-15.html">后一天 2026-07-15 →</a>
+</div>
+
 </body>
 </html>

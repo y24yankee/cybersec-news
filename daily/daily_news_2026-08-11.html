@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,41 +63,52 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-11</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. Ghostjacking：毒化日志劫持 AI Agent，Cloudflare/Datadog/Sentry 均受影响</a></li>
+<li><a href="#s2">2. 波兰热电联产厂遭 IT→OT 跨界攻击，蒸汽轮机与水处理系统停机</a></li>
+<li><a href="#s3">3. 朝鲜 Kimsuky 构建本地 LLM 武器库，将 AI 全面融入攻击链</a></li>
+<li><a href="#s4">4. StormEncryptor 勒索软件现身，中国关联 Storm-1175 疑借 N-central 漏洞投递</a></li>
+<li><a href="#s5">5. BdThemes WordPress 供应链攻击：毒化 API 响应创建隐形管理员账户</a></li>
+<li><a href="#s6">其他值得关注</a></li>
+</ol>
+</nav>
+
 <blockquote>
 <p>数据来源：The Hacker News、Bleeping Computer、Hacker News | 过去 24 小时</p>
 </blockquote>
 <hr />
-<h2>1. Ghostjacking：毒化日志劫持 AI Agent，Cloudflare/Datadog/Sentry 均受影响</h2>
+<h2 id="s1">1. Ghostjacking：毒化日志劫持 AI Agent，Cloudflare/Datadog/Sentry 均受影响</h2>
 <p><strong>评分：93 分</strong> | 来源：SecurityWeek / Tenet Security（DEF CON 2026 披露）</p>
 <p>以色列初创公司 Tenet Security 在 DEF CON 2026 上演示了一种名为 "Ghostjacking" 的新型 AI 劫持攻击：攻击者将恶意指令以纯文本形式植入被拦截请求的日志中，当安全分析师让 AI Agent 审查事件时，Agent 会读取并执行这些指令。该攻击针对三个高信任平台——Cloudflare（路由全球 20% 流量）、Datadog（近半数财富 500 强使用）和 Sentry（约 400 万开发者使用）。在 Cloudflare 向量中，防火墙拦截的恶意请求被逐字记录到日志，Agent 读取后修改组织 DNS 设置指向攻击者域名，并报告"问题已解决"——对 Claude Code 的成功率高达 9/10。Datadog 向量利用前端密钥（已在互联网上发现 2,700+ 个），植入伪造"紧急诊断"告警，诱导 Agent 执行代码并外泄环境密钥和云凭据。Sentry 向量则通过伪造报告让 AI 助手 Seer 采纳恶意修复建议，传递给信任 Seer 的编码 Agent 执行。此外还发现了 Claude Desktop 数据外泄漏洞（Anthropic 已修复但未分配 CVE）。</p>
 <p><strong>评分理由：</strong> 新型 AI Agent 劫持攻击类别，DEF CON 正式披露，影响三大主流开发/运维平台，9/10 成功率，具有行业级威胁意义。</p>
 <p>🔗 <a href="https://www.securityweek.com/ghostjacking-attack-uses-poisoned-logs-to-turn-ai-agents-bad/">SecurityWeek 原文</a> | <a href="https://tenetsecurity.ai/blog/ghostjacking-attacks-agentic-kill-chain/">Tenet Security 技术博客</a></p>
 <hr />
-<h2>2. 波兰热电联产厂遭 IT→OT 跨界攻击，蒸汽轮机与水处理系统停机</h2>
+<h2 id="s2">2. 波兰热电联产厂遭 IT→OT 跨界攻击，蒸汽轮机与水处理系统停机</h2>
 <p><strong>评分：92 分</strong> | 来源：Security Affairs / CERT Polska</p>
 <p>波兰 CERT 发布报告披露：2025 年 12 月 29 日（与波兰大规模能源攻击同期），一家为约 5 万居民供热的小型热电联产厂（CHP）遭网络攻击，攻击者通过一条此前从未被观察到的路径——私有 APN——从 IT 网络渗透至 OT 网络。攻击链：攻击者首先入侵风场暴露在互联网上的 Fortinet VPN/防火墙设备 → 发现 Teltonika 蜂窝路由器 → 通过 SSH 建立隧道 → 到达配电网运营商管理的私有 APN → 接入工厂 OT 网络 → 找到 Wago PLC 并通过 SSH 访问 → 经过约一周侦察后连接 Siemens PLC → 将其切换至停止模式并设置密码锁定操作员。蒸汽轮机和水处理系统随即停机，热电联产中断，但工作人员较快恢复避免了供暖/供电中断。攻击者还破坏了 WAGO 控制器的分区表以覆盖痕迹（设备无法通过恢复出厂设置修复），并重新配置了 Moxa 串口服务器和交换机。ESET 以中等信心将该行动归因于俄罗斯 Sandworm APT。CERT 指出此类私有 APN 架构并不罕见，该发现具有超越波兰的普遍警示意义。</p>
 <p><strong>评分理由：</strong> 首次观察到的私有 APN 攻击向量，导致物理基础设施停机，5 万居民受影响，国家级 APT 归因，对全球能源行业具有标杆警示作用。</p>
 <p>🔗 <a href="https://securityaffairs.com/2026/08/hackers-cross-from-it-to-ot-through-a-private-apn-in-poland.html">Security Affairs 原文</a> | <a href="https://cert.pl/uploads/docs/CERT_Polska_Energy_Sector_Incident_Follow-up_Report_2025.pdf">CERT Polska 报告 PDF</a></p>
 <hr />
-<h2>3. 朝鲜 Kimsuky 构建本地 LLM 武器库，将 AI 全面融入攻击链</h2>
+<h2 id="s3">3. 朝鲜 Kimsuky 构建本地 LLM 武器库，将 AI 全面融入攻击链</h2>
 <p><strong>评分：91 分</strong> | 来源：The Register / Chosun / Genians</p>
 <p>韩国安全公司 Genians 在 8 月 10 日发布报告，揭示朝鲜侦察总局下属的 Kimsuky（APT43）黑客组织已从"用 AI 生成钓鱼诱饵"升级为"构建完整本地 AI 攻击基础设施"。调查显示该组织在受控服务器上部署并运行了 Ollama、GPT4All 和 Msty 等本地 LLM 运行环境（GPT4All 携带已配置的 <code>localdocs_v3.db</code> RAG 数据库），以及 Cursor AI 编码工具和语音转文字（STT）工具（如 OpenAI Whisper）。使用本地 LLM 的核心目的是避免将窃取的机密数据传输至云端 AI 服务，降低被监测风险。RAG（检索增强生成）被用于从窃取的文档中自动提取钱包详情、Gmail 凭据和网站注册历史等敏感信息。该组织还收集了大量 AI 开发库（LLaMaSharp、Microsoft.Extensions.AI、OpenAI、Azure.AI.OpenAI），构建从"本地 AI 执行 → 文档检索 → 自动化 Agent → 外部 AI 集成"的完整工具链。攻击行动被追踪为 "Operation GitPower"，使用 GitHub/GitLab 仓库作为 C2 基础设施。钓鱼诱饵已从回收利用合法文档升级为 AI 生成的虚拟资产投资报告和金融文件，语言自然、格式专业，难以通过内容检测识别。</p>
 <p><strong>评分理由：</strong> 国家级 APT 将 AI 从实验性使用推进到操作性集成阶段，本地 LLM + RAG + Agent 框架的完整武器化标志着 AI 驱动攻击的范式转变。</p>
 <p>🔗 <a href="https://www.theregister.com/security/2026/08/10/north-korean-spies-are-running-local-llms-to-cause-ai-mischief/5285632">The Register 原文</a> | <a href="https://www.chosun.com/english/industry-en/2026/08/10/EZPQLYUHRRCT5JDMS7PVGQXCQM">Chosun 英文版</a></p>
 <hr />
-<h2>4. StormEncryptor 勒索软件现身，中国关联 Storm-1175 疑借 N-central 漏洞投递</h2>
+<h2 id="s4">4. StormEncryptor 勒索软件现身，中国关联 Storm-1175 疑借 N-central 漏洞投递</h2>
 <p><strong>评分：89 分</strong> | 来源：The Hacker News / Microsoft Threat Intelligence</p>
 <p>微软威胁情报团队披露，与中国关联的财务动机型威胁组织 Storm-1175 已部署此前未记录的勒索软件变种 "StormEncryptor"，标志着该组织从此前使用的 Medusa 勒索软件转向新菌株。StormEncryptor 使用 C++ 编写，将加密文件扩展名修改为 <code>.encrypted</code>，并在每个扫描目录中释放名为 <code>!!!README_FIRST!!!.txt</code> 的勒索信。微软表示攻击者初始入侵极可能利用了 CVE-2026-18577——N-able N-central 平台的认证绕过漏洞（CVE-2026-18556 的补丁绕过），该漏洞已被 CISA 列入 KEV 目录标记为在野利用。Storm-1175 此前曾利用 Mirth Connect、ConnectWise ScreenConnect、JetBrains TeamCity 和 Fortinet FortiClient EMS 等多个产品的漏洞投递 Medusa 勒索软件，善于在漏洞披露与补丁部署之间的时间窗口发动高速攻击。后渗透行为包括滥用 AnyDesk/SimpleHelp 远程管理工具、使用 Advanced IP Scanner 进行发现、通过 Mimikatz 进行 LSASS 凭据转储，并从初始入侵到数据外泄和勒索软件部署通常在数天内完成。</p>
 <p><strong>评分理由：</strong> 新型勒索软件变种，利用已被 CISA KEV 标记的在野利用漏洞，中国关联 APT 组织策略转向，对 MSP 及其客户构成直接威胁。</p>
 <p>🔗 <a href="https://thehackernews.com/2026/08/china-linked-hackers-deploy-new.html">The Hacker News 原文</a> | <a href="https://bsky.app/profile/threatintel.microsoft.com/post/3msjiybnb252n">Microsoft Threat Intelligence (Bluesky)</a></p>
 <hr />
-<h2>5. BdThemes WordPress 供应链攻击：毒化 API 响应创建隐形管理员账户</h2>
+<h2 id="s5">5. BdThemes WordPress 供应链攻击：毒化 API 响应创建隐形管理员账户</h2>
 <p><strong>评分：88 分</strong> | 来源：Bleeping Computer / Wordfence (Defiant)</p>
 <p>威胁组织入侵了 WordPress 高级插件开发商 BdThemes 的上游存储基础设施，通过篡改远程 JSON 数据流（促销横幅 API 响应），在管理员浏览器中注入恶意 JavaScript，利用 2026 年 3 月引入的 XSS 漏洞（Biggop Library 的 <code>display_id</code> 参数输出转义不足），使用管理员已认证会话静默创建流氓管理员账户并植入 Webshell（<code>emer-run.php</code>）。攻击完全由 API 驱动，无需文件修改或插件更新，每次管理员打开 wp-admin 页面时载荷自动执行。注入代码还操纵 WordPress 数据库查询以隐藏流氓账户，使其难以被发现。BdThemes 旗下产品（Element Pack、Prime Slider、Ultimate Post Kit、Pixel Gallery、Ultimate Store Kit）总计超过 35 万活跃安装，其中旗舰免费插件 Element Pack 在 WordPress.org 上显示超过 10 万活跃安装。Wordfence 从 8 月 7 日起通过 WAF 检测到攻击，分析确定最早可能始于 6 月 23 日。C2 基础设施指向此前 Advanced Responsive Video Embedder 和 OptinMonster 供应链攻击的同一攻击者。受影响插件已于 8 月 8 日从 WordPress.org 目录下架。</p>
 <p><strong>评分理由：</strong> 大规模 WordPress 供应链攻击，35 万+ 安装受影响，API 驱动的隐蔽攻击无需用户交互，与已知供应链攻击者关联。</p>
 <p>🔗 <a href="https://www.bleepingcomputer.com/news/security/bdthemes-plugins-supply-chain-hack-creates-rogue-wordpress-admins/">Bleeping Computer 原文</a> | <a href="https://www.wordfence.com/blog/2026/08/psa-supply-chain-compromise-in-bdthemes-ecosystem-via-poisoned-api-response/">Wordfence 分析</a></p>
 <hr />
-<h2>其他值得关注</h2>
+<h2 id="s6">其他值得关注</h2>
 <ul>
 <li><strong>TrueConf 服务器漏洞被 Head Mare 利用投递 PhantomCore 后门</strong> — KLCERT-26-057/058 漏洞链，攻击者通过默认开放的 TCP 4307 端口无需认证连接，沙箱逃逸后以 SYSTEM 权限植入 Web Shell，替换客户端安装包为含后门版本，额外部署使用 OneDrive C2 的 PhantomGraph 双 DLL 后门。<a href="https://thehackernews.com/2026/08/head-mare-exploits-trueconf-flaws-to.html">The Hacker News</a></li>
 <li><strong>DarkSword iOS 利用链向有组织犯罪扩散</strong> — 此前仅限国家级攻击者使用的复杂 iPhone 全链利用工具包（DarkSword）正向有组织犯罪团伙扩散。<a href="https://www.darkreading.com/cyberattacks-data-breaches/coruna-darksword-ios-exploits-proliferate-globally">Dark Reading</a></li>
@@ -98,5 +123,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-08-10.html">← 前一天 2026-08-10</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-08-12.html">后一天 2026-08-12 →</a>
+</div>
+
 </body>
 </html>

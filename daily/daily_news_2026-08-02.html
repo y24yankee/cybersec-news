@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -54,8 +68,8 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 来源覆盖：The Hacker News、BleepingComputer、Hacker News 社区（news.ycombinator.com）</p>
 </blockquote>
 <hr />
-<h2>今日 Top 5 安全要闻</h2>
-<h3>1. Coldcard 硬件钱包固件漏洞致 1,196 个 BTC 地址遭洗劫，41 分钟失窃约 7,000 万美元 —— 95 分</h3>
+<h2 id="s1">今日 Top 5 安全要闻</h2>
+<h3 id="s2">1. Coldcard 硬件钱包固件漏洞致 1,196 个 BTC 地址遭洗劫，41 分钟失窃约 7,000 万美元 —— 95 分</h3>
 <ul>
 <li><strong>来源</strong>：The Hacker News</li>
 <li><strong>摘要</strong>：Galaxy Research 还原的攻击时间线显示，攻击者于 2026-07-30 01:10–01:51 UTC 短短 41 分钟内扫荡了 1,196 个比特币地址，合计 1,082.65 BTC（按当时价格约 7,020 万美元），其中部分地址已沉睡多年。根因是 2021 年 3 月起 Mk2/Mk3 固件一次库迁移错误导致种子生成从 STM32 硬件 RNG 静默回退到 MicroPython 的 Yasmarang 确定性软件 PRNG，Mk3 实际熵从 128 bit 跌至约 40 bit，Mk4/Q/Mk5 约 72 bit；Block 安全工程师 Clay Garrett 表示攻击者无需接触设备，可离线重建候选种子并对照公链地址筛选。Coinkite 已发布 4.2.0/5.6.0/1.5.0Q 等修复固件并警告：仅升级固件无法修复已泄露的种子，必须在修复版上重新生成种子并迁移资金；硬件钱包作为"离线冷存储金标准"首次出现系统性离线盗窃。</li>
@@ -63,7 +77,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接</strong>：https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html</li>
 </ul>
 <hr />
-<h3>2. Microsoft 披露 CaptiveCrunch：俄 SVR 关联组织 Storm-2945 劫持全球酒店 Wi-Fi Captive Portal 投放 CornFlake RAT + ChocoShell 令牌窃取器 —— 92 分</h3>
+<h3 id="s3">2. Microsoft 披露 CaptiveCrunch：俄 SVR 关联组织 Storm-2945 劫持全球酒店 Wi-Fi Captive Portal 投放 CornFlake RAT + ChocoShell 令牌窃取器 —— 92 分</h3>
 <ul>
 <li><strong>来源</strong>：The Hacker News（Microsoft Security Blog）</li>
 <li><strong>摘要</strong>：微软 7 月 31 日发布报告称，2026 年 5 月初以来 Storm-2945（被评估为 Midnight Blizzard / APT29 的子集群）持续入侵酒店、会议中心等场所的 Captive Portal 网关，因该网关同时承担 DNS 解析器角色，攻击者可伪造 DNS 应答重定向旅客的自动连接检测，诱使受害者下载伪装成"Windows Update / 浏览器更新 / DirectX / vcredist"的 CornFlake（Go 语言 Windows RAT，伪装为"Cloud Sync Service"服务，含键录、剪贴板、屏幕/麦克风/摄像头、Chrome ABE 凭据提取）和 ChocoShell（PowerShell 内存 infostealer，针对 M365/Entra ID Token Broker 缓存 .tbres 与 WAM token，可重放 SSO 会话无需浏览器 cookie）。7 月 16 日起部分着陆页还新增了 device code 钓鱼，把旅客导入微软合法登录页完成 MFA。微软尚未点名具体酒店或 Captive Portal 厂商，但 ReliaQuest 同期独立发现会议中心、共享场馆同款基础设施滥用。</li>
@@ -71,7 +85,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接</strong>：https://thehackernews.com/2026/08/hijacked-hotel-wi-fi-pushes-fake.html</li>
 </ul>
 <hr />
-<h3>3. N-able N-central RMM 平台遭主动利用（CVE-2026-18556），攻击者借 Cloudflare 隧道实现持久化 —— 90 分</h3>
+<h3 id="s4">3. N-able N-central RMM 平台遭主动利用（CVE-2026-18556），攻击者借 Cloudflare 隧道实现持久化 —— 90 分</h3>
 <ul>
 <li><strong>来源</strong>：N-able 官方安全更新公告（BleepingComputer、Hacker News 社区同步）</li>
 <li><strong>摘要</strong>：N-able 8 月 1 日披露，针对自托管 N-central 2026.1 及以下版本存在允许远程获取管理权限的漏洞 CVE-2026-18556，2026 年 7 月 31 日异常的授权许可问题触发调查。攻击者得手后利用 N-central 的"Take Control"功能连接到其管理环境内的终端，并注册 Cloudflare 隧道服务，使 N-central 服务器访问被撤销后仍能保持持久入侵。官方已公布攻击中使用的 4 个 IP（173.249.252.200 / 87.249.138.34 / 37.19.210.32 / 68.235.46.214），强烈建议所有未运行最新版本的用户立即升级到 2026.3。N-central 作为 MSP 行业最主流的 RMM 平台之一，下游托管 MSP 客户数量庞大，一旦 RMM 被控等于所有被管终端同时失守。</li>
@@ -79,7 +93,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接</strong>：https://www.n-able.com/blog/n-central-security-update-august-1-2026</li>
 </ul>
 <hr />
-<h3>4. OpenAM 身份基础设施曝未授权 RCE（CVE-2026-62379，CVSS 9.8），默认配置即可无凭据接管认证服务器 —— 89 分</h3>
+<h3 id="s5">4. OpenAM 身份基础设施曝未授权 RCE（CVE-2026-62379，CVSS 9.8），默认配置即可无凭据接管认证服务器 —— 89 分</h3>
 <ul>
 <li><strong>来源</strong>：The Hacker News / DBAppSecurity（GitHub Security Advisory GHSA-wg5r-wc3x-39vc）</li>
 <li><strong>摘要</strong>：开源访问管理服务器 OpenAM 在 16.1.2 修复了 18 个漏洞，其中核心 CVE-2026-62379（CVSS 9.8 Critical）位于 /authservice 端点的 AuthXMLUtils.createCustomCallback：从 XML 元素读取 className 后直接调用 Class.forName(...).newInstance()，缺少允许名单，攻击者可指定任意 classpath 中可达的 Java 类执行。默认配置下该端点无需认证即可访问，相当于把所有受其保护的 SSO 身份、OAuth 令牌、会话拱手相让。同批修复的 CVE-2026-62261（CVSS 9.9）Groovy 沙箱逃逸（编译期注解处理早于沙箱生效）、CVE-2026-62263 预认证反序列化（CVE-2026-62263 CVSS 9.2 认证前反序列化）以及 CVE-2026-63463 存储型 SSRF（遗留 JAXRPC 端点）等同样可达 9 分以上。漏洞由 TikTok ASM/VI 的 Zhixi "Jace" Sun 发现并披露。</li>
@@ -87,7 +101,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接</strong>：https://github.com/advisories/GHSA-wg5r-wc3x-39vc</li>
 </ul>
 <hr />
-<h3>5. 欧洲广告技术巨头 Adform 遭供应链投毒，trackpoint-async.js 篡改用户剪贴板与页面上的加密货币地址 —— 86 分</h3>
+<h3 id="s6">5. 欧洲广告技术巨头 Adform 遭供应链投毒，trackpoint-async.js 篡改用户剪贴板与页面上的加密货币地址 —— 86 分</h3>
 <ul>
 <li><strong>来源</strong>：BleepingComputer（原始）+ The Hacker News</li>
 <li><strong>摘要</strong>：研究员 Kevin Beaumont 7 月 27 日披露，欧洲头部广告平台 Adform 的 trackpoint-async.js 被打入混淆 JS 载荷，监测用户剪贴板中的 BTC/ETH/TRON 地址并替换为攻击者控制的地址，甚至会改写页面上 DOM 中的 input/textarea/contenteditable 元素、监听 copy/cut/paste 事件并 hook value setter，使程序写入的地址也被实时改写。Archive.org 快照显示最早样本可追溯至 7 月 26 日 23:29 GMT；Adform 官方 7 月 27 日发现、移除并通报客户，承认"代码不安装软件也不持久化，仅在受影响页面打开期间生效"，但承认技术上有能力外发 IP/Referer/URL（载荷会请求 84.32.102.230:7744）。Adform 2025 年报披露约 1,800 客户、日均 15 亿次广告曝光、服务 180+ 国家，潜在影响面巨大，BleepingComputer 强烈建议清除浏览器缓存。</li>
@@ -102,5 +116,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-08-01.html">← 前一天 2026-08-01</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-08-03.html">后一天 2026-08-03 →</a>
+</div>
+
 </body>
 </html>

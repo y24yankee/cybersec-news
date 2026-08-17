@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,8 +63,15 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-07</h1>
-<h2>Top 5 网络安全新闻</h2>
-<h3>1. 逾 4,400 台 Rockwell PLC 暴露公网，22 台位于近期遭袭水务城市</h3>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 网络安全新闻</a></li>
+<li><a href="#s7">其他候选新闻（按评分排序）</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. 逾 4,400 台 Rockwell PLC 暴露公网，22 台位于近期遭袭水务城市</h3>
 <ul>
 <li><strong>评分：93 分</strong></li>
 <li><strong>来源：</strong> The Hacker News</li>
@@ -58,7 +79,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/over-4400-rockwell-plcs-exposed-online.html</li>
 <li><strong>评分理由：</strong> 关键基础设施（水务）在遭攻击背景下仍大量暴露，影响范围广且可直接导致物理后果。</li>
 </ul>
-<h3>2. 对冲基金/私募机构遭遇 BlackFile 关联 UNC6671 勒索组织语音钓鱼攻击</h3>
+<h3 id="s3">2. 对冲基金/私募机构遭遇 BlackFile 关联 UNC6671 勒索组织语音钓鱼攻击</h3>
 <ul>
 <li><strong>评分：90 分</strong></li>
 <li><strong>来源：</strong> BleepingComputer</li>
@@ -66,7 +87,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/hedge-fund-cyberattacks-tied-to-blackfile-linked-unc6671-extortion-group/</li>
 <li><strong>评分理由：</strong> 针对顶级金融机构的活跃勒索活动，结合社会工程与云服务接管，经济影响与示范性极强。</li>
 </ul>
-<h3>3. TONTOU 新型 CPU 攻击可绕过 Intel/AMD Spectre v2 缓解措施并泄漏 Linux 密码哈希</h3>
+<h3 id="s4">3. TONTOU 新型 CPU 攻击可绕过 Intel/AMD Spectre v2 缓解措施并泄漏 Linux 密码哈希</h3>
 <ul>
 <li><strong>评分：88 分</strong></li>
 <li><strong>来源：</strong> BleepingComputer / The Hacker News</li>
@@ -74,7 +95,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/</li>
 <li><strong>评分理由：</strong> 硬件级侧信道新突破，影响主流 x86 平台，可泄露内核敏感数据，新颖性极高。</li>
 </ul>
-<h3>4. AWS、Google、Vercel 代理框架漏洞允许攻击者在不运行模型的情况下触发工具</h3>
+<h3 id="s5">4. AWS、Google、Vercel 代理框架漏洞允许攻击者在不运行模型的情况下触发工具</h3>
 <ul>
 <li><strong>评分：86 分</strong></li>
 <li><strong>来源：</strong> The Hacker News</li>
@@ -82,7 +103,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/aws-google-and-vercel-patch-agent-flaws.html</li>
 <li><strong>评分理由：</strong> 影响三大主流 AI 代理基础设施，直接威胁 AI 自动化工作流的授权边界。</li>
 </ul>
-<h3>5. Zapscape KVM 漏洞可使 L1 客户机权限代码逃逸至 Linux 宿主机</h3>
+<h3 id="s6">5. Zapscape KVM 漏洞可使 L1 客户机权限代码逃逸至 Linux 宿主机</h3>
 <ul>
 <li><strong>评分：85 分</strong></li>
 <li><strong>来源：</strong> The Hacker News</li>
@@ -91,7 +112,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由：</strong> 云服务核心虚拟化层逃逸，影响大量 KVM 主机，且有公开 PoC。</li>
 </ul>
 <hr />
-<h2>其他候选新闻（按评分排序）</h2>
+<h2 id="s7">其他候选新闻（按评分排序）</h2>
 <ol start="6">
 <li>
 <p><strong>Swiss government SharePoint breach compromised 200 accounts</strong> — BleepingComputer，82 分。瑞士联邦信息技术与电信办公室披露其 SharePoint 服务器遭入侵，约 200 个账户凭证泄露；疑似利用七月补丁星期二修复的 SharePoint 漏洞。https://www.bleepingcomputer.com/news/security/swiss-government-sharepoint-breach-compromised-200-accounts/</p>
@@ -119,5 +140,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-08-06.html">← 前一天 2026-08-06</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-08-08.html">后一天 2026-08-08 →</a>
+</div>
+
 </body>
 </html>

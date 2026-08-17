@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,37 +63,45 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-28</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 网络安全新闻</a></li>
+<li><a href="#s7">其他值得关注的新闻</a></li>
+<li><a href="#s8">微软补丁安全级别（Patch Tuesday — July 2026）</a></li>
+</ol>
+</nav>
+
 <hr />
-<h2>Top 5 网络安全新闻</h2>
-<h3>1. Arista VeloCloud Orchestrator 零日漏洞遭主动利用（评分：92分）</h3>
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. Arista VeloCloud Orchestrator 零日漏洞遭主动利用（评分：92分）</h3>
 <ul>
 <li><strong>来源</strong>：BleepingComputer</li>
 <li><strong>摘要</strong>：Arista 修补了本地部署 VeloCloud Orchestrator 中的最高严重性命令注入漏洞，该漏洞正在被攻击者主动利用。该漏洞影响企业 SD-WAN 编排平台，攻击者可通过漏洞在受影响的系统上执行任意命令，对企业网络基础设施构成严重威胁。</li>
 <li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/arista-patches-velocloud-orchestrator-zero-day-exploited-in-attacks/</li>
 <li><strong>评分理由</strong>：最高严重性零日漏洞 + 主动在野利用 + 企业关键网络基础设施。</li>
 </ul>
-<h3>2. Certighost PoC 利用工具发布：可劫持 Windows 域（评分：91分）</h3>
+<h3 id="s3">2. Certighost PoC 利用工具发布：可劫持 Windows 域（评分：91分）</h3>
 <ul>
 <li><strong>来源</strong>：BleepingComputer / The Hacker News</li>
 <li><strong>摘要</strong>：Certighost（CVE-2026-54121，CVSS 8.8）的概念验证利用工具已公开发布。该漏洞影响 Windows Active Directory 证书服务（AD CS），允许低权限用户模拟域控制器并执行 DCSync 攻击，从而完全控制整个 Active Directory 域。PoC 的公开大幅降低了攻击门槛。</li>
 <li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/new-certighost-poc-exploit-lets-attackers-hijack-windows-domains/</li>
 <li><strong>评分理由</strong>：AD 域级接管 + 公开 PoC + 影响所有启用 AD CS 的 Windows 环境。</li>
 </ul>
-<h3>3. Dysphoria IoT 僵尸网络感染 20 万台设备，采用区块链 C2（评分：89分）</h3>
+<h3 id="s4">3. Dysphoria IoT 僵尸网络感染 20 万台设备，采用区块链 C2（评分：89分）</h3>
 <ul>
 <li><strong>来源</strong>：BleepingComputer / The Hacker News</li>
 <li><strong>摘要</strong>：名为 Dysphoria 的新型 IoT 僵尸网络已在全球感染约 20 万台设备，用于发动 DDoS 攻击和流量中继。该僵尸网络在执法机构捣毁其前身 JackSkid 后迅速出现，创新性地采用区块链基础设施作为命令控制（C2）通道，并利用受感染设备作为中继节点，极大增加了追踪和取缔难度。</li>
 <li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/new-dysphoria-ddos-botnet-spreads-to-200k-devices-worldwide/</li>
 <li><strong>评分理由</strong>：20 万设备规模 + 区块链 C2 创新架构 + 执法对抗背景。</li>
 </ul>
-<h3>4. vBulletin 预认证 RCE 漏洞利用代码公开（评分：85分）</h3>
+<h3 id="s5">4. vBulletin 预认证 RCE 漏洞利用代码公开（评分：85分）</h3>
 <ul>
 <li><strong>来源</strong>：The Hacker News</li>
 <li><strong>摘要</strong>：安全研究人员发布了针对 vBulletin 预认证远程代码执行漏洞的公开利用代码。未经验证的攻击者可通过该漏洞在受影响的论坛服务器上执行任意 PHP 代码（通过 eval()），对大量运行 vBulletin 的网站构成直接威胁。管理员应立即升级至修复版本。</li>
 <li><strong>原文链接</strong>：https://thehackernews.com/2026/07/public-exploit-released-for-patched.html</li>
 <li><strong>评分理由</strong>：未认证 RCE + 公开 PoC + 广泛部署的论坛软件。</li>
 </ul>
-<h3>5. n8n 工作流自动化平台存在沙箱逃逸漏洞（评分：83分）</h3>
+<h3 id="s6">5. n8n 工作流自动化平台存在沙箱逃逸漏洞（评分：83分）</h3>
 <ul>
 <li><strong>来源</strong>：The Hacker News</li>
 <li><strong>摘要</strong>：n8n 工作流自动化平台存在一个高危沙箱逃逸漏洞，允许已认证的工作流编辑者以 n8n 进程权限执行操作系统命令。该漏洞影响 2.31.5 之前版本及特定 2.32.x 版本。n8n 作为广泛使用的 AI 开发和数据处理自动化枢纽，该漏洞对存储敏感凭证的实例构成严重风险。</li>
@@ -87,7 +109,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由</strong>：热门自动化平台沙箱逃逸 + 认证用户即可执行系统命令 + 大量存储 API 密钥的实例。</li>
 </ul>
 <hr />
-<h2>其他值得关注的新闻</h2>
+<h2 id="s7">其他值得关注的新闻</h2>
 <ul>
 <li><strong>Operation BlueDash</strong>：攻击者利用伪造的 Microsoft Teams 更新页面分发合法的远程监控管理工具（Level RMM 和 ScreenConnect）以获取企业网络访问权限。——The Hacker News</li>
 <li><strong>TELESHIM 恶意软件</strong>：东亚背景的 APT 组织利用 Telegram API 作为 C2 通道，针对中东政府实体发动多阶段攻击，部署了此前未知的恶意软件家族。——The Hacker News</li>
@@ -96,11 +118,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>研究人员展示 Volvo/Eicher 车队管理平台可被完全入侵</strong>，攻击者可控制所有用户和车辆。——Hacker News / eaton-works.com</li>
 </ul>
 <hr />
-<h2>微软补丁安全级别（Patch Tuesday — July 2026）</h2>
+<h2 id="s8">微软补丁安全级别（Patch Tuesday — July 2026）</h2>
 <blockquote>
 <p>数据状态：CVRF 正式文档「July 2026 Security Updates」，CurrentReleaseDate 2026-07-27T07:00:00Z。相比 7 月 25 日数据仅有微小更新（+3 Microsoft CVEs，+4 Chromium CVEs），整体格局稳定。</p>
 </blockquote>
-<h3>本月 Microsoft CVE 统计</h3>
+<h3 id="s9">本月 Microsoft CVE 统计</h3>
 <table>
 <thead>
 <tr>
@@ -137,7 +159,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>其他</strong>：1 CVE</li>
 <li><strong>总计：1,415 CVEs</strong></li>
 </ul>
-<h3>已被在野利用的 CVE（3 项）</h3>
+<h3 id="s10">已被在野利用的 CVE（3 项）</h3>
 <table>
 <thead>
 <tr>
@@ -171,7 +193,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <blockquote>
 <p>注：watchTowr 报告 CVE-2026-50522（SharePoint RCE，CVSS 9.8）亦存在在野利用迹象，CVRF 原始标记未标注 exploited，但第三方已观测到攻击活动。</p>
 </blockquote>
-<h3>CVSS ≥ 9.0 高危 CVE 清单（31 项）</h3>
+<h3 id="s11">CVSS ≥ 9.0 高危 CVE 清单（31 项）</h3>
 <p><strong>CVSS 10.0（6 项）</strong>：
 - CVE-2026-56163 — Azure Kubernetes Service 权限提升
 - CVE-2026-56191 — Exchange Online 篡改漏洞
@@ -199,7 +221,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 - CVE-2026-56188 — Windows Server Network driver RCE
 - CVE-2026-56190 — Remote Desktop Protocol RCE</p>
 <p><strong>其余 CVSS 9.0–9.6（10 项）</strong>已折叠，详见 MSRC Security Update Guide。</p>
-<h3>核心风险总结</h3>
+<h3 id="s12">核心风险总结</h3>
 <p>本月补丁以 <strong>Azure 云服务权限提升</strong>和 <strong>SharePoint 远程代码执行</strong>为最高风险点：6 个 CVSS 10.0 全部为 Azure 云组件 EoP，而 2 个 SharePoint RCE（含 1 个已确认在野利用、1 个有利用迹象）对暴露于公网的企业 SharePoint 实例构成直接威胁。建议优先修补在野利用的 CVE-2026-58644 和 CVE-2026-56155。</p>
 <ul>
 <li><strong>MSRC Security Update Guide</strong>：https://msrc.microsoft.com/update-guide</li>
@@ -213,5 +235,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-27.html">← 前一天 2026-07-27</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-29.html">后一天 2026-07-29 →</a>
+</div>
+
 </body>
 </html>

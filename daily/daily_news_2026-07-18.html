@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,46 +63,53 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-18</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">🔝 Top 5 新闻</a></li>
+<li><a href="#s7">🛡️ 微软补丁安全级别（Patch Tuesday — 2026 年 7 月）</a></li>
+</ol>
+</nav>
+
 <blockquote>
 <p>📊 本次共筛选 15 条候选新闻，最高分 95 分。</p>
 </blockquote>
 <hr />
-<h2>🔝 Top 5 新闻</h2>
-<h3>1. CISA 将 FortiSandbox 三漏洞链列入 KEV 目录，确认已被在野利用 | 评分：95</h3>
+<h2 id="s1">🔝 Top 5 新闻</h2>
+<h3 id="s2">1. CISA 将 FortiSandbox 三漏洞链列入 KEV 目录，确认已被在野利用 | 评分：95</h3>
 <p><strong>来源：</strong> CISA / BleepingComputer / Defused Cyber</p>
 <p><strong>摘要：</strong> 美国 CISA 于 7 月 16 日将 Fortinet FortiSandbox 产品三个漏洞（CVE-2026-39808/25089/39813）正式纳入已知被利用漏洞（KEV）目录。该漏洞链包含身份验证绕过（CVE-2026-39813）及两个 CVSS 9.8/9.1 的未认证 OS 命令注入漏洞，攻击者可通过特制 HTTP 请求远程执行任意命令，无需凭证或用户交互。安全公司 Defused 自 6 月 16 日起观测到野外利用，约 2,400 个 FortiSandbox 实例暴露在互联网。CISA 依据 BOD 26-04 指令要求联邦机构在 7 月 19 日前完成修补。</p>
 <p><strong>评分理由：</strong> 企业级安全沙箱设备被三重漏洞链攻陷，CVSS 最高 9.8 且已在野利用，CISA 紧急指令限期修复。</p>
 <p><strong>原文链接：</strong> https://www.cisa.gov/known-exploited-vulnerabilities-catalog</p>
 <hr />
-<h3>2. Cisco Talos 披露 UAT-11795：Starland RAT 利用 Polygon 智能合约做 C2 回退 | 评分：93</h3>
+<h3 id="s3">2. Cisco Talos 披露 UAT-11795：Starland RAT 利用 Polygon 智能合约做 C2 回退 | 评分：93</h3>
 <p><strong>来源：</strong> Cisco Talos / BleepingComputer</p>
 <p><strong>摘要：</strong> Cisco Talos 于 7 月 16 日披露一个俄语经济动机攻击组织 UAT-11795，自 2025 年 6 月起针对美国和欧洲用户分发木马化安装程序（MobaXterm、WebEx、Zoom、DBeaver、FACEIT），内置新颖的 Python RAT（Starland）和内存级 PowerShell C2 植入（WLDR Agent）。最具创新性的是其 C2 回退机制：当主 C2 被封锁时，恶意软件通过 Polygon 智能合约（0x6ae382ed...）查询 XOR 加密的备用域名，实现去中心化 C2 韧性。此外还携带 CastleStealer 和 Remcos RAT 作为二级载荷。</p>
 <p><strong>评分理由：</strong> 首个公开记录的使用区块链智能合约实现 C2 回退的在野恶意软件，技术新颖性极高，影响范围广。</p>
 <p><strong>原文链接：</strong> https://blog.talosintelligence.com/uat-11795-deploys-novel-starland-rat-and-bespoke-wldr-c2-implant-in-financially-motivated-campaign/</p>
 <hr />
-<h3>3. Spirals：新型 Rust 勒索软件 24 小时内完成完整入侵周期 | 评分：90</h3>
+<h3 id="s4">3. Spirals：新型 Rust 勒索软件 24 小时内完成完整入侵周期 | 评分：90</h3>
 <p><strong>来源：</strong> Symantec / BleepingComputer</p>
 <p><strong>摘要：</strong> Symantec 威胁猎人团队 7 月 16 日披露名为 Spirals 的全新 Rust 勒索软件家族。攻击者通过面向互联网的 IIS 服务器上的 ASP.NET Web Shell 获取初始访问，在不到 24 小时内完成横向移动、凭证窃取（SAM/LSASS）、关闭 23 个备份/数据库/虚拟化服务，最终使用 PsExec 全网部署加密载荷。加密算法采用 AES-128 + ECDH P-256，超过 5MB 文件使用间歇加密加速。目前仅发现一个南亚 IT 服务公司受害，但研究人员评估运营者具备大规模攻击能力。</p>
 <p><strong>评分理由：</strong> 全新 Rust 勒索软件家族 24 小时即完成从入侵到加密的完整 TTP，攻击速度之快远超行业平均水平。</p>
 <p><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/new-spirals-ransomware-encrypts-victim-network-in-under-24-hours/</p>
 <hr />
-<h3>4. ClickLock：新型 macOS 窃密木马每 210ms 杀死应用直到受害者交出密码 | 评分：86</h3>
+<h3 id="s5">4. ClickLock：新型 macOS 窃密木马每 210ms 杀死应用直到受害者交出密码 | 评分：86</h3>
 <p><strong>来源：</strong> Group-IB / NCSC-FI</p>
 <p><strong>摘要：</strong> 安全厂商 Group-IB 和芬兰 NCSC-FI 报告了一种名为 ClickLock 的新型 macOS 信息窃取木马。该恶意软件采用极具侵略性的社工手法：感染后每 210 毫秒杀死受害者正在运行的应用程序，直到用户被迫在弹出的伪造系统对话框中输入登录密码。ClickLock 通过终端命令传播，安装持久化 LaunchAgent，窃取 8 款浏览器、31 个加密货币钱包扩展、7 个密码管理器及 macOS Keychain 中的凭证。自 5 月以来已在 33 个国家感染超过 100 名受害者。</p>
 <p><strong>评分理由：</strong> 独特的"杀死应用逼交密码"社工技术在前，且覆盖 macOS 全生态敏感数据，技术手法新颖且危害严重。</p>
 <p><strong>原文链接：</strong> https://www.cybersecbrief.com/news/cybersec/cybersec-2026-07-17</p>
 <hr />
-<h3>5. VMware Avi Load Balancer 7 个漏洞 + FreePBX 未认证 RCE 紧急修复 | 评分：83</h3>
+<h3 id="s6">5. VMware Avi Load Balancer 7 个漏洞 + FreePBX 未认证 RCE 紧急修复 | 评分：83</h3>
 <p><strong>来源：</strong> Canadian Centre for Cyber Security</p>
 <p><strong>摘要：</strong> 加拿大网络安全中心 7 月 17 日发布三项安全公告：Broadcom VMware Avi Load Balancer 存在 7 个 CVE（VMSA-2026-0005），涵盖 CVE-2026-47865 至 CVE-2026-47871；开源电话系统 FreePBX 16/17 存在通过 socket.io 命名空间绕过实现的未认证 RCE 及未认证 SQL 注入漏洞；Google Chrome Desktop 需更新至 150.0.7871.128+。三者均建议立即升级至最新版本。</p>
 <p><strong>评分理由：</strong> 企业级负载均衡器和广泛部署的开源 PBX 系统同时爆发严重漏洞，影响面大且均有未认证 RCE 风险。</p>
 <p><strong>原文链接：</strong> https://cyfar.ca/posts/cyber-centre-daily-advisory-digest-2026-07-17-3-advisories</p>
 <hr />
-<h2>🛡️ 微软补丁安全级别（Patch Tuesday — 2026 年 7 月）</h2>
+<h2 id="s7">🛡️ 微软补丁安全级别（Patch Tuesday — 2026 年 7 月）</h2>
 <blockquote>
 <p>⚠️ 数据来源：MSRC CVRF API <code>2026-Jul</code>，DocumentTitle 确认为正式 <code>July 2026 Security Updates</code>（非 Early 预发布版本）。CVRF 最近更新于 2026-07-17T17:42:44Z。</p>
 </blockquote>
-<h3>📊 本月补丁总览</h3>
+<h3 id="s8">📊 本月补丁总览</h3>
 <table>
 <thead>
 <tr>
@@ -131,7 +152,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tr>
 </tbody>
 </table>
-<h3>🔴 已被在野利用的零日漏洞（3 个）</h3>
+<h3 id="s9">🔴 已被在野利用的零日漏洞（3 个）</h3>
 <table>
 <thead>
 <tr>
@@ -166,7 +187,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tr>
 </tbody>
 </table>
-<h3>⚡ Top 8 CVSS ≥ 9.0 高危 CVE</h3>
+<h3 id="s10">⚡ Top 8 CVSS ≥ 9.0 高危 CVE</h3>
 <table>
 <thead>
 <tr>
@@ -230,7 +251,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <blockquote>
 <p>其余 22 个 CVSS ≥ 9.0 的 CVE（完整列表见 <a href="https://msrc.microsoft.com/update-guide/vulnerability">MSRC Security Update Guide</a>）。</p>
 </blockquote>
-<h3>📝 核心风险总结</h3>
+<h3 id="s11">📝 核心风险总结</h3>
 <p>本月补丁量接近历史纪录（756 个 Microsoft CVE，含 70 个 Critical），攻击面集中在 <strong>SharePoint Server（1 个在野利用 RCE + 1 个未授权访问）</strong>、<strong>Azure/Entra 云服务权限提升</strong>、以及 <strong>Windows 网络栈（TCP/IP、Hyper-V、RDS）远程代码执行</strong>。SharePoint CVE-2026-58644（CVSS 9.8，已利用）结合 CISA 同期 KEV 警报，构成当前最紧迫的修复优先级。建议补丁窗口 ≤ 72 小时。</p>
 <p>📎 <strong>MSRC CVRF API：</strong> https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul<br />
 📎 <strong>Security Update Guide：</strong> https://msrc.microsoft.com/update-guide</p>
@@ -239,5 +260,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-17.html">← 前一天 2026-07-17</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-19.html">后一天 2026-07-19 →</a>
+</div>
+
 </body>
 </html>

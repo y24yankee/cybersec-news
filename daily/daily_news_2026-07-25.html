@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,14 +63,22 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-25</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 网络安全新闻</a></li>
+<li><a href="#s7">候选新闻（未进入 Top 5）</a></li>
+<li><a href="#s8">微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
 <blockquote>
 <p>数据来源：The Hacker News / Bleeping Computer / Hacker News<br />
 筛选时间：2026-07-25 07:00 CST<br />
 候选新闻：15 条 → 精选 Top 5</p>
 </blockquote>
 <hr />
-<h2>Top 5 网络安全新闻</h2>
-<h3>1. Certighost 漏洞：低权限 AD 用户可冒充域控制器实现 DCSync（CVSS 8.8）</h3>
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. Certighost 漏洞：低权限 AD 用户可冒充域控制器实现 DCSync（CVSS 8.8）</h3>
 <p><strong>评分：92 分</strong> — 严重性：域控冒充可导致全域沦陷；新颖性：公开 PoC + 新攻击路径；影响范围：所有 Active Directory 环境</p>
 <p>研究人员公开了名为 "Certighost" 的工作漏洞利用代码，允许仅拥有普通域账户（无需管理员权限）的用户获取域控制器的证书并以此身份进行认证，进而发起 DCSync 攻击导出全域密码哈希。该漏洞编号为 CVE-2026-54121（CVSS 8.8），利用条件仅需网络访问和一个域账户。微软已发布补丁修复此漏洞，但已公开的利用代码意味着未修补系统面临即时风险。</p>
 <ul>
@@ -64,7 +86,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接</strong>：https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html</li>
 </ul>
 <hr />
-<h3>2. Bing 图片搜索 SVG 漏洞：可在微软服务器上以 SYSTEM 权限执行命令（CVSS 9.8 ×2）</h3>
+<h3 id="s3">2. Bing 图片搜索 SVG 漏洞：可在微软服务器上以 SYSTEM 权限执行命令（CVSS 9.8 ×2）</h3>
 <p><strong>评分：90 分</strong> — 严重性：CVSS 9.8 + SYSTEM 级 RCE；新颖性：SVG 图片处理链攻击；影响范围：微软生产服务器</p>
 <p>安全研究员发现，向 Bing 图片搜索提交特制 SVG 文件后，可在微软的图片处理服务器上以 <code>NT AUTHORITY\SYSTEM</code> 权限执行任意命令。两个漏洞 CVE-2026-32194 和 CVE-2026-32191 均被评为 CVSS 9.8，由 XBOW 发现并报告。微软已在公开通告前完成服务端修复，用户无需采取行动，但该攻击路径揭示了图片处理管道的高危面。</p>
 <ul>
@@ -72,7 +94,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接</strong>：https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html</li>
 </ul>
 <hr />
-<h3>3. 黑客利用 Hermes AI 代理对泰国财政部实施自主后渗透攻击</h3>
+<h3 id="s4">3. 黑客利用 Hermes AI 代理对泰国财政部实施自主后渗透攻击</h3>
 <p><strong>评分：89 分</strong> — 严重性：政府部委遭入侵；新颖性：首个公开确认的无监督 AI 代理后渗透攻击；影响范围：政府人员数据自 2012 年起泄露</p>
 <p>攻击者将开源 AI 代理 Hermes（Nous Research 开发）以 "YOLO" 模式部署在租用服务器上，对泰国财政部实施自主后渗透。该代理自动搜索 root 权限、爬取 2012 年至今的人事档案，并在 Web 服务器上暴露 585 个文件/470MB 攻击工具。此事件由 Hunt.io 和研究员 Bob Diachenko 发现，标志着 AI 代理首次在真实政府入侵中被用于无人值守的自主攻击。</p>
 <ul>
@@ -81,7 +103,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   https://www.bleepingcomputer.com/news/security/hermes-ai-agent-used-to-automate-attack-on-thai-finance-ministry/</li>
 </ul>
 <hr />
-<h3>4. Kimi K3 AI 代理自主发现 Redis 0day 并构建 RCE 利用</h3>
+<h3 id="s5">4. Kimi K3 AI 代理自主发现 Redis 0day 并构建 RCE 利用</h3>
 <p><strong>评分：88 分</strong> — 严重性：Redis 多个 RCE 0day；新颖性：AI 自主发现并武器化漏洞；影响范围：Redis 广泛部署于全球基础设施</p>
 <p>中国月之暗面（Moonshot AI）的 Kimi K3 模型被用于自主漏洞挖掘，成功发现 Redis 中的多个 0day 并构建可工作的 RCE 利用代码。涉及 RESTORE 命令内存缺陷、Streams 共享 NACK 释放后重用、以及 RedisBloom/TDigest 越界写入。Redis 于 7 月 23 日紧急发布 7 个安全版本（覆盖 6.2.22、7.4.9、8.6.4、8.8.0）。研究者建议立即升级并撤销非必要账户的 RESTORE 权限。</p>
 <ul>
@@ -89,7 +111,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接</strong>：https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html</li>
 </ul>
 <hr />
-<h3>5. Clop 勒索软件转向攻击 PTC Windchill 和 FlexPLM 实例进行数据勒索</h3>
+<h3 id="s6">5. Clop 勒索软件转向攻击 PTC Windchill 和 FlexPLM 实例进行数据勒索</h3>
 <p><strong>评分：87 分</strong> — 严重性：活跃数据勒索攻击；新颖性：制造业 PLM 系统成为新目标；影响范围：暴露在互联网上的企业 PLM 实例</p>
 <p>Clop 勒索软件团伙正在对互联网暴露的 PTC Windchill 和 FlexPLM 实例发起数据窃取勒索攻击。PTC Windchill 是制造业广泛使用的产品生命周期管理（PLM）平台，FlexPLM 则在零售和服装行业大量部署。攻击者利用这些系统的暴露面进行数据外泄，随后进行勒索。这标志着 Clop 从传统的文件传输类目标（如 MOVEit、GoAnywhere）向制造业 PLM 平台扩展。</p>
 <ul>
@@ -97,7 +119,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/clop-ransomware-targets-windchill-flexplm-in-data-theft-attacks/</li>
 </ul>
 <hr />
-<h2>候选新闻（未进入 Top 5）</h2>
+<h2 id="s7">候选新闻（未进入 Top 5）</h2>
 <table>
 <thead>
 <tr>
@@ -171,11 +193,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tbody>
 </table>
 <hr />
-<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<h2 id="s8">微软补丁安全级别（Patch Tuesday）</h2>
 <blockquote>
 <p><strong>CVRF 更新提示</strong>：微软于 2026-07-24 更新了七月补丁数据（CurrentReleaseDate: 2026-07-24T07:00:00Z），Microsoft CVE 数量从 628 → 642，Critical 从 62 → 76，CVSS≥9.0 从 22 → 32。以下为最新解析数据。</p>
 </blockquote>
-<h3>总览</h3>
+<h3 id="s9">总览</h3>
 <table>
 <thead>
 <tr>
@@ -222,7 +244,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tr>
 </tbody>
 </table>
-<h3>已被在野利用的 CVE（3 个）</h3>
+<h3 id="s10">已被在野利用的 CVE（3 个）</h3>
 <table>
 <thead>
 <tr>
@@ -253,7 +275,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </tr>
 </tbody>
 </table>
-<h3>高危 CVE 清单（CVSS ≥ 9.0，共 32 个，展示前 8）</h3>
+<h3 id="s11">高危 CVE 清单（CVSS ≥ 9.0，共 32 个，展示前 8）</h3>
 <table>
 <thead>
 <tr>
@@ -326,9 +348,9 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <blockquote>
 <p>其余 24 个 CVSS≥9.0 的 CVE 包括：CVE-2026-54120（Surface RCE 9.9）、CVE-2026-57092（VMSwitch EoP 9.9）、CVE-2026-50517（M365 Copilot RCE 9.9）、CVE-2026-56165（Microsoft Account RCE 9.8）、CVE-2026-42990（SQL Server ODBC EoP 9.8）、CVE-2026-49172（Windows FTP RCE 9.8）、CVE-2026-54990（RDP Client RCE 9.8）、CVE-2026-50522（SharePoint RCE 9.8）、CVE-2026-50447（MSMQ RCE 9.8）、CVE-2026-50518（DHCP Server RCE 9.8）、CVE-2026-55010（Minecraft BDS RCE 9.8）、CVE-2026-55944（Dynamics 365 RCE 9.8）、CVE-2026-56159（DHCP Server RCE 9.8）、CVE-2026-56190（RDP RCE 9.8）、CVE-2026-56188（Server Network Driver RCE 9.8）、CVE-2026-48561（Copilot RCE 9.6）、CVE-2026-55008（Exchange Server Spoofing 9.6）、CVE-2026-50380（GDI+ RCE 9.6）、CVE-2026-41106（M365 Copilot EoP 9.3）、CVE-2026-49798（Windows Kernel EoP 9.3）、CVE-2026-62835（Azure Portal Info Disclosure 9.3）、CVE-2026-55040（SharePoint Security Bypass 9.1）、CVE-2026-58289（Edge RCE 9.0）、CVE-2026-58644（SharePoint RCE 9.8 Exploited，已列于在野利用表）。</p>
 </blockquote>
-<h3>核心风险总结</h3>
+<h3 id="s12">核心风险总结</h3>
 <p>本次七月补丁日为 2026 年迄今最大规模更新，Microsoft CVE 总数达 642（较初版 628 新增 14 个，Critical 从 62 升至 76），其中 <strong>3 个已被在野利用</strong>（SharePoint RCE CVSS 9.8 最为紧急）。CVSS≥9.0 的 CVE 达 32 个，涵盖 Azure Kubernetes Service、Exchange Online、Azure Key Vault、Azure DNS、Entra Provisioning 等云核心服务的权限提升漏洞——攻击者可借此横向移动并接管云租户。Azure OpenAI 和 M365 Copilot 各有 CVSS 9.9/9.6 的漏洞，反映 AI 服务正成为补丁重点。<strong>建议优先修补 3 个在野利用 CVE，其次处理 Azure 云服务 CVSS 10.0 权限提升项。</strong></p>
-<h3>参考链接</h3>
+<h3 id="s13">参考链接</h3>
 <ul>
 <li>MSRC Security Update Guide：https://msrc.microsoft.com/update-guide/</li>
 <li>CVRF API（七月数据）：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</li>
@@ -339,5 +361,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-07-24.html">← 前一天 2026-07-24</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-26.html">后一天 2026-07-26 →</a>
+</div>
+
 </body>
 </html>

@@ -38,6 +38,20 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -49,36 +63,43 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-14</h1>
-<h2>Top 5 网络安全新闻</h2>
-<h3>1. <a href="https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html">未修补 GeoServer 0day 遭活跃利用，可导致远程代码执行</a> — 92 分</h3>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 网络安全新闻</a></li>
+<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. <a href="https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html">未修补 GeoServer 0day 遭活跃利用，可导致远程代码执行</a> — 92 分</h3>
 <ul>
 <li><strong>评分</strong>：92 分（未修补 0day 已被活跃利用，地理空间服务器影响面广）</li>
 <li><strong>来源</strong>：The Hacker News</li>
 <li><strong>摘要</strong>：开源地理空间服务器 GeoServer 出现一个尚未分配 CVE 的 SQL 注入 0day，攻击者已利用其探测大量实例；当数据库以高权限账户运行时可导致远程代码执行。截至报道时官方补丁尚未发布，建议管理员限制访问并监控异常请求。</li>
 <li><strong>原文链接</strong>：<a href="https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html">https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html</a></li>
 </ul>
-<h3>2. <a href="https://thehackernews.com/2026/08/new-patchcord-backdoor-targets-afghan.html">PATCHCORD 后门针对阿富汗电信及印度关键基础设施</a> — 88 分</h3>
+<h3 id="s3">2. <a href="https://thehackernews.com/2026/08/new-patchcord-backdoor-targets-afghan.html">PATCHCORD 后门针对阿富汗电信及印度关键基础设施</a> — 88 分</h3>
 <ul>
 <li><strong>评分</strong>：88 分（新的 C/C++ 后门瞄准南亚关键基础设施，疑似国家支持行动）</li>
 <li><strong>来源</strong>：The Hacker News</li>
 <li><strong>摘要</strong>：Acronis Threat Research Unit 发现名为 PATCHCORD 的 C/C++ 后门被用于攻击阿富汗电信运营商和南亚关键基础设施，诱饵为伪造的阿富汗电信 VPN 安装包。同一行动还使用基于 Google Sheets 的 Go 语言后门 SHEETCORD 进行命令与控制通信。</li>
 <li><strong>原文链接</strong>：<a href="https://thehackernews.com/2026/08/new-patchcord-backdoor-targets-afghan.html">https://thehackernews.com/2026/08/new-patchcord-backdoor-targets-afghan.html</a></li>
 </ul>
-<h3>3. <a href="https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/">Jewelbug 组织入侵政府邮件系统并同步运营加密货币诈骗</a> — 84 分</h3>
+<h3 id="s4">3. <a href="https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/">Jewelbug 组织入侵政府邮件系统并同步运营加密货币诈骗</a> — 84 分</h3>
 <ul>
 <li><strong>评分</strong>：84 分（政府/军事目标与加密诈骗并行，混合动机威胁升级）</li>
 <li><strong>来源</strong>：BleepingComputer</li>
 <li><strong>摘要</strong>：Jewelbug 黑客组织在针对政府和军事机构进行间谍活动的同时，运营平行的加密货币诈骗活动，显示威胁行为者正将情报收集与牟利相结合。这种双轨模式增加了归因和事件响应的复杂度。</li>
 <li><strong>原文链接</strong>：<a href="https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/">https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/</a></li>
 </ul>
-<h3>4. <a href="https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/">Akira 勒索软件通过安全模式禁用 EDR 并窃取数据</a> — 82 分</h3>
+<h3 id="s5">4. <a href="https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/">Akira 勒索软件通过安全模式禁用 EDR 并窃取数据</a> — 82 分</h3>
 <ul>
 <li><strong>评分</strong>：82 分（活跃勒索软件展示绕过 EDR 的新技巧，数据窃取成功）</li>
 <li><strong>来源</strong>：BleepingComputer</li>
 <li><strong>摘要</strong>：Akira 勒索软件附属机构通过将受感染系统重启到带网络连接的安全模式，成功禁用端点检测与响应（EDR）产品。虽然最终加密失败，但攻击者仍窃取了大量数据。</li>
 <li><strong>原文链接</strong>：<a href="https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/">https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/</a></li>
 </ul>
-<h3>5. <a href="https://thehackernews.com/2026/08/amnesiastealer-hijacks-chromium.html">AmnesiaStealer 劫持 macOS Chromium 会话实现实时浏览器控制</a> — 80 分</h3>
+<h3 id="s6">5. <a href="https://thehackernews.com/2026/08/amnesiastealer-hijacks-chromium.html">AmnesiaStealer 劫持 macOS Chromium 会话实现实时浏览器控制</a> — 80 分</h3>
 <ul>
 <li><strong>评分</strong>：80 分（macOS 信息窃取器实现实时浏览器控制，威胁开发者与普通用户）</li>
 <li><strong>来源</strong>：The Hacker News</li>
@@ -87,7 +108,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 </ul>
 <hr />
 <p>本次共筛选 15 条新闻，最高分 92 分。</p>
-<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
 <blockquote>
 <p>数据来源：MSRC CVRF <code>2026-Aug</code>，校验 <code>DocumentTitle</code> 为 <strong>August 2026 Security Updates</strong>（非 Early），CurrentReleaseDate <code>2026-08-13T07:00:00Z</code>。</p>
 </blockquote>
@@ -127,7 +148,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>其中 Critical 且可远程/无认证利用（AV:N / PR:N）</strong>：55 个</li>
 <li><strong>在野利用（Exploited:Yes）</strong>：1 个</li>
 </ul>
-<h3>重点高危 CVE 清单（可见 8 条）</h3>
+<h3 id="s8">重点高危 CVE 清单（可见 8 条）</h3>
 <table>
 <thead>
 <tr>
@@ -204,5 +225,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<div class="daynav">
+  <a class="dn-prev" href="daily_news_2026-08-13.html">← 前一天 2026-08-13</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-08-15.html">后一天 2026-08-15 →</a>
+</div>
+
 </body>
 </html>
