@@ -1,5 +1,33 @@
 [
  {
+  "date": "2026-08-19",
+  "url": "daily/daily_news_2026-08-19.html",
+  "title": "网络安全日报 2026-08-19",
+  "score": 9,
+  "cves": [
+   "CVE-2026-19478",
+   "CVE-2026-19650",
+   "CVE-2026-24301",
+   "CVE-2026-25895",
+   "CVE-2026-33824",
+   "CVE-2026-50481",
+   "CVE-2026-50515",
+   "CVE-2026-55040",
+   "CVE-2026-56162",
+   "CVE-2026-59115",
+   "CVE-2026-59310",
+   "CVE-2026-62830",
+   "CVE-2026-62873",
+   "CVE-2026-63508",
+   "CVE-2026-64849",
+   "CVE-2026-65400",
+   "CVE-2026-65667",
+   "CVE-2026-68820"
+  ],
+  "summary": "CISA 同日新增 4 个关键 CVE 至 KEV 目录，全部确认在野利用",
+  "text": "CISA 同日新增 4 个关键 CVE 至 KEV 目录，全部确认在野利用 来源： IntelFusions / The Hacker News / BleepingComputer 摘要： CISA 于 8 月 18 日将四个严重漏洞同时列入已知被利用漏洞（KEV）目录，均已在真实入侵中被观察到。其中 VMware vCenter CVE202659310（CVSS 9.8）为目录遍历导致 RCE，控制整个虚拟化集群；Windows IKE CVE202633824（CVSS 9.8）为双释放内存漏洞，可导致未授权远程代码执行，EPSS 高达 0.56；SharePoint CVE202655040（CVSS 9.1）为弱身份验证绕过；macOS Screen Sharing CVE202665400（CVSS 9.8）为认证绕过可获 root。美国联邦机构须在 BOD 2604 下优先修复公网暴露资产。 评分理由： 四个严重漏洞同日被 CISA 确认在野利用，覆盖虚拟化、VPN、协作平台和操作系统，影响范围极广。 原文链接： https://www.intelfusions.com/news/cisakevvcenterwindowsikeaugust2026 Microsoft Copilot \"CoSnitch\" 漏洞：单次点击即可静默窃取连接应用数据 来源： The Hacker News / Varonis 摘要： Varonis 披露 Microsoft Copilot Personal 三个漏洞（统称 CoSnitch，CVE202624301），攻击者仅需诱使用户点击一个恶意链接，即可在无需任何用户确认的情况下，自动执行提示词并窃取 Copilot 已连接应用中的邮件、日历、文件等敏感数据。研究人员通过反复向 Copilot 询问其安全机制（\"元黑客\"手法），意外让 Copilot 自己披露了未公开的 autorun=1 参数，从而绕过所有确认流程。此外，恶意网页在被 Copilot 总结时还可向用户记忆库写入持久化指令，该记忆在密码更改、会话注销甚至设备重新注册后仍然有效。微软已于 8 月 18 日修复。 评分理由： 主流 AI 助手出现一键式数据窃取漏洞，攻击面覆盖所有 Copilot 用户及其已授权的云服务，且存在持久化记忆污染路径。 原文链接： https://thehackernews.com/2026/08/microsoftcopilotpersonalflawscould.html GitLab 紧急修复 CVE202619478：未认证攻击者可远程删除公共项目 来源： The Hacker News / IT之家 / 163.com 摘要： GitLab 于 8 月 17 日发布紧急安全更新，修复 CVE202619478（CVSS 9.4）—— 一个 GraphQL 层的 fallback 字段解析缺陷，允许未认证攻击者通过单个恶意请求永久删除公开项目数据、停用或封禁用户账号，甚至对开源项目发起供应链攻击。该漏洞影响 CE/EE 从 18.2 至 19.2.4 之前的所有版本，PoC 和技术细节已公开。据奇安信鹰图数据，全球约 401,607 个实例面临风险。伴随修复的 CVE202619650（CVSS 7.1）为 GraphQL 多路复用查询中的 CSRF 漏洞，允许通过 GET 请求执行变更操作。 评分理由： 全球 40 万+自托管实例面临未认证数据销毁风险，PoC 已公开，对开源生态和 DevOps 基础设施构成直接威胁。 原文链接： https://thehackernews.com/2026/08/gitlabcriticalsecurityupdate.html TWINLOOT：首个将完整 C2 基础设施隐藏在 SharePoint 和 Teams 中的 Python 植入框架 来源： The Hacker News / Ontinue 摘要： Ontinue 披露了一个名为 TWINLOOT 的新型 Python 植入框架，其全部 C2 通道均依赖受信任的微软服务：通过 SharePoint Online（Graph API）进行任务下发，利用 Microsoft Teams TURN 服务器建立 WebRTC 反向 SOCKS5 隧道实现交互式访问，并使用受害者自身的 Edge 浏览器（headless + CDP）传输流量，使其在网络层几乎无法与正常活动区分。该植入还配备像素级伪造的 Windows 锁屏界面以收割凭证，并首次在野滥用 NTUSER.MAN 强制配置文件覆盖技术实现无管理员权限的持久化。初始访问向量为 Teams 语音钓鱼诱导用户执行 PowerShell。 评分理由： 首个将 SharePoint 死信、Teams TURN 中继和 headless 浏览器 C2 运输整合为一体的框架，滥用可信微软服务实现极低检测率的内网横向移动。 原文链接： https://thehackernews.com/2026/08/twinlootabusessharepointandteamsto.html MLflow SSRF 与 FUXA RCE 漏洞遭在野主动扫描与利用 来源： The Hacker News / watchTowr / VulnCheck 摘要： 两个关键漏洞正在被主动利用：MLflow CVE202664849（CVSS 9.3）为未认证 SSRF，攻击者可通过模型注册 webhook 代理请求至内部云元数据端点，窃取云凭证和密钥。watchTowr 表示在 CVE 于 8 月 17 日分配后数小时内即观察到大规模扫描。FUXA CVE202625895（CVSS 9.5）为 OT/SCADA 平台中的缺失认证 + 路径遍历，可导致未认证远程代码执行。VulnCheck 于 8 月 18 日检测到针对约 60 个公网暴露 FUXA 实例的扫描，攻击者尝试覆盖 main.js。 评分理由： AI 平台与工业控制系统同日出现高评分漏洞并被快速武器化，MLflow 的扫描在 CVE 分配后数小时内即开始，响应窗口极短。 原文链接： https://thehackernews.com/2026/08/attackersexploitmlflowssrfflawto.html 状态： August 2026 Security Updates — 正式补丁已发布（DocumentTitle 校验通过，不含 Early） CVRF 发布时间： 20260818T07:00:00Z 数据来源： MSRC CVRF API https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026Aug | 指标 | 数值 | ||| | CVE 总数 | 798 | | Critical | 111 | | Important | 398 | | Moderate | 207 | | Low | 32 | | Unknown / 未分级 | 50 | | 已被在野利用（Exploited:Yes） | 1 | | CVSS BaseScore = 9.0 | 68 | 较昨日变化： Critical +1（110  111），Unknown 1（51  50），总数 798 不变。 | CVE | 严重级别 | CVSS | 说明 | ||||| | CVE202668820 | Important | 7.0 | Windows AFD.sys 权限提升（EoP），Lazarus 组织在 Operation Dream Job 中利用 | 以下为 CVSS 9.0+ 中的 Critical 级别最高分 CVE（共 68 条，展示前 8 条）： | CVE | 严重级别 | CVSS | |||| | CVE202663508 | Critical | 10.0 | | CVE202656162 | Critical | 10.0 | | CVE202665667 | Critical | 10.0 | | CVE202650515 | Critical | 9.9 | | CVE202659115 | Critical | 9.9 | | CVE202650481 | Critical | 9.9 | | CVE202662830 | Critical | 9.9 | | CVE202662873 | Critical | 9.8 | 其余 60 条 CVSS = 9.0 的 CVE 详见 MSRC Security Update Guide：https://msrc.microsoft.com/updateguide 本月 Patch Tuesday 共 798 个 CVE，其中 111 个 Critical 且存在 3 个 CVSS 10.0 的满分漏洞；尽管仅确认 1 个在野利用的 0day（CVE202668820，AFD.sys EoP，CVSS 7.0），但 68 个 CVSS 9.0+ 漏洞数量高企，建议优先处理面向公网的 Exchange、SharePoint、IKE 和虚拟化基础设施补丁。 本次共筛选 14 条新闻，最高分 96 分。 生成时间： 20260819 06:55 CST 推送渠道： 企业微信 / 微信小程序（当前 connector 离线，推送未送达）"
+ },
+ {
   "date": "2026-08-18",
   "url": "daily/daily_news_2026-08-18.html",
   "title": "网络安全日报 2026-08-18",

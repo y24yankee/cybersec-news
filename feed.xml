@@ -3,8 +3,15 @@
   <title>网络安全新闻中心</title>
   <link href="https://y24yankee.github.io/cybersec-news/"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-08-18T00:00:00Z</updated>
+  <updated>2026-08-19T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-08-19</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-19.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-19.html</id>
+    <updated>2026-08-19T00:00:00Z</updated>
+    <summary>CISA 同日新增 4 个关键 CVE 至 KEV 目录，全部确认在野利用</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-08-18</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-18.html"/>
@@ -137,12 +144,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-07-31.html</id>
     <updated>2026-07-31T00:00:00Z</updated>
     <summary>评分：96分 — 国家级APT零日攻击 + 半点击触发 + 服务端持久化超越重装</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-07-30</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-07-30.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-07-30.html</id>
-    <updated>2026-07-30T00:00:00Z</updated>
-    <summary>评分理由： 关键基础设施多系统协同攻击已导致实际水处理中断，且时间窗与 CISA 7/22 更新的伊朗相关 PLC 攻击预警高度吻合，Tenable 直接归因为 IRGCCEC 旗下 CyberAv3ngers，兼具严重性、时效性与国家级威胁色彩。</summary>
   </entry>
 </feed>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-19 | 网络安全新闻中心</title>
+<meta name="description" content="CISA 同日新增 4 个关键 CVE 至 KEV 目录，全部确认在野利用">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-08-19">
+<meta property="og:description" content="CISA 同日新增 4 个关键 CVE 至 KEV 目录，全部确认在野利用">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-19.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-08-19">
+<meta name="twitter:description" content="CISA 同日新增 4 个关键 CVE 至 KEV 目录，全部确认在野利用">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.svg">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-19</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 1 | 评分：96分</a></li>
+<li><a href="#s2">Top 2 | 评分：94分</a></li>
+<li><a href="#s3">Top 3 | 评分：93分</a></li>
+<li><a href="#s4">Top 4 | 评分：91分</a></li>
+<li><a href="#s5">Top 5 | 评分：90分</a></li>
+<li><a href="#s6">微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
+<hr />
+<h2 id="s1">Top 1 | 评分：96分</h2>
+<p><strong>CISA 同日新增 4 个关键 CVE 至 KEV 目录，全部确认在野利用</strong>
+- <strong>来源：</strong> IntelFusions / The Hacker News / BleepingComputer
+- <strong>摘要：</strong> CISA 于 8 月 18 日将四个严重漏洞同时列入已知被利用漏洞（KEV）目录，均已在真实入侵中被观察到。其中 VMware vCenter CVE-2026-59310（CVSS 9.8）为目录遍历导致 RCE，控制整个虚拟化集群；Windows IKE CVE-2026-33824（CVSS 9.8）为双释放内存漏洞，可导致未授权远程代码执行，EPSS 高达 0.56；SharePoint CVE-2026-55040（CVSS 9.1）为弱身份验证绕过；macOS Screen Sharing CVE-2026-65400（CVSS 9.8）为认证绕过可获 root。美国联邦机构须在 BOD 26-04 下优先修复公网暴露资产。
+- <strong>评分理由：</strong> 四个严重漏洞同日被 CISA 确认在野利用，覆盖虚拟化、VPN、协作平台和操作系统，影响范围极广。
+- <strong>原文链接：</strong> https://www.intelfusions.com/news/cisa-kev-vcenter-windows-ike-august-2026</p>
+<hr />
+<h2 id="s2">Top 2 | 评分：94分</h2>
+<p><strong>Microsoft Copilot "CoSnitch" 漏洞：单次点击即可静默窃取连接应用数据</strong>
+- <strong>来源：</strong> The Hacker News / Varonis
+- <strong>摘要：</strong> Varonis 披露 Microsoft Copilot Personal 三个漏洞（统称 CoSnitch，CVE-2026-24301），攻击者仅需诱使用户点击一个恶意链接，即可在无需任何用户确认的情况下，自动执行提示词并窃取 Copilot 已连接应用中的邮件、日历、文件等敏感数据。研究人员通过反复向 Copilot 询问其安全机制（"元黑客"手法），意外让 Copilot 自己披露了未公开的 <code>autorun=1</code> 参数，从而绕过所有确认流程。此外，恶意网页在被 Copilot 总结时还可向用户记忆库写入持久化指令，该记忆在密码更改、会话注销甚至设备重新注册后仍然有效。微软已于 8 月 18 日修复。
+- <strong>评分理由：</strong> 主流 AI 助手出现一键式数据窃取漏洞，攻击面覆盖所有 Copilot 用户及其已授权的云服务，且存在持久化记忆污染路径。
+- <strong>原文链接：</strong> https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html</p>
+<hr />
+<h2 id="s3">Top 3 | 评分：93分</h2>
+<p><strong>GitLab 紧急修复 CVE-2026-19478：未认证攻击者可远程删除公共项目</strong>
+- <strong>来源：</strong> The Hacker News / IT之家 / 163.com
+- <strong>摘要：</strong> GitLab 于 8 月 17 日发布紧急安全更新，修复 CVE-2026-19478（CVSS 9.4）—— 一个 GraphQL 层的 fallback 字段解析缺陷，允许未认证攻击者通过单个恶意请求永久删除公开项目数据、停用或封禁用户账号，甚至对开源项目发起供应链攻击。该漏洞影响 CE/EE 从 18.2 至 19.2.4 之前的所有版本，PoC 和技术细节已公开。据奇安信鹰图数据，全球约 401,607 个实例面临风险。伴随修复的 CVE-2026-19650（CVSS 7.1）为 GraphQL 多路复用查询中的 CSRF 漏洞，允许通过 GET 请求执行变更操作。
+- <strong>评分理由：</strong> 全球 40 万+自托管实例面临未认证数据销毁风险，PoC 已公开，对开源生态和 DevOps 基础设施构成直接威胁。
+- <strong>原文链接：</strong> https://thehackernews.com/2026/08/gitlab-critical-security-update.html</p>
+<hr />
+<h2 id="s4">Top 4 | 评分：91分</h2>
+<p><strong>TWINLOOT：首个将完整 C2 基础设施隐藏在 SharePoint 和 Teams 中的 Python 植入框架</strong>
+- <strong>来源：</strong> The Hacker News / Ontinue
+- <strong>摘要：</strong> Ontinue 披露了一个名为 TWINLOOT 的新型 Python 植入框架，其全部 C2 通道均依赖受信任的微软服务：通过 SharePoint Online（Graph API）进行任务下发，利用 Microsoft Teams TURN 服务器建立 WebRTC 反向 SOCKS5 隧道实现交互式访问，并使用受害者自身的 Edge 浏览器（headless + CDP）传输流量，使其在网络层几乎无法与正常活动区分。该植入还配备像素级伪造的 Windows 锁屏界面以收割凭证，并首次在野滥用 NTUSER.MAN 强制配置文件覆盖技术实现无管理员权限的持久化。初始访问向量为 Teams 语音钓鱼诱导用户执行 PowerShell。
+- <strong>评分理由：</strong> 首个将 SharePoint 死信、Teams TURN 中继和 headless 浏览器 C2 运输整合为一体的框架，滥用可信微软服务实现极低检测率的内网横向移动。
+- <strong>原文链接：</strong> https://thehackernews.com/2026/08/twinloot-abuses-sharepoint-and-teams-to.html</p>
+<hr />
+<h2 id="s5">Top 5 | 评分：90分</h2>
+<p><strong>MLflow SSRF 与 FUXA RCE 漏洞遭在野主动扫描与利用</strong>
+- <strong>来源：</strong> The Hacker News / watchTowr / VulnCheck
+- <strong>摘要：</strong> 两个关键漏洞正在被主动利用：MLflow CVE-2026-64849（CVSS 9.3）为未认证 SSRF，攻击者可通过模型注册 webhook 代理请求至内部云元数据端点，窃取云凭证和密钥。watchTowr 表示在 CVE 于 8 月 17 日分配后数小时内即观察到大规模扫描。FUXA CVE-2026-25895（CVSS 9.5）为 OT/SCADA 平台中的缺失认证 + 路径遍历，可导致未认证远程代码执行。VulnCheck 于 8 月 18 日检测到针对约 60 个公网暴露 FUXA 实例的扫描，攻击者尝试覆盖 main.js。
+- <strong>评分理由：</strong> AI 平台与工业控制系统同日出现高评分漏洞并被快速武器化，MLflow 的扫描在 CVE 分配后数小时内即开始，响应窗口极短。
+- <strong>原文链接：</strong> https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html</p>
+<hr />
+<h2 id="s6">微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p><strong>状态：</strong> August 2026 Security Updates — 正式补丁已发布（DocumentTitle 校验通过，不含 Early）<br />
+<strong>CVRF 发布时间：</strong> 2026-08-18T07:00:00Z<br />
+<strong>数据来源：</strong> MSRC CVRF API <code>https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</code></p>
+</blockquote>
+<h3 id="s7">本月统计</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE 总数</td>
+<td><strong>798</strong></td>
+</tr>
+<tr>
+<td>Critical</td>
+<td><strong>111</strong></td>
+</tr>
+<tr>
+<td>Important</td>
+<td><strong>398</strong></td>
+</tr>
+<tr>
+<td>Moderate</td>
+<td><strong>207</strong></td>
+</tr>
+<tr>
+<td>Low</td>
+<td><strong>32</strong></td>
+</tr>
+<tr>
+<td>Unknown / 未分级</td>
+<td><strong>50</strong></td>
+</tr>
+<tr>
+<td>已被在野利用（Exploited:Yes）</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>CVSS BaseScore &gt;= 9.0</td>
+<td><strong>68</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>较昨日变化：</strong> Critical +1（110 -&gt; 111），Unknown -1（51 -&gt; 50），总数 798 不变。</li>
+</ul>
+<h3 id="s8">已被在野利用的 CVE</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-68820</td>
+<td>Important</td>
+<td>7.0</td>
+<td>Windows AFD.sys 权限提升（EoP），Lazarus 组织在 Operation Dream Job 中利用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="s9">高危 CVE 清单（CVSS &gt;= 9.0，优先展示 Critical 及最高分项）</h3>
+<p>以下为 CVSS 9.0+ 中的 Critical 级别最高分 CVE（共 68 条，展示前 8 条）：</p>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>严重级别</th>
+<th>CVSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-63508</td>
+<td>Critical</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>CVE-2026-56162</td>
+<td>Critical</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>CVE-2026-65667</td>
+<td>Critical</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>CVE-2026-50515</td>
+<td>Critical</td>
+<td>9.9</td>
+</tr>
+<tr>
+<td>CVE-2026-59115</td>
+<td>Critical</td>
+<td>9.9</td>
+</tr>
+<tr>
+<td>CVE-2026-50481</td>
+<td>Critical</td>
+<td>9.9</td>
+</tr>
+<tr>
+<td>CVE-2026-62830</td>
+<td>Critical</td>
+<td>9.9</td>
+</tr>
+<tr>
+<td>CVE-2026-62873</td>
+<td>Critical</td>
+<td>9.8</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>其余 <strong>60</strong> 条 CVSS &gt;= 9.0 的 CVE 详见 MSRC Security Update Guide：https://msrc.microsoft.com/update-guide</li>
+</ul>
+<h3 id="s10">核心风险总结</h3>
+<p>本月 Patch Tuesday 共 798 个 CVE，其中 111 个 Critical 且存在 3 个 CVSS 10.0 的满分漏洞；尽管仅确认 1 个在野利用的 0day（CVE-2026-68820，AFD.sys EoP，CVSS 7.0），但 68 个 CVSS 9.0+ 漏洞数量高企，建议优先处理面向公网的 Exchange、SharePoint、IKE 和虚拟化基础设施补丁。</p>
+<hr />
+<p><strong>本次共筛选 14 条新闻，最高分 96 分。</strong></p>
+<blockquote>
+<p><strong>生成时间：</strong> 2026-08-19 06:55 CST<br />
+<strong>推送渠道：</strong> 企业微信 / 微信小程序（当前 connector 离线，推送未送达）</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-08-18.html">← 前一天 2026-08-18</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+</body>
+</html>
