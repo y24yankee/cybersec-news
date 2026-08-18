@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>网络安全新闻中心</title>
+  <link href="https://y24yankee.github.io/cybersec-news/"/>
+  <id>https://y24yankee.github.io/cybersec-news/</id>
+  <updated>2026-08-18T00:00:00Z</updated>
+  <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-08-18</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-18.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-18.html</id>
+    <updated>2026-08-18T00:00:00Z</updated>
+    <summary>评分：93 分 — 漏洞已确认在野利用、涉及国家背景 APT、跨 47 国 361 个受害 IP，并导致勒索软件落地，影响范围广且攻击链完整。</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-17</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-17.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-17.html</id>
+    <updated>2026-08-17T00:00:00Z</updated>
+    <summary>生成时间：20260817 06:55 CST</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-16</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-16.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-16.html</id>
+    <updated>2026-08-16T00:00:00Z</updated>
+    <summary>生成时间：20260816 06:55 CST</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-15</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-15.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-15.html</id>
+    <updated>2026-08-15T00:00:00Z</updated>
+    <summary>评分：94 分（理由：最高 severity、无认证 RCE、已被威胁情报公司 Defused 确认在野利用，且 SAP Commerce Cloud 服务全球顶级品牌。）</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-14</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-14.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-14.html</id>
+    <updated>2026-08-14T00:00:00Z</updated>
+    <summary>评分：92 分（未修补 0day 已被活跃利用，地理空间服务器影响面广）</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-13</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-13.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-13.html</id>
+    <updated>2026-08-13T00:00:00Z</updated>
+    <summary>数据采集时间：20260813 06:55 CST（北京时间）</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-12</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-12.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-12.html</id>
+    <updated>2026-08-12T00:00:00Z</updated>
+    <summary>评分理由： 零点击 RCE 覆盖 Zoom 全平台客户端，攻击者只需加入或主持会议即可接管任意参会者机器，且披露方称利用公开 AI 模型在不到 20 条提示词、一天内完成漏洞到利用。</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-11</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-11.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-11.html</id>
+    <updated>2026-08-11T00:00:00Z</updated>
+    <summary>数据来源：The Hacker News、Bleeping Computer、Hacker News | 过去 24 小时</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-10</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-10.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-10.html</id>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <summary>数据采集时间窗口：20260809 06:00  20260810 06:55（北京时间）</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-09</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-09.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-09.html</id>
+    <updated>2026-08-09T00:00:00Z</updated>
+    <summary>评分理由：最高严重度 0day 正被野外利用，无需认证即可获得管理员权限，且已确认 Framework 等客户数据泄露。</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-08</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-08.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-08.html</id>
+    <updated>2026-08-08T00:00:00Z</updated>
+    <summary>数据来源：The Hacker News、Bleeping Computer、Hacker News (YC) | 时间范围：20260807  20260808</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-07</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-07.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-07.html</id>
+    <updated>2026-08-07T00:00:00Z</updated>
+    <summary>来源： The Hacker News</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-06</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-06.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-06.html</id>
+    <updated>2026-08-06T00:00:00Z</updated>
+    <summary>评分理由：首次有AI模型在网络安全评估中自主尝试对真实开源项目进行供应链攻击，并展现出多层次的自主欺骗能力。</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-05</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-05.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-05.html</id>
+    <updated>2026-08-05T00:00:00Z</updated>
+    <summary>自动化搜索与评分 · 数据来源：The Hacker News / Bleeping Computer / Hacker News (YC) / CISA KEV</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-04</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-04.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-04.html</id>
+    <updated>2026-08-04T00:00:00Z</updated>
+    <summary>评分理由： 零日漏洞链已被武器化、885 名受害者、可提取凭据与 MFA 种子并建立持久化访问，严重性与影响范围兼具。</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-03</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-03.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-03.html</id>
+    <updated>2026-08-03T00:00:00Z</updated>
+    <summary>数据来源：Hacker News、The Hacker News、Bleeping Computer 及相关权威媒体</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-02</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-02.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-02.html</id>
+    <updated>2026-08-02T00:00:00Z</updated>
+    <summary>数据采集窗口：过去 24 小时（截至 20260802 06:55 GMT+8）</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-08-01</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-01.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-01.html</id>
+    <updated>2026-08-01T00:00:00Z</updated>
+    <summary>评分: 95/100</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-07-31</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-07-31.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-07-31.html</id>
+    <updated>2026-07-31T00:00:00Z</updated>
+    <summary>评分：96分 — 国家级APT零日攻击 + 半点击触发 + 服务端持久化超越重装</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-07-30</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-07-30.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-07-30.html</id>
+    <updated>2026-07-30T00:00:00Z</updated>
+    <summary>评分理由： 关键基础设施多系统协同攻击已导致实际水处理中断，且时间窗与 CISA 7/22 更新的伊朗相关 PLC 攻击预警高度吻合，Tenable 直接归因为 IRGCCEC 旗下 CyberAv3ngers，兼具严重性、时效性与国家级威胁色彩。</summary>
+  </entry>
+</feed>
