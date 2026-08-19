@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-20 | 网络安全新闻中心</title>
+<meta name="description" content="来源：The Hacker News / watchTowr / VulnCheck">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-08-20">
+<meta property="og:description" content="来源：The Hacker News / watchTowr / VulnCheck">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-20.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-08-20">
+<meta name="twitter:description" content="来源：The Hacker News / watchTowr / VulnCheck">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-20</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">今日焦点（Top 5）</a></li>
+<li><a href="#s7">其他值得关注的新闻（候选 6–15）</a></li>
+<li><a href="#s8">微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">今日焦点（Top 5）</h2>
+<h3 id="s2">1. MLflow CVE-2026-64849（CVSS 9.3）与 FUXA CVE-2026-25895（CVSS 9.5）在 CVE 分配数小时内即遭在野利用 — 云元数据凭据窃取 + RCE</h3>
+<ul>
+<li><strong>评分</strong>：96</li>
+<li><strong>来源</strong>：The Hacker News / watchTowr / VulnCheck</li>
+<li><strong>评分理由</strong>：AI/OT 平台武器化窗口已压缩至"CVE 分配当天"，SSRF 直取云元数据凭据</li>
+<li><strong>摘要</strong>：watchTowr 与 VulnCheck 于 8 月 18 日披露并同步观测到在野攻击：MLflow SSRF（CVE-2026-64849，CVSS 9.3）通过 IMDS/IMDSv2 直接读取云主机临时凭据，攻击者拿到 AWS/GCP/Azure access key 后横向移动；FUXA（CVE-2026-25895，CVSS 9.5）则由缺认证 + 路径遍历直通未认证 RCE，常被部署在工控可视化面板。两条漏洞从 CVE 分配到在野扫描的间隔已被压缩到小时级别，AI/OT 类组件的"打补丁窗口"基本失效。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html</li>
+</ul>
+<h3 id="s3">2. NSA + CISA + FBI + DOE + EPA 五机构联合预警：AI 生成攻击脚本瞄准西门子 S7 PLC，关键基础设施遭遇"低门槛 + 主动侦测"</h3>
+<ul>
+<li><strong>评分</strong>：95</li>
+<li><strong>来源</strong>：BleepingComputer / CISA 联合公告 / securityonline</li>
+<li><strong>评分理由</strong>：五大联邦机构联合署名且明示"active reconnaissance"，直接关系到水务/能源/化工六大高风险行业</li>
+<li><strong>摘要</strong>：美国国安局、网安局、联邦调查局、能源部、环保署 8 月 19 日联合发布公告，警告针对西门子 S7-200 至 S7-1500 全系列 PLC 的活跃攻击。攻击者利用 AI 生成的漏洞利用脚本（基于 snap7 等开源库）开发可伪装成真实 OT 监控软件的工具，通过 S7comm 协议读写 PLC 内存与梯形图逻辑，并使用暴露设备的默认/弱口令二次突破。公告建议全面盘点 S7 控制器、阻断 TCP 102、启用 PLC 密码保护，并警惕第三方集成商的远程访问入口。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/us-warns-of-ai-powered-attacks-on-siemens-plcs-in-critical-infrastructure/</li>
+</ul>
+<h3 id="s4">3. CameraSwarm：14,500+ 台大华（Dahua）IP 摄像机在 35 天内遭凭据攻击、认证绕过、P2P 中继攻陷</h3>
+<ul>
+<li><strong>评分</strong>：92</li>
+<li><strong>来源</strong>：The Hacker News / BleepingComputer</li>
+<li><strong>评分理由</strong>：史上最大规模 IP 摄像头僵尸网络之一，受害者集中在俄乌战场周边，事件具备"前线 + 后方"双重地缘含义</li>
+<li><strong>摘要</strong>：研究人员披露代号"CameraSwarm"的大规模摄像头劫持活动，35 天内攻陷逾 14,530 台大华设备。攻击链结合凭据填充、认证绕过与 P2P 中继技术，受害者地理上高度集中在乌克兰与俄罗斯。该活动由独立的两个攻击者组织发动，分别部署不同后门并交叉使用受害设备的算力与带宽，构成具有冗余控制能力的"双僵尸网络"结构。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/08/hackers-compromised-14500-dahua-devices.html</li>
+</ul>
+<h3 id="s5">4. Cloudflare Workers 跨租户 Spectre 攻击：12 bits/秒泄漏同驻 Worker 的 JWT，效率较 2021 PoC 提升 360 倍</h3>
+<ul>
+<li><strong>评分</strong>：90</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>评分理由</strong>：再次证明云函数沙盒侧信道仍未被结构性解决，且攻击效率已突破工程实用门槛</li>
+<li><strong>摘要</strong>：研究人员在 Cloudflare Workers 平台上演示了远端 Spectre 侧信道攻击，可从同驻 Worker 中以 12 bits/秒的速率泄漏 JWT 凭据，效率较 2021 年首次公开的概念验证提升约 360 倍。Cloudflare 回应称已通过现有 V8/Workers 沙箱缓解措施降低风险，但攻击者仍可通过特定微架构特性绕过部分防护。该攻击对托管在边缘无服务器平台的 JWT 会话、API 密钥构成切实威胁。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/08/cloudflare-workers-spectre-attack-leaks.html</li>
+</ul>
+<h3 id="s6">5. CareCloud 医疗数据泄露影响 370 万人 — 较此前披露 34.5 万扩大十倍</h3>
+<ul>
+<li><strong>评分</strong>：89</li>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>评分理由</strong>：美国医疗 IT 头部厂商之一，影响人数较初期披露翻 10 倍，且暴露 SSN/政府 ID/金融+医疗敏感数据</li>
+<li><strong>摘要</strong>：美国医疗 IT 公司 CareCloud 披露其年初数据泄露事件最终影响人数超过 370 万人，较 7 月初次披露的约 34.5 万人扩大逾十倍。攻击者在其 AWS 托管的 EHR 存储环境中驻留约 6 天，窃取了社保号、政府签发证件、金融账户与诊疗记录。CareCloud 已通知受影响的个人与监管机构，并启动身份保护与信用监控服务。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/healthtech-firm-carecloud-data-breach-impacts-37-million-patients/</li>
+</ul>
+<hr />
+<h2 id="s7">其他值得关注的新闻（候选 6–15）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>事件</th>
+<th>评分</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>Sakura Internet 日本云/数据中心遭入侵，潜在影响 136 万会员账户（涉及政府云）</td>
+<td>88</td>
+<td>BleepingComputer</td>
+</tr>
+<tr>
+<td>7</td>
+<td>美国起诉 17 名伊朗 Mabna Institute 黑客，指控多年窃取 34 亿美元知识产权</td>
+<td>88</td>
+<td>BleepingComputer</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Medusa 勒索软件自 2021 年 6 月以来已攻陷 500+ 美国关键基础设施组织</td>
+<td>87</td>
+<td>BleepingComputer</td>
+</tr>
+<tr>
+<td>9</td>
+<td>OpenAI 暂停最大前沿 RL 训练两周，宣布 Astra 已触及"Critical"网络能力门槛</td>
+<td>87</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>10</td>
+<td>SilkParasite 针对中亚政府的间谍活动：5 个前所未见 RAT 全家桶，开发痕迹含 AI 辅助</td>
+<td>87</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Huntress：密码喷洒攻击暴增 155 倍，两周内出现 8100 万次尝试</td>
+<td>86</td>
+<td>BleepingComputer</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Maya Protocol 因 6 个 Bug 被掏空 170 万美元，跨链协议一度停摆</td>
+<td>85</td>
+<td>Decrypt / BleepingComputer</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Phishing 3.0：钓鱼攻防全面进入"代理 vs 代理"AI 对抗阶段，传统邮件网关失灵</td>
+<td>85</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Anthropic + EPFL：AI 模型间可通过持久化 prompt 文件传播"思维病毒"</td>
+<td>84</td>
+<td>The Hacker News</td>
+</tr>
+<tr>
+<td>15</td>
+<td>"Ransom Busters" 冒充数据恢复公司向受害者收取 2–6 万美元赎金回扣</td>
+<td>84</td>
+<td>BleepingComputer</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="s8">微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p>数据源：Microsoft MSRC CVRF v3.0 公开 API（GET https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug）
+文档标题："August 2026 Security Updates"（正式版，非 Early）
+CurrentReleaseDate：2026-08-19T07:00:00Z</p>
+</blockquote>
+<h3 id="s9">总量与分级（按最高严重程度计）</h3>
+<ul>
+<li><strong>本月补丁 CVE 总数</strong>：800 条（Microsoft 官方发行说明 = 422 条 + Mariner/Chromium/Other 等组件）</li>
+<li>按 <strong>最高严重程度</strong> 分级：</li>
+<li><strong>Critical</strong>：111</li>
+<li><strong>Important</strong>：400</li>
+<li><strong>Moderate</strong>：207</li>
+<li><strong>Low</strong>：32</li>
+</ul>
+<h3 id="s10">已被在野利用的 CVE（共 1 条）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-68820</td>
+<td>Important</td>
+<td>7.0</td>
+<td>Windows Ancillary Function Driver for WinSock (AFD.sys) 本地提权漏洞（朝鲜 Lazarus"Operation Dream Job"已实战利用）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="s11">核心高危 CVE（CVSS ≥ 9.0，共 68 条）</h3>
+<p>优先展示最高分与已被在野利用项：</p>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>级别</th>
+<th>CVSS</th>
+<th>标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-63508</td>
+<td>Critical</td>
+<td>10.0</td>
+<td>Microsoft Planetary Computer Pro Elevation of Privilege</td>
+</tr>
+<tr>
+<td>CVE-2026-56162</td>
+<td>Critical</td>
+<td>10.0</td>
+<td>Azure SQL Database Elevation of Privilege</td>
+</tr>
+<tr>
+<td>CVE-2026-65667</td>
+<td>Critical</td>
+<td>10.0</td>
+<td>Microsoft Teams Elevation of Privilege</td>
+</tr>
+<tr>
+<td>CVE-2026-50515</td>
+<td>Critical</td>
+<td>9.9</td>
+<td>Azure Service Bus Remote Code Execution</td>
+</tr>
+<tr>
+<td>CVE-2026-59115</td>
+<td>Critical</td>
+<td>9.9</td>
+<td>Microsoft Entra Provisioning Service Elevation of Privilege</td>
+</tr>
+<tr>
+<td>CVE-2026-50481</td>
+<td>Critical</td>
+<td>9.9</td>
+<td>Azure Active Directory Elevation of Privilege</td>
+</tr>
+<tr>
+<td>CVE-2026-62830</td>
+<td>Critical</td>
+<td>9.9</td>
+<td>Azure SRE Agent Elevation of Privilege</td>
+</tr>
+<tr>
+<td>CVE-2026-62873</td>
+<td>Critical</td>
+<td>9.8</td>
+<td>Microsoft 365 Admin Center Elevation of Privilege</td>
+</tr>
+<tr>
+<td>CVE-2026-62815</td>
+<td>Critical</td>
+<td>9.8</td>
+<td>Microsoft QUIC Remote Code Execution</td>
+</tr>
+<tr>
+<td>CVE-2026-62878</td>
+<td>Critical</td>
+<td>9.8</td>
+<td>Windows DNS Server Remote Code Execution</td>
+</tr>
+<tr>
+<td>CVE-2026-62893</td>
+<td>Critical</td>
+<td>9.8</td>
+<td>Windows Deployment Services TFTP Server Remote Code Execution</td>
+</tr>
+<tr>
+<td>CVE-2026-65791</td>
+<td>Critical</td>
+<td>9.8</td>
+<td>Windows iSCSI Target Service Remote Code Execution</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>其余 56 条 CVSS ≥ 9.0 CVE（点击展开）</summary>
+
+- CVE-2026-59124 (Important, 9.8) — Microsoft HPC Pack RCE
+- CVE-2026-64564 (Critical, 9.8) — Linux Kernel SCTP ASCONF DoS
+- CVE-2026-64562 (Critical, 9.8) — KVM nVMX shadow VMCS
+- CVE-2026-64584 (Important, 9.8) — USB gadget f_midi
+- CVE-2026-64594 (Important, 9.8) — USB gadget f_fs
+- CVE-2026-64593 (Important, 9.8) — btrfs trim writeable check
+- CVE-2026-68407 (Critical, 9.8) — wifi nl80211 RNR
+- CVE-2026-68395 (Critical, 9.8) — sata_dwc_460ex IRQ ordering
+- CVE-2026-68143 (Critical, 9.8) — slip receive serialization
+- CVE-2026-68176 (Critical, 9.8) — tracing mmiotrace NULL deref
+- CVE-2026-68131 (Critical, 9.8) — rbd object map result codes
+- CVE-2026-68218 (Critical, 9.8) — media dm1105 workqueue
+- CVE-2026-68406 (Critical, 9.8) — cfg80211 PMSR FTM preamble
+- CVE-2026-68364 (Critical, 9.8) — drm/amd/display ISM dc_lock
+- CVE-2026-68354 (Critical, 9.8) — firewire net fragmented
+- CVE-2026-68180 (Critical, 9.8) — intel_th MSC device leak
+- CVE-2026-68357 (Critical, 9.8) — watchdog pretimeout UAF
+- CVE-2026-68402 (Critical, 9.8) — cfg80211 element ID bound
+- …… 其余请见 MSRC Security Update Guide（按 CVE 编号检索）
+
+</details>
+
+<h3 id="s12">一句话核心风险总结</h3>
+<p>八月补丁以 Azure 平台（SQL/Entra AD/Service Bus/QUIC/M365 Admin）和 Windows 网络服务（DNS/TFTP/iSCSI）两条战线同时拉响 CVSS 9.8–10.0 警报；唯一在野利用 CVE 仍是月初已被 Lazarus 用于"Operation Dream Job"的 AFD.sys 本地提权（CVE-2026-68820），建议优先级：Azure 组件立即热修 → Windows 服务器角色强制更新 → 终端侧按 AFD 漏洞优先分发补丁。</p>
+<h3 id="s13">数据源</h3>
+<ul>
+<li>MSRC Security Update Guide：https://msrc.microsoft.com/update-guide</li>
+<li>MSRC CVRF API（本数据源）：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条新闻候选，最高分 96 分；Top 5 已按评分排序，候选 6–15 作为补充列表呈现；Patch Tuesday 板块为独立单元，不计入新闻 Top 5。</p>
+<hr />
+<p><em>本报告由"每日网络安全新闻推送"自动化于北京时间 2026-08-20 07:00 生成。补丁板块数据均来自 MSRC 官方 CVRF v3.0 公开 API 实时解析，未使用任何上月数据或编造数字。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-08-19.html">← 前一天 2026-08-19</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+</body>
+</html>
