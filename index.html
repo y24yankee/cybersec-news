@@ -70,6 +70,31 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 a:focus-visible,input:focus-visible,button:focus-visible,
 .row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
   outline:2px solid var(--gold);outline-offset:2px}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
 
 .grid{display:grid;gap:10px}
 .row{display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--card);
@@ -142,7 +167,7 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 </div>
 <div class="wrap">
   <h1>🛡️ 网络安全新闻中心</h1>
-  <p class="meta">自动采集自 Hacker News / The Hacker News / BleepingComputer 等公开来源 · 站点生成于 2026-08-20 16:22</p>
+  <p class="meta">自动采集自 Hacker News / The Hacker News / BleepingComputer 等公开来源 · 站点生成于 2026-08-20 16:46</p>
 
 <div id="results" class="results" hidden aria-live="polite"></div>
 <div id="archive" tabindex="-1">
