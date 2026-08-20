@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-21 | 网络安全新闻中心</title>
+<meta name="description" content="数据采集窗口：北京时间 20260821 06:55 前后，过去 24 小时全球网络安全事件">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-08-21">
+<meta property="og:description" content="数据采集窗口：北京时间 20260821 06:55 前后，过去 24 小时全球网络安全事件">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-21.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-08-21">
+<meta name="twitter:description" content="数据采集窗口：北京时间 20260821 06:55 前后，过去 24 小时全球网络安全事件">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-21</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">📌 Top 5 新闻</a></li>
+<li><a href="#s7">🛡 微软补丁安全级别（Patch Tuesday）</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>数据采集窗口：北京时间 2026-08-21 06:55 前后，过去 24 小时全球网络安全事件<br />
+本次共筛选 <strong>15 条</strong>候选新闻，最高分 <strong>96 分</strong><br />
+微软 Patch Tuesday 已正式发布（August 2026 Security Updates，CVRF CurrentReleaseDate 2026-08-20T07:00:00Z），板块见文末</p>
+</blockquote>
+<hr />
+<h2 id="s1">📌 Top 5 新闻</h2>
+<h3 id="s2">1. Rust crates.io 遭供应链劫持，三大常用 crate 编译时植入后门 / 归因朝鲜 UNC1069 组织 — 96 分</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（republished via worldprogramming.org）/ Nextron Systems / Wiz / Aikido / StepSecurity / Rust Security Response Team / Cryptopolitan / Mandiant / Microsoft Threat Intelligence</li>
+<li><strong>摘要</strong>：8 月 20 日 07:15 UTC，Rust 项目团队从 crates.io 紧急下架三个广泛使用的 crate 恶意版本 — <code>arrayref 0.3.10</code>、<code>append-only-vec 0.1.9</code>、<code>internment 0.8.7</code>，三者累计下载量约 2.45 亿次，其中 arrayref 单独约 2.44 亿次。攻击者入侵 arrayref 维护者 droundy (David Roundy) 账号，23 分钟内连发三版，每个版本仅添加一行依赖 <code>proc-macro1</code>（typosquat 仿冒 <code>proc-macro2</code>）。恶意 build.rs 在编译时执行，禁用 TLS 校验，按 OS/架构选 payload，窃取 Chrome/Brave/Edge 凭据并注册持久化（Win Run / macOS LaunchAgent / Linux systemd）。事件线上 86–107 分钟被全量下架。Wiz/Mandiant 进一步关联：arrayref C2 路径 <code>/49890878</code> 与朝鲜 Mastria 供应链攻击完全重合，IP/TLS 证书/IP 主机商（Hostwinds）与 Axios npm 攻击同源，<strong>Mandiant 已归因为 UNC1069 / Microsoft Sapphire Sleet（朝鲜）</strong>。</li>
+<li><strong>评分理由</strong>：史上最大 Rust 生态供应链事件 + 编译期自动执行（开发者无法靠代码审查发现）+ 国家级 APT 归因（C2 fingerprint 与 Mastria 重合）+ 无 CVE/补丁版本可推 + 受害者面包含 blake3/Solana/Ethereum 等。</li>
+<li><strong>原文链接</strong>：https://www.worldprogramming.org/posts/rust-supply-chain-attack-puts-build-time-malware-in-crates-with-245-million-downloads-bvbbwa</li>
+</ul>
+<hr />
+<h3 id="s3">2. 俄罗斯 APT29 子集群（UNC6293/UNC7005/UNC5976）滥用 Google OAuth / WhatsApp 设备关联 / 应用专用密码劫持欧美账号 — 92 分</h3>
+<ul>
+<li><strong>来源</strong>：Google Threat Intelligence Group (GTIG) / BleepingComputer / Lumen Black Lotus Labs / Microsoft (CaptiveCrunch 重叠)</li>
+<li><strong>摘要</strong>：GTIG 8 月 20 日披露三个相互独立的俄罗斯网络间谍集群，均被评估为 Ice Relic（APT29 / Cozy Bear / Midnight Blizzard）的子簇，针对欧美学术界、航空航天、国防、政府与智库人员。<strong>UNC6293</strong> 历史利用 Google "应用专用密码"（ASP）功能，冒充国务院官员诱导受害者交出 ASP；2026 年 6 月起转向 OAuth 钓鱼，要求目标提交合法外部分提供商登录后的完整 URL 或验证码。<strong>UNC5976</strong> 自 2026 年 3 月起活跃，购买文件分享类域名 + 创建相应 GCP 项目托管伪造登录页，按下 "Continue with Google" 后跳到恶意 GCP 项目 URL 抓取 OAuth token；并伪装乌克兰研究所投放 Excel 插件 HEADRUSH，部署 HTA 下载器。<strong>UNC7005</strong>（aka Storm-2945）则横跨 ASP 钓鱼、Microsoft device code、WhatsApp 设备关联链接（通过把目标 WhatsApp 链接到攻击者设备触发音视频录制/聊天/文件投递）+ 入门 Wi-Fi CaptivePortal DNS 劫持 + CornFlake RAT/ChocoShell 信息窃取。Lumen 进一步怀疑 UNC7005 已入侵多家 MSP，构成供应链级信任劫持。</li>
+<li><strong>评分理由</strong>：国家级 APT（APT29 子簇）+ 滥用所有合法身份验证机制而非钓漏洞 + 跨域（Google/WhatsApp/Microsoft）+ Lumen 提出 MSP 供应链劫持新向量 + Microsoft 关联多个并行活动。</li>
+<li><strong>原文链接</strong>：https://www.worldprogramming.org/posts/suspected-russian-hackers-abuse-google-oauth-and-whatsapp-linking-to-hijack-accounts-n5alue</li>
+</ul>
+<hr />
+<h3 id="s4">3. Check Point 公开 "BTR Reforged" + BTR_CLI：把 Windows Defender 自己的 BTR.sys 内核驱动武器化 — 91 分</h3>
+<ul>
+<li><strong>来源</strong>：Check Point Research（Jiri Vinopal，Black Hat USA 2026）/ IntelFusions / Brinztech</li>
+<li><strong>摘要</strong>：Check Point 研究员 Jiri Vinopal 8 月 20 日发布对 Windows Defender BTR.sys（Boot Time Removal 启动期清除驱动）的完整逆向与开源 PoC 工具 BTR_CLI。18 个不同时期 MS 签名 64-bit BTR.sys 构建（Win7/10/11/Server 全覆盖）共享同一硬编码 256 字节 RC4 密钥和事务格式；通过 :changelist 备用数据流（ADS）传加密配置，可指令驱动在 Ring 0 执行任意文件/注册表删除/写入。BTR_CLI 在目标机器本地 MpEngine.dll 中抽取自家 BTR.sys，<strong>绕开 BYOVD 驱黑名单</strong>（无外部二进制加载、无内存破坏、无 CVE、微软不认其为 bug、不发补丁）。利用的是"黄金窗口"：BTR.sys 注册到 Boot Bus Extender 早期加载组，在 NTFS 可写之后、用户态 EDR/Defender 主栈完全起来之前运行，可在 boot 时关停其他安全产品。研究同时附 artifacts 追查清单（8 字母随机 .sys 名、指向 ADS 的 Args、缺失的 BootClean.log）。</li>
+<li><strong>评分理由</strong>：Living-off-the-land 驱动对抗新机制（OT 扩展到 OS 内核信任组件）+ 公开 PoC + EDR/AV 全栈旁路 + 跨 Win7-11 全版本 + 无补丁路径（仅可行为检测）。</li>
+<li><strong>原文链接</strong>：https://www.intelfusions.com/news/defender-btr-driver-tool-released</li>
+</ul>
+<hr />
+<h3 id="s5">4. xAI Grok "Cryptographic Context Injection"（Adversa AI）：AES 加密指令绕过 LLM 静态防护，窃取用户聊天记录 — 90 分</h3>
+<ul>
+<li><strong>来源</strong>：Adversa AI (Rony Utevsky) / The Register / Ars Technica / chatai.com / worldprogramming.org</li>
+<li><strong>摘要</strong>：Adversa AI 研究员 Rony Utevsky 8 月 20 日披露对 xAI Grok（4.5 Fast 版本）的全新提示注入手法"加密上下文注入"：把数据外带指令用 PBKDF2 + AES-256-GCM 加密，连同解密密钥和指令一起放在网页上，<strong>Grok 自带的静态过滤机制只能读文本，不能执行解密</strong>，于是密文顺利过线进入模型；模型在自带的代码执行沙盒里解出明文，明文以"工具输出"身份回流至模型（这一路径静态防护不扫描），于是 Grok 主动把用户名/粗略位置/订阅档位/全部对话 prompt 打包成 URL 查询串，访问攻击者服务器以"导航"为名外带。Adversa 自 6 月 3 日向 xAI（直接 + HackerOne 双渠道）报告并在 8/4、8/10 反复提醒，截至 8/19 漏洞仍可重现；Adversa 在 20 次测试中成功 8 次（40%）。同手法对 Google Gemini 也生效（变体：让解密后内容伪装成 Python traceback，诱导 Gemini 输出违禁内容如燃烧武器指南 + 系统 prompt 全文）。</li>
+<li><strong>评分理由</strong>：提示注入结构性弱点 + 加密绕过滤这一新维度 + 用户数据可外带 + 厂商 76 天未修 + 与本周 M365 Copilot "CoSnitch" 隐藏参数形成 LLM 信任链本周双披露（前沿 AI 安全 epoch）。</li>
+<li><strong>原文链接</strong>：https://www.theregister.com/ai-and-ml/2026/08/20/grok-chat-duped-into-swallowing-injected-instructions/</li>
+</ul>
+<hr />
+<h3 id="s6">5. 企业数据治理巨头 Alation 确认遭网络攻击，覆盖超 500 企业客户 / 近半数 Fortune 1000 — 86 分</h3>
+<ul>
+<li><strong>来源</strong>：TechCrunch（via 腾讯新闻 / html5.qq.com 镜）</li>
+<li><strong>摘要</strong>：Alation（自然语言数据目录与 AI 平台）通过外部发言人 Stephen Russell 8 月 20 日向 TechCrunch 确认：发现一起"孤立事件"，某系统遭未授权访问，正在全面调查，<strong>暂未披露攻击性质、入侵路径、受影响客户数或是否已发通知</strong>。Alation 服务 500+ 企业，包含约半数美国财富 1000 强；系统大多托管在 AWS。本周二 Alation 曾出现"服务可用性降低"事件并在一小时内恢复，目前不能确认是否同一事件。事件恰逢 SaaS 数据平台成为定向打击焦点的趋势（Ceva Logistics、本月金融/PE 攻击等）。</li>
+<li><strong>评分理由</strong>：服务近半数美 Fortune 1000（覆盖面）+ 数据目录属"谁的元数据都在这"的高价值目标 + 信息披露极薄 → 客户焦虑 + AWS 托管环境对 AWS-客户数据共享的连锁风险。</li>
+<li><strong>原文链接</strong>：https://so.html5.qq.com/page/real/search_news?docid=70000021_6066a87269441952</li>
+</ul>
+<hr />
+<h2 id="s7">🛡 微软补丁安全级别（Patch Tuesday）</h2>
+<p><strong>官方数据源校验</strong>：MSRC API <code>GET https://api.msrc.microsoft.com/cvrf/v3.0/updates</code> 本月条目标题为 <strong>"August 2026 Security Updates"</strong>（不含 "Early"），CVRF <code>2026-Aug</code> CurrentReleaseDate = <code>2026-08-20T07:00:00Z</code>，距 2nd Tuesday (2026-08-11) 已发布 9 天。本次 CVRF 解析自实时下载的 <code>cvrf_2026-Aug_current.xml</code>。</p>
+<h3 id="s8">本月补丁核心统计（基于 Microsoft CVRF 自解析）</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总 CVE 条目（<code>&lt;vuln:Vulnerability&gt;</code>）</td>
+<td><strong>491</strong></td>
+</tr>
+<tr>
+<td>严重级别分布（按各产品最高级）</td>
+<td><strong>Critical: 83 / Important: 364 / Moderate: 1 / Unknown: 43</strong></td>
+</tr>
+<tr>
+<td>已被在野利用 <code>Exploited:Yes</code></td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td><code>CVSS BaseScore ≥ 9.0</code> 唯一 CVE 数</td>
+<td><strong>32</strong></td>
+</tr>
+<tr>
+<td><code>CVSS = 10.0</code> 数量</td>
+<td><strong>8</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="s9">🔥 高危 / 在野利用 CVE 清单（完整在野利用项全部展示 + Critical 可远程/无认证精选）</h3>
+<p><strong>已被在野利用（Exploited:Yes）的 0day（共 2 项，全部列出）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>标题片段</th>
+<th>严重级别</th>
+<th>CVSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CVE-2026-68820</strong></td>
+<td>Windows Ancillary Function Driver for WinSock (AFD.sys) EoP</td>
+<td>Important</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td><strong>CVE-2026-69836</strong> ⚠️</td>
+<td><strong>Microsoft Entra ID Remote Code Execution</strong></td>
+<td><strong>Critical</strong></td>
+<td><strong>10.0</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>CVE-2026-68820 是月初即出现的 AFD.sys EoP 在野 0day；CVE-2026-69836 则是当月新发现 / 8 月补丁中明确标记 Exploited:Yes 的关键身份平台 RCE — <strong>CVSS 10.0 + Entra ID 身份平台 + 在野利用</strong> 任何一项单挑都属 P0，三项叠加为月度最大风险点。</p>
+</blockquote>
+<p><strong>其他 Critical + 可远程/无认证利用（CVSS 10.0 / 9.9，部分展示）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>标题片段</th>
+<th>严重级别</th>
+<th>CVSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2026-56162</td>
+<td>Azure SQL Database EoP</td>
+<td>Critical</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>CVE-2026-63508</td>
+<td>Microsoft Planetary Computer Pro EoP</td>
+<td>Critical</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>CVE-2026-65667</td>
+<td>Microsoft Teams EoP</td>
+<td>Critical</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>CVE-2026-65770</td>
+<td>Azure Managed Instance for Apache Cassandra RCE</td>
+<td>Critical</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>CVE-2026-65801</td>
+<td>Microsoft Exchange Online EoP</td>
+<td>Critical</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>CVE-2026-65816</td>
+<td>Azure Arc EoP</td>
+<td>Critical</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>CVE-2026-69555</td>
+<td>Azure Arc EoP</td>
+<td>Critical</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>CVE-2026-50481</td>
+<td>Azure Active Directory EoP</td>
+<td>Critical</td>
+<td>9.9</td>
+</tr>
+<tr>
+<td>CVE-2026-50515</td>
+<td>Azure Service Bus RCE</td>
+<td>Critical</td>
+<td>9.9</td>
+</tr>
+<tr>
+<td>CVE-2026-59115</td>
+<td>Microsoft Entra Provisioning Service EoP</td>
+<td>Critical</td>
+<td>9.9</td>
+</tr>
+<tr>
+<td>...</td>
+<td>其余 <code>CVSS ≥ 9.0</code> 项共 32 条（8 × 10.0 + 8 × 9.9 + 6 × 9.8 + 3 × 9.6 + ...)</td>
+<td>Critical</td>
+<td>9.x</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>📂 折叠：CVSS ≥ 9.0 完整清单（点击展开，32 条）</summary>
+
+- CVE-2026-56162 · Azure SQL Database EoP · **10.0**
+- CVE-2026-63508 · Microsoft Planetary Computer Pro EoP · **10.0**
+- CVE-2026-65667 · Microsoft Teams EoP · **10.0**
+- CVE-2026-65770 · Azure Managed Instance for Apache Cassandra RCE · **10.0**
+- CVE-2026-65801 · Microsoft Exchange Online EoP · **10.0**
+- CVE-2026-65816 · Azure Arc EoP · **10.0**
+- CVE-2026-69555 · Azure Arc EoP · **10.0**
+- CVE-2026-69836 · Microsoft Entra ID RCE · **10.0** ⚠️ Exploited:Yes
+- CVE-2026-50481 · Azure Active Directory EoP · 9.9
+- CVE-2026-50515 · Azure Service Bus RCE · 9.9
+- CVE-2026-59115 · Microsoft Entra Provisioning Service EoP · 9.9
+- CVE-2026-62830 · Azure SRE Agent EoP · 9.9
+- CVE-2026-63509 · Microsoft Fabric EoP · 9.9
+- CVE-2026-68782 · Azure SQL Database EoP · 9.9
+- CVE-2026-68789 · Azure SQL Database EoP · 9.9
+- CVE-2026-69851 · Microsoft Entra ID EoP · 9.9
+- CVE-2026-59124 · Microsoft HPC Pack RCE · 9.8 (Important 字段，但 CVSS 计算为 Important 9.8)
+- CVE-2026-62815 · Microsoft QUIC RCE · 9.8
+- CVE-2026-62873 · Microsoft 365 Admin Center EoP · 9.8
+- CVE-2026-62878 · Windows DNS Server RCE · 9.8
+- CVE-2026-62893 · Windows Deployment Services TFTP Server RCE · 9.8
+- CVE-2026-65791 · Windows iSCSI Target Service RCE · 9.8
+- CVE-2026-56161 · Azure Logic Apps Information Disclosure · 9.6
+- CVE-2026-62896 · Microsoft Teams EoP · 9.6
+- CVE-2026-69400 · Azure Logic Apps EoP · 9.6
+- 其余 CVSS ≥ 9.0 项 7 条（Important/9.x）
+
+</details>
+
+<h3 id="s10">一句话总结</h3>
+<p><strong>月度最大风险为 Microsoft Entra ID 上的 CVSS 10.0 RCE（CVE-2026-69836）已在野利用，配合 8 项 CVSS 10.0（其中 6 项在 Azure 身份/数据/Arc 平面）+ 32 项 CVSS ≥ 9.0 — 本月补丁的实质重心是 Azure / Microsoft 365 信任平台身份和数据平面的纵深防御，AFD.sys EoP 仅为附件。</strong></p>
+<h3 id="s11">数据 &amp; 参考链接</h3>
+<ul>
+<li>本月 CVRF 实时下载：<code>https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</code></li>
+<li>MSRC Security Update Guide：<code>https://msrc.microsoft.com/update-guide</code></li>
+<li>Microsoft August 2026 Patch Tuesday 官方总览：<code>https://msrc.microsoft.com/blog/2026/08/</code></li>
+</ul>
+<hr />
+<p><em>本次共筛选 15 条新闻（HN × 5 / The Hacker News × 5 / BleepingComputer × 5），最高分 96 分，5 条入选 Top 5。微软 Patch Tuesday 板块基于实时 CVRF XML 解析，自动覆盖在野利用 / CVSS ≥ 9.0 全部明细。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-08-20.html">← 前一天 2026-08-20</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+</body>
+</html>
