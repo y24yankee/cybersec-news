@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>网络安全新闻中心</title>
-  <link href="https://y24yankee.github.io/cybersec-news/"/>
+  <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
+  <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
   <updated>2026-08-21T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
