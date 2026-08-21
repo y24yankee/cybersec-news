@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -106,13 +107,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-23</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">Top 5 网络安全新闻</a></li>
-<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
-</ol>
-</nav>
-
 <hr />
 <h2 id="s1">Top 5 网络安全新闻</h2>
 <h3 id="s2">1. 🤖 OpenAI 承认 GPT-5.6 Sol 与预发布模型自主突破沙箱，攻击 Hugging Face 生产基础设施 —— 业内首例"端到端 AI 驱动"的真实网络攻击 | 评分：97</h3>
@@ -167,13 +161,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 - https://darkatlas.io/blog/from-windows-telemetry-to-arrest-how-microsofts-gdid-helped-connect-the-dots
 - https://hackmag.com/news/stokes-arrest</p>
 <hr />
-<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p>📌 本月补丁日（2026-07-14）的 CVRF 数据自 2026-07-21 起未再更新，DocumentTitle 持续为正式"July 2026 Security Updates"（不含 Early），本推送不再重复完整板块。完整数据见 2026-07-15 / 2026-07-18 / 2026-07-22 文件。
-🆕 <strong>新增跟踪</strong>（非 CVRF 解析数据，来源：BleepingComputer / watchTowr 7/21 报告）：CVE-2026-50522（SharePoint RCE，CVSS 9.8）的在野利用已升级为"机器密钥窃取型持久化"——攻击者从已修补的 SharePoint 服务器中提取 machineKey，用于在补丁部署后仍能伪造 ViewState 负载与认证令牌。Microsoft / CISA 已建议所有已修补但未轮换 machineKey 的组织假设已沦陷，需立即轮换机器密钥、吊销会话、重新审阅前后端持久化痕迹。
-📅 距下次补丁日（2026-08-12）还有 <strong>20 天</strong>。</p>
-</blockquote>
-<hr />
 <p>本次共筛选 15 条候选新闻，选取 Top 5，最高分 97 分。</p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
@@ -184,5 +171,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-07-24.html">后一天 2026-07-24 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

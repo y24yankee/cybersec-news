@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -110,7 +111,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <ol>
 <li><a href="#s1">Top 5 网络安全新闻</a></li>
 <li><a href="#s7">候选新闻（未入选 Top 5）</a></li>
-<li><a href="#s8">微软补丁安全级别（Patch Tuesday）</a></li>
 </ol>
 </nav>
 
@@ -247,9 +247,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 </tbody>
 </table>
 <hr />
-<h2 id="s8">微软补丁安全级别（Patch Tuesday）</h2>
-<p>📅 <strong>微软本月补丁日（Patch Tuesday）为 8 月 11 日（当月第二个星期二）</strong>，预计北京时间 8 月 12 日凌晨 1-2 点发布。MSRC API 当前无 2026-Aug 条目，距下次补丁日还有 <strong>8 天</strong>。届时推送将带出正式「微软补丁安全级别」板块。</p>
-<hr />
 <p><em>本次共筛选 15 条候选新闻，最高分 96 分。</em>
 <em>数据来源：Hacker News (news.ycombinator.com)、The Hacker News (thehackernews.com)、Bleeping Computer (bleepingcomputer.com) 及 FBI/CBS/ABC/Kaspersky/Unit 42 等权威媒体。</em>
 <em>微信推送：企业微信 connector 当前未连接，推送不可用。</em></p>
@@ -262,5 +259,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-08-04.html">后一天 2026-08-04 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

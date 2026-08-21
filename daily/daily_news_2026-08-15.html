@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -106,13 +107,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-15</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">Top 5 网络安全新闻</a></li>
-<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
-</ol>
-</nav>
-
 <h2 id="s1">Top 5 网络安全新闻</h2>
 <h3 id="s2">1. SAP Commerce Cloud CVE-2026-58231 CVSS 10.0 无认证 RCE 已开始遭受在野攻击</h3>
 <ul>
@@ -149,105 +143,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>摘要：</strong> 安全研究员 @q1uf3ng 于 8 月 12 日公开披露 GeoServer 中存在未授权 SQL 注入漏洞，在系统管理员数据库配置下可导致远程代码执行。watchTowr 表示在公开披露后数小时内即观测到来自少量 IP 的数百次探测。目前该漏洞尚未分配 CVE，也无官方补丁，建议限制公网访问。</li>
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html</li>
 </ul>
-<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
-<p>本月 MSRC CVRF 文档标题为 <strong>"August 2026 Security Updates"</strong>，已确认为正式发布版本，非 Early 预发布文档。</p>
-<ul>
-<li><strong>CVE 总数：</strong> 798</li>
-<li><strong>严重级别分布：</strong></li>
-<li>Critical（严重）：110</li>
-<li>Important（重要）：398</li>
-<li>Moderate（中等）：207</li>
-<li>Low（低）：32</li>
-<li><strong>已被在野利用（Exploited:Yes）：</strong> 1 个</li>
-<li><strong>CVSS BaseScore ≥ 9.0：</strong> 68 个</li>
-</ul>
-<h3 id="s8">在野利用 CVE</h3>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-68820</td>
-<td>Important</td>
-<td>7.0</td>
-<td>Windows Ancillary Function Driver for WinSock（AFD.sys）权限提升漏洞；Lazarus Group 已将其作为零日用于 Operation Dream Job，针对国防与航空航天企业</td>
-</tr>
-</tbody>
-</table>
-<h3 id="s9">高危 CVE 清单（Critical 且 CVSS ≥ 9.0，部分展示）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-63508</td>
-<td>Critical</td>
-<td>10.0</td>
-<td>Microsoft Planetary Computer Pro 权限提升漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-56162</td>
-<td>Critical</td>
-<td>10.0</td>
-<td>Azure SQL Database 权限提升漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-65667</td>
-<td>Critical</td>
-<td>10.0</td>
-<td>Microsoft Teams 权限提升漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-50515</td>
-<td>Critical</td>
-<td>9.9</td>
-<td>Azure Service Bus 远程代码执行漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-59115</td>
-<td>Critical</td>
-<td>9.9</td>
-<td>Microsoft Entra Provisioning Service 权限提升漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-50481</td>
-<td>Critical</td>
-<td>9.9</td>
-<td>Azure Active Directory 权限提升漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-62830</td>
-<td>Critical</td>
-<td>9.9</td>
-<td>Azure SRE Agent 权限提升漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-62878</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Windows DNS Server 远程代码执行漏洞</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>其余 60 个 CVSS ≥ 9.0 的 CVE 详见 MSRC Security Update Guide：
-https://msrc.microsoft.com/update-guide</p>
-</blockquote>
-<h3 id="s10">核心风险总结</h3>
-<p>本月补丁规模庞大（798 个 CVE），虽仅 1 个公开确认在野利用（AFD.sys 提权，CVSS 7.0），但 Critical 级别漏洞多达 110 个，其中 68 个 CVSS ≥ 9.0，云组件（Azure Service Bus / Entra / SQL / AAD）和核心 Windows 服务（DNS、QUIC、Deployment Services）占据高危主体，建议优先修复面向公网和高价值资产的服务。</p>
-<hr />
 <p>本次共筛选 <strong>15 条</strong>候选新闻，最高分 <strong>94 分</strong>。候选来源包括 BleepingComputer、The Hacker News 与 Hacker News（news.ycombinator.com）。</p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
@@ -258,5 +153,14 @@ https://msrc.microsoft.com/update-guide</p>
   <a class="dn-next" href="daily_news_2026-08-16.html">后一天 2026-08-16 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

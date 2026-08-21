@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -106,13 +107,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-14</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">Top 5 网络安全新闻</a></li>
-<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
-</ol>
-</nav>
-
 <h2 id="s1">Top 5 网络安全新闻</h2>
 <h3 id="s2">1. <a href="https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html">未修补 GeoServer 0day 遭活跃利用，可导致远程代码执行</a> — 92 分</h3>
 <ul>
@@ -151,120 +145,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 </ul>
 <hr />
 <p>本次共筛选 15 条新闻，最高分 92 分。</p>
-<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p>数据来源：MSRC CVRF <code>2026-Aug</code>，校验 <code>DocumentTitle</code> 为 <strong>August 2026 Security Updates</strong>（非 Early），CurrentReleaseDate <code>2026-08-13T07:00:00Z</code>。</p>
-</blockquote>
-<ul>
-<li><strong>Microsoft CVE 总数</strong>：421 个（来源：CVRF DocumentNotes）</li>
-<li><strong>CVRF 收录 CVE 总数</strong>：790 个（含 Microsoft、CBL-Mariner、Chromium 等复用/非 Microsoft 条目）</li>
-<li><strong>严重级别分布（744 个带严重级别标签的条目）</strong>：</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>级别</th>
-<th>数量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Critical</td>
-<td>109</td>
-</tr>
-<tr>
-<td>Important</td>
-<td>396</td>
-</tr>
-<tr>
-<td>Moderate</td>
-<td>207</td>
-</tr>
-<tr>
-<td>Low</td>
-<td>32</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>CVSS BaseScore ≥ 9.0</strong>：68 个</li>
-<li><strong>其中 Critical 且可远程/无认证利用（AV:N / PR:N）</strong>：55 个</li>
-<li><strong>在野利用（Exploited:Yes）</strong>：1 个</li>
-</ul>
-<h3 id="s8">重点高危 CVE 清单（可见 8 条）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>向量</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68820">CVE-2026-68820</a></td>
-<td>Important</td>
-<td>7.0</td>
-<td>AV:L / AC:H / PR:L / UI:N / S:U / C:H / I:H / A:H</td>
-<td><strong>在野利用</strong>（Windows AFD.sys 本地提权）</td>
-</tr>
-<tr>
-<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63508">CVE-2026-63508</a></td>
-<td>Critical</td>
-<td>10.0</td>
-<td>AV:N / AC:L / PR:N / UI:N / S:C / C:H / I:H / A:N</td>
-<td>可远程、无认证利用</td>
-</tr>
-<tr>
-<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56162">CVE-2026-56162</a></td>
-<td>Critical</td>
-<td>10.0</td>
-<td>AV:N / AC:L / PR:N / UI:N / S:C / C:H / I:H / A:H</td>
-<td>可远程、无认证利用</td>
-</tr>
-<tr>
-<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65667">CVE-2026-65667</a></td>
-<td>Critical</td>
-<td>10.0</td>
-<td>AV:N / AC:L / PR:N / UI:N / S:C / C:H / I:H / A:N</td>
-<td>可远程、无认证利用</td>
-</tr>
-<tr>
-<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62873">CVE-2026-62873</a></td>
-<td>Critical</td>
-<td>9.8</td>
-<td>AV:N / AC:L / PR:N / UI:N / S:U / C:H / I:H / A:H</td>
-<td>可远程、无认证利用</td>
-</tr>
-<tr>
-<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62815">CVE-2026-62815</a></td>
-<td>Critical</td>
-<td>9.8</td>
-<td>AV:N / AC:L / PR:N / UI:N / S:U / C:H / I:H / A:H</td>
-<td>可远程、无认证利用</td>
-</tr>
-<tr>
-<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62878">CVE-2026-62878</a></td>
-<td>Critical</td>
-<td>9.8</td>
-<td>AV:N / AC:L / PR:N / UI:N / S:U / C:H / I:H / A:H</td>
-<td>可远程、无认证利用</td>
-</tr>
-<tr>
-<td><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62893">CVE-2026-62893</a></td>
-<td>Critical</td>
-<td>9.8</td>
-<td>AV:N / AC:L / PR:N / UI:N / S:U / C:H / I:H / A:H</td>
-<td>可远程、无认证利用</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>其余 61 个 CVSS ≥ 9.0 的 CVE 详见 <a href="https://msrc.microsoft.com/update-guide/releaseNote/2026-Aug">MSRC Security Update Guide</a> / <a href="https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug">CVRF API</a>。</p>
-</blockquote>
-<p><strong>一句话核心风险总结</strong>：本月补丁包含 421 个 Microsoft CVE，在野利用的 Windows AFD.sys 本地提权漏洞（CVE-2026-68820）需要优先处置；同时存在 55 个可远程、无认证利用的 Critical 漏洞，网络边界暴露面大的组织应抓紧补丁窗口。</p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
@@ -274,5 +154,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-08-15.html">后一天 2026-08-15 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

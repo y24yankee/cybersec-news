@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -110,7 +111,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <ol>
 <li><a href="#s1">🔝 Top 5 安全新闻</a></li>
 <li><a href="#s7">📊 本次共筛选 15 条新闻，最高分 94 分</a></li>
-<li><a href="#s8">🛡️ 微软补丁安全级别（Patch Tuesday）</a></li>
 </ol>
 </nav>
 
@@ -161,12 +161,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <hr />
 <h2 id="s7">📊 本次共筛选 15 条新闻，最高分 94 分</h2>
 <hr />
-<h2 id="s8">🛡️ 微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p>⚠️ <strong>更正说明：</strong> 本板块的自动生成数据已被撤下。原因：微软 7 月正式 Patch Tuesday 补丁在本文生成时（北京时间 7/14 上午）<strong>尚未发布</strong>。当时 MSRC API 上 <code>2026-Jul</code> 条目仅为标题含 "<strong>Early</strong>" 的<strong>预发布占位文档</strong>（"July 2026 Early Security Updates"，以 Azure Linux 开源组件更新为主），并非正式补丁日数据，故不作为正式统计。</p>
-</blockquote>
-<p><strong>📅 微软 2026 年 7 月正式补丁（Patch Tuesday）预计于北京时间 7/15 凌晨发布。</strong> 正式的「微软补丁安全级别」板块（含真实分级统计、CVSS≥9.0 高危清单、在野利用标注）将于 <strong>7/15 早间推送</strong> 首次带出。</p>
-<p>🔗 <a href="https://msrc.microsoft.com/update-guide/">微软 MSRC Security Update Guide</a></p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
@@ -176,5 +170,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-07-15.html">后一天 2026-07-15 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -106,13 +107,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-26</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">Top 5 网络安全新闻</a></li>
-<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
-</ol>
-</nav>
-
 <h2 id="s1">Top 5 网络安全新闻</h2>
 <h3 id="s2">1. Fastjson 1.x 现无补丁 RCE（CVE-2026-16723，CVSS 9.0），攻击者已开始利用</h3>
 <ul>
@@ -155,33 +149,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>评分理由：</strong> 针对大型游戏社区的社会工程攻击，利用受害者手动执行绕过自动防护，具备一定规模传播潜力。</li>
 </ul>
 <hr />
-<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p>本月 CVRF 文档标题为 <strong>"July 2026 Security Updates"</strong>，已确认为正式补丁发布；数据与 7 月 25 日解析结果保持一致，无新增变更。</p>
-</blockquote>
-<p><strong>整体统计（Microsoft CVE）</strong>
-- CVE 总数：<strong>642</strong>
-- Critical（严重）：<strong>76</strong>
-- Important（重要）：<strong>559</strong>
-- Moderate（中危）：<strong>6</strong>
-- Low（低危）：<strong>1</strong></p>
-<p><strong>已在野利用（Exploited:Yes）</strong>
-| CVE | 严重级别 | CVSS | 说明 |
-|-----|----------|------|------|
-| CVE-2026-56155 | Important | 7.8 | Active Directory Federation Services 权限提升 |
-| CVE-2026-56164 | Moderate | 5.3 | Microsoft SharePoint Server 权限提升 |
-| CVE-2026-58644 | Critical | 9.8 | Microsoft SharePoint 远程代码执行 |</p>
-<p><strong>CVSS ≥ 9.0 高危项（精选）</strong>
-本月共有 <strong>32</strong> 个 Microsoft CVE 的 CVSS 分值达到或超过 9.0。其中：
-- <strong>6 项 CVSS 10.0 全部为 Azure/云服务权限提升</strong>：CVE-2026-56163（Azure Kubernetes Service）、CVE-2026-56191（Exchange Online）、CVE-2026-57106（Data Quality）、CVE-2026-62825（Azure Key Vault）、CVE-2026-58630（Azure App Service on Azure Stack Hub）、CVE-2026-58275（Azure DNS）。
-- <strong>CVSS 9.9</strong>：CVE-2026-45499（Azure OpenAI EoP）、CVE-2026-57100（Microsoft Entra Provisioning Service EoP）、CVE-2026-54120（Microsoft Surface RCE）、CVE-2026-57092（Windows VMSwitch EoP）、CVE-2026-50517（Microsoft 365 Copilot RCE）。
-- <strong>其余 CVSS ≥ 9.0 项共 21 个</strong>，可通过下方 MSRC 链接查看完整清单。</p>
-<p><strong>一句话核心风险总结</strong>
-本月补丁重点在于云端与身份基础设施：Azure 多项服务出现 CVSS 10.0 权限提升，SharePoint 在野 RCE（CVE-2026-58644）需优先修复，AD FS 与 SharePoint 的权限提升 0day 亦已被利用。</p>
-<p><strong>参考链接</strong>
-- MSRC Security Update Guide：https://msrc.microsoft.com/update-guide/
-- CVRF API（2026-Jul）：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</p>
-<hr />
 <p><strong>本次共筛选 11 条候选新闻，最高分 94 分。</strong></p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
@@ -192,5 +159,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-07-27.html">后一天 2026-07-27 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -106,13 +107,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-15</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">Top 5 网络安全新闻</a></li>
-<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
-</ol>
-</nav>
-
 <blockquote>
 <p>本次共筛选 <strong>15 条</strong> 新闻，最高分 <strong>92 分</strong>。</p>
 </blockquote>
@@ -159,117 +153,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/nearly-300-github-repos-pose-as-legit-software-to-push-malware/</li>
 </ul>
 <hr />
-<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p>本板块为独立补丁拆解，不计入 Top 5 新闻。</p>
-</blockquote>
-<ul>
-<li><strong>官方发布状态</strong>：已确认正式版。MSRC CVRF <code>2026-Jul</code> 文档标题为 <strong>"July 2026 Security Updates"</strong>，状态 <code>Final</code>，初始发布时间为 2026-07-14 07:00 UTC。</li>
-<li><strong>CVE 总数</strong>：本月 Microsoft 安全更新共修复 <strong>622 个 Microsoft CVE</strong>（另含 428 个非 Microsoft Chromium CVE 重新发布）。</li>
-<li><strong>分级统计</strong>：</li>
-<li><strong>Critical</strong>：62 个</li>
-<li><strong>Important</strong>：553 个</li>
-<li><strong>Moderate</strong>：6 个</li>
-<li><strong>Low</strong>：1 个</li>
-</ul>
-<h3 id="s8">在野利用 CVE（0day）</h3>
-<p>本月有 <strong>2 个 CVE 被确认已在野利用</strong>，建议优先修复：</p>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>标题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-56155</td>
-<td>Important</td>
-<td>7.8</td>
-<td>Active Directory Federation Services 权限提升漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-56164</td>
-<td>Moderate</td>
-<td>5.3</td>
-<td>Microsoft SharePoint Server 权限提升漏洞</td>
-</tr>
-</tbody>
-</table>
-<h3 id="s9">高危 CVE 清单（CVSS ≥ 9.0，按严重程度展示前 8 条）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>标题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-45499</td>
-<td>Critical</td>
-<td>9.9</td>
-<td>Azure OpenAI 权限提升漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-57100</td>
-<td>Critical</td>
-<td>9.9</td>
-<td>Microsoft Entra 预配服务权限提升漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-57092</td>
-<td>Critical</td>
-<td>9.9</td>
-<td>Microsoft Windows VMSwitch 权限提升漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-50522</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Microsoft SharePoint 远程代码执行漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-58644</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Microsoft SharePoint 远程代码执行漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-50518</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Windows DHCP Server 远程代码执行漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-55010</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Minecraft Bedrock 专用服务器远程代码执行漏洞</td>
-</tr>
-<tr>
-<td>CVE-2026-56159</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>DHCP Server Service 远程代码执行漏洞</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>其余 CVSS ≥ 9.0 漏洞</strong>：共 <strong>14 个</strong>，包含 Microsoft Copilot、Exchange Server、GDI+、Dynamics 365 等组件。完整清单见 MSRC Security Update Guide。</p>
-</blockquote>
-<h3 id="s10">核心风险总结</h3>
-<p>本月补丁规模为微软史上最大（622 个 Microsoft CVE），虽仅 2 个在野利用漏洞且 CVSS 不属最高，但 Critical 级漏洞数量达 62 个，CVSS ≥ 9.0 的高危项集中在 SharePoint、DHCP、Azure OpenAI/Entra、Windows 网络驱动等关键边界/身份/服务组件，企业应在 CISA 强制时限内优先修复面向公网的服务与身份基础设施。</p>
-<h3 id="s11">参考链接</h3>
-<ul>
-<li>MSRC Security Update Guide： https://msrc.microsoft.com/update-guide/</li>
-<li>MSRC CVRF API（2026-Jul）： https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</li>
-</ul>
-<hr />
 <p><em>本次共筛选 15 条新闻，最高分 92 分。</em></p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
@@ -280,5 +163,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-07-16.html">后一天 2026-07-16 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -106,13 +107,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-19</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">Top 5 安全新闻</a></li>
-<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
-</ol>
-</nav>
-
 <h2 id="s1">Top 5 安全新闻</h2>
 <h3 id="s2">1. WordPress 核心 wp2shell 预认证 RCE（CVE-2026-63030 / CVE-2026-60137）</h3>
 <ul>
@@ -155,145 +149,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/</li>
 </ul>
 <hr />
-<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p>数据来源：MSRC CVRF API <code>2026-Jul</code>，文档标题为 <strong>"July 2026 Security Updates"</strong>（正式补丁，非 Early），最后更新于 2026-07-18。</p>
-</blockquote>
-<h3 id="s8">总体统计</h3>
-<table>
-<thead>
-<tr>
-<th>类别</th>
-<th style="text-align: right;">总数</th>
-<th style="text-align: right;">Critical</th>
-<th style="text-align: right;">Important</th>
-<th style="text-align: right;">Moderate</th>
-<th style="text-align: right;">Low</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Microsoft CVE</td>
-<td style="text-align: right;">628</td>
-<td style="text-align: right;">62</td>
-<td style="text-align: right;">559</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr>
-<td>CBL-Mariner / Azure Linux OSS</td>
-<td style="text-align: right;">133</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">57</td>
-<td style="text-align: right;">62</td>
-<td style="text-align: right;">6</td>
-</tr>
-<tr>
-<td>Chromium（Edge）</td>
-<td style="text-align: right;">448</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr>
-<td>其他</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr>
-<td><strong>合计</strong></td>
-<td style="text-align: right;"><strong>1210</strong></td>
-<td style="text-align: right;"><strong>70</strong></td>
-<td style="text-align: right;"><strong>616</strong></td>
-<td style="text-align: right;"><strong>68</strong></td>
-<td style="text-align: right;"><strong>7</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="s9">已被在野利用的 CVE（全部列出）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th style="text-align: right;">严重级别</th>
-<th style="text-align: right;">CVSS</th>
-<th style="text-align: left;">标题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-58644</td>
-<td style="text-align: right;">Critical</td>
-<td style="text-align: right;">9.8</td>
-<td style="text-align: left;">Microsoft SharePoint Remote Code Execution Vulnerability</td>
-</tr>
-<tr>
-<td>CVE-2026-56155</td>
-<td style="text-align: right;">Important</td>
-<td style="text-align: right;">7.8</td>
-<td style="text-align: left;">Active Directory Federation Services Elevation of Privilege Vulnerability</td>
-</tr>
-<tr>
-<td>CVE-2026-56164</td>
-<td style="text-align: right;">Moderate</td>
-<td style="text-align: right;">5.3</td>
-<td style="text-align: left;">Microsoft SharePoint Server Elevation of Privilege Vulnerability</td>
-</tr>
-</tbody>
-</table>
-<h3 id="s10">重点关注：Critical 且可远程/无认证利用的 CVSS≥9.0 CVE</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">CVE</th>
-<th style="text-align: right;">CVSS</th>
-<th style="text-align: left;">标题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">CVE-2026-58644</td>
-<td style="text-align: right;">9.8</td>
-<td style="text-align: left;">Microsoft SharePoint Remote Code Execution Vulnerability（已在野利用）</td>
-</tr>
-<tr>
-<td style="text-align: right;">CVE-2026-50522</td>
-<td style="text-align: right;">9.8</td>
-<td style="text-align: left;">Microsoft SharePoint Remote Code Execution Vulnerability</td>
-</tr>
-<tr>
-<td style="text-align: right;">CVE-2026-50518</td>
-<td style="text-align: right;">9.8</td>
-<td style="text-align: left;">Windows DHCP Server Remote Code Execution Vulnerability</td>
-</tr>
-<tr>
-<td style="text-align: right;">CVE-2026-56159</td>
-<td style="text-align: right;">9.8</td>
-<td style="text-align: left;">DHCP Server Service Remote Code Execution Vulnerability</td>
-</tr>
-<tr>
-<td style="text-align: right;">CVE-2026-49172</td>
-<td style="text-align: right;">9.8</td>
-<td style="text-align: left;">Windows FTP Service Remote Code Execution Vulnerability</td>
-</tr>
-<tr>
-<td style="text-align: right;">CVE-2026-50447</td>
-<td style="text-align: right;">9.8</td>
-<td style="text-align: left;">Windows Message Queuing Service (MSMQ) Remote Code Execution Vulnerability</td>
-</tr>
-</tbody>
-</table>
-<h3 id="s11">其余 CVSS≥9.0 微软 CVE</h3>
-<p>另有 <strong>14 个</strong> Microsoft CVE 的 CVSS≥9.0（主要涉及 Azure OpenAI、Entra、VMSwitch、RDP、Exchange、GDI+、Edge 等），完整清单可参考 MSRC Security Update Guide：
-- https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul
-- https://msrc.microsoft.com/update-guide</p>
-<h3 id="s12">一句话核心风险总结</h3>
-<p>本月补丁以 <strong>SharePoint 与 AD FS 在野利用</strong>为最高优先级，同时暴露了 DHCP、FTP、MSMQ、RDP、网络驱动等大量可远程触发的 Critical RCE；CISA 已将 CVE-2026-58644 加入 KEV 并设定 7 月 19 日联邦机构修复截止日期，补丁验证与密钥轮换窗口极为紧迫。</p>
-<hr />
 <p><em>本次共筛选 5 条新闻，最高分 96 分。</em></p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
@@ -304,5 +159,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-07-20.html">后一天 2026-07-20 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

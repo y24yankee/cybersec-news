@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -110,7 +111,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <ol>
 <li><a href="#s1">今日焦点（Top 5）</a></li>
 <li><a href="#s7">其他值得关注的新闻（候选 6–15）</a></li>
-<li><a href="#s8">微软补丁安全级别（Patch Tuesday）</a></li>
 </ol>
 </nav>
 
@@ -230,159 +230,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 </tbody>
 </table>
 <hr />
-<h2 id="s8">微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p>数据源：Microsoft MSRC CVRF v3.0 公开 API（GET https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug）
-文档标题："August 2026 Security Updates"（正式版，非 Early）
-CurrentReleaseDate：2026-08-19T07:00:00Z</p>
-</blockquote>
-<h3 id="s9">总量与分级（按最高严重程度计）</h3>
-<ul>
-<li><strong>本月补丁 CVE 总数</strong>：800 条（Microsoft 官方发行说明 = 422 条 + Mariner/Chromium/Other 等组件）</li>
-<li>按 <strong>最高严重程度</strong> 分级：</li>
-<li><strong>Critical</strong>：111</li>
-<li><strong>Important</strong>：400</li>
-<li><strong>Moderate</strong>：207</li>
-<li><strong>Low</strong>：32</li>
-</ul>
-<h3 id="s10">已被在野利用的 CVE（共 1 条）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>标题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-68820</td>
-<td>Important</td>
-<td>7.0</td>
-<td>Windows Ancillary Function Driver for WinSock (AFD.sys) 本地提权漏洞（朝鲜 Lazarus"Operation Dream Job"已实战利用）</td>
-</tr>
-</tbody>
-</table>
-<h3 id="s11">核心高危 CVE（CVSS ≥ 9.0，共 68 条）</h3>
-<p>优先展示最高分与已被在野利用项：</p>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>级别</th>
-<th>CVSS</th>
-<th>标题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-63508</td>
-<td>Critical</td>
-<td>10.0</td>
-<td>Microsoft Planetary Computer Pro Elevation of Privilege</td>
-</tr>
-<tr>
-<td>CVE-2026-56162</td>
-<td>Critical</td>
-<td>10.0</td>
-<td>Azure SQL Database Elevation of Privilege</td>
-</tr>
-<tr>
-<td>CVE-2026-65667</td>
-<td>Critical</td>
-<td>10.0</td>
-<td>Microsoft Teams Elevation of Privilege</td>
-</tr>
-<tr>
-<td>CVE-2026-50515</td>
-<td>Critical</td>
-<td>9.9</td>
-<td>Azure Service Bus Remote Code Execution</td>
-</tr>
-<tr>
-<td>CVE-2026-59115</td>
-<td>Critical</td>
-<td>9.9</td>
-<td>Microsoft Entra Provisioning Service Elevation of Privilege</td>
-</tr>
-<tr>
-<td>CVE-2026-50481</td>
-<td>Critical</td>
-<td>9.9</td>
-<td>Azure Active Directory Elevation of Privilege</td>
-</tr>
-<tr>
-<td>CVE-2026-62830</td>
-<td>Critical</td>
-<td>9.9</td>
-<td>Azure SRE Agent Elevation of Privilege</td>
-</tr>
-<tr>
-<td>CVE-2026-62873</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Microsoft 365 Admin Center Elevation of Privilege</td>
-</tr>
-<tr>
-<td>CVE-2026-62815</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Microsoft QUIC Remote Code Execution</td>
-</tr>
-<tr>
-<td>CVE-2026-62878</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Windows DNS Server Remote Code Execution</td>
-</tr>
-<tr>
-<td>CVE-2026-62893</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Windows Deployment Services TFTP Server Remote Code Execution</td>
-</tr>
-<tr>
-<td>CVE-2026-65791</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Windows iSCSI Target Service Remote Code Execution</td>
-</tr>
-</tbody>
-</table>
-<details>
-<summary>其余 56 条 CVSS ≥ 9.0 CVE（点击展开）</summary>
-
-- CVE-2026-59124 (Important, 9.8) — Microsoft HPC Pack RCE
-- CVE-2026-64564 (Critical, 9.8) — Linux Kernel SCTP ASCONF DoS
-- CVE-2026-64562 (Critical, 9.8) — KVM nVMX shadow VMCS
-- CVE-2026-64584 (Important, 9.8) — USB gadget f_midi
-- CVE-2026-64594 (Important, 9.8) — USB gadget f_fs
-- CVE-2026-64593 (Important, 9.8) — btrfs trim writeable check
-- CVE-2026-68407 (Critical, 9.8) — wifi nl80211 RNR
-- CVE-2026-68395 (Critical, 9.8) — sata_dwc_460ex IRQ ordering
-- CVE-2026-68143 (Critical, 9.8) — slip receive serialization
-- CVE-2026-68176 (Critical, 9.8) — tracing mmiotrace NULL deref
-- CVE-2026-68131 (Critical, 9.8) — rbd object map result codes
-- CVE-2026-68218 (Critical, 9.8) — media dm1105 workqueue
-- CVE-2026-68406 (Critical, 9.8) — cfg80211 PMSR FTM preamble
-- CVE-2026-68364 (Critical, 9.8) — drm/amd/display ISM dc_lock
-- CVE-2026-68354 (Critical, 9.8) — firewire net fragmented
-- CVE-2026-68180 (Critical, 9.8) — intel_th MSC device leak
-- CVE-2026-68357 (Critical, 9.8) — watchdog pretimeout UAF
-- CVE-2026-68402 (Critical, 9.8) — cfg80211 element ID bound
-- …… 其余请见 MSRC Security Update Guide（按 CVE 编号检索）
-
-</details>
-
-<h3 id="s12">一句话核心风险总结</h3>
-<p>八月补丁以 Azure 平台（SQL/Entra AD/Service Bus/QUIC/M365 Admin）和 Windows 网络服务（DNS/TFTP/iSCSI）两条战线同时拉响 CVSS 9.8–10.0 警报；唯一在野利用 CVE 仍是月初已被 Lazarus 用于"Operation Dream Job"的 AFD.sys 本地提权（CVE-2026-68820），建议优先级：Azure 组件立即热修 → Windows 服务器角色强制更新 → 终端侧按 AFD 漏洞优先分发补丁。</p>
-<h3 id="s13">数据源</h3>
-<ul>
-<li>MSRC Security Update Guide：https://msrc.microsoft.com/update-guide</li>
-<li>MSRC CVRF API（本数据源）：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</li>
-</ul>
-<hr />
 <p>本次共筛选 15 条新闻候选，最高分 96 分；Top 5 已按评分排序，候选 6–15 作为补充列表呈现；Patch Tuesday 板块为独立单元，不计入新闻 Top 5。</p>
 <hr />
 <p><em>本报告由"每日网络安全新闻推送"自动化于北京时间 2026-08-20 07:00 生成。补丁板块数据均来自 MSRC 官方 CVRF v3.0 公开 API 实时解析，未使用任何上月数据或编造数字。</em></p>
@@ -395,5 +242,14 @@ CurrentReleaseDate：2026-08-19T07:00:00Z</p>
   <a class="dn-next" href="daily_news_2026-08-21.html">后一天 2026-08-21 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

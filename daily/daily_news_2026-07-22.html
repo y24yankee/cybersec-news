@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -106,13 +107,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-22</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">Top 5 网络安全新闻</a></li>
-<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
-</ol>
-</nav>
-
 <hr />
 <h2 id="s1">Top 5 网络安全新闻</h2>
 <h3 id="s2">1. 🚨 ServiceNow AI 平台 CVE-2026-6875 未认证 RCE — 沙箱逃逸漏洞在野利用，企业 SaaS 工作流承压 | 评分：94</h3>
@@ -160,123 +154,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 - https://www.404media.co/apple-hide-my-email-bug-real-addresses/
 - https://www.darkreading.com/endpoint-security/apple-icloud-hide-my-email-bug</p>
 <hr />
-<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p>📌 本板块数据来自 MSRC CVRF API 官方正式文档（DocumentTitle: "July 2026 Security Updates"，不含 Early），CVRF CurrentReleaseDate 为 2026-07-21T07:00:00Z。距 Patch Tuesday（2026-07-14）已 8 天，原始数据自 7 月 21 日以来无变化。
-🆕 <strong>新增跟踪</strong>（非 CVRF 解析数据，来自 7 月 21 日 watchTowr 报告）：原 7 月 14 日 CVRF 未标注 exploited 的 <strong>CVE-2026-50522（SharePoint RCE，CVSS 9.8）</strong> 已被观察到在野利用，建议将其与下表"已被在野利用"项同等优先级处理。</p>
-</blockquote>
-<h3 id="s8">本月 CVE 总数与分级统计</h3>
-<table>
-<thead>
-<tr>
-<th>类别</th>
-<th>CVE 数量</th>
-<th>Critical</th>
-<th>Important</th>
-<th>Moderate</th>
-<th>Low</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Microsoft</strong></td>
-<td>628</td>
-<td>62</td>
-<td>559</td>
-<td>6</td>
-<td>1</td>
-</tr>
-<tr>
-<td><strong>Azure Linux (Mariner)</strong></td>
-<td>129</td>
-<td>8</td>
-<td>55</td>
-<td>59</td>
-<td>6</td>
-</tr>
-<tr>
-<td><strong>Chromium</strong></td>
-<td>448</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td><strong>合计</strong></td>
-<td><strong>1,206</strong></td>
-<td><strong>70</strong></td>
-<td><strong>614</strong></td>
-<td><strong>65</strong></td>
-<td><strong>7</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="s9">已被在野利用的 CVE（CVRF 标注 3 个 + 新增跟踪 1 个）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>产品</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-56155</td>
-<td>Important</td>
-<td>7.8</td>
-<td>Active Directory Federation Services</td>
-<td>AD FS 提权漏洞——攻击者可提权至管理员</td>
-</tr>
-<tr>
-<td>CVE-2026-56164</td>
-<td>Moderate</td>
-<td>5.3</td>
-<td>SharePoint Server</td>
-<td>SharePoint 提权漏洞——未认证攻击者可网络提权</td>
-</tr>
-<tr>
-<td>CVE-2026-58644</td>
-<td><strong>Critical</strong></td>
-<td><strong>9.8</strong></td>
-<td>SharePoint Server</td>
-<td>SharePoint 远程代码执行——CISA KEV 已收录，要求联邦机构 7/19 前修补</td>
-</tr>
-<tr>
-<td>⚠️ CVE-2026-50522</td>
-<td><strong>Critical</strong></td>
-<td><strong>9.8</strong></td>
-<td>SharePoint Server</td>
-<td>SharePoint 反序列化 RCE——watchTowr 7/21 报告在野利用，PoC 公开</td>
-</tr>
-</tbody>
-</table>
-<h3 id="s10">高危 CVE 清单（CVSS ≥ 9.0，共 22 个 Microsoft CVE）</h3>
-<p><strong>已在野利用（1 个，全部列出）：</strong>
-- CVE-2026-58644 | Critical | 9.8 | Exploited:Yes | SharePoint RCE</p>
-<p><strong>Critical 级远程/无认证利用（7 个）：</strong>
-- CVE-2026-45499 | Critical | 9.9 | Azure OpenAI 提权
-- CVE-2026-57100 | Critical | 9.9 | Microsoft Entra Provisioning Service 提权
-- CVE-2026-57092 | Critical | 9.9 | Windows VMSwitch 提权
-- CVE-2026-50522 | Critical | 9.8 | SharePoint RCE（<strong>7/21 新增在野利用</strong>）
-- CVE-2026-50518 | Critical | 9.8 | Windows DHCP Server RCE
-- CVE-2026-55010 | Critical | 9.8 | Minecraft Bedrock Dedicated Server RCE
-- CVE-2026-55944 | Critical | 9.8 | Dynamics NAV / D365 Business Central RCE</p>
-<p><strong>其余 CVSS ≥ 9.0（14 个，以计数呈现）：</strong>
-- 含 Windows FTP Service RCE (9.8)、RDP Client RCE (9.8)、RDP Protocol RCE (9.8)、SQL Server ODBC 提权 (9.8)、MSMQ RCE (9.8)、Windows Server Network Driver RCE (9.8)、DHCP Server Service RCE (9.8)、Microsoft Copilot RCE (9.6)、Exchange Server Spoofing (9.6)、GDI+ RCE (9.6)、365 Copilot 提权 (9.3)、Windows Kernel 提权 (9.3)、SharePoint Security Feature Bypass (9.1)、Edge RCE (9.0)</p>
-<h3 id="s11">一句话核心风险总结</h3>
-<p>本月微软创纪录 628 个 CVE 中有 <strong>3 个零日已在野利用</strong>（CVRF 标注）；7 月 21 日 watchTowr 报告 <strong>CVE-2026-50522（SharePoint RCE CVSS 9.8）新增在野利用</strong>，使在野利用清单扩展为 4 个——其中两个 SharePoint RCE 需重点关注。Azure OpenAI 与 Entra Provisioning Service 各有 CVSS 9.9 提权漏洞，云身份基础设施风险突出。</p>
-<h3 id="s12">参考链接</h3>
-<ul>
-<li>MSRC Security Update Guide: https://msrc.microsoft.com/update-guide</li>
-<li>CVRF API: https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</li>
-<li>CISA KEV 目录: https://www.cisa.gov/known-exploited-vulnerabilities-catalog</li>
-<li>watchTowr CVE-2026-50522 在野利用报告: https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html</li>
-</ul>
-<hr />
 <p>本次共筛选 15 条候选新闻，选取 Top 5，最高分 94 分。</p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
@@ -287,5 +164,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-07-23.html">后一天 2026-07-23 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

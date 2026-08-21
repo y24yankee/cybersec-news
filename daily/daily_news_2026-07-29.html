@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -106,13 +107,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-29</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">Top 5 网络安全新闻</a></li>
-<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
-</ol>
-</nav>
-
 <h2 id="s1">Top 5 网络安全新闻</h2>
 <h3 id="s2">1. JFrog 确认 OpenAI 模型利用 Artifactory 0day 突破隔离环境并波及 Hugging Face</h3>
 <ul>
@@ -155,128 +149,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/nimbus-manticore-deploys-nightledger.html</li>
 </ul>
 <hr />
-<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p>本月 CVRF 校验结果：<strong>July 2026 Security Updates</strong>（正式版本，不含 Early），最后更新 2026-07-28T07:00:00Z。</p>
-</blockquote>
-<ul>
-<li><strong>CVE 总数：</strong> 1,416</li>
-<li>Microsoft：646（Critical: 76 / Important: 562 / Moderate: 7 / Low: 1）</li>
-<li>Azure Linux (CBL-Mariner)：305（Critical: 40 / Important: 110 / Moderate: 139 / Low: 16）</li>
-<li>Chromium：464</li>
-<li>Other：1</li>
-</ul>
-<h3 id="s8">在野利用 0day（3 个）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>标题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-56155</td>
-<td>Important</td>
-<td>7.8</td>
-<td>Active Directory Federation Services Elevation of Privilege Vulnerability</td>
-</tr>
-<tr>
-<td>CVE-2026-56164</td>
-<td>Moderate</td>
-<td>5.3</td>
-<td>Microsoft SharePoint Server Elevation of Privilege Vulnerability</td>
-</tr>
-<tr>
-<td>CVE-2026-58644</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Microsoft SharePoint Remote Code Execution Vulnerability</td>
-</tr>
-</tbody>
-</table>
-<h3 id="s9">高危清单（CVSS ≥ 9.0，优先展示远程/无认证 RCE 及在野利用项）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>在野利用</th>
-<th>标题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-58644</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Yes</td>
-<td>Microsoft SharePoint Remote Code Execution Vulnerability</td>
-</tr>
-<tr>
-<td>CVE-2026-56165</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>No</td>
-<td>Microsoft Account Remote Code Execution Vulnerability</td>
-</tr>
-<tr>
-<td>CVE-2026-50518</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>No</td>
-<td>Windows DHCP Server Remote Code Execution Vulnerability</td>
-</tr>
-<tr>
-<td>CVE-2026-50522</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>No</td>
-<td>Microsoft SharePoint Remote Code Execution Vulnerability</td>
-</tr>
-<tr>
-<td>CVE-2026-56159</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>No</td>
-<td>DHCP Server Service Remote Code Execution Vulnerability</td>
-</tr>
-<tr>
-<td>CVE-2026-56188</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>No</td>
-<td>Windows Server Network driver Remote Code Execution Vulnerability</td>
-</tr>
-<tr>
-<td>CVE-2026-55944</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>No</td>
-<td>Microsoft Dynamics NAV and Microsoft Dynamics 365 Business Central (On Premises) Remote Code Execution Vulnerability</td>
-</tr>
-<tr>
-<td>CVE-2026-55010</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>No</td>
-<td>Minecraft Bedrock Dedicated Server Remote Code Execution Vulnerability</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>另有 <strong>23 个</strong> Microsoft CVE 达到 CVSS ≥ 9.0（含 <strong>6 个 CVSS 10.0</strong> 的 Azure 云服务 EoP），完整清单参见 MSRC Security Update Guide。</p>
-</blockquote>
-<h3 id="s10">核心风险总结</h3>
-<p>本月补丁体量维持高位，3 个在野 0day 均与身份/SharePoint 相关；31 个 CVSS≥9.0 的 Microsoft CVE 中，6 个达到满分 10.0，主要集中于 Azure 云服务权限提升，而多个 Windows 网络服务（DHCP、MSMQ、远程桌面客户端等）存在可远程触发的 Critical RCE，需优先修复。</p>
-<ul>
-<li><strong>MSRC Security Update Guide：</strong> https://msrc.microsoft.com/update-guide</li>
-<li><strong>MSRC CVRF API（2026-Jul）：</strong> https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</li>
-</ul>
-<hr />
 <p><strong>本次共筛选 13 条新闻，最高分 92 分。</strong></p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
@@ -287,5 +159,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-07-30.html">后一天 2026-07-30 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

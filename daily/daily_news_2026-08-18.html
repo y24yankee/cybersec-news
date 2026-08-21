@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -106,13 +107,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-18</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">Top 5 网络安全新闻</a></li>
-<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
-</ol>
-</nav>
-
 <h2 id="s1">Top 5 网络安全新闻</h2>
 <h3 id="s2">1. 疑似中国关联 APT 利用 VMware vCenter 漏洞部署 Babuk 衍生勒索软件</h3>
 <ul>
@@ -150,35 +144,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>摘要：</strong> 化名为 "TheHatman" 的威胁行为者自 7 月 31 日起在地下论坛出售声称从麦当劳、Gap、Vodafone、TCS、HCL、IHG、Kyndryl 等企业 Azure 租户窃取的 364 万条员工记录。威胁情报公司 Hudson Rock 分析后认为数据具有较高真实性，包含员工姓名、邮箱、职位、电话、地址及全局管理员账户等信息。TCS 与 Gap 已声明未发现系统被入侵，且相关数据为多年前的旧信息。</li>
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/hacker-claims-36-million-azure-account-records-stolen-from-major-companies/</li>
 </ul>
-<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p>数据来源：MSRC CVRF API（2026-Aug），CurrentReleaseDate 2026-08-17T07:00:00Z；文档标题已校验为正式 "August 2026 Security Updates"，不含 Early。</p>
-</blockquote>
-<ul>
-<li><strong>本月 CVRF 漏洞条目总数：798 项</strong></li>
-<li><strong>按最高严重级别统计：</strong></li>
-<li>Critical：110 项</li>
-<li>Important：398 项</li>
-<li>Moderate：207 项</li>
-<li>Low：32 项</li>
-<li>未标注标准级别：51 项（多为非 Microsoft 组件）</li>
-<li><strong>在野利用漏洞：</strong> 1 项</li>
-<li><strong>CVE-2026-68820</strong> | Important | CVSS 7.0 | Windows Ancillary Function Driver for WinSock 权限提升漏洞（Lazarus Operation Dream Job 活动相关）</li>
-<li><strong>CVSS ≥ 9.0 漏洞：68 项</strong>，以下列出可被远程/未认证利用的高危 Critical 项（可见清单 7 条）及全部在野利用项：
-  1. <strong>CVE-2026-63508</strong> | Critical | CVSS 10.0 | Microsoft Planetary Computer Pro 权限提升漏洞（AV:N/AC:L/PR:N/UI:N）
-  2. <strong>CVE-2026-56162</strong> | Critical | CVSS 10.0 | Azure SQL Database 权限提升漏洞（AV:N/AC:L/PR:N/UI:N）
-  3. <strong>CVE-2026-65667</strong> | Critical | CVSS 10.0 | Microsoft Teams 权限提升漏洞（AV:N/AC:L/PR:N/UI:N）
-  4. <strong>CVE-2026-62873</strong> | Critical | CVSS 9.8 | Microsoft 365 Admin Center 权限提升漏洞（AV:N/AC:L/PR:N/UI:N）
-  5. <strong>CVE-2026-62815</strong> | Critical | CVSS 9.8 | Microsoft QUIC 远程代码执行漏洞（AV:N/AC:L/PR:N/UI:N）
-  6. <strong>CVE-2026-62878</strong> | Critical | CVSS 9.8 | Windows DNS Server 远程代码执行漏洞（AV:N/AC:L/PR:N/UI:N）
-  7. <strong>CVE-2026-62893</strong> | Critical | CVSS 9.8 | Windows Deployment Services TFTP Server 远程代码执行漏洞（AV:N/AC:L/PR:N/UI:N）</li>
-<li><strong>其余 60 项 CVSS ≥ 9.0 漏洞：</strong> 详见 MSRC Security Update Guide / CVRF API 链接。</li>
-<li><strong>一句话核心风险总结：</strong> 8 月补丁包含 1 个已被 Lazarus 在野利用的 Windows AFD.sys 提权 0day，以及 68 个 CVSS ≥ 9.0 的高危项，其中多个 Critical 漏洞可被远程未认证利用，覆盖 Azure、Teams、DNS、QUIC 等核心服务，需优先修复。</li>
-<li><strong>参考链接：</strong></li>
-<li>MSRC Security Update Guide：https://msrc.microsoft.com/update-guide/releaseNote/2026-Aug</li>
-<li>CVRF API：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</li>
-</ul>
-<hr />
 <p><strong>本次共筛选 14 条候选新闻，最高分 93 分。</strong></p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
@@ -189,5 +154,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-08-19.html">后一天 2026-08-19 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

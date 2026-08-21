@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -106,13 +107,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-21</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">📌 Top 5 新闻</a></li>
-<li><a href="#s7">🛡 微软补丁安全级别（Patch Tuesday）</a></li>
-</ol>
-</nav>
-
 <blockquote>
 <p>数据采集窗口：北京时间 2026-08-21 06:55 前后，过去 24 小时全球网络安全事件<br />
 本次共筛选 <strong>15 条</strong>候选新闻，最高分 <strong>96 分</strong><br />
@@ -160,188 +154,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>原文链接</strong>：https://so.html5.qq.com/page/real/search_news?docid=70000021_6066a87269441952</li>
 </ul>
 <hr />
-<h2 id="s7">🛡 微软补丁安全级别（Patch Tuesday）</h2>
-<p><strong>官方数据源校验</strong>：MSRC API <code>GET https://api.msrc.microsoft.com/cvrf/v3.0/updates</code> 本月条目标题为 <strong>"August 2026 Security Updates"</strong>（不含 "Early"），CVRF <code>2026-Aug</code> CurrentReleaseDate = <code>2026-08-20T07:00:00Z</code>，距 2nd Tuesday (2026-08-11) 已发布 9 天。本次 CVRF 解析自实时下载的 <code>cvrf_2026-Aug_current.xml</code>。</p>
-<h3 id="s8">本月补丁核心统计（基于 Microsoft CVRF 自解析）</h3>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>数值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>总 CVE 条目（<code>&lt;vuln:Vulnerability&gt;</code>）</td>
-<td><strong>491</strong></td>
-</tr>
-<tr>
-<td>严重级别分布（按各产品最高级）</td>
-<td><strong>Critical: 83 / Important: 364 / Moderate: 1 / Unknown: 43</strong></td>
-</tr>
-<tr>
-<td>已被在野利用 <code>Exploited:Yes</code></td>
-<td><strong>2</strong></td>
-</tr>
-<tr>
-<td><code>CVSS BaseScore ≥ 9.0</code> 唯一 CVE 数</td>
-<td><strong>32</strong></td>
-</tr>
-<tr>
-<td><code>CVSS = 10.0</code> 数量</td>
-<td><strong>8</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="s9">🔥 高危 / 在野利用 CVE 清单（完整在野利用项全部展示 + Critical 可远程/无认证精选）</h3>
-<p><strong>已被在野利用（Exploited:Yes）的 0day（共 2 项，全部列出）</strong>：</p>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>标题片段</th>
-<th>严重级别</th>
-<th>CVSS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>CVE-2026-68820</strong></td>
-<td>Windows Ancillary Function Driver for WinSock (AFD.sys) EoP</td>
-<td>Important</td>
-<td>7.0</td>
-</tr>
-<tr>
-<td><strong>CVE-2026-69836</strong> ⚠️</td>
-<td><strong>Microsoft Entra ID Remote Code Execution</strong></td>
-<td><strong>Critical</strong></td>
-<td><strong>10.0</strong></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>CVE-2026-68820 是月初即出现的 AFD.sys EoP 在野 0day；CVE-2026-69836 则是当月新发现 / 8 月补丁中明确标记 Exploited:Yes 的关键身份平台 RCE — <strong>CVSS 10.0 + Entra ID 身份平台 + 在野利用</strong> 任何一项单挑都属 P0，三项叠加为月度最大风险点。</p>
-</blockquote>
-<p><strong>其他 Critical + 可远程/无认证利用（CVSS 10.0 / 9.9，部分展示）</strong>：</p>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>标题片段</th>
-<th>严重级别</th>
-<th>CVSS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-56162</td>
-<td>Azure SQL Database EoP</td>
-<td>Critical</td>
-<td>10.0</td>
-</tr>
-<tr>
-<td>CVE-2026-63508</td>
-<td>Microsoft Planetary Computer Pro EoP</td>
-<td>Critical</td>
-<td>10.0</td>
-</tr>
-<tr>
-<td>CVE-2026-65667</td>
-<td>Microsoft Teams EoP</td>
-<td>Critical</td>
-<td>10.0</td>
-</tr>
-<tr>
-<td>CVE-2026-65770</td>
-<td>Azure Managed Instance for Apache Cassandra RCE</td>
-<td>Critical</td>
-<td>10.0</td>
-</tr>
-<tr>
-<td>CVE-2026-65801</td>
-<td>Microsoft Exchange Online EoP</td>
-<td>Critical</td>
-<td>10.0</td>
-</tr>
-<tr>
-<td>CVE-2026-65816</td>
-<td>Azure Arc EoP</td>
-<td>Critical</td>
-<td>10.0</td>
-</tr>
-<tr>
-<td>CVE-2026-69555</td>
-<td>Azure Arc EoP</td>
-<td>Critical</td>
-<td>10.0</td>
-</tr>
-<tr>
-<td>CVE-2026-50481</td>
-<td>Azure Active Directory EoP</td>
-<td>Critical</td>
-<td>9.9</td>
-</tr>
-<tr>
-<td>CVE-2026-50515</td>
-<td>Azure Service Bus RCE</td>
-<td>Critical</td>
-<td>9.9</td>
-</tr>
-<tr>
-<td>CVE-2026-59115</td>
-<td>Microsoft Entra Provisioning Service EoP</td>
-<td>Critical</td>
-<td>9.9</td>
-</tr>
-<tr>
-<td>...</td>
-<td>其余 <code>CVSS ≥ 9.0</code> 项共 32 条（8 × 10.0 + 8 × 9.9 + 6 × 9.8 + 3 × 9.6 + ...)</td>
-<td>Critical</td>
-<td>9.x</td>
-</tr>
-</tbody>
-</table>
-<details>
-<summary>📂 折叠：CVSS ≥ 9.0 完整清单（点击展开，32 条）</summary>
-
-- CVE-2026-56162 · Azure SQL Database EoP · **10.0**
-- CVE-2026-63508 · Microsoft Planetary Computer Pro EoP · **10.0**
-- CVE-2026-65667 · Microsoft Teams EoP · **10.0**
-- CVE-2026-65770 · Azure Managed Instance for Apache Cassandra RCE · **10.0**
-- CVE-2026-65801 · Microsoft Exchange Online EoP · **10.0**
-- CVE-2026-65816 · Azure Arc EoP · **10.0**
-- CVE-2026-69555 · Azure Arc EoP · **10.0**
-- CVE-2026-69836 · Microsoft Entra ID RCE · **10.0** ⚠️ Exploited:Yes
-- CVE-2026-50481 · Azure Active Directory EoP · 9.9
-- CVE-2026-50515 · Azure Service Bus RCE · 9.9
-- CVE-2026-59115 · Microsoft Entra Provisioning Service EoP · 9.9
-- CVE-2026-62830 · Azure SRE Agent EoP · 9.9
-- CVE-2026-63509 · Microsoft Fabric EoP · 9.9
-- CVE-2026-68782 · Azure SQL Database EoP · 9.9
-- CVE-2026-68789 · Azure SQL Database EoP · 9.9
-- CVE-2026-69851 · Microsoft Entra ID EoP · 9.9
-- CVE-2026-59124 · Microsoft HPC Pack RCE · 9.8 (Important 字段，但 CVSS 计算为 Important 9.8)
-- CVE-2026-62815 · Microsoft QUIC RCE · 9.8
-- CVE-2026-62873 · Microsoft 365 Admin Center EoP · 9.8
-- CVE-2026-62878 · Windows DNS Server RCE · 9.8
-- CVE-2026-62893 · Windows Deployment Services TFTP Server RCE · 9.8
-- CVE-2026-65791 · Windows iSCSI Target Service RCE · 9.8
-- CVE-2026-56161 · Azure Logic Apps Information Disclosure · 9.6
-- CVE-2026-62896 · Microsoft Teams EoP · 9.6
-- CVE-2026-69400 · Azure Logic Apps EoP · 9.6
-- 其余 CVSS ≥ 9.0 项 7 条（Important/9.x）
-
-</details>
-
-<h3 id="s10">一句话总结</h3>
-<p><strong>月度最大风险为 Microsoft Entra ID 上的 CVSS 10.0 RCE（CVE-2026-69836）已在野利用，配合 8 项 CVSS 10.0（其中 6 项在 Azure 身份/数据/Arc 平面）+ 32 项 CVSS ≥ 9.0 — 本月补丁的实质重心是 Azure / Microsoft 365 信任平台身份和数据平面的纵深防御，AFD.sys EoP 仅为附件。</strong></p>
-<h3 id="s11">数据 &amp; 参考链接</h3>
-<ul>
-<li>本月 CVRF 实时下载：<code>https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</code></li>
-<li>MSRC Security Update Guide：<code>https://msrc.microsoft.com/update-guide</code></li>
-<li>Microsoft August 2026 Patch Tuesday 官方总览：<code>https://msrc.microsoft.com/blog/2026/08/</code></li>
-</ul>
-<hr />
 <p><em>本次共筛选 15 条新闻（HN × 5 / The Hacker News × 5 / BleepingComputer × 5），最高分 96 分，5 条入选 Top 5。微软 Patch Tuesday 板块基于实时 CVRF XML 解析，自动覆盖在野利用 / CVSS ≥ 9.0 全部明细。</em></p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
@@ -352,5 +164,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <span class="dn-disabled">后一天 →</span>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

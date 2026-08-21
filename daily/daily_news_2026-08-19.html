@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -113,7 +114,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><a href="#s3">Top 3 | 评分：93分</a></li>
 <li><a href="#s4">Top 4 | 评分：91分</a></li>
 <li><a href="#s5">Top 5 | 评分：90分</a></li>
-<li><a href="#s6">微软补丁安全级别（Patch Tuesday）</a></li>
 </ol>
 </nav>
 
@@ -153,136 +153,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 - <strong>评分理由：</strong> AI 平台与工业控制系统同日出现高评分漏洞并被快速武器化，MLflow 的扫描在 CVE 分配后数小时内即开始，响应窗口极短。
 - <strong>原文链接：</strong> https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html</p>
 <hr />
-<h2 id="s6">微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p><strong>状态：</strong> August 2026 Security Updates — 正式补丁已发布（DocumentTitle 校验通过，不含 Early）<br />
-<strong>CVRF 发布时间：</strong> 2026-08-18T07:00:00Z<br />
-<strong>数据来源：</strong> MSRC CVRF API <code>https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</code></p>
-</blockquote>
-<h3 id="s7">本月统计</h3>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>数值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE 总数</td>
-<td><strong>798</strong></td>
-</tr>
-<tr>
-<td>Critical</td>
-<td><strong>111</strong></td>
-</tr>
-<tr>
-<td>Important</td>
-<td><strong>398</strong></td>
-</tr>
-<tr>
-<td>Moderate</td>
-<td><strong>207</strong></td>
-</tr>
-<tr>
-<td>Low</td>
-<td><strong>32</strong></td>
-</tr>
-<tr>
-<td>Unknown / 未分级</td>
-<td><strong>50</strong></td>
-</tr>
-<tr>
-<td>已被在野利用（Exploited:Yes）</td>
-<td><strong>1</strong></td>
-</tr>
-<tr>
-<td>CVSS BaseScore &gt;= 9.0</td>
-<td><strong>68</strong></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>较昨日变化：</strong> Critical +1（110 -&gt; 111），Unknown -1（51 -&gt; 50），总数 798 不变。</li>
-</ul>
-<h3 id="s8">已被在野利用的 CVE</h3>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-68820</td>
-<td>Important</td>
-<td>7.0</td>
-<td>Windows AFD.sys 权限提升（EoP），Lazarus 组织在 Operation Dream Job 中利用</td>
-</tr>
-</tbody>
-</table>
-<h3 id="s9">高危 CVE 清单（CVSS &gt;= 9.0，优先展示 Critical 及最高分项）</h3>
-<p>以下为 CVSS 9.0+ 中的 Critical 级别最高分 CVE（共 68 条，展示前 8 条）：</p>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-63508</td>
-<td>Critical</td>
-<td>10.0</td>
-</tr>
-<tr>
-<td>CVE-2026-56162</td>
-<td>Critical</td>
-<td>10.0</td>
-</tr>
-<tr>
-<td>CVE-2026-65667</td>
-<td>Critical</td>
-<td>10.0</td>
-</tr>
-<tr>
-<td>CVE-2026-50515</td>
-<td>Critical</td>
-<td>9.9</td>
-</tr>
-<tr>
-<td>CVE-2026-59115</td>
-<td>Critical</td>
-<td>9.9</td>
-</tr>
-<tr>
-<td>CVE-2026-50481</td>
-<td>Critical</td>
-<td>9.9</td>
-</tr>
-<tr>
-<td>CVE-2026-62830</td>
-<td>Critical</td>
-<td>9.9</td>
-</tr>
-<tr>
-<td>CVE-2026-62873</td>
-<td>Critical</td>
-<td>9.8</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>其余 <strong>60</strong> 条 CVSS &gt;= 9.0 的 CVE 详见 MSRC Security Update Guide：https://msrc.microsoft.com/update-guide</li>
-</ul>
-<h3 id="s10">核心风险总结</h3>
-<p>本月 Patch Tuesday 共 798 个 CVE，其中 111 个 Critical 且存在 3 个 CVSS 10.0 的满分漏洞；尽管仅确认 1 个在野利用的 0day（CVE-2026-68820，AFD.sys EoP，CVSS 7.0），但 68 个 CVSS 9.0+ 漏洞数量高企，建议优先处理面向公网的 Exchange、SharePoint、IKE 和虚拟化基础设施补丁。</p>
-<hr />
 <p><strong>本次共筛选 14 条新闻，最高分 96 分。</strong></p>
 <blockquote>
 <p><strong>生成时间：</strong> 2026-08-19 06:55 CST<br />
@@ -297,5 +167,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-08-20.html">后一天 2026-08-20 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

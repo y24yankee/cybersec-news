@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -109,8 +110,7 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <nav class="toc"><h4>目录</h4>
 <ol>
 <li><a href="#s1">Top 5 网络安全新闻</a></li>
-<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
-<li><a href="#s13">统计</a></li>
+<li><a href="#s7">统计</a></li>
 </ol>
 </nav>
 
@@ -165,127 +165,7 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldbreak-zero-day-grants-system-privileges/</li>
 </ul>
 <hr />
-<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
-<p><strong>本月状态：</strong> 已正式发布（August 2026 Security Updates），非 Early 预发布文档。CVRF 当前版本发布时间：2026-08-16T07:00:00Z（CVRF 数据于昨日较前次更新新增 1 个 Microsoft CVE）。</p>
-<h3 id="s8">总体统计</h3>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>数值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Microsoft CVE 总数</td>
-<td>422</td>
-</tr>
-<tr>
-<td>CVRF 总漏洞条目</td>
-<td>798</td>
-</tr>
-<tr>
-<td>Critical</td>
-<td>110</td>
-</tr>
-<tr>
-<td>Important</td>
-<td>398</td>
-</tr>
-<tr>
-<td>Moderate</td>
-<td>207</td>
-</tr>
-<tr>
-<td>Low</td>
-<td>32</td>
-</tr>
-<tr>
-<td>CVSS BaseScore ≥ 9.0</td>
-<td>68</td>
-</tr>
-<tr>
-<td>已在野利用（Exploited:Yes）</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="s9">已在野利用漏洞</h3>
-<ul>
-<li><strong>CVE-2026-68820</strong>：Windows Ancillary Function Driver for WinSock（AFD.sys）本地权限提升，严重级别 Important，CVSS 7.0。朝鲜 Lazarus 组织在 "Operation Dream Job" 中利用该 0day 针对法国、德国、巴西和印度的国防与航空航天企业部署 FudModule 升级版 rootkit 和新后门 Troy；Check Point Research 已公开完整 74 天攻击链。</li>
-</ul>
-<h3 id="s10">高危 CVE 清单（CVSS ≥ 9.0，展示部分）</h3>
-<p>以下漏洞均为 Critical 级别、可远程无认证利用（或影响范围极大）：</p>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>利用向量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-63508</td>
-<td>Critical</td>
-<td>10.0</td>
-<td>网络 / 无需认证 / 范围改变</td>
-</tr>
-<tr>
-<td>CVE-2026-56162</td>
-<td>Critical</td>
-<td>10.0</td>
-<td>网络 / 无需认证 / 范围改变</td>
-</tr>
-<tr>
-<td>CVE-2026-65667</td>
-<td>Critical</td>
-<td>10.0</td>
-<td>网络 / 无需认证 / 范围改变</td>
-</tr>
-<tr>
-<td>CVE-2026-62873</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>网络 / 无需认证</td>
-</tr>
-<tr>
-<td>CVE-2026-62815</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>网络 / 无需认证</td>
-</tr>
-<tr>
-<td>CVE-2026-62878</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>网络 / 无需认证</td>
-</tr>
-<tr>
-<td>CVE-2026-62893</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>网络 / 无需认证</td>
-</tr>
-<tr>
-<td>CVE-2026-65791</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>网络 / 无需认证</td>
-</tr>
-</tbody>
-</table>
-<p>其余 60 个 CVSS ≥ 9.0 漏洞详见 MSRC Security Update Guide。</p>
-<h3 id="s11">一句话核心风险总结</h3>
-<p>本月补丁体量依旧庞大（422 个 Microsoft CVE，68 个 CVSS ≥ 9.0），且 Lazarus 在补丁前已大规模利用 AFD.sys 本地提权 0day 攻击国防供应链；建议优先修补 Critical 远程无认证漏洞并立即审计 AFD.sys 已被武器化的利用链。</p>
-<h3 id="s12">参考链接</h3>
-<ul>
-<li>MSRC Security Update Guide：https://msrc.microsoft.com/update-guide</li>
-<li>August 2026 CVRF XML：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</li>
-</ul>
-<hr />
-<h2 id="s13">统计</h2>
+<h2 id="s7">统计</h2>
 <ul>
 <li>本次共筛选 <strong>11</strong> 条新闻（Hacker News 过去 24 小时无安全相关热门新帖；The Hacker News 贡献 4 条；BleepingComputer 与其他二级来源贡献 7 条），最高分 <strong>96</strong> 分。</li>
 <li>补丁板块数字均来自 MSRC 2026-Aug 正式 CVRF 文档解析（CurrentReleaseDate 2026-08-16T07:00:00Z），未使用 Early 预发布数据；相比 8/15 解析新增 1 个 Microsoft CVE（CVE 总数 421 → 422，分级无变化）。</li>
@@ -301,5 +181,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-08-18.html">后一天 2026-08-18 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

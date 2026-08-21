@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -106,13 +107,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-08-13</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">Top 5 网络安全新闻</a></li>
-<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
-</ol>
-</nav>
-
 <blockquote>
 <p>数据采集时间：2026-08-13 06:55 CST（北京时间）</p>
 </blockquote>
@@ -168,142 +162,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/08/sap-commerce-cloud-flaw-could-let.html</li>
 </ul>
 <hr />
-<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p>依据 MSRC CVRF 正式文档 <code>August 2026 Security Updates</code> 解析（CurrentReleaseDate: 2026-08-12T07:00:00Z），非 Early 预发布占位。</p>
-</blockquote>
-<h3 id="s8">本月补丁 CVE 统计</h3>
-<table>
-<thead>
-<tr>
-<th>类别</th>
-<th style="text-align: right;">CVE 总数</th>
-<th style="text-align: right;">Critical</th>
-<th style="text-align: right;">Important</th>
-<th style="text-align: right;">Moderate</th>
-<th style="text-align: right;">Low</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Microsoft CVEs</strong></td>
-<td style="text-align: right;"><strong>420</strong></td>
-<td style="text-align: right;">62</td>
-<td style="text-align: right;">356</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr>
-<td>CBL-Mariner</td>
-<td style="text-align: right;">330</td>
-<td style="text-align: right;">46</td>
-<td style="text-align: right;">39</td>
-<td style="text-align: right;">206</td>
-<td style="text-align: right;">32</td>
-</tr>
-<tr>
-<td>Chromium</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr>
-<td>Other</td>
-<td style="text-align: right;">38</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr>
-<td><strong>CVRF 文档总计</strong></td>
-<td style="text-align: right;"><strong>790</strong></td>
-<td style="text-align: right;">108</td>
-<td style="text-align: right;">397</td>
-<td style="text-align: right;">207</td>
-<td style="text-align: right;">32</td>
-</tr>
-</tbody>
-</table>
-<h3 id="s9">在野利用 CVE（Exploited:Yes）</h3>
-<ul>
-<li><strong>CVE-2026-68820</strong> | Important | CVSS 7.0 | Windows Ancillary Function Driver for WinSock 特权提升漏洞</li>
-<li>Lazarus Group 已利用该 0day 针对法、德、巴、印四国国防与航空航天企业发动 Operation Dream Job 攻击，部署新后门 Troy。CISA 已于 8 月 11 日将其加入 KEV 目录。</li>
-</ul>
-<h3 id="s10">Microsoft CVSS ≥ 9.0 高危 CVE 清单（共 20 个，列出前 8）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th style="text-align: right;">严重级别</th>
-<th style="text-align: right;">CVSS</th>
-<th style="text-align: left;">漏洞描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-63508</td>
-<td style="text-align: right;">Critical</td>
-<td style="text-align: right;">10.0</td>
-<td style="text-align: left;">Microsoft Planetary Computer Pro 特权提升</td>
-</tr>
-<tr>
-<td>CVE-2026-56162</td>
-<td style="text-align: right;">Critical</td>
-<td style="text-align: right;">10.0</td>
-<td style="text-align: left;">Azure SQL Database 特权提升</td>
-</tr>
-<tr>
-<td>CVE-2026-65667</td>
-<td style="text-align: right;">Critical</td>
-<td style="text-align: right;">10.0</td>
-<td style="text-align: left;">Microsoft Teams 特权提升</td>
-</tr>
-<tr>
-<td>CVE-2026-50515</td>
-<td style="text-align: right;">Critical</td>
-<td style="text-align: right;">9.9</td>
-<td style="text-align: left;">Azure Service Bus 远程代码执行</td>
-</tr>
-<tr>
-<td>CVE-2026-59115</td>
-<td style="text-align: right;">Critical</td>
-<td style="text-align: right;">9.9</td>
-<td style="text-align: left;">Microsoft Entra Provisioning Service 特权提升</td>
-</tr>
-<tr>
-<td>CVE-2026-50481</td>
-<td style="text-align: right;">Critical</td>
-<td style="text-align: right;">9.9</td>
-<td style="text-align: left;">Azure Active Directory 特权提升</td>
-</tr>
-<tr>
-<td>CVE-2026-62830</td>
-<td style="text-align: right;">Critical</td>
-<td style="text-align: right;">9.9</td>
-<td style="text-align: left;">Azure SRE Agent 特权提升</td>
-</tr>
-<tr>
-<td>CVE-2026-62873</td>
-<td style="text-align: right;">Critical</td>
-<td style="text-align: right;">9.8</td>
-<td style="text-align: left;">Microsoft 365 Admin Center 特权提升</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>剩余 12 个 CVSS≥9.0 的 Microsoft CVE 涵盖 Windows DNS Server、QUIC、Deployment Services TFTP、iSCSI Target Service、Teams、SharePoint、AKS、Azure Confidential Ledger 等，详见 MSRC Security Update Guide。</p>
-</blockquote>
-<h3 id="s11">一句话核心风险总结</h3>
-<p>本月微软正式补丁修复 420 个 Microsoft CVE，数量与上月持平；虽然仅确认 1 个在野利用（AFD.sys 本地提权），但存在 <strong>20 个 CVSS≥9.0</strong> 的高危漏洞，覆盖 Azure、Microsoft 365、Teams、DNS、QUIC、AKS 等核心服务，企业应优先修复 Critical 级别及面向公网的 RCE/EoP 项。</p>
-<h3 id="s12">参考链接</h3>
-<ul>
-<li>MSRC Security Update Guide（2026-Aug）：https://msrc.microsoft.com/update-guide/releaseNote/2026-Aug</li>
-<li>MSRC CVRF API（2026-Aug）：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug</li>
-</ul>
-<hr />
 <p><strong>本次共筛选 15 条候选新闻，最高分 92 分。</strong></p>
 <blockquote>
 <p>注：CVE-2026-68820（Lazarus 在野利用的 Windows AFD.sys 提权 0day）已纳入上方「微软补丁安全级别」板块，未重复计入 Top 5 新闻。</p>
@@ -317,5 +175,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-08-14.html">后一天 2026-08-14 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

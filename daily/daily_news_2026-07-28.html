@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -110,7 +111,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <ol>
 <li><a href="#s1">Top 5 网络安全新闻</a></li>
 <li><a href="#s7">其他值得关注的新闻</a></li>
-<li><a href="#s8">微软补丁安全级别（Patch Tuesday — July 2026）</a></li>
 </ol>
 </nav>
 
@@ -161,116 +161,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>研究人员展示 Volvo/Eicher 车队管理平台可被完全入侵</strong>，攻击者可控制所有用户和车辆。——Hacker News / eaton-works.com</li>
 </ul>
 <hr />
-<h2 id="s8">微软补丁安全级别（Patch Tuesday — July 2026）</h2>
-<blockquote>
-<p>数据状态：CVRF 正式文档「July 2026 Security Updates」，CurrentReleaseDate 2026-07-27T07:00:00Z。相比 7 月 25 日数据仅有微小更新（+3 Microsoft CVEs，+4 Chromium CVEs），整体格局稳定。</p>
-</blockquote>
-<h3 id="s9">本月 Microsoft CVE 统计</h3>
-<table>
-<thead>
-<tr>
-<th>严重级别</th>
-<th>数量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Critical</td>
-<td>76</td>
-</tr>
-<tr>
-<td>Important</td>
-<td>562</td>
-</tr>
-<tr>
-<td>Moderate</td>
-<td>6</td>
-</tr>
-<tr>
-<td>Low</td>
-<td>1</td>
-</tr>
-<tr>
-<td><strong>合计</strong></td>
-<td><strong>645</strong></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>Mariner（Azure Linux）</strong>：305 CVEs（Critical: 40 / Important: 110 / Moderate: 139 / Low: 16）</li>
-<li><strong>Chromium</strong>：464 CVEs</li>
-<li><strong>其他</strong>：1 CVE</li>
-<li><strong>总计：1,415 CVEs</strong></li>
-</ul>
-<h3 id="s10">已被在野利用的 CVE（3 项）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>漏洞描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-56155</td>
-<td>Important</td>
-<td>7.8</td>
-<td>Active Directory Federation Services 权限提升</td>
-</tr>
-<tr>
-<td>CVE-2026-56164</td>
-<td>Moderate</td>
-<td>5.3</td>
-<td>Microsoft SharePoint Server 权限提升</td>
-</tr>
-<tr>
-<td>CVE-2026-58644</td>
-<td>Critical</td>
-<td>9.8</td>
-<td>Microsoft SharePoint Server 远程代码执行</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>注：watchTowr 报告 CVE-2026-50522（SharePoint RCE，CVSS 9.8）亦存在在野利用迹象，CVRF 原始标记未标注 exploited，但第三方已观测到攻击活动。</p>
-</blockquote>
-<h3 id="s11">CVSS ≥ 9.0 高危 CVE 清单（31 项）</h3>
-<p><strong>CVSS 10.0（6 项）</strong>：
-- CVE-2026-56163 — Azure Kubernetes Service 权限提升
-- CVE-2026-56191 — Exchange Online 篡改漏洞
-- CVE-2026-57106 — Data Quality 权限提升
-- CVE-2026-62825 — Azure Key Vault 权限提升
-- CVE-2026-58630 — Azure App Service on Azure Stack Hub 权限提升
-- CVE-2026-58275 — Azure DNS 权限提升</p>
-<p><strong>CVSS 9.9（5 项）</strong>：
-- CVE-2026-45499 — Azure OpenAI 权限提升
-- CVE-2026-57100 — Microsoft Entra Provisioning Service 权限提升
-- CVE-2026-54120 — Microsoft Surface 远程代码执行
-- CVE-2026-57092 — Windows VMSwitch 权限提升
-- CVE-2026-50517 — Microsoft 365 Copilot 远程代码执行</p>
-<p><strong>CVSS 9.8（10 项，含 1 项已利用）</strong>：
-- CVE-2026-58644 — <strong>SharePoint RCE（已利用）</strong>
-- CVE-2026-56165 — Microsoft Account 远程代码执行
-- CVE-2026-50522 — SharePoint RCE（在野利用迹象）
-- CVE-2026-49172 — Windows FTP Service RCE
-- CVE-2026-54990 — Remote Desktop Client RCE
-- CVE-2026-50447 — Windows MSMQ RCE
-- CVE-2026-50518 — Windows DHCP Server RCE
-- CVE-2026-55010 — Minecraft Bedrock Dedicated Server RCE
-- CVE-2026-55944 — Dynamics NAV / 365 Business Central RCE
-- CVE-2026-56159 — DHCP Server Service RCE
-- CVE-2026-56188 — Windows Server Network driver RCE
-- CVE-2026-56190 — Remote Desktop Protocol RCE</p>
-<p><strong>其余 CVSS 9.0–9.6（10 项）</strong>已折叠，详见 MSRC Security Update Guide。</p>
-<h3 id="s12">核心风险总结</h3>
-<p>本月补丁以 <strong>Azure 云服务权限提升</strong>和 <strong>SharePoint 远程代码执行</strong>为最高风险点：6 个 CVSS 10.0 全部为 Azure 云组件 EoP，而 2 个 SharePoint RCE（含 1 个已确认在野利用、1 个有利用迹象）对暴露于公网的企业 SharePoint 实例构成直接威胁。建议优先修补在野利用的 CVE-2026-58644 和 CVE-2026-56155。</p>
-<ul>
-<li><strong>MSRC Security Update Guide</strong>：https://msrc.microsoft.com/update-guide</li>
-<li><strong>CVRF API</strong>：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul</li>
-</ul>
-<hr />
 <blockquote>
 <p>本次共筛选 <strong>15</strong> 条候选新闻，最高分 <strong>92</strong> 分。</p>
 <p>下一次微软补丁日（Patch Tuesday）：<strong>2026-08-12</strong>（约 15 天后）。</p>
@@ -284,5 +174,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-07-29.html">后一天 2026-07-29 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

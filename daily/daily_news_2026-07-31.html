@@ -23,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -106,13 +107,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-31</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">今日 Top 5 网络安全新闻</a></li>
-<li><a href="#s7">微软补丁安全级别（Patch Tuesday）</a></li>
-</ol>
-</nav>
-
 <h2 id="s1">今日 Top 5 网络安全新闻</h2>
 <h3 id="s2">1. 俄罗斯APT利用Exchange OWA零日漏洞部署OWAReaper持久后门</h3>
 <ul>
@@ -154,183 +148,6 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/new-gitea-rce-lets-repository-writers.html</li>
 </ul>
 <hr />
-<h2 id="s7">微软补丁安全级别（Patch Tuesday）</h2>
-<blockquote>
-<p><strong>文档标题：</strong> July 2026 Security Updates（正式发布，非 Early 预发布）
-<strong>初始发布日期：</strong> 2026-07-14 | <strong>当前更新日期：</strong> 2026-07-30T07:00:00Z
-<strong>数据变更：</strong> 较 7/29 解析新增 268 个漏洞（Microsoft +1, Mariner +237, Chromium +30）</p>
-</blockquote>
-<h3 id="s8">CVE 总数与分级统计</h3>
-<table>
-<thead>
-<tr>
-<th>类别</th>
-<th>总数</th>
-<th>Critical</th>
-<th>Important</th>
-<th>Moderate</th>
-<th>Low</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Microsoft 漏洞</td>
-<td><strong>647</strong></td>
-<td><strong>77</strong></td>
-<td><strong>562</strong></td>
-<td><strong>7</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr>
-<td>Mariner (Azure Linux)</td>
-<td>542</td>
-<td>41</td>
-<td>229</td>
-<td>249</td>
-<td>22</td>
-</tr>
-<tr>
-<td>Chromium</td>
-<td>494</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>其他</td>
-<td>1</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td><strong>合计</strong></td>
-<td><strong>1,684</strong></td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-</tr>
-</tbody>
-</table>
-<h3 id="s9">已被在野利用的 CVE（3个，全部列出）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE 编号</th>
-<th>严重级别</th>
-<th>CVSS</th>
-<th>在野利用</th>
-<th>漏洞名称</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-58644</td>
-<td><strong>Critical</strong></td>
-<td>9.8</td>
-<td><strong>Yes</strong></td>
-<td>Microsoft SharePoint Remote Code Execution</td>
-</tr>
-<tr>
-<td>CVE-2026-56155</td>
-<td>Important</td>
-<td>7.8</td>
-<td>Yes</td>
-<td>Active Directory Federation Services Elevation of Privilege</td>
-</tr>
-<tr>
-<td>CVE-2026-56164</td>
-<td>Moderate</td>
-<td>5.3</td>
-<td>Yes</td>
-<td>Microsoft SharePoint Server Elevation of Privilege</td>
-</tr>
-</tbody>
-</table>
-<h3 id="s10">CVSS &gt;= 9.0 高危 CVE 清单（32个，展示前8条）</h3>
-<table>
-<thead>
-<tr>
-<th>CVE 编号</th>
-<th>CVSS</th>
-<th>严重级别</th>
-<th>在野利用</th>
-<th>漏洞名称</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CVE-2026-56163</td>
-<td>10.0</td>
-<td>Critical</td>
-<td>No</td>
-<td>Azure Kubernetes Service Elevation of Privilege</td>
-</tr>
-<tr>
-<td>CVE-2026-66803</td>
-<td>10.0</td>
-<td>Critical</td>
-<td>No</td>
-<td>Azure Cosmos DB Remote Code Execution</td>
-</tr>
-<tr>
-<td>CVE-2026-56191</td>
-<td>10.0</td>
-<td>Critical</td>
-<td>No</td>
-<td>Microsoft Exchange Online Tampering</td>
-</tr>
-<tr>
-<td>CVE-2026-57106</td>
-<td>10.0</td>
-<td>Critical</td>
-<td>No</td>
-<td>Data Quality Elevation of Privilege</td>
-</tr>
-<tr>
-<td>CVE-2026-62825</td>
-<td>10.0</td>
-<td>Critical</td>
-<td>No</td>
-<td>Azure Key Vault Elevation of Privilege</td>
-</tr>
-<tr>
-<td>CVE-2026-58630</td>
-<td>10.0</td>
-<td>Critical</td>
-<td>No</td>
-<td>Azure App Service on Azure Stack Hub EoP</td>
-</tr>
-<tr>
-<td>CVE-2026-58275</td>
-<td>10.0</td>
-<td>Critical</td>
-<td>No</td>
-<td>Azure DNS Elevation of Privilege</td>
-</tr>
-<tr>
-<td>CVE-2026-58644</td>
-<td>9.8</td>
-<td>Critical</td>
-<td><strong>Yes</strong></td>
-<td>Microsoft SharePoint RCE</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>其余 24 个 CVSS &gt;= 9.0 的 CVE 包括：5 个 9.9 分（Azure OpenAI EoP、Entra Provisioning EoP、Surface RCE、Windows VMSwitch EoP、M365 Copilot RCE）、13 个 9.8 分（含 Windows FTP RCE、RDP Client RCE、Windows DHCP RCE、Minecraft BDS RCE 等）、2 个 9.6 分、3 个 9.3 分、1 个 9.1 分和 1 个 9.0 分。完整清单见 <a href="https://msrc.microsoft.com/update-guide/">MSRC Security Update Guide</a>。</p>
-</blockquote>
-<h3 id="s11">一句话核心风险总结</h3>
-<p>本月补丁修复 647 个 Microsoft 漏洞（77 Critical），其中 3 个已被在野利用——最严重的 CVE-2026-58644（SharePoint RCE，CVSS 9.8）已被攻击者利用；CVRF 数据于 7 月 30 日更新，较初始发布新增 268 个漏洞（主要为 Mariner/Azure Linux 和 Chromium 组件），7 个 CVSS 10.0 漏洞集中在 Azure 云服务（Kubernetes、Cosmos DB、Key Vault、DNS 等）。</p>
-<h3 id="s12">参考链接</h3>
-<ul>
-<li><a href="https://msrc.microsoft.com/update-guide/">MSRC Security Update Guide</a></li>
-<li><a href="https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Jul">CVRF API (July 2026)</a></li>
-</ul>
-<hr />
 <p><em>本次共筛选 15 条新闻，最高分 96 分。补丁板块数据来自 MSRC CVRF API 实时解析（DocumentTitle: "July 2026 Security Updates"，CurrentReleaseDate: 2026-07-30T07:00:00Z）。</em></p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
@@ -341,5 +158,14 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   <a class="dn-next" href="daily_news_2026-08-01.html">后一天 2026-08-01 →</a>
 </nav>
 
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>
