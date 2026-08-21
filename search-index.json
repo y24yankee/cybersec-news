@@ -1,5 +1,22 @@
 [
  {
+  "date": "2026-08-22",
+  "url": "daily/daily_news_2026-08-22.html",
+  "title": "网络安全日报 2026-08-22",
+  "score": 93,
+  "cves": [
+   "CVE-2026-19478",
+   "CVE-2026-20030",
+   "CVE-2026-20231",
+   "CVE-2026-20315",
+   "CVE-2026-20359",
+   "CVE-2026-73570",
+   "cve-2026-19478"
+  ],
+  "summary": "生成时间：20260822 07:00 (GMT+8) ｜ 来源：The Hacker News、BleepingComputer、Hacker News 过去 24 小时",
+  "text": "生成时间：20260822 07:00 (GMT+8) ｜ 来源：The Hacker News、BleepingComputer、Hacker News 过去 24 小时 本次共筛选 15 条候选新闻（每源最多 5 条），按评分取前 5 条。补丁板块依据微软 MSRC 官方 CVRF 实时解析，独立呈现。 评分：93 — 5 项满分漏洞集中在企业级网络编排与零信任管控平面，覆盖面广、修复紧迫，属本月最密集的厂商级高危修复之一。 来源： The Hacker News 摘要： Cisco 在持续内部安全审查中发布 Crosswork（Data Gateway / Network Controller / Planning，≤7.2.1）与 Secure Workload（≤3.10 / 4.0）的补丁。Crosswork 侧含 CVE202620030 / 20357 / 20358（均 CVSS 10.0，SQL 注入、缺失认证、文件系统越权）及 CVE202620359（9.9）；Secure Workload 侧含 CVE202620315 / 20317（均 CVSS 10.0，访问控制/认证绕过）及 CVE202620231（9.9）。Cisco 称均为内部测试发现、暂未在野利用，但企业网设备中招可直接跨租户越权。 原文： https://thehackernews.com/2026/08/ciscopatchesninecrossworkandsecure.html 评分：90 — 无认证即可删改公开项目，披露后极短时间内被实战利用，凸显 AI 加速的\"披露即武器化\"趋势。 来源： The Hacker News 摘要： 漏洞追踪 CVE202619478（CVSS 9.4，代码注入）。GitLab 于 8/17 发布补丁（CE/EE 19.2.4、19.1.6、19.0.8、18.11.11），watchTowr 称在披露后数分钟内即可复现，并在其蜜罐网络观察到在野利用。攻击者可删除整个仓库、伪造合并记录、封禁维护者；影响所有面向公网的自建实例（GitLab.com / Dedicated 已修复）。建议排查含 @glintroduced 的 /api/graphql 请求。 原文： https://thehackernews.com/2026/08/gitlabcve202619478comesunder.html 评分：88 — 邮件协作平台无认证远程代码执行进入实战利用，直击全球大量政企邮件系统。 来源： BleepingComputer 摘要： 波兰 CERT Polska 警告 Zimbra Collaboration Suite（ZCS）漏洞 CVE202673570（CVSS 8.9，命令注入）已被在野利用。漏洞位于启用可选 zimbrasnmp 且开启 SNMP 通知的 ZCS < 10.1.20，攻击者发送特制 SMTP 请求即可以 Zimbra 用户身份执行任意系统命令。该问题已于上月随 10.1.20 修复，但大量暴露实例尚未升级。 原文： https://www.bleepingcomputer.com/news/security/criticalzimbrarceflawnowactivelyexploitedinattacks/ 评分：87 — DPRK 关联供应链攻击通过可信维护者账号投毒 2.45 亿下载量级的底层库，编译期即执行窃取，暴露窗口仅 83–107 分钟。 来源： BleepingComputer 摘要： 攻击者于 8/20 通过入侵的维护者账号（David Roundy）发布了 arrayref 0.3.10、internment 0.8.7、appendonlyvec 0.1.9 的恶意版本，依赖 typosquat 包 procmacro1（冒用 procmacro2）。build.rs 在编译期按主机系统下载对应载荷，窃取 Chrome/Brave/Edge 登录库凭据，并通过注册表/LaunchAgent/systemd 持久化。Wiz 指出其基础设施与近期 DPRK（Mastria / axios）供应链攻击重叠；arrayref 生命周期下载量超 2.45 亿。Rust 安全响应团队已删除恶意版本并锁定账号。 原文： https://www.bleepingcomputer.com/news/security/hackerspoisonarrayrefrustcratetopushinfostealermalware/ 评分：85 — 无认证即可向航天器/载荷指令总线发命令（CVSS 9.4），直击关键航天地面系统的信任边界，虽未确认在野但影响严重。 来源： The Hacker News 摘要： Cycode 披露 NASA/JPL 开源 AMMOS Instrument Toolkit 的浏览器控制台 AITGUI（≤2.5.1，GHSAp9r82q67fp86，CVSS 9.4，无 CVE）缺陷链：服务默认绑定 0.0.0.0:8080，指令/脚本/序列路由无认证与 CSRF 防护，且可通过 GET / 免凭证获取会话 cookie。攻击者可借由跨源 POST 在受害者浏览器中向航天器/仪器指令总线下发任意命令。2.5.2 已修复监听地址与跨源检查，但 Cycode 认为\"缺失认证\"根因仍未彻底修复。 原文： https://thehackernews.com/2026/08/nasaaitguiflawscouldlet.html 本次共筛选 15 条新闻，最高分 93 分（Cisco Crosswork / Secure Workload 多项 CVSS 10.0）。 微信 / 微信小程序推送通道当前未连接（connector 状态 disconnected），本报告文件已生成于 D:\\WorkBuddy\\automationcybersecdaily\\dailynews20260822.md，待推送通道可用后补推。"
+ },
+ {
   "date": "2026-08-21",
   "url": "daily/daily_news_2026-08-21.html",
   "title": "网络安全日报 2026-08-21",
