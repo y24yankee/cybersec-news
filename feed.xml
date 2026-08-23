@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-08-23T00:00:00Z</updated>
+  <updated>2026-08-24T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-08-24</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-24.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-24.html</id>
+    <updated>2026-08-24T00:00:00Z</updated>
+    <summary>数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时内候选，三来源各筛选 5 条，共 15 条候选，按评分取前 5）</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-08-23</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-23.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-05.html</id>
     <updated>2026-08-05T00:00:00Z</updated>
     <summary>自动化搜索与评分 · 数据来源：The Hacker News / Bleeping Computer / Hacker News (YC) / CISA KEV</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-08-04</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-04.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-04.html</id>
-    <updated>2026-08-04T00:00:00Z</updated>
-    <summary>评分理由： 零日漏洞链已被武器化、885 名受害者、可提取凭据与 MFA 种子并建立持久化访问，严重性与影响范围兼具。</summary>
   </entry>
 </feed>

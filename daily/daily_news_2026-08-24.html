@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-24 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时内候选，三来源各筛选 5 条，共 15 条候选，按评分取前 5）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-08-24">
+<meta property="og:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时内候选，三来源各筛选 5 条，共 15 条候选，按评分取前 5）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-24.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-08-24">
+<meta name="twitter:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时内候选，三来源各筛选 5 条，共 15 条候选，按评分取前 5）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-24</h1>
+<blockquote>
+<p>数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时内候选，三来源各筛选 5 条，共 15 条候选，按评分取前 5）
+补丁日状态：本月（2026-Aug）微软官方补丁已正式发布（标题为 "August 2026 Security Updates"，非 Early 预发布），文末附独立板块。</p>
+</blockquote>
+<hr />
+<h2 id="s1">今日 Top 5 新闻</h2>
+<h3 id="s2">1. 开源权重模型 Kimi K3 被证实可自主发现并编写漏洞利用代码</h3>
+<ul>
+<li><strong>评分</strong>：94 / 100</li>
+<li><strong>来源</strong>：Hacker News（<a href="https://news.ycombinator.com/item?id=49024938">Kimi K3 exploited the latest Redis server</a>）</li>
+<li><strong>摘要</strong>：社区讨论显示，开放权重的 Kimi K3 模型（Z.ai / GLM 系列）在无需人类深度参与的情况下，针对 Redis 等服务自主完成了漏洞利用链的构造与验证；评论区同时出现对其"是否仅为认证后 RCE"的争议，以及"开放权重模型正在把高阶漏洞利用能力下放给脚本小子"的担忧。这是继 GPT 系列之后，又一例公开讨论开源模型具备自主 exploit 开发能力的事件。</li>
+<li><strong>评分理由</strong>：开放权重模型自主产出可用利用链，显著降低高阶攻击门槛，属于具有范式意义的双用途能力进展。</li>
+</ul>
+<h3 id="s3">2. Check Point VPN 零日 CVE-2026-50751（IKEv1 认证绕过）被 Qilin 勒索团伙用于实战</h3>
+<ul>
+<li><strong>评分</strong>：93 / 100</li>
+<li><strong>来源</strong>：BleepingComputer（<a href="https://bleepingcomputer.com/news/security/check-point-links-vpn-zero-day-attacks-to-qilin-ransomware-gang">Check Point links VPN zero-day attacks to Qilin ransomware gang</a>）</li>
+<li><strong>摘要</strong>：Check Point 披露其 Remote Access VPN / Mobile Access 中预留的 IKEv1 密钥交换认证绕过漏洞（CVE-2026-50751）自 5 月 7 日起遭零日攻击，仅影响使用已弃用 IKEv1 且未强制机器证书的连接；攻击波及全球数十个组织，至少一起事件确认为 Qilin 勒索团伙的入侵后活动。同时发现相关证书校验缺陷 CVE-2026-50752（中间人风险）。</li>
+<li><strong>评分理由</strong>：面向边界 VPN 的临界认证绕过零日，已被勒索团伙实战利用，直接暴露企业内网入口。</li>
+</ul>
+<h3 id="s4">3. Arch Linux AUR 超 400 个软件包被植入 eBPF  Rootkit 与信息窃取器</h3>
+<ul>
+<li><strong>评分</strong>：91 / 100</li>
+<li><strong>来源</strong>：BleepingComputer（<a href="https://bleepingcomputer.com/news/security/over-400-arch-linux-packages-compromised-to-push-rootkit-infostealer">Over 400 Arch Linux packages compromised to push rootkit, infostealer</a>）</li>
+<li><strong>摘要</strong>：开源情报社区 IFIN 与 Sonatype 报告，攻击者在 Arch 用户仓库（AUR）中接管/伪造可信维护者，向 400+ 软件包注入预安装脚本，拉取名为 <code>atomic-lockfile</code> 的恶意 npm 包，落地具备可选 eBPF 内核级 rootkit 能力的 Linux 窃取器，目标涵盖浏览器/Electron 数据、SSH、HashiCorp Vault、GitHub、npm、Docker、VPN 与 shell 历史等开发者机密。Rootkit 可隐藏进程/文件/网络接口，常规清理难以根除。</li>
+<li><strong>评分理由</strong>：开发者生态大规模供应链投毒 + 内核级 rootkit，针对开发者凭据且难以检测清除，影响面广。</li>
+</ul>
+<h3 id="s5">4. 日产（Nissan）员工数据遭 Oracle PeopleSoft 零日漏洞窃取</h3>
+<ul>
+<li><strong>评分</strong>：89 / 100</li>
+<li><strong>来源</strong>：BleepingComputer（<a href="https://bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks">Nissan discloses employee data breach linked to Oracle zero-day attacks</a>）</li>
+<li><strong>摘要</strong>：Nissan 向美国加州总检察长办公室通报，因威胁攻击者利用 Oracle PeopleSoft 零日漏洞（CVE-2026-35273）进行数据窃取，导致其在美国、加拿大、墨西哥、巴西的现任及前任员工个人信息（含社保号、银行与税务信息）可能泄露；该活动与 ShinyHunters 勒索团伙相关，据称已影响 100+ 组织的 300+ PeopleSoft 实例。</li>
+<li><strong>评分理由</strong>：大型车企员工敏感数据因广泛使用的 SaaS/ERP 零日被成规模窃取，凸显第三方企业软件的链式暴露。</li>
+</ul>
+<h3 id="s6">5. 14 个伪装成日历/连胜工具的 npm 包投递 RedC2 4.0 AI 辅助 Linux 后门</h3>
+<ul>
+<li><strong>评分</strong>：88 / 100</li>
+<li><strong>来源</strong>：The Hacker News（<a href="https://thehackernews.com/2026/08/14-trojanized-npm-packages-drop-redc2.html">14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor With AI-Assisted C2</a>）</li>
+<li><strong>摘要</strong>：Trend Micro（TrendAI）发现 14 个伪装成日历/连胜（streak）工具的功能性 npm 包（如 streak-metrics-math、kit-map-vim 等），在模块被加载（甚至是传递依赖）时即释放 AI 驱动的 RedC2 4.0 Linux 信标（RedShell），无需 install 钩子、无需导出函数；该 C2 框架支持终端接管、凭据窃取、内存执行与网络枢轴，并在犯罪论坛以 $99.99 售卖。</li>
+<li><strong>评分理由</strong>：功能完整的供应链木马，仅一次 import 即触发，且借助 AI 辅助 C2，对 Linux 开发与构建环境威胁直接。</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 15 条候选新闻（三来源各 5 条），按评分取前 5 条；最高分 94 分。</strong></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-08-23.html">← 前一天 2026-08-23</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

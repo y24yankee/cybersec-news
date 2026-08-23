@@ -1,5 +1,18 @@
 [
  {
+  "date": "2026-08-24",
+  "url": "daily/daily_news_2026-08-24.html",
+  "title": "网络安全日报 2026-08-24",
+  "score": 94,
+  "cves": [
+   "CVE-2026-35273",
+   "CVE-2026-50751",
+   "CVE-2026-50752"
+  ],
+  "summary": "数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时内候选，三来源各筛选 5 条，共 15 条候选，按评分取前 5）",
+  "text": "数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时内候选，三来源各筛选 5 条，共 15 条候选，按评分取前 5） 补丁日状态：本月（2026Aug）微软官方补丁已正式发布（标题为 \"August 2026 Security Updates\"，非 Early 预发布），文末附独立板块。 评分：94 / 100 来源：Hacker News（[Kimi K3 exploited the latest Redis server](https://news.ycombinator.com/item?id=49024938)） 摘要：社区讨论显示，开放权重的 Kimi K3 模型（Z.ai / GLM 系列）在无需人类深度参与的情况下，针对 Redis 等服务自主完成了漏洞利用链的构造与验证；评论区同时出现对其\"是否仅为认证后 RCE\"的争议，以及\"开放权重模型正在把高阶漏洞利用能力下放给脚本小子\"的担忧。这是继 GPT 系列之后，又一例公开讨论开源模型具备自主 exploit 开发能力的事件。 评分理由：开放权重模型自主产出可用利用链，显著降低高阶攻击门槛，属于具有范式意义的双用途能力进展。 评分：93 / 100 来源：BleepingComputer（[Check Point links VPN zeroday attacks to Qilin ransomware gang](https://bleepingcomputer.com/news/security/checkpointlinksvpnzerodayattackstoqilinransomwaregang)） 摘要：Check Point 披露其 Remote Access VPN / Mobile Access 中预留的 IKEv1 密钥交换认证绕过漏洞（CVE202650751）自 5 月 7 日起遭零日攻击，仅影响使用已弃用 IKEv1 且未强制机器证书的连接；攻击波及全球数十个组织，至少一起事件确认为 Qilin 勒索团伙的入侵后活动。同时发现相关证书校验缺陷 CVE202650752（中间人风险）。 评分理由：面向边界 VPN 的临界认证绕过零日，已被勒索团伙实战利用，直接暴露企业内网入口。 评分：91 / 100 来源：BleepingComputer（[Over 400 Arch Linux packages compromised to push rootkit, infostealer](https://bleepingcomputer.com/news/security/over400archlinuxpackagescompromisedtopushrootkitinfostealer)） 摘要：开源情报社区 IFIN 与 Sonatype 报告，攻击者在 Arch 用户仓库（AUR）中接管/伪造可信维护者，向 400+ 软件包注入预安装脚本，拉取名为 atomiclockfile 的恶意 npm 包，落地具备可选 eBPF 内核级 rootkit 能力的 Linux 窃取器，目标涵盖浏览器/Electron 数据、SSH、HashiCorp Vault、GitHub、npm、Docker、VPN 与 shell 历史等开发者机密。Rootkit 可隐藏进程/文件/网络接口，常规清理难以根除。 评分理由：开发者生态大规模供应链投毒 + 内核级 rootkit，针对开发者凭据且难以检测清除，影响面广。 评分：89 / 100 来源：BleepingComputer（[Nissan discloses employee data breach linked to Oracle zeroday attacks](https://bleepingcomputer.com/news/security/nissandisclosesemployeedatabreachlinkedtooraclezerodayattacks)） 摘要：Nissan 向美国加州总检察长办公室通报，因威胁攻击者利用 Oracle PeopleSoft 零日漏洞（CVE202635273）进行数据窃取，导致其在美国、加拿大、墨西哥、巴西的现任及前任员工个人信息（含社保号、银行与税务信息）可能泄露；该活动与 ShinyHunters 勒索团伙相关，据称已影响 100+ 组织的 300+ PeopleSoft 实例。 评分理由：大型车企员工敏感数据因广泛使用的 SaaS/ERP 零日被成规模窃取，凸显第三方企业软件的链式暴露。 评分：88 / 100 来源：The Hacker News（[14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor With AIAssisted C2](https://thehackernews.com/2026/08/14trojanizednpmpackagesdropredc2.html)） 摘要：Trend Micro（TrendAI）发现 14 个伪装成日历/连胜（streak）工具的功能性 npm 包（如 streakmetricsmath、kitmapvim 等），在模块被加载（甚至是传递依赖）时即释放 AI 驱动的 RedC2 4.0 Linux 信标（RedShell），无需 install 钩子、无需导出函数；该 C2 框架支持终端接管、凭据窃取、内存执行与网络枢轴，并在犯罪论坛以 $99.99 售卖。 评分理由：功能完整的供应链木马，仅一次 import 即触发，且借助 AI 辅助 C2，对 Linux 开发与构建环境威胁直接。 本次共筛选 15 条候选新闻（三来源各 5 条），按评分取前 5 条；最高分 94 分。"
+ },
+ {
   "date": "2026-08-23",
   "url": "daily/daily_news_2026-08-23.html",
   "title": "网络安全日报 2026-08-23",
