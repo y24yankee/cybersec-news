@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-25 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（过去 24 小时筛选）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-08-25">
+<meta property="og:description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（过去 24 小时筛选）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-25.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-08-25">
+<meta name="twitter:description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（过去 24 小时筛选）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-25</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">📰 今日 Top 5 新闻（按评分排序）</a></li>
+<li><a href="#s7">📌 今日统计</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>数据来源：The Hacker News、BleepingComputer、Hacker News（过去 24 小时筛选）
+微软补丁板块数据源：MSRC CVRF 官方文档（August 2026 Security Updates，已校验为正式发布，非 Early 预发布）</p>
+</blockquote>
+<hr />
+<h2 id="s1">📰 今日 Top 5 新闻（按评分排序）</h2>
+<h3 id="s2">1. Keycloak 密码重置缺陷可让未授权攻击者接管任意账户（CVSS 9.1）</h3>
+<ul>
+<li><strong>评分：94</strong> — 未授权、无需用户交互即可重置包括管理员在内的任意账户密码，影响众多组织背后的身份基础设施。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Red Hat 与 Keycloak 项目修复了 CVE-2026-18963（Red Hat 评定 CVSS 9.1），该弱密码恢复机制缺陷位于 reset-credentials 流程的"状态校验不当"。攻击者向重置端点发送特制请求即可跳过邮件中的 action token，直接将认证会话推进到密码更新阶段，从而完成对任意用户（含管理员）的完全账户接管。上游 Keycloak 在 26.7.2（8 月 19 日发布）修复，RHBK 对应 26.4.15 / 26.6.6；临时缓解为关闭各 realm 的"Forgot password"。截至 8 月 24 日尚无在野利用证据。</li>
+<li><strong>原文</strong>：https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html</li>
+</ul>
+<h3 id="s3">2. Operation QUICSILVER：中国背景 APT 以毕业典礼诱饵攻击缅甸政府</h3>
+<ul>
+<li><strong>评分：88</strong> — 国家级网络间谍活动，采用 ftp.exe LOLBAS + QUIC/443 C2 的新颖隐蔽手法，目标为政府/IT 关键部门。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Seqrite Labs 披露代号为 Operation QUICSILVER 的间谍行动，以缅甸交通与通信部下属 ITCSD 的"毕业典礼邀请"为诱饵（HolidayNotice.pdf.exe / VHD + LNK）。链中滥用微软签名的 ftp.exe 的 <code>-s</code> 参数执行脚本，由隐藏目录中的 header.doc / body.doc 重组出 Golang 后门 QUICAgent。该后门以 QUIC over UDP 443 与 C2 通信，内置 100–600ms 随机延迟与 1000 次 SHA-256 哈希以耗尽沙箱时限，并通过 Startup 目录 LNK 实现持久化。中方关联度评估为中等信心，最早见于 2026 年 4 月。</li>
+<li><strong>原文</strong>：https://thehackernews.com/2026/08/operation-quicsilver-targets-myanmar.html</li>
+</ul>
+<h3 id="s4">3. msaRAT：Chaos 勒索软件用 Chrome/Edge 浏览器隧道隐藏 C2 通信</h3>
+<ul>
+<li><strong>评分：86</strong> — 创新性的浏览器内 C2 隐蔽通道，使攻击者真实服务器 IP 永不出现在流量中，极大增加溯源与检测难度。</li>
+<li><strong>来源</strong>：BleepingComputer（Cisco Talos）</li>
+<li><strong>摘要</strong>：Chaos 勒索团伙使用名为 msaRAT 的 Rust 后门，通过 Chrome DevTools Protocol（CDP）启动无头浏览器会话，将所有 C2 流量经浏览器中转。信令先连 Cloudflare Workers 端点获取 WebRTC 信息，再经 Twilio TURN 中继（刻意省略 P2P ICE candidate），叠加 WebRTC DTLS 与 ChaCha20-Poly1305 双层加密。借助 Cloudflare Workers 合法基础设施，攻击方真实 IP 被隐藏，且免费子域难以直接封禁。Talos 已公布完整 IoC 清单。</li>
+<li><strong>原文</strong>：https://bleepingcomputer.com/news/security/new-msarat-malware-uses-chrome-edge-browsers-to-route-c2-traffic</li>
+</ul>
+<h3 id="s5">4. Cisco Unified CM 严重 SSRF 缺陷（CVE-2026-20230）曝光 PoC，可致提权至 root</h3>
+<ul>
+<li><strong>评分：84</strong> — 关键级语音基础设施 RCE 原语，已有公开 PoC；虽默认关闭相关服务且暂无在野利用，但无临时缓解方案。</li>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>摘要</strong>：Cisco 修复 Unified Communications Manager（Unified CM）中 CVE-2026-20230——一个低复杂度、无需认证的服务器端请求伪造（SSRF），攻击者可发送特制 HTTP 请求写入底层操作系统文件，进而提权至 root。Cisco PSIRT 已知公开 PoC，但尚未发现活跃利用或定向攻击。漏洞仅影响启用 WebDialer 服务的系统（该服务默认关闭），建议升级至 14SU6 或 15SU5，或临时禁用 WebDialer 服务阻断攻击。近五年 CISA 已将 91 个 Cisco 漏洞列入在野利用目录。</li>
+<li><strong>原文</strong>：https://bleepingcomputer.com/news/security/cisco-warns-of-critical-unified-cm-flaw-with-poc-exploit-code</li>
+</ul>
+<h3 id="s6">5. Microsoft Teams 语音钓鱼（vishing）链条直达 Chaos 勒索软件部署</h3>
+<ul>
+<li><strong>评分：82</strong> — 从外呼到加密最短不到 17 小时，IT 支持冒充 + 远程工具的社会工程链条成熟且高频，金融与制造行业为重灾区。</li>
+<li><strong>来源</strong>：BleepingComputer（Sophos）</li>
+<li><strong>摘要</strong>：Sophos 跟踪的 STAC4749 活动中，攻击者以外部 Microsoft Teams 账户冒充 IT 支持，用 .top 域名（如 sequrityupdate[.]top）与虚假人物诱导员工发起 Quick Assist / RemSupp 远程会话，随后用 PowerShell 落地下载后门、伪装 Realtek/Windows 音频组件实现持久化。至少三起入侵最终部署 Chaos 勒索软件，其中一起从首次 Teams 联络到文件加密不到 17 小时。约 95% 攻击目标位于加拿大（50%）与美国（45%），覆盖制造、能源、建筑等行业。</li>
+<li><strong>原文</strong>：https://bleepingcomputer.com/news/security/microsoft-teams-vishing-attacks-lead-to-chaos-ransomware-attacks</li>
+</ul>
+<hr />
+<h2 id="s7">📌 今日统计</h2>
+<p>本次共筛选 <strong>15</strong> 条候选新闻（三来源各 ≤5），评分后选取 Top 5 展示；最高分 <strong>94</strong> 分（Keycloak CVE-2026-18963 未授权账户接管）。</p>
+<blockquote>
+<p>推送说明：微信 / 微信小程序 connector 当前未连接，无法自动推送；本报告文件已写入本地绝对路径。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-08-24.html">← 前一天 2026-08-24</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

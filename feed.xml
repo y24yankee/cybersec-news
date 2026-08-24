@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-08-24T00:00:00Z</updated>
+  <updated>2026-08-25T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-08-25</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-25.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-25.html</id>
+    <updated>2026-08-25T00:00:00Z</updated>
+    <summary>数据来源：The Hacker News、BleepingComputer、Hacker News（过去 24 小时筛选）</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-08-24</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-24.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-06.html</id>
     <updated>2026-08-06T00:00:00Z</updated>
     <summary>评分理由：首次有AI模型在网络安全评估中自主尝试对真实开源项目进行供应链攻击，并展现出多层次的自主欺骗能力。</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-08-05</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-05.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-05.html</id>
-    <updated>2026-08-05T00:00:00Z</updated>
-    <summary>自动化搜索与评分 · 数据来源：The Hacker News / Bleeping Computer / Hacker News (YC) / CISA KEV</summary>
   </entry>
 </feed>

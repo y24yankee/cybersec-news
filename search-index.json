@@ -1,5 +1,17 @@
 [
  {
+  "date": "2026-08-25",
+  "url": "daily/daily_news_2026-08-25.html",
+  "title": "网络安全日报 2026-08-25",
+  "score": 94,
+  "cves": [
+   "CVE-2026-18963",
+   "CVE-2026-20230"
+  ],
+  "summary": "数据来源：The Hacker News、BleepingComputer、Hacker News（过去 24 小时筛选）",
+  "text": "数据来源：The Hacker News、BleepingComputer、Hacker News（过去 24 小时筛选） 微软补丁板块数据源：MSRC CVRF 官方文档（August 2026 Security Updates，已校验为正式发布，非 Early 预发布） 评分：94 — 未授权、无需用户交互即可重置包括管理员在内的任意账户密码，影响众多组织背后的身份基础设施。 来源：The Hacker News 摘要：Red Hat 与 Keycloak 项目修复了 CVE202618963（Red Hat 评定 CVSS 9.1），该弱密码恢复机制缺陷位于 resetcredentials 流程的\"状态校验不当\"。攻击者向重置端点发送特制请求即可跳过邮件中的 action token，直接将认证会话推进到密码更新阶段，从而完成对任意用户（含管理员）的完全账户接管。上游 Keycloak 在 26.7.2（8 月 19 日发布）修复，RHBK 对应 26.4.15 / 26.6.6；临时缓解为关闭各 realm 的\"Forgot password\"。截至 8 月 24 日尚无在野利用证据。 原文：https://thehackernews.com/2026/08/criticalkeycloakpasswordresetflaw.html 评分：88 — 国家级网络间谍活动，采用 ftp.exe LOLBAS + QUIC/443 C2 的新颖隐蔽手法，目标为政府/IT 关键部门。 来源：The Hacker News 摘要：Seqrite Labs 披露代号为 Operation QUICSILVER 的间谍行动，以缅甸交通与通信部下属 ITCSD 的\"毕业典礼邀请\"为诱饵（HolidayNotice.pdf.exe / VHD + LNK）。链中滥用微软签名的 ftp.exe 的 s 参数执行脚本，由隐藏目录中的 header.doc / body.doc 重组出 Golang 后门 QUICAgent。该后门以 QUIC over UDP 443 与 C2 通信，内置 100–600ms 随机延迟与 1000 次 SHA256 哈希以耗尽沙箱时限，并通过 Startup 目录 LNK 实现持久化。中方关联度评估为中等信心，最早见于 2026 年 4 月。 原文：https://thehackernews.com/2026/08/operationquicsilvertargetsmyanmar.html 评分：86 — 创新性的浏览器内 C2 隐蔽通道，使攻击者真实服务器 IP 永不出现在流量中，极大增加溯源与检测难度。 来源：BleepingComputer（Cisco Talos） 摘要：Chaos 勒索团伙使用名为 msaRAT 的 Rust 后门，通过 Chrome DevTools Protocol（CDP）启动无头浏览器会话，将所有 C2 流量经浏览器中转。信令先连 Cloudflare Workers 端点获取 WebRTC 信息，再经 Twilio TURN 中继（刻意省略 P2P ICE candidate），叠加 WebRTC DTLS 与 ChaCha20Poly1305 双层加密。借助 Cloudflare Workers 合法基础设施，攻击方真实 IP 被隐藏，且免费子域难以直接封禁。Talos 已公布完整 IoC 清单。 原文：https://bleepingcomputer.com/news/security/newmsaratmalwareuseschromeedgebrowserstoroutec2traffic 评分：84 — 关键级语音基础设施 RCE 原语，已有公开 PoC；虽默认关闭相关服务且暂无在野利用，但无临时缓解方案。 来源：BleepingComputer 摘要：Cisco 修复 Unified Communications Manager（Unified CM）中 CVE202620230——一个低复杂度、无需认证的服务器端请求伪造（SSRF），攻击者可发送特制 HTTP 请求写入底层操作系统文件，进而提权至 root。Cisco PSIRT 已知公开 PoC，但尚未发现活跃利用或定向攻击。漏洞仅影响启用 WebDialer 服务的系统（该服务默认关闭），建议升级至 14SU6 或 15SU5，或临时禁用 WebDialer 服务阻断攻击。近五年 CISA 已将 91 个 Cisco 漏洞列入在野利用目录。 原文：https://bleepingcomputer.com/news/security/ciscowarnsofcriticalunifiedcmflawwithpocexploitcode 评分：82 — 从外呼到加密最短不到 17 小时，IT 支持冒充 + 远程工具的社会工程链条成熟且高频，金融与制造行业为重灾区。 来源：BleepingComputer（Sophos） 摘要：Sophos 跟踪的 STAC4749 活动中，攻击者以外部 Microsoft Teams 账户冒充 IT 支持，用 .top 域名（如 sequrityupdate[.]top）与虚假人物诱导员工发起 Quick Assist / RemSupp 远程会话，随后用 PowerShell 落地下载后门、伪装 Realtek/Windows 音频组件实现持久化。至少三起入侵最终部署 Chaos 勒索软件，其中一起从首次 Teams 联络到文件加密不到 17 小时。约 95% 攻击目标位于加拿大（50%）与美国（45%），覆盖制造、能源、建筑等行业。 原文：https://bleepingcomputer.com/news/security/microsoftteamsvishingattacksleadtochaosransomwareattacks 本次共筛选 15 条候选新闻（三来源各 ≤5），评分后选取 Top 5 展示；最高分 94 分（Keycloak CVE202618963 未授权账户接管）。 推送说明：微信 / 微信小程序 connector 当前未连接，无法自动推送；本报告文件已写入本地绝对路径。"
+ },
+ {
   "date": "2026-08-24",
   "url": "daily/daily_news_2026-08-24.html",
   "title": "网络安全日报 2026-08-24",
