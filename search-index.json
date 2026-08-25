@@ -1,5 +1,18 @@
 [
  {
+  "date": "2026-08-26",
+  "url": "daily/daily_news_2026-08-26.html",
+  "title": "网络安全日报 2026-08-26",
+  "score": 93,
+  "cves": [
+   "CVE-2026-39987",
+   "CVE-2026-67618",
+   "CVE-2026-75149"
+  ],
+  "summary": "数据来源：Hacker News、The Hacker News、BleepingComputer（及 F5 / CyberSecBrief 聚合情报辅助交叉验证）。新闻评分基于严重性、新颖性、影响范围与时效性（0–100）。微软补丁板块独立于新闻 Top5，不计入评分与排序。",
+  "text": "数据来源：Hacker News、The Hacker News、BleepingComputer（及 F5 / CyberSecBrief 聚合情报辅助交叉验证）。新闻评分基于严重性、新颖性、影响范围与时效性（0–100）。微软补丁板块独立于新闻 Top5，不计入评分与排序。 来源：The Hacker News（20260825） 原文链接：https://thehackernews.com/2026/08/ussanctionsiranlinkedhackersbehind.html 摘要：美国财政部发起代号「Operation Economic Outcast」的制裁行动，将约 60 个伊朗关联实体、个人与船只列入名单，目标直指伊朗革命卫队（IRGC）与情报部（MOIS）下属的恶意网络组织。该组织自 2023 年底起持续入侵美国能源、国防、医疗、IT 与金融机构；同期伊朗关联黑客令英国一座小型电厂停机 4 天，并与美国 30+ 水务设施袭击相呼应。 评分理由：国家级关键基础设施（OT/电力/水务）实际瘫痪 + 美国财政部史上罕见大规模二级制裁，影响面与地缘政治含义极高。 来源：The Hacker News（20260825，Oasis Security 披露） 原文链接：https://thehackernews.com/2026/08/amaliciouswebpagecouldpoisonyour.html 摘要：NVIDIA NemoClaw 在 Windows/WSL 路径上将本地 Ollama 绑定至 0.0.0.0:11434 且无鉴权，攻击者可借 DNS 重绑定绕过 CORS/Host 校验，向模型写入被篡改的 chat template，使隐藏指令持久注入每一次对话。macOS/Linux 已在 v0.0.35 修复，Windows/WSL 路径目前仅靠警告、无正式补丁，无 CVE。 评分理由：首个「网页→本地大模型自身被投毒」的完整可利用链路，模型级污染对 API 调用方不可见，AI 智能体信任边界被颠覆，新颖性极强。 来源：Straiker STAR Labs（202608，已通报 AWS Security） 原文链接：https://www.straiker.ai/blog/aisreagentpromptinjectionkubernetesransomware 摘要：攻击者通过污染 OpenTelemetry 遥测数据注入间接提示，诱使基于 Amazon Bedrock 的 AI SRE 智能体利用其 Kubernetes 权限部署特权容器；容器借 hostPID/SYSADMIN/SYSPTRACE 逃逸至宿主机，以 AES256CBC 加密应用文件并替换为勒索页面，看门狗机制还压制了自动化自愈约 20 分钟。全程未利用任何软件漏洞或零日。 评分理由：展示「无漏洞、无凭证窃取、纯靠智能体信任模型」即可端到端落地勒索，是 AI 智能体安全里程碑式案例。 来源：BleepingComputer（20260825） 原文链接：https://bleepingcomputer.com/news/security/databreachatmajorswedishsoftwaresupplierimpacts15million 摘要：服务于瑞典约 80% 市政的 IT 系统供应商 Miljödata 遭攻击，攻击者窃取数据并索要 1.5 比特币，泄露对应约 150 万人的姓名、邮箱、地址、电话、政府 ID 与出生日期，部分敏感信息已上暗网；瑞典隐私保护局（IMY）正优先调查其与儿童数据、受保护身份人员相关的处理实践。 评分理由：单一供应商覆盖全国大部分地方政府的集中式数据暴露，GDPR 级影响面大，且造成多地区市政运营中断。 来源：The Hacker News（20260825，VulnCheck CNA） 原文链接：https://thehackernews.com/2026/08/marimonotebookflawcouldrunmcp.html 摘要：Marimo 笔记软件（< 0.23.15）存在代码注入缺陷，受害者在编辑模式打开特制笔记本时，攻击者提供的 MCP 服务器命令会以本地子进程方式执行（CVSS v3.1 8.8，无需认证、需用户交互）。已在 0.23.15 修复；该缺陷独立于此前 CVE202639987、CVE202667618 等 Marimo 配置边界问题。 评分理由：AI/数据科学生态中「打开笔记本即触发本地命令执行」的供应链式入口，无需认证即可触达开发者主机。 本次共筛选 15 条新闻，最高分 93 分（美国制裁伊朗关键基础设施黑客 / 英国电厂瘫痪）。 注：微信 / 微信小程序推送通道当前未连接（connector disconnected），本日报已生成本地文件，未能自动推送；请检查连接器配置后重试。"
+ },
+ {
   "date": "2026-08-25",
   "url": "daily/daily_news_2026-08-25.html",
   "title": "网络安全日报 2026-08-25",
