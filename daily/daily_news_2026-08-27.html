@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-27 | 网络安全新闻中心</title>
+<meta name="description" content="每日自动筛选与评分。微软补丁日板块基于 MSRC 官方 CVRF 公开 API 实时解析（数据实际发布状态为准，非单纯日期判断）。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-08-27">
+<meta property="og:description" content="每日自动筛选与评分。微软补丁日板块基于 MSRC 官方 CVRF 公开 API 实时解析（数据实际发布状态为准，非单纯日期判断）。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-27.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-08-27">
+<meta name="twitter:description" content="每日自动筛选与评分。微软补丁日板块基于 MSRC 官方 CVRF 公开 API 实时解析（数据实际发布状态为准，非单纯日期判断）。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-27</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 新闻</a></li>
+<li><a href="#s7">附：候选与筛选说明</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>每日自动筛选与评分。微软补丁日板块基于 MSRC 官方 CVRF 公开 API 实时解析（数据实际发布状态为准，非单纯日期判断）。</p>
+</blockquote>
+<h2 id="s1">Top 5 新闻</h2>
+<h3 id="s2">1. CISA 红队同时攻陷两家关键基础设施机构，一家全程未被发现（AA26-237A「两个 SOC 的故事」）</h3>
+<ul>
+<li><strong>评分：95 分</strong> — 关键基础设施（政府 + 水务）被红队打到域级完全失陷，其中一家 SOC 全程未检测，且触及 OT 隔离区，威胁面与教训价值极高。</li>
+<li><strong>来源：</strong> The Hacker News / CISA</li>
+<li><strong>摘要：</strong> CISA 发布 AA26-237A 咨询，披露其对一家政府服务设施机构（组织 A）和一家水务废水系统机构（组织 B）同步开展红队评估，双方均被初始钓鱼攻陷并提升至域控权限、横向移动至敏感业务系统与云资源。组织 A 因默认凭据、错误配置的 AD CS 证书模板（ESC1 类 Certighost 滥用）、明文凭据、不过期的静态云密钥及过度授权的 Entra ID 应用，全程未被检测；组织 B 则在 2–20 分钟内隔离受陷主机、切断 C2，迫使红队转入「假定失陷」模型，最终在 OT DMZ 堡垒机处再次被拦截。报告核心结论：决定胜负的不是工具，而是「检测 + 隔离」的人力与流程。</li>
+<li><strong>原文链接：</strong> https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a</li>
+<li><strong>评分理由：</strong> 红队实证两家关键基础设施均被域级攻陷且一家零检测，直接暴露 AD CS 证书滥用与 Entra ID 过度授权等普遍弱点，对防守方具有最高现实参考值。</li>
+</ul>
+<h3 id="s3">2. Kaltura mwEmbed 曝未修补反序列化漏洞，可未授权读文件并 RCE，影响多租户 CDN</h3>
+<ul>
+<li><strong>评分：93 分</strong> — 研究员评级 RCE 达 CVSS 10.0、无补丁、且漏洞端点暴露在其共享多租户 CDN 上，意味着不仅单客户实例、所有租户均受影响。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> CERT/CC 披露 Kaltura HTML5 视频播放库 mwEmbed 的两处未修补漏洞：CVE-2026-19913（文件读取，研究员评 9.1）与 CVE-2026-19912（代码执行，研究员评 10.0），均源于 mwEmbedLoader.php 端点的不安全反序列化，无需认证。由于该端点也暴露在 Kaltura 自身的共享多租户 CDN 基础设施上，任何能访问端点的远程攻击者读到的不仅是客户实例，还包括所有租户；攻击者已演示读取含明文数据库凭据、管理员与控制台密码的 local.ini。CERT/CC 表示「无法联系到 Kaltura 协调这些漏洞」，目前无修复版本，建议用 WAF/反向代理屏蔽端点、对 ServiceUrl 严格 allow-list、拒绝 uiconf_id 中的路径穿越。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/unpatched-kaltura-mwembed-flaws-could.html</li>
+<li><strong>评分理由：</strong> 无补丁的未授权 RCE 且波及多租户共享基础设施，配合明文密钥泄露，属于高危害「已公开但厂商未修」的 0day 类风险。</li>
+</ul>
+<h3 id="s4">3. Gitea 严重 RCE（CVE-2026-60004，CVSS 9.8）被在野利用，CISA 列入 KEV</h3>
+<ul>
+<li><strong>评分：89 分</strong> — 已被 CISA 确认在野利用并加入 KEV，开源 DevOps 平台默认开放注册使外部攻击者无需预置凭据即可触发，实测案例部署类挖矿僵尸载荷。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> CISA 于本周二警告 Gitea 严重远程代码执行漏洞 CVE-2026-60004（CVSS 9.8）遭在野利用，并将其加入已知被利用漏洞（KEV）目录，联邦机构须在 2026-08-28 前完成修补。该漏洞允许拥有仓库写权限的攻击者通过 diffpatch 端点植入并执行 Git hook 以 Gitea 服务账户身份运行 shell 命令；由于 Gitea 默认开启开放注册，外来者可自建账户与仓库获得写权限后直接利用（影响 1.17 至 1.27.1 之前版本，已在 1.27.1 修复）。一名开发者披露其 Gitea 实例被未知攻击者用该漏洞部署类加密货币挖矿的 dropper，攻击链先清理竞争进程再按架构拉取并执行下一阶段载荷。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html</li>
+<li><strong>评分理由：</strong> CISA KEV 级别的在野利用 + 默认配置即可被外部触发 + 实测挖矿载荷，对广泛使用 Gitea 的开源/企业环境构成紧迫威胁。</li>
+</ul>
+<h3 id="s5">4. NovaCookies 中间人钓鱼工具包借正版 Docusign 通知窃取 Microsoft 365 会话</h3>
+<ul>
+<li><strong>评分：87 分</strong> — 新型订阅制（320 美元/月）AitM PhaaS，借真实 Docusign 信封作诱饵、绕过发件人信誉检查，已 targeting 美/英/加/德/以/阿联酋等数百组织，身份窃取面大。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> Island 披露名为 NovaCookies 的对手中介（AitM）钓鱼工具包，以每月 320 美元订阅形式实时中继 Microsoft 365 登录并窃取认证会话。已观察到的攻击利用真实 Docusign 信封携带伪造文档共享诱饵，部分点击经合法 Microsoft/Google 登录端点跳转，使邮件、文档服务与重定向各自看起来可信，直到浏览器抵达攻击者控制的基础设施。该套件还能绕过发件人认证与信誉检测，内置 Cloudflare 闸门与反分析检查，被评估为 Sneaky 2FA 的变体，并扩展支持 Okta 及联邦至 GoDaddy 的 Entra 域。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/novacookies-campaigns-abuse-genuine.html</li>
+<li><strong>评分理由：</strong> 以合法 SaaS 通知为掩护的实时会话窃取 PhaaS，覆盖范围广且商业化成熟，反映身份层 AitM 攻击持续工业化。</li>
+</ul>
+<h3 id="s6">5. Trezor 披露数据泄露，近 1.4 万客户因物流商 ShipMonk 被黑受影响（关联 Metabase 0day）</h3>
+<ul>
+<li><strong>评分：84 分</strong> — 硬件钱包厂商客户真实泄露，且根因指向此前已大规模利用的 Metabase 0day（Framework、Tally 等同批中招），钓鱼后续风险高。</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> 硬件加密货币钱包厂商 Trezor 披露，因物流服务商的 ShipMonk 系统被黑，导致约 11,742 名客户完整信息（姓名、邮箱、电话、收货地址）及 1,947 名客户部分信息暴露，涉及美/英/瑞典/哥伦比亚/巴西/意大利/葡萄牙等地 2026-05-10 至 08-08 的订单。ShipMonk 在事件通知中称攻击者利用了第三方分析平台 Metabase 的漏洞——即此前被广泛利用的 Metabase 严重 SQL 注入 0day（已致 Framework、Tally 等客户数据被盗，并收到 ShinyHunters 勒索邮件）。Trezor 强调自身系统未被攻破、设备安全，但提醒受影响客户警惕针对性钓鱼。</li>
+<li><strong>原文链接：</strong> https://bleepingcomputer.com/news/security/trezor-discloses-data-breach-affecting-nearly-14-000-customers</li>
+<li><strong>评分理由：</strong> 真实发生的供应链式客户数据泄露，且根因关联到已武器化的 Metabase 0day，对硬件钱包用户带来直接钓鱼与社工风险。</li>
+</ul>
+<hr />
+<h2 id="s7">附：候选与筛选说明</h2>
+<ul>
+<li>本次从 Hacker News、The Hacker News、BleepingComputer 三源共筛选 <strong>15 条</strong>候选新闻（含 CISA 红队报告、Kaltura/RCE、Gitea、NovaCookies、AnonyMousKIT、SLEEPWALKER 后门、INTERPOL Jackal IV、Trezor 泄露、NVIDIA NemoClaw 模型投毒、OpenAI 封禁俄影响力账号等）。</li>
+<li>Hacker News 当日以对既往 OpenAI/Hugging Face 智能体入侵事件的复盘讨论为主，无重大新增原创信安报道，故 Top 5 主要由 THN 与 BleepingComputer 供给。</li>
+<li>微软补丁板块独立于新闻评分，不计入 Top 5、不与新闻混排。</li>
+</ul>
+<p><strong>本次共筛选 15 条新闻，最高分 95 分。</strong></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-08-26.html">← 前一天 2026-08-26</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

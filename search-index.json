@@ -1,5 +1,18 @@
 [
  {
+  "date": "2026-08-27",
+  "url": "daily/daily_news_2026-08-27.html",
+  "title": "网络安全日报 2026-08-27",
+  "score": 95,
+  "cves": [
+   "CVE-2026-19912",
+   "CVE-2026-19913",
+   "CVE-2026-60004"
+  ],
+  "summary": "每日自动筛选与评分。微软补丁日板块基于 MSRC 官方 CVRF 公开 API 实时解析（数据实际发布状态为准，非单纯日期判断）。",
+  "text": "每日自动筛选与评分。微软补丁日板块基于 MSRC 官方 CVRF 公开 API 实时解析（数据实际发布状态为准，非单纯日期判断）。 评分：95 分 — 关键基础设施（政府 + 水务）被红队打到域级完全失陷，其中一家 SOC 全程未检测，且触及 OT 隔离区，威胁面与教训价值极高。 来源： The Hacker News / CISA 摘要： CISA 发布 AA26237A 咨询，披露其对一家政府服务设施机构（组织 A）和一家水务废水系统机构（组织 B）同步开展红队评估，双方均被初始钓鱼攻陷并提升至域控权限、横向移动至敏感业务系统与云资源。组织 A 因默认凭据、错误配置的 AD CS 证书模板（ESC1 类 Certighost 滥用）、明文凭据、不过期的静态云密钥及过度授权的 Entra ID 应用，全程未被检测；组织 B 则在 2–20 分钟内隔离受陷主机、切断 C2，迫使红队转入「假定失陷」模型，最终在 OT DMZ 堡垒机处再次被拦截。报告核心结论：决定胜负的不是工具，而是「检测 + 隔离」的人力与流程。 原文链接： https://www.cisa.gov/newsevents/cybersecurityadvisories/aa26237a 评分理由： 红队实证两家关键基础设施均被域级攻陷且一家零检测，直接暴露 AD CS 证书滥用与 Entra ID 过度授权等普遍弱点，对防守方具有最高现实参考值。 评分：93 分 — 研究员评级 RCE 达 CVSS 10.0、无补丁、且漏洞端点暴露在其共享多租户 CDN 上，意味着不仅单客户实例、所有租户均受影响。 来源： The Hacker News 摘要： CERT/CC 披露 Kaltura HTML5 视频播放库 mwEmbed 的两处未修补漏洞：CVE202619913（文件读取，研究员评 9.1）与 CVE202619912（代码执行，研究员评 10.0），均源于 mwEmbedLoader.php 端点的不安全反序列化，无需认证。由于该端点也暴露在 Kaltura 自身的共享多租户 CDN 基础设施上，任何能访问端点的远程攻击者读到的不仅是客户实例，还包括所有租户；攻击者已演示读取含明文数据库凭据、管理员与控制台密码的 local.ini。CERT/CC 表示「无法联系到 Kaltura 协调这些漏洞」，目前无修复版本，建议用 WAF/反向代理屏蔽端点、对 ServiceUrl 严格 allowlist、拒绝 uiconfid 中的路径穿越。 原文链接： https://thehackernews.com/2026/08/unpatchedkalturamwembedflawscould.html 评分理由： 无补丁的未授权 RCE 且波及多租户共享基础设施，配合明文密钥泄露，属于高危害「已公开但厂商未修」的 0day 类风险。 评分：89 分 — 已被 CISA 确认在野利用并加入 KEV，开源 DevOps 平台默认开放注册使外部攻击者无需预置凭据即可触发，实测案例部署类挖矿僵尸载荷。 来源： The Hacker News 摘要： CISA 于本周二警告 Gitea 严重远程代码执行漏洞 CVE202660004（CVSS 9.8）遭在野利用，并将其加入已知被利用漏洞（KEV）目录，联邦机构须在 20260828 前完成修补。该漏洞允许拥有仓库写权限的攻击者通过 diffpatch 端点植入并执行 Git hook 以 Gitea 服务账户身份运行 shell 命令；由于 Gitea 默认开启开放注册，外来者可自建账户与仓库获得写权限后直接利用（影响 1.17 至 1.27.1 之前版本，已在 1.27.1 修复）。一名开发者披露其 Gitea 实例被未知攻击者用该漏洞部署类加密货币挖矿的 dropper，攻击链先清理竞争进程再按架构拉取并执行下一阶段载荷。 原文链接： https://thehackernews.com/2026/08/criticalgitearceactivelyexploited.html 评分理由： CISA KEV 级别的在野利用 + 默认配置即可被外部触发 + 实测挖矿载荷，对广泛使用 Gitea 的开源/企业环境构成紧迫威胁。 评分：87 分 — 新型订阅制（320 美元/月）AitM PhaaS，借真实 Docusign 信封作诱饵、绕过发件人信誉检查，已 targeting 美/英/加/德/以/阿联酋等数百组织，身份窃取面大。 来源： The Hacker News 摘要： Island 披露名为 NovaCookies 的对手中介（AitM）钓鱼工具包，以每月 320 美元订阅形式实时中继 Microsoft 365 登录并窃取认证会话。已观察到的攻击利用真实 Docusign 信封携带伪造文档共享诱饵，部分点击经合法 Microsoft/Google 登录端点跳转，使邮件、文档服务与重定向各自看起来可信，直到浏览器抵达攻击者控制的基础设施。该套件还能绕过发件人认证与信誉检测，内置 Cloudflare 闸门与反分析检查，被评估为 Sneaky 2FA 的变体，并扩展支持 Okta 及联邦至 GoDaddy 的 Entra 域。 原文链接： https://thehackernews.com/2026/08/novacookiescampaignsabusegenuine.html 评分理由： 以合法 SaaS 通知为掩护的实时会话窃取 PhaaS，覆盖范围广且商业化成熟，反映身份层 AitM 攻击持续工业化。 评分：84 分 — 硬件钱包厂商客户真实泄露，且根因指向此前已大规模利用的 Metabase 0day（Framework、Tally 等同批中招），钓鱼后续风险高。 来源： BleepingComputer 摘要： 硬件加密货币钱包厂商 Trezor 披露，因物流服务商的 ShipMonk 系统被黑，导致约 11,742 名客户完整信息（姓名、邮箱、电话、收货地址）及 1,947 名客户部分信息暴露，涉及美/英/瑞典/哥伦比亚/巴西/意大利/葡萄牙等地 20260510 至 0808 的订单。ShipMonk 在事件通知中称攻击者利用了第三方分析平台 Metabase 的漏洞——即此前被广泛利用的 Metabase 严重 SQL 注入 0day（已致 Framework、Tally 等客户数据被盗，并收到 ShinyHunters 勒索邮件）。Trezor 强调自身系统未被攻破、设备安全，但提醒受影响客户警惕针对性钓鱼。 原文链接： https://bleepingcomputer.com/news/security/trezordisclosesdatabreachaffectingnearly14000customers 评分理由： 真实发生的供应链式客户数据泄露，且根因关联到已武器化的 Metabase 0day，对硬件钱包用户带来直接钓鱼与社工风险。 本次从 Hacker News、The Hacker News、BleepingComputer 三源共筛选 15 条候选新闻（含 CISA 红队报告、Kaltura/RCE、Gitea、NovaCookies、AnonyMousKIT、SLEEPWALKER 后门、INTERPOL Jackal IV、Trezor 泄露、NVIDIA NemoClaw 模型投毒、OpenAI 封禁俄影响力账号等）。 Hacker News 当日以对既往 OpenAI/Hugging Face 智能体入侵事件的复盘讨论为主，无重大新增原创信安报道，故 Top 5 主要由 THN 与 BleepingComputer 供给。 微软补丁板块独立于新闻评分，不计入 Top 5、不与新闻混排。 本次共筛选 15 条新闻，最高分 95 分。"
+ },
+ {
   "date": "2026-08-26",
   "url": "daily/daily_news_2026-08-26.html",
   "title": "网络安全日报 2026-08-26",
