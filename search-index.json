@@ -1,5 +1,24 @@
 [
  {
+  "date": "2026-08-29",
+  "url": "daily/daily_news_2026-08-29.html",
+  "title": "网络安全日报 2026-08-29",
+  "score": null,
+  "cves": [
+   "CVE-2026-18885",
+   "CVE-2026-18886",
+   "CVE-2026-60004",
+   "CVE-2026-6876",
+   "CVE-2026-74232",
+   "CVE-2026-74233",
+   "CVE-2026-74820",
+   "CVE-2026-81578",
+   "CVE-2026-82078"
+  ],
+  "summary": "数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）",
+  "text": "数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时） 评分标准：严重性 / 新颖性 / 影响范围 / 时效性（0–100） 微软补丁日板块（Patch Tuesday）已正式发布，见文末独立单元。 来源：The Hacker News / Cosmos Labs 原文链接：https://cryptoslate.com/cosmosmisjudgedacriticalbugfor4monthsbeforehackersstolenearly6millionacross6chains/ 摘要：共享 Cosmos EVM 模块的 vesting 账户余额对账存在未检查整数下溢（GHSA7g4wcg882cq2，无 CVE/CVSS），攻击者在 8/20–8/25 间令余额回绕至约 2^256 并抽干受害者真实余额，MANTRA、TAC、KiiChain 等 6 条链受影响，链上追踪约 570 万美元经 DEX/CEX 变现。Cosmos Labs 早在 4 月 25 日收到报告却误判“不影响生产链”，走静默公开补丁流程，未走私有补丁分发，补丁公开后约 12 小时即被利用——典型“补丁治理失败”案例。 评分理由：共享模块单点故障同时击穿 6 条主权链、真实资金损失、且暴露去中心化披露流程的结构性弱点，新颖性与影响范围俱高。 来源：The Hacker News 原文链接：https://thehackernews.com/2026/08/threecvss100servicenowflawscould.html 摘要：ServiceNow 于 8/27 发布安全更新，修复其 AI Platform / Now Platform 四个漏洞，其中三个为满分 10.0：CVE202618885（GraphQL Composite Data API 代码注入）、CVE202618886（系统配置镜像上传处理器越权）、CVE202674820（动态 ORDER BY 子句 SQL 注入），均可在“网络可达、无需凭证、无需用户交互”条件下被未授权攻击者触发，实现任意代码执行或直连底层数据库执行任意 SQL；第四个 CVE20266876（沙箱逃逸，CVSS 8.7）亦可未授权代码执行。托管实例已由厂商修复，自托管客户需自行升级。目前无在野利用报告。 评分理由：三个满分未授权漏洞集中在承载大量财富 500 强 IT/HR/客服流程的核心平台，一旦公开利用代码出现将形成规模化扫描与自动化攻击，潜在影响极大。 来源：BleepingComputer / Huntress 原文链接：https://www.bleepingcomputer.com/news/security/papercutwarnsofngmfflawexploitedinzerodayattacks/ 摘要：PaperCut 于 8/27 发布紧急通告，确认其 NG 与 MF 打印管理软件全版本正遭零日攻击，Huntress 在客户环境中观察到两起真实利用。漏洞链为 CVE202681578（Web 管理接口越权，CVSS 8.8）+ CVE202682078（数据库连接工具不安全动态类加载，CVSS 9.4），可绕过认证并在 Application Server 进程内执行任意 Java 字节码。首个紧急补丁被发现可被绕过，PaperCut 于 8/28 发布第二版紧急补丁（Release 2），覆盖 24/25/26 全版本。入侵迹象包括 pcapp.exe 异常、server.log 被篡改/缺失。 评分理由：活跃在野零日 + 未授权 RCE + 广泛部署于教育/大企业打印基础设施，且首补被绕过凸显“补丁绕过循环”风险，时效性极强。 来源：The Hacker News / VulnCheck 原文链接：https://www.vulncheck.com/blog/zbtdarklanternspeakingstone 摘要：VulnCheck 披露深圳智博通（ZBT）路由器固件中两个此前未知的出厂植入：SPEAKINGSTONE（CVE202674232，服务 yunmgrd）通过 UDP/10000 向硬编码 C2 信标外连，可远程 root 命令执行、窃取 WAN PPPoE 凭证、DNS 劫持、开反向 SSH 隧道；DARKLANTERN（CVE202674233，服务 infosrvd）监听 UDP/9992 且出厂防火墙对其开放入站，认证可被硬编码 salt + 全零通配 MAC 绕过，未授权命令注入得 root。两者 CVSS 3.1 均 9.8，无修复固件，这是继 8/5 ENDLESSDOORS 后本月第三起 ZBT 固件植入。VulnCheck 扫描到 203 个入网 DARKLANTERN 实例（22 国）及 392 台设备回连备援 C2。 评分理由：供应链层固件后门（厂商即威胁源）、全球白标流通、无补丁只能换设备，属难以缓解的硬件信任危机，影响范围与新颖性高。 来源：BleepingComputer / Shadowserver / CISA 原文链接：https://www.bleepingcomputer.com/news/security/over8300giteaserversvulnerabletocodeexecutionattacks/ 摘要：代码托管平台 Gitea 的 CVE202660004（diffpatch API 代码注入，CVSS 9.8）正遭在野利用，攻击者部署加密货币挖矿木马。该漏洞自 7/27 的 1.27.1 版本起已修复，但 Shadowserver 8/27 扫描发现仍有 8,393 个公网实例未修补。由于 Gitea 默认开启自注册，未授权攻击者注册账号即可获得所需仓库写权限从而触发 RCE。CISA 已将其纳入 KEV 目录并令联邦机构于 8/28 前完成修补。 评分理由：在野利用 + 默认配置即可未授权触发 + 8,300+ 公网实例暴露，且被攻陷的 Git 服务器是下游 CI/CD 与源代码供应链的入口，影响范围与时效性俱佳。 本次共筛选 18 条候选新闻（三源各 ≤5 上限合计），按评分取前 5 条。 最高分：95 分（Cosmos EVM 共享模块漏洞致 6 链被 drains）。 微软补丁板块已于本日正式发布日（20260829，Patch Tuesday 后第 18 天）附于文末，独立成单元，不计入新闻 Top 5。"
+ },
+ {
   "date": "2026-08-28",
   "url": "daily/daily_news_2026-08-28.html",
   "title": "网络安全日报 2026-08-28",

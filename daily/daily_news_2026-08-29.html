@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-29 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-08-29">
+<meta property="og:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-29.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-08-29">
+<meta name="twitter:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-29</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 重点新闻</a></li>
+<li><a href="#s7">统计</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）
+评分标准：严重性 / 新颖性 / 影响范围 / 时效性（0–100）
+微软补丁日板块（Patch Tuesday）已正式发布，见文末独立单元。</p>
+</blockquote>
+<hr />
+<h2 id="s1">Top 5 重点新闻</h2>
+<h3 id="s2">1. Cosmos EVM 共享模块整数下溢被利用，6 条区块链被盗约 570 万美元 【评分 95】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News / Cosmos Labs</li>
+<li><strong>原文链接</strong>：https://cryptoslate.com/cosmos-misjudged-a-critical-bug-for-4-months-before-hackers-stole-nearly-6-million-across-6-chains/</li>
+<li><strong>摘要</strong>：共享 Cosmos EVM 模块的 vesting 账户余额对账存在未检查整数下溢（GHSA-7g4w-cg88-2cq2，无 CVE/CVSS），攻击者在 8/20–8/25 间令余额回绕至约 2^256 并抽干受害者真实余额，MANTRA、TAC、KiiChain 等 6 条链受影响，链上追踪约 570 万美元经 DEX/CEX 变现。Cosmos Labs 早在 4 月 25 日收到报告却误判“不影响生产链”，走静默公开补丁流程，未走私有补丁分发，补丁公开后约 12 小时即被利用——典型“补丁治理失败”案例。</li>
+<li><strong>评分理由</strong>：共享模块单点故障同时击穿 6 条主权链、真实资金损失、且暴露去中心化披露流程的结构性弱点，新颖性与影响范围俱高。</li>
+</ul>
+<h3 id="s3">2. ServiceNow AI Platform 三个 CVSS 10.0  flaw 可未授权 RCE / SQL 【评分 94】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/08/three-cvss-100-servicenow-flaws-could.html</li>
+<li><strong>摘要</strong>：ServiceNow 于 8/27 发布安全更新，修复其 AI Platform / Now Platform 四个漏洞，其中三个为满分 10.0：CVE-2026-18885（GraphQL Composite Data API 代码注入）、CVE-2026-18886（系统配置镜像上传处理器越权）、CVE-2026-74820（动态 ORDER BY 子句 SQL 注入），均可在“网络可达、无需凭证、无需用户交互”条件下被未授权攻击者触发，实现任意代码执行或直连底层数据库执行任意 SQL；第四个 CVE-2026-6876（沙箱逃逸，CVSS 8.7）亦可未授权代码执行。托管实例已由厂商修复，自托管客户需自行升级。目前无在野利用报告。</li>
+<li><strong>评分理由</strong>：三个满分未授权漏洞集中在承载大量财富 500 强 IT/HR/客服流程的核心平台，一旦公开利用代码出现将形成规模化扫描与自动化攻击，潜在影响极大。</li>
+</ul>
+<h3 id="s4">3. PaperCut NG/MF 零日被在野利用，两条 CVE 链式实现未授权 RCE 【评分 92】</h3>
+<ul>
+<li><strong>来源</strong>：BleepingComputer / Huntress</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/papercut-warns-of-ng-mf-flaw-exploited-in-zero-day-attacks/</li>
+<li><strong>摘要</strong>：PaperCut 于 8/27 发布紧急通告，确认其 NG 与 MF 打印管理软件全版本正遭零日攻击，Huntress 在客户环境中观察到两起真实利用。漏洞链为 CVE-2026-81578（Web 管理接口越权，CVSS 8.8）+ CVE-2026-82078（数据库连接工具不安全动态类加载，CVSS 9.4），可绕过认证并在 Application Server 进程内执行任意 Java 字节码。首个紧急补丁被发现可被绕过，PaperCut 于 8/28 发布第二版紧急补丁（Release 2），覆盖 24/25/26 全版本。入侵迹象包括 pc-app.exe 异常、server.log 被篡改/缺失。</li>
+<li><strong>评分理由</strong>：活跃在野零日 + 未授权 RCE + 广泛部署于教育/大企业打印基础设施，且首补被绕过凸显“补丁绕过循环”风险，时效性极强。</li>
+</ul>
+<h3 id="s5">4. ZBT 白标路由器固件内置后门 SPEAKINGSTONE / DARKLANTERN，未授权获取 root 【评分 91】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News / VulnCheck</li>
+<li><strong>原文链接</strong>：https://www.vulncheck.com/blog/zbt-darklantern-speakingstone</li>
+<li><strong>摘要</strong>：VulnCheck 披露深圳智博通（ZBT）路由器固件中两个此前未知的出厂植入：SPEAKINGSTONE（CVE-2026-74232，服务 yunmgrd）通过 UDP/10000 向硬编码 C2 信标外连，可远程 root 命令执行、窃取 WAN PPPoE 凭证、DNS 劫持、开反向 SSH 隧道；DARKLANTERN（CVE-2026-74233，服务 infosrvd）监听 UDP/9992 且出厂防火墙对其开放入站，认证可被硬编码 salt + 全零通配 MAC 绕过，未授权命令注入得 root。两者 CVSS 3.1 均 9.8，无修复固件，这是继 8/5 ENDLESSDOORS 后本月第三起 ZBT 固件植入。VulnCheck 扫描到 203 个入网 DARKLANTERN 实例（22 国）及 392 台设备回连备援 C2。</li>
+<li><strong>评分理由</strong>：供应链层固件后门（厂商即威胁源）、全球白标流通、无补丁只能换设备，属难以缓解的硬件信任危机，影响范围与新颖性高。</li>
+</ul>
+<h3 id="s6">5. 超 8,300 台 Gitea 服务器仍暴露于已被利用的 RCE 漏洞 【评分 90】</h3>
+<ul>
+<li><strong>来源</strong>：BleepingComputer / Shadowserver / CISA</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/over-8-300-gitea-servers-vulnerable-to-code-execution-attacks/</li>
+<li><strong>摘要</strong>：代码托管平台 Gitea 的 CVE-2026-60004（diffpatch API 代码注入，CVSS 9.8）正遭在野利用，攻击者部署加密货币挖矿木马。该漏洞自 7/27 的 1.27.1 版本起已修复，但 Shadowserver 8/27 扫描发现仍有 8,393 个公网实例未修补。由于 Gitea 默认开启自注册，未授权攻击者注册账号即可获得所需仓库写权限从而触发 RCE。CISA 已将其纳入 KEV 目录并令联邦机构于 8/28 前完成修补。</li>
+<li><strong>评分理由</strong>：在野利用 + 默认配置即可未授权触发 + 8,300+ 公网实例暴露，且被攻陷的 Git 服务器是下游 CI/CD 与源代码供应链的入口，影响范围与时效性俱佳。</li>
+</ul>
+<hr />
+<h2 id="s7">统计</h2>
+<ul>
+<li>本次共筛选 <strong>18</strong> 条候选新闻（三源各 ≤5 上限合计），按评分取前 <strong>5</strong> 条。</li>
+<li>最高分：<strong>95 分</strong>（Cosmos EVM 共享模块漏洞致 6 链被 drains）。</li>
+<li>微软补丁板块已于本日正式发布日（2026-08-29，Patch Tuesday 后第 18 天）附于文末，独立成单元，不计入新闻 Top 5。</li>
+</ul>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-08-28.html">← 前一天 2026-08-28</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
