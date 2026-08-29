@@ -1,5 +1,20 @@
 [
  {
+  "date": "2026-08-30",
+  "url": "daily/daily_news_2026-08-30.html",
+  "title": "网络安全日报 2026-08-30",
+  "score": 94,
+  "cves": [
+   "CVE-2019-1068",
+   "CVE-2020-1472",
+   "CVE-2026-36425",
+   "CVE-2026-75501",
+   "CVE-2026-8452"
+  ],
+  "summary": "数据来源：The Hacker News、Bleeping Computer、Hacker News（news.ycombinator.com）过去 24 小时内的安全新闻。",
+  "text": "数据来源：The Hacker News、Bleeping Computer、Hacker News（news.ycombinator.com）过去 24 小时内的安全新闻。 补丁日状态：✅ 微软 2026 年 8 月补丁（\"August 2026 Security Updates\"）已正式发布，文末附「微软补丁安全级别」独立板块。 评分：94 分 — 政府级关键基础设施遭入侵并进入公开勒索阶段，波及数万居民个人信息，时效性强且影响重大。 来源： The Hacker News 摘要： 柏林州政府确认其行政网络于 8 月遭入侵后受到勒索，市长 Kai Wegner 表示\"柏林正被敲诈\"并明确拒绝支付赎金。Rhysida 于 8 月 28 日在暗网泄露站发布条目，声称窃取 5.79 TB 数据、约 144 万文件，涉及 12,076 名个人的非公开信息；参议院后续披露交通/气候部门的额外外泄发生于 8 月 7–12 日。CISA/FBI/MSISAC 此前已就 Rhysida 的常用入侵手法（无 MFA 的 VPN 有效账户、Zerologon CVE20201472、钓鱼）发布联合预警。 原文链接： https://thehackernews.com/2026/08/berlinrefusestopayhackerswhostole.html 评分：91 分 — 多个不同厂商的漏洞同时被确认在野利用，CISA 给出联邦修复死线，覆盖面广、处置优先级高。 来源： The Hacker News 摘要： CISA 于 8 月 26 日将 6 个漏洞加入已知利用目录（KEV），包括 Citrix NetScaler ADC/Gateway 的 CVE20268452（内存越界，已观测到落地 x.php/z.php WebShell 与侦察命令）、Microsoft SQL Server 的 CVE20191068、以及多个 Linux/Red Hat/旧框架缺陷。其中 CVE20268452 与 CVE20191068 的联邦修复截止日为 8 月 29 日，其余为 9 月 9 日；Defused Cyber 与 Previdian 均报告了针对 NetScaler 漏洞的活跃利用。 原文链接： https://thehackernews.com/2026/08/cisaaddssixexploitedflawstokev.html 评分：89 分 — 单次活动超 8100 万次登录尝试、78 个账户失陷，暴露 Conditional Access 普遍未覆盖传统 OAuth 流的系统性短板。 来源： Bleeping Computer 摘要： Huntress 观察到 2026 年上半年密码喷射攻击激增 155 倍，其中 LSHIY LLC 控制的 IPv6 段发起的活动在 6 月两周内产生逾 8100 万次登录尝试、78 个账户被攻陷。攻击者滥用已被 OAuth 2.1 弃用的 ROPC（Resource Owner Password Credentials）授权，将用户名/密码直接发往 /token 端点，绕开 MFA；受访 23 家企业中 8 家完全无 MFA，其余 15 家的 MFA 策略因仅覆盖部分应用/用户组或处于 reportonly 而失效。 原文链接： https://bleepingcomputer.com/news/security/passwordsprayingattackssurge155xashackersexploitmfagaps 评分：88 分 — 远程无认证即可在公网打穿防火墙、暴露摄像头/NAS/管理接口，且暂无补丁，影响多家美国宽带运营商用户。 来源： Bleeping Computer 摘要： Calix GS5239XG（GigaSpire 7u10txg）住宅路由器在 EXOS/6.6.47 固件下，将 MiniUPnPd 的 UPnP WANIPConnection SOAP 服务暴露于公网 WAN 口 TCP 5000，无访问控制。任何互联网上的攻击者发送一次未认证 SOAP 请求即可增删端口映射、枚举内网设备并绕过 NAT/防火墙，规则重启后仍存活；Calix 经核查后称现有网络安全控制可阻止该攻击场景，但至今未发布修复。 原文链接： https://bleepingcomputer.com/news/security/unpatchedcalixflawletshackersbypassnattoexposeinternaldevices 评分：86 分 — 多阶段钓鱼 + BYOVD 提权并中和终端防护，针对特定地区政府/公共卫生等主题，技术链完整。 来源： The Hacker News 摘要： Acronis 发现一场针对柬埔寨个人与组织的活动，通过钓鱼邮件投递含 Inno Setup 自解压的压缩包，利用腾讯签名程序做 DLL 侧加载，加载存在 CVE202636425 漏洞的 OPSWAT AppRemover 驱动（ardrv.sys）以终止 Microsoft Defender、火绒、腾讯电脑管家等安全进程。载荷随后将 PNG 内嵌 shellcode 注入 vssvc.exe 运行开源 Go 语言 RAT（Spark RAT），并含反沙箱计时检测与 SYSTEM 提权后持久化。 原文链接： https://thehackernews.com/2026/08/sparkrattargetscambodiaabuses.html 本次共筛选 8 条候选新闻（The Hacker News 5 条 + Bleeping Computer 3 条；Hacker News 首页当日无独立的原创安全报道，候选由 THN/BC 补充，与近期运行情况一致）。 最高分：94 分（柏林州政府遭 Rhysida 勒索拒绝支付）。 Patch Tuesday 板块基于 MSRC 公共免认证 CVRF API 实时解析，所有数字（CVE 总数、分级、CVSS、在野利用）均来自 20260829 发布的正式文档，未沿用或编造。"
+ },
+ {
   "date": "2026-08-29",
   "url": "daily/daily_news_2026-08-29.html",
   "title": "网络安全日报 2026-08-29",

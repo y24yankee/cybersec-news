@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-08-30 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：The Hacker News、Bleeping Computer、Hacker News（news.ycombinator.com）过去 24 小时内的安全新闻。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-08-30">
+<meta property="og:description" content="数据来源：The Hacker News、Bleeping Computer、Hacker News（news.ycombinator.com）过去 24 小时内的安全新闻。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-30.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-08-30">
+<meta name="twitter:description" content="数据来源：The Hacker News、Bleeping Computer、Hacker News（news.ycombinator.com）过去 24 小时内的安全新闻。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-08-30</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 重点新闻（按评分排序）</a></li>
+<li><a href="#s7">执行说明</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>数据来源：The Hacker News、Bleeping Computer、Hacker News（news.ycombinator.com）过去 24 小时内的安全新闻。
+补丁日状态：✅ 微软 2026 年 8 月补丁（"August 2026 Security Updates"）已正式发布，文末附「微软补丁安全级别」独立板块。</p>
+</blockquote>
+<hr />
+<h2 id="s1">Top 5 重点新闻（按评分排序）</h2>
+<h3 id="s2">1. 柏林州政府遭 Rhysida 勒索，拒绝支付并确认 5.79 TB 数据被盗</h3>
+<ul>
+<li><strong>评分：94 分</strong> — 政府级关键基础设施遭入侵并进入公开勒索阶段，波及数万居民个人信息，时效性强且影响重大。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 柏林州政府确认其行政网络于 8 月遭入侵后受到勒索，市长 Kai Wegner 表示"柏林正被敲诈"并明确拒绝支付赎金。Rhysida 于 8 月 28 日在暗网泄露站发布条目，声称窃取 5.79 TB 数据、约 144 万文件，涉及 12,076 名个人的非公开信息；参议院后续披露交通/气候部门的额外外泄发生于 8 月 7–12 日。CISA/FBI/MS-ISAC 此前已就 Rhysida 的常用入侵手法（无 MFA 的 VPN 有效账户、Zerologon CVE-2020-1472、钓鱼）发布联合预警。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/berlin-refuses-to-pay-hackers-who-stole.html</li>
+</ul>
+<h3 id="s3">2. CISA 将 6 个在野利用漏洞加入 KEV，含 NetScaler、Linux 与 SQL Server 缺陷</h3>
+<ul>
+<li><strong>评分：91 分</strong> — 多个不同厂商的漏洞同时被确认在野利用，CISA 给出联邦修复死线，覆盖面广、处置优先级高。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> CISA 于 8 月 26 日将 6 个漏洞加入已知利用目录（KEV），包括 Citrix NetScaler ADC/Gateway 的 CVE-2026-8452（内存越界，已观测到落地 x.php/z.php WebShell 与侦察命令）、Microsoft SQL Server 的 CVE-2019-1068、以及多个 Linux/Red Hat/旧框架缺陷。其中 CVE-2026-8452 与 CVE-2019-1068 的联邦修复截止日为 8 月 29 日，其余为 9 月 9 日；Defused Cyber 与 Previdian 均报告了针对 NetScaler 漏洞的活跃利用。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/cisa-adds-six-exploited-flaws-to-kev.html</li>
+</ul>
+<h3 id="s4">3. 密码喷射攻击激增至 155 倍：黑客滥用 Azure CLI 与 MFA 策略盲区</h3>
+<ul>
+<li><strong>评分：89 分</strong> — 单次活动超 8100 万次登录尝试、78 个账户失陷，暴露 Conditional Access 普遍未覆盖传统 OAuth 流的系统性短板。</li>
+<li><strong>来源：</strong> Bleeping Computer</li>
+<li><strong>摘要：</strong> Huntress 观察到 2026 年上半年密码喷射攻击激增 155 倍，其中 LSHIY LLC 控制的 IPv6 段发起的活动在 6 月两周内产生逾 8100 万次登录尝试、78 个账户被攻陷。攻击者滥用已被 OAuth 2.1 弃用的 ROPC（Resource Owner Password Credentials）授权，将用户名/密码直接发往 /token 端点，绕开 MFA；受访 23 家企业中 8 家完全无 MFA，其余 15 家的 MFA 策略因仅覆盖部分应用/用户组或处于 report-only 而失效。</li>
+<li><strong>原文链接：</strong> https://bleepingcomputer.com/news/security/password-spraying-attacks-surge-155x-as-hackers-exploit-mfa-gaps</li>
+</ul>
+<h3 id="s5">4. Calix 路由器未修补漏洞（CVE-2026-75501）可绕过 NAT 暴露内网设备</h3>
+<ul>
+<li><strong>评分：88 分</strong> — 远程无认证即可在公网打穿防火墙、暴露摄像头/NAS/管理接口，且暂无补丁，影响多家美国宽带运营商用户。</li>
+<li><strong>来源：</strong> Bleeping Computer</li>
+<li><strong>摘要：</strong> Calix GS5239XG（GigaSpire 7u10txg）住宅路由器在 EXOS/6.6.47 固件下，将 MiniUPnPd 的 UPnP WANIPConnection SOAP 服务暴露于公网 WAN 口 TCP 5000，无访问控制。任何互联网上的攻击者发送一次未认证 SOAP 请求即可增删端口映射、枚举内网设备并绕过 NAT/防火墙，规则重启后仍存活；Calix 经核查后称现有网络安全控制可阻止该攻击场景，但至今未发布修复。</li>
+<li><strong>原文链接：</strong> https://bleepingcomputer.com/news/security/unpatched-calix-flaw-lets-hackers-bypass-nat-to-expose-internal-devices</li>
+</ul>
+<h3 id="s6">5. Spark RAT 定向柬埔寨：滥用 OPSWAT 漏洞驱动（CVE-2026-36425）关闭安全软件</h3>
+<ul>
+<li><strong>评分：86 分</strong> — 多阶段钓鱼 + BYOVD 提权并中和终端防护，针对特定地区政府/公共卫生等主题，技术链完整。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> Acronis 发现一场针对柬埔寨个人与组织的活动，通过钓鱼邮件投递含 Inno Setup 自解压的压缩包，利用腾讯签名程序做 DLL 侧加载，加载存在 CVE-2026-36425 漏洞的 OPSWAT AppRemover 驱动（ardrv.sys）以终止 Microsoft Defender、火绒、腾讯电脑管家等安全进程。载荷随后将 PNG 内嵌 shellcode 注入 vssvc.exe 运行开源 Go 语言 RAT（Spark RAT），并含反沙箱计时检测与 SYSTEM 提权后持久化。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/08/spark-rat-targets-cambodia-abuses.html</li>
+</ul>
+<hr />
+<h2 id="s7">执行说明</h2>
+<ul>
+<li>本次共筛选 <strong>8 条</strong>候选新闻（The Hacker News 5 条 + Bleeping Computer 3 条；Hacker News 首页当日无独立的原创安全报道，候选由 THN/BC 补充，与近期运行情况一致）。</li>
+<li>最高分：<strong>94 分</strong>（柏林州政府遭 Rhysida 勒索拒绝支付）。</li>
+<li>Patch Tuesday 板块基于 MSRC 公共免认证 CVRF API 实时解析，所有数字（CVE 总数、分级、CVSS、在野利用）均来自 2026-08-29 发布的正式文档，未沿用或编造。</li>
+</ul>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-08-29.html">← 前一天 2026-08-29</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
