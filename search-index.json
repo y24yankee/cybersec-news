@@ -1,5 +1,17 @@
 [
  {
+  "date": "2026-08-31",
+  "url": "daily/daily_news_2026-08-31.html",
+  "title": "网络安全日报 2026-08-31",
+  "score": 95,
+  "cves": [
+   "CVE-2026-68820",
+   "CVE-2026-82222"
+  ],
+  "summary": "数据来源：The Hacker News、BleepingComputer、Hacker News（HN 今日首页无独立原创安全报道，候选补充自 THN/BC，与近期运行一致）。",
+  "text": "数据来源：The Hacker News、BleepingComputer、Hacker News（HN 今日首页无独立原创安全报道，候选补充自 THN/BC，与近期运行一致）。 补丁日校验：MSRC 更新列表 2026Aug 标题为 \"August 2026 Security Updates\"（正式发布，非 Early），故文末附「微软补丁安全级别」独立板块。 评分：95 分 — 满分严重度、无需认证即可 RCE、影响面广（慈善/筹款站点默认配置即中招），且公开 PoC 于 8/30 发布，利用窗口已打开。 来源： BleepingComputer 摘要： GiveWP（WordPress 捐赠/筹款插件，10 万+ 活跃安装）CVE202682222 为反序列化导致的未授权远程代码执行（CVSS 10.0）。缺陷位于不安全的 unserialize() 处理：攻击者可借 GiveWP 自有注册通道（忽略 WP 注册开关）创建账户，写入恶意序列化对象并经 session 重建触发 calluserfuncarray()。4.16.7.2 已修复，但 Feedly 显示 PoC 已于 8/30 释出，目前尚无在野利用确认。 原文链接： https://www.bleepingcomputer.com/news/security/givewpwordpressdonationpluginflawletshackersexecuteservercommands/ 评分：93 分 — 社会工程手法升级（把执行面从 Run 框搬到完整终端以跑多行脚本），多阶段、跨行业、隐蔽性强，且无可打的 CVE，纯靠用户习惯突破。 来源： The Hacker News 摘要： Microsoft Threat Intelligence 披露 ClickFix 新变种 TerminalFix：伪造 Cloudflare Turnstile 验证页诱使用户打开 Windows Terminal/PowerShell 粘贴命令。链路由 DLL 侧载（LockScreenContentServer.exe + 恶意 dui70.dll）、PNG 隐写载荷提取、AD 侦察，最终部署 Python 反向隧道（client.py，经加密 WebSocket 至 gitnow[.]dev:443），把感染主机变成可访问内网的网络跳板。暂未归因具体团伙或受害者。 原文链接： https://thehackernews.com/2026/08/terminalfixusesfakecloudflare.html 评分：91 分 — 全球医疗器材巨头运营级中断（非单纯数据泄露），直击心血管/电生理等时效敏感设备的供应链，患者护理连带风险高。 来源： BleepingComputer 摘要： 市值约 720 亿美元的医疗器械制造商 Boston Scientific 于 8/25 检测到网络攻击，造成全球网络中断，制造、订单处理与发货能力受损，爱尔兰三座工厂约 7,000 名员工一度停工。公司 8K 披露为重大事件（Item 1.05），称植入式心脏设备功能未受影响，但恢复时间未知；尚无勒索/数据窃取组织认领。 原文链接： https://www.bleepingcomputer.com/news/security/bostonscientificsayscyberattackdisruptedoperationsglobally/ 评分：89 分 — 英国最大机场运营商、870 万客户受影响、攻击者声称数据量（86GB）远超官方口径，且暴露面源于前端 JavaScript 硬编码 API 凭证这一长期盲区。 来源： BleepingComputer 摘要： 勒索/数据敲诈组织 FulcrumSec 向 BleepingComputer 宣称窃取 Manchester Airports Group（曼城、Stansted、East Midlands 机场）约 86 GB 数据，样本经 BC 比对真实旅客预订记录验证；其称利用嵌在客户端 JavaScript 中的 Iterable API 凭证进入，并包含近 20 万条 2026 年内出行记录。MAG 官方仅承认 870 万客户邮箱等有限暴露，未回应 86GB 主张，已拒绝支付赎金。 原文链接： https://www.bleepingcomputer.com/news/security/fulcrumsecclaimsmanchesterairportshacktheftof86gbofdata/ 评分：87 分 — 新型滥用面（AI 用量配额成可变现资产），会话 Cookie 盗窃天然绕过 MFA，凸显端点卫生与 AI 平台凭据隔离的治理缺口。 来源： BleepingComputer 摘要： Anthropic 邮件通知部分 Claude 用户：Vidar、LummaC2、StealC、RedLine、AMOS 等 infostealer 已从受感染主机窃取已认证的浏览器会话，直接消费账户用量（绕过密码与 2FA）。公司正强制登出受影响会话、移除支付方式为盗刷退款；但强调清退会话不移除恶意软件，若端点未清理下次登录仍会被盗。 原文链接： https://www.bleepingcomputer.com/news/artificialintelligence/anthropicwarnsinfostealermalwareishijackingclaudesessionstodrainusage/ 本次共筛选 15 条候选新闻（THN 5 + BC 5 + HN 5 检索但无独立新鲜原创安全报道），取评分最高的 5 条；最高分 95 分。 候选但未进 Top5（参考）：Chrome/Edge 扩展窃取加密货币与浏览数据（BC 8/30）、DOJ 查封中国黑客平台域名、McKesson/ShinyHunters 宣称窃取 2.84 亿患者记录（8/28）、Carhartt 1,290 万账户泄露（8/27）、ServiceNow AI 平台三连 CVSS 10.0（8/27–28）。补丁项 CVE202668820 仅在文末板块呈现，不进入 Top5。 本日报由自动化任务生成。补丁板块所有数字（CVE 总数、分级、CVSS、在野利用）均来自真实解析的 MSRC CVRF 正式文档，未沿用上月数据。"
+ },
+ {
   "date": "2026-08-30",
   "url": "daily/daily_news_2026-08-30.html",
   "title": "网络安全日报 2026-08-30",
