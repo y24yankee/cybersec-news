@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-08-31T00:00:00Z</updated>
+  <updated>2026-09-01T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-09-01</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-01.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-01.html</id>
+    <updated>2026-09-01T00:00:00Z</updated>
+    <summary>数据来源：The Hacker News / BleepingComputer / Hacker News（滚动检索过去 24 小时）</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-08-31</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-31.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-13.html</id>
     <updated>2026-08-13T00:00:00Z</updated>
     <summary>数据采集时间：20260813 06:55 CST（北京时间）</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-08-12</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-12.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-12.html</id>
-    <updated>2026-08-12T00:00:00Z</updated>
-    <summary>评分理由： 零点击 RCE 覆盖 Zoom 全平台客户端，攻击者只需加入或主持会议即可接管任意参会者机器，且披露方称利用公开 AI 模型在不到 20 条提示词、一天内完成漏洞到利用。</summary>
   </entry>
 </feed>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-01 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：The Hacker News / BleepingComputer / Hacker News（滚动检索过去 24 小时）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-09-01">
+<meta property="og:description" content="数据来源：The Hacker News / BleepingComputer / Hacker News（滚动检索过去 24 小时）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-01.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-09-01">
+<meta name="twitter:description" content="数据来源：The Hacker News / BleepingComputer / Hacker News（滚动检索过去 24 小时）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-01</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. Fire Ant 攻陷思科 IOS XR 路由器、TACACS 与 Linux 主机，窃取凭证并抹除日志</a></li>
+<li><a href="#s2">2. Aurora 勒索软件运营者用 Cursor AI 编码助手规划攻击</a></li>
+<li><a href="#s3">3. 朝鲜 IT 工人骗局溢出 IT 圈，渗透医疗与销售岗位</a></li>
+<li><a href="#s4">4. ValleyRAT 藏身"带签名广告软件"躲避杀软排除名单</a></li>
+<li><a href="#s5">5. FBI 捣毁支撑中方网络间谍的 QTYF 代理/路由基础设施</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>数据来源：The Hacker News / BleepingComputer / Hacker News（滚动检索过去 24 小时）
+筛选规则：按严重度、新颖性、影响面、时效性综合打分（0–100），取前 5 条纯新闻。</p>
+</blockquote>
+<hr />
+<h2 id="s1">1. Fire Ant 攻陷思科 IOS XR 路由器、TACACS 与 Linux 主机，窃取凭证并抹除日志</h2>
+<ul>
+<li><strong>评分：95 / 100</strong></li>
+<li><strong>来源：The Hacker News</strong> — <a href="https://thehackernews.com/2026/08/china-linked-fire-ant-hijacks-cisco.html">China-Linked Fire Ant Hijacks Cisco Routers to Steal Credentials and Blind Security Logs</a></li>
+<li><strong>摘要：</strong> 与中方有关的间谍组织 Fire Ant（即 UNC3886 重叠集群）将长期行动从 VMware 超融合扩展至思科 IOS XR 路由器、TACACS 认证服务器与 Linux 管理主机，把路由器变成流量采集与凭证收割平台。其新工具 TacTap 通过向 <code>tac_plus</code> 进程注入恶意库来挂钩连接函数、窃取明文凭证（单字节 XOR 0xEF 混淆），并用 GRE 隧道、命令输出 <code>| exclude</code> 过滤与日志抑制等手段让防守方"看不见"攻击者。Sygnia 评估其已借此获得通往关键基础设施等高价值网络的"侦察视角"，但目前仅观察到扫描与连接尝试，尚未确认被攻陷。</li>
+</ul>
+<h2 id="s2">2. Aurora 勒索软件运营者用 Cursor AI 编码助手规划攻击</h2>
+<ul>
+<li><strong>评分：93 / 100</strong></li>
+<li><strong>来源：The Hacker News</strong> — <a href="https://thehackernews.com/2026/08/aurora-ransomware-operators-use-cursor.html">Aurora Ransomware Operators Use Cursor AI in Attacks Against 10 Targets</a></li>
+<li><strong>摘要：</strong> 俄语背景的 Aurora（Aur0ra）勒索团伙被 CloudSEK 与 Gambit Security 发现系统性使用 SpaceX 的 AI 编码助手 Cursor（底层为 Anthropic Claude Sonnet）规划与执行攻击，泄露目录显示其 4–7 月针对 9 国 20+ 组织、已上泄露站 4 家。Gambit 还原出该运营者让 Cursor Agent 用俄语拟定完整的 AD CS（Active Directory 证书服务）利用方案，并自动执行 Nmap/NetExec/PetitPotam/NTLM Relay/Certipy 等任务，多数命令首试失败但经多轮修正后达成目标。这是首例被公开记录、勒索运营者把攻击规划"外包"给 AI Agent 的案例，进一步模糊人机行动边界与溯源归因。</li>
+</ul>
+<h2 id="s3">3. 朝鲜 IT 工人骗局溢出 IT 圈，渗透医疗与销售岗位</h2>
+<ul>
+<li><strong>评分：91 / 100</strong></li>
+<li><strong>来源：The Hacker News</strong> — <a href="https://thehackernews.com/2026/08/north-korean-job-fraud-expands-beyond.html">North Korean Job Fraud Expands Beyond IT Into Healthcare and Sales</a></li>
+<li><strong>摘要：</strong> Huntress 与 Recorded Future 发现朝鲜（DPRK）IT 工人骗局已不再局限于软件技术岗，近期出现伪装为中文身份的医护人员、销售与市场岗雇员，借盗窃/伪造证件、Astrill VPN 与 IPRoyal 代理入职。调查中还发现 PiKVM / Guermok USB 采集卡等 KVM 农场设备、用 ChatGPT 实时生成面试话术、以及盗用已被捕者证件照冒名顶替入职的手法。该"内部人威胁"持续为平壤的核导计划输送收入，并已扩展至医疗、生物技术等受强监管行业，传统背景调查与面试环节需前置布防。</li>
+</ul>
+<h2 id="s4">4. ValleyRAT 藏身"带签名广告软件"躲避杀软排除名单</h2>
+<ul>
+<li><strong>评分：90 / 100</strong></li>
+<li><strong>来源：The Hacker News</strong> — <a href="https://thehackernews.com/2026/08/valleyrat-backdoor-hides-in-signed.html">ValleyRAT Backdoor Hides in Signed Adware That Users Add to Antivirus Exclusions</a></li>
+<li><strong>摘要：</strong> 卡巴斯基披露 Silver Fox 将 ValleyRAT（Winos 4.0）后门伪装成一款真实存在的中国桌面壁纸工具 QN Wallpaper 的"带签名广告软件"版本，通过 DLL 侧加载（<code>libcef.dll</code>）在合法签名进程内运行以绕开用户加白的杀软排除项。安装链会写入 <code>DisableAntiSpyware</code> 注册表关闭 Windows Defender、写入自启动项，并能将自身进程标记为"关键进程"——强行结束即触发蓝屏；Kaspersky 全年已检测到该后门相关样本 10 万+ 次、波及 1500+ 独立用户，主要在中国与印度。案例凸显"把可疑软件加入杀软白名单"这一常见习惯反而成为致命信任漏洞。</li>
+</ul>
+<h2 id="s5">5. FBI 捣毁支撑中方网络间谍的 QTYF 代理/路由基础设施</h2>
+<ul>
+<li><strong>评分：88 / 100</strong></li>
+<li><strong>来源：The Hacker News（每周综述"Threat of the Week"）</strong> — <a href="https://thehackernews.com/2026/08/weekly-recap-chinese-spy-proxy-ai.html">Weekly Recap: Chinese Spy Proxy, AI Agents Go Off-Task, Router Backdoors and More</a></li>
+<li><strong>摘要：</strong> 美国 FBI 捣毁了与中方网络间谍活动相关的"技术军需商"基础设施：QTYF 组织被指构建并运营 QScan 与 QTRouter 框架，对外提供侦察、代理管理与作战路由能力，曾被用于瞄准美国关键基础设施。此次行动切断了中方 APT 常用的"设备链代理跳板"供应链一环，与近期 NCSC-UK 等多国关于"中方黑客转向劫持 SOHO 路由器/IoT 设备隐藏来源"的联合预警相互呼应，提示防守方需以动态威胁情报与零信任替代静态 IP 黑名单。</li>
+</ul>
+<hr />
+<p><em>本次共筛选 15 条新闻候选，最高分 95 分。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-08-31.html">← 前一天 2026-08-31</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
