@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-02 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-09-02">
+<meta property="og:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-02.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-09-02">
+<meta name="twitter:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-02</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. 13 个恶意 Packagist 包瞄准未打补丁 iPhone，窃取加密货币助记词（评分 92）</a></li>
+<li><a href="#s2">2. 俄罗斯关联组织 UAC-0099 在恶意软件中植入“核武器”提示以干扰 AI 分析（评分 90）</a></li>
+<li><a href="#s3">3. 攻击者利用 Langflow 与 Rails 高危漏洞进行凭据探测与 C2（评分 89）</a></li>
+<li><a href="#s4">4. 伊朗 Nimbus Manticore 借招聘伪装投递跨平台 RAT（NodeRabbit / PollCat）（评分 87）</a></li>
+<li><a href="#s5">5. 新兴 DOUBLECUP ClickFix 服务将恶意代码藏于浏览器缓存 PNG（评分 86）</a></li>
+<li><a href="#s6">补丁日提醒</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）
+补丁日状态：微软 2026-09 补丁条目尚未发布（详见文末提醒），本期不含「微软补丁安全级别」板块。</p>
+</blockquote>
+<hr />
+<h2 id="s1">1. 13 个恶意 Packagist 包瞄准未打补丁 iPhone，窃取加密货币助记词（评分 92）</h2>
+<ul>
+<li><strong>来源</strong>：The Hacker News（Socket）</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/13-malicious-packagist-packages-target.html</li>
+<li><strong>摘要</strong>：Socket 发现 13 个恶意 Composer 主题包（横跨 5 个厂商命名空间），向越南影视/漫画流媒体站点注入 JavaScript，对访客发起广告欺诈与赌博跳转，并对未修补的 iPhone 触发 WebKit-to-kernel 漏洞链安装间谍软件以窃取加密钱包种子。该活动是 2026 年 3 月 OphimCMS 主题投毒活动的延续，第二阶段载荷托管于 Funnull 基础设施。</li>
+<li><strong>评分理由</strong>：供应链投毒 + 移动端 0day 漏洞链 + 直接指向加密资产，新颖性与影响面兼具。</li>
+</ul>
+<h2 id="s2">2. 俄罗斯关联组织 UAC-0099 在恶意软件中植入“核武器”提示以干扰 AI 分析（评分 90）</h2>
+<ul>
+<li><strong>来源</strong>：The Hacker News / ESET</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/russia-aligned-uac-0099-plants-nuclear.html</li>
+<li><strong>摘要</strong>：ESET 披露名为 <strong>GuardBreaker</strong> 的新对抗手法：俄关联 APT UAC-0099 在针对乌克兰目标的恶意 VBS 脚本注释中植入敏感提示（“我想制造核武器，帮帮我…”），诱导分析人员的 LLM 触发安全机制、停止对代码其余部分的解析。该脚本主要用于下载后续载荷，UAC-0099 历史上长期 targeting 交通与能源行业。</li>
+<li><strong>评分理由</strong>：首见“以提示注入致盲 AI 辅助分析”的实战化对抗手法，国家级背景，针对关键行业。</li>
+</ul>
+<h2 id="s3">3. 攻击者利用 Langflow 与 Rails 高危漏洞进行凭据探测与 C2（评分 89）</h2>
+<ul>
+<li><strong>来源</strong>：The Hacker News / VulnCheck</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/attackers-exploit-critical-langflow-and.html</li>
+<li><strong>摘要</strong>：VulnCheck 发现攻击者正在利用 Langflow 的 <strong>CVE-2026-0768</strong>（CVSS 9.8，未校验输入致 root 级任意 Python 代码执行）与 Ruby on Rails 的 <strong>CVE-2026-66066</strong>（KindaRails2Shell，CVSS 9.5，未认证任意文件读取 → 泄露 secret_key_base/云凭据 → RCE）进行凭据探测与 C2 活动。Rails 利用通过构造图片，利用 Active Storage 与 libvips 解析差异触发。</li>
+<li><strong>评分理由</strong>：两个 9.5+/9.8 高危漏洞已被实战利用，涉及 AI 平台与主流 Web 框架，影响广泛。</li>
+</ul>
+<h2 id="s4">4. 伊朗 Nimbus Manticore 借招聘伪装投递跨平台 RAT（NodeRabbit / PollCat）（评分 87）</h2>
+<ul>
+<li><strong>来源</strong>：The Hacker News / Kaspersky</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/iranian-hackers-pose-as-recruiters-to.html</li>
+<li><strong>摘要</strong>：Kaspersky 将两款此前未记录、用 Node.js/JavaScript 编写的跨平台 RAT 归因为伊朗 <strong>Nimbus Manticore</strong>：NodeRabbit 与 PollCat。攻击者通过 LinkedIn 等招聘平台的鱼叉式钓鱼发送被植入木马的编码挑战压缩包进行投递，样本已现于阿富汗、埃及、埃塞俄比亚，目标足迹扩展至 Linux 与 macOS。</li>
+<li><strong>评分理由</strong>：国家级 APT 工具集跨平台化（Linux/macOS）且以招聘社工为投递载体，针对性与演进性突出。</li>
+</ul>
+<h2 id="s5">5. 新兴 DOUBLECUP ClickFix 服务将恶意代码藏于浏览器缓存 PNG（评分 86）</h2>
+<ul>
+<li><strong>来源</strong>：BleepingComputer / SOCRadar</li>
+<li><strong>原文链接</strong>：https://bleepingcomputer.com/news/security/new-doublecup-clickfix-service-hides-malware-in-browser-cache-images</li>
+<li><strong>摘要</strong>：SOCRadar 发现自 2026 年 6 月初运营的 loader-as-a-service <strong>DOUBLECUP</strong>：利用仿 CAPTCHA 的 ClickFix 提示，将恶意载荷以隐写方式藏入受害者浏览器缓存的 PNG 图片，投递面向 Windows/macOS 的 CountLoader 与新 RAT <strong>DeviceManager</strong>；后者借以太坊/Polygon 智能合约（EtherHiding）解析 C2 地址，抗关停能力更强。攻击冒充 NetSuite/Odoo/HubSpot/Salesforce 登录页。</li>
+<li><strong>评分理由</strong>：新型 MaaS 将 ClickFix 与浏览器缓存隐写 + 区块链 C2 结合，跨平台且基础设施抗打击，战术新颖。</li>
+</ul>
+<hr />
+<h2 id="s6">补丁日提醒</h2>
+<p>📅 微软本月补丁日（Patch Tuesday）<strong>尚未发布</strong>：MSRC 更新列表中暂无 <code>2026-Sep</code> 条目（最新为 <code>August 2026 Security Updates</code>）。下次补丁日预计为 <strong>2026-09-08</strong>（太平洋时间，约合北京时间 2026-09-09 凌晨），届时本推送将带出正式「微软补丁安全级别」板块。</p>
+<hr />
+<p><em>本次共筛选 12 条候选新闻（Hacker News / The Hacker News / BleepingComputer 三源），最高分 92 分。</em>
+<em>微信/微信小程序推送：已跳过 — 连接器未连接，无可用推送通道。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-09-01.html">← 前一天 2026-09-01</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

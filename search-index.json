@@ -1,5 +1,17 @@
 [
  {
+  "date": "2026-09-02",
+  "url": "daily/daily_news_2026-09-02.html",
+  "title": "网络安全日报 2026-09-02",
+  "score": 92,
+  "cves": [
+   "CVE-2026-0768",
+   "CVE-2026-66066"
+  ],
+  "summary": "数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）",
+  "text": "数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时） 补丁日状态：微软 202609 补丁条目尚未发布（详见文末提醒），本期不含「微软补丁安全级别」板块。 来源：The Hacker News（Socket） 原文链接：https://thehackernews.com/2026/09/13maliciouspackagistpackagestarget.html 摘要：Socket 发现 13 个恶意 Composer 主题包（横跨 5 个厂商命名空间），向越南影视/漫画流媒体站点注入 JavaScript，对访客发起广告欺诈与赌博跳转，并对未修补的 iPhone 触发 WebKittokernel 漏洞链安装间谍软件以窃取加密钱包种子。该活动是 2026 年 3 月 OphimCMS 主题投毒活动的延续，第二阶段载荷托管于 Funnull 基础设施。 评分理由：供应链投毒 + 移动端 0day 漏洞链 + 直接指向加密资产，新颖性与影响面兼具。 来源：The Hacker News / ESET 原文链接：https://thehackernews.com/2026/09/russiaaligneduac0099plantsnuclear.html 摘要：ESET 披露名为 GuardBreaker 的新对抗手法：俄关联 APT UAC0099 在针对乌克兰目标的恶意 VBS 脚本注释中植入敏感提示（“我想制造核武器，帮帮我…”），诱导分析人员的 LLM 触发安全机制、停止对代码其余部分的解析。该脚本主要用于下载后续载荷，UAC0099 历史上长期 targeting 交通与能源行业。 评分理由：首见“以提示注入致盲 AI 辅助分析”的实战化对抗手法，国家级背景，针对关键行业。 来源：The Hacker News / VulnCheck 原文链接：https://thehackernews.com/2026/09/attackersexploitcriticallangflowand.html 摘要：VulnCheck 发现攻击者正在利用 Langflow 的 CVE20260768（CVSS 9.8，未校验输入致 root 级任意 Python 代码执行）与 Ruby on Rails 的 CVE202666066（KindaRails2Shell，CVSS 9.5，未认证任意文件读取 → 泄露 secretkeybase/云凭据 → RCE）进行凭据探测与 C2 活动。Rails 利用通过构造图片，利用 Active Storage 与 libvips 解析差异触发。 评分理由：两个 9.5+/9.8 高危漏洞已被实战利用，涉及 AI 平台与主流 Web 框架，影响广泛。 来源：The Hacker News / Kaspersky 原文链接：https://thehackernews.com/2026/09/iranianhackersposeasrecruitersto.html 摘要：Kaspersky 将两款此前未记录、用 Node.js/JavaScript 编写的跨平台 RAT 归因为伊朗 Nimbus Manticore：NodeRabbit 与 PollCat。攻击者通过 LinkedIn 等招聘平台的鱼叉式钓鱼发送被植入木马的编码挑战压缩包进行投递，样本已现于阿富汗、埃及、埃塞俄比亚，目标足迹扩展至 Linux 与 macOS。 评分理由：国家级 APT 工具集跨平台化（Linux/macOS）且以招聘社工为投递载体，针对性与演进性突出。 来源：BleepingComputer / SOCRadar 原文链接：https://bleepingcomputer.com/news/security/newdoublecupclickfixservicehidesmalwareinbrowsercacheimages 摘要：SOCRadar 发现自 2026 年 6 月初运营的 loaderasaservice DOUBLECUP：利用仿 CAPTCHA 的 ClickFix 提示，将恶意载荷以隐写方式藏入受害者浏览器缓存的 PNG 图片，投递面向 Windows/macOS 的 CountLoader 与新 RAT DeviceManager；后者借以太坊/Polygon 智能合约（EtherHiding）解析 C2 地址，抗关停能力更强。攻击冒充 NetSuite/Odoo/HubSpot/Salesforce 登录页。 评分理由：新型 MaaS 将 ClickFix 与浏览器缓存隐写 + 区块链 C2 结合，跨平台且基础设施抗打击，战术新颖。 📅 微软本月补丁日（Patch Tuesday）尚未发布：MSRC 更新列表中暂无 2026Sep 条目（最新为 August 2026 Security Updates）。下次补丁日预计为 20260908（太平洋时间，约合北京时间 20260909 凌晨），届时本推送将带出正式「微软补丁安全级别」板块。 本次共筛选 12 条候选新闻（Hacker News / The Hacker News / BleepingComputer 三源），最高分 92 分。 微信/微信小程序推送：已跳过 — 连接器未连接，无可用推送通道。"
+ },
+ {
   "date": "2026-09-01",
   "url": "daily/daily_news_2026-09-01.html",
   "title": "网络安全日报 2026-09-01",
