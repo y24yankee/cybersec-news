@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-03 | 网络安全新闻中心</title>
+<meta name="description" content="自动推送 · 数据来源：The Hacker News、BleepingComputer、Hacker News（news.ycombinator.com）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-09-03">
+<meta property="og:description" content="自动推送 · 数据来源：The Hacker News、BleepingComputer、Hacker News（news.ycombinator.com）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-03.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-09-03">
+<meta name="twitter:description" content="自动推送 · 数据来源：The Hacker News、BleepingComputer、Hacker News（news.ycombinator.com）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-03</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">🔝 Top 5 值得关注的安全新闻</a></li>
+<li><a href="#s7">统计</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>自动推送 · 数据来源：The Hacker News、BleepingComputer、Hacker News（news.ycombinator.com）
+评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性（补丁严重级别数据不计入新闻评分，仅在补丁日正式发布后作为文末独立板块呈现）</p>
+</blockquote>
+<hr />
+<h2 id="s1">🔝 Top 5 值得关注的安全新闻</h2>
+<h3 id="s2">1. SonicWall SMA 1000 两枚 0day 被链式利用，可无凭证接管企业 VPN 网关</h3>
+<ul>
+<li><strong>评分：96 / 100</strong></li>
+<li><strong>来源：The Hacker News</strong></li>
+<li><strong>理由：</strong> 预认证 SSRF（CVE-2026-83548，CVSS 10.0）可链式命令注入实现未授权 RCE，且已被确认在野利用、CISA 同日纳入 KEV，直击网络边界核心设备。</li>
+<li><strong>摘要：</strong> SonicWall 于 9 月 1 日披露 SMA 1000 系列（6210/7210/8200v）两枚零日漏洞 CVE-2026-83548（预认证 SSRF，CVSS 10.0）与 CVE-2026-83549（管理控制台命令注入，CVSS 7.8），PSIRT 确认已被链式利用实现未授权远程代码执行。SonicWall 已发布热修补（12.4.3-03526 / 12.5.0-02952），并建议若发现失陷迹象则重装设备、重置全部口令与 TOTP。CISA 已于 9 月 2 日将 CVE-2026-83548 加入 KEV，要求 9 月 5 日前完成修复。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/09/attackers-exploit-two-sonicwall-sma.html</li>
+</ul>
+<h3 id="s3">2. JFrog Artifactory 认证绕过漏洞（CVE-2026-82329，CVSS 9.8）披露后数日即被武器化</h3>
+<ul>
+<li><strong>评分：94 / 100</strong></li>
+<li><strong>来源：The Hacker News</strong></li>
+<li><strong>理由：</strong> 默认配置下无需认证即可获取管理员权限，处于软件供应链核心节点，披露到在野利用仅约 4 天，可被用于投毒下游制品。</li>
+<li><strong>摘要：</strong> watchTowr 报告，攻击者自 9 月 1 日起已在野利用 JFrog Artifactory 认证弱点 CVE-2026-82329（CVSS 9.8），在默认配置、无额外 join key 的实例上伪造管理员令牌、枚举用户与凭据拓扑。该漏洞位于 JFrog Access 组件，JFrog 已于 8 月 28 日随 Artifactory 7.161.20 修复。影响自托管部署（SaaS 不受影响），攻击者可篡改构建流水线、向客户推送恶意制品，属典型软件供应链风险。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html</li>
+</ul>
+<h3 id="s4">3. Sangoma Switchvox 未授权 SQL 注入 RCE（CVE-2026-9586，CVSS 9.3）遭在野利用</h3>
+<ul>
+<li><strong>评分：90 / 100</strong></li>
+<li><strong>来源：The Hacker News</strong></li>
+<li><strong>理由：</strong> 约 4000 台暴露实例面临无凭证 RCE，自 8 月 30 日起已观测到真实利用并部署反向 Shell，影响面广。</li>
+<li><strong>摘要：</strong> Horizon3.ai 与 SRA Labs 报告，Sangoma Switchvox SMB 8.3 存在未授权 SQL 注入漏洞 CVE-2026-9586（CVSS 9.3），攻击者可借此以 PostgreSQL 超级用户身份执行任意代码、窃取会话签名密钥并伪造任意用户身份。Sangoma 已于 7 月 14 日发布 8.4.0.2 修复，但自 8 月 30 日起蜜罐已记录到针对该漏洞的真实利用尝试，主要部署反向 Shell 与 Base64 编码命令。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/09/attackers-exploit-critical-switchvox.html</li>
+</ul>
+<h3 id="s5">4. Langflow 与 Ruby on Rails 高危漏洞被定向利用以窃取云/API 凭据</h3>
+<ul>
+<li><strong>评分：89 / 100</strong></li>
+<li><strong>来源：The Hacker News</strong></li>
+<li><strong>理由：</strong> 两枚 Critical 漏洞（CVSS 9.8 / 9.5）针对 AI 开发平台与主流 Web 框架，检测量 50→360 激增，直接窃取 OpenAI/AWS 等密钥，影响云环境信任边界。</li>
+<li><strong>摘要：</strong> VulnCheck 报告，威胁行为者正在利用 Langflow 的 CVE-2026-0768（CVSS 9.8，root 级任意 Python 代码执行）与 Ruby on Rails 的 CVE-2026-66066（KindaRails2Shell，CVSS 9.5，通过 libvips 解析差异读取密钥并实现 RCE）。攻击流量主要来自俄罗斯，目标是查询 LANGFLOW_SUPERUSER、OPENAI_API<em>、AWS_SECRET</em> 等环境变量并部署凭据窃取器、SimpleHelp 与 XMR 挖矿。注意：VulnCheck 测试发现即便打过补丁（Rails 8.1.3.1），Marshal 反序列化 RCE 链仍可在有效签名下触发。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/09/attackers-exploit-critical-langflow-and.html</li>
+</ul>
+<h3 id="s6">5. PaperCut 就遭利用的 0day 链发布第二版紧急补丁</h3>
+<ul>
+<li><strong>评分：88 / 100</strong></li>
+<li><strong>来源：BleepingComputer</strong></li>
+<li><strong>理由：</strong> 打印管理软件被利用实现预认证 RCE，攻击者绕过首版补丁，CISA 已将 CVE-2026-82078/81578 加入 KEV，企业打印基础设施长期被低估。</li>
+<li><strong>摘要：</strong> PaperCut 就 PaperCut NG/MF 两枚被利用漏洞发布第二版紧急补丁：CVE-2026-81578（认证绕过，CVSS 8.8）可触发管理后台操作，链式 CVE-2026-82078（不安全动态类加载，CVSS 9.4）实现远程代码执行。watchTowr 完整复现漏洞并发现多处补丁绕过，Huntress 在两个客户环境观察到利用，攻击者还滥用外部用户查询功能转储数据库表。PaperCut 敦促所有客户（含已打首补者）升级至 Release 2，并将 Web 管理接口限制为可信 IP。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/papercut-releases-second-emergency-patch-for-exploited-flaws/</li>
+</ul>
+<hr />
+<h2 id="s7">统计</h2>
+<p>本次共筛选 <strong>15</strong> 条新闻候选（The Hacker News / BleepingComputer / Hacker News 各 5 条），按评分取前 5 条；最高分 <strong>96</strong> 分（SonicWall SMA 1000 链式 0day 在野利用）。</p>
+<blockquote>
+<p>说明：微信小程序推送通道当前未连接（企业微信 connector 不可用），本报告已生成本地文件 <code>daily_news_2026-09-03.md</code>，未实际发送微信消息。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-09-02.html">← 前一天 2026-09-02</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

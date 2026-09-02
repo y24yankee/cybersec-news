@@ -1,5 +1,23 @@
 [
  {
+  "date": "2026-09-03",
+  "url": "daily/daily_news_2026-09-03.html",
+  "title": "网络安全日报 2026-09-03",
+  "score": 96,
+  "cves": [
+   "CVE-2026-0768",
+   "CVE-2026-66066",
+   "CVE-2026-81578",
+   "CVE-2026-82078",
+   "CVE-2026-82329",
+   "CVE-2026-83548",
+   "CVE-2026-83549",
+   "CVE-2026-9586"
+  ],
+  "summary": "自动推送 · 数据来源：The Hacker News、BleepingComputer、Hacker News（news.ycombinator.com）",
+  "text": "自动推送 · 数据来源：The Hacker News、BleepingComputer、Hacker News（news.ycombinator.com） 评分标准：严重性  新颖性  影响范围  时效性（补丁严重级别数据不计入新闻评分，仅在补丁日正式发布后作为文末独立板块呈现） 评分：96 / 100 来源：The Hacker News 理由： 预认证 SSRF（CVE202683548，CVSS 10.0）可链式命令注入实现未授权 RCE，且已被确认在野利用、CISA 同日纳入 KEV，直击网络边界核心设备。 摘要： SonicWall 于 9 月 1 日披露 SMA 1000 系列（6210/7210/8200v）两枚零日漏洞 CVE202683548（预认证 SSRF，CVSS 10.0）与 CVE202683549（管理控制台命令注入，CVSS 7.8），PSIRT 确认已被链式利用实现未授权远程代码执行。SonicWall 已发布热修补（12.4.303526 / 12.5.002952），并建议若发现失陷迹象则重装设备、重置全部口令与 TOTP。CISA 已于 9 月 2 日将 CVE202683548 加入 KEV，要求 9 月 5 日前完成修复。 原文链接： https://thehackernews.com/2026/09/attackersexploittwosonicwallsma.html 评分：94 / 100 来源：The Hacker News 理由： 默认配置下无需认证即可获取管理员权限，处于软件供应链核心节点，披露到在野利用仅约 4 天，可被用于投毒下游制品。 摘要： watchTowr 报告，攻击者自 9 月 1 日起已在野利用 JFrog Artifactory 认证弱点 CVE202682329（CVSS 9.8），在默认配置、无额外 join key 的实例上伪造管理员令牌、枚举用户与凭据拓扑。该漏洞位于 JFrog Access 组件，JFrog 已于 8 月 28 日随 Artifactory 7.161.20 修复。影响自托管部署（SaaS 不受影响），攻击者可篡改构建流水线、向客户推送恶意制品，属典型软件供应链风险。 原文链接： https://thehackernews.com/2026/09/attackersexploitcriticaljfrog.html 评分：90 / 100 来源：The Hacker News 理由： 约 4000 台暴露实例面临无凭证 RCE，自 8 月 30 日起已观测到真实利用并部署反向 Shell，影响面广。 摘要： Horizon3.ai 与 SRA Labs 报告，Sangoma Switchvox SMB 8.3 存在未授权 SQL 注入漏洞 CVE20269586（CVSS 9.3），攻击者可借此以 PostgreSQL 超级用户身份执行任意代码、窃取会话签名密钥并伪造任意用户身份。Sangoma 已于 7 月 14 日发布 8.4.0.2 修复，但自 8 月 30 日起蜜罐已记录到针对该漏洞的真实利用尝试，主要部署反向 Shell 与 Base64 编码命令。 原文链接： https://thehackernews.com/2026/09/attackersexploitcriticalswitchvox.html 评分：89 / 100 来源：The Hacker News 理由： 两枚 Critical 漏洞（CVSS 9.8 / 9.5）针对 AI 开发平台与主流 Web 框架，检测量 50→360 激增，直接窃取 OpenAI/AWS 等密钥，影响云环境信任边界。 摘要： VulnCheck 报告，威胁行为者正在利用 Langflow 的 CVE20260768（CVSS 9.8，root 级任意 Python 代码执行）与 Ruby on Rails 的 CVE202666066（KindaRails2Shell，CVSS 9.5，通过 libvips 解析差异读取密钥并实现 RCE）。攻击流量主要来自俄罗斯，目标是查询 LANGFLOWSUPERUSER、OPENAIAPI、AWSSECRET 等环境变量并部署凭据窃取器、SimpleHelp 与 XMR 挖矿。注意：VulnCheck 测试发现即便打过补丁（Rails 8.1.3.1），Marshal 反序列化 RCE 链仍可在有效签名下触发。 原文链接： https://thehackernews.com/2026/09/attackersexploitcriticallangflowand.html 评分：88 / 100 来源：BleepingComputer 理由： 打印管理软件被利用实现预认证 RCE，攻击者绕过首版补丁，CISA 已将 CVE202682078/81578 加入 KEV，企业打印基础设施长期被低估。 摘要： PaperCut 就 PaperCut NG/MF 两枚被利用漏洞发布第二版紧急补丁：CVE202681578（认证绕过，CVSS 8.8）可触发管理后台操作，链式 CVE202682078（不安全动态类加载，CVSS 9.4）实现远程代码执行。watchTowr 完整复现漏洞并发现多处补丁绕过，Huntress 在两个客户环境观察到利用，攻击者还滥用外部用户查询功能转储数据库表。PaperCut 敦促所有客户（含已打首补者）升级至 Release 2，并将 Web 管理接口限制为可信 IP。 原文链接： https://www.bleepingcomputer.com/news/security/papercutreleasessecondemergencypatchforexploitedflaws/ 本次共筛选 15 条新闻候选（The Hacker News / BleepingComputer / Hacker News 各 5 条），按评分取前 5 条；最高分 96 分（SonicWall SMA 1000 链式 0day 在野利用）。 说明：微信小程序推送通道当前未连接（企业微信 connector 不可用），本报告已生成本地文件 dailynews20260903.md，未实际发送微信消息。"
+ },
+ {
   "date": "2026-09-02",
   "url": "daily/daily_news_2026-09-02.html",
   "title": "网络安全日报 2026-09-02",
