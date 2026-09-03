@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-09-03T00:00:00Z</updated>
+  <updated>2026-09-04T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-09-04</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-04.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-04.html</id>
+    <updated>2026-09-04T00:00:00Z</updated>
+    <summary>检索来源：The Hacker News、BleepingComputer、Hacker News (news.ycombinator.com)</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-09-03</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-03.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-16.html</id>
     <updated>2026-08-16T00:00:00Z</updated>
     <summary>生成时间：20260816 06:55 CST</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-08-15</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-15.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-15.html</id>
-    <updated>2026-08-15T00:00:00Z</updated>
-    <summary>评分：94 分（理由：最高 severity、无认证 RCE、已被威胁情报公司 Defused 确认在野利用，且 SAP Commerce Cloud 服务全球顶级品牌。）</summary>
   </entry>
 </feed>

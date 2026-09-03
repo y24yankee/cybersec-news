@@ -1,5 +1,34 @@
 [
  {
+  "date": "2026-09-04",
+  "url": "daily/daily_news_2026-09-04.html",
+  "title": "网络安全日报 2026-09-04",
+  "score": 96,
+  "cves": [
+   "CVE-2025-31277",
+   "CVE-2025-43529",
+   "CVE-2025-68700",
+   "CVE-2025-69286",
+   "CVE-2026-12569",
+   "CVE-2026-19949",
+   "CVE-2026-24770",
+   "CVE-2026-28797",
+   "CVE-2026-42271",
+   "CVE-2026-45312",
+   "CVE-2026-48710",
+   "CVE-2026-50656",
+   "CVE-2026-69414",
+   "CVE-2026-81578",
+   "CVE-2026-82078",
+   "CVE-2026-82329",
+   "CVE-2026-83548",
+   "CVE-2026-83549",
+   "CVE-2026-9586"
+  ],
+  "summary": "检索来源：The Hacker News、BleepingComputer、Hacker News (news.ycombinator.com)",
+  "text": "检索来源：The Hacker News、BleepingComputer、Hacker News (news.ycombinator.com) 候选新闻 15 条 → 评分排序 → 取 Top 5 生成时间：20260904 07:00 (北京时间) 来源：The Hacker News 评分理由：EDR 产品自身 0day + 公开可用 PoC + 厂商尚无补丁，攻击门槛直接降到地板。 摘要：安全研究者 Chaotic Eclipse（又名 INFINITE NIGHTMARE / MSNightmare）公开了代号 FalconFlank 的 CrowdStrike Falcon Sensor 本地提权 0day，该漏洞滥用 Falcon 的\"Office 恶意宏修复\"逻辑实现权限提升，PoC 在完全打完补丁的 Windows 11 25H2 与 Windows Server 2025 上均可工作。同一研究者近期还接连放出针对 Kaspersky Endpoint Security for Windows 的 HardBreacher（卡巴斯基已通过自动病毒库更新修复）和 Microsoft Defender 的 ShieldBreak（CVE202669414，微软至今未修复，被评估为 CVE202650656 \"RoguePlanet\" 的补丁绕过）。CrowdStrike 截至发稿未公开回应。 风险要点：Falcon 深度集成于操作系统内核层，广泛部署于政府、金融、能源与关键基础设施。攻击者一旦通过钓鱼或凭据窃取获得任意普通用户权限，即可借此升级到 SYSTEM、绕过监控、篡改日志。 原文链接：https://thehackernews.com/2026/09/researcherreleasesfalconflankpoc.html 来源：BleepingComputer / Hacker News 头条讨论 评分理由：北美史上规模最大的身份证件泄露之一，且数据仍在实时增长，说明源头泄露尚未止血。 摘要：Brian Krebs 于 9 月 1 日披露俄语犯罪论坛 Exploit 上出现名为 Nexus 的身份盗用服务，声称持有 1.53 亿+ 美国与加拿大驾照、1000 万+ 其他身份证、300 万+ 旅行/国际证件及 57.9 万份医疗卡。FBI 于 9 月 2 日确认新奥尔良分局已就疑似涉事的身份核验服务商 IDScan.net 立案调查。Krebs 向 9 名当事人核实数据真实有效，且时间戳均对应其近期租车、酒店入住等出示证件的场合；其本人与母亲的驾照扫描时间仅相差数秒（同一 Hertz 柜台）。 风险要点：泄露文件不仅含正反面常规扫描，还包含红外与紫外光谱版本——这类图像可让克隆证件通过防伪全息校验。数据库 24 小时内新增近 40 万条，Krebs 报道发布后 Nexus 站点即下线。IDScan.net 自称每月处理 2100 万+ 次核验、覆盖全球 2 万+ 站点，客户含 Hertz、Target、FedEx、7Eleven、DraftKings、Caesars 等。数据库中还出现美国国防部长 Pete Hegseth 与一名 FBI 助理局长的记录。 原文链接：https://krebsonsecurity.com/2026/09/fbiprobesserviceselling153mdriverslicenses/ 补充报道：https://arstechnica.com/security/2026/09/mydriverslicenseisoneof153millionforsaleonanewdarkwebsite/ 来源：The Hacker News / SecurityWeek 评分理由：供应链攻击下沉到互联网路由层，绕过 HTTPS 全部信任假设，手法极具新颖性。 摘要：Softaculous 复盘披露，2026 年 8 月 28 日 20:57 UTC 起，AS62390（NexonHost）经中转商 AS6204（Zet.net）宣告 162.55.80.0/24——Hetzner 合法 162.55.0.0/16 的更精细前缀，并在 AS Path 尾部保留 Hetzner 的 AS24940 伪装原始来源。由于 BGP 选路偏好更精细前缀，全网约 72% 的路由观测点被导向攻击者服务器。劫持在 33 小时窗口内分两波持续约 22 小时，期间产生约 10600 次路由撤回。 风险要点：攻击者因劫持同时截获了证书颁发机构的域名归属校验流量，成功通过 Let's Encrypt 自动 DCV 拿到 26 个 Softaculous/Virtualizor 域名的真实有效证书，因此受害主机更新时零告警、零签名校验失败（因为根本没有签名校验）。恶意包向三个合法 Virtualizor 文件注入命令，添加攻击者 SSH 公钥到 root、安装 Java 17 运行时执行 payload、通过 javajreupdate.service systemd 单元持久化、创建 proxyuser 账户。托管商 AlbaHost 报告 34 台 Virtualizor 节点中 5 台被 root 级入侵。Virtualizor 已发布 Patch 9 及扫描工具。 排查指标：/etc/systemd/system/javajreupdate.service、/tmp/widdow.jar、proxyuser 账户、C2 域名 cdn[.]nerat[.]cc / connect[.]nerat[.]xyz、外连 31.77.220[.]138:2025 原文链接：https://thehackernews.com/2026/09/bgphijackvirtualizormaliciousupdate.html 来源：The Hacker News 评分理由：7 个漏洞全部已确认在野利用，且首次系统性揭示 AI 基础设施成为规模化攻击目标。 摘要：CISA 于 9 月 2 日（周三）将 7 个漏洞加入已知被利用漏洞（KEV）目录，覆盖 SonicWall SMA 1000（CVE202683548，CVSS 10.0）、JFrog Artifactory（CVE202682329）、Sangoma Switchvox（CVE20269586）、Kestra、LiteLLM（CVE202642271 / CVE202648710）、Starlette。依据 BOD 2604，联邦民事机构须在 9 月 5 日前修补大部分漏洞，LiteLLM 与 Starlette 相关项截止 9 月 16 日。 风险要点：微软与 Wiz 联合披露，攻击者通过 CVE202642271 / CVE202648710 攻入 LiteLLM 网关，以 ELF 二进制投递 XMRig 矿工（先指纹识别主机并终止竞争矿进程），并利用先前窃取的数据库信息访问 LiteLLM 后端 PostgreSQL，针对 LiteLLMProxyModelTable、LiteLLMVerificationToken 等表窃取模型配置、上游供应商密钥、代理签发的虚拟 Key；通过修改 /.ssh/authorizedkeys 持久化。另一批攻击针对暴露的 RAGFlow 实例（CVE202645312、CVE202628797、CVE202624770、CVE202568700、CVE202569286）窃取 LLM 供应商密钥。微软建议：按控制平面角色而非孤立应用来监控 AI 工作负载（LiteLLM、Flowise、LangChain、Langflow、ChromaDB、Ollama、Marimo、MCP Server 等均在靶）。 原文链接：https://thehackernews.com/2026/09/cisaaddssevenexploitedflawsas.html 来源：BleepingComputer / Socket 研究报告 评分理由：CMS 主题供应链投毒 + 移动端完整 0interaction 提权链，访问网页即可导致全设备沦陷。 摘要：Socket 研究人员在 Packagist 上发现 13 个恶意 Composer 主题包（涉及 vsmov、vsphim、haiau009、chilltvcms、ophimcms 等命名空间），向越南影视/漫画站点注入 JavaScript，执行移动端广告欺诈与赌博跳转；在 iPhone 上则触发一条 WebKit → 内核利用链植入间谍软件，窃取加密货币钱包助记词。 风险要点：iOS 利用链武器化了两个已被在野利用的 WebKit 漏洞 CVE202531277 与 CVE202543529，随后经 GPU 进程逃逸沙箱、通过 AppleM2ScalerCSCDriver 内核路径提权（苹果已在 iOS/macOS 26.1 修复）。2026 年 8 月 12 日左右重新部署的攻击链主要针对 iOS 18.4 至 18.6.x。成功后收集 keychain、WiFi 密码、短信、通讯录、照片、Cookie、通话与位置历史，AES 加密后外传至轮换 C2 域名。 原文链接：https://www.bleepingcomputer.com/news/security/maliciouspackagistpackagestargetiphonecryptowallets/ | 新闻 | 评分 | 来源 | |||| | AllinOne WP Migration 二阶 SQL 注入 RCE（CVE202619949，CVSS 8.8），320 万站点受影响、仅 35% 已更新 | 85 | The Hacker News | | Gambling Goblin 用恶意 Apache 模块劫持巴西政府/高校站点流量导向赌博页（Check Point 追踪自 2025 中） | 82 | The Hacker News | | Sality P2P 僵尸网络被美司法部联合多国及 CrowdStrike 瓦解，EggJagger 剪贴板劫持窃取约 15 万美元 | 80 | BleepingComputer | | TerminalFix：伪造 Cloudflare CAPTCHA 诱导用户在 Windows Terminal 执行 PowerShell，投递反向隧道后门 | 78 | The Hacker News | | PaperCut 第二次紧急补丁（CVE202681578 + CVE202682078 链式预认证 RCE），CISA KEV 截止 9/14 | 77 | BleepingComputer | | SonicWall SMA1000 双 0day 链式利用（CVE202683548 CVSS 10.0 + CVE202683549） | 76 | BleepingComputer | | Cl0p 公布 40+ PTC Windchill 受害者（CVE202612569），含 Shell、Philips、Fiserv、Zebra | 74 | SecurityWeek | | Aurora 勒索团伙滥用 Cursor AI 辅助入侵，Zig 编写 Windows/ESXi 加密器，分成 54%–79% | 72 | The Hacker News | | Mistral 训练数据退出机制争议：Vibe / 移动端 / StudioAPI 需分别关闭隐私开关 | 58 | Hacker News (id=49535284) | | Silver Fox 借签名广告软件 QN Wallpaper 侧加载投递 ValleyRAT 后门 | 55 | The Hacker News | 本次共筛选 15 条新闻，最高分 96 分。 📅 微软本月补丁日（Patch Tuesday）为 20260908（周二），太平洋时间上午 10:00 发布，约合北京时间 20260909 凌晨 1–2 点。距今约 4 天。 已通过 MSRC 公共 API（https://api.msrc.microsoft.com/cvrf/v3.0/updates）校验：当前 190 条记录中不存在 2026Sep 条目（最新正式条目为 2026Jul — \"July 2026 Security Updates\"），亦无 \"Early\" 预发布占位文档 → 判定为本月正式补丁尚未发布，故本期不生成「微软补丁安全级别」板块。正式补丁数据落地后，对应日期的推送将自动附加该独立板块。"
+ },
+ {
   "date": "2026-09-03",
   "url": "daily/daily_news_2026-09-03.html",
   "title": "网络安全日报 2026-09-03",
