@@ -1,5 +1,19 @@
 [
  {
+  "date": "2026-09-05",
+  "url": "daily/daily_news_2026-09-05.html",
+  "title": "网络安全日报 2026-09-05",
+  "score": 94,
+  "cves": [
+   "CVE-2026-19490",
+   "CVE-2026-6471",
+   "CVE-2026-85046",
+   "cve-2026-6471"
+  ],
+  "summary": "生成时间：20260905 07:00（北京时间）｜数据来源：WebSearch 抓取 The Hacker News / BleepingComputer / Hacker News 近 24–48 小时资讯",
+  "text": "生成时间：20260905 07:00（北京时间）｜数据来源：WebSearch 抓取 The Hacker News / BleepingComputer / Hacker News 近 24–48 小时资讯 评分标准：严重性（漏洞利用/大规模攻击/国家级威胁） 新颖性（0day/新手法） 影响范围（用户量/企业数） 时效性（24h 内）。补丁项不计入新闻评分、不进入 Top5。 评分：94 / 100 评分理由： 已确认野外利用的 V8 类型混淆零日，影响全球数十亿 Chrome 及 Edge/Brave 等 Chromium 用户，且为本年第 6 个被利用的 Chrome 零日，时效性与影响面极高。 来源：BleepingComputer 摘要： Google 发布 Chrome 152.0.7977.82/.83 紧急更新，修复 V8 JavaScript 引擎中已被利用的高危类型混淆漏洞 CVE202685046（CVSS 8.8）。该漏洞可由特制网页触发，在沙箱渲染进程内实现远程代码执行；CISA 已于 9 月 4 日将其加入 KEV 目录。研究者 Salvatore Gulizia（Serotav）于 8 月 4 日报告，本次更新同时修复 11 个其他高危漏洞。 原文链接： https://www.bleepingcomputer.com/news/security/googlewarnsofnewchromezerodayflawexploitedinattacks/ 评分：92 / 100 评分理由： CVSS 9.3 的未认证认证绕过，PoC 公开仅一天即出现多国来源的利用尝试，约 2.2 万台设备暴露，属边界 VPN 网关\"万能钥匙\"级风险。 来源：Field Effect（经 BleepingComputer 报道） 摘要： 漏洞情报公司 Previdian 确认，9 月 3 日其 NetScaler 传感器收到来自澳、美、德三地 IP 的利用请求，匹配 CVE202619490 的 PoC。该漏洞影响配置为 Gateway/AAA 虚拟服务器的 NetScaler ADC 与 Gateway（需启用 SAML），可让未认证攻击者绕过认证获取受保护服务访问权。Citrix 已于 8 月 19 日发布修复版本（14.173.32 / 13.163.21），比利时国家网络安全中心（CCB）同步发出告警。 原文链接： https://fieldeffect.com/blog/earlyexploitationcitrixnetscalervulnerability 评分：89 / 100 评分理由： 揭示全新供应链攻击面，影响多款主流 AI 编码代理，受害者\"打开仓库即触发代码执行\"，新颖性与对研发组织的潜在影响突出。 来源：The Hacker News 摘要： 安全公司 Manifold 披露一类影响命令行 AI 编码代理的缺陷（统称 GitSpawn），攻击者可在仓库的 .git/config 中植入 core.fsmonitor、core.hooksPath 等键，在用户批准信任对话框前即触发代码执行。受影响的代理包括 Claude Code、Codex CLI、Cursor、Qwen Code、Grok（xAI）等；部分路径（如 Claude Code 的 fsmonitor）截至 9 月 1 日仍在受影响版本中，且多家厂商尚未发布对应公告。建议打开未知目录前先检查 .git/config。 原文链接： https://thehackernews.com/2026/09/maliciousgitconfigscanmakeclaude.html 评分：88 / 100 评分理由： 攻击者渗透 Cloudflare 基础设施劫持可信注册表，14 小时内向 Dropbox、Palantir、美国政府与防务客户投送凭证窃取木马，软件供应链信任链被直接突破。 来源：BleepingComputer 摘要： 攻击者获得 Coder 的 Cloudflare 基础设施权限，向 registry.coder.com 的模块池注入未授权服务器，在 8 月 31 日 07:35–21:45 UTC 期间将恶意 Terraform 模块投递给部分用户。这些模块在 provisioner 环境中搜寻云/AI 工具 API 密钥、CI/CD 凭证、OIDC 令牌、SSH 密钥与数据库密码，并外泄至仿冒域名 coderinfra[.]com。Coder 已发布修复版本（2.37.0 / 2.36.4 / 2.35.7 / 2.34.9）并建议轮换所有相关凭证。 原文链接： https://www.bleepingcomputer.com/news/security/codersregistryinfrastructurecompromisedtopushmaliciousmodules/ 评分：86 / 100 评分理由： 自 2014 年 9.4 起全版本受影响、仅需 REPLICATION 低权限即可获 OS 级代码执行与持久后门，波及海量企业数据库，隐蔽性与影响面广。 来源：AiCybr / SecurityWeek（多家媒体） 摘要： Cyera 研究的 CVE20266471（CVSS 7.2）存在于 PostgreSQL 逻辑解码（logical decoding）子系统，因未校验输出插件名称，拥有 REPLICATION 权限的低权账户可加载任意共享库，以数据库 OS 账户执行代码、提权为超级用户并建立持久后门。影响 9.4 至 18 全线版本，修复版本为 18.6 / 17.11 / 16.15 / 15.19 / 14.24（8 月 13 日 patch）。目前尚无公开在野利用报道，但 PoC 预计很快出现。 原文链接： https://aicybr.com/blog/postgresqlcve20266471logicaldecodingrce 本次共筛选 15 条候选新闻（The Hacker News / BleepingComputer / Hacker News 各 5 条），经去重与降权（前两个推送日已入 Top5 的 SonicWall/JFrog/Switchvox/CISA 7 KEV/FalconFlank/Packagist/Nexus 等条目已降为候选），选取上述 Top 5。 最高分 94 分（Google Chrome CVE202685046 零日）。 今日主题聚焦：浏览器/边界设备零日野外利用、AI 编码代理新型供应链攻击面、开发者基础设施投毒，整体呈\"利用窗口急剧压缩、供应链信任层被突破\"的态势。"
+ },
+ {
   "date": "2026-09-04",
   "url": "daily/daily_news_2026-09-04.html",
   "title": "网络安全日报 2026-09-04",
