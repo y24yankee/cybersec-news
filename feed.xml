@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-09-05T00:00:00Z</updated>
+  <updated>2026-09-06T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-09-06</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-06.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-06.html</id>
+    <updated>2026-09-06T00:00:00Z</updated>
+    <summary>自动推送 · 来源：The Hacker News / BleepingComputer / Hacker News（含聚合与厂商博客交叉核验）</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-09-05</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-05.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-18.html</id>
     <updated>2026-08-18T00:00:00Z</updated>
     <summary>评分：93 分 — 漏洞已确认在野利用、涉及国家背景 APT、跨 47 国 361 个受害 IP，并导致勒索软件落地，影响范围广且攻击链完整。</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-08-17</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-17.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-17.html</id>
-    <updated>2026-08-17T00:00:00Z</updated>
-    <summary>生成时间：20260817 06:55 CST</summary>
   </entry>
 </feed>

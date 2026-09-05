@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-06 | 网络安全新闻中心</title>
+<meta name="description" content="自动推送 · 来源：The Hacker News / BleepingComputer / Hacker News（含聚合与厂商博客交叉核验）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-09-06">
+<meta property="og:description" content="自动推送 · 来源：The Hacker News / BleepingComputer / Hacker News（含聚合与厂商博客交叉核验）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-06.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-09-06">
+<meta name="twitter:description" content="自动推送 · 来源：The Hacker News / BleepingComputer / Hacker News（含聚合与厂商博客交叉核验）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-06</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 重点关注</a></li>
+<li><a href="#s7">统计</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>自动推送 · 来源：The Hacker News / BleepingComputer / Hacker News（含聚合与厂商博客交叉核验）
+评分维度：严重性 · 新颖性 · 影响范围 · 时效性（0–100）</p>
+</blockquote>
+<hr />
+<h2 id="s1">Top 5 重点关注</h2>
+<h3 id="s2">1. Magento / Adobe Commerce 未修补 0day「StyleSmuggler」已在野利用</h3>
+<ul>
+<li><strong>评分：96</strong> — 未修补 0day 已被在野利用，无需认证即在电商服务器执行代码并植入持久后门，影响全部现行版本、危害面极广。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 荷兰电商安全公司 Sansec 于 9 月 5 日披露，Magento Open Source 与 Adobe Commerce 存在一个未分配 CVE、未发布补丁的未授权代码执行漏洞（代号 StyleSmuggler），攻击自 9 月 4 日已开始。成功利用可在商店服务器取得代码执行并安装持续性后门（伪装为 Linux 内核线程 <code>kworker</code> 的 Rust 二进制 + cron 自启），波及 2.4.6–2.4.9 全系列；Adobe 尚未发布公告或缓解方案，建议暂禁用 GraphQL 作为临时防御。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html</li>
+</ul>
+<h3 id="s3">2. 医疗分销巨头 McKesson 确认遭 ShinyHunters 入侵，声称窃取约 2.84 亿条记录</h3>
+<ul>
+<li><strong>评分：92</strong> — 医疗分销巨头确认被入侵，攻击者声称窃取含社保号与医疗信息的海量记录，经语音钓鱼攻破 Okta 后直取云端数据仓库。</li>
+<li><strong>来源：</strong> Malwarebytes（引述 BleepingComputer / ShinyHunters 声明）</li>
+<li><strong>摘要：</strong> McKesson 在 8-K 文件中确认于 2026-08-25 检测到对部分第三方应用的未授权访问与数据外泄，涉及 Oncology &amp; Multispecialty 与 Medical-Surgical 业务单元。ShinyHunters 称通过 vishing 攻破多名员工 Okta SSO 账户，进而进入 Salesforce 与 Snowflake，4 天内拉走近 1TB 数据并索要约 5,523 万美元赎金；其声称的 2.84 亿条记录为数据库行数而非独立人数，尚待独立核实。</li>
+<li><strong>原文链接：</strong> https://www.malwarebytes.com/blog/news/2026/08/mckesson-confirms-cyber-incident-after-shinyhunters-claims-patient-data-theft</li>
+</ul>
+<h3 id="s4">3. JetBrains Cadence 因未修补 TeamCity 漏洞被攻破，AWS 凭证与源码外泄</h3>
+<ul>
+<li><strong>评分：91</strong> — 未修补 TeamCity 严重漏洞（CVSS 9.8，已在野）致 JetBrains 云环境被入侵，AWS 凭证、备份与 PyCharm 同步源码遭提取。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> JetBrains 敦促 Cadence 用户立即吊销并轮换所有凭证。攻击发生在 2026-08-08 至 08-24，利用 CVE-2026-63077（CVSS 9.8，反序列化导致的未授权 RCE，已被 CISA 列入 KEV）攻破 Cadence 服务器，攻击者获取 2024 年备份、多个 AWS IAM 用户凭证，并可能访问从 PyCharm 同步至该服务器的项目源码。受影响的 api.cadence.jetbrains.com 已下线，所有 PyCharm Cadence 插件令牌已失效。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html</li>
+</ul>
+<h3 id="s5">4. Cisco Nexus 9000 预认证 root RCE（CVE-2026-20212，CVSS 9.8）无变通方案</h3>
+<ul>
+<li><strong>评分：90</strong> — 数据中心核心交换机存在无需认证即可取得 root 的 RCE，无变通方案，可被用于骨干网横向移动与控制。</li>
+<li><strong>来源：</strong> Cisco Security Advisory（经 The Hacker News / The Register 报道）</li>
+<li><strong>摘要：</strong> Cisco 于 9 月 2 日披露 Silicon One 架构 Nexus 9000 交换机漏洞 CVE-2026-20212（CVSS 9.8）：默认 L3 VRF 中 TCP 端口 43210/43211 无认证暴露，可达者发送特制报文即可 root 执行代码或致设备重载，影响 10 个 PID、45 个 NX-OS 版本。同期 IOS XR 加固版本捆绑 7 个 CVE（其中 2 个 9.8），所有版本均无变通方案；Cisco 称截至披露尚无在野利用。临时缓解为 iACL 封堵相关端口或部署 Live Protect 防护。</li>
+<li><strong>原文链接：</strong> https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-n9k-s1-rce-EH8dEtr</li>
+</ul>
+<h3 id="s6">5. Microsoft 揭示「ASCII Smuggling」隐形 Unicode 钓鱼大规模规避邮件过滤</h3>
+<ul>
+<li><strong>评分：88</strong> — 攻击者将 AI 提示注入研究中知名的隐形 Unicode 技术转用于邮件钓鱼规避，峰值单日超 237 万封，绕过关键词与分词检测。</li>
+<li><strong>来源：</strong> Microsoft Security Blog</li>
+<li><strong>摘要：</strong> Microsoft 在 9 月 3 日博客中指出，一波高量级财务诱饵钓鱼活动滥用 Unicode Tag 区块（U+E0000–U+E007F）的隐形字符，将「funding」等关键词拆开以逃避签名/关键词匹配——这一手法源自 AI 红队的 ASCII Smuggling / XPIA 研究。遥测显示该签名命中量自 2026-02-09 起从约 2.1 万/日飙升至单日峰值 237 万，呈严格工作日节奏，约 96% 来自一次性金融主题域名并经由 ActiveCampaign 群发。建议邮件管道在检测前归一化/剥离隐形 Unicode 字符。</li>
+<li><strong>原文链接：</strong> https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion</li>
+</ul>
+<hr />
+<h2 id="s7">统计</h2>
+<ul>
+<li>本次共筛选 <strong>15</strong> 条候选新闻（三来源各 5 条），按评分取 Top 5。</li>
+<li>最高分：<strong>96</strong> 分（Magento / Adobe Commerce StyleSmuggler 未修补 0day 在野利用）。</li>
+<li>微信推送：企业微信通道当前不可用，本报告已生成为本地文件交付；补丁板块将于正式 Patch Tuesday 发布后自动补出。</li>
+</ul>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-09-05.html">← 前一天 2026-09-05</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

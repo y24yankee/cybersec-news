@@ -1,5 +1,17 @@
 [
  {
+  "date": "2026-09-06",
+  "url": "daily/daily_news_2026-09-06.html",
+  "title": "网络安全日报 2026-09-06",
+  "score": 96,
+  "cves": [
+   "CVE-2026-20212",
+   "CVE-2026-63077"
+  ],
+  "summary": "自动推送 · 来源：The Hacker News / BleepingComputer / Hacker News（含聚合与厂商博客交叉核验）",
+  "text": "自动推送 · 来源：The Hacker News / BleepingComputer / Hacker News（含聚合与厂商博客交叉核验） 评分维度：严重性 · 新颖性 · 影响范围 · 时效性（0–100） 评分：96 — 未修补 0day 已被在野利用，无需认证即在电商服务器执行代码并植入持久后门，影响全部现行版本、危害面极广。 来源： The Hacker News 摘要： 荷兰电商安全公司 Sansec 于 9 月 5 日披露，Magento Open Source 与 Adobe Commerce 存在一个未分配 CVE、未发布补丁的未授权代码执行漏洞（代号 StyleSmuggler），攻击自 9 月 4 日已开始。成功利用可在商店服务器取得代码执行并安装持续性后门（伪装为 Linux 内核线程 kworker 的 Rust 二进制 + cron 自启），波及 2.4.6–2.4.9 全系列；Adobe 尚未发布公告或缓解方案，建议暂禁用 GraphQL 作为临时防御。 原文链接： https://thehackernews.com/2026/09/unpatchedmagentoandadobecommerce.html 评分：92 — 医疗分销巨头确认被入侵，攻击者声称窃取含社保号与医疗信息的海量记录，经语音钓鱼攻破 Okta 后直取云端数据仓库。 来源： Malwarebytes（引述 BleepingComputer / ShinyHunters 声明） 摘要： McKesson 在 8K 文件中确认于 20260825 检测到对部分第三方应用的未授权访问与数据外泄，涉及 Oncology & Multispecialty 与 MedicalSurgical 业务单元。ShinyHunters 称通过 vishing 攻破多名员工 Okta SSO 账户，进而进入 Salesforce 与 Snowflake，4 天内拉走近 1TB 数据并索要约 5,523 万美元赎金；其声称的 2.84 亿条记录为数据库行数而非独立人数，尚待独立核实。 原文链接： https://www.malwarebytes.com/blog/news/2026/08/mckessonconfirmscyberincidentaftershinyhuntersclaimspatientdatatheft 评分：91 — 未修补 TeamCity 严重漏洞（CVSS 9.8，已在野）致 JetBrains 云环境被入侵，AWS 凭证、备份与 PyCharm 同步源码遭提取。 来源： The Hacker News 摘要： JetBrains 敦促 Cadence 用户立即吊销并轮换所有凭证。攻击发生在 20260808 至 0824，利用 CVE202663077（CVSS 9.8，反序列化导致的未授权 RCE，已被 CISA 列入 KEV）攻破 Cadence 服务器，攻击者获取 2024 年备份、多个 AWS IAM 用户凭证，并可能访问从 PyCharm 同步至该服务器的项目源码。受影响的 api.cadence.jetbrains.com 已下线，所有 PyCharm Cadence 插件令牌已失效。 原文链接： https://thehackernews.com/2026/09/attackersbreachedjetbrainscadence.html 评分：90 — 数据中心核心交换机存在无需认证即可取得 root 的 RCE，无变通方案，可被用于骨干网横向移动与控制。 来源： Cisco Security Advisory（经 The Hacker News / The Register 报道） 摘要： Cisco 于 9 月 2 日披露 Silicon One 架构 Nexus 9000 交换机漏洞 CVE202620212（CVSS 9.8）：默认 L3 VRF 中 TCP 端口 43210/43211 无认证暴露，可达者发送特制报文即可 root 执行代码或致设备重载，影响 10 个 PID、45 个 NXOS 版本。同期 IOS XR 加固版本捆绑 7 个 CVE（其中 2 个 9.8），所有版本均无变通方案；Cisco 称截至披露尚无在野利用。临时缓解为 iACL 封堵相关端口或部署 Live Protect 防护。 原文链接： https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/ciscosan9ks1rceEH8dEtr 评分：88 — 攻击者将 AI 提示注入研究中知名的隐形 Unicode 技术转用于邮件钓鱼规避，峰值单日超 237 万封，绕过关键词与分词检测。 来源： Microsoft Security Blog 摘要： Microsoft 在 9 月 3 日博客中指出，一波高量级财务诱饵钓鱼活动滥用 Unicode Tag 区块（U+E0000–U+E007F）的隐形字符，将「funding」等关键词拆开以逃避签名/关键词匹配——这一手法源自 AI 红队的 ASCII Smuggling / XPIA 研究。遥测显示该签名命中量自 20260209 起从约 2.1 万/日飙升至单日峰值 237 万，呈严格工作日节奏，约 96% 来自一次性金融主题域名并经由 ActiveCampaign 群发。建议邮件管道在检测前归一化/剥离隐形 Unicode 字符。 原文链接： https://www.microsoft.com/enus/security/blog/2026/09/03/asciismugglingcrossesoverfromaipromptinjectiontophishingevasion 本次共筛选 15 条候选新闻（三来源各 5 条），按评分取 Top 5。 最高分：96 分（Magento / Adobe Commerce StyleSmuggler 未修补 0day 在野利用）。 微信推送：企业微信通道当前不可用，本报告已生成为本地文件交付；补丁板块将于正式 Patch Tuesday 发布后自动补出。"
+ },
+ {
   "date": "2026-09-05",
   "url": "daily/daily_news_2026-09-05.html",
   "title": "网络安全日报 2026-09-05",
