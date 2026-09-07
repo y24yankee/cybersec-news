@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-08 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：Hacker News、The Hacker News、BleepingComputer">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-09-08">
+<meta property="og:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-08.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-09-08">
+<meta name="twitter:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-08</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 今日重点新闻</a></li>
+<li><a href="#s7">说明</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>数据来源：Hacker News、The Hacker News、BleepingComputer<br />
+补丁日状态：MSRC 接口 <code>2026-Sep</code> 条目仍为 <strong>"September 2026 Early Security Updates"</strong>（预发布占位）→ 非正式 Patch Tuesday，今日不生成补丁板块（详见文末说明）。</p>
+</blockquote>
+<h2 id="s1">Top 5 今日重点新闻</h2>
+<h3 id="s2">1. N-able N-central 曝未认证 RCE，五周内第四补；CVSS 10.0 疑似在野利用</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>评分</strong>：95 / 100 — 未认证远程代码执行 + CVSS 4.0 满分 10.0 + 疑似在野利用，直击托管服务商（RMM）核心基础设施，影响面与严重性极高。</li>
+<li><strong>摘要</strong>：N-able 为其 RMM 平台 N-central 发布五周内第四个热修补（Hotfix 4，构建 2026.3.1.14），修复未认证 RCE 漏洞 <strong>CVE-2026-86218</strong>（静态代码注入 CWE-96，CVSS 4.0 评分 10.0）。N-able 事件通告称该漏洞已在野被利用，但发布说明对此标注为"未确认"；所有低于该构建的本地部署均受影响，包括已打 Hotfix 3 的服务器。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html</li>
+</ul>
+<h3 id="s3">2. JSCeal 恶意软件借被盗会话 Cookie 绕过 Google 认证</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>评分</strong>：84 / 100 — 编译型 V8 JS 恶意软件以新颖手法绕过 Google 认证，深度混淆 + 规模化凭证窃取，攻击技术新颖且隐蔽性强。</li>
+<li><strong>摘要</strong>：Check Point Research 剖析了 <strong>JSCeal</strong>——一种具备凭证窃取、监控与流量拦截能力的编译型 V8 JavaScript 恶意软件，载荷经 javascript-obfuscator 深度混淆（RC4 字符串、控制流扁平化、代理函数等）。该恶意软件通过 Facebook/Google 恶意广告将用户引流至伪造加密货币交易站，诱导下载假冒 TradingView 安装包，并利用被盗会话 Cookie 绕过 Google 认证；其活动与 WEEVILPROXY、MeadowLocust 威胁集群重叠。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/jsceal-malware-can-bypass-google.html</li>
+</ul>
+<h3 id="s4">3. Microsoft 警告 TerminalFix 攻击：假 CAPTCHA 建立反向隧道实现内网支点</h3>
+<ul>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>评分</strong>：83 / 100 — 改良版 ClickFix 借假 CAPTCHA 建立加密反向隧道，将受陷主机变为内网网络支点，攻击链新颖且高度隐蔽。</li>
+<li><strong>摘要</strong>：微软发现一种名为 <strong>TerminalFix</strong> 的 ClickFix 变体，通过伪造 Cloudflare CAPTCHA 诱使受害者在 Windows Terminal / PowerShell 执行恶意命令。与典型 ClickFix 不同，其多阶段链最终通过自定义 Python 反向隧道模块（经加密 WebSocket 连接 <code>gitnow[.]dev:443</code>）将受陷主机变为内网网络支点，支持 SOCKS5 代理与多路复用，可用于横向移动、权限提升、禁用安全工具与数据外泄。</li>
+<li><strong>原文链接</strong>：https://bleepingcomputer.com/news/security/microsoft-warns-of-terminalfix-attacks-deploying-reverse-tunnels</li>
+</ul>
+<h3 id="s5">4. GitHub 封禁发布 Windows 0day 利用的研究者，披露伦理再引争议</h3>
+<ul>
+<li><strong>来源</strong>：Hacker News</li>
+<li><strong>评分</strong>：82 / 100 — 平台封禁公开 Windows 0day（含 BitLocker/BlueHammer 后门指控）的研究者，牵动漏洞负责任披露、监管与"真实犯罪者"界定，行业影响与讨论度高。</li>
+<li><strong>摘要</strong>：一名安全研究者因在 GitHub 公开发布 Windows 0day 漏洞利用（涉及 BitLocker 后门与 BlueHammer 等指控）遭平台封禁，Hacker News 社区就此展开关于漏洞负责任披露、欧盟网络韧性法案（CRA，2026-09-11 生效）与"真实犯罪者是谁"的激烈讨论。该事件凸显研究者在厂商响应迟缓时面临的披露伦理与法律风险。</li>
+<li><strong>原文链接</strong>：https://news.ycombinator.com/item?id=48315968</li>
+</ul>
+<h3 id="s6">5. 微软捣毁滥用 Artifact Signing 的恶意代码签名即服务 Fox Tempest</h3>
+<ul>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>评分</strong>：80 / 100 — 微软撤销千余张欺诈证书、牵连多家勒索/窃密团伙的规模化执法行动，影响面广且具标志性。</li>
+<li><strong>摘要</strong>：微软称已捣毁滥用其 <strong>Artifact Signing</strong>（原 Trusted Signing）平台的恶意代码签名即服务 <strong>Fox Tempest</strong>，该组织创建逾千张 72 小时短期证书，使 Oyster、Lumma Stealer、Rhysida、Akira、Qilin、BlackByte 等勒索/窃密团伙的恶意软件获得合法签名、被系统误判为可信软件。微软已撤销千余证书、查封 <code>signspace[.]cloud</code> 域名并下线数百台虚拟机，在纽约南区法院提起法律诉讼并将 Vanilla Tempest（INC Ransomware）列为共谋方。</li>
+<li><strong>原文链接</strong>：https://bleepingcomputer.com/news/security/cybercrime-service-disrupted-for-abusing-microsoft-platform-to-sign-malware</li>
+</ul>
+<hr />
+<h2 id="s7">说明</h2>
+<ul>
+<li>本次共筛选 <strong>15 条候选新闻</strong>（Hacker News / The Hacker News / BleepingComputer 三来源各 5 条），按"严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性"评分排序，取前 5 条。<strong>最高分 95 分</strong>。</li>
+<li>已主动排除 09-03 至 09-07 各推送日已入 Top5 的条目（如 SonicWall / JFrog / Switchvox / PaperCut / FalconFlank / Packagist / Chrome 85046 / Citrix 19490 / 恶意.git / Coder / PostgreSQL 6471 / Hugging Face AI 代理 / MikroTik / RevStealer / VMware 59346 / Trezor·ShipMonk / Magento·StyleSmuggler / McKesson·ShinyHunters / JetBrains Cadence / Cisco Nexus 9000 / Microsoft ASCII Smuggling 等），避免连日重复。</li>
+<li>📅 <strong>微软本月补丁日（Patch Tuesday）预计于北京时间明晨（2026-09-09 凌晨）正式发布</strong>；本次 MSRC <code>/cvrf/v3.0/updates</code> 接口中 <code>2026-Sep</code> 条目标题仍为「September 2026 <strong>Early</strong> Security Updates」预发布占位，<strong>非正式补丁</strong>，故今日不生成「微软补丁安全级别」板块、亦不采用其中任何数字。<strong>明日（2026-09-09）推送将带出正式板块。</strong></li>
+<li>注：企业微信推送通道当前不可用，本报告以本地 Markdown 文件交付。</li>
+</ul>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-09-07.html">← 前一天 2026-09-07</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

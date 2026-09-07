@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-09-08",
+  "url": "daily/daily_news_2026-09-08.html",
+  "title": "网络安全日报 2026-09-08",
+  "score": 95,
+  "cves": [
+   "CVE-2026-86218"
+  ],
+  "summary": "数据来源：Hacker News、The Hacker News、BleepingComputer",
+  "text": "数据来源：Hacker News、The Hacker News、BleepingComputer 补丁日状态：MSRC 接口 2026Sep 条目仍为 \"September 2026 Early Security Updates\"（预发布占位）→ 非正式 Patch Tuesday，今日不生成补丁板块（详见文末说明）。 来源：The Hacker News 评分：95 / 100 — 未认证远程代码执行 + CVSS 4.0 满分 10.0 + 疑似在野利用，直击托管服务商（RMM）核心基础设施，影响面与严重性极高。 摘要：Nable 为其 RMM 平台 Ncentral 发布五周内第四个热修补（Hotfix 4，构建 2026.3.1.14），修复未认证 RCE 漏洞 CVE202686218（静态代码注入 CWE96，CVSS 4.0 评分 10.0）。Nable 事件通告称该漏洞已在野被利用，但发布说明对此标注为\"未确认\"；所有低于该构建的本地部署均受影响，包括已打 Hotfix 3 的服务器。 原文链接：https://thehackernews.com/2026/09/nableissuesfourthncentralhotfix.html 来源：The Hacker News 评分：84 / 100 — 编译型 V8 JS 恶意软件以新颖手法绕过 Google 认证，深度混淆 + 规模化凭证窃取，攻击技术新颖且隐蔽性强。 摘要：Check Point Research 剖析了 JSCeal——一种具备凭证窃取、监控与流量拦截能力的编译型 V8 JavaScript 恶意软件，载荷经 javascriptobfuscator 深度混淆（RC4 字符串、控制流扁平化、代理函数等）。该恶意软件通过 Facebook/Google 恶意广告将用户引流至伪造加密货币交易站，诱导下载假冒 TradingView 安装包，并利用被盗会话 Cookie 绕过 Google 认证；其活动与 WEEVILPROXY、MeadowLocust 威胁集群重叠。 原文链接：https://thehackernews.com/2026/09/jscealmalwarecanbypassgoogle.html 来源：BleepingComputer 评分：83 / 100 — 改良版 ClickFix 借假 CAPTCHA 建立加密反向隧道，将受陷主机变为内网网络支点，攻击链新颖且高度隐蔽。 摘要：微软发现一种名为 TerminalFix 的 ClickFix 变体，通过伪造 Cloudflare CAPTCHA 诱使受害者在 Windows Terminal / PowerShell 执行恶意命令。与典型 ClickFix 不同，其多阶段链最终通过自定义 Python 反向隧道模块（经加密 WebSocket 连接 gitnow[.]dev:443）将受陷主机变为内网网络支点，支持 SOCKS5 代理与多路复用，可用于横向移动、权限提升、禁用安全工具与数据外泄。 原文链接：https://bleepingcomputer.com/news/security/microsoftwarnsofterminalfixattacksdeployingreversetunnels 来源：Hacker News 评分：82 / 100 — 平台封禁公开 Windows 0day（含 BitLocker/BlueHammer 后门指控）的研究者，牵动漏洞负责任披露、监管与\"真实犯罪者\"界定，行业影响与讨论度高。 摘要：一名安全研究者因在 GitHub 公开发布 Windows 0day 漏洞利用（涉及 BitLocker 后门与 BlueHammer 等指控）遭平台封禁，Hacker News 社区就此展开关于漏洞负责任披露、欧盟网络韧性法案（CRA，20260911 生效）与\"真实犯罪者是谁\"的激烈讨论。该事件凸显研究者在厂商响应迟缓时面临的披露伦理与法律风险。 原文链接：https://news.ycombinator.com/item?id=48315968 来源：BleepingComputer 评分：80 / 100 — 微软撤销千余张欺诈证书、牵连多家勒索/窃密团伙的规模化执法行动，影响面广且具标志性。 摘要：微软称已捣毁滥用其 Artifact Signing（原 Trusted Signing）平台的恶意代码签名即服务 Fox Tempest，该组织创建逾千张 72 小时短期证书，使 Oyster、Lumma Stealer、Rhysida、Akira、Qilin、BlackByte 等勒索/窃密团伙的恶意软件获得合法签名、被系统误判为可信软件。微软已撤销千余证书、查封 signspace[.]cloud 域名并下线数百台虚拟机，在纽约南区法院提起法律诉讼并将 Vanilla Tempest（INC Ransomware）列为共谋方。 原文链接：https://bleepingcomputer.com/news/security/cybercrimeservicedisruptedforabusingmicrosoftplatformtosignmalware 本次共筛选 15 条候选新闻（Hacker News / The Hacker News / BleepingComputer 三来源各 5 条），按\"严重性  新颖性  影响范围  时效性\"评分排序，取前 5 条。最高分 95 分。 已主动排除 0903 至 0907 各推送日已入 Top5 的条目（如 SonicWall / JFrog / Switchvox / PaperCut / FalconFlank / Packagist / Chrome 85046 / Citrix 19490 / 恶意.git / Coder / PostgreSQL 6471 / Hugging Face AI 代理 / MikroTik / RevStealer / VMware 59346 / Trezor·ShipMonk / Magento·StyleSmuggler / McKesson·ShinyHunters / JetBrains Cadence / Cisco Nexus 9000 / Microsoft ASCII Smuggling 等），避免连日重复。 📅 微软本月补丁日（Patch Tuesday）预计于北京时间明晨（20260909 凌晨）正式发布；本次 MSRC /cvrf/v3.0/updates 接口中 2026Sep 条目标题仍为「September 2026 Early Security Updates」预发布占位，非正式补丁，故今日不生成「微软补丁安全级别」板块、亦不采用其中任何数字。明日（20260909）推送将带出正式板块。 注：企业微信推送通道当前不可用，本报告以本地 Markdown 文件交付。"
+ },
+ {
   "date": "2026-09-07",
   "url": "daily/daily_news_2026-09-07.html",
   "title": "网络安全日报 2026-09-07",
