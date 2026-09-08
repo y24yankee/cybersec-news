@@ -1,5 +1,21 @@
 [
  {
+  "date": "2026-09-09",
+  "url": "daily/daily_news_2026-09-09.html",
+  "title": "网络安全日报 2026-09-09",
+  "score": null,
+  "cves": [
+   "CVE-2026-13181",
+   "CVE-2026-13182",
+   "CVE-2026-21902",
+   "CVE-2026-2630",
+   "CVE-2026-76560",
+   "CVE-2026-76578"
+  ],
+  "summary": "生成时间：20260909 07:00（北京时间）｜ 数据源：The Hacker News、BleepingComputer、Hacker News + 微软 MSRC CVRF 公开 API",
+  "text": "生成时间：20260909 07:00（北京时间）｜ 数据源：The Hacker News、BleepingComputer、Hacker News + 微软 MSRC CVRF 公开 API 补丁日状态：本月为正式 Patch Tuesday（MSRC 2026Sep 条目标题为 \"September 2026 Security Updates\"，非 Early 预发布）→ 文末附「微软补丁安全级别」独立板块。 来源：The Hacker News 原文：https://thehackernews.com/2026/09/freeipaflawchainletsanonymous.html 摘要：FreeIPA（Red Hat Identity Management / Linux 域身份管理核心）存在漏洞链（CVE202676578，CVSS 9.8 Critical；链中第二处 CVE202676560 位于 389 Directory Server，CVSS 7.5）。未登录的匿名 LDAP 客户端可利用默认安装即存在的访问规则缺陷，自行创建 Kerberos 身份并写入密码，最终进入管理员组、获得可复用管理员凭据。Red Hat 表示已在默认安装上两次复现该链，目前尚无真实攻击报告。 评分理由：未授权即可拿下域管理员凭据，影响 Linux 身份管理基础设施默认配置，实战危害极高。 来源：The Hacker News（Google Threat Intelligence Group 披露） 原文：https://thehackernews.com/2026/09/autonomousaiagentscompromise.html 摘要：Google TAG/GTIG 披露一名出于经济动机的攻击者借助 AI 编码聊天机器人 + 预置 Markdown 指令集，在不到 6 小时内自主完成漏洞扫描、IP 轮换与大规模凭据 harvesting， compromised 数千个第三方凭据。报告同时指出 TeamPCP（UNC6780）通过 PyPI/npm/Docker Hub 供应链投毒部署 SANDCLOCK / DUSTMAKER 凭据窃取器，并出现针对 AI 编码助手与 LLM 安全扫描工具的投毒与提示注入。 评分理由：标志攻击自动化从\"AI 辅助\"跨入\"多智能体自主运营\"，速度超过传统响应窗口，企业 AI/云资产成新焦点。 来源：NetSecOps 原文：https://cyber.netsecops.io/articles/nightmareeclipsediscloseszerodayexploitsincrowdstrikeavastnvidia 摘要：安全研究者 \"Nightmare Eclipse\" 公开披露并放出三个本地提权（LPE）0day 的 PoC——FalconFlank（CrowdStrike Falcon Sensor，借修复宏恶意软件的机制强制 SYSTEM 级 DLL 加载）、PrettyPrague（Avast 沙箱逃逸至 SYSTEM）、GreenSection（Nvidia 共享全局内存越界写）。三者均需先获得初始代码执行，但可借安全产品自身提权至 NT AUTHORITY\\SYSTEM，使 EDR/杀软防御失效。CrowdStrike 已确认在调查并提供临时缓解。 评分理由：安全产品自身成提权跳板且 PoC 已公开，攻击者可借此\"以子之盾攻子之矛\"，后渗透价值极高。 来源：The Hacker News 原文：https://thehackernews.com/2026/09/telerikuipaddingoraclebugchained.html 摘要：TantoSec 公开完整利用链与工具 telerikrauexploit，将 Telerik UI for ASP.NET AJAX 的 AESCBC padding oracle（CVE202613182）与未加 allowlist 的类型解析缺陷（CVE202613181，CVSS 8.1）串成未认证远程代码执行，可写入 webshell 或内存加载 DLL。Progress 已于 7 月修复（2026.2.708+），利用需非默认显式加密密钥配置，目前无在野利用确证（历史上同类 Telerik 处理器缺陷曾被勒索/APT 广泛利用）。 评分理由：首次公开完整武器化利用链，将多年老组件缺陷转为可落地 RCE，武器化门槛显著降低。 来源：Hacker News 原文：https://news.ycombinator.com/item?id=47304982 摘要：Farath 的\"双周代码安全简报\"指出一类被忽视的趋势——企业最信任的基础设施组件本身正成为突破口：Tenable Security Center（CVE20262630，认证后命令注入）、Juniper PTX（CVE202621902，核心路由器 RCE）、Ivanti EPMM/EPM（未认证 RCE + 认证绕过/SQLi）。文章从 SAST/SCA/DAST/IAST 实际可见性角度拆解这些漏洞如何在真实环境被滥用，并给出 Tier0/Tier1 修复 SLA 建议。 评分理由：攻击面正从业务应用转向\"信任基础设施\"，对防守方优先级排序具有现实指导意义。 本次共筛选 15 条候选新闻（三来源各 5 条），去重并排除补丁板块后选取前 5 条；最高分 95 分。 BleepingComputer 当日新鲜内容主要为本月 Patch Tuesday 综述，按规则不进入 Top5，已整体归入上方「微软补丁安全级别」独立板块。 补丁板块所有数字（CVE 总数、分级、CVSS、在野利用）均来自真实解析的 MSRC CVRF 2026Sep 正式文档，未沿用上月数据、未编造。 微信推送：企业微信 connector 当前未连接，按既定默认跳过实际发送，仅本地文件交付。"
+ },
+ {
   "date": "2026-09-08",
   "url": "daily/daily_news_2026-09-08.html",
   "title": "网络安全日报 2026-09-08",

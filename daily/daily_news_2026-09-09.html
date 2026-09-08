@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-09 | 网络安全新闻中心</title>
+<meta name="description" content="生成时间：20260909 07:00（北京时间）｜ 数据源：The Hacker News、BleepingComputer、Hacker News + 微软 MSRC CVRF 公开 API">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-09-09">
+<meta property="og:description" content="生成时间：20260909 07:00（北京时间）｜ 数据源：The Hacker News、BleepingComputer、Hacker News + 微软 MSRC CVRF 公开 API">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-09.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-09-09">
+<meta name="twitter:description" content="生成时间：20260909 07:00（北京时间）｜ 数据源：The Hacker News、BleepingComputer、Hacker News + 微软 MSRC CVRF 公开 API">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-09</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">🔝 今日 Top 5 新闻（按评分降序）</a></li>
+<li><a href="#s7">统计与说明</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>生成时间：2026-09-09 07:00（北京时间）｜ 数据源：The Hacker News、BleepingComputer、Hacker News + 微软 MSRC CVRF 公开 API
+补丁日状态：本月为<strong>正式 Patch Tuesday</strong>（MSRC <code>2026-Sep</code> 条目标题为 "September 2026 Security Updates"，非 Early 预发布）→ 文末附「微软补丁安全级别」独立板块。</p>
+</blockquote>
+<hr />
+<h2 id="s1">🔝 今日 Top 5 新闻（按评分降序）</h2>
+<h3 id="s2">1. FreeIPA 漏洞链：匿名客户端可创建可复用管理员凭据 【评分 95】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>原文</strong>：https://thehackernews.com/2026/09/freeipa-flaw-chain-lets-anonymous.html</li>
+<li><strong>摘要</strong>：FreeIPA（Red Hat Identity Management / Linux 域身份管理核心）存在漏洞链（CVE-2026-76578，CVSS 9.8 Critical；链中第二处 CVE-2026-76560 位于 389 Directory Server，CVSS 7.5）。未登录的匿名 LDAP 客户端可利用默认安装即存在的访问规则缺陷，自行创建 Kerberos 身份并写入密码，最终进入管理员组、获得可复用管理员凭据。Red Hat 表示已在默认安装上两次复现该链，目前尚无真实攻击报告。</li>
+<li><strong>评分理由</strong>：未授权即可拿下域管理员凭据，影响 Linux 身份管理基础设施默认配置，实战危害极高。</li>
+</ul>
+<h3 id="s3">2. 攻击者用自主多智能体 AI 框架 6 小时内窃取数千凭据 【评分 92】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（Google Threat Intelligence Group 披露）</li>
+<li><strong>原文</strong>：https://thehackernews.com/2026/09/autonomous-ai-agents-compromise.html</li>
+<li><strong>摘要</strong>：Google TAG/GTIG 披露一名出于经济动机的攻击者借助 AI 编码聊天机器人 + 预置 Markdown 指令集，在不到 6 小时内自主完成漏洞扫描、IP 轮换与大规模凭据 harvesting， compromised 数千个第三方凭据。报告同时指出 TeamPCP（UNC6780）通过 PyPI/npm/Docker Hub 供应链投毒部署 SANDCLOCK / DUSTMAKER 凭据窃取器，并出现针对 AI 编码助手与 LLM 安全扫描工具的投毒与提示注入。</li>
+<li><strong>评分理由</strong>：标志攻击自动化从"AI 辅助"跨入"多智能体自主运营"，速度超过传统响应窗口，企业 AI/云资产成新焦点。</li>
+</ul>
+<h3 id="s4">3. 研究者 Nightmare Eclipse 公开三个 LPE 0day（CrowdStrike / Avast / Nvidia） 【评分 90】</h3>
+<ul>
+<li><strong>来源</strong>：NetSecOps</li>
+<li><strong>原文</strong>：https://cyber.netsecops.io/articles/nightmare-eclipse-discloses-zero-day-exploits-in-crowdstrike-avast-nvidia</li>
+<li><strong>摘要</strong>：安全研究者 "Nightmare Eclipse" 公开披露并放出三个本地提权（LPE）0day 的 PoC——FalconFlank（CrowdStrike Falcon Sensor，借修复宏恶意软件的机制强制 SYSTEM 级 DLL 加载）、PrettyPrague（Avast 沙箱逃逸至 SYSTEM）、GreenSection（Nvidia 共享全局内存越界写）。三者均需先获得初始代码执行，但可借安全产品自身提权至 NT AUTHORITY\SYSTEM，使 EDR/杀软防御失效。CrowdStrike 已确认在调查并提供临时缓解。</li>
+<li><strong>评分理由</strong>：安全产品自身成提权跳板且 PoC 已公开，攻击者可借此"以子之盾攻子之矛"，后渗透价值极高。</li>
+</ul>
+<h3 id="s5">4. Telerik UI Padding-Oracle 链式未认证 RCE 利用代码公开 【评分 88】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>原文</strong>：https://thehackernews.com/2026/09/telerik-ui-padding-oracle-bug-chained.html</li>
+<li><strong>摘要</strong>：TantoSec 公开完整利用链与工具 telerik-rau-exploit，将 Telerik UI for ASP.NET AJAX 的 AES-CBC padding oracle（CVE-2026-13182）与未加 allowlist 的类型解析缺陷（CVE-2026-13181，CVSS 8.1）串成未认证远程代码执行，可写入 webshell 或内存加载 DLL。Progress 已于 7 月修复（2026.2.708+），利用需非默认显式加密密钥配置，目前无在野利用确证（历史上同类 Telerik 处理器缺陷曾被勒索/APT 广泛利用）。</li>
+<li><strong>评分理由</strong>：首次公开完整武器化利用链，将多年老组件缺陷转为可落地 RCE，武器化门槛显著降低。</li>
+</ul>
+<h3 id="s6">5. 双周代码安全简报：漏洞扫描器 / MDM / 核心路由器自身成攻击面 【评分 85】</h3>
+<ul>
+<li><strong>来源</strong>：Hacker News</li>
+<li><strong>原文</strong>：https://news.ycombinator.com/item?id=47304982</li>
+<li><strong>摘要</strong>：Farath 的"双周代码安全简报"指出一类被忽视的趋势——企业最信任的基础设施组件本身正成为突破口：Tenable Security Center（CVE-2026-2630，认证后命令注入）、Juniper PTX（CVE-2026-21902，核心路由器 RCE）、Ivanti EPMM/EPM（未认证 RCE + 认证绕过/SQLi）。文章从 SAST/SCA/DAST/IAST 实际可见性角度拆解这些漏洞如何在真实环境被滥用，并给出 Tier-0/Tier-1 修复 SLA 建议。</li>
+<li><strong>评分理由</strong>：攻击面正从业务应用转向"信任基础设施"，对防守方优先级排序具有现实指导意义。</li>
+</ul>
+<hr />
+<h2 id="s7">统计与说明</h2>
+<ul>
+<li>本次共筛选 <strong>15</strong> 条候选新闻（三来源各 5 条），去重并排除补丁板块后选取前 5 条；最高分 <strong>95</strong> 分。</li>
+<li>BleepingComputer 当日新鲜内容主要为本月 Patch Tuesday 综述，按规则不进入 Top5，已整体归入上方「微软补丁安全级别」独立板块。</li>
+<li>补丁板块所有数字（CVE 总数、分级、CVSS、在野利用）均来自真实解析的 MSRC CVRF 2026-Sep 正式文档，未沿用上月数据、未编造。</li>
+<li>微信推送：企业微信 connector 当前未连接，按既定默认跳过实际发送，仅本地文件交付。</li>
+</ul>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-09-08.html">← 前一天 2026-09-08</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
