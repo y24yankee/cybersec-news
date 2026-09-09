@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-09-09T00:00:00Z</updated>
+  <updated>2026-09-10T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-09-10</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-10.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-10.html</id>
+    <updated>2026-09-10T00:00:00Z</updated>
+    <summary>来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时内）</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-09-09</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-09.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-22.html</id>
     <updated>2026-08-22T00:00:00Z</updated>
     <summary>生成时间：20260822 07:00 (GMT+8) ｜ 来源：The Hacker News、BleepingComputer、Hacker News 过去 24 小时</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-08-21</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-21.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-21.html</id>
-    <updated>2026-08-21T00:00:00Z</updated>
-    <summary>数据采集窗口：北京时间 20260821 06:55 前后，过去 24 小时全球网络安全事件</summary>
   </entry>
 </feed>

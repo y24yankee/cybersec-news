@@ -1,5 +1,20 @@
 [
  {
+  "date": "2026-09-10",
+  "url": "daily/daily_news_2026-09-10.html",
+  "title": "网络安全日报 2026-09-10",
+  "score": 94,
+  "cves": [
+   "CVE-2025-53521",
+   "CVE-2026-44756",
+   "CVE-2026-67401",
+   "CVE-2026-82533",
+   "CVE-2026-87491"
+  ],
+  "summary": "来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时内）",
+  "text": "来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时内） 评分标准：严重性  新颖性  影响范围  时效性；补丁级数据不计入新闻评分（见文末独立板块） 评分：94 / 100 来源：The Hacker News 摘要： SAP 修复了位于 SAP 内核 Extended Passport（EPP）处理中的最大严重级别漏洞，无需认证即可远程执行任意操作系统命令并获取 SAP 管理员权限，可导致业务数据与流程被完全接管。该漏洞（代号 OVERPASS）由 Onapsis 发现，因 EPP 处理是 Web 层、GUI 层与 RFC 层共享的内核代码，从互联网面到内网多协议均无需凭据即可触达，单一网络管控无法完全缓解。 理由： 内核级未认证 RCE 可达企业最关键的 ERP 系统，影响面与危害均为顶级。 原文链接： https://thehackernews.com/2026/09/sappatchescvss100kernelflaw.html 评分：91 / 100 来源：The Hacker News 摘要： Google 于 9 月安全更新中修复 230 个漏洞，其中 V8 引擎越界写漏洞 CVE202687491 已被确认在野利用，攻击者可借特制 HTML 页面在沙箱内执行任意代码。受影响的 Chrome 版本低于 153.0.8010.36，微软 Edge、Brave、Opera、Vivaldi 等 Chromium 内核浏览器亦需同步更新。这是 Google 今年修复的第 7 个在野 Chrome 零日。 理由： 在野利用的浏览器零日影响绝大多数互联网用户，需立即更新。 原文链接： https://thehackernews.com/2026/09/chromev8zerodayexploitedinwild.html 评分：86 / 100 来源：The Hacker News 摘要： Sophos 分析指出，针对 F5 BIGIP APM 设备（关联 CVE202553521，CVSS 9.8，已在野利用）的恶意软件不再将 WebShell 落盘，而是在 Apache 加载三个自带 PHP 脚本（apmcss.php3、fullwt.php3、webtoppopupcss.php3）时把 WebShell 注入内存副本，使磁盘文件完整性校验显示\"干净\"。该内存驻留技术此前由 ESET 以 PoisonedRefresh 命名分析，可关 SELinux 并通过安装介质传播。 理由： 无文件（fileless）内存驻留 WebShell 绕过传统磁盘扫描，是高级持续性对抗的新手法。 原文链接： https://thehackernews.com/2026/09/f5bigipapmmalwareinjectsphpweb.html 评分：84 / 100 来源：The Hacker News 摘要： cPanel 修复了一个经 EmailTrack 的 SQL 注入缺陷，已认证且仅有邮件相关权限的账户可在服务器上创建任意文件，进而以 root 身份执行代码、完全控制整台 cPanel/WHM 服务器及其上所有租户账户。所有受支持版本均受影响，cPanel 已于 9 月 8 日发布修复构建（11.110.0.143、11.134.0.55 等）。 理由： 单租户越权至整机 root，共享主机环境批量失陷风险高。 原文链接： https://thehackernews.com/2026/09/newcpanelflawletshostingaccount.html 评分：82 / 100 来源：The Hacker News 摘要： 美国国家安全局、CISA 与 FBI 发布联合公告，指控多家中国 AI 企业（DeepSeek、Moonshot AI、阿里、MiniMax、StepFun、Z.AI 等）自 2024 年底起以工业规模对美国前沿模型实施蒸馏攻击，提取数十亿 token，手段包括思维链提取、封禁时自动故障切换及质量评估框架。公告建议美国 AI 企业部署跨供应商的分布式蒸馏活动检测与缓解措施。 理由： 首份美国情报机构联合公告定性 AI 模型蒸馏为工业级威胁，抬升 AI 供应链风险态势。 原文链接： https://thehackernews.com/2026/09/usagenciesaccusechinaaifirmsof.html 本次共筛选 15 条新闻（三来源各 5 条候选），最高分 94 分（SAP OVERPASS CVE202644756）。 为避免过度重复，已主动排除 09030909 推送中已入 Top5 的条目（如 Nable Ncentral、Nightmare Eclipse 系列、Hugging Face、MikroTik、VMware、各类 Cookies/Token 与 Old CVE 等）。 候选未入选但值得关注：DeepSeek Harness CVE202682533（CVSS 9.4，AI 代理自撤沙箱）、信息窃取器泄露可重放 AI Token 绕过 MFA、ShieldCrash Defender 补丁绕过 0day、多情报组织 BlueMoon 攻击包（APT31）等。 📲 微信推送：企业微信 connector 当前未连接，按既定默认跳过实际发送，本报告仅以本地文件交付。"
+ },
+ {
   "date": "2026-09-09",
   "url": "daily/daily_news_2026-09-09.html",
   "title": "网络安全日报 2026-09-09",
