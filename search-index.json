@@ -1,5 +1,20 @@
 [
  {
+  "date": "2026-09-11",
+  "url": "daily/daily_news_2026-09-11.html",
+  "title": "网络安全日报 2026-09-11",
+  "score": 93,
+  "cves": [
+   "CVE-2026-69414",
+   "CVE-2026-82533",
+   "CVE-2026-85046",
+   "CVE-2026-85880",
+   "CVE-2026-87491"
+  ],
+  "summary": "自动生成 · 新闻来源：The Hacker News、BleepingComputer、Hacker News；补丁板块来源：MSRC CVRF（公共免认证 API）",
+  "text": "自动生成 · 新闻来源：The Hacker News、BleepingComputer、Hacker News；补丁板块来源：MSRC CVRF（公共免认证 API） 来源：The Hacker News 原文：https://thehackernews.com/2026/09/checkpointdisclosestwo98ratedvpn.html 摘要：Check Point 修复了两个评分为 9.8 的 VPN 证书处理漏洞，攻击者在无需认证的情况下即可远程执行代码，直接影响大量企业 VPN 网关设备。该缺陷源于证书校验逻辑，修复前可被用于边界突破。 评分理由：两个 CVSS 9.8 的未授权 RCE 直击企业边界 VPN，影响面广、可利用性高，严重性居今日之首。 来源：The Hacker News / BleepingComputer 原文：https://thehackernews.com/2026/09/fourspygroupsusedsamechromeand.html （BleepingComputer 同题报道：https://www.bleepingcomputer.com/news/security/newbluemoonkitexploitedwindowsandchromezerodayflaws/） 摘要：名为 BlueMoon 的模块化漏洞利用包被四个间谍组织用于链式攻击 Windows 与 Chrome 的零日漏洞（含 CVE202685046、CVE202687491、CVE202685880），目标包括 NGO、航天、国防与制造业。该工具利用 Chrome 稳定版发布间隙完成武器化，并注入载荷提权至 SYSTEM。 评分理由：国家级 APT 共用同一在野 0day 利用链，新颖性强且目标高价值，威胁等级高。 来源：The Hacker News 原文：https://thehackernews.com/2026/09/deepseekharnessflawletaiagents.html 摘要：DeepSeek Harness 存在 9.4 分漏洞，沙箱内的 AI 代理可通过单条命令绕过并关闭自身文件沙箱限制，暴露主机文件系统。该缺陷揭示了 AI 编码/代理运行时的新攻击面。 评分理由：属 AI 代理安全这一新兴且高关注领域，利用方式新颖、直接动摇 AI 基础设施的信任边界。 来源：The Hacker News 原文：https://thehackernews.com/2026/09/cisaflagsexploitedciscocitrix.html 摘要：CISA 将 Cisco、Citrix 与 Fortinet 的多项已遭利用漏洞纳入已知利用漏洞（KEV）目录，并要求联邦机构在 9 月 12 日前完成修补，否则面临合规与攻陷风险。 评分理由：在野利用 + 政府强制时限双重驱动，时效性强，对企业修补优先级有直接影响。 来源：Hacker News（链接 The Register 报道） 原文：https://www.theregister.com/security/2026/09/09/serialmicrosoft0dayhunterdropsyetanotherdefenderexploit/5295335 摘要：研究员在微软 9 月补丁日发布后公开名为 ShieldCrash 的概念验证，证明针对 Defender ShieldBreak（CVE202669414）的同日修复并不完整，攻击者在打全补丁后仍可以 SYSTEM 权限任意读取文件。微软尚未发布进一步修复。 评分理由：补丁绕过型 0day PoC 公开，时效性与严重性兼具，对所有 Windows 环境构成即时残留风险。 信息窃取器日志暴露可重放 AI 令牌绕过 MFA（THN） PaperCut 攻击者用数百 AI 代理攻陷 440+ 实例（THN / BC） Alby Hub 严重漏洞可接管暴露的 Bitcoin 钱包（THN） Gigabud 借 Android 工作配置文件躲避银行木马检测（THN） 滥用 Google Play 早期访问推送数千款欺诈应用（THN） 微软 9 月补丁日修复 974+ CVE（BC，已归入补丁板块） ShieldCrash：Defender 补丁绕过 0day PoC（BC） Cisco FMC 漏洞遭勒索团伙与国家黑客利用（BC） AdaptHealth 410 万用户数据泄露（ShinyHunters，BC） Nintendo Switch 邻近远程攻击信息泄露预警（HN） Hugging Face security.txt 引发 AI 代理漏洞讨论（HN） LG 否认 2.16 亿台电视间谍指控（HN） 本次共筛选 15 条新闻，最高分 93 分。"
+ },
+ {
   "date": "2026-09-10",
   "url": "daily/daily_news_2026-09-10.html",
   "title": "网络安全日报 2026-09-10",
