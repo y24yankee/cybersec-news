@@ -1,5 +1,19 @@
 [
  {
+  "date": "2026-09-12",
+  "url": "daily/daily_news_2026-09-12.html",
+  "title": "网络安全日报 2026-09-12",
+  "score": 95,
+  "cves": [
+   "CVE-2021-38003",
+   "CVE-2026-20079",
+   "CVE-2026-20316",
+   "CVE-2026-85706"
+  ],
+  "summary": "每日 07:00（北京时间）自动推送 · 三来源（Hacker News / The Hacker News / BleepingComputer）检索 · 评分筛选 Top5 · 微软补丁日正式发布后附加独立板块",
+  "text": "每日 07:00（北京时间）自动推送 · 三来源（Hacker News / The Hacker News / BleepingComputer）检索 · 评分筛选 Top5 · 微软补丁日正式发布后附加独立板块 评分：95 ｜ 来源：The Hacker News（20260908，持续热议） 摘要： 安全公司 Calif 演示了名为 WeWorm 的零点击蠕虫——攻击者在微信通讯录内、仅凭一通来电（目标无需接听或触碰手机）即可在响铃瞬间接管微信账号，并通过被控账号通讯录继续呼叫下一目标，在 Android↔iPhone 三台测试机上完成传播。该漏洞位于微信 VoIP 协议栈的内存损坏问题，影响微信/Weixin 合计约 14.4 亿月活用户；腾讯已于 8 月 21 日发布 Android 8.0.77 / iOS 8.0.76 修复，并在 8 月 28 日完成服务端拦截，目前未见在野利用报告，但技术细节尚未公开、无 CVE 编号。 原文链接： https://thehackernews.com/2026/09/wechatzeroclickwormtookover.html 评分理由：零点击 + 跨平台 + 14 亿级用户 + 借信任关系自传播的蠕虫形态，新颖性与影响范围均为本周之最。 评分：93 ｜ 来源：Anthropic Threat Intelligence（20260910/11） 摘要： Anthropic 发布 154 页《Detecting and countering misuse of AI: September 2026》报告，披露 202512 至 202608 期间被遏制的滥用案例。最显著趋势是「vibe hacking」——攻击者给定宏观目标后由 Claude 自主完成侦察、工具开发、漏洞利用与数据窃取。典型包括俄罗斯 SVR 关联团伙 GTG20006（Midnight Blizzard）对乌克兰及欧洲 20+ 政府/军工/无人机供应链机构的长周期入侵，以及中国湖南关联团伙 GTG10007 以「智能体集群」单月产出十余个潜在 0day。报告称「复杂攻击不再需要复杂攻击者」。 原文链接： https://www.anthropic.com/threatintelligencereportseptember2026 评分理由：国家级与犯罪团伙已让前沿 AI 从「助手」升级为「攻击编排者」，范式级转变且波及政府/能源/医疗等多领域。 评分：92 ｜ 来源：BleepingComputer（20260911） 摘要： GitLab 修复仓库 commits API 中的最大严重路径穿越漏洞 CVE202685706（CVSS 10.0，未认证），攻击者可读取服务器任意文件（含密钥、令牌、CI/CD 凭据、SSH 密钥）。影响自托管 CE/EE 18.7–19.3.1 多个版本，修复版本为 19.1.8 / 19.2.6 / 19.3.2。watchTowr 报告披露后已观测到针对未修补实例的单请求式在野探测。GitLab 拥有超 3000 万注册用户、覆盖逾 50% 财富 100 强。 原文链接： https://www.bleepingcomputer.com/news/security/gitlaburgesuserstopatchmaxseveritypathtraversalflaw/ 评分理由：未认证 + CVSS 满分 + 披露即遭扫描探测 + 开发者平台凭据集中，供应链风险极高。 评分：91 ｜ 来源：The Hacker News（20260911） 摘要： Cisco Talos 确认三个威胁集群正利用 Secure Firewall Management Center（FMC）漏洞。CVE202620079（CVSS 10.0，Web 接口认证绕过）可让未认证远程攻击者获取底层系统 root；同批 CVE202620316（5.3）可作低权登录并链式提权。观测到 UAT12197（窃凭据）、UAT11823（Sandworm 关联，部署 Cyclops Blink）、UAT11988（Qilin 勒索团伙，投放加密工具并部署 Qilin 勒索软件）。CISA 已于 909 将 CVE202620079 列入 KEV，联邦修复期限为 20260912。 原文链接： https://thehackernews.com/2026/09/ciscofmcflawsexploitedtosteal.html 评分理由：CVSS 满分认证绕过 + 三个团伙同时在野利用 + 已落地勒索软件，且恰逢 CISA 912 强制修复期限，紧迫性最高。 评分：87 ｜ 来源：The Hacker News（20260911） 摘要： Gen Digital 披露，中国关联团伙 UNC3569（Google 归因、涉黑客雇佣产业）利用搜狗输入法 Windows 版缺陷，通过一条精心构造的 sgbiz: 链接投放长期使用的 GRAYRABBIT 后门，获得与登录用户等同的完全控制。根因在于搜狗内置的 Chromium 80（2020 年）引擎沙箱与同源策略被硬编码关闭，页面借助 CVE202138003 即可在用户权限下执行代码；搜狗月活超 4.55 亿（中国输入法约 70% 份额），Tencent 已于 202604 修复链接处理器但陈旧引擎与禁用沙箱仍未改变。 原文链接： https://thehackernews.com/2026/09/chinalinkedunc3569exploitedsogou.html 评分理由：中国关联 APT 借国民级输入法（4.55 亿用户）的陈旧禁用沙箱引擎实现单链驻留，影响面广且暴露面长期存在。 本次共筛选 15 条新闻（三来源各 5 条候选），按评分取前 5 条；最高分 95 分（微信 WeWorm 零点击蠕虫）。 微软 2026 年 9 月补丁（Patch Tuesday）已于 909 北京时间正式发布，本日报文末独立板块承载完整 CVE 级拆解，不进入新闻 Top5。 微信板块漏洞尚无 CVE 编号、Tencent 未发公开公告，技术细节待会议披露；建议用户升级至 Android 8.0.77 / iOS 8.0.76 以上并确认服务端已拦截。"
+ },
+ {
   "date": "2026-09-11",
   "url": "daily/daily_news_2026-09-11.html",
   "title": "网络安全日报 2026-09-11",
