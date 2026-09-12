@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-09-12T00:00:00Z</updated>
+  <updated>2026-09-13T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-09-13</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-13.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-13.html</id>
+    <updated>2026-09-13T00:00:00Z</updated>
+    <summary>自动生成于 20260913 07:00（北京时间）。本期 Top5 为纯新闻条目；微软补丁安全级别作为文末独立板块呈现（基于 202609 正式发布的 CVRF 真实解析）。</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-09-12</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-12.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-25.html</id>
     <updated>2026-08-25T00:00:00Z</updated>
     <summary>数据来源：The Hacker News、BleepingComputer、Hacker News（过去 24 小时筛选）</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-08-24</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-24.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-24.html</id>
-    <updated>2026-08-24T00:00:00Z</updated>
-    <summary>数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时内候选，三来源各筛选 5 条，共 15 条候选，按评分取前 5）</summary>
   </entry>
 </feed>

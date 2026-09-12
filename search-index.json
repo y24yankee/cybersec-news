@@ -1,5 +1,22 @@
 [
  {
+  "date": "2026-09-13",
+  "url": "daily/daily_news_2026-09-13.html",
+  "title": "网络安全日报 2026-09-13",
+  "score": 92,
+  "cves": [
+   "CVE-2026-42016",
+   "CVE-2026-67277",
+   "CVE-2026-82329",
+   "CVE-2026-84869",
+   "CVE-2026-85706",
+   "CVE-2026-86060",
+   "CVE-2026-87491"
+  ],
+  "summary": "自动生成于 20260913 07:00（北京时间）。本期 Top5 为纯新闻条目；微软补丁安全级别作为文末独立板块呈现（基于 202609 正式发布的 CVRF 真实解析）。",
+  "text": "自动生成于 20260913 07:00（北京时间）。本期 Top5 为纯新闻条目；微软补丁安全级别作为文末独立板块呈现（基于 202609 正式发布的 CVRF 真实解析）。 评分维度：严重性（漏洞利用/大规模攻击/国家级威胁）→ 新颖性（0day/新手法）→ 影响范围（用户量/企业数）→ 时效性（24–48h 内）。补丁严重级别数据不进入新闻评分，仅作文末独立板块。 评分：92 ｜ 理由：ScreenConnect 客户端可无确认执行恶意文件、RouterOS 可无认证完全接管设备，均已在野利用，且 RouterOS 联邦修复截止日即为今日（913）。 来源： The Hacker News 摘要： CISA 将影响 JFrog Artifactory、ConnectWise ScreenConnect、MikroTik RouterOS 的 5 个漏洞加入 KEV。其中 CVE202684869（CVSS 9.9）可在活跃远程会话中无授权传输并执行文件；CVE202667277（8.8）/ CVE202686060（9.2）被 CERT Polska 命名为「MikroTrick」链，可无认证夺取路由器控制权。Artifactory 两项（CVE202642016/42018）已被与 CVE202682329 链式利用部署 Rust 后门。联邦修复期限：RouterOS 913、ScreenConnect 914、Artifactory 925。 原文链接： https://thehackernews.com/2026/09/cisaadds5activelyexploited.html 评分：90 ｜ 理由：政府敏感身份数据库（含 SSN、住址、驾照影像）被攻破，波及执法系统，敏感 PII 规模大且涉勒索。 来源： BleepingComputer（原始报道；转载页） 摘要： 佛罗里达州公路安全与车辆管理部（FLHSMV）确认其 DAVID 司机与车辆信息数据库被入侵，入口为一名 Plant City 警员被不当存放在个人设备上的凭据。州方称 94 发现、已快速遏制；勒索组织 ShinyHunters 则宣称利用密码重置缺陷于 93 起遍历记录 ID 窃取逾 20 万条司机记录（含杰弗里·爱泼斯坦记录作为证据），并设 911 截止期限。双方对入侵路径说法不一，确切外泄量待取证。 原文链接： https://www.worldprogramming.org/posts/floridaconfirmsdmvdatabasebreachedviastolenpoliceaccountaagkod 评分：88 ｜ 理由：以 Passkey/MFA/SSO 紧急更新为饵，结合 AiTM 与设备码钓鱼，可绕过 MFA 夺取整个云环境，影响面极广。 来源： BleepingComputer 摘要： 微软披露 ShinyHunters（Storm3121）、Helix（Storm3032）等勒索生态组织自 202605 起发起 Passkey/单点登录主题社工攻击：伪装 IT 帮助台诱导员工访问仿冒 Microsoft 登录页，利用对手在中途（AiTM）或设备码（devicecode）流窃取凭据与会话令牌，进而横扫 SharePoint、Outlook、OneDrive 及连通的 Salesforce/Google Workspace 等 SaaS。攻击者在得手后常注册自有 MFA 方式维持持久化。 原文链接： https://www.bleepingcomputer.com/news/security/passkeythemedphishingattacksleadtomicrosoft365datatheft/ 评分：86 ｜ 理由：AI 自动化将密钥猎取规模与速度量级化提升，单个 ShinyHunters 成员 34 小时即攫取 2100+ 套 Azure AD 令牌。 来源： BleepingComputer 摘要： Anthropic 报告（202512 至 202608）披露多个金融犯罪与中俄国家背景组织滥用 Claude 实施网络与间谍活动。一名疑似 ShinyHunters 成员（frkoo）用 10 台 AWS EC2 工作节点批量下载并反编译 180 万份 Android APK，借 TruffleHog 扫描硬编码密钥，验证结果实时回传至分 100+ 类的 Telegram 群组；其利用 Claude 自动化在约 34 小时内提取涉及 40+ 企业租户的 2100+ 套 Azure AD 令牌，并从单一被盗开发者令牌在 3 小时内升至完全管理员权限。 原文链接： https://www.bleepingcomputer.com/news/security/hackersabusedclaudetoextractsecretsfrom18mandroidapps/ 评分：82 ｜ 理由：第三方营销平台 SSO 越权致 138 个客户账户暴露，供应链式钓鱼直击安全意识较强的加密用户群。 来源： SecurityWeek 摘要： 攻击者利用 Brevo 处理 SAML 单点登录的方式缺陷（自建账户开启 SSO 后邀请合法用户，授权边界错误扩张至所有可达组织），入侵 138 个客户账户；其中 6 个账户发出钓鱼邮件、43 个被导出联系人。硬件钱包厂商 Trezor 确认约 34.7 万订阅者收到以「STM32 熵漏洞」为名的钓鱼邮件，约 2500 人点击（恶意域名 20 分钟内被关停）；BitBox、CoinTracking 亦受影响。 原文链接： https://www.securityweek.com/trezorsays347000usersreceivedphishingemailsafterbrevohack/ 本次共筛选 15 条候选新闻（Hacker News / The Hacker News / BleepingComputer 三来源各约 5 条），主动排除 903912 已入 Top5 的条目（如 Check Point 双 9.8 VPN、BlueMoon、GitLab CVE202685706、Artifactory CVE202682329、Chrome V8 CVE202687491、Anthropic 工业级蒸馏等），避免连日重复刷屏。 补丁板块所有数字（CVE 总数 1228、分级、CVSS、在野利用）均来自今日（913）实时解析的正式 CVRF 文档，未沿用历史或上月数据。 微信推送：企业微信 connector 当前未连接，按既定默认跳过实际发送，仅本地文件交付。 本次共筛选 15 条新闻，最高分 92 分。"
+ },
+ {
   "date": "2026-09-12",
   "url": "daily/daily_news_2026-09-12.html",
   "title": "网络安全日报 2026-09-12",
