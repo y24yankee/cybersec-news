@@ -1,5 +1,17 @@
 [
  {
+  "date": "2026-09-15",
+  "url": "daily/daily_news_2026-09-15.html",
+  "title": "网络安全日报 2026-09-15",
+  "score": 95,
+  "cves": [
+   "CVE-2024-21762",
+   "CVE-2026-60004"
+  ],
+  "summary": "每日 07:00（北京时间）自动检索 Hacker News / The Hacker News / BleepingComputer 三源新闻，评分筛选 Top5；并在微软补丁日正式发布后附加独立补丁板块。",
+  "text": "每日 07:00（北京时间）自动检索 Hacker News / The Hacker News / BleepingComputer 三源新闻，评分筛选 Top5；并在微软补丁日正式发布后附加独立补丁板块。 来源：The Hacker News 评分理由：首个针对 DDR5 云服务器的\"主动拦截器\"攻击，破坏最新 Intel TDX/AMD SEVSNP 的内存完整性，影响所有主流云机密计算，新颖性与影响范围极高。 摘要：研究人员披露名为 DDRop 的新硬件攻击，通过成本低于 200 美元、插在 CPU 与内存模组之间的拦截板\"丢弃写入\"，使处理器持续读取旧加密数据。该攻击是首个可在现行 DDR5 云服务器上运行的主动拦截器攻击，并首次破坏了处于最新状态 Intel TDX 的完整性（此前 TEE.fail 等仅为被动监听且限于 DDR4）。攻击可读取受害虚拟机私密内存、切换调试模式并伪造远程证明，相关板设计与代码将随 ACM CCS 2026 论文开源。 原文链接：https://thehackernews.com/2026/09/newddropattackbreaksinteltdxand.html 来源：The Hacker News 评分理由：疑似中国 APT 在 Gitea 漏洞公开后数日内武器化为自动化框架，跨六国入侵 13 家机构并横向移动至 Proxmox 集群 root，威胁情报价值高。 摘要：Acronis TRU 将 Red Heron 归因为一支疑似中国背景的威胁行为体，其利用 CVE202660004（Gitea 严重 RCE）在七国扫描 1,386 个实例，将公开 PoC 改造为自动化 Python 框架，入侵加拿大、阿根廷、台湾、美国、卡塔尔、斯里兰卡共 13 家机构，部署含 30+ 命令的 JITTERLY 植入与 SIXZUT LDPRELOAD rootkit，目标涵盖国防、选举、能源、电信等关键领域。 原文链接：https://thehackernews.com/2026/09/redheronexploitsgitearceto.html 来源：The Hacker News 评分理由：泰国大型宽带运营商内网遭入侵并获得 root，攻击者专门瞄准 RADIUS 订阅用户凭证，且备有 CVE202421762 FortiGate 利用工具，影响面广。 摘要：Hunt.io 发现一名攻击者长期潜伏于泰国主要宽带提供商 3BB 内网，使用合法的 MeshCentral 远程管理工具配置为隐藏后门维持控制，并获取内部服务器 root 权限；其脚本面向 55+ 台内网主机爆破口令、搜索数据库/SSH 密钥，并专门构建工具复制 RADIUS 订阅用户凭证库，同时备有针对 3BB FortiGate SSLVPN 的 CVE202421762 完整利用。 原文链接：https://thehackernews.com/2026/09/3bbattackerusedmeshcentralbackdoor.html 来源：The Hacker News 评分理由：跨店恶意扩展将用户 OAuth Token 以明文写入代理服务器日志，影响近 3.1 万用户聊天与账户设置，且更新前旧版本持续外泄。 摘要：名为 \"Twitch Enhanced Viewer | JeetBot\" 的恶意跨店扩展（Chrome 约 3 万、Firefox 604 用户）将用户 Twitch OAuth Token 作为 &auth= 参数随视频请求发往运营方代理服务器（俄罗斯商业机器人 SaaS），可访问聊天、私信与账户设置；该 Token 以明文写入代理日志，仅硬编码的 10 个俄语频道被豁免。开发者称系\"疏忽\"并已在新版修复，但旧版本仍持续外泄。 原文链接：https://thehackernews.com/2026/09/malicioustwitchbrowserextension.html 来源：The Hacker News 评分理由：导出 HTML 时未转义按钮文本致 XSS，旧版导出文件至今仍可在浏览器中静默运行脚本窃取全部消息，CVSS 8.2，存量风险高。 摘要：ExPatch 研究发现，Telegram Desktop 在将聊天导出为 HTML 时未对机器人消息内联键盘的按钮文本做转义，攻击者可植入隐藏 JavaScript，用户用浏览器打开旧导出文件时脚本自动运行，读取并外传文件内全部消息、发送者与时间戳，还可伪造\"验证\"页面。该缺陷（CVSS 8.2）存在于 4.15.1 至 6.9.3，已在 7.0.1 修复，但此前导出的文件仍可被利用。 原文链接：https://thehackernews.com/2026/09/telegramdesktopflawletshidden.html 本次共筛选 15 条新闻，最高分 95 分。 📲 微信推送：企业微信 connector 当前未连接，按既定默认跳过实际发送，仅本地文件交付（与历史运行一致）。"
+ },
+ {
   "date": "2026-09-14",
   "url": "daily/daily_news_2026-09-14.html",
   "title": "网络安全日报 2026-09-14",

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-15 | 网络安全新闻中心</title>
+<meta name="description" content="每日 07:00（北京时间）自动检索 Hacker News / The Hacker News / BleepingComputer 三源新闻，评分筛选 Top5；并在微软补丁日正式发布后附加独立补丁板块。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-09-15">
+<meta property="og:description" content="每日 07:00（北京时间）自动检索 Hacker News / The Hacker News / BleepingComputer 三源新闻，评分筛选 Top5；并在微软补丁日正式发布后附加独立补丁板块。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-15.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-09-15">
+<meta name="twitter:description" content="每日 07:00（北京时间）自动检索 Hacker News / The Hacker News / BleepingComputer 三源新闻，评分筛选 Top5；并在微软补丁日正式发布后附加独立补丁板块。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-15</h1>
+<blockquote>
+<p>每日 07:00（北京时间）自动检索 Hacker News / The Hacker News / BleepingComputer 三源新闻，评分筛选 Top5；并在微软补丁日正式发布后附加独立补丁板块。</p>
+</blockquote>
+<h2 id="s1">今日 Top 5 安全新闻（按评分降序）</h2>
+<h3 id="s2">1. DDRop 硬件攻击击穿 Intel TDX 与 AMD SEV-SNP 机密计算（评分 95）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>评分理由</strong>：首个针对 DDR5 云服务器的"主动拦截器"攻击，破坏最新 Intel TDX/AMD SEV-SNP 的内存完整性，影响所有主流云机密计算，新颖性与影响范围极高。</li>
+<li><strong>摘要</strong>：研究人员披露名为 DDRop 的新硬件攻击，通过成本低于 200 美元、插在 CPU 与内存模组之间的拦截板"丢弃写入"，使处理器持续读取旧加密数据。该攻击是首个可在现行 DDR5 云服务器上运行的主动拦截器攻击，并首次破坏了处于最新状态 Intel TDX 的完整性（此前 TEE.fail 等仅为被动监听且限于 DDR4）。攻击可读取受害虚拟机私密内存、切换调试模式并伪造远程证明，相关板设计与代码将随 ACM CCS 2026 论文开源。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/new-ddrop-attack-breaks-intel-tdx-and.html</li>
+</ul>
+<h3 id="s3">2. Red Heron 借 Gitea RCE 攻陷六国 13 家机构（评分 92）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>评分理由</strong>：疑似中国 APT 在 Gitea 漏洞公开后数日内武器化为自动化框架，跨六国入侵 13 家机构并横向移动至 Proxmox 集群 root，威胁情报价值高。</li>
+<li><strong>摘要</strong>：Acronis TRU 将 Red Heron 归因为一支疑似中国背景的威胁行为体，其利用 CVE-2026-60004（Gitea 严重 RCE）在七国扫描 1,386 个实例，将公开 PoC 改造为自动化 Python 框架，入侵加拿大、阿根廷、台湾、美国、卡塔尔、斯里兰卡共 13 家机构，部署含 30+ 命令的 JITTERLY 植入与 SIXZUT LD_PRELOAD rootkit，目标涵盖国防、选举、能源、电信等关键领域。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html</li>
+</ul>
+<h3 id="s4">3. 3BB 攻击者借 MeshCentral 后门获取 root 并瞄准用户凭证（评分 88）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>评分理由</strong>：泰国大型宽带运营商内网遭入侵并获得 root，攻击者专门瞄准 RADIUS 订阅用户凭证，且备有 CVE-2024-21762 FortiGate 利用工具，影响面广。</li>
+<li><strong>摘要</strong>：Hunt.io 发现一名攻击者长期潜伏于泰国主要宽带提供商 3BB 内网，使用合法的 MeshCentral 远程管理工具配置为隐藏后门维持控制，并获取内部服务器 root 权限；其脚本面向 55+ 台内网主机爆破口令、搜索数据库/SSH 密钥，并专门构建工具复制 RADIUS 订阅用户凭证库，同时备有针对 3BB FortiGate SSL-VPN 的 CVE-2024-21762 完整利用。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html</li>
+</ul>
+<h3 id="s5">4. 恶意 Twitch 浏览器扩展泄露近 31,000 用户 OAuth Token（评分 85）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>评分理由</strong>：跨店恶意扩展将用户 OAuth Token 以明文写入代理服务器日志，影响近 3.1 万用户聊天与账户设置，且更新前旧版本持续外泄。</li>
+<li><strong>摘要</strong>：名为 "Twitch Enhanced Viewer | JeetBot" 的恶意跨店扩展（Chrome 约 3 万、Firefox 604 用户）将用户 Twitch OAuth Token 作为 <code>&amp;auth=</code> 参数随视频请求发往运营方代理服务器（俄罗斯商业机器人 SaaS），可访问聊天、私信与账户设置；该 Token 以明文写入代理日志，仅硬编码的 10 个俄语频道被豁免。开发者称系"疏忽"并已在新版修复，但旧版本仍持续外泄。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/malicious-twitch-browser-extension.html</li>
+</ul>
+<h3 id="s6">5. Telegram Desktop HTML 导出缺陷可埋藏 JS 窃取全部聊天记录（评分 82）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>评分理由</strong>：导出 HTML 时未转义按钮文本致 XSS，旧版导出文件至今仍可在浏览器中静默运行脚本窃取全部消息，CVSS 8.2，存量风险高。</li>
+<li><strong>摘要</strong>：ExPatch 研究发现，Telegram Desktop 在将聊天导出为 HTML 时未对机器人消息内联键盘的按钮文本做转义，攻击者可植入隐藏 JavaScript，用户用浏览器打开旧导出文件时脚本自动运行，读取并外传文件内全部消息、发送者与时间戳，还可伪造"验证"页面。该缺陷（CVSS 8.2）存在于 4.15.1 至 6.9.3，已在 7.0.1 修复，但此前导出的文件仍可被利用。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条新闻，最高分 95 分。</p>
+<blockquote>
+<p>📲 微信推送：企业微信 connector 当前未连接，按既定默认跳过实际发送，仅本地文件交付（与历史运行一致）。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-09-14.html">← 前一天 2026-09-14</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
