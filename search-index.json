@@ -1,5 +1,19 @@
 [
  {
+  "date": "2026-09-17",
+  "url": "daily/daily_news_2026-09-17.html",
+  "title": "网络安全日报 2026-09-17",
+  "score": 92,
+  "cves": [
+   "CVE-2026-27540",
+   "CVE-2026-5430",
+   "CVE-2026-58704",
+   "CVE-2026-90894"
+  ],
+  "summary": "评分标准：严重性（漏洞利用 / 大规模攻击 / 国家级威胁） 新颖性（0day / 新手法） 影响范围（用户量 / 企业数） 时效性（24 小时内）。补丁严重级别数据不计入新闻评分，单独成章。",
+  "text": "评分标准：严重性（漏洞利用 / 大规模攻击 / 国家级威胁） 新颖性（0day / 新手法） 影响范围（用户量 / 企业数） 时效性（24 小时内）。补丁严重级别数据不计入新闻评分，单独成章。 评分：92 ｜ 理由：零点击、蜂窝基带提权且已被有限定向利用，CISA 9/16 紧急纳入 KEV，影响面广（全部 Pixel 设备）。 来源： The Hacker News 摘要： Google 披露 Pixel Cellular Modem 逻辑缺陷 CVE202658704（CVSS 8.0）已出现\"有限、定向\"的在野利用迹象，攻击无需用户交互即可静默提权。CISA 于 20260916 将其加入 Known Exploited Vulnerabilities 目录，要求联邦机构 9/19 前修复；9 月 Pixel 补丁共修复 110 个漏洞（含 46 个 Pixel 组件严重提权/RCE）。 原文： https://thehackernews.com/2026/09/googlepatchespixelmodemflawamid.html 评分：90 ｜ 理由：CVSS 9.8/10.0 的认证绕过可接管 API 网关管理员并实现横向移动，watchTowr 蜜网已捕获携带管理员权限的伪造 JWT。 来源： The Hacker News 摘要： WSO2 API Manager（及 API Control Plane / Traffic Manager / Universal Gateway 4.1.0–4.6.0）存在 JWT 签名验证缺陷，攻击者可用不受支持的算法签名令牌绕过认证、完全接管账户。watchTowr 观测到 20260913 起出现携带内建管理员权限的伪造 JWT 在野探测，可借此窃取所有注册应用的消费者密钥与后端凭证。 原文： https://thehackernews.com/2026/09/activeexploitationattemptstarget.html 评分：88 ｜ 理由：未认证任意文件上传（CVSS 9.8）、6,000+ 活跃安装，Wordfence 累计拦截超 10 万次尝试且近 24 小时仍有活跃攻击。 来源： The Hacker News 摘要： 付费 WordPress 插件 WooCommerce Wholesale Lead Capture（≤2.0.3.1）因 wwlcfileuploadhandler 动作缺少文件类型校验，允许未认证攻击者上传 PHP 后门并实现 RCE。Wordfence 称自 202606 起已拦截超 100,000 次利用尝试，过去 24 小时录得 99 次，攻击载荷为可写文件的 shell.php WebShell。 原文： https://thehackernews.com/2026/09/attackersexploitwoocommercewholesale.html 评分：86 ｜ 理由：新型 AI 软件供应链实战案例——通过毒化 PyPI 包劫持活跃编程会话、窃取 GitHub OAuth 令牌并自传播，对研发环境威胁直观。 来源： The Hacker News 摘要： Mandiant 在 9 月报告中披露，某 SaaS 厂商的活跃 AI 编程助手会话被攻击者劫持：助手\"推荐\"了已被投毒的依赖并被采纳，攻击者借开发者会话安装信息窃取器、窃取 GitHub OAuth 令牌，并将自传播蠕虫 ShaiHulud 扩散至约 100 个内部仓库，还污染了官方命名空间下的包引发二次感染。报告建议对 AI 推荐依赖做校验和/白名单核对、隔离密钥与依赖流量。 原文： https://thehackernews.com/2026/09/attackerhijacksaicodingassistant.html 评分：83 ｜ 理由：本地提权（CVSS 7.8）、利用条件极低（任意本地代码即可），且修复版 Parallels 27 仅支持 Apple Silicon，Intel Mac 用户无补丁可用。 来源： The Hacker News 摘要： JFrog 发现 Parallels Desktop 的 root 级 prldispservice 存在世界可写套接字与命令注入缺陷（CVE202690894，作者自评 7.8），普通本地账户可通过构造虚拟机路径触发 tar usecompressprogram 以 root 执行任意程序。修复位于 Parallels Desktop 27，但该版本仅支持 Apple Silicon；Parallels 尚未公开置评，目前无已知在野利用。 原文： https://thehackernews.com/2026/09/parallelsdesktopflawletsnonadmin.html 本次共筛选 15 条新闻（Hacker News / The Hacker News / BleepingComputer 各 5 条候选），最高分 92 分。"
+ },
+ {
   "date": "2026-09-16",
   "url": "daily/daily_news_2026-09-16.html",
   "title": "网络安全日报 2026-09-16",

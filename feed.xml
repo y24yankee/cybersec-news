@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-09-16T00:00:00Z</updated>
+  <updated>2026-09-17T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-09-17</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-17.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-17.html</id>
+    <updated>2026-09-17T00:00:00Z</updated>
+    <summary>评分标准：严重性（漏洞利用 / 大规模攻击 / 国家级威胁） 新颖性（0day / 新手法） 影响范围（用户量 / 企业数） 时效性（24 小时内）。补丁严重级别数据不计入新闻评分，单独成章。</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-09-16</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-16.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-29.html</id>
     <updated>2026-08-29T00:00:00Z</updated>
     <summary>数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-08-28</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-28.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-08-28.html</id>
-    <updated>2026-08-28T00:00:00Z</updated>
-    <summary>数据来源：The Hacker News、BleepingComputer（Hacker News 当日首页无独立新增原创安全报道，候选已覆盖上述两家原始信源）。补丁日板块基于微软 MSRC 官方 CVRF 实时解析。</summary>
   </entry>
 </feed>
