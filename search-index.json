@@ -1,5 +1,34 @@
 [
  {
+  "date": "2026-09-19",
+  "url": "daily/daily_news_2026-09-19.html",
+  "title": "网络安全日报 2026-09-19",
+  "score": 91,
+  "cves": [
+   "CVE-2026-68121",
+   "CVE-2026-74469",
+   "CVE-2026-77179",
+   "CVE-2026-80844",
+   "CVE-2026-81000",
+   "CVE-2026-87886",
+   "cve-2026-77179"
+  ],
+  "summary": "自动推送 · 来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）",
+  "text": "自动推送 · 来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时） 微软补丁日状态：本月「September 2026 Security Updates」已于 0909 正式发布，以下补丁板块基于今日实时解析的 MSRC CVRF 官方文档生成。 评分：91 / 100 — 理由：新颖的\"可信源链式\"攻击手法，可强制安装主题并链至 RCE，影响面极广。 来源： The Hacker News 摘要： WordPress 于 917 发布 7.1.1 安全更新，修复核心中一处被 pwn.ai 命名为 Click2Shell 的缺陷：攻击者构造的链接可令已登录管理员在不知情下从官方目录自动安装主题（无需点击 Install），再结合所装主题的二次缺陷即可在服务端执行任意代码（完整链 CVSS 9.6）。影响 6.0 至 7.1.1 之前几乎所有受支持版本，暂无在野利用报告，但手法值得站点管理员立即升级。 原文： https://thehackernews.com/2026/09/newwordpressclick2shellflawforces.html 评分：89 / 100 — 理由：国家级 APT 全新命名行动+新工具集，定向政府国防高价值目标。 来源： The Hacker News 摘要： 巴基斯坦背景的 APT36（Transparent Tribe）被指针对印度、阿富汗政府及国防实体发动代号 Operation RapidRust 的新行动，使用 4 个此前未公开的 Rust 工具：RUSTYSHADE（借私有 GitHub 仓库加密 C2 的后门）、RUSTYMOVE、PSNATCH（Windows 文件窃取器）、BASHNATCH（Linux 变种），并通过仿冒印度新闻域名（theprint[.]org、indiatodays[.]org）托管载荷。 原文： https://thehackernews.com/2026/09/transparenttribedeploysrust.html 评分：87 / 100 — 理由：公开可用利用代码使未打补丁的 Linux 主机直接暴露于 root 提权。 来源： The Hacker News 摘要： 研究员 Asim Manizada 于 918 公开 4 个 Linux 内核本地提权漏洞的可利用代码：DirtyAH6（CVE202680844）、TUNderflow（CVE202681000）、PPPoEject（CVE202668121）、DiagSpill（CVE202674469）。补丁已随稳定内核分支（5.10.270 / 6.1.188 / 6.6.157 / 6.12.109 等）发布；仍运行旧内核的多租户主机、构建服务器、电信/OT 设备面临直接 root 风险，其中 DiagSpill 无需用户命名空间即可触发。 原文： https://thehackernews.com/2026/09/publicexploitsreleasedforfourlinux.html 评分：85 / 100 — 理由：可达宿主机代码执行的沙箱逃逸，直接威胁 macOS Docker 用户。 来源： Docker 安全公告 / NVD（The Hacker News 同日报道） 摘要： macOS 上 Docker Sandboxes 的 virtiofs 宿主服务在重开已删除文件时错误跟随符号链接，恶意客户机可借符号链接逃逸共享工作区、读写宿主任意文件（CVSS 4.0 9.4 Critical），0.28.0–0.42.0 受影响，已于 0.42.0 修复。该缺陷由 accomplish.ai 的 Oren Yomtov 发现，属宿主机级代码执行风险。 原文： https://docs.docker.com/security/securityannouncements/ （NVD：https://nvd.nist.gov/vuln/detail/cve202677179） 评分：84 / 100 — 理由：已确认在野利用的本地提权，且位于拥有广泛文件系统权限的备份组件，共享主机场景放大危害。 来源： BleepingComputer 摘要： Acronis 警告其 cPanel/WHM 与 Plesk 备份插件存在 Linux 本地提权漏洞（CVE202687886，CVSS 7.8），已在\"有限、定向攻击\"中被利用。该插件本就拥有遍历各租户数据的广泛权限，在共享主机环境中一旦被利用可从单站点提权至整台服务器。受影响版本（cPanel/WHM < 1.9.3.1021、Plesk < 1.8.11.638）已发布修复。 原文： https://www.bleepingcomputer.com/news/security/acroniswarnsofactivelyexploitedflawinitscpanelbackupplugin/ 本次共筛选 15 条新闻（Hacker News / The Hacker News / BleepingComputer 各 5 条候选），最高分 91 分。 补丁板块基于 MSRC 官方 CVRF（2026Sep）实时解析：CVE 总数 1774，Critical 158 / Important 1046 / Moderate 272 / Low 43 / 未评级 255；在野利用 2 项；CVSS≥9.0 共 97 项。 ⚠️ 微信推送说明：企业微信 connector 当前未连接，本次仅生成本地报告文件，未实际发送消息。"
+ },
+ {
+  "date": "2026-09-18",
+  "url": "daily/daily_news_2026-09-18.html",
+  "title": "网络安全日报 2026-09-18",
+  "score": 96,
+  "cves": [
+   "CVE-2026-76460",
+   "CVE-2026-91843"
+  ],
+  "summary": "来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）",
+  "text": "来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时） 评分标准：严重性  新颖性  影响范围  时效性（补丁项不计入新闻评分，见文末独立板块） 评分：96 — 满分严重度、已确认在野利用、CISA 纳入 KEV 并设 919 三日整改期限、且无任何变通方案，直接击中企业零信任/NAC 管控核心。 来源： BleepingComputer 摘要： Cisco 修复其 Identity Services Engine（ISE）与 ISEPIC 中一个 API 认证控制不足的漏洞，攻击者可在未认证情况下通过构造请求绕过 Web 管理界面认证、获取设备完全控制权。Cisco PSIRT 确认已在野利用，CISA 已将其列入 KEV 目录，要求联邦机构在 20260919 前修补或停用 ISE。思科同时建议排查 access.log 中可疑用户名、必要时对节点重新镜像并从备份恢复。 原文： https://www.bleepingcomputer.com/news/security/ciscowarnsofidentityserviceenginezerodayexploitedinattacks/ 评分：90 — 大规模供应链污染、借助 CDN 边缘在 10 万客户站点静默投毒、手法新颖（滥用合法 Cloudflare Worker 改写响应）。 来源： BleepingComputer 摘要： 邮件营销平台 Brevo 确认攻击者盗取一个硬编码在源码中的长期 Cloudflare API Key，创建恶意 Cloudflare Worker，在 CDN 边缘约 5.5 小时内改写 brevo.com 及客户嵌入脚本，对访客展示伪造 Cloudflare 验证页并诱导运行 ClickFix 命令。针对登录态 WordPress 管理员还会尝试上传名为“Web Media Optimizer”的持久化后门插件。Sansec 估计受影响站点多达 10 万。 原文： https://www.bleepingcomputer.com/news/security/brevosupplychainattackinjectedclickfixscriptsoncustomersites/ 评分：88 — 网络可达、无需认证、无需交互即获 root，管控防火墙策略与管理员访问的核心组件失陷后果严重；暂未发现野利用，故略低于在野项。 来源： The Hacker News（经 OpenText Cybersecurity Community 转载） 摘要： Check Point Security Management / Log Server 登录流程存在栈溢出（CWE121），攻击者发送超长用户名的登录请求即可在认证完成前以 root 远程执行任意代码，CVSS 3.1 评 9.8。Censys 观测全球约 3,836 台相关主机，Check Point 已通过 LivePatch（sk1000155）发布修复，CISA 截至 917 记录无在野利用、无公开 PoC。建议将 SmartConsole Trusted Clients 限制为可信 IP、禁止“Any”。 原文： https://community.opentextcybersecurity.com/vulnerabilityvault228/criticalcheckpointmanagementflawletsunauthenticatedattackersruncodeasroot365686 评分：84 — 影响规模巨大（逾 2300 万用户、近 5 亿图片元数据），暴露窗口一度以“紧急维护”掩饰，私密性影响广泛。 来源： The Hacker News 摘要： 图片分享服务 Gyazo（运营方 Helpfeel）确认数据于 20260914 遭暴露，涉及约 2362 万用户记录与 490 亿（49 亿）条图片元数据；公司于 0915 向日本个人信息保护委员会报告、0916 发布通告，并称 Helpfeel 与 Cosense 等其他产品系统未受影响。外部 Forensic 调查进行中，将逐一邮件通知受影响用户。 原文： https://thehackernews.com/2026/09/gyazobreachexposes2362millionuser.html 评分：82 — 单月史上最大 Oracle 月度补丁量，Fusion Middleware / EBusiness Suite 大量无需认证的远程可利用路径，企业级大面积暴露。 来源： Qualys 漏洞威胁研究（Oracle 官方公告佐证） 摘要： Oracle 于 915 发布 2026 年 9 月 Critical Security Patch Update，覆盖 17 个产品族共 673 个安全补丁（672 个唯一 CVE），其中 104 项关键、503 项高危；EBusiness Suite（159 项）与 Fusion Middleware（153 项）补丁量最高，后者含 78 个无需认证即可网络利用的缺陷及 5 个 CVSS 10.0。Access Manager（9.9）、WebLogic（9.8）等身份/中间件组件存在预认证攻击面，建议优先修补面向互联网的部署。 原文： https://blog.qualys.com/vulnerabilitiesthreatresearch/2026/09/16/oraclecriticalsecuritypatchupdateseptember2026review 本次共筛选 15 条新闻（三来源各 5 条候选），按评分取前 5 条。 最高分：96 分（Cisco ISE 零日 CVE202676460 在野利用）。 微软补丁安全级别板块基于今日实时抓取的正式 CVRF 文档（2026Sep，1731 项），所有数字均来自真实解析，未沿用历史数据。 微信推送：企业微信 connector 当前未连接，推送通道不可用，按既定默认跳过实际发送，仅本地产出文件交付。"
+ },
+ {
   "date": "2026-09-17",
   "url": "daily/daily_news_2026-09-17.html",
   "title": "网络安全日报 2026-09-17",

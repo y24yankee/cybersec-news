@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-19 | 网络安全新闻中心</title>
+<meta name="description" content="自动推送 · 来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-09-19">
+<meta property="og:description" content="自动推送 · 来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-19.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-09-19">
+<meta name="twitter:description" content="自动推送 · 来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-19</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">🔝 Top 5 值得关注的安全新闻（按评分排序）</a></li>
+<li><a href="#s7">本期统计</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>自动推送 · 来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）
+微软补丁日状态：本月「September 2026 Security Updates」已于 09-09 正式发布，以下补丁板块基于今日实时解析的 MSRC CVRF 官方文档生成。</p>
+</blockquote>
+<hr />
+<h2 id="s1">🔝 Top 5 值得关注的安全新闻（按评分排序）</h2>
+<h3 id="s2">1. WordPress Click2Shell 强制主题安装链，可链至远程代码执行</h3>
+<ul>
+<li><strong>评分：91 / 100</strong> — <em>理由：新颖的"可信源链式"攻击手法，可强制安装主题并链至 RCE，影响面极广。</em></li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> WordPress 于 9-17 发布 7.1.1 安全更新，修复核心中一处被 pwn.ai 命名为 <strong>Click2Shell</strong> 的缺陷：攻击者构造的链接可令已登录管理员在不知情下从官方目录自动安装主题（无需点击 Install），再结合所装主题的二次缺陷即可在服务端执行任意代码（完整链 CVSS 9.6）。影响 6.0 至 7.1.1 之前几乎所有受支持版本，暂无在野利用报告，但手法值得站点管理员立即升级。</li>
+<li><strong>原文：</strong> https://thehackernews.com/2026/09/new-wordpress-click2shell-flaw-forces.html</li>
+</ul>
+<h3 id="s3">2. Transparent Tribe「Operation RapidRust」发动 Rust 后门行动</h3>
+<ul>
+<li><strong>评分：89 / 100</strong> — <em>理由：国家级 APT 全新命名行动+新工具集，定向政府国防高价值目标。</em></li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 巴基斯坦背景的 APT36（Transparent Tribe）被指针对印度、阿富汗政府及国防实体发动代号 <strong>Operation RapidRust</strong> 的新行动，使用 4 个此前未公开的 Rust 工具：RUSTYSHADE（借私有 GitHub 仓库加密 C2 的后门）、RUSTYMOVE、PSNATCH（Windows 文件窃取器）、BASHNATCH（Linux 变种），并通过仿冒印度新闻域名（theprint[.]org、indiatodays[.]org）托管载荷。</li>
+<li><strong>原文：</strong> https://thehackernews.com/2026/09/transparent-tribe-deploys-rust.html</li>
+</ul>
+<h3 id="s4">3. 四个 Linux 内核提权漏洞公开利用代码（DirtyAH6 等）</h3>
+<ul>
+<li><strong>评分：87 / 100</strong> — <em>理由：公开可用利用代码使未打补丁的 Linux 主机直接暴露于 root 提权。</em></li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 研究员 Asim Manizada 于 9-18 公开 4 个 Linux 内核本地提权漏洞的可利用代码：<strong>DirtyAH6</strong>（CVE-2026-80844）、<strong>TUNderflow</strong>（CVE-2026-81000）、<strong>PPPoEject</strong>（CVE-2026-68121）、<strong>DiagSpill</strong>（CVE-2026-74469）。补丁已随稳定内核分支（5.10.270 / 6.1.188 / 6.6.157 / 6.12.109 等）发布；仍运行旧内核的多租户主机、构建服务器、电信/OT 设备面临直接 root 风险，其中 DiagSpill 无需用户命名空间即可触发。</li>
+<li><strong>原文：</strong> https://thehackernews.com/2026/09/public-exploits-released-for-four-linux.html</li>
+</ul>
+<h3 id="s5">4. Docker Sandboxes macOS 沙箱逃逸 CVE-2026-77179</h3>
+<ul>
+<li><strong>评分：85 / 100</strong> — <em>理由：可达宿主机代码执行的沙箱逃逸，直接威胁 macOS Docker 用户。</em></li>
+<li><strong>来源：</strong> Docker 安全公告 / NVD（The Hacker News 同日报道）</li>
+<li><strong>摘要：</strong> macOS 上 Docker Sandboxes 的 virtio-fs 宿主服务在重开已删除文件时错误跟随符号链接，恶意客户机可借符号链接逃逸共享工作区、读写宿主任意文件（<strong>CVSS 4.0 9.4 Critical</strong>），0.28.0–0.42.0 受影响，已于 0.42.0 修复。该缺陷由 accomplish.ai 的 Oren Yomtov 发现，属宿主机级代码执行风险。</li>
+<li><strong>原文：</strong> https://docs.docker.com/security/security-announcements/ （NVD：https://nvd.nist.gov/vuln/detail/cve-2026-77179）</li>
+</ul>
+<h3 id="s6">5. Acronis cPanel/Plesk 备份插件 CVE-2026-87886 遭在野利用</h3>
+<ul>
+<li><strong>评分：84 / 100</strong> — <em>理由：已确认在野利用的本地提权，且位于拥有广泛文件系统权限的备份组件，共享主机场景放大危害。</em></li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> Acronis 警告其 cPanel/WHM 与 Plesk 备份插件存在 Linux 本地提权漏洞（<strong>CVE-2026-87886，CVSS 7.8</strong>），已在"有限、定向攻击"中被利用。该插件本就拥有遍历各租户数据的广泛权限，在共享主机环境中一旦被利用可从单站点提权至整台服务器。受影响版本（cPanel/WHM &lt; 1.9.3.1021、Plesk &lt; 1.8.11.638）已发布修复。</li>
+<li><strong>原文：</strong> https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/</li>
+</ul>
+<hr />
+<h2 id="s7">本期统计</h2>
+<ul>
+<li>本次共筛选 <strong>15</strong> 条新闻（Hacker News / The Hacker News / BleepingComputer 各 5 条候选），最高分 <strong>91</strong> 分。</li>
+<li>补丁板块基于 MSRC 官方 CVRF（2026-Sep）实时解析：CVE 总数 1774，Critical 158 / Important 1046 / Moderate 272 / Low 43 / 未评级 255；在野利用 2 项；CVSS≥9.0 共 97 项。</li>
+</ul>
+<blockquote>
+<p>⚠️ 微信推送说明：企业微信 connector 当前未连接，本次仅生成本地报告文件，未实际发送消息。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-09-18.html">← 前一天 2026-09-18</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

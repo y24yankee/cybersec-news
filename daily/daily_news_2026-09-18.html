@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-18 | 网络安全新闻中心</title>
+<meta name="description" content="来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-09-18">
+<meta property="og:description" content="来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-18.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-09-18">
+<meta name="twitter:description" content="来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-18</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 值得关注新闻</a></li>
+<li><a href="#s7">汇总</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）
+评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性（补丁项不计入新闻评分，见文末独立板块）</p>
+</blockquote>
+<hr />
+<h2 id="s1">Top 5 值得关注新闻</h2>
+<h3 id="s2">1. Cisco ISE 零日认证绕过（CVE-2026-76460，CVSS 10.0）遭在野利用</h3>
+<ul>
+<li><strong>评分：96</strong> — 满分严重度、已确认在野利用、CISA 纳入 KEV 并设 9-19 三日整改期限、且无任何变通方案，直接击中企业零信任/NAC 管控核心。</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> Cisco 修复其 Identity Services Engine（ISE）与 ISE-PIC 中一个 API 认证控制不足的漏洞，攻击者可在未认证情况下通过构造请求绕过 Web 管理界面认证、获取设备完全控制权。Cisco PSIRT 确认已在野利用，CISA 已将其列入 KEV 目录，要求联邦机构在 2026-09-19 前修补或停用 ISE。思科同时建议排查 access.log 中可疑用户名、必要时对节点重新镜像并从备份恢复。</li>
+<li><strong>原文：</strong> https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/</li>
+</ul>
+<h3 id="s3">2. Brevo 供应链攻击：Cloudflare API Key 泄露，约 10 万网站被注入 ClickFix</h3>
+<ul>
+<li><strong>评分：90</strong> — 大规模供应链污染、借助 CDN 边缘在 10 万客户站点静默投毒、手法新颖（滥用合法 Cloudflare Worker 改写响应）。</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> 邮件营销平台 Brevo 确认攻击者盗取一个硬编码在源码中的长期 Cloudflare API Key，创建恶意 Cloudflare Worker，在 CDN 边缘约 5.5 小时内改写 brevo.com 及客户嵌入脚本，对访客展示伪造 Cloudflare 验证页并诱导运行 ClickFix 命令。针对登录态 WordPress 管理员还会尝试上传名为“Web Media Optimizer”的持久化后门插件。Sansec 估计受影响站点多达 10 万。</li>
+<li><strong>原文：</strong> https://www.bleepingcomputer.com/news/security/brevo-supply-chain-attack-injected-clickfix-scripts-on-customer-sites/</li>
+</ul>
+<h3 id="s4">3. Check Point 安全管理服务器栈溢出（CVE-2026-91843，CVSS 9.8）可未认证 root RCE</h3>
+<ul>
+<li><strong>评分：88</strong> — 网络可达、无需认证、无需交互即获 root，管控防火墙策略与管理员访问的核心组件失陷后果严重；暂未发现野利用，故略低于在野项。</li>
+<li><strong>来源：</strong> The Hacker News（经 OpenText Cybersecurity Community 转载）</li>
+<li><strong>摘要：</strong> Check Point Security Management / Log Server 登录流程存在栈溢出（CWE-121），攻击者发送超长用户名的登录请求即可在认证完成前以 root 远程执行任意代码，CVSS 3.1 评 9.8。Censys 观测全球约 3,836 台相关主机，Check Point 已通过 LivePatch（sk1000155）发布修复，CISA 截至 9-17 记录无在野利用、无公开 PoC。建议将 SmartConsole Trusted Clients 限制为可信 IP、禁止“Any”。</li>
+<li><strong>原文：</strong> https://community.opentextcybersecurity.com/vulnerability-vault-228/critical-check-point-management-flaw-lets-unauthenticated-attackers-run-code-as-root-365686</li>
+</ul>
+<h3 id="s5">4. Gyazo 数据泄露：2362 万用户记录 + 4.9 亿图片元数据记录曝光</h3>
+<ul>
+<li><strong>评分：84</strong> — 影响规模巨大（逾 2300 万用户、近 5 亿图片元数据），暴露窗口一度以“紧急维护”掩饰，私密性影响广泛。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 图片分享服务 Gyazo（运营方 Helpfeel）确认数据于 2026-09-14 遭暴露，涉及约 2362 万用户记录与 490 亿（49 亿）条图片元数据；公司于 09-15 向日本个人信息保护委员会报告、09-16 发布通告，并称 Helpfeel 与 Cosense 等其他产品系统未受影响。外部 Forensic 调查进行中，将逐一邮件通知受影响用户。</li>
+<li><strong>原文：</strong> https://thehackernews.com/2026/09/gyazo-breach-exposes-2362-million-user.html</li>
+</ul>
+<h3 id="s6">5. Oracle 9 月关键补丁更新（CSPU）修复 673 项漏洞，含 104 项关键、6 项满分 10.0</h3>
+<ul>
+<li><strong>评分：82</strong> — 单月史上最大 Oracle 月度补丁量，Fusion Middleware / E-Business Suite 大量无需认证的远程可利用路径，企业级大面积暴露。</li>
+<li><strong>来源：</strong> Qualys 漏洞威胁研究（Oracle 官方公告佐证）</li>
+<li><strong>摘要：</strong> Oracle 于 9-15 发布 2026 年 9 月 Critical Security Patch Update，覆盖 17 个产品族共 673 个安全补丁（672 个唯一 CVE），其中 104 项关键、503 项高危；E-Business Suite（159 项）与 Fusion Middleware（153 项）补丁量最高，后者含 78 个无需认证即可网络利用的缺陷及 5 个 CVSS 10.0。Access Manager（9.9）、WebLogic（9.8）等身份/中间件组件存在预认证攻击面，建议优先修补面向互联网的部署。</li>
+<li><strong>原文：</strong> https://blog.qualys.com/vulnerabilities-threat-research/2026/09/16/oracle-critical-security-patch-update-september-2026-review</li>
+</ul>
+<hr />
+<h2 id="s7">汇总</h2>
+<ul>
+<li>本次共筛选 <strong>15</strong> 条新闻（三来源各 5 条候选），按评分取前 5 条。</li>
+<li>最高分：<strong>96</strong> 分（Cisco ISE 零日 CVE-2026-76460 在野利用）。</li>
+<li>微软补丁安全级别板块基于今日实时抓取的正式 CVRF 文档（2026-Sep，1731 项），所有数字均来自真实解析，未沿用历史数据。</li>
+</ul>
+<blockquote>
+<p>微信推送：企业微信 connector 当前未连接，推送通道不可用，按既定默认跳过实际发送，仅本地产出文件交付。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-09-17.html">← 前一天 2026-09-17</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-09-19.html">后一天 2026-09-19 →</a>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
