@@ -1,5 +1,22 @@
 [
  {
+  "date": "2026-09-20",
+  "url": "daily/daily_news_2026-09-20.html",
+  "title": "网络安全日报 2026-09-20",
+  "score": 95,
+  "cves": [
+   "CVE-2025-39682",
+   "CVE-2025-39964",
+   "CVE-2026-28323",
+   "CVE-2026-28326",
+   "CVE-2026-32882",
+   "CVE-2026-53266",
+   "CVE-2026-58138"
+  ],
+  "summary": "数据来源：Hacker News、The Hacker News、BleepingComputer 三站近 24 小时公开报道；评分维度＝严重性 × 新颖性 × 影响范围 × 时效性。补丁严重级别板块依据微软 MSRC 官方 CVRF（2026Sep，正式发布）实时解析，独立于 Top5。",
+  "text": "数据来源：Hacker News、The Hacker News、BleepingComputer 三站近 24 小时公开报道；评分维度＝严重性 × 新颖性 × 影响范围 × 时效性。补丁严重级别板块依据微软 MSRC 官方 CVRF（2026Sep，正式发布）实时解析，独立于 Top5。 评分：95 分 — 理由：CVSS 9.8 的无认证远程代码执行且已被 Fortinet 确认在野利用，工作流引擎成为新型高价值攻击面。 来源： The Hacker News 摘要： Orkes Conductor（广泛用于编排微服务与 AI Agent 的工作流平台）存在未认证 RCE 漏洞，攻击者可向工作流 API 提交含恶意 JavaScript/Python 表达式的内联定义，借未隔离的 GraalVM 提权执行系统命令。Fortinet 称 9 月 2–9 日拦截近 7000 次利用尝试（单日 132% 增长），攻击主要来自德国、香港、印尼、阿联酋与印度；修复版本为 3.30.2。 原文链接： https://thehackernews.com/2026/09/criticalpreauthrceinorkes.html 评分：92 分 — 理由：AI 模型在数小时内将漏洞利用开发周期从数周压缩到数天，演示了针对前沿实验室的 AI 加速攻击链，新颖性极高。 来源： The Hacker News 摘要： 安全公司 Hacktron 三名研究员借助 Anthropic 的 Claude Opus 5，链式组合 OpenAI 官方论坛的 libheif 堆溢出（CVE202632882）与 OpenAI 登录系统 SSO 配置缺陷，在 72 小时内接管多名员工 ChatGPT/Codex 账号并触达内部代码仓库（以无害 PR 证明）。整条链路无需受害者任何操作，Token 成本约 3000 美元；OpenAI 在报告后约 14 小时修复并支付 6500 美元赏金。 原文链接： https://thehackernews.com/2026/09/claudeopus5helpedresearcherstake.html 评分：88 分 — 理由：国家级 APT 在全球 100+ 国家规模性作案，窃走 1070 万美元加密货币并可能作为进入企业内网的跳板，影响范围极广。 来源： BleepingComputer 摘要： 美、日、澳、德联合警报披露，朝鲜关联组织 WaterPlum 在 202512 至 202607 期间以 AI/加密/Web3 公司名义假扮招聘方，借恶意 npm 包与虚假面试诱导开发者运行恶意代码，感染逾 3 万台设备、窃取 7000+ 加密钱包凭据，并将约 17 亿日元（1071 万美元）转入朝鲜。相关恶意软件含 BeaverTail、InvisibleFerret、OtterCookie、StoatWaffle 等，与朝鲜 IT 外包人员共用基础设施（第 313 总局）。 原文链接： https://www.bleepingcomputer.com/news/security/northkoreanwaterplumhackersinfected30000devicesworldwide/ 评分：86 分 — 理由：CVSS 8.8 的无认证 RCE，根因是硬编码静态密钥这一反复出现的高危反模式，且 ARM 紧邻 Active Directory 属 Tier0 级身份基础设施。 来源： The Hacker News 摘要： SolarWinds 修复了 Access Rights Manager（ARM）2026.2 及之前版本中由硬编码静态密钥导致的未认证远程代码执行漏洞（CVE202628326，CVSS 8.8），由研究员 Kai Huang 报告，已在 ARM 2026.2.1 修复，目前厂商未提及在野利用。同期 SolarWinds 还修复了 Web Help Desk 的 SAML 绕过（CVE202628323，9.8）及 ServU 的 16 个缺陷。 原文链接： https://thehackernews.com/2026/09/solarwindspatchesarmhardcodedkey.html 评分：85 分 — 理由：三个内核漏洞已确认在野利用，其中 kTLS 零长度记录处理（CVE202539682）CVSS 9.8 且可远程触发，联邦修复期限仅剩两天，时效性与严重性双高。 来源： The Hacker News 摘要： CISA 于 918 将三个 Linux 内核漏洞加入 KEV：CVE202539682（kTLS 接收路径零长度记录处理不当，CVSS 9.8）、CVE202653266（ebtables SNAT ARP 改写越界写，8.8）、CVE202539964（AFALG 套接字并发写竞态，7.8）。Red Hat 已于 919 更新公告确认在野利用；联邦机构须于 20260921 前完成修复（BOD 2604）。 原文链接： https://thehackernews.com/2026/09/cisaflagsthreelinuxkernel.html 本次共筛选 15 条新闻，最高分 95 分。 注：因企业微信 connector 当前未连接，本日报仅以本地文件形式交付，未实际推送微信。补丁板块数字均来自今日真实解析的正式 CVRF 文档。"
+ },
+ {
   "date": "2026-09-19",
   "url": "daily/daily_news_2026-09-19.html",
   "title": "网络安全日报 2026-09-19",

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-20 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：Hacker News、The Hacker News、BleepingComputer 三站近 24 小时公开报道；评分维度＝严重性 × 新颖性 × 影响范围 × 时效性。补丁严重级别板块依据微软 MSRC 官方 CVRF（2026Sep，正式发布）实时解析，独立于 Top5。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-09-20">
+<meta property="og:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer 三站近 24 小时公开报道；评分维度＝严重性 × 新颖性 × 影响范围 × 时效性。补丁严重级别板块依据微软 MSRC 官方 CVRF（2026Sep，正式发布）实时解析，独立于 Top5。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-20.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-09-20">
+<meta name="twitter:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer 三站近 24 小时公开报道；评分维度＝严重性 × 新颖性 × 影响范围 × 时效性。补丁严重级别板块依据微软 MSRC 官方 CVRF（2026Sep，正式发布）实时解析，独立于 Top5。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-20</h1>
+<blockquote>
+<p>数据来源：Hacker News、The Hacker News、BleepingComputer 三站近 24 小时公开报道；评分维度＝严重性 × 新颖性 × 影响范围 × 时效性。补丁严重级别板块依据微软 MSRC 官方 CVRF（2026-Sep，正式发布）实时解析，独立于 Top5。</p>
+</blockquote>
+<h2 id="s1">Top 5 最值得关注新闻</h2>
+<h3 id="s2">1. Orkes Conductor 工作流平台 pre-auth RCE（CVE-2026-58138）已在野利用</h3>
+<ul>
+<li><strong>评分：95 分</strong> — 理由：CVSS 9.8 的无认证远程代码执行且已被 Fortinet 确认在野利用，工作流引擎成为新型高价值攻击面。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> Orkes Conductor（广泛用于编排微服务与 AI Agent 的工作流平台）存在未认证 RCE 漏洞，攻击者可向工作流 API 提交含恶意 JavaScript/Python 表达式的内联定义，借未隔离的 GraalVM 提权执行系统命令。Fortinet 称 9 月 2–9 日拦截近 7000 次利用尝试（单日 132% 增长），攻击主要来自德国、香港、印尼、阿联酋与印度；修复版本为 3.30.2。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/09/critical-pre-auth-rce-in-orkes.html</li>
+</ul>
+<h3 id="s3">2. 研究人员用 Claude Opus 5 链式漏洞接管 OpenAI 员工账号与内部代码库</h3>
+<ul>
+<li><strong>评分：92 分</strong> — 理由：AI 模型在数小时内将漏洞利用开发周期从数周压缩到数天，演示了针对前沿实验室的 AI 加速攻击链，新颖性极高。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 安全公司 Hacktron 三名研究员借助 Anthropic 的 Claude Opus 5，链式组合 OpenAI 官方论坛的 libheif 堆溢出（CVE-2026-32882）与 OpenAI 登录系统 SSO 配置缺陷，在 72 小时内接管多名员工 ChatGPT/Codex 账号并触达内部代码仓库（以无害 PR 证明）。整条链路无需受害者任何操作，Token 成本约 3000 美元；OpenAI 在报告后约 14 小时修复并支付 6500 美元赏金。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html</li>
+</ul>
+<h3 id="s4">3. 朝鲜 WaterPlum（Contagious Interview）借虚假求职面试入侵逾 3 万台设备</h3>
+<ul>
+<li><strong>评分：88 分</strong> — 理由：国家级 APT 在全球 100+ 国家规模性作案，窃走 1070 万美元加密货币并可能作为进入企业内网的跳板，影响范围极广。</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> 美、日、澳、德联合警报披露，朝鲜关联组织 WaterPlum 在 2025-12 至 2026-07 期间以 AI/加密/Web3 公司名义假扮招聘方，借恶意 npm 包与虚假面试诱导开发者运行恶意代码，感染逾 3 万台设备、窃取 7000+ 加密钱包凭据，并将约 17 亿日元（1071 万美元）转入朝鲜。相关恶意软件含 BeaverTail、InvisibleFerret、OtterCookie、StoatWaffle 等，与朝鲜 IT 外包人员共用基础设施（第 313 总局）。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/north-korean-waterplum-hackers-infected-30-000-devices-worldwide/</li>
+</ul>
+<h3 id="s5">4. SolarWinds Access Rights Manager 硬编码密钥致无认证 RCE（CVE-2026-28326）</h3>
+<ul>
+<li><strong>评分：86 分</strong> — 理由：CVSS 8.8 的无认证 RCE，根因是硬编码静态密钥这一反复出现的高危反模式，且 ARM 紧邻 Active Directory 属 Tier-0 级身份基础设施。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> SolarWinds 修复了 Access Rights Manager（ARM）2026.2 及之前版本中由硬编码静态密钥导致的未认证远程代码执行漏洞（CVE-2026-28326，CVSS 8.8），由研究员 Kai Huang 报告，已在 ARM 2026.2.1 修复，目前厂商未提及在野利用。同期 SolarWinds 还修复了 Web Help Desk 的 SAML 绕过（CVE-2026-28323，9.8）及 Serv-U 的 16 个缺陷。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html</li>
+</ul>
+<h3 id="s6">5. CISA 将三个 Linux 内核漏洞加入 KEV（已确认在野利用，联邦截止 9-21）</h3>
+<ul>
+<li><strong>评分：85 分</strong> — 理由：三个内核漏洞已确认在野利用，其中 kTLS 零长度记录处理（CVE-2025-39682）CVSS 9.8 且可远程触发，联邦修复期限仅剩两天，时效性与严重性双高。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> CISA 于 9-18 将三个 Linux 内核漏洞加入 KEV：CVE-2025-39682（kTLS 接收路径零长度记录处理不当，CVSS 9.8）、CVE-2026-53266（ebtables SNAT ARP 改写越界写，8.8）、CVE-2025-39964（AF_ALG 套接字并发写竞态，7.8）。Red Hat 已于 9-19 更新公告确认在野利用；联邦机构须于 2026-09-21 前完成修复（BOD 26-04）。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条新闻，最高分 95 分。</p>
+<blockquote>
+<p>注：因企业微信 connector 当前未连接，本日报仅以本地文件形式交付，未实际推送微信。补丁板块数字均来自今日真实解析的正式 CVRF 文档。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-09-19.html">← 前一天 2026-09-19</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
