@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-09-22",
+  "url": "daily/daily_news_2026-09-22.html",
+  "title": "网络安全日报 2026-09-22",
+  "score": 93,
+  "cves": [
+   "CVE-2026-59310"
+  ],
+  "summary": "数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24–48 小时内重点安全动态）",
+  "text": "数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24–48 小时内重点安全动态） 补丁日状态：微软 2026 年 9 月 Patch Tuesday 已于 0909 正式发布，以下附本月补丁安全级别独立板块（数据截至 20260922 实时 CVRF 快照）。 评分：93 — 关键级（CVSS 9.8）未认证 RCE 转为勒索武器，361+ 个 IP、47 个国家已遭入侵，450+ 实例暴露，影响虚拟化核心基础设施。 来源： BleepingComputer 摘要： Broadcom 于 7 月 29 日修复的 vCenter Syslog 目录穿越漏洞（CVE202659310）已从 APT 利用演变为勒索软件攻击。CISA 将其列入 KEV 目录并标记已知勒索软件利用，要求联邦机构限期加固；DFIR 厂商 QUIRSO 此前已发现 361 个被入侵 IP。由于 vCenter 掌握整个虚拟化环境，单点沦陷即可波及数十台虚拟机与敏感数据。 原文链接： https://www.bleepingcomputer.com/news/security/cisacriticalvmwarevcenterrceflawnowexploitedbyransomwaregangs/ 评分：90 — 新型 RAT 采用基于智能合约的 C2 发现机制，绕过传统 IOC 封堵与基础设施打击，攻击基础设施韧性显著升级。 来源： The Hacker News 摘要： Blackpoint APG 披露此前未公开的远程访问木马 ChainScript，通过 ClickFix 式社会工程（伪装为 Spotify/Zoom/Teams 安装包）投递，使用 msiexec 部署 Node.js 代理。其最大特点是利用 Polygon 智能合约作为 C2 解析器，运营方可随时更换后端服务器而无需改动木马本体，使基于域名/IP 的检测与接管难度大幅提升。 原文链接： https://thehackernews.com/2026/09/clickfixluresdeploychainscriptrat.html 评分：87 — 朝鲜国家级 APT 持续以开发者为跳板，本次首次出现\"无加密货币关联\"的普通 IT 服务商受害者，供应链攻击面扩大。 来源： The Hacker News 摘要： SentinelOne 将印度一家小型 IT 服务商的入侵归因于朝鲜组织 Jade Sleet（TraderTraitor/UNC4899）。攻击者通过 Terraform 依赖锁文件投毒，在一台 Apple Silicon MacBook 上部署 Rust 编写的 macOS 后门 FLATROOF（Telegram C2）与 ROOFDECK（Nostr 去中心化 C2）。该组织历史上与 Bybit 15 亿美元失窃案相关，惯用求职面试诱饵 targeting 开发者。 原文链接： https://thehackernews.com/2026/09/jadesleetlinkedtoindianitprovider.html 评分：84 — 犯罪团伙间罕见的\"黑吃黑\"，若私钥属实可冒用 Clop 暗网地址，凸显犯罪基础设施同样脆弱。 来源： BleepingComputer 摘要： ShinyHunters 利用 Grav CMS 中据称未授权的文件上传漏洞，攻入 Clop（Cl0p）勒索团伙的 Tor 数据泄露站并篡改页面、上传挑衅文件。该组织声称已取得服务器源码、日志及 Tor 洋葱服务私钥，并扬言要在 72 小时内反向敲诈 Clop。BleepingComputer 已确认篡改与文件上传，但私钥与数据窃取尚待独立验证。 原文链接： https://www.bleepingcomputer.com/news/security/shinyhuntershacksclopleaksitethreatenstoextortransomwaregang/ 评分：82 — 新型供应链规避手法将恶意逻辑移出安装脚本、转入正常运行时行为，使新上线的安装脚本拦截机制失效。 来源： BleepingComputer 摘要： 一个名为 indexedbtree 的 npm 恶意包发起的持续投毒活动，通过将恶意代码隐藏在包的正常运行时行为中（而非 preinstall/install 钩子）来绕过供应链防护。相关恶意包涉及约 10 个以 btree/有序索引为名的组件，防御方需检查 lockfile 中的依赖来源与运行时网络/进程行为，而非仅依赖安装脚本拦截。 原文链接： https://www.bleepingcomputer.com/news/security/maliciousnpmpackagesevadeinstallscriptdefensesatruntime/ 本次共筛选 15 条新闻候选，选取 Top 5；最高分 93 分。 注：微信推送通道（企业微信 connector）当前未连接，本报告以本地文件交付，未实际发送。"
+ },
+ {
   "date": "2026-09-21",
   "url": "daily/daily_news_2026-09-21.html",
   "title": "网络安全日报 2026-09-21",

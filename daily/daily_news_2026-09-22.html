@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-22 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24–48 小时内重点安全动态）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-09-22">
+<meta property="og:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24–48 小时内重点安全动态）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-22.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-09-22">
+<meta name="twitter:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24–48 小时内重点安全动态）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-22</h1>
+<blockquote>
+<p>数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24–48 小时内重点安全动态）
+补丁日状态：微软 2026 年 9 月 Patch Tuesday 已于 09-09 正式发布，以下附本月补丁安全级别独立板块（数据截至 2026-09-22 实时 CVRF 快照）。</p>
+</blockquote>
+<hr />
+<h2 id="s1">🔝 今日 Top 5 新闻（按评分降序）</h2>
+<h3 id="s2">1. CISA：关键 VMware vCenter 漏洞 CVE-2026-59310 已被勒索软件团伙利用</h3>
+<ul>
+<li><strong>评分：93</strong> — 关键级（CVSS 9.8）未认证 RCE 转为勒索武器，361+ 个 IP、47 个国家已遭入侵，450+ 实例暴露，影响虚拟化核心基础设施。</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> Broadcom 于 7 月 29 日修复的 vCenter Syslog 目录穿越漏洞（CVE-2026-59310）已从 APT 利用演变为勒索软件攻击。CISA 将其列入 KEV 目录并标记已知勒索软件利用，要求联邦机构限期加固；DFIR 厂商 QUIRSO 此前已发现 361 个被入侵 IP。由于 vCenter 掌握整个虚拟化环境，单点沦陷即可波及数十台虚拟机与敏感数据。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/cisa-critical-vmware-vcenter-rce-flaw-now-exploited-by-ransomware-gangs/</li>
+</ul>
+<h3 id="s3">2. ClickFix 诱饵投递 ChainScript RAT，借 Polygon 区块链轮转 C2 基础设施</h3>
+<ul>
+<li><strong>评分：90</strong> — 新型 RAT 采用基于智能合约的 C2 发现机制，绕过传统 IOC 封堵与基础设施打击，攻击基础设施韧性显著升级。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> Blackpoint APG 披露此前未公开的远程访问木马 ChainScript，通过 ClickFix 式社会工程（伪装为 Spotify/Zoom/Teams 安装包）投递，使用 msiexec 部署 Node.js 代理。其最大特点是利用 Polygon 智能合约作为 C2 解析器，运营方可随时更换后端服务器而无需改动木马本体，使基于域名/IP 的检测与接管难度大幅提升。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html</li>
+</ul>
+<h3 id="s4">3. 朝鲜 Jade Sleet 借 macOS 后门 FLATROOF/ROOFDECK 攻陷印度 IT 服务商</h3>
+<ul>
+<li><strong>评分：87</strong> — 朝鲜国家级 APT 持续以开发者为跳板，本次首次出现"无加密货币关联"的普通 IT 服务商受害者，供应链攻击面扩大。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> SentinelOne 将印度一家小型 IT 服务商的入侵归因于朝鲜组织 Jade Sleet（TraderTraitor/UNC4899）。攻击者通过 Terraform 依赖锁文件投毒，在一台 Apple Silicon MacBook 上部署 Rust 编写的 macOS 后门 FLATROOF（Telegram C2）与 ROOFDECK（Nostr 去中心化 C2）。该组织历史上与 Bybit 15 亿美元失窃案相关，惯用求职面试诱饵 targeting 开发者。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html</li>
+</ul>
+<h3 id="s5">4. ShinyHunters 攻破并篡改 Clop 勒索软件泄露站，声称掌握洋葱私钥</h3>
+<ul>
+<li><strong>评分：84</strong> — 犯罪团伙间罕见的"黑吃黑"，若私钥属实可冒用 Clop 暗网地址，凸显犯罪基础设施同样脆弱。</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> ShinyHunters 利用 Grav CMS 中据称未授权的文件上传漏洞，攻入 Clop（Cl0p）勒索团伙的 Tor 数据泄露站并篡改页面、上传挑衅文件。该组织声称已取得服务器源码、日志及 Tor 洋葱服务私钥，并扬言要在 72 小时内反向敲诈 Clop。BleepingComputer 已确认篡改与文件上传，但私钥与数据窃取尚待独立验证。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/shinyhunters-hacks-clop-leak-site-threatens-to-extort-ransomware-gang/</li>
+</ul>
+<h3 id="s6">5. 恶意 npm 包在运行时藏匿恶意代码，绕过安装脚本防护</h3>
+<ul>
+<li><strong>评分：82</strong> — 新型供应链规避手法将恶意逻辑移出安装脚本、转入正常运行时行为，使新上线的安装脚本拦截机制失效。</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> 一个名为 <code>indexed-btree</code> 的 npm 恶意包发起的持续投毒活动，通过将恶意代码隐藏在包的正常运行时行为中（而非 preinstall/install 钩子）来绕过供应链防护。相关恶意包涉及约 10 个以 btree/有序索引为名的组件，防御方需检查 lockfile 中的依赖来源与运行时网络/进程行为，而非仅依赖安装脚本拦截。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 15 条新闻候选，选取 Top 5；最高分 93 分。</strong></p>
+<p><em>注：微信推送通道（企业微信 connector）当前未连接，本报告以本地文件交付，未实际发送。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-09-21.html">← 前一天 2026-09-21</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
