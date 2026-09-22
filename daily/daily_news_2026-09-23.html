@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-23 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-23</h1>
+<blockquote>
+<p>数据窗口：过去 24 小时（2026-09-21 晚 ~ 09-23 早，北京时间）｜候选 15 条 → 精选 Top 5</p>
+</blockquote>
+<hr />
+<h2>1. Arista VeloCloud Orchestrator 满分漏洞 CVE-2026-93952（CVSS 10.0）已被在野利用 ⭐ 96分</h2>
+<p><strong>评分理由</strong>：CVSS 满分 + 已确认在野利用 + SD-WAN 管理平面失陷可波及全部 Edge 设备，且 6.1/7.0 版本分支尚无修复补丁。</p>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-09-22）/ Arista 官方安全公告 SA0183</li>
+<li><strong>摘要</strong>：Arista 于 9 月 22 日披露，其本地部署的 VeloCloud Orchestrator（VCO，SD-WAN 边缘设备管理服务器）存在新的满分漏洞 CVE-2026-93952，允许无凭据的远程攻击者提权内部函数并影响 VCO 主机，仅影响启用了 Edge 证书认证的部署。5.2 和 6.4 分支已有修复版本，但 6.1 和 7.0 分支尚未发布修复；Arista 托管版 VCO 已代为修复。这是继 7 月 CVE-2026-16812 后今年第二个被在野利用的 VCO 漏洞，官方已公布失陷指标（webshell 文件、<code>x-vc-opt</code> 请求头、两个恶意 IP 等）。</li>
+<li><strong>原文链接</strong>：</li>
+<li>https://thehackernews.com/2026/09/new-cvss-100-velocloud-orchestrator.html</li>
+<li>https://www.arista.com/en/support/advisories-notices/security-advisory/24765-security-advisory-0183</li>
+</ul>
+<h2>2. Cisco ISE 认证绕过 0day CVE-2026-76460（CVSS 10.0）：无凭据直达 root，无临时缓解 ⭐ 94分</h2>
+<p><strong>评分理由</strong>：满分认证绕过 + 在野利用 + 可获 root 命令执行且官方明确无 workaround，ISE 作为网络准入控制（NAC）中枢一旦失陷等于全域访问控制失效。</p>
+<ul>
+<li><strong>来源</strong>：The Hacker News / BleepingComputer（2026-09-22 首页）/ Cisco PSIRT / CSA Labs</li>
+<li><strong>摘要</strong>：Cisco 身份服务引擎（ISE 及 ISE-PIC，3.0–3.5 全系受影响，与设备配置无关）存在 API 端点认证控制缺陷，未认证远程攻击者可绕过 Web 管理界面获得 root 级命令执行；Cisco 确认该漏洞正被积极利用，且无任何 workaround，只能升级（ISE 3.1 P12 / 3.2 P11 / 3.3 P12 / 3.4 P7 / 3.5 P4）。Cisco 警告 root 权限下攻击者可擦除设备日志，建议比对节点 access.log 与外部防火墙日志、必要时重镜像并从备份恢复。CISA 已于 9 月 16 日提前一天将其列入 KEV 目录。</li>
+<li><strong>原文链接</strong>：</li>
+<li>https://www.cisco.com/c/en/us/support/docs/csa/cisco-sa-ise-mult-vul-ymSsTLCc.html</li>
+<li>https://labs.cloudsecurityalliance.org/research/csa-research-note-cisco-ise-auth-bypass-cve-2026-76460-20260</li>
+</ul>
+<h2>3. CISA 限令：Zyxel 交换机 CVE-2026-7273 与 Veeam 本地提权漏洞正被利用窃取数据，联邦机构 9/24 前必须修复 ⭐ 92分</h2>
+<p><strong>评分理由</strong>：实际失陷规模明确（996 台交换机、48 国、配置与 root 凭据哈希被窃）+ CISA 强制令倒计时 72 小时 + 补丁发布 3 个月仍未打，暴露面治理老问题再现。</p>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-09-22）/ BleepingComputer / CISA KEV / GreyNoise</li>
+<li><strong>摘要</strong>：Zyxel GS1900 系列交换机 CGI 程序栈溢出漏洞 CVE-2026-7273（CVSS 8.8，LAN 内未认证可达 root）自 8 月 17 日起被一名疑似中文威胁行为者（Acronis 归类为 Red Heron，与此前 WP2Shell、Gitea CVE-2026-60004 攻击同源）利用 PyArmor 混淆脚本批量攻陷，已窃取 48 国 996 台设备的配置、网络拓扑与 root 凭据哈希，其中 564 台仍在使用出厂默认口令；Zyxel 6 月 16 日已发修复固件但大量设备未更新。同时 CISA 警告 Veeam Agent for Windows 本地提权漏洞 CVE-2026-32996（7.3）正被在野利用至 SYSTEM。两项均已入 KEV，联邦民事机构修复截止 9 月 24 日。</li>
+<li><strong>原文链接</strong>：</li>
+<li>https://thehackernews.com/2026/09/zyxel-and-veeam-flaws-under-active.html</li>
+<li>https://nvd.nist.gov/vuln/detail/cve-2026-7273</li>
+</ul>
+<h2>4. Linux 内核 ARM64 KVM 新漏洞 CVE-2026-89775：客户机可读写宿主机内存、逃逸至宿主 ⭐ 90分</h2>
+<p><strong>评分理由</strong>：虚拟化逃逸类漏洞 + 影响主线内核 + 研究者今年第四次披露 KVM 逃逸，云多租户隔离边界问题持续发酵。</p>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-09-22）/ openwall oss-security</li>
+<li><strong>摘要</strong>：安全研究员 Hyunwoo Kim 披露 Linux 内核 ARM64 KVM 嵌套虚拟化代码缺陷（影响 Linux 6.17 起，红帽 RHEL 10 内核与 Ubuntu 26.04 受影响）：启用嵌套虚拟化的主机上，客户机可读写已释放的宿主内核内存页并逃逸到宿主机执行代码；在 /dev/kvm 对所有用户开放的主机上还可被本地用户用于提权至 root。上游已在 Linux 6.18.51、7.2.5、7.3-rc1 修复；未启用嵌套虚拟化的 ARM64 主机不在攻击路径内，暂无在野利用迹象。这是 Kim 今年继 ITScape、Januscape、Zapscape 之后披露的第四个 KVM 客户机-宿主机逃逸。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html</li>
+</ul>
+<h2>5. 微软把 SharePoint 认证 RCE 错标为"欺骗"类漏洞，定级失误引发修正 ⭐ 88分</h2>
+<p><strong>评分理由</strong>：SharePoint 是今年 0day 重灾区（7 月连续 4 个在野利用 0day），官方定级失误会直接误导企业补丁优先级排序。</p>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-09-22）</li>
+<li><strong>摘要</strong>：9 月补丁日中微软将 CVE-2026-65660 归类为"欺骗（Spoofing）"，实际验证为认证后远程代码执行（RCE），后续修正了分类。SharePoint 今年已连续爆出多个在野利用 0day 与补丁后持久化技术（机器密钥窃取），任何分类偏差都值得企业重新评估该资产的补丁紧迫性。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/sharepoint-flaw-initially-listed-as.html</li>
+</ul>
+<hr />
+<h3>其他值得关注（未入 Top5）</h3>
+<ul>
+<li><strong>Meta Muse AI 助手本地 0day</strong>：Patrick Wardle 发现隐藏设置可致恶意进程劫持听写流量，将用户语音/提示重定向至攻击者端点，Meta 高调宣传的 Muse Secure VM 架构发布即翻车（https://thehackernews.com/2026/09/one-hidden-meta-muse-setting-could-let.html）</li>
+<li><strong>EvilTokens 钓鱼即服务平台被端</strong>：微软 DCU 联合多国执法捣毁该 AI 驱动 MFA 绕过服务，涉 1 万+ 组织、1.2 万 Microsoft 账户，逮捕 2 人（https://thehackernews.com/）</li>
+<li><strong>WordPress Comment2Shell</strong>：匿名评论 XSS 可经管理员会话链成 RCE，PoC 已公开（https://thehackernews.com/2026/09/wordpress-comment2shell-flaw-can-turn.html）</li>
+<li><strong>BigDiskBuster</strong>：前 MSRC 研究员 Abdelhamid Naceri 发布可阻止 Defender 更新的 0day PoC，无补丁无 CVE，其既往 Defender 工具曾被实战利用</li>
+</ul>
+<hr />
+<h2>微软补丁安全级别（Patch Tuesday）</h2>
+<blockquote>
+<p><strong>交付说明</strong>：September 2026 Security Updates 已于 2026-09-08 正式发布（非 Early 预发布，CVRF 标题校验通过）。本自动化自 7 月 24 日后暂停运行，九月补丁数据系首次推送，故按规则附上完整板块；CVRF 文档 2026-09-22 仍有增量更新（含 Excel 复制粘贴修复）。</p>
+</blockquote>
+<p><strong>数据源</strong>：MSRC CVRF API（<code>GET https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Sep</code>，公共免认证），真实解析 CVRF XML（约 27 MB），<code>&lt;cvrf:DocumentTitle&gt;</code> = "September 2026 Security Updates" ✅</p>
+<h3>总量与分级</h3>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>CVE 数</th>
+<th>Critical</th>
+<th>Important</th>
+<th>Moderate</th>
+<th>Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microsoft（官方定级）</strong></td>
+<td><strong>997</strong></td>
+<td><strong>132</strong></td>
+<td><strong>864</strong></td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>CBL-Mariner（Azure Linux）</td>
+<td>707</td>
+<td>24</td>
+<td>199</td>
+<td>430</td>
+<td>49</td>
+</tr>
+<tr>
+<td>Chromium</td>
+<td>292</td>
+<td>3</td>
+<td>28</td>
+<td>9</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>合计解析</strong></td>
+<td><strong>1,996</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>微软 CVSS ≥ 9.0 的高危 CVE：<strong>60 个</strong></li>
+<li>Critical 且网络可达（AV:N）的远程利用面：覆盖 DNS、DHCP、MSMQ、NFS、SSTP、Netlogon、RRAS 等核心基础服务</li>
+</ul>
+<h3>已被在野利用（Exploited:Yes）— 全部列出（2 个，均为 Important 本地提权 0day）</h3>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>组件</th>
+<th>严重级别</th>
+<th>CVSS</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CVE-2026-81963</strong></td>
+<td>Windows Update Stack</td>
+<td>Important</td>
+<td>7.8</td>
+<td>链接解析缺陷，低权限攻击者无需用户交互即可提权至 SYSTEM，攻击面覆盖全部受支持 Windows</td>
+</tr>
+<tr>
+<td><strong>CVE-2026-85880</strong></td>
+<td>Windows ALPC</td>
+<td>Important</td>
+<td>7.8</td>
+<td>堆溢出，低权限 AppContainer 沙箱内即可逃逸至 SYSTEM，ALPC 为 Windows 底层 IPC 基础机制</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical 且可远程/无认证利用的重点项（CVSS 9.8）</h3>
+<ul>
+<li><strong>CVE-2026-69730</strong> Windows DNS Server RCE 9.8</li>
+<li><strong>CVE-2026-72982</strong> Windows Netlogon RCE 9.8（域认证层）</li>
+<li><strong>CVE-2026-69829</strong> Windows Shell RCE 9.8</li>
+<li><strong>CVE-2026-69590</strong> Windows 路由和远程访问服务（RRAS）RCE 9.8</li>
+<li><strong>CVE-2026-69579</strong> Windows Message Queuing（MSMQ）RCE 9.8</li>
+<li><strong>CVE-2026-72979 / 69845</strong> Windows DHCP Server RCE 9.8</li>
+<li><strong>CVE-2026-73009</strong> Windows SSTP VPN RCE 9.8</li>
+<li><strong>CVE-2026-73010</strong> Microsoft Failover Cluster RCE 9.8</li>
+<li><strong>CVE-2026-78509 / 78510</strong> Outlook / Outlook+Word RCE 9.8</li>
+<li><strong>CVE-2026-67631 / 67643</strong> SQL Server RCE 9.8；<strong>CVE-2026-66302</strong> Skype for Business RCE 9.8</li>
+<li><strong>CVE-2026-72983</strong> Internet Connection Sharing (ICS) RCE 9.8</li>
+</ul>
+<h3>CVSS 10.0 满分项（9 个，均为 Azure 云组件提权，未列在野利用）</h3>
+<p>CVE-2026-62874（Azure Billing）、CVE-2026-69399（Azure Arc）、CVE-2026-69843（Microsoft Fabric）、CVE-2026-69865（Microsoft Container Registry）、CVE-2026-70200 / 83944（Azure Logic Apps）、CVE-2026-70352（Azure AI Language）、CVE-2026-83711（Entra B2C）、CVE-2026-85889（Azure AI Foundry）</p>
+<blockquote>
+<p>其余 CVSS≥9.0 项共 60 个，完整清单见 MSRC Security Update Guide（下方链接）。</p>
+</blockquote>
+<h3>一句话核心风险</h3>
+<p><strong>两个已被在野利用的本地提权 0day（Windows Update Stack + ALPC）可级联成任意前期立足点的"通向 SYSTEM"标准链，叠加 17+ 个覆盖 DNS/DHCP/NFS/SSTP/Netlogon 的无认证远程 RCE 与一波 Azure 云组件满分提权——建议域控、DHCP/DNS 服务器与 Azure 管理平面本周内完成 9 月补丁。</strong></p>
+<ul>
+<li>MSRC Security Update Guide：https://msrc.microsoft.com/update-guide</li>
+<li>CVRF API（本月）：https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Sep</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 15 条新闻，最高分 96 分（Arista VeloCloud Orchestrator CVE-2026-93952）。</strong></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
