@@ -1,5 +1,20 @@
 [
  {
+  "date": "2026-09-23",
+  "url": "daily/daily_news_2026-09-23.html",
+  "title": "网络安全日报 2026-09-23",
+  "score": 95,
+  "cves": [
+   "CVE-2026-85102",
+   "CVE-2026-87902",
+   "CVE-2026-90898",
+   "CVE-2026-93616",
+   "CVE-2026-93952"
+  ],
+  "summary": "数据来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时）",
+  "text": "数据来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时） 补丁板块数据源：微软 MSRC Security Update Guide 公共免认证 CVRF API（2026Sep，今日实时解析） 评分：95 — 影响全球约 43% 网站的内容管理系统核心出现无需账户即可加载/执行 PHP 的严重缺陷（CVSS 9.2），覆盖面极广且已有修复但大量站点尚未更新。 来源： The Hacker News 摘要： WordPress 于 922 发布 7.1.2 修复核心漏洞 CVE202687902（CVSS 9.2，评级 Critical）。攻击者在无需登录、无需用户交互的情况下，可令站点加载主题目录之外的 PHP 文件；在部分服务器配置（存在以 page 开头的主题顶层目录且开启 registerargcargv）下可进一步执行任意代码。受影响版本为 4.7.0 至 7.1.1（含一周前发布的 7.1.1），需全量升级。截至发布尚无在野利用或公开 PoC 报告。 原文链接： https://thehackernews.com/2026/09/wordpressissuespatchforcritical.html 评分：94 — 网络基础设施核心编排器出现满分远程未授权漏洞且已被确认在野利用，部分版本尚无补丁，可直接接管 SDWAN 管控面与下辖设备。 来源： The Hacker News 摘要： Arista 于 922 披露 VeloCloud Orchestrator（VCO，管理 VeloCloud SDWAN Edge 的服务器）新漏洞 CVE202693952，CVSS 3.1 评分 10.0。该漏洞允许远程无登录攻击者越权访问内部功能并影响 VCO 主机，仅在\"Edge 使用证书方式向 VCO 认证\"的部署中暴露；Arista 称其\"已知被积极利用\"。5.2 与 6.4 版本线已出补丁，6.1 与 7.0 版本线暂无修复。成功利用可攻陷编排器及其管理的 Edge 设备，并给出具体 IoC（如 /usr/local/sbin/.vcnode.js、IP 142.93.149[.]77 等）。 原文链接： https://thehackernews.com/2026/09/newcvss100velocloudorchestrator.html 评分：93 — 防火墙策略管理服务器 0day（CVSS 9.8）早在 723 已被用于真实定向攻击、922 才发布修复，路径遍历致未授权脚本执行，管理员须立即核对接管号。 来源： The Hacker News 摘要： Check Point 警告其 Security Management Server 中一个此前未知的漏洞 CVE202693616（CVSS 9.8）曾在 723 被用于\"少量\"定向攻击。该漏洞为 Web 服务路径遍历，允许能访问服务器 Web 服务的攻击者在无需登录的情况下上传并运行脚本。受影响的包括 R82.20（未装 Jumbo Hotfix）、R82.10/R82/R81.20 等多条版本线（各设接管号上限），Check Point 已于 922 发布修复（支持文档 sk1000177）。同期攻击者还自 912 起尝试利用 909 已修复的 Spark VPN 漏洞 CVE202685102。 原文链接： https://thehackernews.com/2026/09/checkpointwarnsofmanagementserver.html 评分：90 — 路由 20+ 大模型供应商的开源 AI 网关在默认\"管理认证关闭\"下可被单次未认证请求远程执行命令（CVSS 9.8），并可能泄露所有厂商 API 密钥，AI 基础设施供应链风险突出。 来源： The Hacker News 摘要： JFrog 披露 Bifrost（一个路由 20 余家 LLM 供应商请求的开源 AI 网关）HTTP transport 中漏洞 CVE202690898（CVSS 9.8）。当管理认证处于默认关闭状态时，攻击者可借一次未认证的 POST 至 /api/mcp/client 注册 stdio 类型 MCP 客户端，Bifrost 会在握手前立即以网关进程身份执行指定命令。官方 Docker 镜像将管理 API 绑定 0.0.0.0，若端口暴露即可被远程利用；因网关存储各供应商密钥，命令执行即可窃取凭据。修复版本为 transports/v2.1.0。鉴于此前 LiteLLM 同类 AI 网关漏洞曾被纳入 CISA KEV，AI 网关默认暴露风险需高度重视。 原文链接： https://thehackernews.com/2026/09/criticalbifrostaigatewayflawlets.html 评分：88 — 大规模身份层钓鱼即服务平台被捣毁（约 12,000 邮箱被控），AI 贯穿攻击链并自动化 BEC 欺诈，标志对 OAuth 设备码钓鱼的执法打击取得实质进展。 来源： The Hacker News 摘要： 微软于 922 宣布在弗吉尼亚东区联邦法院授权下捣毁设备码钓鱼服务 EvilTokens，将其归因为 Storm2992；伦敦警察厅已于 911 逮捕两名涉案男子（32 岁与 38 岁）。EvilTokens 以 AI\"贯穿攻击链每一步\"，滥用 OAuth 2.0 设备授权流程，令受害者在合法 microsoft.com/devicelogin 页面输入代码后向攻击者发放长期有效令牌，从而不经密码、不触发 MFA 即接管邮箱；其内置 AI 聊天机器人还能分析受害者收件箱、识别财务往来并起草冒充可信联系人的诈骗邮件。该平台自 202602 上线，约 5 周内已入侵 340+ 家 Microsoft 365 组织，累计导致约 12,000 个邮箱被控。联合行动方包括 HealthISAC、Cloudflare、Coinbase、OpenAI、Railway、SpyCloud、Shadowserver、TRM Labs。 原文链接： https://thehackernews.com/2026/09/microsofttakesdowneviltokensdevice.html 本次共筛选 15 条新闻（Hacker News / The Hacker News / Bleeping Computer 三来源），最高分 95 分。 微信推送：企业微信 connector 当前未连接，实际推送不可用；本报告已生成为本地文件交付。"
+ },
+ {
   "date": "2026-09-22",
   "url": "daily/daily_news_2026-09-22.html",
   "title": "网络安全日报 2026-09-22",
