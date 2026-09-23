@@ -1,5 +1,20 @@
 [
  {
+  "date": "2026-09-24",
+  "url": "daily/daily_news_2026-09-24.html",
+  "title": "网络安全日报 2026-09-24",
+  "score": 95,
+  "cves": [
+   "CVE-2026-32996",
+   "CVE-2026-68490",
+   "CVE-2026-7273",
+   "CVE-2026-87899",
+   "CVE-2026-87900"
+  ],
+  "summary": "数据来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时）。补丁板块数据来自微软 MSRC CVRF 公开 API 实时解析。",
+  "text": "数据来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时）。补丁板块数据来自微软 MSRC CVRF 公开 API 实时解析。 评分维度：严重性（漏洞利用/大规模攻击/国家级威胁） 新颖性（0day/新手法） 影响范围  时效性。 评分：95 — 国家级执法机构被公开宣称攻陷，涉及在野零日与 TB 级敏感人事数据，影响与反情报风险极高。 来源： The Hacker News 摘要： 勒索团伙 ShinyHunters 于 9 月 22 日宣称通过一处此前未知的 Oracle PeopleSoft 零日取得远程代码执行，攻入 FBIjobs.gov 并横向移动至 FBI 托管的 AWS GovCloud，窃取约 2–3 TB 数据（含人事、刑事司法、医疗等系统）。FBI 已确认正在调查，但否认证实系统被攻破或数据被盗；样本记录中部分信息已被媒体交叉验证。该组织称此举系对 FBI 5 月预警的报复，并给出一周通牒。 原文链接： https://thehackernews.com/2026/09/shinyhuntersclaimsfbibreachsaysit.html 评分：91 — 0day、无补丁、影响所有受支持 Windows 版本，直接削弱核心安全组件防护能力，新颖性高。 来源： BleepingComputer 摘要： 研究员 Abdelhamid Naceri（Nightmare Eclipse）发布名为 BigDiskBuster 的 Defender 零日概念验证，可在后台运行以阻止 Microsoft Defender 下载平台与病毒库签名更新，使终端停留在过期检测库状态。该漏洞与 4 月披露的 UnDefend 类似，属拒绝服务型零日，微软尚未分配 CVE 或发布补丁。该研究者今年已陆续放出 ShieldCrash、RoguePlanet 等多个 Defender/Windows 相关零日。 原文链接： https://www.bleepingcomputer.com/news/security/newwindowsdefenderzerodayblocksmicrosoftantivirusupdates/ 评分：89 — 突破共享主机隔离根基，普通 $5/月账号即可接管整台服务器，影响海量中小托管商。 来源： The Hacker News（原文转载页） 摘要： cPanel 于 9 月 22 日披露三处漏洞，最严重的是 CalDAV/CardDAV 服务缺陷 CVE202687899：任何已登录的 cPanel 账号持有人均可执行代码至 root，彻底破坏共享主机的多租户隔离模型。同批还包括 WP Toolkit 跨账号改库（CVE202687900）与跨账号读取日历/联系人（CVE202668490）。cPanel 已发布修复版本，但暂未提供入侵检测指引或 IOC。 原文链接： https://techno.express/newcpanelflawletsahostingaccountruncodeasroottakefullservercontrol.html 评分：88 — 首个公开记录、用 LLM 投票决定攻击后动作的 Windows 植入程序，标志攻击自动化迈入新阶段。 来源： The Register 摘要： Cisco Talos 发现名为 CLOSEDQUORUM 的 Go 语言 Windows 恶意软件，部署后无需人工持续指挥：它会依次查询 Google Gemini、DeepSeek、Qwen、Mistral 四个 LLM，由「模型法定人数」投票决定下一步动作（窃取 LSASS 凭证/浏览器密码/加密钱包、注入、持久化）。Talos 称其为已知首个以 LLM 作为 C2 的 Windows 植入，尚无常驻野外部署证据，但二进制痕迹关联到 2025 年卡牌欺诈论坛。 原文链接： https://www.theregister.co.uk/security/2026/09/22/windowsclosedquorummalwareusesaimodelstoautonomouslyselectpostcompromiseactions/5298435 评分：87 — 两漏洞均被确认在野利用，其中 Zyxel 交换机已被疑似中文背景团伙攻陷 996 台并外泄配置/凭据，联邦整改期限为今日。 来源： The Hacker News 摘要： CISA 于 9 月 21 日将 Zyxel GS1900 系列交换机栈溢出漏洞 CVE20267273（CVSS 8.8，LAN 侧无认证命令执行）列入 KEV 并确认在野利用；GreyNoise 称疑似中文背景团伙自 8 月 17 日起已攻陷 48 国 996 台设备并外泄根级凭据。同期 Arctic Wolf 确认 Veeam Agent for Windows 本地提权漏洞 CVE202632996（CVSS 7.3）在野利用，公开 PoC 可利用可读日志中的提权会话 UID 以 SYSTEM 执行命令。联邦机构须在 9 月 24 日前完成修复。 原文链接： https://thehackernews.com/2026/09/zyxelandveeamflawsunderactive.html 本次共筛选 15 条新闻，最高分 95 分。"
+ },
+ {
   "date": "2026-09-23",
   "url": "daily/daily_news_2026-09-23.html",
   "title": "网络安全日报 2026-09-23",
