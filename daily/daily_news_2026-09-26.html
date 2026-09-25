@@ -4,17 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>网络安全日报 2026-09-26 | 网络安全新闻中心</title>
-<meta name="description" content="数据来源：The Hacker News、BleepingComputer、Hacker News 社区等多源交叉验证（2026-09-26）。">
+<meta name="description" content="自动生成于 20260926 07:00 (GMT+8) · 新闻来源：The Hacker News、Bleeping Computer、Hacker News；补丁数据来源：微软 MSRC Security Update Guide（公共免认证 CVRF API）">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="网络安全新闻中心">
 <meta property="og:title" content="网络安全日报 2026-09-26">
-<meta property="og:description" content="数据来源：The Hacker News、BleepingComputer、Hacker News 社区等多源交叉验证（2026-09-26）。">
+<meta property="og:description" content="自动生成于 20260926 07:00 (GMT+8) · 新闻来源：The Hacker News、Bleeping Computer、Hacker News；补丁数据来源：微软 MSRC Security Update Guide（公共免认证 CVRF API）">
 <meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-26.html">
 <meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="网络安全日报 2026-09-26">
-<meta name="twitter:description" content="数据来源：The Hacker News、BleepingComputer、Hacker News 社区等多源交叉验证（2026-09-26）。">
+<meta name="twitter:description" content="自动生成于 20260926 07:00 (GMT+8) · 新闻来源：The Hacker News、Bleeping Computer、Hacker News；补丁数据来源：微软 MSRC Security Update Guide（公共免认证 CVRF API）">
 <meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
 <style>
 :root{
   --bg:#0b1120; --card:#111827; --card-border:#1f2937;
@@ -100,7 +101,7 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 }
 </style>
 </head>
-<body id="top">
+<body>
 <div class="topbar">
   <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
   <span class="spacer"></span>
@@ -109,72 +110,74 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-09-26</h1>
-<div class="toc">
-<h4>📑 目录</h4>
+<nav class="toc"><h4>目录</h4>
 <ol>
-<li><a href="#s1">Top 5 新闻</a>
-<ol><li><a href="#s2">1. Bitget 遭入侵：疑似朝鲜黑客盗取 3.516 亿美元，今年迄今最大加密货币盗窃案（96分）</a></li><li><a href="#s3">2. Kiteworks 要求全球客户周六关机 6 小时，防范潜在零日攻击（90分）</a></li><li><a href="#s4">3. ShinyHunters 入侵 Clop 泄露站实锤：Grav CMS 路径穿越漏洞 CVE-2026-42608 获厂商确认（88分）</a></li><li><a href="#s5">4. CISA KEV 新增两项在野利用：WSO2 CVE-2026-5430（9.8）与 Adobe Commerce CVE-2026-71362（9.1）（87分）</a></li><li><a href="#s6">5. Cloudflare Containers 跨租户磁盘残留数据泄露漏洞披露（84分）</a></li></ol>
-</li>
-<li><a href="#s7">其他值得关注的动态（简讯）</a>
-</li>
-<li><a href="#s8">微软补丁数据更新说明</a>
-</li>
-</ol></div>
+<li><a href="#s1">今日 Top 5 安全新闻</a></li>
+<li><a href="#s7">本次执行小结</a></li>
+</ol>
+</nav>
+
 <blockquote>
-<p>数据窗口：9月25日–26日（北京时间）｜来源：The Hacker News / BleepingComputer / Hacker News 社区等多源交叉验证</p>
+<p>自动生成于 2026-09-26 07:00 (GMT+8) · 新闻来源：The Hacker News、Bleeping Computer、Hacker News；补丁数据来源：微软 MSRC Security Update Guide（公共免认证 CVRF API）</p>
 </blockquote>
-<hr />
-<h2 id="s1">Top 5 新闻</h2>
-<h3 id="s2">1. Bitget 遭入侵：疑似朝鲜黑客盗取 3.516 亿美元，今年迄今最大加密货币盗窃案（96分）</h3>
-<p>加密货币交易所 Bitget 披露，9月24日 18:31 UTC 其安全系统发现少量热/温钱包出现未授权转账，约 3.516 亿美元的 ETH、XRP、BNB、AVAX、USDT、USDC 被跨链转出（涉及 Ethereum、Arbitrum、Avalanche、BSC 等 7 条链）。CEO Gracy Chen 表示攻击者入侵了钱包基础设施的关键后台系统，伪造交易数据并触发授权签名流程转出资金，已排除私钥泄漏；冷钱包未受影响，提现已暂停，Mandiant 与 SlowMist 已介入调查，多家链上基金会冻结了攻击者地址。基于 IP 行为与链上分析，攻击手法与已知朝鲜黑客组织高度一致——若坐实将超过此前 Liquid Network 3.4 亿美元案，成为 2026 年最大加密盗窃事件。
-- 评分理由：金额巨大（3.5亿美元级）、疑似国家级威胁（朝鲜 Lazarus 系）、24小时内发生且为年度最大加密盗窃案。
-- 来源：The Hacker News / BleepingComputer
-- 原文：https://thehackernews.com/2026/09/bitget-says-suspected-north-korean.html</p>
-<h3 id="s3">2. Kiteworks 要求全球客户周六关机 6 小时，防范潜在零日攻击（90分）</h3>
-<p>安全文件传输厂商 Kiteworks（前 Accellion，其 FTA 产品 2021 年曾被 Clop 大规模利用）在收到执法部门"可信威胁情报"后，建议全球客户在本周六（9月26日）执行 6 小时预防性关机窗口（中欧 04:00–10:00，纽约为周五 22:00 至周六 04:00），并强调即使不直接暴露公网的系统也应下线。公司称这是预防措施、未确认任何入侵，所有已知漏洞已在 9.5.1 版本修复，但客服对 Heise 表示关机是为了"防范潜在的零日攻击"。安全文件共享平台长期是数据窃取勒索团伙（尤其 Clop 系）的高价值目标，本次情报驱动的全球关机极为罕见。
-- 评分理由：执法级威胁情报驱动的全球规模应急响应、疑似零日在途、影响政府/金融等敏感行业，时效性极强（今天就是关机窗口）。
-- 来源：BleepingComputer / Heise
-- 原文：https://www.bleepingcomputer.com/news/security/kiteworks-urges-6-hour-server-shutdown-over-potential-zero-day-attacks/</p>
-<h3 id="s4">3. ShinyHunters 入侵 Clop 泄露站实锤：Grav CMS 路径穿越漏洞 CVE-2026-42608 获厂商确认（88分）</h3>
-<p>BleepingComputer 9月25日跟进确认：ShinyHunters 9月19日攻陷 Clop 勒索团伙 Tor 泄露站所利用的 Grav CMS 漏洞真实存在——CVE-2026-42608 未认证路径穿越，源于 unique_form_id 参数未校验即拼入临时上传路径（tmp/forms/），可通过 ../../ 序列向安装目录任意位置写文件。Grav 官方确认该漏洞今年早些时候已在 Grav 2.0（2.0.0-beta.2，4月27日发布公告）修复，但<strong>未回移到仍在广泛使用的 1.7 旧分支</strong>，Clop 的 1.7.43 部署因此中招。ShinyHunters 声称窃取源码、插件、/var/log 日志及 Tor onion 私钥，正向 Clop 索要八位数赎金并威胁公开 Oracle EBS 敲诈活动中受害企业的付款记录（金额+比特币地址）。
-- 评分理由：黑吃黑罕见实锤 + 厂商确认的真实漏洞细节、旧分支未回移补丁的典型供应链教训、可能曝光勒索付款记录。
-- 来源：BleepingComputer / Grav 官方
-- 原文：https://www.bleepingcomputer.com/news/security/shinyhunters-hacks-clop-leak-site-threatens-to-extort-ransomware-gang/</p>
-<h3 id="s5">4. CISA KEV 新增两项在野利用：WSO2 CVE-2026-5430（9.8）与 Adobe Commerce CVE-2026-71362（9.1）（87分）</h3>
-<p>CISA 周四将两个已被在野利用的高危漏洞加入 KEV 目录，联邦机构需在 9月27日 前完成修复：CVE-2026-5430（CVSS 9.8）——WSO2 API Control Plane / API Manager / Traffic Manager / Universal Gateway 的路径穿越致任意文件上传→RCE，watchTowr 蜜罐自 9月13日 起捕获伪造 JWT 的利用行为（WSO2 客户近千家，覆盖银行/政府/电信/物流）；CVE-2026-71362（CVSS 9.1）——Adobe Commerce/Magento 未认证授权缺陷，可将客户会话切换至他人账户窃取隐私数据，Sansec 8月已检出并拦截利用尝试，Previdian 蜜罐 9月10日 亦录得利用。
-- 评分理由：两个 9.0+ 高危漏洞确认在野利用、KEV 联邦强制 72 小时整改期、影响面广（企业集成中间件 + 电商平台）。
-- 来源：The Hacker News / CISA / watchTowr
-- 原文：https://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html</p>
-<h3 id="s6">5. Cloudflare Containers 跨租户磁盘残留数据泄露漏洞披露（84分）</h3>
-<p>Cloudflare 披露其 Containers 与 Sandboxes 产品存在跨租户隔离缺陷：共享盘使用 Linux dm-thin 精简配置且关闭了块擦除，容器删除后数据块回收再分配时不清洗，新容器可从复用块的未写入部分读到前一容器残留数据（目录结构、SQLite 数据库、.env、Chromium 配置文件等）。Accomplish 研究员 Oren Yomtov 9月4日 通过赏金计划报告，生产环境 24 次尝试中 18 次命中残留。Cloudflare 已恢复块擦除并重置全部在运行容器磁盘（9月19日完成），检测确认无第三方利用证据。这是该研究团队自 7 月以来公布的第六次代码沙箱逃逸发现。
-- 评分理由：多云/云原生信任边界问题、影响"运行不可信代码（含 AI 生成代码）"的卖点产品、已完全修复且无在野利用，故评分略低。
-- 来源：The Hacker News / Cloudflare Blog
-- 原文：https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html</p>
-<hr />
-<h2 id="s7">其他值得关注的动态（简讯）</h2>
+<h2 id="s1">今日 Top 5 安全新闻</h2>
+<h3 id="s2">1. WSO2 与 Adobe Commerce 高危漏洞被证实在野利用，列入 CISA KEV</h3>
 <ul>
-<li><strong>Chrome 年内第 5 个在野利用 0day</strong>：Google 本周修复 11 个 Chrome 漏洞，其中一个输入验证缺陷正被积极利用（Threatpost）。</li>
-<li><strong>被黑 GitHub Actions 复活</strong>：actions-cool/issues-helper 与 maintain-one-comment 两个仓库 9月16日 一度恢复可访问，release 标签仍指向 5 月 Mini Shai-Hulud 恶意内容，引用这些 tag 的工作流恢复运行即再次下载执行载荷；GitHub 已第二次禁用（THN/Socket）。</li>
-<li><strong>MemTensor npm/PyPI 投毒投放 sckit</strong>：攻击者窃取其 GitHub Actions 发布令牌后推送带 Go 植入体的恶意包，窃取 npm/PyPI/GitHub/AWS 凭据并具备蠕虫式横向传播模板（aboutdfir/SecurityWeek）。</li>
-<li><strong>DriveWealth 社工攻击</strong>：美股券商基础设施商 DriveWealth 遭社工攻击泄露历史客户数据，波及 Revolut、Stake、Hatch 等平台，Revolut 一个月内第二次数据事件（S-RM）。</li>
-<li><strong>美国 1,787 家水务企业 infostealer 暴露</strong>：SpyCloud 研究显示 10,000 家 EPA 注册水/污水机构中 1,787 家存在凭证泄露，258 家涉及 OT/远程访问系统（TeamViewer 等），单一设备曾存有 167 家客户登录凭据（CyberScoop）。</li>
-<li><strong>Elementor CSRF 漏洞（约 200 万站点）</strong>：4.3.0/4.3.1 版本可被诱导管理员触发 REST API 调用创建管理员账户，4.3.2 已修复（Patchstack/BleepingComputer）。</li>
-<li><strong>sudo 时间限制绕过 CVE-2026-96512</strong>：本地用户可通过 TZ 环境变量绕过 sudoers 的 NOTBEFORE/NOTAFTER 时间限制；上游修复未发版，临时缓解为在时间规则尾部加 "Z" 强制 UTC（aboutdfir）。</li>
+<li><strong>评分</strong>：96 / 100</li>
+<li><strong>评分理由</strong>：两个关键漏洞（CVSS 9.8 / 9.1）已被证实在野利用并纳入 CISA KEV，影响约 1,000 家 WSO2 客户及数万 Magento 店铺，联邦整改截止 9/27。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：CISA 于 9 月 24 日将 CVE-2026-5430（WSO2 API 系列路径遍历/认证绕过，CVSS 9.8）与 CVE-2026-71362（Adobe Commerce/Magento 越权，CVSS 9.1）加入已知被利用漏洞（KEV）目录。watchTowr 自 9 月 13 日起在其蜜罐中观测到针对 WSO2 的伪造 JWT 攻击，Sansec 亦在 8 月即发现 Adobe Commerce 利用尝试。联邦机构须在 9 月 27 日前完成修复。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html</li>
+</ul>
+<h3 id="s3">2. Cloudflare Containers 跨租户磁盘数据泄露缺陷已修复</h3>
+<ul>
+<li><strong>评分</strong>：92 / 100</li>
+<li><strong>评分理由</strong>：新颖的多租户存储隔离失效，可跨 AI 沙箱边界读取残留客户数据，在 20/22 台主机上成功恢复出 .env 与凭据。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Cloudflare Containers 因精简配置（thin provisioning）被设为跳过块擦除，导致新容器可读到已删除容器遗留的磁盘块。研究人员在跨四大洲的生产测试中于 20/22 台机器恢复出目录结构、SQLite 数据库、.env 文件与凭据。Cloudflare Sandboxes（含 AI agent 代码执行环境）同样受影响。Cloudflare 已于 9 月 19 日完成清理并公开披露，称未发现其他方利用。（Hacker News 亦有相关讨论帖。）</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html</li>
+</ul>
+<h3 id="s4">3. Next.js 关键漏洞 CVE-2026-94545：ImageResponse 可经构造 SVG 导致服务端代码执行</h3>
+<ul>
+<li><strong>评分</strong>：89 / 100</li>
+<li><strong>评分理由</strong>：CVSS 9.5 的未授权 RCE，影响广泛部署的 next/og ImageResponse（Node.js 运行时），仅 16.3.6 已修复。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Next.js 16.2.0–16.3.5 在 Node.js 运行时下，若将攻击者可控值传入 ImageResponse 生成的 SVG 内容/属性/样式，可绕过转义触发底层库链路中的代码执行。Vercel 于 9 月 22 日在 16.3.6 中修复（CVSS 9.5，Critical）。Edge 运行时与 Next.js 15 不受影响。临时缓解为将不可信输入排除出 SVG 渲染。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/critical-nextjs-imageresponse-flaw-can.html</li>
+</ul>
+<h3 id="s5">4. OnePlus 未修复漏洞：任意已安装应用无需权限即可获取 Root</h3>
+<ul>
+<li><strong>评分</strong>：86 / 100</li>
+<li><strong>评分理由</strong>：两个 OEM 漏洞链使任何已安装应用在无任何权限情况下取得 Root，影响数百万 OnePlus/OPPO 设备，截至 9/24 披露仍未修补。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：研究员 Rasmus Moorats 将 OnePlus 自有服务 AtlasService（以 Root 运行、不校验调用方）与 olc2（硬件助手，仅校验调用方为 Root）两个漏洞链式组合，使普通应用无需用户授权即可升至内核级控制。OnePlus 于 5 月确认漏洞但迟迟未发补丁，亦未分配 CVE；Moorats 在多次追问无果后于 9 月 24 日公开。OPPO 设备据称同样受影响。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html</li>
+</ul>
+<h3 id="s6">5. Carbonato 恶意软件利用 AI Agent 劫持暴露的 Docker 主机</h3>
+<ul>
+<li><strong>评分</strong>：83 / 100</li>
+<li><strong>评分理由</strong>：首个将蠕虫式 Docker 传播与 LLM 驱动（Hermes/GH0ST）交互式 C2 结合的僵尸网络，瞄准暴露的 2375 端口守护进程。</li>
+<li><strong>来源</strong>：Bleeping Computer</li>
+<li><strong>摘要</strong>：新僵尸网络 Carbonato 扫描互联网上未认证暴露的 Docker 守护进程（2375 端口），部署特权容器后在主机安装 Hermes Agent AI 框架（GH0ST agent），通过 Telegram 实现交互式命令与控制、凭据窃取与数据外传。其具备蠕虫式传播能力，每 5 分钟扫描周边网络，并以 cron/systemd/rc.local 等多重机制持久化。运营档案跨度 2024 年 10 月至 2026 年 8 月。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/new-carbonato-malware-uses-ai-agents-to-hijack-exposed-docker-hosts/</li>
 </ul>
 <hr />
-<h2 id="s8">微软补丁数据更新说明</h2>
-<p>本月补丁（2026 年 9 月 Patch Tuesday，9月8日 发布）已于 9月23日 完整推送，今日不复述。MSRC CVRF 于 9月25日 再次修订（CurrentReleaseDate 2026-09-25T07:00:00Z），经解析比对：Microsoft 产品严重级别数据无实质变化——仍为 998 条（Critical 132 / Important 865 / Moderate 1），在野利用仍为 2 项（CVE-2026-81963 Windows 更新堆栈 EoP、CVE-2026-85880 Windows ALPC EoP）；Microsoft CVSS≥9.0 由 60 微调至 59（个别评分下调）。总量 2,015→2,136 的增长全部来自 Mariner/Chromium 第三方条目补录，无需行动。</p>
-<p>📅 下次微软补丁日（Patch Tuesday）：2026-10-13，距今还有 17 天。届时次日（10月14日早晨）推送将自动带出正式「微软补丁安全级别」板块。</p>
-<hr />
-<p>本次共筛选 15 条候选新闻，精选 Top 5；最高分 96 分。</p>
+<h2 id="s7">本次执行小结</h2>
+<ul>
+<li>本次共筛选 <strong>15</strong> 条候选新闻（三来源各 5 条），按评分取 Top 5；<strong>最高分 96 分</strong>（WSO2 / Adobe Commerce 在野利用）。</li>
+<li>微软 2026 年 9 月补丁日（Patch Tuesday）正式文档已于 9/25 发布，本文已附「微软补丁安全级别」独立板块（不计入 Top5）。</li>
+<li>微信推送：企业微信通道当前未连接，<strong>本次未能自动推送</strong>；日报已生成为本地文件，可手动转发。</li>
+</ul>
+<p>本次共筛选 15 条新闻，最高分 96 分。</p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
 <nav class="daynav" aria-label="日报导航">
   <a class="dn-prev" href="daily_news_2026-09-25.html">← 前一天 2026-09-25</a>
   <a class="dn-home" href="../index.html">🏠 首页</a>
-  <a class="dn-next dn-disabled" href="#">后一天 2026-09-27 →</a>
+  <span class="dn-disabled">后一天 →</span>
 </nav>
+
 <a class="totop" href="#top">↑ 顶部</a>
 <script>
 document.querySelectorAll('a.totop').forEach(function (el) {
