@@ -4,7 +4,7 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-09-26T00:00:00Z</updated>
+  <updated>2026-09-27T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
   <entry>
     <title>网络安全日报 2026-09-26</title>
@@ -12,6 +12,13 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-26.html</id>
     <updated>2026-09-26T00:00:00Z</updated>
     <summary>自动生成于 20260926 07:00 (GMT+8) · 新闻来源：The Hacker News、Bleeping Computer、Hacker News；补丁数据来源：微软 MSRC Security Update Guide（公共免认证 CVRF API）</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-09-27</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-27.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-27.html</id>
+    <updated>2026-09-27T00:00:00Z</updated>
+    <summary>自动生成于 20260927 07:00 (GMT+8) · 新闻来源：The Hacker News、Bleeping Computer、Hacker News；补丁数据来源：微软 MSRC Security Update Guide（公共免认证 CVRF API）</summary>
   </entry>
   <entry>
     <title>网络安全日报 2026-09-25</title>
