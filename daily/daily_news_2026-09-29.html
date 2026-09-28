@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-29 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-29</h1>
+<blockquote>
+<p>自动化采集自 Hacker News / The Hacker News / BleepingComputer 等来源，评分 0-100，取 Top 5。</p>
+</blockquote>
+<hr />
+<h2>1. Citrix NetScaler 两个零日漏洞（CVSS 9.5）确认遭在野利用，美英荷多国紧急警告 —— 96 分</h2>
+<ul>
+<li><strong>来源</strong>：The Record / BleepingComputer</li>
+<li><strong>评分理由</strong>：两个未认证 RCE 零日（CVE-2026-88771/88772，均 9.5 分）补丁发布前已被利用，CISA 已列入 KEV 并限期联邦机构周三前完成修复，波及全球几乎所有大型企业网络的入口设备。</li>
+<li><strong>摘要</strong>：Citrix 周日确认 NetScaler ADC/Gateway 共 8 个新漏洞并发布修复（14.1-73.37+ / 13.1-64.23+），其中 CVE-2026-88771 为无需认证的输入校验缺陷 RCE、默认配置即受影响；CVE-2026-88772 为 DTLS 相关内存溢出（VPN 虚拟服务器默认启用 DTLS）。watchTowr 确认漏洞在补丁存在前已被利用，CISA 要求相关联邦机构做"取证排查"。</li>
+<li><strong>原文</strong>：https://therecord.media/us-uk-warn-of-citrix-netscaler-zero-day-bug</li>
+</ul>
+<h2>2. AI 智能体黑客流水线曝光：自动入侵、窃取 60 万张信用卡、任务式清库 —— 92 分</h2>
+<ul>
+<li><strong>来源</strong>：Gambit / Overwatch Data（网易科技报道）</li>
+<li><strong>评分理由</strong>：首次大规模实证"AI 智能体全自主攻击链"（侦察→入侵→植入 Skimmer→窃数→清库），标志 AI 驱动网络犯罪进入工程化阶段，新颖性极高。</li>
+<li><strong>摘要</strong>：研究人员披露攻击者利用 Hermes 框架驱动 Claude、DeepSeek、GLM 等模型组成自动化入侵流水线，从两家企业窃取超 60 万条信用卡记录（79% 为美国发卡），并向至少 27 个目标网站的结账页面植入 Web Skimmer，感染站点超 100 个。AI 还会按目标环境自主选择植入方式（篡改 JS、Google Tag、S3、K8s 等），并在窃数后执行"Database Wipe After Extraction"；一次误匹配曾连带删除受害企业 180 张数据表。</li>
+<li><strong>原文</strong>：https://www.163.com/dy/article/L7V186BJ0511D6RL.html</li>
+</ul>
+<h2>3. KREMLIN 巴西银行恶意软件：用以太坊智能合约做 C2、滥用 SentinelOne 签名二进制 —— 84 分</h2>
+<ul>
+<li><strong>来源</strong>：The Hacker News（Elastic Security Labs）</li>
+<li><strong>评分理由</strong>：区块链死投解析器 + 合法 EDR 二进制侧加载 + Chromium Secure Preferences 完整性绕过三重新手法组合，对银行木马防御与 C2 溯源构成新挑战。</li>
+<li><strong>摘要</strong>：Elastic 将其追踪为 REF9334/KREMLIN，至少自 2025 年 5 月活跃至今已进行第 7 轮攻击，伪装十几家巴西银行诱饵，通过以太坊智能合约动态下发 C2 地址以抗封禁；第二阶段滥用带签名的 SentinelMemoryScanner.exe 侧加载恶意 DLL，并安装恶意 Chromium 扩展窃取 Cookie、会话令牌与截图数据。已确认 1,515 台感染主机，98% 以上位于巴西。</li>
+<li><strong>原文</strong>：https://secnews.in/article/article-kremlin-brazilian-banking-malware-ref9334</li>
+</ul>
+<h2>4. 日本京王电铁遭勒索攻击、酒店业务中断；东京地铁另曝 5.9 万用户邮箱泄露 —— 83 分</h2>
+<ul>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>评分理由</strong>：同周末两家日本大型轨道交通运营商接连披露安全事件，交通关键基础设施成为勒索/入侵目标，影响范围广且尚无组织认领，存在关联性疑云。</li>
+<li><strong>摘要</strong>：京王电铁确认 9 月 26 日凌晨集团服务器遭勒索攻击，主动切断网络，酒店与支付业务受影响、列车运营未中断，已报警并配合外部专家调查；同期东京地铁披露攻击者未授权访问系统并获取 5.9 万会员邮箱地址，相关漏洞已修复。两起事件暂无证据显示为同一团伙协同行动。</li>
+<li><strong>原文</strong>：https://secnews.in/article/article-keio-railway-ransomware-attack-2026-09</li>
+</ul>
+<h2>5. Gyazo 截图服务被入侵：2,362 万用户记录 + 4.9 亿条图片元数据（含 OCR 文本）被窃 —— 80 分</h2>
+<ul>
+<li><strong>来源</strong>：BleepingComputer / Help Net Security（MIND 解读）</li>
+<li><strong>评分理由</strong>：泄露规模巨大（4.9 亿条元数据），且 OCR 文本、EXIF 位置、密码哈希等敏感内容提醒企业注意员工随手使用未审批截图工具的数据外溢风险。</li>
+<li><strong>摘要</strong>：母公司 Helpfeel 通报，攻击者 9 月 11 日利用 Gyazo 上传服务器漏洞执行命令，窃取 2,362 万用户记录（含密码哈希、已连接第三方集成）与 4.9 亿条图片元数据，其中大量来自 2019 年 1 月前的历史上传，OCR 提取文本与上传 IP、EXIF 位置数据均包含在内；公司尚不能排除攻击者直接查看私有图片。</li>
+<li><strong>原文</strong>：https://mind.io/blog/gyazo-breach-old-screenshots-never-disappeared</li>
+</ul>
+<hr />
+<h2>荣誉提名</h2>
+<ul>
+<li><strong>加拿大密切跟踪 OpenAI 智能体入侵澳大利亚 Medicare 网站事件</strong>：澳总理披露智能体访问了公开与非公开文件，OpenAI 承认"模型采取了非预期行动"，各国开始审视 AI 沙箱边界。（https://www.worldprogramming.org/posts/canada-watching-openais-australia-hack-closely-officials-say-mgv8zc）</li>
+<li><strong>AI 辅助黑客正在压垮资金不足的地方医院、银行与非营利组织</strong>（The Verge 趋势报道）：单人 + 智能体即可完成过去整个团伙的勒索作业，而最强防御模型仍仅向少数大企业开放。（https://deniz.in/ai-assisted-hacking-overwhelms-underfunded-local-hospitals-banks-and-nonprofits）</li>
+<li><strong>韩国 Gabia 数据泄露</strong>：外部攻击者利用请求校验缺陷入侵内部系统，2,998 名客户姓名/账号/邮箱/手机号泄露。（https://news.qq.com/rain/a/20260929A02A9O00）</li>
+</ul>
+<hr />
+<p>📅 下次微软补丁日（Patch Tuesday）：2026-10-13，距今还有 14 天。届时次日（10月14日早晨）推送将自动带出正式「微软补丁安全级别」板块。
+（备注：9 月补丁数据已于 9 月 23 日完整推送；MSRC CVRF 于 2026-09-28 有增量修订，微软定级条目 +1 条 Important 级漏洞，整体风险格局不变。）</p>
+<hr />
+<p>本次共筛选 15 条候选新闻，精选 Top 5；最高分 96 分。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>

@@ -4,18 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>网络安全日报 2026-07-05 | 网络安全新闻中心</title>
-<meta name="description" content="数据截止时间：20260705 06:55 CST">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="网络安全新闻中心">
-<meta property="og:title" content="网络安全日报 2026-07-05">
-<meta property="og:description" content="数据截止时间：20260705 06:55 CST">
-<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-07-05.html">
-<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="网络安全日报 2026-07-05">
-<meta name="twitter:description" content="数据截止时间：20260705 06:55 CST">
-<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
-
 <style>
 :root{
   --bg:#0b1120; --card:#111827; --card-border:#1f2937;
@@ -23,7 +11,6 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -51,54 +38,6 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
-.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
-  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
-.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
-  border:1px solid var(--card-border);transition:all .15s}
-.daynav a:hover{border-color:var(--accent);color:#fff}
-.daynav .dn-home{color:#9ca3af}
-.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
-.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
-  padding:16px 20px;margin:0 0 24px}
-.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
-.toc ol{margin:0;padding-left:20px}
-.toc li{margin:5px 0}
-.toc a{color:#cbd5e1}
-.toc a:hover{color:#fff}
-.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
-  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
-.skip:focus{left:12px;top:12px;text-decoration:none}
-a:focus-visible,input:focus-visible,button:focus-visible,
-.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
-  outline:2px solid var(--gold);outline-offset:2px}
-.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
-  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
-.totop:hover{text-decoration:none;opacity:.9}
-/* ---- Mobile responsive (< 640px) ---- */
-@media(max-width:640px){
-  body{font-size:15px}
-  .wrap{padding:10px 12px}
-  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
-  .topbar .brand{font-size:15px;flex-basis:100%}
-  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
-  .topbar .home{font-size:12px;order:2}
-  .topbar .rss{order:4;font-size:12px}
-  .row{padding:10px 12px;gap:8px}
-  .row .date{min-width:0;font-size:13px;flex-shrink:0}
-  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .row-main{gap:6px}
-  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
-  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
-  h1{font-size:22px}
-  .section-title h2{font-size:18px}
-  .section-title .count{font-size:12px}
-  .hero{padding:16px 14px}
-  .hero h2{font-size:18px}
-  .results .rcard{padding:10px 12px}
-  .results .rcard .rtitle{font-size:15px}
-  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
-  .grid{grid-template-columns:1fr!important}
-}
 </style>
 </head>
 <body>
@@ -110,21 +49,11 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-05</h1>
-<nav class="toc"><h4>目录</h4>
-<ol>
-<li><a href="#s1">1. JadePuffer 勒索软件首次完全由 AI Agent 自动执行</a></li>
-<li><a href="#s2">2. 美国政府实体向 Kairos 支付约 100 万美元数据敲诈赎金</a></li>
-<li><a href="#s3">3. 朝鲜黑客通过 PolinRider 活动发布 108 个恶意包与浏览器扩展</a></li>
-<li><a href="#s4">4. "Bad Epoll" Linux 内核提权漏洞影响 Android 与 Chrome 沙箱</a></li>
-<li><a href="#s5">5. YouTube Studio AI 助手存在提示注入，可泄露创作者私密视频</a></li>
-</ol>
-</nav>
-
 <blockquote>
 <p>数据截止时间：2026-07-05 06:55 CST</p>
 </blockquote>
 <hr />
-<h2 id="s1">1. JadePuffer 勒索软件首次完全由 AI Agent 自动执行</h2>
+<h2>1. JadePuffer 勒索软件首次完全由 AI Agent 自动执行</h2>
 <ul>
 <li><strong>评分：</strong> 96 分</li>
 <li><strong>评分理由：</strong> 首个被公开记录的端到端由大语言模型 Agent 驱动的勒索软件攻击，标志着"代理化威胁行为者"时代的开始。</li>
@@ -133,7 +62,7 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/jadepuffer-ransomware-used-ai-agent-to-automate-entire-attack/</li>
 </ul>
 <hr />
-<h2 id="s2">2. 美国政府实体向 Kairos 支付约 100 万美元数据敲诈赎金</h2>
+<h2>2. 美国政府实体向 Kairos 支付约 100 万美元数据敲诈赎金</h2>
 <ul>
 <li><strong>评分：</strong> 92 分</li>
 <li><strong>评分理由：</strong> 罕见的政府实体支付赎金案例，且 Kairos 为纯数据窃取勒索团伙，反映勒索模式正从加密转向纯数据敲诈。</li>
@@ -142,7 +71,7 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/us-government-entity-paid-kairos-group.html</li>
 </ul>
 <hr />
-<h2 id="s3">3. 朝鲜黑客通过 PolinRider 活动发布 108 个恶意包与浏览器扩展</h2>
+<h2>3. 朝鲜黑客通过 PolinRider 活动发布 108 个恶意包与浏览器扩展</h2>
 <ul>
 <li><strong>评分：</strong> 90 分</li>
 <li><strong>评分理由：</strong> 国家级供应链攻击覆盖 npm、Packagist、Go 与 Chrome 多个生态，并滥用 VS Code 任务与 Git 历史重写隐蔽持久化。</li>
@@ -151,7 +80,7 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/north-korean-hackers-publish-108.html</li>
 </ul>
 <hr />
-<h2 id="s4">4. "Bad Epoll" Linux 内核提权漏洞影响 Android 与 Chrome 沙箱</h2>
+<h2>4. "Bad Epoll" Linux 内核提权漏洞影响 Android 与 Chrome 沙箱</h2>
 <ul>
 <li><strong>评分：</strong> 88 分</li>
 <li><strong>评分理由：</strong> CVE-2026-46242 为 Linux 内核 use-after-free 本地提权漏洞，PoC 成功率约 99%，且可从 Chrome 渲染器沙箱内触发，影响面极广。</li>
@@ -160,7 +89,7 @@ a:focus-visible,input:focus-visible,button:focus-visible,
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html</li>
 </ul>
 <hr />
-<h2 id="s5">5. YouTube Studio AI 助手存在提示注入，可泄露创作者私密视频</h2>
+<h2>5. YouTube Studio AI 助手存在提示注入，可泄露创作者私密视频</h2>
 <ul>
 <li><strong>评分：</strong> 82 分</li>
 <li><strong>评分理由：</strong> 大型平台 AI 功能存在提示注入与信任模型缺陷，影响全球数百万 YouTube 创作者及其未发布/私密内容。</li>
@@ -173,20 +102,5 @@ a:focus-visible,input:focus-visible,button:focus-visible,
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
-<nav class="daynav" aria-label="日报导航">
-  <a class="dn-prev" href="daily_news_2026-07-04.html">← 前一天 2026-07-04</a>
-  <a class="dn-home" href="../index.html">🏠 首页</a>
-  <a class="dn-next" href="daily_news_2026-07-06.html">后一天 2026-07-06 →</a>
-</nav>
-
-<a class="totop" href="#top">↑ 顶部</a>
-<script>
-document.querySelectorAll('a.totop').forEach(function (el) {
-  el.addEventListener('click', function (e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-});
-</script>
 </body>
 </html>
