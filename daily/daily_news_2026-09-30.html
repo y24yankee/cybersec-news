@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-09-30 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-09-30</h1>
+<h2>Top 5 安全新闻</h2>
+<h3>1. Citrix NetScaler 两个 RCE 零日在野利用升级为大规模攻击（CVSS 9.5）</h3>
+<ul>
+<li><strong>评分</strong>：96 / 100 —— 两个 CVSS 9.5 零日（CVE-2026-88771/88772）已确认在野利用，CISA 下达紧急修复指令（期限 9 月 30 日），漏洞利用已从隐蔽转向"广撒网"式大规模攻击，互联网暴露设备超 2.3 万台。</li>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>摘要</strong>：Citrix 确认两个 NetScaler ADC/Gateway 未认证 RCE 零日正被全球范围积极利用：CVE-2026-88771 为输入校验缺陷导致的未认证任意命令执行，CVE-2026-88772 为 DTLS 默认开启场景下的内存溢出（RCE/DoS）。CISA 已将两项加入 KEV 目录并要求联邦机构在 9 月 30 日前完成处置。受影响组织应按 Citrix 指引隔离取证、轮换凭证并重建受影响设备。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/citrix-confirms-two-netscaler-rce-zero-days-exploited-in-attacks/</li>
+</ul>
+<h3>2. Apple 紧急修复 CoreGraphics 零日（CVE-2026-86950），"极度复杂"定向攻击中被利用</h3>
+<ul>
+<li><strong>评分</strong>：94 / 100 —— iOS/macOS 零日、已在真实定向攻击中被利用、由 Meta 报告，属于高价值间谍级漏洞，Apple/iOS 用户需立即更新。</li>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>摘要</strong>：Apple 发布 iOS 与 macOS 紧急更新，修复 CoreGraphics 越界写入零日漏洞 CVE-2026-86950（由 Meta Product Security 报告）。Apple 表示该漏洞可能已在针对特定个人（少量、精心挑选目标）的"极度复杂"攻击中被利用，通过处理恶意构造的文件即可执行任意代码。修复方式为改进边界检查，建议高管、记者等高风险用户优先更新。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/apple-patches-coregraphics-zero-day-flaw-exploited-in-attacks/</li>
+</ul>
+<h3>3. 新 Spectre-v2 变体 BTR：3–5 分钟即可泄露 Linux root 密码哈希</h3>
+<ul>
+<li><strong>评分</strong>：90 / 100 —— 影响多厂商 CPU（Intel/AMD/Arm）的硬件侧信道新变体，绕过现有缓解措施，波及浏览器 JIT、语言运行时与内核，影响面极广。</li>
+<li><strong>来源</strong>：BleepingComputer / The Hacker News</li>
+<li><strong>摘要</strong>：VUSec 与比萨圣安娜高等研究院研究人员披露 Spectre-v2 新变体"Branch Target Reuse (BTR)"（CVE-2026-64507/64508）：现代 CPU 在自修改代码后不会失效陈旧的间接分支预测目标，JIT 代码缓存重填充时可产生"释放后瞬态执行"原语。在 Intel Raptor Cove/Lion Cove 处理器的 Linux 环境下，攻击者平均 3–5 分钟即可恢复 root 密码哈希。Linux 内核补丁已合并。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/new-spectre-v2-attack-variant-leaks-linux-root-password-hash-in-minutes/</li>
+</ul>
+<h3>4. 五角大楼人事数据泄露影响约 300 万人，未加密访问持续 9 个月</h3>
+<ul>
+<li><strong>评分</strong>：85 / 100 —— 美国国防部人事数据中心大规模泄露，涉及 SSN、出生日期、军职专业等敏感 PII，未加密存储且攻击窗口长达 9 个月，国家级影响。</li>
+<li><strong>来源</strong>：SecurityWeek</li>
+<li><strong>摘要</strong>：美国国防人力数据中心（DMDC）确认，2025 年 10 月至 2026 年 7 月间，少数未授权用户利用文件共享服务器漏洞访问了约 276 万在世人员和 29.4 万已故人员的未加密个人信息，包括社会安全号、姓名、出生日期、联系方式与军职专业。漏洞于 7 月 16 日被发现并修复，目前未发现数据被滥用，责任方不明。受影响人员将获得 12 个月的信用监控服务。</li>
+<li><strong>原文链接</strong>：https://www.securityweek.com/pentagon-personnel-agency-data-breach-impacts-3-million-people/</li>
+</ul>
+<h3>5. 法国税务部门数据窃取案：仅凭窃取的员工密码，7 周无人察觉</h3>
+<ul>
+<li><strong>评分</strong>：82 / 100 —— 影响逾 35 万个人与 25 万企业，ANSSI 定性"攻击并不复杂"，暴露密码单因素登录、网络分段缺失与监控盲区等系统性缺陷，对政企安全治理有典型借鉴意义。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：法国网络安全局（ANSSI）发布审计报告：攻击者利用 infostealer 窃取的数十个 DGFIP 员工密码，于 6–7 月间批量抓取 E-Contact 系统数据，涉及 35 万余人、25 万余家企业，另有约 43.5 万户家庭土地登记数据经 APEX 门户外泄。6 月 23 日 SOC 曾重置失陷账号密码，但未终止 ADER 上的活跃会话，数据又持续外流约 16 小时。ANSSI 结论：弱登录保护、网络隔离不足与监控缺口是根因。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/french-tax-data-theft-using-stolen.html</li>
+</ul>
+<hr />
+<ul>
+<li>本次共筛选 13 条候选新闻，最高分 96 分。</li>
+<li>已核对 MSRC 更新列表：2026 年 9 月正式补丁文档已发布，下次微软补丁日（Patch Tuesday）为 <strong>2026-10-13</strong>，距今还有 <strong>13</strong> 天。</li>
+</ul>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
