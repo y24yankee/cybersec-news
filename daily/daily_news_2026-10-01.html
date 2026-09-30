@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-01 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-01</h1>
+<h2>1. Cisco Catalyst SD-WAN Manager 零日漏洞 CVE-2026-76504 遭在野利用 ⭐ 97分</h2>
+<p><strong>评分理由</strong>：CVSS 9.8 无认证远程权限 + 已确认在野利用 + 无临时解决方案，是企业网络管理面的最高危威胁。</p>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Cisco 于 9 月 30 日发布通告，确认攻击者正在积极利用 Catalyst SD-WAN Manager（原 vManage）的一个新零日认证绕过漏洞 CVE-2026-76504。该漏洞源于 API 会话认证对 URI 编码处理不当，远程攻击者无需任何凭据即可绕过认证规则，以管理员身份调用 Manager API，进而控制该实例管理的全部 SD-WAN 设备。Cisco PSIRT 于 2026 年 9 月得知在野利用，已在多个版本分支发布修复，但明确表示<strong>没有可用的临时解决方案</strong>，建议将管理接口与互联网隔离。IOC 表现为访问日志中出现 URI 编码字符的 <code>j_security_check</code> 请求（如 <code>/%6a_security_check</code>）及 <code>viptela-reserved-</code> 开头用户的异常记录。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html</li>
+</ul>
+<h2>2. ShinyHunters 宣称窃取 3.8 万名 FBI 员工数据，荷兰警方逮捕嫌疑人 ⭐ 95分</h2>
+<p><strong>评分理由</strong>：美国执法核心机构史上最严重敏感信息泄露事件之一，BBC/NYT 核实数据基本属实，且已出现嫌疑人被捕的执法进展。</p>
+<ul>
+<li><strong>来源</strong>：BBC（荷兰警方通报）/ BleepingComputer 跟进报道</li>
+<li><strong>摘要</strong>：黑客组织 ShinyHunters 于 9 月 21 日宣称通过 FBI 所用 Oracle 云系统的漏洞入侵 FBIJOBS、FBI BEAST、FBI MedLink、FBI BICS 等多个内部系统，获取约 38,000 名（前）雇员姓名、警徽号、家庭住址、电话乃至医疗记录。FBI 内部备忘录（经《纽约时报》披露）承认敏感信息可能已被窃取；路透社核验的部分数据中包含负责调查中俄事务的人员名单。组织声称行动不为牟利，只为要求 FBI 撤回今年 5 月对它的警告公告。9 月 30 日荷兰警方宣布已于 9 月 15 日逮捕一名 24 岁阿姆斯特丹男子（涉嫌为该组织成员，其设备中还发现两起境外买凶杀人计划线索），FBI 局长 Kash Patel 发文致谢并表示调查仍在推进。</li>
+<li><strong>原文链接</strong>：https://www.nation.com.pk/30-Sep-2026/dutch-police-arrest-suspected-member-group-claimed-fbi-hack</li>
+</ul>
+<h2>3. DIVD 披露：AI 智能体利用 Zammad 双零日在数秒内完成入侵 ⭐ 88分</h2>
+<p><strong>评分理由</strong>：全球首例完整复盘的"AI 智能体自主渗透"事件——零日链 + 智能体自主决策，预示自动化攻击新时代。</p>
+<ul>
+<li><strong>来源</strong>：DIVD 官方通告 / BleepingComputer 跟进</li>
+<li><strong>摘要</strong>：荷兰漏洞披露组织 DIVD 确认其网络遭入侵的根因是开源工单系统 Zammad 的两个零日漏洞（CVE-2026-102489、CVE-2026-102490），组合利用可实现会话劫持、远程代码执行并从 Zammad 用户提权至 root。驱动攻击的是一个<strong>自主运行的 AI 智能体</strong>，无需外部指令即可决定下一步动作，全部攻击动作在数秒内完成，并在系统里留下了可供 investigators 复盘的决策记录。Zammad 自称拥有 2000+ 客户、55,000+ 用户（含 De'Longhi、国际特赦组织等）。DIVD 建议 Zammad 用户升级到安全的 v7 版本或暂时下线实例。</li>
+<li><strong>原文链接</strong>：https://www.enigma-global.com/preview/news/43166</li>
+</ul>
+<h2>4. 微软披露 Zimbra CVE-2026-73570 在野利用细节：Web Shell + 认证密钥窃取 ⭐ 84分</h2>
+<p><strong>评分理由</strong>：微软安全研究团队发布完整攻击链复盘，无认证 SMTP 触发的 RCE 已被实际用于窃取 LDAP 高价值密钥，波及多地区多行业。</p>
+<ul>
+<li><strong>来源</strong>：The Hacker News（微软安全研究团队发现）</li>
+<li><strong>摘要</strong>：微软披露攻击者正在利用 Zimbra 协作套件已修补的命令注入漏洞 CVE-2026-73570（CVSS 8.9）：在启用 SNMP 通知并安装可选 zimbra-snmp 包时，一封特制邮件即可在暴露的 Zimbra 服务器上无认证触发 RCE。观察到的后续动作包括部署 JSP Web Shell 与反弹 Shell、通过修改 <code>/etc/pam.d/sudo</code> 实现 zimbra 账户免密 sudo 提权、创建 systemd 持久化服务，并用 <code>zmlocalconfig -s</code> 窃取 zimbraPreAuthKey、zimbraAuthTokenKey 等集中认证密钥，再利用 Zimbra SSH 身份横向移动。该漏洞 7 月已在 10.1.20 修复，8 月被 CISA 列入 KEV 目录（联邦机构修复截止 8 月 24 日）。</li>
+<li><strong>原文链接</strong>：https://cybernoz.com/?p=55684</li>
+</ul>
+<h2>5. TeamViewer 罕见发布紧急通告：五大高危漏洞，敦促用户"尽快"升级 ⭐ 82分</h2>
+<p><strong>评分理由</strong>：远程访问软件是勒索团伙最爱 abused 的入口之一，最高危漏洞可直接导致 RCE，虽然暂无在野利用但修补窗口极窄。</p>
+<ul>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>摘要</strong>：TeamViewer 发布少见的高调紧急安全通告（TV-2026-1010），敦促用户"尽快"升级到 15.82 版本。五个高危漏洞涵盖 Windows/Linux/macOS 的 Full Client 与 Host：最严重的 CVE-2026-92370（CVSS 8.8）是远程会话访问控制绕过，可能被链式利用导致远程代码执行；其余四个（路径穿越、堆溢出、TOCTOU 竞态、路径校验不当）可让本地攻击者以当前用户权限执行代码或提权至 SYSTEM/root。官方暂未发现公开利用代码或在野利用，但鉴于勒索软件团伙长期滥用 TeamViewer 且该公司自身曾多次被 APT29 等组织入侵，建议立即全量排查并升级（含 15.64/14.7/13.2 等遗留分支）。</li>
+<li><strong>原文链接</strong>：https://ncijnetwork.com/teamviewer-urges-users-to-patch-severe-flaws-as-soon-as-possible</li>
+</ul>
+<hr />
+<h2>补丁日状态</h2>
+<p>📅 距下次微软补丁日（Patch Tuesday，2026-10-13）还有 <strong>12 天</strong>。MSRC 更新列表中 2026-Oct 条目尚未出现，本月初次校验通过（免认证 API 正常响应），10 月正式补丁数据发布后（北京时间 10 月 14 日凌晨）将自动带出「微软补丁安全级别」板块。</p>
+<hr />
+<p><em>本次共筛选 12 条新闻，最高分 97 分。数据来源：The Hacker News / BleepingComputer / Hacker News 社区，检索时间 2026-10-01 07:00（北京时间）。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
