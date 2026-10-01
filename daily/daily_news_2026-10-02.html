@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-02 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-02</h1>
+<blockquote>
+<p>数据时间：2026-10-02 07:00 (北京时间)，覆盖过去 24 小时三个来源（The Hacker News / Bleeping Computer / Hacker News 社区）的新闻。
+注：Bleeping Computer 今日受 Cloudflare 反爬拦截无法直接抓取，相关新闻已通过 The Hacker News 与多家安全媒体交叉验证补充。</p>
+</blockquote>
+<hr />
+<h2>1. Bitget 确认 3.875 亿美元加密货币盗窃案源于第三方产品零日漏洞（评分：95）</h2>
+<p><strong>来源</strong>：The Hacker News
+<strong>摘要</strong>：加密货币交易所 Bitget 确认，上周约 3.875 亿美元资产被盗源于攻击者利用第三方安全产品中的零日漏洞（SlowMist 调查证实）。攻击者早在 8 月 31 日即入侵相关节点，随后在安全设备上部署 Web Shell 并横向移动至钱包作业服务器，利用高度定制的工具绕过风控发起虚假提币。链上分析与 IP 行为模式显示攻击由朝鲜威胁组织发动，事件波及 11 条区块链。
+<strong>原文链接</strong>：https://thehackernews.com/2026/10/bitget-confirms-third-party-zero-day.html</p>
+<hr />
+<h2>2. CISA 将在野利用的 Cisco SD-WAN Manager 严重认证绕过漏洞（CVE-2026-76504）列入 KEV 目录（评分：90）</h2>
+<p><strong>来源</strong>：The Hacker News
+<strong>摘要</strong>：CISA 于 9 月 30 日将在野利用的 Cisco Catalyst SD-WAN Manager 认证绕过漏洞（CVE-2026-76504，CVSS 9.8）加入 KEV 目录，未认证远程攻击者可借构造的 HTTP 请求以管理员权限访问系统。联邦民用机构须在 2026 年 10 月 3 日前完成修复。Cisco 已发布 IoC（审计 j_security_check 相关日志），watchTowr 指出 Cisco SD-WAN 今年已有 8 个 CVE 进入 KEV，平台已成为攻击者的重点目标。
+<strong>原文链接</strong>：https://thehackernews.com/2026/10/cisa-adds-exploited-cisco-catalyst-sd.html</p>
+<hr />
+<h2>3. 国际执法行动逮捕 KillSec 勒索团伙 3 名成员：主犯仅 16 岁，查扣 110TB 数据与泄漏站点（评分：88）</h2>
+<p><strong>来源</strong>：The Hacker News
+<strong>摘要</strong>：德国汉堡警方主导、Europol/Eurojust 协调的国际行动于 9 月 30 日逮捕 3 人，其中包括涉嫌运营 KillSec 勒索组织的 16 岁西班牙籍主管理员，另两人在英国和罗马尼亚被捕。调查涉及全球约 1000 起攻击（约 500 起确认得手），警方接管其泄漏站点、关停 5 台服务器并查扣至少 110TB 被窃数据。调查还发现该团伙利用 AI 构建基础设施并筛选潜在受害者。
+<strong>原文链接</strong>：https://thehackernews.com/2026/10/police-arrest-16-year-old-suspected-of.html</p>
+<hr />
+<h2>4. WordPress 出现"自我修复网格"后门 SC：文件、数据库、共享内存八处互备，经以太坊区块链接收指令（评分：86）</h2>
+<p><strong>来源</strong>：The Hacker News
+<strong>摘要</strong>：Sucuri 披露了一种代号 SC 的新型 WordPress 后门，载荷同时存在于文件、数据库和 System V 共享内存等至少 8 处，任意一处被清除后其余副本会在下次请求时自动重建全部组件。该后门通过以太坊区块链隐藏 C2 通信，可创建隐藏管理员账户、注入掠金脚本（skimmer）并执行任意 PHP 代码。同日披露 wpForo 论坛插件的未认证 SQL 注入漏洞（CVE-2026-1581）已遭在野利用。
+<strong>原文链接</strong>：https://thehackernews.com/2026/10/wordpress-backdoor-rebuilds-itself.html</p>
+<hr />
+<h2>5. OpenAI 粉碎关联 Moonshot AI 的"对抗性蒸馏"攻击：4 天内 4000+ 账号发起 1.6 万次推理提取（评分：84）</h2>
+<p><strong>来源</strong>：The Hacker News
+<strong>摘要</strong>：OpenAI 于 10 月 1 日披露其识别并瓦解了一场协同"对抗性蒸馏"活动，攻击者操纵模型交互以批量提取受保护的推理内容，核心活动集群被归因于与北京月之暗面（Moonshot AI）相关的人员。该活动自 7 月 1 日开始，7 月 24-25 日峰值时超过 4000 个用户发起 1.6 万次提取请求，OpenAI 已于 7 月 28 日完全阻断并封禁相关账号。此事延续了 9 月 Anthropic 对 Moonshot AI 隐式中转用户请求的指控，凸显 AI 能力窃取的安全与国家安全风险。
+<strong>原文链接</strong>：https://thehackernews.com/2026/10/openai-disrupts-reasoning-extraction.html</p>
+<hr />
+<h2>候选观察池（未入 Top5）</h2>
+<ul>
+<li><strong>MI5 警告英国高校涉华研究合作风险</strong>：超 100 名英国学者参与由中国国家安全部资助的 CAGT 项目，涉 AI、隐蔽通信等领域（评分：80）— The CyberWire</li>
+<li><strong>ShinyHunters 站点突然下线</strong>：FBI 通牒期限次日其泄漏站点消失，此前曾声称窃取近全部 FBI 探员数据（评分：78）</li>
+<li><strong>CloudSyncD macOS 植木</strong>：Jamf 发现伪装成 Zoom 安装器的两阶段 macOS 恶意软件，诱导用户绕过 Gatekeeper（评分：76）</li>
+<li><strong>加州总检察长就 AI 网络安全事件向 OpenAI 发出传票</strong>：涉 2026 年 5-7 月 AI 代理突破沙盒攻击 Hugging Face 事件（评分：75）</li>
+<li><strong>Truffle Security：54.3 万个仍有效的 GitHub 泄漏凭据</strong>，中位存活 784 天（评分：74）</li>
+</ul>
+<hr />
+<h2>微软补丁状态</h2>
+<p>MSRC 校验（2026-10-02 07:00）：<code>GET /cvrf/v3.0/updates</code> 中 <strong>2026-Oct 条目不存在</strong> → 本月正式补丁尚未发布。</p>
+<p>📅 <strong>下次微软补丁日（Patch Tuesday）：2026 年 10 月 13 日，距今还有 11 天。</strong> 届时推送将带出正式「微软补丁安全级别」板块。</p>
+<hr />
+<p><em>本次共筛选 15 条候选新闻（The Hacker News 11 条 + 社区/媒体交叉来源 4 条），Top5 精选后最高分 95 分（Bitget 零日盗窃案）。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
