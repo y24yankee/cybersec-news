@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-03 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-03</h1>
+<h2>Top 5 网络安全新闻</h2>
+<h3>1. FortiMail 零日漏洞 CVE-2026-104286 遭在野利用，CISA 列入 KEV 目录（97 分）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News / BleepingComputer</li>
+<li><strong>摘要</strong>：Fortinet 披露 FortiMail 严重零日漏洞 CVE-2026-104286（CVSS 9.8），为路径遍历 + NULL 字节处理缺陷，无需认证即可通过构造的 HTTP/HTTPS 请求任意写文件，已确认在野利用。修复版本（8.0.2 / 7.6.7 / 7.4.9）多数分支尚未发布，官方建议先禁用 IBE 功能并限制管理接口访问作为临时缓解。CISA 已将其加入 KEV 目录，要求联邦机构在 10 月 4 日前完成处置。</li>
+<li><strong>评分理由</strong>：CVSS 9.8 + 无需认证 + 在野利用 + 多数受影响版本暂无补丁，属本日最高风险事件。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html</li>
+<li>延伸：https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/</li>
+</ul>
+<h3>2. GitLab 修复自托管 AI Gateway 严重漏洞 CVE-2026-90970，CVSS 9.9 可致命令执行（90 分）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News / BleepingComputer</li>
+<li><strong>摘要</strong>：GitLab 于 10 月 2 日披露自托管 AI Gateway 的模板沙箱逃逸漏洞，拥有 Duo Agent Platform 权限的认证用户可通过特制 flow 配置逃逸提示词模板沙箱，进而在网关主机上执行任意命令。修复版本为 19.2.4 / 19.3.2 / 19.4.1，使用 GitLab 托管网关的用户无需操作。CISA 评估当前暂无在野利用证据。</li>
+<li><strong>评分理由</strong>：CVSS 9.9 极高严重性、影响 JWT 签名密钥等敏感资产，且为 2026 年第二起同类 9.9 分 AI Gateway 漏洞；需认证利用故略低于零日在野利用事件。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html</li>
+</ul>
+<h3>3. Warlock 勒索软件（Storm-2603）持续利用 SharePoint 漏洞攻击关键基础设施（88 分）</h3>
+<ul>
+<li><strong>来源</strong>：BleepingComputer / SecurityWeek（Symantec 报告）</li>
+<li><strong>摘要</strong>：Symantec 最新报告显示，与中国关联的 Warlock 勒索组织（Symantec 追踪为 Longlegs，微软为 Storm-2603）过去两个月至少攻击了西语/葡语国家的 4 家机构：水利公用事业、电信运营商、地方政府和大学。该组织利用 SharePoint 漏洞获取初始访问，通过 BYOVD 滥用带签名的 K7RKScan 漏洞驱动（CVE-2025-1055）终止安全软件，并将勒索载荷投放至 SYSVOL 共享借助 AD 复制全网分发。</li>
+<li><strong>评分理由</strong>：国家级威胁背景 + 关键基础设施受害 + SYSVOL/BYOVD 等新型攻击手法，破坏力与示范效应显著。</li>
+<li><strong>原文链接</strong>：https://securityweek.com/warlock-expands-sharepoint-exploitation-in-critical-infrastructure-attacks</li>
+</ul>
+<h3>4. TU Graz 揭示 Windows/macOS/Linux/Android 文件通知子系统侧信道缺陷，可窃听用户活动（80 分）</h3>
+<ul>
+<li><strong>来源</strong>：科技媒体综述（TU Graz 研究，Hacker News 热议）</li>
+<li><strong>摘要</strong>： Graz 理工大学研究人员发现全球主流操作系统核心文件通知子系统存在系统性侧信道问题：Windows ReadDirectoryChangesW（2000 年起）、Linux inotify（2005 年起）、macOS FSEvents（2007 年起）、Android FileObserver（2008 年起）均会向无权限用户泄露文件事件元数据。攻击者可借此监控其他用户的文件活动，如以 97.8% 准确率追踪浏览器访问、通过 SSH 击键间隔侧信道推断输入内容。微软拒绝将其定性为漏洞，称其"设计如此"。</li>
+<li><strong>评分理由</strong>：影响面横跨四大操作系统且部分缺陷存续 20 余年，属新型攻击面研究，创新性高；但暂无实际攻击案例。</li>
+<li><strong>原文链接</strong>：https://technewsreel.com/cybersecurity/os-file-notification-flaws-leak-user-activity-across-windows-macos-linux-android</li>
+</ul>
+<h3>5. Colt 电信确认客户数据被窃，Warlock 团伙在 Ramp 论坛拍卖 100 万份文件（76 分）</h3>
+<ul>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>摘要</strong>：英国电信服务商 Colt Technology Services 确认，其 8 月 12 日披露的安全事件中确有客户文档被窃——Warlock 勒索团伙（Storm-2603）现正于 Ramp 网络犯罪论坛拍卖声称从其窃取的约 100 万份文件，要价 20 万美元，内容涉及财务信息、网络架构数据与客户资料。BleepingComputer 已核实论坛帖中 Tox ID 与该团伙历史勒索信一致，谈判显示其赎金要求介于 45 万至数百万美元。</li>
+<li><strong>评分理由</strong>：大型电信运营商数据确认外泄且已进入实质性售卖阶段，影响企业与客户双重层面；事件本身始于 8 月，时效性略减。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/colt-confirms-customer-data-stolen-as-warlock-ransomware-auctions-files/</li>
+</ul>
+<hr />
+<h2>微软补丁日状态</h2>
+<ul>
+<li>MSRC 校验结果：本月条目（2026-Oct）标题为 "October 2026 <strong>Early</strong> Security Updates"，属预发布占位文档，<strong>正式 Patch Tuesday 补丁尚未发布</strong>。</li>
+<li>📅 下次补丁日（Patch Tuesday）为 <strong>2026-10-13</strong>（北京时间 10-14 凌晨发布），距今还有 <strong>10 天</strong>，届时推送将带出正式「微软补丁安全级别」板块。</li>
+</ul>
+<hr />
+<p><em>本次共筛选 5 条新闻（候选 15 条中评分取前 5），最高分 97 分（FortiMail 零日在野利用）。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
