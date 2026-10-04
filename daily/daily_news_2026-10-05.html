@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-05 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-05</h1>
+<hr />
+<h2>Top 1 | Citrix NetScaler 连爆三重漏洞，在野利用已部署 Web Shell 与配置窃取（98 分）</h2>
+<ul>
+<li><strong>评分</strong>：98 / 100</li>
+<li><strong>评分理由</strong>：预认证远程命令执行（CVSS 9.5）叠加 SAML 零日（CVSS 8.7），在野利用已确认，CISA KEV 目录收录，FCEB 机构修复截止 10 月 7 日。</li>
+<li><strong>来源</strong>：WorldProgramming / LevelBlue THOR / CISA</li>
+<li><strong>摘要</strong>：Citrix NetScaler ADC/Gateway 在过去一周连续曝出多个严重漏洞。CVE-2026-88771（CVSS 9.5）为预认证输入验证缺陷，攻击者无需登录即可执行任意命令；LevelBlue THOR 团队已在多个客户环境中观察到活跃利用，攻击者通过构造含 "pitboss" 和 "NSPPE" 字符串的认证请求投递 Perl/Python 二级载荷，创建超级用户 sec_monitor、部署伪装成 CSS 的 PHP Web Shell、打包并外传 <code>/flash/nsconfig</code> 配置。另一枚零日 CVE-2026-88779（CVSS 8.7）为 SAML 认证内存溢出，Citrix 已确认在野利用并发布紧急补丁 14.1-73.41 / 13.1-64.28；管理员日志显示攻击者甚至在已打 CVE-2026-88771 补丁的设备上继续尝试 RCE。荷兰 NCSC-NL 已建议受影响的机构直接下线相关设备。</li>
+<li><strong>原文链接</strong>：https://www.worldprogramming.org/posts/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks-suoxt8</li>
+</ul>
+<hr />
+<h2>Top 2 | 荷兰漏洞披露机构 DIVD 遭自主 AI Agent 入侵：Zammad 双零日链结数秒提权至 root（97 分）</h2>
+<ul>
+<li><strong>评分</strong>：97 / 100</li>
+<li><strong>评分理由</strong>：首个已确认的「攻击方使用自主 AI Agent 作为进攻工具」的真实组织入侵事件，双零日链结 CVSS 9.4，从 session 劫持到 root 仅数秒，标志着威胁模型进入「机器速度攻击」时代。</li>
+<li><strong>来源</strong>：DIVD CSIRT / Sysdig / quidproquo</li>
+<li><strong>摘要</strong>：荷兰非营利漏洞披露组织 DIVD 于 9 月 22 日发现自身系统被入侵。调查确认攻击者链结了两枚此前未知的 Zammad 零日漏洞：CVE-2026-102489（session 劫持导致 RCE，CVSS 8.7）与 CVE-2026-102490（本地权限提升至 root，CVSS 8.5），链结后综合严重度达 CVSS 9.4。DIVD 强调攻击行为「不像人类」——自主 AI Agent 在每一步自主决定下一步动作，从劫持 session 到获得 root 仅耗时数秒；攻击脚本中甚至留下「这不是钓鱼」「这不是垃圾邮件」等自我辩解注释。已确认外泄数据包括志工 email 地址与部分 CSIRT 工单数据。Zammad 官方声称拥有 2,000 余家客户、55,000 名用户，但目前尚不清楚暴露在公网且运行受影响版本的实例数量。</li>
+<li><strong>原文链接</strong>：https://quidproquo.cc/posts/daily/2026-10-05-security-divd-zammad-agentic-zero-day-breach-en</li>
+</ul>
+<hr />
+<h2>Top 3 | Check Point 防火墙管理平面双严重漏洞在野利用，管理服务器零日潜伏两月（95 分）</h2>
+<ul>
+<li><strong>评分</strong>：95 / 100</li>
+<li><strong>评分理由</strong>：两枚漏洞均 CVSS 9.8，一枚为 VPN 预认证 RCE（补丁后 3 天即遭利用），另一枚为管理服务器零日（7 月 23 日起已遭利用，9 月 22 日才修复），CISA KEV 收录，管理平面沦陷意味着整个防火墙资产可控。</li>
+<li><strong>来源</strong>：Check Point / Bishop Fox / ThreatFrontier</li>
+<li><strong>摘要</strong>：Check Point 披露两枚正被积极利用的严重漏洞。CVE-2026-85102 为 Quantum Security Gateway 与 Spark Firewall 的 VPN 证书验证缺陷（CVSS 9.8），9 月 9 日补丁发布后，9 月 12 日起即出现全球规模利用，攻击源来自 VPN 与代理基础设施，成功后进行内网端口扫描。更严重的是 CVE-2026-93616（CVSS 9.8），为 Security Management Server 的预认证目录遍历与文件上传漏洞，Check Point 称攻击者自 7 月 23 日起已利用该零日，直至 9 月 22 日才与 CVE-2026-85102 一同修复并公告——管理服务器被潜藏两个月。Bishop Fox 于 10 月 1 日发布完整技术分析，重建了从 TCP/19009 未认证 SOAP 调用到 root 的四步利用链：伪造会话 → 任意文件写入 → 覆盖 cron 触发执行 → 读取结果。CISA 已于 9 月 22 日将两枚漏洞纳入 KEV，联邦机构修复截止 9 月 25 日。</li>
+<li><strong>原文链接</strong>：https://threatfrontier.com/articles/check-point-cve-2026-93616-cve-2026-85102-exploited</li>
+</ul>
+<hr />
+<h2>Top 4 | Cisco Unified CM CVE-2026-20230 遭在野利用，SSRF 可写文件直取 root（92 分）</h2>
+<ul>
+<li><strong>评分</strong>：92 / 100</li>
+<li><strong>评分理由</strong>：企业统一通信核心组件，CVSS 8.6，PoC 公开后已观察到真实利用载荷，文件写入后可提权至 root，影响范围涵盖大量企业语音/视频会议基础设施。</li>
+<li><strong>来源</strong>：Cisco / SSD Secure Disclosure / Defused Cyber</li>
+<li><strong>摘要</strong>：Cisco Unified Communications Manager（Unified CM）与 Unified CM SME 曝出的 CVE-2026-20230（CVSS 8.6）正在被积极利用。该漏洞为 HTTP 请求输入验证不当导致的 SSRF，未经认证的远程攻击者可向受影响设备发送构造请求，在底层操作系统写入文件，进而提升至 root 权限。SSD Secure Disclosure 发布了技术分析，Defused Cyber 已在蜜罐中捕获格式化的 <code>file://</code> 文件写入载荷。虽然利用需 WebDialer 服务启用（默认关闭），但企业环境中为支持电话拨号功能常将其打开。Cisco 已在 14SU6 与 15SU5 版本中修复，临时缓解措施为禁用 WebDialer 服务。</li>
+<li><strong>原文链接</strong>：https://pafilink.org/article/cisco-unified-cm-vulnerability-active-exploitation-and-how-to-stay-safe</li>
+</ul>
+<hr />
+<h2>Top 5 | Apple CoreGraphics CVE-2026-86950 PoC 公开，恶意 PDF 可触发内存损坏（90 分）</h2>
+<ul>
+<li><strong>评分</strong>：90 / 100</li>
+<li><strong>评分理由</strong>：苹果确认该漏洞已被用于针对特定目标的精准攻击，CISA KEV 要求联邦机构 10 月 2 日前修复；PoC 公开后，利用门槛显著降低，且 WhatsApp 附件扫描的防御代码暗示 PDF 可能是潜在投递路径。</li>
+<li><strong>来源</strong>：The Hacker News / Calif / Apple</li>
+<li><strong>摘要</strong>：安全公司 Calif 的研究人员于 9 月 30 日公布了 Apple CoreGraphics 漏洞 CVE-2026-86950 的首个公开 PoC。苹果在 9 月 28 日的补丁中修复了该漏洞，并声明其「可能已被用于针对 iOS 27 之前版本用户的极其复杂的定向攻击」。漏洞根因在于八个光栅化函数中两处对越界数值的处理不一致（饱和 vs 截断），导致计算出的字形边界框过小，进而发生可控的越界内存写入。攻击者只需制作嵌入了特制 TrueType 字体的 PDF 即可在未补丁设备上触发崩溃。Calif 发现 WhatsApp 近期版本在 Kaleidoscope 附件扫描器中新增了针对 PDF 嵌入字体流的异常标记逻辑（MalformedFontProgram / UndecodableFontProgram / UnverifiedFontProgram），被视为该漏洞可能通过 WhatsApp 投递的间接证据。CISA 在补丁次日即将该漏洞列入 KEV 目录。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/apple-coregraphics-poc-emerges-as.html</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 15 条候选新闻，最高分 98 分。</strong></p>
+<hr />
+<p>📅 <strong>微软补丁日（Patch Tuesday）状态</strong>：MSRC API 校验显示，2026-Oct 条目标题仍为 <strong>"October 2026 Early Security Updates"</strong>，属于补丁日正式发布前的预发布占位文档（以 Azure Linux 组件为主）。本月正式 Patch Tuesday 预计于北京时间 <strong>10 月 14 日（周二）凌晨</strong>发布，距今还有 <strong>8 天</strong>。明日推送将带出正式「微软补丁安全级别」板块。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
