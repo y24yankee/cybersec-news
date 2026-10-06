@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-07 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-07</h1>
+<h2>Top 5 新闻</h2>
+<h3>1. Pwn2Own Ireland 2026 首日：黑客利用 32 个零日漏洞斩获 38.85 万美元奖金（95分）</h3>
+<ul>
+<li><strong>来源</strong>：ZDI / Pwn2Own Ireland 2026（zeroday.news 转载）</li>
+<li><strong>链接</strong>：https://www.zeroday.news/article/hackers-exploit-32-zero-days-first-day-pwn2own</li>
+<li><strong>评分理由</strong>：首日即爆出 32 个零日，覆盖手机、打印机、智能家居与 AI 基础设施，规模与新颖性双高。</li>
+<li><strong>摘要</strong>：Pwn2Own Ireland 2026 比赛首日，研究人员共利用 32 个零日漏洞赢得 $388,500，三星 Galaxy S26 旗舰机被两次攻破（Interrupt Labs、Ikotas Labs 及 Viettel 的 Nguyen Thanh Dat）。VinSOC 团队以 7 个零日链攻破 Philips Hue Bridge Pro 智能灯桥、5 个零日链攻破 Oracle Autonomous AI Database 登顶积分榜；OpenAI Codex 云端 AI 编程智能体也被单个参数注入漏洞击落。所有漏洞厂商将有 90 天修复窗口，之后 ZDI 公开披露。</li>
+</ul>
+<h3>2. Atlassian 8 款 Data Center 产品严重漏洞：未认证攻击者可读取已知文件（CVE-2026-21589，CVSS 9.3）（93分）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-10-06）</li>
+<li><strong>链接</strong>：https://thehackernews.com/2026/10/critical-atlassian-flaw-lets.html</li>
+<li><strong>评分理由</strong>：CVSS 9.3 的路径遍历漏洞横跨 Bitbucket/Jira/Confluence 等 8 款主流企业协作产品，攻击无需认证，企业自托管实例暴露面极大。</li>
+<li><strong>摘要</strong>：Atlassian 于 10 月 5 日披露 CVE-2026-21589，8 款 Data Center 产品（Bitbucket、Confluence、Jira Software、Jira Service Management、Bamboo、Crowd、Crucible、Fisheye）存在路径遍历漏洞，未认证攻击者若已知文件确切路径即可读取 Web 应用根目录下的特定文件。云版本已修复，自托管用户需升级至各产品修复版本；官方同时给出 WAF/Tomcat RewriteValve 临时拦截规则，并建议检查访问日志中 URL 解码后的 <code>..</code> 模式。官方暂未发现被利用证据，但同类漏洞 CVE-2021-26086 曾被 CISA 列入 KEV。</li>
+</ul>
+<h3>3. 新型 Linux 后门伪装邮件安全产品潜伏韩国与台湾电信网络（BPFDoor 变种 + 全新 AVERAT 植入体）（90分）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-10-06）/ Rapid7</li>
+<li><strong>链接</strong>：https://thehackernews.com/2026/10/linux-backdoors-impersonate-email.html</li>
+<li><strong>评分理由</strong>：中国关联组织 Red Menshen 持续演进武器库，新披露 AVERAT 植入体借 SMTP 通道 C2 并伪装目标地区主流邮件安全产品，国家级间谍属性强。</li>
+<li><strong>摘要</strong>：Rapid7 披露针对韩国和台湾电信及网络设备的 Linux 后门：BPFDoor 新变种伪装韩国反垃圾邮件产品 SpamSniper 的 PID 文件并轮换 10 个守护进程名，新增的 BPF Rekoobe 构建同样伪装 SpamSniper；针对台湾 ShareTech 设备的全新植入体 AVERAT 通过 dropper 部署，以 SMTP（TCP/25）作为 C2 通道，支持交互式 shell、文件上传下载、模块加载、代理端口转发等完整命令集。建议排查 Linux 上异常的原始包套接字/BPF 过滤器及非邮件进程的 25 端口出站连接。</li>
+</ul>
+<h3>4. LibreOffice 与 OpenOffice 漏洞：恶意电子表格可绕过宏警告直接执行代码（CVE-2026-63277 / CVE-2026-59265）（88分）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-10-06）</li>
+<li><strong>链接</strong>：https://thehackernews.com/2026/10/libreoffice-and-openoffice-flaws-let.html</li>
+<li><strong>评分理由</strong>：影响两大开源办公套件的海量用户，攻击载体（恶意电子表格）极其常见，绕过宏安全提示意味着现有用户习惯性防护失效。</li>
+<li><strong>摘要</strong>：LibreOffice（CVE-2026-63277）与 Apache OpenOffice（CVE-2026-59265）被披露存在可让恶意电子表格在无宏警告的情况下执行任意代码的漏洞。攻击者可通过特制文档触发代码执行，钓鱼邮件投递场景下风险显著。用户应尽快升级至修复版本，并警惕来源不明的电子表格附件。</li>
+</ul>
+<h3>5. ClickFix 社工手法再升级：载荷伪装 PNG 预埋浏览器缓存绕过检测（微软威胁情报）（86分）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-10-06）/ Microsoft 威胁情报团队</li>
+<li><strong>链接</strong>：https://thehackernews.com/2026/10/clickfix-smuggles-payloads-through.html</li>
+<li><strong>评分理由</strong>：广泛流行的 ClickFix 攻击链出现新规避手法，载荷预埋本地缓存可绕过网络侧检测，且已被多个威胁组织快速复用。</li>
+<li><strong>摘要</strong>：微软威胁情报团队发现 ClickFix 社会工程攻击的新规避技巧：攻击者在用户交互发生之前，就将恶意载荷伪装成 PNG 图片文件预载入受害者浏览器缓存；当用户被诱导执行命令时，载荷已在本地，从而绕过监测可疑下载的网络侧检测。同时乌克兰出现另一 ClickFix 变体，通过假 Cloudflare 验证页面分发 Lunex 信息窃取器，表明该手法正被多个威胁组织快速采纳。</li>
+</ul>
+<hr />
+<h2>候选池说明</h2>
+<p>本次共筛选 12 条候选新闻（The Hacker News 9 条、BleepingComputer 3 条、Hacker News/聚合源交叉验证），Top 5 如上。已剔除：丹麦 CPR 880 万人泄露、韩国七家金融机构 AI 攻击（昨日已推送）；Cisco SEG CVE-2026-76461（实为 9 月中旬旧闻，非 24 小时内）。</p>
+<p>本次共筛选 12 条新闻，最高分 95 分。</p>
+<hr />
+<p>📅 微软本月补丁日（Patch Tuesday）预计于北京时间明晨发布（MSRC 当前仍为 "October 2026 Early Security Updates" 预发布占位文档），下次补丁日为 2026-10-13，距今还有 6 天，正式推送将带出「微软补丁安全级别」板块。</p>
+<blockquote>
+<p>数据源：MSRC CVRF API（https://api.msrc.microsoft.com/cvrf/v3.0/updates）校验时间 2026-10-07 07:00 CST</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
