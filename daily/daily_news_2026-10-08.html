@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-08 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-08</h1>
+<h2>Top 5 网络安全新闻</h2>
+<h3>1. SonicWall 发布 SMA1000 10.0 分预认证 SSRF 漏洞补丁</h3>
+<ul>
+<li><strong>评分</strong>：95/100</li>
+<li><strong>评分理由</strong>：CVSS 满分且无需登录即可利用，影响企业远程接入网关，属于高危基础设施漏洞。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：SonicWall 为其 SMA1000 远程接入设备发布了四个漏洞的热修复补丁，其中最严重的是 CVE-2026-102255，预认证 SSRF，CVSS 10.0。攻击者可在未登录情况下通过 WorkPlace 门户发送请求并访问内部功能。目前尚无野外利用证据，SonicWall 建议尽快通过 MySonicWall 门户升级。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/sonicwall-patches-cvss-100-pre.html</li>
+</ul>
+<h3>2. 攻击者劫持 .gh、.sl、.as 域名注册局并为 Google 域名申请伪造证书</h3>
+<ul>
+<li><strong>评分</strong>：94/100</li>
+<li><strong>评分理由</strong>：国家级/顶级域名层面的 DNS 劫持叠加伪造 HTTPS 证书，可实施大规模中间人攻击，影响全球品牌信任。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Google 披露攻击者劫持加纳 .gh、塞拉利昂 .sl 和美属萨摩亚 .as 三个国家代码顶级域，篡改权威 DNS 记录，并为 Google/YouTube 相关域名获取了未授权证书。Google 表示自身系统未遭入侵，已通过 CRLSets 阻止这些证书，并建议域名所有者监控证书透明度日志并设置严格 CAA 记录。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/attackers-hijack-gh-sl-and-as.html</li>
+</ul>
+<h3>3. 韩国多家银行疑遭 AI 代理工具 Artex AI 攻击，至少 6.8 万人数据泄露</h3>
+<ul>
+<li><strong>评分</strong>：93/100</li>
+<li><strong>评分理由</strong>：AI 代理首次被怀疑用于大规模金融部门攻击，涉及多家主流银行并引发总统级别紧急响应，预示攻击自动化新阶段。</li>
+<li><strong>来源</strong>：BleepingComputer / The Record</li>
+<li><strong>摘要</strong>：韩国金融监管机构确认至少七家金融机构遭网络攻击，约 6.8 万人个人信息暴露，涉及 Hana、KB Kookmin、Shinhan 等银行。调查人员怀疑攻击者使用了开源 AI 渗透测试工具 Artex AI，攻击源 IP 分布在 12 个国家。韩国总统李在明已下令成立 28 人专案组调查。</li>
+<li><strong>原文链接</strong>：https://therecord.media/south-korean-bank-hacks-ai-agents</li>
+</ul>
+<h3>4. LMCache 存在未修补的关键 RCE 漏洞，CVSS 9.8</h3>
+<ul>
+<li><strong>评分</strong>：91/100</li>
+<li><strong>评分理由</strong>：AI 推理缓存组件无认证远程代码执行，且无补丁，直接影响快速发展的 LLM 基础设施部署。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：JFrog 披露 LMCache 多进程模式中存在 CVE-2026-105192（CVSS 9.8），由于 ZeroMQ 消息使用 pickle 反序列化且缺乏认证，未认证攻击者可远程执行代码。受影响版本为 0.3.9 至 0.5.5 及 0.5.6 RC，目前尚无修复版本，建议不要将多进程服务器绑定到可路由地址。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/unpatched-critical-lmcache-flaw-lets.html</li>
+</ul>
+<h3>5. ASOS 确认数据泄露：黑客通过官方 App 推送 "ASOS HACKED" 通知</h3>
+<ul>
+<li><strong>评分</strong>：89/100</li>
+<li><strong>评分理由</strong>：大型零售商通过可信推送渠道被滥用，直接接触海量移动用户，且与 Snowflake 被入侵的宣称相关联。</li>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>摘要</strong>：英国时尚零售商 ASOS 确认，第三方客户通信平台被未授权访问，黑客向 App 用户发送标题为 "ASOS HACKED" 的推送通知，声称已入侵其 Snowflake 环境。ASOS 表示姓名和联系方式等基础个人信息可能泄露，但支付卡和账户密码未受影响，并提醒用户不要点击通知中的外部链接。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/asos-confirms-data-breach-after-hacked-in-app-notifications/</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条新闻，最高分 95 分。</p>
+<p>📅 距下次微软补丁日（Patch Tuesday，2026-10-13）还有 5 天。当月 MSRC 更新列表中暂无 2026-Oct 条目，暂不出「微软补丁安全级别」板块。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
