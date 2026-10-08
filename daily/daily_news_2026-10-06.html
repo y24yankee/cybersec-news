@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>网络安全日报 2026-10-06 | 网络安全新闻中心</title>
+<meta name="description" content="本次共筛选 14 条候选新闻，最高分 97 分。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-10-06">
+<meta property="og:description" content="本次共筛选 14 条候选新闻，最高分 97 分。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-06.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-10-06">
+<meta name="twitter:description" content="本次共筛选 14 条候选新闻，最高分 97 分。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
 <style>
 :root{
   --bg:#0b1120; --card:#111827; --card-border:#1f2937;
@@ -11,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -38,6 +51,54 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
 </style>
 </head>
 <body>
@@ -49,57 +110,27 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-10-06</h1>
+<h2 id="s1">Top 1 | 丹麦全国人口登记系统遭入侵，880 万人个人信息泄露（97 分）</h2>
 <hr />
-<h2>Top 1 | 丹麦全国人口登记系统遭入侵，880 万人个人信息泄露（97 分）</h2>
-<ul>
-<li><strong>评分</strong>：97 / 100</li>
-<li><strong>评分理由</strong>：国家级核心身份数据库遭渗透，影响人数相当于丹麦全国人口 1.5 倍（含已故及移居海外者），攻击路径为「合法第三方供应商」横移，属于典型的供应链/信任链攻击范式。</li>
-<li><strong>来源</strong>：The Local Denmark / Hürriyet Daily News / Quartz / AFP</li>
-<li><strong>摘要</strong>：丹麦数字事务部于 10 月 5 日确认，国家人口登记系统（CPR）遭非法访问，约 880 万登记人员的姓名、住址及 CPR 号码（丹麦社会保障号）被获取。攻击者并非直接攻破国家系统，而是先入侵一家依法获准访问 CPR 的丹麦私营企业，再利用该合法路径枚举并提取数据。丹麦人口约 600 万，但 CPR 系统保存约 1,100 万人资料（含已故者与移居海外者），此次泄露覆盖系统内绝大部分记录。数字事务部长 Christina Egelund 称此为「极其严重的事件」，当局已展开调查并封锁涉事企业访问权限，同时通报数据保护局与警方。目前黑客身份尚未确认。</li>
-<li><strong>原文链接</strong>：https://www.thelocal.dk/20261005/hackers-get-personal-info-on-8-8-million-people-in-denmark-govt-data-leak</li>
-</ul>
-<hr />
-<h2>Top 2 | Anthropic AI 模型 Mythos 发现的 Rejetto HFS 漏洞遭在野利用： session 伪造直取 RCE（96 分）</h2>
-<ul>
-<li><strong>评分</strong>：96 / 100</li>
-<li><strong>评分理由</strong>：AI 发现的漏洞从公开到在野利用不足 24 小时，CVSS 9.3，无需认证即可伪造管理员 session 并执行任意代码；中国关联攻击者已通过代理网络对美国、日本目标实施扫描与利用。</li>
-<li><strong>来源</strong>：VulnCheck / Horizon3.ai / Tech Times / The Register</li>
-<li><strong>摘要</strong>：Rejetto HTTP File Server（HFS）3.0.0–3.2.0 版本的 CVE-2026-61500 正遭积极利用。该漏洞根因在于使用 JavaScript <code>Math.random()</code> 生成 session cookie 签名密钥，且将 PRNG 输出泄露给未认证客户端；攻击者收集少量登录响应即可重构生成器状态、恢复签名密钥并伪造管理员 cookie，进而通过 <code>server_code</code> 功能执行任意 JavaScript 代码。该漏洞由 Horizon3.ai 研究员 Zach Hanley 借助 Anthropic 的 AI 漏洞挖掘模型 Mythos 发现，补丁（3.2.1）早在 2026 年 7 月已发布。然而 9 月 30 日技术细节与 PoC 公开后，VulnCheck 于 10 月 1 日即检测到来自中国 IP 的活跃利用，随后又在同一子网（173.239.211[.]248/249）观测到 4 次额外攻击，疑似通过代理网络路由。这是 Mythos/Project Glasswing 已披露 286 个 CVE 中第二个已知遭在野利用的案例，标志着 AI 辅助漏洞研究的「发现→披露→武器化」周期已被压缩至天级。</li>
-<li><strong>原文链接</strong>：https://www.techtimes.com/articles/328531/20261005/cve-2026-61500-anthropic-mythos-finds-rejetto-hfs-flaw-exploited-within-one-day.htm</li>
-</ul>
-<hr />
-<h2>Top 3 | 韩国七大金融机构连环数据泄露，疑似 AI 自主渗透工具 ARTEX 参与攻击（94 分）</h2>
-<ul>
-<li><strong>评分</strong>：94 / 100</li>
-<li><strong>评分理由</strong>：国家级金融基础设施在一周内连环遭袭，7 家机构、超 6.7 万人受影响；攻击者绕开核心系统直接打击员工/销售支撑平台，且在同一攻击服务器上发现中文开源 AI 渗透测试框架 ARTEX AI 的痕迹，代表「AI 代理辅助攻击」首次大规模波及银行业。</li>
-<li><strong>来源</strong>：Yonhap / KBS World / The Korea Times / Herald Economy</li>
-<li><strong>摘要</strong>：自 10 月 1 日起，韩国金融 sector 遭遇连环数据泄露事件，受影响机构包括新韩银行（Shinhan Bank，约 25,000 名客户）、KB 国民银行（119 名客户）、韩亚银行（Hana Bank，89 名客户）、釜山银行、Welcome 储蓄银行、Yegaram 储蓄银行及现代资本等，累计超 67,000 人。泄露数据涵盖姓名、联系方式、居民登记号、年收入及贷款限额。攻击者并未直接渗透银行核心交易系统，而是反复探测员工、外聘代理及贷款经纪人使用的边缘 Web 页面与服务器。韩国金融委员会（FSC）紧急会议确认，四起商业银行攻击可能出自同一攻击者（源自同一 IP 地址），且攻击服务器上发现与中文开源自主渗透测试系统 ARTEX AI 相关的痕迹。FSC 主席李昌镛表示「不能排除 AI 被用于这些攻击的可能性」，并呼吁建立「以 AI 防御 AI 攻击」的安全体系。韩国总统李在明已下令彻查并制定对策。</li>
-<li><strong>原文链接</strong>：https://www.koreatimes.co.kr/business/banking-finance/20261005/ai-powered-attacks-on-banks-expose-technological-lag-in-koreas-financial-cyber-defenses</li>
-</ul>
-<hr />
-<h2>Top 4 | Microsoft Exchange 验证后权限绕过漏洞可跨邮箱读取邮件（87 分）</h2>
-<ul>
-<li><strong>评分</strong>：87 / 100</li>
-<li><strong>评分理由</strong>：企业邮件系统核心组件存在认证后授权缺陷（CVSS 8.8），已获微软「更可能遭利用」评级；虽然目前尚无在野攻击报告，但 Exchange 的广泛部署面意味着一旦利用脚本公开，影响将迅速放大。</li>
-<li><strong>来源</strong>：Microsoft / Canadian Cyber Security Journal / The Hacker News</li>
-<li><strong>摘要</strong>：Microsoft Exchange Server 曝出一枚验证后漏洞 CVE-2026-96940（CVSS 8.8），根因在于弱授权检查，使得已认证的攻击者可读取其他用户的邮箱内容。受影响版本包括 Exchange Server Subscription Edition RTM、Exchange 2016 CU23 以及 Exchange 2019 CU14/CU15。Microsoft 已在服务端修复 Exchange Online，并将该漏洞的利用可能性评定为「more likely」。目前尚无公开的在野利用报告。考虑到大量企业仍运行本地 Exchange 环境，建议管理员尽快应用补丁或审查邮箱级权限隔离策略。</li>
-<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/microsoft-exchange-flaw-lets.html</li>
-</ul>
-<hr />
-<h2>Top 5 | Google 暂停开源漏洞悬赏计划，AI 生成报告 spam 泛滥成灾（84 分）</h2>
-<ul>
-<li><strong>评分</strong>：84 / 100</li>
-<li><strong>评分理由</strong>：这是首家主流科技巨头因 AI 生成垃圾报告而暂停整条漏洞赏金产品线的事件，标志着「AI spam 侵蚀安全研究生态」从边缘问题升级为行业级结构性挑战，对开源安全供应链具有长期影响。</li>
-<li><strong>来源</strong>：BleepingComputer / Google</li>
-<li><strong>摘要</strong>：Google 宣布暂停其开源软件漏洞奖励计划（Open Source Software Vulnerability Rewards Program, OSS VRP）的提交通道，原因是在 AI 工具的辅助下，自动化生成的漏洞报告数量激增，其中绝大多数为无效或低质量提交。研究人员仍可参与 Patch Rewards Program 与 Cloud VRP。Google 表示正在重新设计该计划，预计于 2027 年第一季度公布新框架。这一决定反映出 LLM 降低漏洞研究门槛的同时，也给漏洞协调团队带来了前所未有的 triage 压力——业界担忧若其他厂商跟进，开源生态的漏洞披露通道可能出现萎缩。</li>
-<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge/</li>
-</ul>
-<hr />
-<p><strong>本次共筛选 14 条候选新闻，最高分 97 分。</strong></p>
-<hr />
-<p>📅 <strong>微软补丁日（Patch Tuesday）状态</strong>：MSRC API 校验显示，2026-Oct 条目标题仍为 <strong>"October 2026 Early Security Updates"</strong>，属于补丁日正式发布前的预发布占位文档（以 Azure Linux 组件为主）。本月正式 Patch Tuesday 预计于北京时间 <strong>10 月 14 日（周二）凌晨</strong>发布，距今还有 <strong>8 天</strong>。明日推送将带出正式「微软补丁安全级别」板块。</p>
+<p>本次共筛选 14 条候选新闻，最高分 97 分。</p>
+<p>📅 微软补丁日（Patch Tuesday）状态：MSRC API 校验显示，2026-Oct 条目标题仍为 "October 2026 Early Security Updates"，属于补丁日正式发布前的预发布占位文档（以 Azure Linux 组件为主）。本月正式 Patch Tuesday 预计于北京时间 10 月 14 日（周二）凌晨发布，距今还有 8 天。明日推送将带出正式「微软补丁安全级别」板块。</p>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-10-05.html">← 前一天 2026-10-05</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-10-07.html">后一天 2026-10-07 →</a>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

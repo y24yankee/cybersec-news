@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>网络安全日报 2026-10-09 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（及上述站点讨论指向的原始报道）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-10-09">
+<meta property="og:description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（及上述站点讨论指向的原始报道）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-09.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-10-09">
+<meta name="twitter:description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（及上述站点讨论指向的原始报道）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
 <style>
 :root{
   --bg:#0b1120; --card:#111827; --card-border:#1f2937;
@@ -11,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -38,6 +51,54 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
 </style>
 </head>
 <body>
@@ -49,47 +110,87 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-10-09</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">今日 Top 5 新闻（按评分排序）</a></li>
+<li><a href="#s7">其余候选新闻（已评分，未入 Top5）</a></li>
+</ol>
+</nav>
+
 <blockquote>
-<p>数据来源：Hacker News / The Hacker News / Bleeping Computer 及多源交叉验证 · 生成时间：2026-10-09 07:00 (北京时间)</p>
+<p>数据来源：The Hacker News、BleepingComputer、Hacker News（及上述站点讨论指向的原始报道）
+生成时间：2026-10-09 07:00（北京时间）｜ 评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性</p>
 </blockquote>
-<hr />
-<h2>1. 日本连环数据泄露危机：IDCF Cloud 遭勒索波及 495 家机构，Lawson 与 Big Echo 合计逾 1000 万条记录暴露 ⭐ 95 分</h2>
-<p><strong>评分理由</strong>：软银子公司 IDC Frontier 遭勒索攻击波及 495 家企业与地方政府，叠加 Lawson（215.5 万条）与 Big Echo（约 872.4 万条）两起大型泄露，单一云基础设施故障外溢至全国物流与公共服务，影响面与时效性均为今日之最。</p>
-<p><strong>摘要</strong>：IDC Frontier（软银集团子公司）10 月 8 日披露其 IDCF Cloud 遭勒索软件攻击，管理控制台被迫关闭，495 家企业和地方政府客户受影响，茨城县与东京小平市官网一度无法访问，日冷食品物流系统瘫痪波及约 1200 家企业。10 月 9 日罗森（Lawson）披露 Lawson ID 会员系统 2,155,345 条记录（约 10% 会员）因第三方未授权访问泄露；同日第一兴商（Big Echo 卡拉 OK 运营方）披露约 872.4 万条记录可能因外包承包商员工设备遭攻击而泄露。日本政府已于 10 月 9 日跨部门会议要求企业强化网络安全措施。</p>
-<p><strong>来源</strong>：Bleeping Computer / News on Japan
-<strong>原文链接</strong>：
-- https://www.bleepingcomputer.com/news/security/ransomware-attack-disrupts-japans-idcf-cloud-used-by-govt-clients/
-- https://newsonjapan.com/article/150997.php</p>
-<hr />
-<h2>2. Shai-Hulud 供应链蠕虫蔓延至 AI 基础设施：Tensorlake npm SDK 遭投毒 ⭐ 93 分</h2>
-<p><strong>评分理由</strong>：自我复制型供应链蠕虫 Shai-Hulud 首次攻入 AI Agent 平台 SDK，可窃取云凭证、GitHub 密钥并潜伏监控，威胁模型新颖且波及 AI 供应链。</p>
-<p><strong>摘要</strong>：多名安全研究人员于周四报告，Tensorlake（云原生 AI Agent 运行平台）npm SDK v0.5.144 版本被植入 Shai-Hulud 蠕虫新变种（与 8 月 ChainDrop 变种共享代码），该包周下载量约 1.2 万次。恶意版本可窃取加密货币钱包、浏览器密码、GitHub Actions 密钥、云凭证与服务账号令牌，并保持 C2 通信；更危险的是其会监控被盗的 GitHub 令牌，一旦令牌被吊销，特定条件下可触发删除感染者主目录。Socket 在发布 11 分钟后即标记，npm 已下架，Tensorlake 已更新至 0.5.145。</p>
-<p><strong>来源</strong>：The Register / Enigma Global（The Hacker News 同步报道）
-<strong>原文链接</strong>：https://www.enigma-global.com/preview/news/44122</p>
-<hr />
-<h2>3. "AgentCorruption"：一条提示词即可接管 AWS Bedrock AgentCore 整个区域的 Agent 集群 ⭐ 88 分</h2>
-<p><strong>评分理由</strong>：Zenity Labs 在 SecTor 2026 披露的 IMDS 缺陷展示了 AI Agent 平台"单点突破→全域接管"的爆炸半径，已修复但警示意义重大，属新型攻击面。</p>
-<p><strong>摘要</strong>：Zenity Labs 研究总监 Tamir Ishay Sharbat 在 SecTor 2026 上披露，AWS Bedrock AgentCore 平台部署的 Agent 可访问实例元数据服务（IMDS）获取临时凭证，对公网聊天机器人发送单条提示词即可接管同一 AWS 账户和区域内所有 Agent，并读取会话、访问 Secrets Manager 中的组织机密。根因是 Firecracker MicroVM 缺乏必要的网络隔离，且默认角色权限过宽。AWS 已于今年 2 月修复（强制 IMDSv2 并收紧默认角色），未发现在野利用。</p>
-<p><strong>来源</strong>：Dark Reading
-<strong>原文链接</strong>：https://www.darkreading.com/cloud-security/agentcorruption-aws-environments-at-risk-single-prompt</p>
-<hr />
-<h2>4. PoeLLM 恶意软件利用"对抗性诗歌"AI 越狱技术感染全球 3000+ 台服务器 ⭐ 85 分</h2>
-<p><strong>评分理由</strong>："对抗性诗歌"（将 C2 地址藏于诗词语义中）首次在真实攻击中被观察到，攻击面直指暴露的开源 AI 服务（LiteLLM/Ollama/Gitea 等），手法极具新颖性。</p>
-<p><strong>摘要</strong>：Lumen 旗下 Black Lotus Labs 披露，自 2026 年 4 月起一名疑似意大利攻击者通过 GitHub 仓库传播 PoeLLM 恶意软件，利用藏有恶意指令的诗歌实现动态 C2 发现——恶意软件解析诗歌提取关键词并转换为 C2 IP 地址。攻击者扫描利用暴露在互联网上的 LiteLLM（CVE-2026-42271）、Ollama、Gotenberg 和 Gitea 等服务漏洞，部署 XMRig/Iron 挖矿程序并将受害服务器转化为漏洞扫描器和攻击跳板，高峰期每日感染超 800 台活跃服务器，全球累计逾 3000 台，主要分布在美国和西欧。</p>
-<p><strong>来源</strong>：Black Lotus Labs / 安恒威胁情报中心（The Hacker News 10-7 同步报道）
-<strong>原文链接</strong>：https://ti.dbappsecurity.com.cn/security-info/bulletin?id=16662</p>
-<hr />
-<h2>5. JPCERT/CC 发布警报：Metabase SQL 注入漏洞（CVE-2026-72898）遭大规模利用，日本年内 119 起泄露事件 ⭐ 82 分</h2>
-<p><strong>评分理由</strong>：JPCERT/CC 10 月 8 日官方警报确认 Metabase 无认证 SQL 注入被系统性利用，日本 119 起泄露中 81 起集中于 7 月后，实操修复建议明确，企业需立即自查。</p>
-<p><strong>摘要</strong>：JPCERT/CC 引用 Macnica 统计，2026 年截至 10 月 6 日日本组织机构发生 119 起网页系统个人信息泄露事件，其中 81 起集中在 7 月之后，攻击波及韩国、法国、波兰等 13 个国家和地区（共 99 起类似案例）。三大攻击模式中，利用 Metabase CVE-2026-72898（无需账户的 SQL 注入，可获取管理员权限及连接数据库凭据）是关键一环；该漏洞 8 月 6 日已修复，JPCERT 给出了攻击 IP 与 User-Agent 指标，并建议无法升级者临时封禁 /api/session/reset_password 端点。</p>
-<p><strong>来源</strong>：JPCERT/CC / OSINTSights
-<strong>原文链接</strong>：https://osintsights.com/japans-web-data-leaks-surge-amid-api-abuse-and-metabase-attacks</p>
-<hr />
-<h2>今日综述</h2>
-<p>本次共筛选 15 条候选新闻，最高分 95 分（日本连环数据泄露危机）。今日主旋律：<strong>供应链与 AI 基础设施成为新战场</strong>（Shai-Hulud 蠕虫、AgentCorruption、PoeLLM 三条均与 AI/供应链相关），同时日本爆发全国性数据泄露连锁危机。</p>
-<p>📅 微软本月补丁日（Patch Tuesday）为 2026-10-13，距离下次补丁日还有 4 天（预计北京时间 10-14 凌晨发布正式补丁数据，届时推送将带出正式「微软补丁安全级别」板块）。</p>
+<h2 id="s1">今日 Top 5 新闻（按评分排序）</h2>
+<h3 id="s2">1. FBI：与中国有关的黑客组织搭建「窃密邮件门户」，向第三方提供被盗邮件访问</h3>
+<ul>
+<li><strong>评分：94 / 100</strong></li>
+<li><strong>来源：The Hacker News</strong></li>
+<li><strong>摘要：</strong> FBI 与六国机构联合公告指出，与中国有关的 Integrity Technology Group（关联 Flax Typhoon、Ethereal Panda、RedJuliett 等）自 2021 年中起入侵东南亚等地政府、医疗、执法及宗教机构网络，并运营一个向第三方提供被盗邮件内容访问的 Web 应用。该组织使用含 1,300+ 渗透测试脚本的扫描器，配合密码爆破与已知漏洞利用，相关公司此前已被美、英制裁。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/10/fbi-says-china-linked-hackers-ran.html</li>
+<li><strong>评分理由：</strong> 国家级 APT 长期入侵并搭建「窃密邮件门户」供第三方访问，波及多国政府/医疗/执法机构，情报与地缘政治影响极高。</li>
+</ul>
+<h3 id="s3">2. Atlassian 关键文件读取漏洞 CVE-2026-21589 在 PoC 公开数小时内遭在野利用</h3>
+<ul>
+<li><strong>评分：92 / 100</strong></li>
+<li><strong>来源：BleepingComputer</strong></li>
+<li><strong>摘要：</strong> CVE-2026-21589（CVSS 9.3）影响 8 款 Atlassian Data Center 产品（Jira、Confluence、Bitbucket、Bamboo、Crowd 等），未授权攻击者可读取 Web 根目录下的特定文件；在 Crowd 集成场景下可读出明文凭据并创建管理员账号。watchTowr 发布技术分析及 PoC 后仅约两小时，Previdian 蜜罐即观测到利用尝试，Nuclei 模板也已出现。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/</li>
+<li><strong>评分理由：</strong> 9.3 分未授权文件读取在 PoC 公开 2 小时内即遭在野利用，影响大量自托管企业核心系统。</li>
+</ul>
+<h3 id="s4">3. LMCache 曝未授权 RCE 0day（CVE-2026-105192，CVSS 9.8）且无补丁，直击 vLLM 等 LLM 推理基础设施</h3>
+<ul>
+<li><strong>评分：91 / 100</strong></li>
+<li><strong>来源：Hacker News（原始报道：JFrog / ThreatFrontier）</strong></li>
+<li><strong>摘要：</strong> JFrog 于 10 月 7 日披露 LMCache 多进程模式下的未授权远程代码执行漏洞（CVSS 9.8），其 ZeroMQ 通信端口无认证且使用 Python pickle 反序列化，攻击者发送单条特制报文即可以进程权限（官方容器为 root）执行任意代码。官方尚未发布修复版本，仅建议将多进程服务绑定至 localhost 或可信网络；影响 v0.3.9 至 v0.5.5 全系及 dev 分支。</li>
+<li><strong>原文链接：</strong> https://threatfrontier.com/articles/lmcache-pickle-rce-cve-2026-105192-no-fix</li>
+<li><strong>评分理由：</strong> 9.8 分未授权 RCE 且无补丁，直击 vLLM 等 LLM 推理基础设施，官方容器默认以 root 运行，AI 基础设施面临接管风险。</li>
+</ul>
+<h3 id="s5">4. 日本 Web 数据泄露激增：移动 API 滥用与 Metabase 高危漏洞致千万级个人信息外泄</h3>
+<ul>
+<li><strong>评分：89 / 100</strong></li>
+<li><strong>来源：The Hacker News</strong></li>
+<li><strong>摘要：</strong> JPCERT/CC 与 Macnica 警告，日本年内已公开 119 起 Web 系统个人数据泄露（2025 全年仅 84 起），多因移动 App API 端点/密钥泄露、内网 API 越权、NoSQL 注入及已知漏洞利用。典型案例包括 Park24 Times Car 约 660 万账户、Yakiniku King 约 1,079 万条记录；被点名的 Metabase BI 工具存在高危 SQL 注入漏洞可致未授权管理员接管。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/10/japan-sees-sharp-rise-in-web-data-leaks.html</li>
+<li><strong>评分理由：</strong> 日本年内 Web 数据泄露同比激增，借移动 API 滥用与 Metabase 高危漏洞窃取千万级个人信息，呈现规模化趋势。</li>
+</ul>
+<h3 id="s6">5. FakeGit 供应链运动回潮：数万伪造 GitHub 仓库借「agentbaiting」投递 StealC 窃密木马</h3>
+<ul>
+<li><strong>评分：88 / 100</strong></li>
+<li><strong>来源：BleepingComputer</strong></li>
+<li><strong>摘要：</strong> FakeGit 恶意运动于 10 月回潮，部署逾 1.7 万个伪造 GitHub 仓库冒充主流工具（含 AI skills / MCP 服务器），通过 README 中的下载按钮诱导开发者（及 AI 编码代理）获取 SmartLoader 并最终投递 StealC 信息窃密木马。研究指出至少 700 个真实开发者账号被冒用或入侵，且 AI 代理在解析 README 时可能直接推荐恶意仓库（「agentbaiting」）。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/fakegit-campaign-uses-7-600-github-repos-to-push-smartloader-malware/amp</li>
+<li><strong>评分理由：</strong> 规模化供应链攻击借「agentbaiting」主动诱骗 AI 编码代理下载，700 个真实开发者账号被冒用，开发者生态风险高。</li>
+</ul>
+<h2 id="s7">其余候选新闻（已评分，未入 Top5）</h2>
+<ul>
+<li><strong>Pwn2Own Ireland 2026 首日现 32 个 0day</strong>（Hacker News / Zero Day Initiative，86 分）：首日即攻破三星 Galaxy S26、OpenAI Codex、LiteLLM、Oracle 自主 AI 数据库等，奖金超 38.8 万美元。链接：https://www.zeroday.news/article/hackers-exploit-32-zero-days-first-day-pwn2own</li>
+<li><strong>SonicWall SMA1000 两零日（CVE-2026-15409 CVSS 10.0 SSRF + CVE-2026-15410）在野利用并被列入 CISA KEV</strong>（BleepingComputer，85 分）：预认证 SSRF 可令未授权攻击者控制设备向内网发起请求，已被积极利用。链接：https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-smA1000-flaws-exploited-in-zero-day-attacks-patch-now</li>
+<li><strong>@subql/common npm 包被植入后门</strong>（The Hacker News ThreatsDay 综述，84 分）：v5.8.3 在安装与导入时收集凭据并支持远程 Shell，瞄准开发者工作站与 CI 环境。链接：https://thehackernews.com/2026/10/threatsday-ransomware-affiliate.html</li>
+<li><strong>Power BI 钓鱼借合法域名投递 ScreenConnect RMM 工具</strong>（The Hacker News ThreatsDay 综述，80 分）：攻击者滥用 Power BI 域名提升可信度，诱导下载恶意 ScreenConnect 安装器。链接：https://thehackernews.com/2026/10/threatsday-ransomware-affiliate.html</li>
+<li><strong>Meta Muse AI 代理被指构建用户及非用户档案</strong>（The Hacker News ThreatsDay 综述，76 分）：Muse 每小时更新用户及其社交圈档案，引发隐私担忧。链接：https://thehackernews.com/2026/10/threatsday-ransomware-affiliate.html</li>
+</ul>
+<p><strong>本次共筛选 10 条新闻，最高分 94 分。</strong></p>
+<blockquote>
+<p>备注：Hacker News 官方站点/API 在本次运行环境中不可达，HN 来源条目采用其讨论指向的原始报道链接（ThreatFrontier、Zero Day News 等），The Hacker News 与 BleepingComputer 均为官网直链；所有链接均来自真实检索结果，未编造。微信推送通道（企业微信 connector）当前不可用，本报告仅以本地文件交付。</p>
+</blockquote>
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-10-08.html">← 前一天 2026-10-08</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>

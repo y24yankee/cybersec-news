@@ -4,14 +4,91 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-09-28T00:00:00Z</updated>
+  <updated>2026-10-09T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-10-09</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-09.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-09.html</id>
+    <updated>2026-10-09T00:00:00Z</updated>
+    <summary>数据来源：The Hacker News、BleepingComputer、Hacker News（及上述站点讨论指向的原始报道）</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-10-08</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-08.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-08.html</id>
+    <updated>2026-10-08T00:00:00Z</updated>
+    <summary>评分：95/100</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-10-07</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-07.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-07.html</id>
+    <updated>2026-10-07T00:00:00Z</updated>
+    <summary>数据源：MSRC CVRF API（https://api.msrc.microsoft.com/cvrf/v3.0/updates）校验时间 20261007 07:00 CST</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-10-06</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-06.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-06.html</id>
+    <updated>2026-10-06T00:00:00Z</updated>
+    <summary>本次共筛选 14 条候选新闻，最高分 97 分。</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-10-05</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-05.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-05.html</id>
+    <updated>2026-10-05T00:00:00Z</updated>
+    <summary>本次共筛选 15 条候选新闻，最高分 98 分。</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-10-04</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-04.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-04.html</id>
+    <updated>2026-10-04T00:00:00Z</updated>
+    <summary>来源：Cybernoz / AWS Security Bulletin（20261002）</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-10-03</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-03.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-03.html</id>
+    <updated>2026-10-03T00:00:00Z</updated>
+    <summary>来源：The Hacker News / BleepingComputer</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-10-02</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-02.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-02.html</id>
+    <updated>2026-10-02T00:00:00Z</updated>
+    <summary>数据时间：20261002 07:00 (北京时间)，覆盖过去 24 小时三个来源（The Hacker News / Bleeping Computer / Hacker News 社区）的新闻。</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-10-01</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-01.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-01.html</id>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>📅 距下次微软补丁日（Patch Tuesday，20261013）还有 12 天。MSRC 更新列表中 2026Oct 条目尚未出现，本月初次校验通过（免认证 API 正常响应），10 月正式补丁数据发布后（北京时间 10 月 14 日凌晨）将自动带出「微软补丁安全级别」板块。</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-09-30</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-30.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-30.html</id>
+    <updated>2026-09-30T00:00:00Z</updated>
+    <summary>评分：96 / 100 —— 两个 CVSS 9.5 零日（CVE202688771/88772）已确认在野利用，CISA 下达紧急修复指令（期限 9 月 30 日），漏洞利用已从隐蔽转向&quot;广撒网&quot;式大规模攻击，互联网暴露设备超 2.3 万台。</summary>
+  </entry>
+  <entry>
+    <title>网络安全日报 2026-09-29</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-29.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-29.html</id>
+    <updated>2026-09-29T00:00:00Z</updated>
+    <summary>自动化采集自 Hacker News / The Hacker News / BleepingComputer 等来源，评分 0100，取 Top 5。</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-09-28</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-28.html"/>
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-28.html</id>
     <updated>2026-09-28T00:00:00Z</updated>
-    <summary>本期共筛选 10 条候选新闻，最高分 96 分 编辑时间：北京时间 2026-09-28 07:00</summary>
+    <summary>本期共筛选 10 条候选新闻，最高分 96 分</summary>
   </entry>
   <entry>
     <title>网络安全日报 2026-09-27</title>
@@ -68,89 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-20.html</id>
     <updated>2026-09-20T00:00:00Z</updated>
     <summary>数据来源：Hacker News、The Hacker News、BleepingComputer 三站近 24 小时公开报道；评分维度＝严重性 × 新颖性 × 影响范围 × 时效性。补丁严重级别板块依据微软 MSRC 官方 CVRF（2026Sep，正式发布）实时解析，独立于 Top5。</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-19</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-19.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-19.html</id>
-    <updated>2026-09-19T00:00:00Z</updated>
-    <summary>自动推送 · 来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-18</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-18.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-18.html</id>
-    <updated>2026-09-18T00:00:00Z</updated>
-    <summary>来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-17</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-17.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-17.html</id>
-    <updated>2026-09-17T00:00:00Z</updated>
-    <summary>评分标准：严重性（漏洞利用 / 大规模攻击 / 国家级威胁） 新颖性（0day / 新手法） 影响范围（用户量 / 企业数） 时效性（24 小时内）。补丁严重级别数据不计入新闻评分，单独成章。</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-16</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-16.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-16.html</id>
-    <updated>2026-09-16T00:00:00Z</updated>
-    <summary>数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24–48 小时）</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-15</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-15.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-15.html</id>
-    <updated>2026-09-15T00:00:00Z</updated>
-    <summary>每日 07:00（北京时间）自动检索 Hacker News / The Hacker News / BleepingComputer 三源新闻，评分筛选 Top5；并在微软补丁日正式发布后附加独立补丁板块。</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-14</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-14.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-14.html</id>
-    <updated>2026-09-14T00:00:00Z</updated>
-    <summary>自动抓取来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-13</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-13.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-13.html</id>
-    <updated>2026-09-13T00:00:00Z</updated>
-    <summary>自动生成于 20260913 07:00（北京时间）。本期 Top5 为纯新闻条目；微软补丁安全级别作为文末独立板块呈现（基于 202609 正式发布的 CVRF 真实解析）。</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-12</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-12.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-12.html</id>
-    <updated>2026-09-12T00:00:00Z</updated>
-    <summary>每日 07:00（北京时间）自动推送 · 三来源（Hacker News / The Hacker News / BleepingComputer）检索 · 评分筛选 Top5 · 微软补丁日正式发布后附加独立板块</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-11</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-11.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-11.html</id>
-    <updated>2026-09-11T00:00:00Z</updated>
-    <summary>自动生成 · 新闻来源：The Hacker News、BleepingComputer、Hacker News；补丁板块来源：MSRC CVRF（公共免认证 API）</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-10</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-10.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-10.html</id>
-    <updated>2026-09-10T00:00:00Z</updated>
-    <summary>来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时内）</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-09</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-09.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-09.html</id>
-    <updated>2026-09-09T00:00:00Z</updated>
-    <summary>生成时间：20260909 07:00（北京时间）｜ 数据源：The Hacker News、BleepingComputer、Hacker News + 微软 MSRC CVRF 公开 API</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-08</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-08.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-08.html</id>
-    <updated>2026-09-08T00:00:00Z</updated>
-    <summary>数据来源：Hacker News、The Hacker News、BleepingComputer</summary>
   </entry>
 </feed>

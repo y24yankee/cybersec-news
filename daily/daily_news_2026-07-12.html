@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>网络安全日报 2026-07-12 | 网络安全新闻中心</title>
+<meta name="description" content="评分： 95/100">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-07-12">
+<meta property="og:description" content="评分： 95/100">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-07-12.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-07-12">
+<meta name="twitter:description" content="评分： 95/100">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
 <style>
 :root{
   --bg:#0b1120; --card:#111827; --card-border:#1f2937;
@@ -11,6 +23,7 @@
   --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;}
 a{color:var(--accent);text-decoration:none}
@@ -38,6 +51,54 @@ hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
 ul,ol{padding-left:22px}
 code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
 </style>
 </head>
 <body>
@@ -49,7 +110,17 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <div class="wrap">
   <article class="card">
 <h1>网络安全日报 2026-07-12</h1>
-<h2>1. Progress 紧急敦促 ShareFile 客户关闭 Storage Zone Controller 服务器</h2>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. Progress 紧急敦促 ShareFile 客户关闭 Storage Zone Controller 服务器</a></li>
+<li><a href="#s2">2. jscrambler npm 包 8.14.0 版本被植入 Rust 信息窃取器</a></li>
+<li><a href="#s3">3. Gitea Docker 镜像存在关键认证绕过漏洞 CVE-2026-20896 且已被利用</a></li>
+<li><a href="#s4">4. Zimbra 经典 Web 客户端存在关键 XSS 漏洞</a></li>
+<li><a href="#s5">5. U-Boot 引导加载程序发现 6 个漏洞可导致固件级攻击</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">1. Progress 紧急敦促 ShareFile 客户关闭 Storage Zone Controller 服务器</h2>
 <ul>
 <li><strong>评分：</strong> 95/100</li>
 <li><strong>来源：</strong> BleepingComputer</li>
@@ -57,7 +128,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由：</strong> 企业文件共享平台面临可信威胁，潜在影响与 MOVEit 事件相当，且官方要求立即关服，严重性极高。</li>
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/progress-urges-sharefile-customers-to-shut-down-servers-over-credible-threat/</li>
 </ul>
-<h2>2. jscrambler npm 包 8.14.0 版本被植入 Rust 信息窃取器</h2>
+<h2 id="s2">2. jscrambler npm 包 8.14.0 版本被植入 Rust 信息窃取器</h2>
 <ul>
 <li><strong>评分：</strong> 93/100</li>
 <li><strong>来源：</strong> The Hacker News</li>
@@ -65,7 +136,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由：</strong> 供应链投毒事件直接作用于开发者构建环境，具备跨平台窃密和 eBPF 持久化，影响大量 CI/CD 和开发者机器。</li>
 <li><strong>原文链接：</strong> https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html</li>
 </ul>
-<h2>3. Gitea Docker 镜像存在关键认证绕过漏洞 CVE-2026-20896 且已被利用</h2>
+<h2 id="s3">3. Gitea Docker 镜像存在关键认证绕过漏洞 CVE-2026-20896 且已被利用</h2>
 <ul>
 <li><strong>评分：</strong> 91/100</li>
 <li><strong>来源：</strong> BleepingComputer</li>
@@ -73,7 +144,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由：</strong> 关键认证绕过且已观测到野外利用，无需密码即可接管管理员账户，对自托管代码平台风险极高。</li>
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-auth-bypass-in-gitea-docker-image/</li>
 </ul>
-<h2>4. Zimbra 经典 Web 客户端存在关键 XSS 漏洞</h2>
+<h2 id="s4">4. Zimbra 经典 Web 客户端存在关键 XSS 漏洞</h2>
 <ul>
 <li><strong>评分：</strong> 89/100</li>
 <li><strong>来源：</strong> BleepingComputer / The Hacker News</li>
@@ -81,7 +152,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
 <li><strong>评分理由：</strong> 影响范围巨大（数亿用户、政企机构），且由 Google TAG 上报，存在被国家级威胁行为体利用的高风险。</li>
 <li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/</li>
 </ul>
-<h2>5. U-Boot 引导加载程序发现 6 个漏洞可导致固件级攻击</h2>
+<h2 id="s5">5. U-Boot 引导加载程序发现 6 个漏洞可导致固件级攻击</h2>
 <ul>
 <li><strong>评分：</strong> 87/100</li>
 <li><strong>来源：</strong> BleepingComputer</li>
@@ -94,5 +165,20 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
   </article>
   <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
 </div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-07-11.html">← 前一天 2026-07-11</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <a class="dn-next" href="daily_news_2026-07-13.html">后一天 2026-07-13 →</a>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>
