@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-09 | 网络安全新闻中心</title>
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-09</h1>
+<blockquote>
+<p>数据来源：Hacker News / The Hacker News / Bleeping Computer 及多源交叉验证 · 生成时间：2026-10-09 07:00 (北京时间)</p>
+</blockquote>
+<hr />
+<h2>1. 日本连环数据泄露危机：IDCF Cloud 遭勒索波及 495 家机构，Lawson 与 Big Echo 合计逾 1000 万条记录暴露 ⭐ 95 分</h2>
+<p><strong>评分理由</strong>：软银子公司 IDC Frontier 遭勒索攻击波及 495 家企业与地方政府，叠加 Lawson（215.5 万条）与 Big Echo（约 872.4 万条）两起大型泄露，单一云基础设施故障外溢至全国物流与公共服务，影响面与时效性均为今日之最。</p>
+<p><strong>摘要</strong>：IDC Frontier（软银集团子公司）10 月 8 日披露其 IDCF Cloud 遭勒索软件攻击，管理控制台被迫关闭，495 家企业和地方政府客户受影响，茨城县与东京小平市官网一度无法访问，日冷食品物流系统瘫痪波及约 1200 家企业。10 月 9 日罗森（Lawson）披露 Lawson ID 会员系统 2,155,345 条记录（约 10% 会员）因第三方未授权访问泄露；同日第一兴商（Big Echo 卡拉 OK 运营方）披露约 872.4 万条记录可能因外包承包商员工设备遭攻击而泄露。日本政府已于 10 月 9 日跨部门会议要求企业强化网络安全措施。</p>
+<p><strong>来源</strong>：Bleeping Computer / News on Japan
+<strong>原文链接</strong>：
+- https://www.bleepingcomputer.com/news/security/ransomware-attack-disrupts-japans-idcf-cloud-used-by-govt-clients/
+- https://newsonjapan.com/article/150997.php</p>
+<hr />
+<h2>2. Shai-Hulud 供应链蠕虫蔓延至 AI 基础设施：Tensorlake npm SDK 遭投毒 ⭐ 93 分</h2>
+<p><strong>评分理由</strong>：自我复制型供应链蠕虫 Shai-Hulud 首次攻入 AI Agent 平台 SDK，可窃取云凭证、GitHub 密钥并潜伏监控，威胁模型新颖且波及 AI 供应链。</p>
+<p><strong>摘要</strong>：多名安全研究人员于周四报告，Tensorlake（云原生 AI Agent 运行平台）npm SDK v0.5.144 版本被植入 Shai-Hulud 蠕虫新变种（与 8 月 ChainDrop 变种共享代码），该包周下载量约 1.2 万次。恶意版本可窃取加密货币钱包、浏览器密码、GitHub Actions 密钥、云凭证与服务账号令牌，并保持 C2 通信；更危险的是其会监控被盗的 GitHub 令牌，一旦令牌被吊销，特定条件下可触发删除感染者主目录。Socket 在发布 11 分钟后即标记，npm 已下架，Tensorlake 已更新至 0.5.145。</p>
+<p><strong>来源</strong>：The Register / Enigma Global（The Hacker News 同步报道）
+<strong>原文链接</strong>：https://www.enigma-global.com/preview/news/44122</p>
+<hr />
+<h2>3. "AgentCorruption"：一条提示词即可接管 AWS Bedrock AgentCore 整个区域的 Agent 集群 ⭐ 88 分</h2>
+<p><strong>评分理由</strong>：Zenity Labs 在 SecTor 2026 披露的 IMDS 缺陷展示了 AI Agent 平台"单点突破→全域接管"的爆炸半径，已修复但警示意义重大，属新型攻击面。</p>
+<p><strong>摘要</strong>：Zenity Labs 研究总监 Tamir Ishay Sharbat 在 SecTor 2026 上披露，AWS Bedrock AgentCore 平台部署的 Agent 可访问实例元数据服务（IMDS）获取临时凭证，对公网聊天机器人发送单条提示词即可接管同一 AWS 账户和区域内所有 Agent，并读取会话、访问 Secrets Manager 中的组织机密。根因是 Firecracker MicroVM 缺乏必要的网络隔离，且默认角色权限过宽。AWS 已于今年 2 月修复（强制 IMDSv2 并收紧默认角色），未发现在野利用。</p>
+<p><strong>来源</strong>：Dark Reading
+<strong>原文链接</strong>：https://www.darkreading.com/cloud-security/agentcorruption-aws-environments-at-risk-single-prompt</p>
+<hr />
+<h2>4. PoeLLM 恶意软件利用"对抗性诗歌"AI 越狱技术感染全球 3000+ 台服务器 ⭐ 85 分</h2>
+<p><strong>评分理由</strong>："对抗性诗歌"（将 C2 地址藏于诗词语义中）首次在真实攻击中被观察到，攻击面直指暴露的开源 AI 服务（LiteLLM/Ollama/Gitea 等），手法极具新颖性。</p>
+<p><strong>摘要</strong>：Lumen 旗下 Black Lotus Labs 披露，自 2026 年 4 月起一名疑似意大利攻击者通过 GitHub 仓库传播 PoeLLM 恶意软件，利用藏有恶意指令的诗歌实现动态 C2 发现——恶意软件解析诗歌提取关键词并转换为 C2 IP 地址。攻击者扫描利用暴露在互联网上的 LiteLLM（CVE-2026-42271）、Ollama、Gotenberg 和 Gitea 等服务漏洞，部署 XMRig/Iron 挖矿程序并将受害服务器转化为漏洞扫描器和攻击跳板，高峰期每日感染超 800 台活跃服务器，全球累计逾 3000 台，主要分布在美国和西欧。</p>
+<p><strong>来源</strong>：Black Lotus Labs / 安恒威胁情报中心（The Hacker News 10-7 同步报道）
+<strong>原文链接</strong>：https://ti.dbappsecurity.com.cn/security-info/bulletin?id=16662</p>
+<hr />
+<h2>5. JPCERT/CC 发布警报：Metabase SQL 注入漏洞（CVE-2026-72898）遭大规模利用，日本年内 119 起泄露事件 ⭐ 82 分</h2>
+<p><strong>评分理由</strong>：JPCERT/CC 10 月 8 日官方警报确认 Metabase 无认证 SQL 注入被系统性利用，日本 119 起泄露中 81 起集中于 7 月后，实操修复建议明确，企业需立即自查。</p>
+<p><strong>摘要</strong>：JPCERT/CC 引用 Macnica 统计，2026 年截至 10 月 6 日日本组织机构发生 119 起网页系统个人信息泄露事件，其中 81 起集中在 7 月之后，攻击波及韩国、法国、波兰等 13 个国家和地区（共 99 起类似案例）。三大攻击模式中，利用 Metabase CVE-2026-72898（无需账户的 SQL 注入，可获取管理员权限及连接数据库凭据）是关键一环；该漏洞 8 月 6 日已修复，JPCERT 给出了攻击 IP 与 User-Agent 指标，并建议无法升级者临时封禁 /api/session/reset_password 端点。</p>
+<p><strong>来源</strong>：JPCERT/CC / OSINTSights
+<strong>原文链接</strong>：https://osintsights.com/japans-web-data-leaks-surge-amid-api-abuse-and-metabase-attacks</p>
+<hr />
+<h2>今日综述</h2>
+<p>本次共筛选 15 条候选新闻，最高分 95 分（日本连环数据泄露危机）。今日主旋律：<strong>供应链与 AI 基础设施成为新战场</strong>（Shai-Hulud 蠕虫、AgentCorruption、PoeLLM 三条均与 AI/供应链相关），同时日本爆发全国性数据泄露连锁危机。</p>
+<p>📅 微软本月补丁日（Patch Tuesday）为 2026-10-13，距离下次补丁日还有 4 天（预计北京时间 10-14 凌晨发布正式补丁数据，届时推送将带出正式「微软补丁安全级别」板块）。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+</body>
+</html>
