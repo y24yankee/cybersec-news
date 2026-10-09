@@ -1,5 +1,23 @@
 [
  {
+  "date": "2026-10-10",
+  "url": "daily/daily_news_2026-10-10.html",
+  "title": "网络安全日报 2026-10-10",
+  "score": 92,
+  "cves": [
+   "CVE-2015-3306",
+   "CVE-2015-5477",
+   "CVE-2016-3081",
+   "CVE-2021-3199",
+   "CVE-2023-22894",
+   "CVE-2026-105133",
+   "CVE-2026-105134",
+   "CVE-2026-107406"
+  ],
+  "summary": "每日自动检索 Hacker News / The Hacker News / BleepingComputer 等来源，按严重性、新颖性、影响范围、时效性评分筛选 Top5。补丁板块仅在微软正式 Patch Tuesday 发布后附加（见文末说明）。",
+  "text": "每日自动检索 Hacker News / The Hacker News / BleepingComputer 等来源，按严重性、新颖性、影响范围、时效性评分筛选 Top5。补丁板块仅在微软正式 Patch Tuesday 发布后附加（见文末说明）。 评分：92（理由：国家级 APT 利用 5 个遗留漏洞入侵关键基础设施，CISA 设 10/11 联邦强制修复期限，影响面广且具紧迫性） 来源： SecurityWeek / CISA 联合警报 摘要： CISA 于 10/8 将 ProFTPD (CVE20153306, CVSS 10.0)、ONLYOFFICE Docs (CVE20213199, 9.8)、Apache Struts (CVE20163081, 8.1)、Strapi (CVE202322894)、ISC BIND (CVE20155477) 五个漏洞加入 KEV 目录，均被与中国有关的 Flax Typhoon（Integrity Technology Group 支撑）利用，用于扫描、密码喷射与邮件/凭据窃取。联邦机构须于 10/11 前修复或停用，外加 Shellshock、Ivanti、GitLab 三项既有 KEV 漏洞同属该行动。 原文链接： https://securityweek.com/usdisruptschinesestatesponsoredhackingtools 评分：89（理由：CVSS 9.5 内存溢出可致 RCE/DoS，影响海量 SAML 配置的网关联网设备，历史同类漏洞均遭在野利用） 来源： BleepingComputer 摘要： Citrix 发布安全公告修复 NetScaler ADC / Gateway 中由内存溢出引发的严重漏洞 CVE2026107406（CVSS v4.0 9.5），仅当设备配置为 SAML IdP 或 SP 时受影响，成功利用可远程代码执行或拒绝服务。Citrix 称暂未发现未缓解的在野利用，但 Shadowserver 跟踪到超 21,000 个暴露的 NetScaler 指纹。建议升级至 14.173.46 / 13.164.29 或更高版本。 原文链接： https://www.bleepingcomputer.com/news/security/citrixwarnsadminstopatchnewnetscalerrceflawimmediately/ 评分：88（理由：两漏洞被链式利用部署 XMRig 挖矿，官方 10.3.4 仍受影响形同 0day，已实际命中 5 家组织） 来源： The Hacker News 摘要： Huntress 观察到攻击者自 10/7 起利用 AhsayCBS 备份工具的 CVE2026105133（认证缺陷）与 CVE2026105134（命令注入，CVSS 9.3）链式绕过认证并远程执行命令，投放 WebShell 与伪装为 edge.exe 的 XMRig 挖矿程序，截至 10/8 已影响约 5 家组织。NVD 虽标注已在 10.3.4 修复，但 Huntress 证实该版本仍受影响，实际等同零日。 原文链接： https://thehackernews.com/2026/10/attackersexploitahsaycbsflawsto.html 评分：86（理由：固件级预装恶意软件潜伏两年、波及 150+ 国家廉价 Android 设备，属供应链攻击且无法常规卸载） 来源： SecurityWeek（Bitdefender 研究） 摘要： Bitdefender 披露名为 Midnight Mimosa 的供应链攻击，恶意代码预装于采用 MediaTek 平台的低价 Android 手机固件中（代表机型 Doogee S200 X、Cubot KINGKONG X，及仿冒旗舰机），以系统级权限静默安装应用、广告/点击欺诈，并将设备变为住宅代理节点。约两年间已感染数千台设备，遍布 150+ 国家，常规卸载与恢复出厂均无法清除。 原文链接： https://securityweek.com/prebakedfirmwaremalwarehitsbudgetandroiddevicesin150countries 评分：85（理由：ShaiHulud 蠕虫借流行 AI SDK（周下载约 1.2 万）窃取凭据，并设“人质令牌”在撤销时删除用户目录，破坏性强） 来源： The Register 摘要： 供应链安全厂商发现 tensorlake@0.5.144 npm 包被植入 ShaiHulud（ChainDrop 变种）蠕虫，安装时通过 preinstall 钩子窃取 GitHub/npm/云凭据、SSH 密钥、加密钱包及 AI 编码工具配置，并自动扩散至受害者其他包与仓库。其“人质令牌”监控器会在被盗 GitHub token 被撤销时执行 rm rf ，迫使受害者不敢轻易吊销凭据；npm 已在发布后约 11 分钟下架该版本。 原文链接： https://www.theregister.com/security/2026/10/08/shaihuludwormmakesjumptoaiinfrastructurewithtensorlakecompromise/5302054 本次共筛选 15 条候选新闻（三来源各 5 条），精选 Top5，最高分 92 分。 📅 微软补丁日（Patch Tuesday）提示： 本月 MSRC 条目 2026Oct 当前为「October 2026 Early Security Updates」预发布占位文档（含 Azure Linux 等组件，非正式 Patch Tuesday），故今日不生成「微软补丁安全级别」板块、亦不采用其数字。正式补丁预计北京时间 20261014 凌晨 发布，届时推送将带出正式板块。 检索说明：Hacker News 站点/Algolia API 在当前沙箱环境不可达，HN 热议条目已通过上述主流安全媒体的原始报道交叉覆盖；所有 Top5 链接均来自可访问的原文页面，未编造。"
+ },
+ {
   "date": "2026-10-09",
   "url": "daily/daily_news_2026-10-09.html",
   "title": "网络安全日报 2026-10-09",
