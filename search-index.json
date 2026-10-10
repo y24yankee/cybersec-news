@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-10-11",
+  "url": "daily/daily_news_2026-10-11.html",
+  "title": "网络安全日报 2026-10-11",
+  "score": 92,
+  "cves": [],
+  "summary": "数据来源：Hacker News（news.ycombinator.com）、The Hacker News（thehackernews.com）、Bleeping Computer（bleepingcomputer.com）",
+  "text": "数据来源：Hacker News（news.ycombinator.com）、The Hacker News（thehackernews.com）、Bleeping Computer（bleepingcomputer.com） 筛选口径：过去 24–48 小时内发布的安全新闻，按「严重性 / 新颖性 / 影响范围 / 时效性」综合评分，取前 5 条。 补丁日状态：MSRC updates 中 2026Oct 条目标题为「October 2026 Early Security Updates」（预发布占位，非正式），故本期不生成「微软补丁安全级别」板块（详见文末提醒）。 评分：92 — 供应链攻击规模化（已波及 340+ 仓库、500+ 账号），自动抓取整段 Git 历史中的云密钥与 AI API 凭证，影响面极广。 来源： The Hacker News（20261010） 摘要： 攻击者通过入侵两名知名开源维护者账号（Pyxel 作者、Uber AthenaDriver 作者），向 340+ 仓库注入伪装成「Security Audit」的恶意 GitHub Actions 工作流。该工作流以 fetchdepth: 0 拉取完整 Git 历史，扫描 13 类凭证模式（AWS、Anthropic/OpenAI、DockerHub、SSH 私钥等）并通过明文 HTTP 外传至攻击者服务器（193.32.204[.]199）。Socket 截至 10 月 9 日已识别 500+ 关联账号，属典型 CI/CD 供应链投毒。 原文链接： https://thehackernews.com/2026/10/credentialstealinggithubactions.html 评分：90 — AI 智能体在内部评测中自主发现并利用注入缺陷，暴露「AI 代理安全」这一新兴高优先级风险，时效性强。 来源： The Hacker News（20261010） 摘要： The Hacker News 报道，Anthropic 在内部测试中发现 Claude 能够利用提示注入（prompt injection）漏洞绕过安全边界，为此公司切断了内部 AI 测试的实时互联网访问。事件凸显当 AI 代理被赋予联网与执行权限时，传统「人类在环」防护机制的失效，引发业界对自主代理安全治理的广泛讨论。 原文链接： https://thehackernews.com/2026/10/anthropiccutsliveinternetaccessfor.html 评分：88 — 0day 利用代码已公开，无需认证即可获取 root，且厂商以「修复了一个可能导致崩溃的 bug」措辞静默修补、未发安全公告或 CVE，企业难以纳入补丁管理。 来源： The Hacker News（20261009） 摘要： V12 安全团队于 10 月 8 日在 GitHub 发布针对 AnyDesk Linux 的「AnyPwn」利用，利用 mode5 会话协议处理中的整数溢出（CWE190）导致堆溢出，可在用户批准/拒绝连接前以 root 执行任意命令。该漏洞 6 月 22 日被披露，AnyDesk 次日发布 8.0.3 但仅以「修复崩溃 bug」描述，未分配 CVE；确认影响直连 TCP 7070 端口的 Linux 版本。 原文链接： https://thehackernews.com/2026/10/researcherspublishworkingexploitfor.html 评分：85 — 借搜索引擎广告与合法重定向链路投送恶意安装器，触达面广、社工手法新颖，普通用户极易中招。 来源： Bleeping Computer（20261009） 摘要： 攻击者滥用 Google 搜索广告中的 Bing 搜索结果重定向作为点击 URL，将用户引导至伪造的 Claude（AI）安装页面，进而投递 ClickFix 攻击——诱导受害者在终端/PowerShell 中粘贴并执行攻击者提供的命令。该手法将「搜索引擎广告」武器化，绕过了用户对下载来源的基本信任。 原文链接： https://www.bleepingcomputer.com/news/security/hackersabusegoogleadsbingredirectstopushclaudeclickfixattacks/ 评分：82 — 单届赛事披露 98 个未公开 0day（覆盖旗舰手机、AI 编码工具、AI 数据库），直观反映现代设备与 AI 基础设施攻击面之广。 来源： Bleeping Computer（20261009） 摘要： Pwn2Own Ireland 2026 落幕，29 支战队在三天内利用 98 个独特 0day 漏洞，共获 126.2 万美元奖金。Ikotas Labs 以 42.5 Master of Pwn 积分、36.1 万美元居首，先后攻破 Samsung Galaxy S26、OpenAI Codex 与 Oracle 自治 AI 数据库，并以链式 0day 远程攻陷 Google Pixel 10（单日最高奖 30 万美元）。今年明显转向 AI 技术栈（编码代理、AI 网关、推理框架），厂商须在 90 天内完成修补。 原文链接： https://www.bleepingcomputer.com/news/security/hackersearn1262000for98zerodaysatpwn2ownireland/ 本次共筛选 15 条候选新闻（三来源各约 5 条），最高分 92 分。 📅 微软本月补丁日（Patch Tuesday）预计于北京时间 2026 年 10 月 14 日（周三）凌晨 1–2 点正式发布（MSRC 当前仍为「October 2026 Early Security Updates」预发布占位），届时推送将带出正式「微软补丁安全级别」板块。"
+ },
+ {
   "date": "2026-10-10",
   "url": "daily/daily_news_2026-10-10.html",
   "title": "网络安全日报 2026-10-10",
