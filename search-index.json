@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-10-12",
+  "url": "daily/daily_news_2026-10-12.html",
+  "title": "网络安全日报 2026-10-12",
+  "score": 93,
+  "cves": [
+   "CVE-2026-0257"
+  ],
+  "summary": "数据来源：Hacker News / The Hacker News / Bleeping Computer（过去 24 小时）。评分标准：严重性  新颖性  影响范围  时效性；补丁严重级别数据不计入新闻评分。",
+  "text": "数据来源：Hacker News / The Hacker News / Bleeping Computer（过去 24 小时）。评分标准：严重性  新颖性  影响范围  时效性；补丁严重级别数据不计入新闻评分。 补丁日状态：MSRC 2026Oct 当前为 \"October 2026 Early Security Updates\" 预发布占位，非正式补丁 → 今日不生成「微软补丁安全级别」板块（详见文末）。 评分：93 / 100 — 理由：确认的真实入侵事件，AI 智能体首次作为\"活体进攻基础设施\"规模化攻击金融业，波及多家主流银行客户数据。 来源： ThreatFrontier（基于 CrowdStrike 20261007 研究） 摘要： CrowdStrike 复原了一起针对韩国金融业的攻击：一名疑似中文母语、受利益驱动的攻击者使用开源自主渗透测试工具 ARTEX，配合 Claude Code、DeepSeek、GLM、Grok 等大模型会话，攻陷 Shinhan、KB Kookmin、Hana 等多家银行的外围系统（贷款进度查询、员工移动办公），窃取客户个人信息与信用卡资料，约 6.8 万人受影响。攻击者服务器上暴露的开放式目录泄露了 Claude Code 会话记录与 ARTEX 配置，成为罕见的一手取证样本；ARTEX 开发者随后将项目闭源。韩国政府已召开紧急会议。 原文链接： https://threatfrontier.com/articles/artexclaudecodeopendirectoriessouthkoreafinancecrowdstrike 评分：90 / 100 — 理由：商业级 iOS 全链路 0day 外泄后被犯罪团伙改造，新增实时双向 C2 与加密钱包窃密，直接威胁 iPhone 企业凭据与加密资产。 来源： The Hacker News / iVerify 摘要： 移动安全公司 iVerify 披露 DarkSword iOS 漏洞利用套件的新变种 P7。它在浏览器沙箱逃逸后链式利用多个 iOS 漏洞提权至内核，并将植入体注入 SpringBoard，每 15 秒轮询命令服务器，可提取 iCloud 钥匙串、Apple Notes、照片及 imToken 等加密钱包数据。P7 通过消除调试日志、改用浏览器 localStorage 防重复利用来提升隐蔽性，已被沙特、土耳其、马来西亚、乌克兰等多国攻击者及 Star Blizzard（COLDRIVER）等组织使用，并有 LLM 辅助改写的迹象。 原文链接： https://thehackernews.com/2026/10/p7darkswordiosexploitkitadds.html 评分：87 / 100 — 理由：针对企业 AI 基础设施的大规模僵尸网络，以\"诗歌隐写 C2\"极具创新性，凸显暴露的 AI/LLM 服务已成为新型高价值攻击目标。 来源： Lumen Black Lotus Labs（ThreatCluster） 摘要： Lumen Black Lotus Labs 追踪到名为 PoeLLM（行动代号 Canto Incognito）的 Linux 加密货币挖矿僵尸网络，自 2026 年 4 月起已感染 3,400+ 台面向公网的服务器，峰值单日活跃近 800 台。其目标集中于 LiteLLM、Ollama、Gotenberg、Gitea 与 Ivanti Sentry 等暴露的 AI/开发基础设施，利用已知漏洞部署 XMRig/Iron 矿机并接入俄罗斯 Kryptex 矿池。最特别的是其 C2 地址由 GitHub 上一首诗的特定关键词经字典映射动态推导，运营者已轮换 11 次；被控主机还会转为扫描器持续扩张僵尸网络。攻击者疑似意大利语背景。 原文链接： https://threatcluster.io/article/cantoincognitotrackingthepoellmmalware5bfc2548 评分：85 / 100 — 理由：揭示 AI 智能体多租户隔离缺失与默认权限过宽的高危架构风险，单提示可致整个 AWS 区域智能体与云凭据失陷。 来源： Cybersecurity News / Zenity Labs 摘要： Zenity Labs 披露名为 AgentCorruption 的攻击链：对公网可达的 Amazon Bedrock AgentCore 智能体发送一条精心构造的提示，即可通过 SSRF 访问实例元数据服务（IMDSv1）窃取临时 IAM 凭据；由于默认执行角色权限过宽，攻击者可枚举并调用同账号同区域的其他智能体、读取私有对话、源码、长期记忆，以及 AWS Secrets Manager 中的 API 密钥与 OAuth 令牌，实现横向移动。AWS 已强制启用 IMDSv2 并收紧默认角色权限（20260929 确认修复）。 原文链接： https://cybersecuritynews.com/agentcorruptionattack/ 评分：84 / 100 — 理由：已进入 CISA KEV 的 VPN 认证绕过被勒索团伙规模化利用，借合法远程访问通道隐蔽入侵，检测难度高。 来源： RedSide Security（基于 ReliaQuest / Cyber Security News 20261011 报告） 摘要： ReliaQuest 报告称 Qilin 与 Settra 等勒索团伙正积极利用 Palo Alto Networks PANOS GlobalProtect 及 Prisma Access 的认证绕过漏洞 CVE20260257（CISA KEV 于 529 收录），伪造认证 Cookie 建立无凭据的\"合法\" VPN 会话，借受信任的远程访问通道横向移动、提权并部署勒索负载（Cobalt Strike、BloodHound/SharpHound）。该漏洞自 5 月中旬即遭在野利用，至今大量设备仍未打补丁，需在修补后强制终止现有会话以防已建立的非法会话持续。 原文链接： https://blog.redsidesecurity.com/post/ransomwaregroupsexploitpaloaltoglobalprotectauthenticationbypassforstealthyvpnaccess 本次共筛选 15 条新闻（三来源各 5 条候选），最高分 93 分。 📅 微软本月补丁日（Patch Tuesday）预计于北京时间 10 月 14 日凌晨正式发布，届时推送将带出正式「微软补丁安全级别」板块。（依据：MSRC updates 接口中 2026Oct 条目标题仍为 \"October 2026 Early Security Updates\" 预发布占位，非正式补丁数据，故今日不生成板块、不采用其数字。）"
+ },
+ {
   "date": "2026-10-11",
   "url": "daily/daily_news_2026-10-11.html",
   "title": "网络安全日报 2026-10-11",

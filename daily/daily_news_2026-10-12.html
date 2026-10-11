@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-12 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：Hacker News / The Hacker News / Bleeping Computer（过去 24 小时）。评分标准：严重性  新颖性  影响范围  时效性；补丁严重级别数据不计入新闻评分。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-10-12">
+<meta property="og:description" content="数据来源：Hacker News / The Hacker News / Bleeping Computer（过去 24 小时）。评分标准：严重性  新颖性  影响范围  时效性；补丁严重级别数据不计入新闻评分。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-12.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-10-12">
+<meta name="twitter:description" content="数据来源：Hacker News / The Hacker News / Bleeping Computer（过去 24 小时）。评分标准：严重性  新颖性  影响范围  时效性；补丁严重级别数据不计入新闻评分。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-12</h1>
+<blockquote>
+<p>数据来源：Hacker News / The Hacker News / Bleeping Computer（过去 24 小时）。评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性；补丁严重级别数据不计入新闻评分。
+补丁日状态：MSRC <code>2026-Oct</code> 当前为 <strong>"October 2026 Early Security Updates"</strong> 预发布占位，非正式补丁 → 今日不生成「微软补丁安全级别」板块（详见文末）。</p>
+</blockquote>
+<h2 id="s1">今日 Top 5 安全新闻（评分筛选）</h2>
+<h3 id="s2">1. 中国背景攻击者利用 ARTEX AI 渗透套件 + Claude Code 攻陷多家韩国银行</h3>
+<ul>
+<li><strong>评分：93 / 100</strong> — 理由：确认的真实入侵事件，AI 智能体首次作为"活体进攻基础设施"规模化攻击金融业，波及多家主流银行客户数据。</li>
+<li><strong>来源：</strong> ThreatFrontier（基于 CrowdStrike 2026-10-07 研究）</li>
+<li><strong>摘要：</strong> CrowdStrike 复原了一起针对韩国金融业的攻击：一名疑似中文母语、受利益驱动的攻击者使用开源自主渗透测试工具 ARTEX，配合 Claude Code、DeepSeek、GLM、Grok 等大模型会话，攻陷 Shinhan、KB Kookmin、Hana 等多家银行的外围系统（贷款进度查询、员工移动办公），窃取客户个人信息与信用卡资料，约 6.8 万人受影响。攻击者服务器上暴露的开放式目录泄露了 Claude Code 会话记录与 ARTEX 配置，成为罕见的一手取证样本；ARTEX 开发者随后将项目闭源。韩国政府已召开紧急会议。</li>
+<li><strong>原文链接：</strong> https://threatfrontier.com/articles/artex-claude-code-open-directories-south-korea-finance-crowdstrike</li>
+</ul>
+<h3 id="s3">2. P7 DarkSword：新型 iOS 漏洞利用套件可窃取钱包密钥与钥匙串</h3>
+<ul>
+<li><strong>评分：90 / 100</strong> — 理由：商业级 iOS 全链路 0day 外泄后被犯罪团伙改造，新增实时双向 C2 与加密钱包窃密，直接威胁 iPhone 企业凭据与加密资产。</li>
+<li><strong>来源：</strong> The Hacker News / iVerify</li>
+<li><strong>摘要：</strong> 移动安全公司 iVerify 披露 DarkSword iOS 漏洞利用套件的新变种 P7。它在浏览器沙箱逃逸后链式利用多个 iOS 漏洞提权至内核，并将植入体注入 SpringBoard，每 15 秒轮询命令服务器，可提取 iCloud 钥匙串、Apple Notes、照片及 imToken 等加密钱包数据。P7 通过消除调试日志、改用浏览器 localStorage 防重复利用来提升隐蔽性，已被沙特、土耳其、马来西亚、乌克兰等多国攻击者及 Star Blizzard（COLDRIVER）等组织使用，并有 LLM 辅助改写的迹象。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html</li>
+</ul>
+<h3 id="s4">3. PoeLLM 恶意软件借 GitHub 藏诗控制 3,400+ 台暴露 AI/LLM 服务器挖矿</h3>
+<ul>
+<li><strong>评分：87 / 100</strong> — 理由：针对企业 AI 基础设施的大规模僵尸网络，以"诗歌隐写 C2"极具创新性，凸显暴露的 AI/LLM 服务已成为新型高价值攻击目标。</li>
+<li><strong>来源：</strong> Lumen Black Lotus Labs（ThreatCluster）</li>
+<li><strong>摘要：</strong> Lumen Black Lotus Labs 追踪到名为 PoeLLM（行动代号 Canto Incognito）的 Linux 加密货币挖矿僵尸网络，自 2026 年 4 月起已感染 3,400+ 台面向公网的服务器，峰值单日活跃近 800 台。其目标集中于 LiteLLM、Ollama、Gotenberg、Gitea 与 Ivanti Sentry 等暴露的 AI/开发基础设施，利用已知漏洞部署 XMRig/Iron 矿机并接入俄罗斯 Kryptex 矿池。最特别的是其 C2 地址由 GitHub 上一首诗的特定关键词经字典映射动态推导，运营者已轮换 11 次；被控主机还会转为扫描器持续扩张僵尸网络。攻击者疑似意大利语背景。</li>
+<li><strong>原文链接：</strong> https://threatcluster.io/article/canto-incognito-tracking-the-poellm-malware-5bfc2548</li>
+</ul>
+<h3 id="s5">4. AgentCorruption：单条提示即可劫持 AWS Bedrock AgentCore 全部区域智能体</h3>
+<ul>
+<li><strong>评分：85 / 100</strong> — 理由：揭示 AI 智能体多租户隔离缺失与默认权限过宽的高危架构风险，单提示可致整个 AWS 区域智能体与云凭据失陷。</li>
+<li><strong>来源：</strong> Cybersecurity News / Zenity Labs</li>
+<li><strong>摘要：</strong> Zenity Labs 披露名为 AgentCorruption 的攻击链：对公网可达的 Amazon Bedrock AgentCore 智能体发送一条精心构造的提示，即可通过 SSRF 访问实例元数据服务（IMDSv1）窃取临时 IAM 凭据；由于默认执行角色权限过宽，攻击者可枚举并调用同账号同区域的其他智能体、读取私有对话、源码、长期记忆，以及 AWS Secrets Manager 中的 API 密钥与 OAuth 令牌，实现横向移动。AWS 已强制启用 IMDSv2 并收紧默认角色权限（2026-09-29 确认修复）。</li>
+<li><strong>原文链接：</strong> https://cybersecuritynews.com/agentcorruption-attack/</li>
+</ul>
+<h3 id="s6">5. Qilin / Settra 勒索团伙滥用 Palo Alto GlobalProtect 认证绕过漏洞（CVE-2026-0257）</h3>
+<ul>
+<li><strong>评分：84 / 100</strong> — 理由：已进入 CISA KEV 的 VPN 认证绕过被勒索团伙规模化利用，借合法远程访问通道隐蔽入侵，检测难度高。</li>
+<li><strong>来源：</strong> RedSide Security（基于 ReliaQuest / Cyber Security News 2026-10-11 报告）</li>
+<li><strong>摘要：</strong> ReliaQuest 报告称 Qilin 与 Settra 等勒索团伙正积极利用 Palo Alto Networks PAN-OS GlobalProtect 及 Prisma Access 的认证绕过漏洞 CVE-2026-0257（CISA KEV 于 5-29 收录），伪造认证 Cookie 建立无凭据的"合法" VPN 会话，借受信任的远程访问通道横向移动、提权并部署勒索负载（Cobalt Strike、BloodHound/SharpHound）。该漏洞自 5 月中旬即遭在野利用，至今大量设备仍未打补丁，需在修补后强制终止现有会话以防已建立的非法会话持续。</li>
+<li><strong>原文链接：</strong> https://blog.redsidesecurity.com/post/ransomware-groups-exploit-palo-alto-globalprotect-authentication-bypass-for-stealthy-vpn-access</li>
+</ul>
+<hr />
+<p>本次共筛选 <strong>15</strong> 条新闻（三来源各 5 条候选），最高分 <strong>93</strong> 分。</p>
+<p>📅 微软本月补丁日（Patch Tuesday）预计于北京时间 <strong>10 月 14 日凌晨</strong>正式发布，届时推送将带出正式「微软补丁安全级别」板块。（依据：MSRC <code>updates</code> 接口中 <code>2026-Oct</code> 条目标题仍为 "October 2026 <strong>Early</strong> Security Updates" 预发布占位，非正式补丁数据，故今日不生成板块、不采用其数字。）</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-10-11.html">← 前一天 2026-10-11</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
