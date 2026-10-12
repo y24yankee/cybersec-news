@@ -1,5 +1,20 @@
 [
  {
+  "date": "2026-10-13",
+  "url": "daily/daily_news_2026-10-13.html",
+  "title": "网络安全日报 2026-10-13",
+  "score": 95,
+  "cves": [
+   "CVE-2026-102255",
+   "CVE-2026-107406",
+   "CVE-2026-21589",
+   "CVE-2026-85097",
+   "CVE-2026-97229"
+  ],
+  "summary": "数据来源：The Hacker News、BleepingComputer、Hacker News（三来源检索，过去 24 小时）",
+  "text": "数据来源：The Hacker News、BleepingComputer、Hacker News（三来源检索，过去 24 小时） 补丁状态：微软 MSRC updates 接口显示本月条目为 \"October 2026 Early Security Updates\"（非正式 Patch Tuesday），故今日不生成「微软补丁安全级别」板块。 评分：95 分 评分理由：CVSS 10.0 预认证 SSRF 命中处于网络边界的 widelydeployed VPN 设备，且补丁发布仅两天即出现 135 次利用尝试，时效与严重性双高。 来源：The Hacker News / BleepingComputer 摘要：SonicWall Secure Mobile Access (SMA) 1000 设备存在预认证服务端请求伪造漏洞（CVE2026102255，CVSS 10.0），威胁情报厂商 Defused Cyber 与 Previdian 于 10 月 8 日（补丁发布后两天）首次观测到利用，累计记录来自两个美国 IP 的 135 次尝试。该设备处于网络边界，一旦被控可绕过内网隔离、窃取凭证与 MFA 种子，历史同类漏洞已被用于植入 KNUCKLEBALL 恶意软件。 原文链接：https://www.bleepingcomputer.com/news/security/maxseveritysonicwallsma1000flawnowexploitedinattacks.html 评分：93 分 评分理由：CVSS 10.0 未认证任意文件上传致 RCE 已被 Patchstack 确认在野，且涉及 63 个独立源 IP 的自动化攻击，影响海量 WordPress 站点。 来源：The Hacker News（原始披露：Patchstack） 摘要：WordPress 插件 Bricksforge（≤3.1.8.9）存在未认证任意文件上传漏洞（CVE202685097，CVSS 10.0），攻击者可借 GIF/PHP 多语言文件上传并执行任意 PHP 代码，实现远程代码执行。Patchstack 于 10 月 7 日 21:47 UTC 首次观测到利用，涉及 63 个独立源 IP，具自动化攻击特征；修复版本为 3.1.8.10。 原文链接：https://thehackernews.com/2026/10/attackersexploitcvss100bricksforge.html 评分：92 分 评分理由：确认的硬件级供应链植入可绕过设备签名安全直接窃取助记词，造成超 8600 万美元损失，属罕见且高影响的物理供应链攻击。 来源：The Hacker News 摘要：Ledger 确认至少一台经东南亚经销商 CryptoBilis 售出的硬件钱包含未经授权的硬件植入，可监听用于显示恢复词的通信从而读取种子短语。链上分析师估算相关盗窃超 8600 万美元（最高约 9300 万），波及 300+ 钱包；CryptoBilis 已暂停全部硬件钱包销售，Ledger 正配合执法机构调查。 原文链接：https://thehackernews.com/2026/10/ledgerfindsunauthorizedhardware.html 评分：90 分 评分理由：将 Cobalt Strike 与基于 Claude Code 的 AI 编排层结合的初始访问代理，针对乌克兰关键基础设施且一次运行即部署 32 个 WebShell，新颖性与影响范围俱高。 来源：The Hacker News（SOCRadar） 摘要：俄罗斯背景的金融动机初始访问代理 CyberXero 将 Cobalt Strike 与基于 Anthropic Claude Code 的 AI 编排层结合，针对乌克兰能源与关键基础设施及全球 WordPress/电商发起双线攻击。SOCRadar 报告其一此自动化运行在 61 秒内扫描 4708 个目标并部署 32 个 WebShell，已窃 62.8 万条记录，该组织自 2026 年 7 月起活跃。 原文链接：https://thehackernews.com/2026/10/cyberxerousesclaudecodeincampaign.html 评分：88 分 评分理由：CVSS 10.0 未认证 RCE 命中承载源码、密钥与 CI/CD 流水线的 GitLab 自托管实例，虽暂无在野利用但潜在破坏面极大。 来源：BleepingComputer / CERTEU 摘要：GitLab CE/EE 的 CI/CD 正则表达式编译器存在整数溢出（CVE202697229，CVSS 10.0），未认证攻击者可借特制正则触发服务器任意代码执行，影响 19.2/19.3/19.4 多个版本。官方已于 10 月 12 日发布补丁（19.2.8 / 19.3.4 / 19.4.2），GitLab.com 已修复，目前未见在野利用报告。 原文链接：https://www.bleepingcomputer.com/news/security/gitlabwarnsofmaxseverityrceflawinregexcompilerengine/ 本次共筛选 15 条候选新闻（三来源各取候选，已主动剔除 10091012 已入 Top5 的重复条目，如 FBI/Integrity 窃密邮件门户、Atlassian CVE202621589、LMCache、CISA Flax Typhoon 5 KEV、Citrix CVE2026107406、AhsayCBS、Midnight Mimosa、GitHub GhostAction、AnyDesk Linux RCE、Google Ads+Bing Claude ClickFix、Pwn2Own Ireland、ARTEX AI 韩国银行、P7 DarkSword、PoeLLM、AWS Bedrock AgentCore、Qilin·Settra 等）。 Hacker News 官网与 Algolia API 在本沙箱环境不可达，HN 相关条目（如 MariaDB WKB 解析器拒绝服务、LineageOS 24.0 讨论等）以其原始报道链接为代表，未进入 Top5。 📅 微软本月补丁日（Patch Tuesday）预计于北京时间明晨（20261014 凌晨）正式发布，明日推送将带出正式「微软补丁安全级别」板块。 本次共筛选 15 条新闻，最高分 95 分。"
+ },
+ {
   "date": "2026-10-12",
   "url": "daily/daily_news_2026-10-12.html",
   "title": "网络安全日报 2026-10-12",

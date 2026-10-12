@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-13 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（三来源检索，过去 24 小时）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-10-13">
+<meta property="og:description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（三来源检索，过去 24 小时）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-13.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-10-13">
+<meta name="twitter:description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（三来源检索，过去 24 小时）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-13</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">今日 Top 5 新闻</a></li>
+<li><a href="#s7">筛选说明</a></li>
+<li><a href="#s8">补丁日提醒</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>数据来源：The Hacker News、BleepingComputer、Hacker News（三来源检索，过去 24 小时）
+补丁状态：微软 MSRC <code>updates</code> 接口显示本月条目为 <strong>"October 2026 Early Security Updates"</strong>（非正式 Patch Tuesday），故今日<strong>不生成</strong>「微软补丁安全级别」板块。</p>
+</blockquote>
+<h2 id="s1">今日 Top 5 新闻</h2>
+<h3 id="s2">1. SonicWall SMA 1000 关键漏洞 CVE-2026-102255（CVSS 10.0）补丁发布后遭利用</h3>
+<ul>
+<li><strong>评分</strong>：95 分</li>
+<li><strong>评分理由</strong>：CVSS 10.0 预认证 SSRF 命中处于网络边界的 widely-deployed VPN 设备，且补丁发布仅两天即出现 135 次利用尝试，时效与严重性双高。</li>
+<li><strong>来源</strong>：The Hacker News / BleepingComputer</li>
+<li><strong>摘要</strong>：SonicWall Secure Mobile Access (SMA) 1000 设备存在预认证服务端请求伪造漏洞（CVE-2026-102255，CVSS 10.0），威胁情报厂商 Defused Cyber 与 Previdian 于 10 月 8 日（补丁发布后两天）首次观测到利用，累计记录来自两个美国 IP 的 135 次尝试。该设备处于网络边界，一旦被控可绕过内网隔离、窃取凭证与 MFA 种子，历史同类漏洞已被用于植入 KNUCKLEBALL 恶意软件。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/max-severity-sonicwall-sma1000-flaw-now-exploited-in-attacks.html</li>
+</ul>
+<h3 id="s3">2. Bricksforge WordPress 插件 CVE-2026-85097（CVSS 10.0）未认证 RCE 在野利用</h3>
+<ul>
+<li><strong>评分</strong>：93 分</li>
+<li><strong>评分理由</strong>：CVSS 10.0 未认证任意文件上传致 RCE 已被 Patchstack 确认在野，且涉及 63 个独立源 IP 的自动化攻击，影响海量 WordPress 站点。</li>
+<li><strong>来源</strong>：The Hacker News（原始披露：Patchstack）</li>
+<li><strong>摘要</strong>：WordPress 插件 Bricksforge（≤3.1.8.9）存在未认证任意文件上传漏洞（CVE-2026-85097，CVSS 10.0），攻击者可借 GIF/PHP 多语言文件上传并执行任意 PHP 代码，实现远程代码执行。Patchstack 于 10 月 7 日 21:47 UTC 首次观测到利用，涉及 63 个独立源 IP，具自动化攻击特征；修复版本为 3.1.8.10。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html</li>
+</ul>
+<h3 id="s4">3. Ledger 确认 CryptoBilis 经销商设备遭硬件植入，$86M+ 资产被盗</h3>
+<ul>
+<li><strong>评分</strong>：92 分</li>
+<li><strong>评分理由</strong>：确认的硬件级供应链植入可绕过设备签名安全直接窃取助记词，造成超 8600 万美元损失，属罕见且高影响的物理供应链攻击。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Ledger 确认至少一台经东南亚经销商 CryptoBilis 售出的硬件钱包含未经授权的硬件植入，可监听用于显示恢复词的通信从而读取种子短语。链上分析师估算相关盗窃超 8600 万美元（最高约 9300 万），波及 300+ 钱包；CryptoBilis 已暂停全部硬件钱包销售，Ledger 正配合执法机构调查。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/ledger-finds-unauthorized-hardware.html</li>
+</ul>
+<h3 id="s5">4. CyberXero 借助 Claude Code 发起 AI 编排攻击，窃取 62.8 万条乌克兰记录</h3>
+<ul>
+<li><strong>评分</strong>：90 分</li>
+<li><strong>评分理由</strong>：将 Cobalt Strike 与基于 Claude Code 的 AI 编排层结合的初始访问代理，针对乌克兰关键基础设施且一次运行即部署 32 个 WebShell，新颖性与影响范围俱高。</li>
+<li><strong>来源</strong>：The Hacker News（SOCRadar）</li>
+<li><strong>摘要</strong>：俄罗斯背景的金融动机初始访问代理 CyberXero 将 Cobalt Strike 与基于 Anthropic Claude Code 的 AI 编排层结合，针对乌克兰能源与关键基础设施及全球 WordPress/电商发起双线攻击。SOCRadar 报告其一此自动化运行在 61 秒内扫描 4708 个目标并部署 32 个 WebShell，已窃 62.8 万条记录，该组织自 2026 年 7 月起活跃。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/cyberxero-uses-claude-code-in-campaign.html</li>
+</ul>
+<h3 id="s6">5. GitLab 最大严重度漏洞 CVE-2026-97229（CVSS 10.0）未认证 RCE</h3>
+<ul>
+<li><strong>评分</strong>：88 分</li>
+<li><strong>评分理由</strong>：CVSS 10.0 未认证 RCE 命中承载源码、密钥与 CI/CD 流水线的 GitLab 自托管实例，虽暂无在野利用但潜在破坏面极大。</li>
+<li><strong>来源</strong>：BleepingComputer / CERT-EU</li>
+<li><strong>摘要</strong>：GitLab CE/EE 的 CI/CD 正则表达式编译器存在整数溢出（CVE-2026-97229，CVSS 10.0），未认证攻击者可借特制正则触发服务器任意代码执行，影响 19.2/19.3/19.4 多个版本。官方已于 10 月 12 日发布补丁（19.2.8 / 19.3.4 / 19.4.2），GitLab.com 已修复，目前未见在野利用报告。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/gitlab-warns-of-max-severity-rce-flaw-in-regex-compiler-engine/</li>
+</ul>
+<hr />
+<h2 id="s7">筛选说明</h2>
+<ul>
+<li>本次共筛选 <strong>15 条</strong>候选新闻（三来源各取候选，已主动剔除 10-09~10-12 已入 Top5 的重复条目，如 FBI/Integrity 窃密邮件门户、Atlassian CVE-2026-21589、LMCache、CISA Flax Typhoon 5 KEV、Citrix CVE-2026-107406、AhsayCBS、Midnight Mimosa、GitHub GhostAction、AnyDesk Linux RCE、Google Ads+Bing Claude ClickFix、Pwn2Own Ireland、ARTEX AI 韩国银行、P7 DarkSword、PoeLLM、AWS Bedrock AgentCore、Qilin·Settra 等）。</li>
+<li>Hacker News 官网与 Algolia API 在本沙箱环境不可达，HN 相关条目（如 MariaDB WKB 解析器拒绝服务、LineageOS 24.0 讨论等）以其原始报道链接为代表，未进入 Top5。</li>
+</ul>
+<h2 id="s8">补丁日提醒</h2>
+<p>📅 微软本月补丁日（Patch Tuesday）预计于<strong>北京时间明晨（2026-10-14 凌晨）</strong>正式发布，明日推送将带出正式「微软补丁安全级别」板块。</p>
+<hr />
+<p><em>本次共筛选 15 条新闻，最高分 95 分。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-10-12.html">← 前一天 2026-10-12</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
