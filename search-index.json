@@ -1,5 +1,18 @@
 [
  {
+  "date": "2026-10-14",
+  "url": "daily/daily_news_2026-10-14.html",
+  "title": "网络安全日报 2026-10-14",
+  "score": 96,
+  "cves": [
+   "CVE-2026-104935",
+   "CVE-2026-105445",
+   "CVE-2026-89111"
+  ],
+  "summary": "数据来源：Hacker News / The Hacker News / BleepingComputer 等公开安全媒体（过去 24 小时）；微软补丁板块数据来自 MSRC CVRF 2026Oct 文档真实解析。",
+  "text": "数据来源：Hacker News / The Hacker News / BleepingComputer 等公开安全媒体（过去 24 小时）；微软补丁板块数据来自 MSRC CVRF 2026Oct 文档真实解析。 注：企业微信 connector 当前未连接，本次仅本地生成并交付报告文件，未实际推送。 来源：The Hacker News 摘要：Volexity 披露攻击者（追踪为 UTA0576）将三个 Ivanti Connect Secure 零日漏洞链式组合，在未登录状态下于一已完全打补丁的设备上以 root 执行命令，自 10 月 3 日起遭在野利用、窃得 LDAP 域凭据并横向口令喷射。Ivanti 已修复其中两个（认证绕过 + RCE，合称 CVE2026104935，CVSS 8.6），第三个提权漏洞修复尚需数周；CISA 已于 1013 将其纳入 KEV，联邦整改截止 1016。该攻击仅改动内存中的库代码并恢复配置，可绕过 Integrity Checker Tool 检测。 原文链接：https://thehackernews.com/2026/10/attackerchainsthreeivanticonnect.html 评分理由：面向暴露面安全设备的在野链式 0day、仅部分修补且具备反取证能力，实战危害极高。 来源：The Hacker News 摘要：SAP 披露其 BTP 官方 Python SDK 的缺陷 CVE202689111（SAP CVSS 10.0）：攻击者在可控租户子域名时，可令 SDK 将应用的 clientid / clientsecret 发往攻击者控制的服务器。修复版 0.45.2 已于 821 发布，但 THN 实测发现 0.53.0–0.55.0 等 6 个后续版本在调用 Destination 服务时重新缺失该校验，受影响范围为 BTP 多租户应用。 原文链接：https://thehackernews.com/2026/10/sapdisclosescriticalcvss10flawin.html 评分理由：影响 BTP 多租户应用的凭据泄露、最高危评分且存在\"修复后回归\"，波及面广。 来源：Al Jazeera / BBC / 法国媒体 摘要：10 月 11 日夜，攻击者利用丹麦 Danfoss 制冷控制系统的漏洞，远程触发强制除霜并将温度设为 50°C，导致法国 Intermarché、Carrefour、Monoprix、E.Leclerc、Coopérative U 等超 500 家门店冷柜连续数小时加热，大量生鲜与冷冻食品变质销毁、部分门店起火，损失或达数百万欧元。法国检方已立案，CERTFR 建议断开受影响控制器或限制其网络访问。 原文链接：https://www.aljazeera.com/economy/2026/10/13/frenchfridgefrightwhysupermarketshavebecometargetforhackers 评分理由：针对食品供应链 OT / 物理系统的规模化攻击、现实危害直接且具示范效应，新颖性强。 来源：The Hacker News 摘要：Docker 修复一处存在于 Docker Hub 的关键缺陷 CVE2026105445（CVSS 4.0 评分 9.4）：个人账户转组织时，其个人访问令牌（PAT）会在未获新所有者确认的情况下被转移，攻击者可借此以他人身份拉取、推送或删除镜像。该缺陷自 202408 开放至 20260930 修复，Docker 称未发现有利用证据，并已停用识别出的已转移令牌。 原文链接：https://thehackernews.com/2026/10/dockerfixescriticaltwoyearoldhub.html 评分理由：直击主流容器镜像生态的身份信任边界、可被用于供应链投毒，尽管暂无在野利用仍影响面极广。 来源：Cybersecurity News（引 The Hacker News / Bloom Security） 摘要：Bloom Security 发现 npm Trusted Publishing（OIDC）的信任锚定缺陷「SlugFest」：npm 在首次成功发布前仅以可变仓库 slug（owner/repo）而非 GitHub 永久数字 ID 校验身份，攻击者可认领被更名 / 转移 / 删除的仓库名，凭空取得合法短时效发布凭证，在 1,500+ 个（累计下载超 1,000 万）包名下发布恶意版本。GitHub 已于 1002 修复：未校验配置 48 小时过期、首次发布绑定不可变身份、并屏蔽 issuecomment 触发。 原文链接：https://cybersecuritynews.com/npmtrustedpublishingflaw/ 评分理由：无需窃取凭据即可接管高下载量供应链包、且 AI 编码代理会无审查自动安装，扩散风险大。 本次共筛选 15 条新闻，最高分 96 分。 （微信推送：企业微信 connector 未连接，本次未实际发送，仅本地交付本文件。）"
+ },
+ {
   "date": "2026-10-13",
   "url": "daily/daily_news_2026-10-13.html",
   "title": "网络安全日报 2026-10-13",

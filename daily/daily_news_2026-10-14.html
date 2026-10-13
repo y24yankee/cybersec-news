@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-14 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：Hacker News / The Hacker News / BleepingComputer 等公开安全媒体（过去 24 小时）；微软补丁板块数据来自 MSRC CVRF 2026Oct 文档真实解析。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-10-14">
+<meta property="og:description" content="数据来源：Hacker News / The Hacker News / BleepingComputer 等公开安全媒体（过去 24 小时）；微软补丁板块数据来自 MSRC CVRF 2026Oct 文档真实解析。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-14.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-10-14">
+<meta name="twitter:description" content="数据来源：Hacker News / The Hacker News / BleepingComputer 等公开安全媒体（过去 24 小时）；微软补丁板块数据来自 MSRC CVRF 2026Oct 文档真实解析。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-14</h1>
+<blockquote>
+<p>数据来源：Hacker News / The Hacker News / BleepingComputer 等公开安全媒体（过去 24 小时）；微软补丁板块数据来自 MSRC CVRF 2026-Oct 文档真实解析。
+注：企业微信 connector 当前未连接，本次仅本地生成并交付报告文件，未实际推送。</p>
+</blockquote>
+<hr />
+<h2 id="s1">今日 Top 5 新闻（按评分排序，满分 100）</h2>
+<h3 id="s2">1. Ivanti Connect Secure 三零日链式利用（UTA0576），已打补丁设备仍被 Root — 评分 96</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Volexity 披露攻击者（追踪为 UTA0576）将三个 Ivanti Connect Secure 零日漏洞链式组合，在未登录状态下于一<strong>已完全打补丁</strong>的设备上以 root 执行命令，自 10 月 3 日起遭在野利用、窃得 LDAP 域凭据并横向口令喷射。Ivanti 已修复其中两个（认证绕过 + RCE，合称 CVE-2026-104935，CVSS 8.6），第三个提权漏洞修复尚需数周；CISA 已于 10-13 将其纳入 KEV，联邦整改截止 10-16。该攻击仅改动内存中的库代码并恢复配置，可绕过 Integrity Checker Tool 检测。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/attacker-chains-three-ivanti-connect.html</li>
+<li><strong>评分理由</strong>：面向暴露面安全设备的在野链式 0day、仅部分修补且具备反取证能力，实战危害极高。</li>
+</ul>
+<h3 id="s3">2. SAP Cloud SDK for Python CVE-2026-89111（CVSS 10.0）OAuth2 凭据泄露 — 评分 90</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：SAP 披露其 BTP 官方 Python SDK 的缺陷 CVE-2026-89111（SAP CVSS 10.0）：攻击者在可控租户子域名时，可令 SDK 将应用的 client_id / client_secret 发往攻击者控制的服务器。修复版 0.45.2 已于 8-21 发布，但 THN 实测发现 0.53.0–0.55.0 等 6 个后续版本在调用 Destination 服务时重新缺失该校验，受影响范围为 BTP 多租户应用。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/sap-discloses-critical-cvss-10-flaw-in.html</li>
+<li><strong>评分理由</strong>：影响 BTP 多租户应用的凭据泄露、最高危评分且存在"修复后回归"，波及面广。</li>
+</ul>
+<h3 id="s4">3. 法国数百家超市制冷系统遭黑客攻击、冷柜升温至 50°C（Danfoss 控制器）— 评分 86</h3>
+<ul>
+<li><strong>来源</strong>：Al Jazeera / BBC / 法国媒体</li>
+<li><strong>摘要</strong>：10 月 11 日夜，攻击者利用丹麦 Danfoss 制冷控制系统的漏洞，远程触发强制除霜并将温度设为 50°C，导致法国 Intermarché、Carrefour、Monoprix、E.Leclerc、Coopérative U 等超 500 家门店冷柜连续数小时加热，大量生鲜与冷冻食品变质销毁、部分门店起火，损失或达数百万欧元。法国检方已立案，CERT-FR 建议断开受影响控制器或限制其网络访问。</li>
+<li><strong>原文链接</strong>：https://www.aljazeera.com/economy/2026/10/13/french-fridge-fright-why-supermarkets-have-become-target-for-hackers</li>
+<li><strong>评分理由</strong>：针对食品供应链 OT / 物理系统的规模化攻击、现实危害直接且具示范效应，新颖性强。</li>
+</ul>
+<h3 id="s5">4. Docker Hub 关键漏洞 CVE-2026-105445（CVSS 9.4）可冒用他人身份推送镜像 — 评分 84</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Docker 修复一处存在于 Docker Hub 的关键缺陷 CVE-2026-105445（CVSS 4.0 评分 9.4）：个人账户转组织时，其个人访问令牌（PAT）会在未获新所有者确认的情况下被转移，攻击者可借此以他人身份拉取、推送或删除镜像。该缺陷自 2024-08 开放至 2026-09-30 修复，Docker 称未发现有利用证据，并已停用识别出的已转移令牌。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/docker-fixes-critical-two-year-old-hub.html</li>
+<li><strong>评分理由</strong>：直击主流容器镜像生态的身份信任边界、可被用于供应链投毒，尽管暂无在野利用仍影响面极广。</li>
+</ul>
+<h3 id="s6">5. npm Trusted Publishing「SlugFest」缺陷致 1,500+ 包可被静默劫持 — 评分 83</h3>
+<ul>
+<li><strong>来源</strong>：Cybersecurity News（引 The Hacker News / Bloom Security）</li>
+<li><strong>摘要</strong>：Bloom Security 发现 npm Trusted Publishing（OIDC）的信任锚定缺陷「SlugFest」：npm 在首次成功发布前仅以可变仓库 slug（owner/repo）而非 GitHub 永久数字 ID 校验身份，攻击者可认领被更名 / 转移 / 删除的仓库名，凭空取得合法短时效发布凭证，在 1,500+ 个（累计下载超 1,000 万）包名下发布恶意版本。GitHub 已于 10-02 修复：未校验配置 48 小时过期、首次发布绑定不可变身份、并屏蔽 issue_comment 触发。</li>
+<li><strong>原文链接</strong>：https://cybersecuritynews.com/npm-trusted-publishing-flaw/</li>
+<li><strong>评分理由</strong>：无需窃取凭据即可接管高下载量供应链包、且 AI 编码代理会无审查自动安装，扩散风险大。</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 15 条新闻，最高分 96 分。</strong>
+（微信推送：企业微信 connector 未连接，本次未实际发送，仅本地交付本文件。）</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-10-13.html">← 前一天 2026-10-13</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
