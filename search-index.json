@@ -1,5 +1,17 @@
 [
  {
+  "date": "2026-10-15",
+  "url": "daily/daily_news_2026-10-15.html",
+  "title": "网络安全日报 2026-10-15",
+  "score": 94,
+  "cves": [
+   "CVE-2026-110447",
+   "CVE-2026-92392"
+  ],
+  "summary": "每日自动推送 · 评分筛选 Top5 新闻 + 微软补丁安全级别（Patch Tuesday）独立板块",
+  "text": "每日自动推送 · 评分筛选 Top5 新闻 + 微软补丁安全级别（Patch Tuesday）独立板块 生成时间：20261015 07:00（北京时间） 评分：94 / 100 — 影响范围极广（75,000+ 组织、150+ 国家、10 亿+ 消息），且为司法授权的大规模基础设施打击行动，对全球钓鱼产业链威慑显著。 来源：SecurityWeek 摘要：微软数字犯罪调查组（DCU）在佛州南区法院命令下，联合 HealthISAC、日本JC3 及 Resecurity、Cloudflare、Oracle、Proofpoint、TRM Labs 等，查封并接管了 YAM Store、CoGUI、Iron Man 三大中文网络犯罪服务的基础设施域名。该生态自 2026 年 1 月以来发送超过 10 亿条钓鱼邮件与短信，其中逾 7.5 亿条瞄准微软客户；微软已禁用 2 万+ 关联账户并拦截 10 万+ 仿冒域名。CoGUI 与 Iron Man 钓鱼工具包（Storm2990）被微软高度确信由中文背景攻击者开发。 原文链接：https://securityweek.com/microsoftdisruptschineselanguagephishingmarketbehind1bmessages/ 评分：92 / 100 — 关键的未认证命令注入、已被在野利用，影响大量自建 Nextcloud 实例，修复条件苛刻（仅停用无效，必须升级/移除）。 来源：The Hacker News 摘要：攻击者利用 Nextcloud 可选应用「Collabora Online – Builtin CODE Server」（包名 richdocumentscode）中的命令注入缺陷，在服务器上植入 WebShell。该漏洞编号为 CVE2026110447，仅当本地文档服务未运行（重启/升级/崩溃时）可被未认证请求触发命令执行，Collabora 已于 9 月 11 日 v26.4.303 修复，10 月 14 日发布通告。Collabora 明确提示：仅禁用应用不足以规避，必须升级至 ≥26.4.303 或彻底移除该应用；独立部署的 Collabora Online 服务器不受影响。 原文链接：https://thehackernews.com/2026/10/hackersbackdoornextcloudservers.html 评分：89 / 100 — 高危（High）级别、被利用条件虽苛刻但影响面极广（8.12.0–8.22.0 全版本，且被广泛嵌入各类程序），是 curl 自 2023 年以来首个 High 级缺陷。 来源：The Hacker News 摘要：curl/libcurl 在处理 HTTP/2 上传时存在释放后使用（UseAfterFree）缺陷 CVE202692392，恶意服务器可在接收上传时破坏客户端内存；上报者已构造出可复现客户端代码执行的 PoC。该缺陷影响 curl 与 libcurl 8.12.0 至 8.22.0（含命令行工具及被众多程序调用的库），curl 已于 10 月 14 日紧急发布 8.23.0 修复（提前两周发版）。实际攻击需攻击者掌握目标精确的构建与内存布局，预计多数真实利用会以崩溃告终，但风险仍不容忽视；临时缓解可在工具侧加 http1.1、应用侧设 CURLOPTHTTPVERSION 为 HTTP/1.1。 原文链接：https://thehackernews.com/2026/10/curlpatcheshttp2uploadflawafter.html 评分：87 / 100 — 国家级执法行动，切断朝鲜政权重要洗钱/创收渠道，波及 70+ 美国企业，具强示范效应。 来源：The Hacker News 摘要：美国司法部（DoJ）起诉 14 人并扣押约 187 台计算机，打击朝鲜远程 IT 工（ITW）欺诈计划，该计划化名 Famous Chollima、purpledelta、Wagemole。行动于 2026 年 9 月 21–25 日在得州等地突袭捣毁 40 余个「笔记本农场」，被告含美国公民与中国公民，指控涉及电信欺诈、洗钱、身份盗窃共谋等。该骗局自 2019 年持续至 2025 年 7 月，波及 70+ 美国公司、创收约 300 万美元；CrowdStrike 指出操作者曾伪造警方报案骗取设备重新寄送至农场地址以规避检测。 原文链接：https://thehackernews.com/2026/10/usshutsdownover40laptopfarms.html 评分：85 / 100 — 手法新颖（在应用内部嵌入 hook 引擎盲化签名/完整性校验），针对金融 App 的绕过技术升级，威胁印尼等多国用户。 来源：The Hacker News 摘要：荷兰移动安全公司 ThreatFabric 披露新型 Android 银行木马 Hirudo，其通过将合法银行 App 替换为目的性构造的「打过补丁的副本」来从应用内部绕过安全检查。该木马由购物/成人视频/娱乐类投毒 App 作为dropper分发，替换 8 款印尼银行 App；其内置 hook 引擎可盲化签名、无障碍、屏幕捕获与 Play Integrity 校验，甚至用公开泄露的 keybox 重签密钥证明、并将完整性请求经明文 HTTP 中继至运营方服务器。目标凭证窃取覆盖印尼、中国、印度、墨西哥、摩洛哥、泰国。 原文链接：https://thehackernews.com/2026/10/hirudoandroidtrojanusespatched.html 本次共筛选 15 条候选新闻（HN / THN / BleepingComputer 三来源各 ≤5 条），最终选取 5 条进入 Top5，最高分 94 分。 推送说明：微信小程序推送通道（企业微信 connector）当前未连接，按既定默认仅完成本地文件交付，未实际发送。如需推送请先在企业微信连接器完成授权绑定。"
+ },
+ {
   "date": "2026-10-14",
   "url": "daily/daily_news_2026-10-14.html",
   "title": "网络安全日报 2026-10-14",

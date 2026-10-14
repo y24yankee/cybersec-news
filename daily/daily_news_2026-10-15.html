@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-15 | 网络安全新闻中心</title>
+<meta name="description" content="每日自动推送 · 评分筛选 Top5 新闻 + 微软补丁安全级别（Patch Tuesday）独立板块">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-10-15">
+<meta property="og:description" content="每日自动推送 · 评分筛选 Top5 新闻 + 微软补丁安全级别（Patch Tuesday）独立板块">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-15.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-10-15">
+<meta name="twitter:description" content="每日自动推送 · 评分筛选 Top5 新闻 + 微软补丁安全级别（Patch Tuesday）独立板块">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-15</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">一、今日值得关注的新闻 Top 5</a></li>
+<li><a href="#s7">三、统计</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>每日自动推送 · 评分筛选 Top5 新闻 + 微软补丁安全级别（Patch Tuesday）独立板块
+生成时间：2026-10-15 07:00（北京时间）</p>
+</blockquote>
+<hr />
+<h2 id="s1">一、今日值得关注的新闻 Top 5</h2>
+<h3 id="s2">1. 微软联合 Health-ISAC 捣毁中文钓鱼生态 YAM Store / CoGUI / Iron Man，牵涉超 10 亿条恶意消息</h3>
+<ul>
+<li><strong>评分</strong>：94 / 100 — 影响范围极广（75,000+ 组织、150+ 国家、10 亿+ 消息），且为司法授权的大规模基础设施打击行动，对全球钓鱼产业链威慑显著。</li>
+<li><strong>来源</strong>：SecurityWeek</li>
+<li><strong>摘要</strong>：微软数字犯罪调查组（DCU）在佛州南区法院命令下，联合 Health-ISAC、日本JC3 及 Resecurity、Cloudflare、Oracle、Proofpoint、TRM Labs 等，查封并接管了 YAM Store、CoGUI、Iron Man 三大中文网络犯罪服务的基础设施域名。该生态自 2026 年 1 月以来发送超过 10 亿条钓鱼邮件与短信，其中逾 7.5 亿条瞄准微软客户；微软已禁用 2 万+ 关联账户并拦截 10 万+ 仿冒域名。CoGUI 与 Iron Man 钓鱼工具包（Storm-2990）被微软高度确信由中文背景攻击者开发。</li>
+<li><strong>原文链接</strong>：https://securityweek.com/microsoft-disrupts-chinese-language-phishing-market-behind-1b-messages/</li>
+</ul>
+<h3 id="s3">2. 攻击者借 Collabora 内置 CODE 应用漏洞 CVE-2026-110447 在 Nextcloud 服务器植入 WebShell</h3>
+<ul>
+<li><strong>评分</strong>：92 / 100 — 关键的未认证命令注入、已被在野利用，影响大量自建 Nextcloud 实例，修复条件苛刻（仅停用无效，必须升级/移除）。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：攻击者利用 Nextcloud 可选应用「Collabora Online – Built-in CODE Server」（包名 richdocumentscode）中的命令注入缺陷，在服务器上植入 WebShell。该漏洞编号为 CVE-2026-110447，仅当本地文档服务未运行（重启/升级/崩溃时）可被未认证请求触发命令执行，Collabora 已于 9 月 11 日 v26.4.303 修复，10 月 14 日发布通告。Collabora 明确提示：仅禁用应用不足以规避，必须升级至 ≥26.4.303 或彻底移除该应用；独立部署的 Collabora Online 服务器不受影响。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html</li>
+</ul>
+<h3 id="s4">3. curl 修复 HTTP/2 上传缺陷 CVE-2026-92392，PoC 已实现客户端代码执行</h3>
+<ul>
+<li><strong>评分</strong>：89 / 100 — 高危（High）级别、被利用条件虽苛刻但影响面极广（8.12.0–8.22.0 全版本，且被广泛嵌入各类程序），是 curl 自 2023 年以来首个 High 级缺陷。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：curl/libcurl 在处理 HTTP/2 上传时存在释放后使用（Use-After-Free）缺陷 CVE-2026-92392，恶意服务器可在接收上传时破坏客户端内存；上报者已构造出可复现客户端代码执行的 PoC。该缺陷影响 curl 与 libcurl 8.12.0 至 8.22.0（含命令行工具及被众多程序调用的库），curl 已于 10 月 14 日紧急发布 8.23.0 修复（提前两周发版）。实际攻击需攻击者掌握目标精确的构建与内存布局，预计多数真实利用会以崩溃告终，但风险仍不容忽视；临时缓解可在工具侧加 <code>--http1.1</code>、应用侧设 <code>CURLOPT_HTTP_VERSION</code> 为 HTTP/1.1。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/curl-patches-http2-upload-flaw-after.html</li>
+</ul>
+<h3 id="s5">4. 美国司法部捣毁 40+ 笔记本农场、起诉 14 人，重创朝鲜 IT 工欺诈网络</h3>
+<ul>
+<li><strong>评分</strong>：87 / 100 — 国家级执法行动，切断朝鲜政权重要洗钱/创收渠道，波及 70+ 美国企业，具强示范效应。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：美国司法部（DoJ）起诉 14 人并扣押约 187 台计算机，打击朝鲜远程 IT 工（ITW）欺诈计划，该计划化名 Famous Chollima、purpledelta、Wagemole。行动于 2026 年 9 月 21–25 日在得州等地突袭捣毁 40 余个「笔记本农场」，被告含美国公民与中国公民，指控涉及电信欺诈、洗钱、身份盗窃共谋等。该骗局自 2019 年持续至 2025 年 7 月，波及 70+ 美国公司、创收约 300 万美元；CrowdStrike 指出操作者曾伪造警方报案骗取设备重新寄送至农场地址以规避检测。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/us-shuts-down-over-40-laptop-farms.html</li>
+</ul>
+<h3 id="s6">5. Hirudo Android 银行木马以「打过补丁的副本」替换官方 App 绕过安全检测</h3>
+<ul>
+<li><strong>评分</strong>：85 / 100 — 手法新颖（在应用内部嵌入 hook 引擎盲化签名/完整性校验），针对金融 App 的绕过技术升级，威胁印尼等多国用户。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：荷兰移动安全公司 ThreatFabric 披露新型 Android 银行木马 Hirudo，其通过将合法银行 App 替换为目的性构造的「打过补丁的副本」来从应用内部绕过安全检查。该木马由购物/成人视频/娱乐类投毒 App 作为dropper分发，替换 8 款印尼银行 App；其内置 hook 引擎可盲化签名、无障碍、屏幕捕获与 Play Integrity 校验，甚至用公开泄露的 keybox 重签密钥证明、并将完整性请求经明文 HTTP 中继至运营方服务器。目标凭证窃取覆盖印尼、中国、印度、墨西哥、摩洛哥、泰国。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/hirudo-android-trojan-uses-patched.html</li>
+</ul>
+<hr />
+<h2 id="s7">三、统计</h2>
+<p>本次共筛选 15 条候选新闻（HN / THN / BleepingComputer 三来源各 ≤5 条），最终选取 5 条进入 Top5，<strong>最高分 94 分</strong>。</p>
+<blockquote>
+<p>推送说明：微信小程序推送通道（企业微信 connector）当前未连接，按既定默认仅完成本地文件交付，未实际发送。如需推送请先在企业微信连接器完成授权绑定。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-10-14.html">← 前一天 2026-10-14</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
