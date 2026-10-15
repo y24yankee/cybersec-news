@@ -1,5 +1,22 @@
 [
  {
+  "date": "2026-10-16",
+  "url": "daily/daily_news_2026-10-16.html",
+  "title": "网络安全日报 2026-10-16",
+  "score": 93,
+  "cves": [
+   "CVE-2026-0322",
+   "CVE-2026-104935",
+   "CVE-2026-105133",
+   "CVE-2026-105740",
+   "CVE-2026-108097",
+   "CVE-2026-76519",
+   "CVE-2026-94127"
+  ],
+  "summary": "评分标准：严重性  新颖性  影响范围  时效性（补丁严重级别数据不计入新闻评分，独立成章见文末）。",
+  "text": "评分标准：严重性  新颖性  影响范围  时效性（补丁严重级别数据不计入新闻评分，独立成章见文末）。 评分：93 ｜ 来源：The Hacker News 摘要： Vercel 于 10 月 14 日发布 Next.js 带外安全更新，修复 React Server Components 的 use cache 与通过 sharp/librsvg 处理 SVG 图像两处未认证远程代码执行漏洞，CVSS 均 9.5，另含一个高危拒绝服务缺陷。修复版本为 16.4.1 与 15.5.28（Active/LTS）；目前尚无公开利用，但鉴于框架庞大的安装基数，应优先升级并确认 sharp 已更新至 0.35.5+。 原文： https://thehackernews.com/2026/10/nextjsshipsoutofbandpatchfortwo.html 评分：92 ｜ 来源：The Hacker News 摘要： IBM 旗下 AI 应用构建平台 Langflow 的认证 RCE 漏洞（CVE2026105740，CVSS 9.9）被持续利用，Previdian 蜜罐自 9 月 19 日以来记录到 1,423 次尝试，10 月 11 日起显著升温（单日 333 次），攻击者可借恶意 MCP server 配置以任意认证用户（含非管理员）身份执行 OS 命令并持久化。目前 1.9.0 之前版本受影响，官方已发布修复。 原文： https://thehackernews.com/2026/10/langflowscriticalauthenticatedrce.html 评分：91 ｜ 来源：BleepingComputer 摘要： F5 修复 BIGIP APM（Access Policy Manager）一处被在野利用的零日 RCE 漏洞（CVE202694127），影响配置为 OAuth 授权服务器的实例，攻击者可远程执行代码。CISA 已将其加入 KEV 目录，要求美联邦机构于本周五前完成处置；Shadowserver 追踪到超 14,700 个暴露的 BIGIP APM 指纹。 原文： https://bleepingcomputer.com/news/security/f5warnsofbigipapmremotecodeexecutionzerodayexploitedinattacks 评分：90 ｜ 来源：The Hacker News 摘要： Cisco 确认其 Secure Email Gateway 一处严重漏洞（CVE202676519，CVSS 9.8）正被在野利用：攻击者在启用 File Reputation 服务且 Content Scanner Tools 版本低于 25.3.0.5525 的网关上，可借特制邮件附件写入文件并以 root 执行命令，无需登录。CISA 已列入 KEV，修复通过 Content Scanner Tools 更新（无需重启）下发。 原文： https://thehackernews.com/2026/10/ciscowarnsofactiveattacks.html 评分：89 ｜ 来源：The Hacker News 摘要： Palo Alto Networks 修复 PANOS 管理接口一处已在野外被有限利用的 RCE 漏洞（CVE20260322，CVSS 8.6），认证攻击者可在防火墙/ Panorama 上以 root 执行任意代码。PAN 同时确认发现极有限的利用尝试（关联数个美国 IP），CISA 已将其与 CVE202676519 一同列入 KEV，联邦修复截止日为 10 月 17 日。 原文： https://thehackernews.com/2026/10/paloaltonetworkspatchespanos.html The Hacker News： Drupal 核心 Field UI 严重 RCE（CVE2026108097，存在无登录利用路径，10/14 修复）；XBOW 用 OpenAI 公开模型 6 天造出价值 25 万美元的 Chrome 全链路 0day 利用；NGINX 修复 5 个漏洞（含可能 RCE 与可绕过客户端证书校验的 TLS 缺陷）；CISA 将 Ivanti Connect Secure 认证绕过（CVE2026104935）列入 KEV（与 1014 已报 UTA0576 链路为同源，本次不再重复入 Top5）。 BleepingComputer： AhsayCBS 两漏洞（CVE2026105133/105134）被利用部署 WebShell 与 XMRig，补丁不完整后再发修复（1010 已报，本次降权）；Ahold Delhaize 等零售巨头因网络攻击下线系统；Nippon Columbia 承包商感染致 860 万Karaoke用户记录泄露。 Hacker News（社区讨论）： Tailscale 就 Hugging Face 入侵事件发布责任声明（相关讨论帖）；研究者撰文披露 Google 一处价值 9 万美元的 RCE（bug bounty 复盘）；通过蓝牙/固件无线重写扬声器固件控制 PC 的硬件黑客话题；欧洲超市 Danfoss 制冷控制器遭远程攻击（与 1014 已报法国超市事件同源，本次不重复入 Top5）。 本次共筛选 15 条新闻，最高分 93 分。 微信推送说明：企业微信（WeCom）连接器当前未连接，推送通道不可用；本报告仅以本地文件交付。"
+ },
+ {
   "date": "2026-10-15",
   "url": "daily/daily_news_2026-10-15.html",
   "title": "网络安全日报 2026-10-15",
