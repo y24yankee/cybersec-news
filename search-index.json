@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-10-17",
+  "url": "daily/daily_news_2026-10-17.html",
+  "title": "网络安全日报 2026-10-17",
+  "score": 91,
+  "cves": [
+   "CVE-2026-104935"
+  ],
+  "summary": "自动生成 · 数据来源：Hacker News、The Hacker News、BleepingComputer；补丁数据来自微软 MSRC CVRF（公共 API）。",
+  "text": "自动生成 · 数据来源：Hacker News、The Hacker News、BleepingComputer；补丁数据来自微软 MSRC CVRF（公共 API）。 补丁日校验：MSRC 2026Oct 文档标题为「October 2026 Security Updates」（正式发布，无 Early），本月 Patch Tuesday 板块已生成（文末独立单元，不计入 Top5）。 评分：91 / 100 评分理由：国家级商业间谍软件通过普通在线广告的渲染即可零点击入侵、针对媒体机构，隐蔽性与影响面俱高。 来源：BleepingComputer 摘要：研究人员披露，Candiru 间谍软件通过定向投放的在线广告，在受害者仅渲染恶意广告（无需点击）的情况下完成零点击入侵，已知受害目标包括半岛电视台媒体网络（Al Jazeera Media Network）。该攻击将合法广告供应链变为间谍软件投递管道，难以被传统边界防御拦截。 原文链接：https://bleepingcomputer.com/news/security/zeroclickattacksusedtargetedadstodelivercandiruspyware/ 评分：88 / 100 评分理由：政府关键承包商被攻破并波及联邦法院运转，属于高影响的供应链/关键基础设施事件。 来源：BleepingComputer 摘要：美国法院行政办公室（AOUSC）表示，政府承包商 BAE Systems 遭网络攻击，导致其支撑的联邦破产法院通知系统下线。事件影响美国联邦司法分支的日常运作，凸显大型国防/政府承包商作为供应链薄弱环节的风险。 原文链接：https://bleepingcomputer.com/news/security/baesystemscyberattackdisruptsusfederalcourtoperations/ 评分：87 / 100 评分理由：关键特权访问产品的零日自 8 月底即在野利用、长期未修补，企业暴露窗口长。 来源：BleepingComputer 摘要：BeyondTrust 警告客户尽快修补其 Remote Support（RS）产品中的一个严重漏洞，该漏洞自 8 月下旬起已被作为零日漏洞在攻击中利用。RS 是企业级特权远程支持/访问管理组件，长期在野利用意味着大量部署在补丁前已暴露于凭据窃取与横向移动风险。 原文链接：https://bleepingcomputer.com/news/security/beyondtrustpatcheszerodayexploitedinattackssinceaugust/ 评分：85 / 100 评分理由：超千万量级消费者 PII 暴露、且涉及知名连锁品牌，影响面与合规风险突出。 来源：BleepingComputer 摘要：汉堡王日本（Burger King Japan）披露重大数据泄露，攻击者在访问含 1,118 万条顾客记录的服务器后导致信息暴露。此次事件波及庞大消费群体，后续可能引发监管调查与用户告知义务。 原文链接：https://bleepingcomputer.com/news/security/burgerkingjapandatabreachexposes11millioncustomerrecords/ 评分：83 / 100 评分理由：大规模代理劫持（proxyjacking）将家用/企业网络设备变为牟利节点，影响 34 国普通用户。 来源：BleepingComputer 摘要：一项代理劫持（proxyjacking）行动已波及 34 个国家的设备，攻击者将 DLink、Ubiquiti 等路由器/网络设备劫持，通过商业住宅代理网络变现受害者的互联网连接。此类活动常借助设备固件/配置弱点，普通用户难以察觉。 原文链接：https://bleepingcomputer.com/news/security/hackershijackdlinkubiquitidevicestoresellyourstolenbandwidth/ 本次共筛选 15 条新闻，最高分 91 分。 来源交叉核验：HN 当日热议的「AdFection：定向广告变零点击商业间谍软件管道」（Citizen Lab）与第 1 条为同一事件；THN 当日新鲜稿（GhostAction 扩大至 1,900 账号/3 万仓库、Ivanti CVE2026104935 入 KEV、Langflow、curl、PANOS、Nextcloud 等）多为近期 Top5 已覆盖条目的后续或同源报道，按\"避免连日重复\"原则未重复入选。 微信推送说明：企业微信连接器当前未连接，本次仅生成本地 Markdown 报告（步骤 7 推送默认跳过）。如需推送，请先在连接器菜单连接企业微信。"
+ },
+ {
   "date": "2026-10-16",
   "url": "daily/daily_news_2026-10-16.html",
   "title": "网络安全日报 2026-10-16",

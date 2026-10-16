@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-10-16T00:00:00Z</updated>
+  <updated>2026-10-17T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-10-17</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-17.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-17.html</id>
+    <updated>2026-10-17T00:00:00Z</updated>
+    <summary>自动生成 · 数据来源：Hacker News、The Hacker News、BleepingComputer；补丁数据来自微软 MSRC CVRF（公共 API）。</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-10-16</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-16.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-28.html</id>
     <updated>2026-09-28T00:00:00Z</updated>
     <summary>本期共筛选 10 条候选新闻，最高分 96 分</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-27</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-27.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-27.html</id>
-    <updated>2026-09-27T00:00:00Z</updated>
-    <summary>数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24 小时）。补丁板块来自微软 MSRC CVRF 正式文档（2026Sep）。</summary>
   </entry>
 </feed>
