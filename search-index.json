@@ -1,5 +1,17 @@
 [
  {
+  "date": "2026-10-18",
+  "url": "daily/daily_news_2026-10-18.html",
+  "title": "网络安全日报 2026-10-18",
+  "score": 95,
+  "cves": [
+   "CVE-2026-108097",
+   "CVE-2026-108099"
+  ],
+  "summary": "数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24–72 小时内公开报道）；补丁板块来自微软 MSRC 公共免认证 CVRF API。",
+  "text": "数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24–72 小时内公开报道）；补丁板块来自微软 MSRC 公共免认证 CVRF API。 评分标准：严重性  新颖性  影响范围  时效性（补丁严重级别数据不计入新闻评分，仅作文末独立板块）。 来源：The Hacker News（20261017）/ Huntress 原文链接：https://www.huntress.com/blog/vendorcredentialenablesunauthorizedaccess 摘要：攻击者滥用了 ConnectWise Cloud Backup（原 SkyKick）被攻陷的应用身份凭证，自 20261015 06:13–08:34 UTC 起对至少 173 个 Microsoft 365 租户发起未授权登录。该备份应用在各租户中被授予邮件、OneDrive、SharePoint、Teams 与目录数据的广泛权限，凭证在任意已授权的租户中均生效；在至少一个租户中，攻击者还将 Cloud Management for Teams 应用自提为 Global Administrator 并注入新客户端密钥，实现跨应用持久化。ConnectWise 已关闭 Cloud Backup 应用访问。 评分理由：供应链 OAuth 凭证横向滥用，单点失陷即可波及所有已授权租户且绕过 MFA，影响面极广、难检测。 来源：The Hacker News（20261017）/ SafeDep 原文链接：https://thehackernews.com/2026/10/malfexnpmpackageimgdecodehides.html 摘要：恶意 npm 包 imgdecode（20260930 上传，已被下载 979 次，20261011 发布的 1.0.3 版本已不再依赖其他 MALFEX 包）将加载器逻辑迁移至编译型 Windows 原生 addon（.node DLL）。当 Node.js 程序在 Windows 控制台调用 require('imgdecode') 时，DLL 从 GitHub 下载经 AES256CBC 加密的 shellcode 并注入 dllhost.exe。该设计规避了多数 npm 静态扫描对安装脚本（postinstall）的检测，是 MALFEX 长期供应链行动对检测手段的直接适应。 评分理由：供应链攻击演进至原生二进制层、规避扫描器，开发者与 CI 构建主机风险高，且攻击者持续\"打地鼠式\"替换下架包。 来源：The Hacker News（20261015）/ Drupal 安全团队 原文链接：https://www.drupal.org/sacore2026014 摘要：Drupal 核心 Field UI 模块存在关键远程代码执行缺陷（项目风险评分 19/25）。核心本身不可直接触达，但经贡献模块（至少一条已知路径无需登录）及自定义代码可触发；修复版本 11.4.10 / 11.3.19 / 10.6.19 已于 1014 发布，官方在 1012 预通告中警告\"利用代码可能在数小时或数天内出现\"。同期 Entity List 模块亦发布同类关键公告（CVE2026108099）。 评分理由：广泛部署的 CMS 核心关键 RCE，且存在无需登录的利用路径，潜在影响面大、时效性强。 来源：The Hacker News（20261016）/ Google Threat Intelligence Group、Mandiant、ManageEngine 原文链接：https://thehackernews.com/2026/10/attackerstamperedwithaomei.html 摘要：攻击者于 2026 年 5–7 月间多次（每次仅 5–10 分钟窗口）篡改 AOMEI Backupper 更新服务器文件，使窗口期内检查更新的客户端下载并运行后门（下载器 CROSSROAD 部署含合法签名 Radmin 的包，并加载 SHINYROAD  implants）。事件横跨 11 国（IT、电信、高校等），追踪为 UNC7017。AOMEI 称已修复服务器，但已中招主机无法自动清除，需手动排查计划任务与持久化。 评分理由：仅改动服务器文件数分钟即在正常更新流程中植入后门，极强的隐蔽性，揭示供应商更新完整性校验缺失的系统性风险。 来源：The Hacker News（20261016）/ 安全公司 Calif 原文链接：https://thehackernews.com/2026/10/researchersdemonstrateopenbsdroot.html 摘要：Calif 公开完整 PoC：链式利用 shmat(4) 中源自 1988 年 BSD 的 16 位有符号整数溢出（errata 018，以\"可靠性修复\"名义发布，易被忽略）与内核引用计数 UAF（errata 026），在启用 KARL/SMAP/SMEP 的 OpenBSD 7.9 上本地提权至 root，无需信息泄露原语。该漏洞无 CVE 编号，暂无在野利用证据，OpenBSD 已于 9 月通过 syspatch 修复。 评分理由：数十年遗留类型缺陷可绕过现代缓解措施实现提权且 PoC 公开，研究价值高；但为本地利用，影响范围相对受限。 本次共筛选 15 条候选新闻，最高分 95 分。"
+ },
+ {
   "date": "2026-10-17",
   "url": "daily/daily_news_2026-10-17.html",
   "title": "网络安全日报 2026-10-17",
