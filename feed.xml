@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-10-18T00:00:00Z</updated>
+  <updated>2026-10-19T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-10-19</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-19.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-19.html</id>
+    <updated>2026-10-19T00:00:00Z</updated>
+    <summary>数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24–72 小时内发布且未进入近期 Top5 的重点报道）。</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-10-18</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-18.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-30.html</id>
     <updated>2026-09-30T00:00:00Z</updated>
     <summary>评分：96 / 100 —— 两个 CVSS 9.5 零日（CVE202688771/88772）已确认在野利用，CISA 下达紧急修复指令（期限 9 月 30 日），漏洞利用已从隐蔽转向&quot;广撒网&quot;式大规模攻击，互联网暴露设备超 2.3 万台。</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-09-29</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-29.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-09-29.html</id>
-    <updated>2026-09-29T00:00:00Z</updated>
-    <summary>自动化采集自 Hacker News / The Hacker News / BleepingComputer 等来源，评分 0100，取 Top 5。</summary>
   </entry>
 </feed>

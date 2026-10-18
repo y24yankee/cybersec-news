@@ -1,5 +1,23 @@
 [
  {
+  "date": "2026-10-19",
+  "url": "daily/daily_news_2026-10-19.html",
+  "title": "网络安全日报 2026-10-19",
+  "score": 93,
+  "cves": [
+   "CVE-2024-47575",
+   "CVE-2025-61624",
+   "CVE-2026-32193",
+   "CVE-2026-74580",
+   "CVE-2026-78952",
+   "CVE-2026-85045",
+   "CVE-2026-96951",
+   "CVE-2026-99999"
+  ],
+  "summary": "数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24–72 小时内发布且未进入近期 Top5 的重点报道）。",
+  "text": "数据来源：Hacker News、The Hacker News、BleepingComputer（过去 24–72 小时内发布且未进入近期 Top5 的重点报道）。 补丁板块依据微软 MSRC 官方 CVRF 文档实时解析，作为文末独立单元，不计入新闻评分。 评分：93 / 100 来源：The Hacker News 评分理由：Critical 9.3 级内核缺陷触及所有云厂商共用的 Linux 网络子系统，可在客户虚拟机中泄露/击穿宿主机内存，影响范围覆盖整个云基础设施共享层。 摘要：研究人员 Paulos Yibelo（pwn.ai）在 Vercel 生产沙箱中演示了 CVE202699999（代号 PwnEscape）——从客户虚拟机发出的特制网络包可逐包回收宿主机约 32 字节内存，并能崩溃宿主机、在实验室条件下突破至宿主机提权。该缺陷位于 Linux 内核联网代码（非单一云配置），经 Red Hat 提交内核补丁（commit 6785011f8b16）并已回灌稳定分支；目前无真实在野利用报告。 原文链接：https://thehackernews.com/2026/10/criticalpwnescapelinuxkernel.html 评分：90 / 100 来源：The Hacker News 评分理由：新型 APT 级 ARM64 内存驻留恶意软件，通过挂钩 FortiOS 合法进程实现隐蔽通信并绕过带标签 VPN 会话的安全校验，检测规避能力极强。 摘要：Palo Alto Unit 42 披露此前未公开的内存驻留 ARM64 恶意软件 PEERSTITCH，借助 FortiOS 路径遍历漏洞 CVE202561624 部署，不落盘、不开监听端口、不产生出向连接，而是挂钩 /bin/miglogd 与 /bin/iked 两守护进程、以合法进程流量构建隐蔽通信桥。该活动关联对电信托管服务商的长周期入侵（CLSTA0954 / UNC5820），攻击者先借 FortiManager 漏洞 FortiJump（CVE202447575）入侵并窃取 500+ 台 FortiGate 配置与凭据。 原文链接：https://thehackernews.com/2026/10/attackersexploitfortiosflawto.html 评分：88 / 100 来源：The Hacker News 评分理由：标志 AI 智能体已能将浏览器全链利用的开发周期从数月压缩到 6 天/约 4 万美元算力，对攻防双方均具里程碑意义。 摘要：安全公司 XBOW 用公开版 OpenAI GPT5.6 Sol 模型驱动智能体，将三个当时未知的 Chrome 缺陷（V8 CVE202685045、WebP 解码器、Crashpad CVE202678952）串联为\"仅加载网页即在本机执行代码\"的完整利用链，并获 Google 最高 25 万美元全额奖励。Google 已修复全部缺陷（Chrome 152.0.7977.82+），XBOW 称利用从未针对真实用户；研究者强调\"6 天与 4 万美元对于拿到一条 Chrome 链而言并非高成本\"。 原文链接：https://thehackernews.com/2026/10/researchersusedpublicopenaimodelto.html 评分：87 / 100 来源：The Hacker News 评分理由：潜伏约 9 年的确定性内核缺陷，本地用户可稳定读写任意内核地址提权，特定虚拟化管理场景还能让非受信客户机直写宿主机内存。 摘要：CVE202674580（代号 Vghost）位于 Linux vhost 子系统，因 2017/2020 两次改动遗留的缓存失效缺陷，本地用户（或 worldreadable 的 /dev/vhostnet、/dev/vhostvsock）可绕过 KASLR 稳定提权至 root；当 virtio 设备置于虚拟 IOMMU 后，非受信客户机还能越界写入宿主机 QEMU 进程并劫持执行流。影响 4.11–7.2rc4 内核，腾讯已在 Ubuntu 26.04 / RHEL 9.8 / Amazon Linux 2023 / Azure Linux 3.0 / Oracle Linux 10.2 复现，修复补丁为 commit de845981da67。 原文链接：https://thehackernews.com/2026/10/aifoundlinuxkernelflawgiveslocal.html 评分：84 / 100 来源：Hacker News（Rubrik Zero Labs 研究，Black Hat USA 2026 演讲） 评分理由：展示了\"提示注入→沙箱代码执行→节点提权→AKS/Container Apps 无认证守护进程路径穿越\"的完整云原生+AI 攻击链，揭示 Azure 镜像流节点上 SSRF 即等于节点 root 的严重隐患。 摘要：Rubrik Zero Labs 研究员披露从 AKS 节点 root 漏洞（CVE202632193）到 Microsoft Copilot 会话劫持的研究故事：经提示注入触发沙箱代码执行、本地提权至沙箱 root、利用节点上无认证守护进程的路径穿越与 TOML 注入、通过符号链接重定向写入 /etc/ld.so.preload 拿下 Kubernetes 节点。报告强调该守护进程在启用镜像流的 AKS 与 Container Apps 节点上本地无认证监听，故\"任何工作负载中的 SSRF 都会变成节点 root\"。演示视频与 Black Hat 材料已公开。 原文链接：https://news.ycombinator.com/item?id=49273498 本次共筛选 15 条候选新闻（三源各 5 条），选取 Top 5，最高分 93 分。 补丁板块：微软 2026 年 10 月正式补丁已发布，CVRF 实时解析显示共 2,134 个 CVE，Critical 201 / Important 1,556 / Moderate 279 / Low 96，在野利用 1 项（CVE202696951），CVSS≥9.0 共 189 项。 微信推送：企业微信连接器当前未连接，按既定默认跳过实际发送，仅本地文件交付。"
+ },
+ {
   "date": "2026-10-18",
   "url": "daily/daily_news_2026-10-18.html",
   "title": "网络安全日报 2026-10-18",
