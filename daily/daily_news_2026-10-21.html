@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-21 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（及关联 CERT/厂商公告交叉核验）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-10-21">
+<meta property="og:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（及关联 CERT/厂商公告交叉核验）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-21.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-10-21">
+<meta name="twitter:description" content="数据来源：Hacker News、The Hacker News、BleepingComputer（及关联 CERT/厂商公告交叉核验）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-21</h1>
+<blockquote>
+<p>数据来源：Hacker News、The Hacker News、BleepingComputer（及关联 CERT/厂商公告交叉核验）
+生成时间：2026-10-21 07:00（北京时间）</p>
+</blockquote>
+<h2 id="s1">今日 Top 5 安全新闻</h2>
+<h3 id="s2">1. Citrix NetScaler 两枚关键零日（CVE-2026-88771 / CVE-2026-88772）持续在野利用</h3>
+<ul>
+<li><strong>评分：95</strong>（严重性 9.6 / 新颖性 8.5 / 影响范围 9.5 / 时效性 7.5）</li>
+<li><strong>来源</strong>：CISA / NCSC-UK / CSA Singapore / Citrix 安全公告</li>
+<li><strong>摘要</strong>：Citrix NetScaler ADC 与 Gateway 的 CVE-2026-88771（未授权远程命令执行，CVSS 9.5）与 CVE-2026-88772（内存溢出导致 RCE/DoS，CVSS 9.5）已被 CISA 纳入 KEV，多个国家级 CERT（美/英/新/马）确认全球范围内遭到积极利用。攻击链涉及 WebShell 与隧道工具，可导致 VPN/网关被接管、凭据与证书失窃。Citrix 已给出 IoC 与取证保全指引（补丁前需保留证据）。</li>
+<li><strong>原文链接</strong>：https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway</li>
+<li><strong>评分理由</strong>：两枚关键零日均已确认在野利用、可未授权远程代码执行、影响全球大量企业边界设备，威胁等级最高。</li>
+</ul>
+<h3 id="s3">2. OVHcloud 官方 CLI 遭供应链投毒，五個版本被植入信息窃取器</h3>
+<ul>
+<li><strong>评分：92</strong>（严重性 8.8 / 新颖性 9.0 / 影响范围 8.5 / 时效性 9.5）</li>
+<li><strong>来源</strong>：OVHcloud（CEO 公开披露）/ OpenSourceMalware / BleepingComputer / The Hacker News</li>
+<li><strong>摘要</strong>：10 月 19 日，攻击者控制一名 OVHcloud 贡献者的 GitHub 账号，利用该仓库<strong>未启用"发布不可变性（release immutability）"</strong>的缺陷，直接替换了已发布的 ovhcloud-cli v0.11.0–v0.15.0 五个版本的二进制文件（无需改标签、不触发 CI/CD）。恶意构建会在运行机器的磁盘上窃取 OVH API 密钥、SSH 密钥、<code>.kube/config</code>、<code>.env</code> 等机密，对外暴露窗口约 94 分钟。攻击被某用户 CI 中固定的 SHA-256 哈希识破；OVH 随后发布干净的不可变 v0.16.0。研究人员将涉案账号关联到 GlassWorm 活动（Solana 链上 memo 作为 C2 死投）。</li>
+<li><strong>原文链接</strong>：https://opensourcemalware.com/blog/glassworm-hacks-ovh-clouds-cli-tool</li>
+<li><strong>评分理由</strong>：典型的"发布产物投毒"供应链攻击，绕过 CI/CD 直接篡改分发渠道，且目标为开发者/运维机器上的云凭据，新颖且影响深远。</li>
+</ul>
+<h3 id="s4">3. SiteGuard WAF 命令注入漏洞（CVE-2026-106931）已在野利用，WAF 自身沦为突破口</h3>
+<ul>
+<li><strong>评分：90</strong>（严重性 9.2 / 新颖性 8.5 / 影响范围 9.0 / 时效性 9.0）</li>
+<li><strong>来源</strong>：JPCERT/CC（JVN）、EG Secure Solutions、BleepingComputer</li>
+<li><strong>摘要</strong>：日本主流主机型 WAF SiteGuard Server Edition 的统计功能（默认开启）存在 OS 命令注入（CWE-78，CVSS 4.0 8.5 / CVSS 3.0 7.8），JPCERT/CC 与厂商确认<strong>已在野利用</strong>，攻击者可借此以 root（Linux）或 SYSTEM（Windows）权限执行任意命令。该 WAF 据称保护超 150 万网站、约 50 万 WordPress 站点，且其"与受保护应用同机部署"的架构意味着 WAF 被攻破即等同源站沦陷。厂商特别提示：打补丁前需先下载诊断信息，否则修复动作会抹除入侵痕迹。</li>
+<li><strong>原文链接</strong>：https://jvn.jp/en/jp/JVN88474777/index.html</li>
+<li><strong>评分理由</strong>：安全设备自身成为初始入侵向量、已在野利用、且默认开启的功能放大暴露面，影响日本及大量托管场景。</li>
+</ul>
+<h3 id="s5">4. PHP 紧急发布两枚严重 RCE 漏洞补丁（CVE-2026-109618 / CVE-2026-109619）</h3>
+<ul>
+<li><strong>评分：88</strong>（严重性 9.3 / 新颖性 8.0 / 影响范围 9.5 / 时效性 9.5）</li>
+<li><strong>来源</strong>：PHP 官方公告 / BleepingComputer / watchTowr / CERT-EU</li>
+<li><strong>摘要</strong>：PHP 安全团队于 10 月 20 日预警，将于 10 月 21 日 14:00 UTC 发布紧急安全更新，修复两个严重漏洞（官方 CVSS v4.0 9.2，watchTowr 称实测为 CVSS 10.0），被追踪为 CVE-2026-109618 与 CVE-2026-109619，均被认为可未授权远程代码执行，影响 PHP 5/6/7/8 全系。因细节提前泄露（原定周四披露），团队提前至周三发布；watchTowr 已复现其一，目前未见在野利用。鉴于 PHP 驱动海量网站/CMS/电商，建议立即准备补丁。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/</li>
+<li><strong>评分理由</strong>：底层语言级 RCE、影响面极广（全网大量 Web 应用），且属提前泄露驱动的紧急补丁周期，时效性高。</li>
+</ul>
+<h3 id="s6">5. Magento / Adobe Commerce 曝 CVSS 10.0 未授权 RCE（BlockStrap，CVE-2026-103849）</h3>
+<ul>
+<li><strong>评分：87</strong>（严重性 9.5 / 新颖性 8.5 / 影响范围 8.5 / 时效性 7.5）</li>
+<li><strong>来源</strong>：Sansec 电商安全研究</li>
+<li><strong>摘要</strong>：Adobe 于 10 月 13 日以 APSB26-153 修复 BlockStrap（CVE-2026-103849），这是一个模板引擎指令注入，CVSS 10.0，允许未授权攻击者远程执行任意 PHP 代码，影响 Adobe Commerce ≤ 2.4.9、Commerce B2B ≤ 1.5.3、Magento Open Source ≤ 2.4.9。Sansec 在 24 小时内复现出 4 条独立利用路径，并指出它与 9 月 StyleSmuggler（CVE-2026-75650）修复留下的缺口相关——两者需分别打补丁。目前尚未观察到大规模利用，但鉴于该平台历来是支付嗅探团伙的重点目标，预期攻击窗口很短。</li>
+<li><strong>原文链接</strong>：https://sansec.io/research/blockstrap-magento-rce</li>
+<li><strong>评分理由</strong>：满分危漏洞、未授权 RCE、直接威胁电商支付与用户数据，虽暂无在野利用但极易被复现利用。</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>本次共筛选 15 条新闻（三来源各 5 条），最高分 95 分。</strong>
+已主动排除 10-14～10-20 已进入 Top5 的重复条目（Plex2Shell、OpenCode、AdFection/ANSTO、Broadcom Wi‑Fi、ConnectWise、AOMEI、BeyondTrust、Candiru、PwnEscape、PEERSTITCH、Next.js、Langflow、F5 BIG‑IP、Cisco SEG、PAN‑OS、Ivanti UTA0576、SAP、Docker Hub、npm SlugFest、YAM·CoGUI、Nextcloud Collabora、curl、DoJ 朝鲜 IT、Hirudo、Drupal、OpenBSD、Clop/Grav、MAGENTO 旧稿等），避免连日刷屏。</p>
+</blockquote>
+<hr />
+<p><em>微信推送状态：企业微信 connector 当前未连接，按既定默认策略</em><em>未实际发送</em><em>，本报告仅以本地文件交付。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-10-20.html">← 前一天 2026-10-20</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
