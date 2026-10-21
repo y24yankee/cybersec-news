@@ -1,5 +1,19 @@
 [
  {
+  "date": "2026-10-22",
+  "url": "daily/daily_news_2026-10-22.html",
+  "title": "网络安全日报 2026-10-22",
+  "score": 93,
+  "cves": [
+   "CVE-2026-106173",
+   "CVE-2026-15176",
+   "CVE-2026-93479",
+   "CVE-2026-97205"
+  ],
+  "summary": "数据来源：The Hacker News、BleepingComputer、Hacker News（含 HN 热议话题的主流媒体原发报道）。筛选窗口：过去 24–48 小时（20261020  20261022）。补丁板块依据微软 MSRC 正式 CVRF 文档实时解析（详见文末）。",
+  "text": "数据来源：The Hacker News、BleepingComputer、Hacker News（含 HN 热议话题的主流媒体原发报道）。筛选窗口：过去 24–48 小时（20261020  20261022）。补丁板块依据微软 MSRC 正式 CVRF 文档实时解析（详见文末）。 来源：The Hacker News 原文链接：https://thehackernews.com/2026/10/eightemudhracakeyscompromised.html 摘要：印度证书颁发机构 eMudhra（emSign 品牌）旗下 8 张中间 CA 私钥被确认泄露——根因是 2025 年 4 月密钥生成仪式缺陷，导致私钥实际为极小整数（如数字 4），攻击者可在一秒内从公钥反推。Chrome、Firefox、Apple、Microsoft 与 Go 语言在数小时内紧急拉黑这些证书。任何人持有私钥即可为任意域名签发可信 TLS 证书、为代码签名证书伪造签名，构成全互联网信任链危机。 评分理由：根证书信任基础设施被击穿，影响面覆盖整个 Web PKI（含代码签名），浏览器与语言运行时被迫紧急处置，严重程度与影响范围均为顶级。 来源：The Hacker News 原文链接：https://thehackernews.com/2026/10/hackershidvasilekbackdoorinvmware.html 摘要：俄罗斯安全公司 Solar 披露，白俄关联激进黑客组织 Partisan Zmiy（亦称 Cyber Partisans）在一所俄罗斯医疗机构网络中维持了约两年的隐蔽访问（最早可溯至 2024 年初）。攻击者利用受信任但无人监视的 VMware Tools 目录，以伪装服务 vmauad 部署更新版 Vasilek 后门（经 Telegram C2），并具备 Pryanik 破坏性擦除器能力。该组织一反常态地选择长期潜伏而非破坏，意在借医疗体系的广泛信任关系开展间谍活动。 评分理由：国家级/准国家级长期渗透、借助合法软件目录实现新颖持久化，且具备破坏性后手，新颖性与影响范围突出。 来源：The Hacker News（引述 Reuters / NorForge） 原文链接：https://thehackernews.com/2026/10/hackersuseautonomousaiagentsto.html 摘要：一名讲中文的攻击者将开源 AI 工具 Cairn 指向企业网站，让智能体在几乎无人工干预下自行侦察、利用并植入 WebShell，累计尝试 1,200+ 站点、触及 100+ 家公司（含 Deere、SharkNinja、Cummins）。研究者 Snorre Fagerland 因攻击者把控制面板暴露在公网而实时旁观了整个过程；面板中还泄露了数百条密钥，其中 11% 经验证仍有效。单次成功入侵平均耗时约 23 小时、成本约 50 美元。 评分理由：首个被公开记录的\"AI 自主驱动\"大规模入侵，攻击经济学与技能门槛被彻底改写，标志进攻端进入自主化阶段，新颖性极高。 来源：The Hacker News 原文链接：https://thehackernews.com/2026/10/criticalfortisiemflawgetspublic.html 摘要：Horizon3.ai 发布 CVE2026106173 的完整分析与 PoC——这是 Fortinet FortiSIEM 中一个未认证的路径遍历缺陷（CVSS 9.4），攻击者可通过 gRPC 服务（TCP 27918）以 ../ 遍历配合 NUL 字节注入，覆写被 cron 每分钟执行的 Redis 健康检查脚本，从而将任意文件写入升级为远程代码执行。受影响的 7.5.0 需升级至 7.5.1 及以上；7.6 不受影响。 评分理由：安全产品自身沦为攻击面，且公开 PoC 意味着暴露在互联网的部署面临 imminent 大规模利用，严重性与时效性兼具。 来源：BleepingComputer 原文链接：https://www.bleepingcomputer.com/news/security/f5releasesoutofbandpatchesforcriticalnginxvulnerabilities/ 摘要：F5 打破常规发布节奏，为 NGINX 多款产品（NGINX Plus / Open Source / Ingress Controller / Gateway Fabric / Instance Manager）发布带外补丁，修复三枚关键漏洞：CVE202615176 与 CVE202697205（均位于 ngxhttpv3module HTTP/3 模块）、CVE202693479（NGINX map 指令）。远程无权限攻击者可在非默认配置下触发堆溢出/释放后使用，造成拒绝服务或在 ASLR 被绕过/禁用时实现代码执行。F5 尚未确认在野利用。 评分理由：NGINX 部署量极大（含大量 Kubernetes Ingress），突破常规周期发补丁凸显紧迫性；虽暂未在野，历史上一贯是攻击重点目标。 本次共筛选 15 条候选新闻（三来源各 5 条），经评分排序选取前 5 条；最高分 93 分。 微信小程序推送：企业微信 connector 当前未连接，按既定默认跳过实际发送，仅以本地文件交付（见附件）。"
+ },
+ {
   "date": "2026-10-21",
   "url": "daily/daily_news_2026-10-21.html",
   "title": "网络安全日报 2026-10-21",

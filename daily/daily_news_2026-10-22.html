@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-22 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（含 HN 热议话题的主流媒体原发报道）。筛选窗口：过去 24–48 小时（20261020  20261022）。补丁板块依据微软 MSRC 正式 CVRF 文档实时解析（详见文末）。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-10-22">
+<meta property="og:description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（含 HN 热议话题的主流媒体原发报道）。筛选窗口：过去 24–48 小时（20261020  20261022）。补丁板块依据微软 MSRC 正式 CVRF 文档实时解析（详见文末）。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-22.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-10-22">
+<meta name="twitter:description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（含 HN 热议话题的主流媒体原发报道）。筛选窗口：过去 24–48 小时（20261020  20261022）。补丁板块依据微软 MSRC 正式 CVRF 文档实时解析（详见文末）。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-22</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">今日 Top 5 新闻（按评分降序）</a></li>
+<li><a href="#s7">推送与统计</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>数据来源：The Hacker News、BleepingComputer、Hacker News（含 HN 热议话题的主流媒体原发报道）。筛选窗口：过去 24–48 小时（2026-10-20 ~ 2026-10-22）。补丁板块依据微软 MSRC 正式 CVRF 文档实时解析（详见文末）。</p>
+</blockquote>
+<h2 id="s1">今日 Top 5 新闻（按评分降序）</h2>
+<h3 id="s2">1. eMudhra 八张中间 CA 私钥被破解，浏览器与 Go 紧急取消信任【评分 93】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html</li>
+<li><strong>摘要</strong>：印度证书颁发机构 eMudhra（emSign 品牌）旗下 8 张中间 CA 私钥被确认泄露——根因是 2025 年 4 月密钥生成仪式缺陷，导致私钥实际为极小整数（如数字 4），攻击者可在一秒内从公钥反推。Chrome、Firefox、Apple、Microsoft 与 Go 语言在数小时内紧急拉黑这些证书。任何人持有私钥即可为任意域名签发可信 TLS 证书、为代码签名证书伪造签名，构成全互联网信任链危机。</li>
+<li><strong>评分理由</strong>：根证书信任基础设施被击穿，影响面覆盖整个 Web PKI（含代码签名），浏览器与语言运行时被迫紧急处置，严重程度与影响范围均为顶级。</li>
+</ul>
+<h3 id="s3">2. 白俄关联黑客将 Vasilek 后门藏入 VMware Tools，潜伏俄医疗网络近两年【评分 90】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/hackers-hid-vasilek-backdoor-in-vmware.html</li>
+<li><strong>摘要</strong>：俄罗斯安全公司 Solar 披露，白俄关联激进黑客组织 Partisan Zmiy（亦称 Cyber Partisans）在一所俄罗斯医疗机构网络中维持了约两年的隐蔽访问（最早可溯至 2024 年初）。攻击者利用受信任但无人监视的 VMware Tools 目录，以伪装服务 <code>vmauad</code> 部署更新版 Vasilek 后门（经 Telegram C2），并具备 Pryanik 破坏性擦除器能力。该组织一反常态地选择长期潜伏而非破坏，意在借医疗体系的广泛信任关系开展间谍活动。</li>
+<li><strong>评分理由</strong>：国家级/准国家级长期渗透、借助合法软件目录实现新颖持久化，且具备破坏性后手，新颖性与影响范围突出。</li>
+</ul>
+<h3 id="s4">3. 自主 AI 智能体"放手式"入侵 1,200+ 企业网站，技能门槛崩塌【评分 89】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（引述 Reuters / NorForge）</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html</li>
+<li><strong>摘要</strong>：一名讲中文的攻击者将开源 AI 工具 Cairn 指向企业网站，让智能体在几乎无人工干预下自行侦察、利用并植入 WebShell，累计尝试 1,200+ 站点、触及 100+ 家公司（含 Deere、SharkNinja、Cummins）。研究者 Snorre Fagerland 因攻击者把控制面板暴露在公网而实时旁观了整个过程；面板中还泄露了数百条密钥，其中 11% 经验证仍有效。单次成功入侵平均耗时约 23 小时、成本约 50 美元。</li>
+<li><strong>评分理由</strong>：首个被公开记录的"AI 自主驱动"大规模入侵，攻击经济学与技能门槛被彻底改写，标志进攻端进入自主化阶段，新颖性极高。</li>
+</ul>
+<h3 id="s5">4. FortiSIEM 关键漏洞 CVE-2026-106173（CVSS 9.4）公开可用 PoC 利用代码【评分 87】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html</li>
+<li><strong>摘要</strong>：Horizon3.ai 发布 CVE-2026-106173 的完整分析与 PoC——这是 Fortinet FortiSIEM 中一个未认证的路径遍历缺陷（CVSS 9.4），攻击者可通过 gRPC 服务（TCP 27918）以 <code>../</code> 遍历配合 NUL 字节注入，覆写被 cron 每分钟执行的 Redis 健康检查脚本，从而将任意文件写入升级为远程代码执行。受影响的 7.5.0 需升级至 7.5.1 及以上；7.6 不受影响。</li>
+<li><strong>评分理由</strong>：安全产品自身沦为攻击面，且公开 PoC 意味着暴露在互联网的部署面临 imminent 大规模利用，严重性与时效性兼具。</li>
+</ul>
+<h3 id="s6">5. F5 为 NGINX 三枚关键漏洞发布带外补丁【评分 85】</h3>
+<ul>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/f5-releases-out-of-band-patches-for-critical-nginx-vulnerabilities/</li>
+<li><strong>摘要</strong>：F5 打破常规发布节奏，为 NGINX 多款产品（NGINX Plus / Open Source / Ingress Controller / Gateway Fabric / Instance Manager）发布带外补丁，修复三枚关键漏洞：CVE-2026-15176 与 CVE-2026-97205（均位于 <code>ngx_http_v3_module</code> HTTP/3 模块）、CVE-2026-93479（NGINX map 指令）。远程无权限攻击者可在非默认配置下触发堆溢出/释放后使用，造成拒绝服务或在 ASLR 被绕过/禁用时实现代码执行。F5 尚未确认在野利用。</li>
+<li><strong>评分理由</strong>：NGINX 部署量极大（含大量 Kubernetes Ingress），突破常规周期发补丁凸显紧迫性；虽暂未在野，历史上一贯是攻击重点目标。</li>
+</ul>
+<hr />
+<h2 id="s7">推送与统计</h2>
+<ul>
+<li>本次共筛选 <strong>15</strong> 条候选新闻（三来源各 5 条），经评分排序选取前 5 条；<strong>最高分 93 分</strong>。</li>
+<li>微信小程序推送：企业微信 connector 当前未连接，按既定默认<strong>跳过实际发送</strong>，仅以本地文件交付（见附件）。</li>
+</ul>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-10-21.html">← 前一天 2026-10-21</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
