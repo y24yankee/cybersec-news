@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-10-22T00:00:00Z</updated>
+  <updated>2026-10-23T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-10-23</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-23.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-23.html</id>
+    <updated>2026-10-23T00:00:00Z</updated>
+    <summary>数据来源：Hacker News、The Hacker News、BleepingComputer（三来源各筛选候选，按评分取 Top 5）</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-10-22</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-22.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-04.html</id>
     <updated>2026-10-04T00:00:00Z</updated>
     <summary>来源：Cybernoz / AWS Security Bulletin（20261002）</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-10-03</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-03.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-03.html</id>
-    <updated>2026-10-03T00:00:00Z</updated>
-    <summary>来源：The Hacker News / BleepingComputer</summary>
   </entry>
 </feed>
