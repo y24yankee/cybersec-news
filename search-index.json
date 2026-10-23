@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-10-24",
+  "url": "daily/daily_news_2026-10-24.html",
+  "title": "网络安全日报 2026-10-24",
+  "score": 92,
+  "cves": [],
+  "summary": "数据来源：Hacker News、The Hacker News、BleepingComputer 及关联厂商/威胁情报公告（WebSearch 聚合 + 原文核验）。",
+  "text": "数据来源：Hacker News、The Hacker News、BleepingComputer 及关联厂商/威胁情报公告（WebSearch 聚合 + 原文核验）。 候选池共 15 条（三来源各 5 条），已主动排除 1014～1023 已入 Top5 的条目（含 ARTEX/Artex、PHP2Shell、GitLab、LiteLLM、eMudhra、Ivanti、Citrix、Plex2Shell、Capcom 等）避免连日重复。 来源：Hewlett Packard Enterprise / The CyberWire（20261023 情报简报） 摘要：HPE 发布安全更新修复 ArubaOS 8 与 10 共 72 个漏洞，其中 8 个最高严重级别漏洞可远程、无需认证、无需用户交互即绕过认证或执行恶意代码，影响企业无线 AP、控制器与网关；HPE 强烈建议立即修补并限制管理接口暴露。目前 HPE 称尚未发现公开利用代码或在野利用。 评分理由：企业级无线网络设备覆盖面极广，8 个无认证 RCE 严重漏洞一旦被利用可导致整网失陷，影响范围与严重性双高。 原文链接：https://thecyberwire.com/podcasts/dailypodcast/2663/transcript 来源：Railway（1021 安全披露 / 1023 初步报告）/ The CyberWire 摘要：云开发部署平台 Railway 确认一起针对性安全事件，攻击时间线为 1020 13:58 UTC 至 1022 03:32 UTC，攻击者试图获取 AI 提供商 API 密钥以实施蒸馏攻击；公司怀疑这是针对 AI 推理供应商的更广泛战役的一部分，已暂停新构建与部署，并 urging 所有用户轮换凭据。此前一周 AI 编码工具 OpenCode 也报告了类似暴露超 1% 客户凭据的攻击。 评分理由：云开发平台集中存储大量客户的密钥与密码等敏感环境变量，单点失陷可引发下游链式泄露，且指向针对 AI 基础设施的有组织战役。 原文链接：https://vuink.com/post/oybtddenvyjnlddpbz/p/preliminaryreportoctobersecurityincident 来源：SOCRadar（经 Enigma Global 披露） 摘要：研究人员发现一个由 INC 与 The Gentlemen 勒索团伙 affiliate 运作的 AI 驱动入侵生态，核心是基于 OpenCode + OpenRouter 商用模型的\"自主红队杀伤链框架\"Phantom（含 18 个技能模块），配合 32 个 WormGPTMCP 服务器与 Ghost C2、RevSocks 等工具；采用\"AI 执行、人工审批\"架构，已针对 62 家组织，涉及工业、制造、能源及医疗等领域。 评分理由：首次较完整披露勒索团伙将 AI 智能体编排为生产级入侵链路，规模化的\"AI 执行+人工审批\"模式显著降低攻击门槛，具有明显新颖性与扩散风险。 原文链接：https://www.enigmaglobal.com/preview/news/45965 来源：Huntress / The CyberWire 摘要：Huntress 披露一场持续十周的战役：攻击者通过 AiTM 钓鱼等技术窃取并回放合法登录会话令牌，绕过 MFA 而无需受害者密码，入侵 79 家组织的 Microsoft 365 账户；观察到至少 497 次成功登录与逾 20 万次失败尝试，攻击者注册了 48 台可疑设备、篡改认证方式并创建隐藏收件箱规则。Huntress 警告仅重置密码无法清除持久化访问。 评分理由：令牌回放绕过 MFA 直接击穿企业核心身份层，影响 79 家组织且涉及持久化，防御方需依赖会话吊销与条件访问策略，实务危害高。 原文链接：https://thecyberwire.com/podcasts/dailypodcast/2663/transcript 来源：TechCrunch / The CyberWire（SEC 8K 披露） 摘要：全美大型医学实验室检测商 Quest Diagnostics 向 SEC 提交 8K 文件，确认其 Quanum 实验室检测与账单系统遭网络攻击，部分患者的健康与账单记录被未授权读取；公司已于周四将系统下线并暂停多项业务，正与执法部门合作调查，称事件与近期 PHP 漏洞无关，目前尚无法确定受影响规模。 评分理由：医疗检测巨头集中存储海量患者隐私与诊疗数据，系统下线已造成业务中断，是今年医疗行业一连串重大安全事件中的最新一起，合规与隐私风险突出。 原文链接：https://industrypulse.media/news/tclabtestinggiantquestdiagnosticsconfirmspatientspersonalandhea1gzgrkf 其他候选（未入 Top5）：Capcom 披露 CAPCOM ID 数据泄露影响约 1,170 万账户（1022/23）；Navigate360 安全公司承认系统被入侵致犯罪线报泄露；前 CISA 主任 Chris Krebs 谈\"Black October\"AI 驱动漏洞激增；Calif.io 声称攻破 iPhone（未披露技术细节，待验证）；PingCAP 称遭窃取约 10.6TB 数据（1021，略早于 24h 窗口）。 本次共筛选 15 条新闻，最高分 92 分。 （微信小程序推送：企业微信 connector 当前未连接，按既定默认跳过实际发送，仅本地文件交付。）"
+ },
+ {
   "date": "2026-10-23",
   "url": "daily/daily_news_2026-10-23.html",
   "title": "网络安全日报 2026-10-23",
