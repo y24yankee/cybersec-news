@@ -1,5 +1,18 @@
 [
  {
+  "date": "2026-10-25",
+  "url": "daily/daily_news_2026-10-25.html",
+  "title": "网络安全日报 2026-10-25",
+  "score": 92,
+  "cves": [
+   "CVE-2022-21894",
+   "CVE-2026-110264",
+   "CVE-2026-30612"
+  ],
+  "summary": "每日 07:00（北京时间）自动推送 · 来源：The Hacker News、BleepingComputer、Hacker News 及关联厂商/威胁情报公告交叉核验。",
+  "text": "每日 07:00（北京时间）自动推送 · 来源：The Hacker News、BleepingComputer、Hacker News 及关联厂商/威胁情报公告交叉核验。 补丁日校验：MSRC updates 中 2026Oct 标题为「October 2026 Security Updates」（正式，无 Early）→ 正式 Patch Tuesday 已于 1014 发布，本月补丁板块持续附加于文末。 来源：The Hacker News（Kaspersky GReAT 技术报告） 摘要：卡巴斯基披露新型 UEFI 固件级 Bootkit「BlackX」，被视为 BlackLotus 的升级翻版，于 2026 年初针对塔吉克斯坦、乌兹别克斯坦、土库曼斯坦外交机构部署，疑似由中国关联 APT41 实施。它利用早已修补的「Baton Drop」漏洞（CVE202221894）在已安装微软补丁但手动吊销未落实的 Windows 上绕过 Secure Boot，植入内核驱动并投放 RAT（借 Google Drive/OneDrive/Yandex 作 C2）。 原文链接：[The Hacker News](https://thehackernews.com/2026/10/blackxuefibootkitbypassessecure.html) 评分理由：国家级固件级持久化恶意软件、绕过\"已打补丁\"系统的 Secure Boot，隐蔽性强且直击高价值外交目标，严重性与新颖性双高。 来源：BleepingComputer（基于 CERTEU 官方通报） 摘要：欧盟网络安全机构 CERTEU 将欧盟委员会 \"europa.eu\" 公有云（AWS）入侵事件归因于供应链团伙 TeamPCP——初始访问源于 3 月 19 日的 Trivy 供应链投毒（被盗 AWS API 密钥）。约 91.7 GB（解压 340 GB）数据被窃，涵盖 42 个欧委会内部客户及至少 29 个其他欧盟实体，3 月 28 日由 ShinyHunters 在暗网公开。 原文链接：[BleepingComputer](https://www.bleepingcomputer.com/news/security/certeueuropeancommissionhackexposesdataof30euentities/) 评分理由：欧盟核心机构因开发者工具供应链失陷导致约 30 个实体波及，兼具地缘政治影响与大规模个人数据暴露。 来源：The Hacker News（Eye Security 披露） 摘要：荷兰 Eye Security 发现废弃的 Time4Popcorn（Popcorn Time 分支）更新器存在 CVE202630612（CISA 评分 9.8）：以 SYSTEM/root 权限、未加密 HTTP、无签名校验回连已失效域名，任何人抢注即可向数百万设备推送任意代码。研究团队在 202511 至 202603 间\"以彼之矛攻彼之盾\"，向 200 万台以上设备推送良性更新关闭该漏洞，并将 15 个域名移交 Shadowserver。安卓版与 2014 版 Chromium 引擎仍残留风险，官方建议彻底卸载。 原文链接：[The Hacker News](https://thehackernews.com/2026/10/researcherspushover2millionupdates.html) 评分理由：CVSS 9.8 无补丁漏洞波及政企/军方内网数百万设备，且为罕见的\"白帽反向利用更新机制\"大规模防御案例，影响范围与新颖性突出。 来源：Help Net Security（卡普空官方公告） 摘要：日本游戏厂商卡普空（Capcom）1022 公告：其线上会员服务 CAPCOM ID 于 1019 检测并确认遭第三方非法访问，全球 11,774,247 条记录（邮箱地址 + 创建/登录时间、IP 等系统标识）泄露；其中 43 条含生日/性别/国家/昵称，196 个账户密码被非法篡改（已重置）。信用卡信息未受影响，目前尚无组织认领。 原文链接：[Help Net Security](https://www.helpnetsecurity.com/2026/10/23/capcomiddatabreach11millionrecordsexposed/) 评分理由：头部游戏厂商千万级用户 PII 泄露，影响面广、现实钓鱼风险高，属典型大规模数据泄露事件。 来源：The Hacker News（安全公司 V12 披露） 摘要：V12 披露 Coinbase 创建、现由 Linux 基金会（成员含 Visa/Mastercard）治理的 x402 支付 SDK 存在 25 个缺陷（3 个关键）。最严重者：默认客户端未设支出上限，自动签名的 AI 智能体在被恶意 API 要求时可签署\"全额余额\"支付而遭掏空；另含 Solana 支付绕过与跨站登录签名中继。三项关键缺陷已于 818 静默修复，但无 CVE、无 npm/PyPI 安全公告，开发者无升级信号。 原文链接：[The Hacker News](https://thehackernews.com/2026/10/criticalx402sdkflawcouldlet.html) 评分理由：智能体自主支付这一新兴攻击面中的关键信任边界缺陷，且因\"静默修复+无公告\"形成活体供应链风险，新颖性与潜在金融影响兼备。 本次从三大来源共筛选 15 条候选新闻（各来源上限 5 条）。已主动排除近十日（10211024）已入 Top5 的条目（HPE ArubaOS、Railway、SOCRadar Phantom、Quest Diagnostics、PHP2Shell、GitLab CVE2026110264、LiteLLM 供应链、Node.js Brotli、OpenAI GPT6、eMudhra、Citrix、OVHcloud、SiteGuard、Magento、CISA KEV 中的 Collabora 同 CVE 等），避免连日重复。 Hacker News（news.ycombinator.com）官方站点/Algolia API 在本沙箱仍不可直达，本期 HN 热议话题（如 x402、Time4Popcorn）已通过其在 The Hacker News 的原发性报道交叉覆盖并标注。 本次共筛选 15 条新闻，最高分 92 分。"
+ },
+ {
   "date": "2026-10-24",
   "url": "daily/daily_news_2026-10-24.html",
   "title": "网络安全日报 2026-10-24",
