@@ -1,5 +1,18 @@
 [
  {
+  "date": "2026-10-27",
+  "url": "daily/daily_news_2026-10-27.html",
+  "title": "网络安全日报 2026-10-27",
+  "score": 95,
+  "cves": [
+   "CVE-2026-115889",
+   "CVE-2026-115893",
+   "CVE-2026-21643"
+  ],
+  "summary": "数据来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）",
+  "text": "数据来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时） 补丁日状态：微软 2026Oct 条目标题为「October 2026 Security Updates」（正式，无 Early，CurrentReleaseDate 20261026）→ 本月正式 Patch Tuesday 已发布，下方附独立板块。 评分：95 ｜ 来源：The Hacker News 摘要： 云安全厂商 Wiz 追踪到自动化攻击团伙 Gheist，利用被盗 GitHub Token 在可达仓库注入单文件 workflow，将仓库密钥以 base32 编码打印进 Actions 日志（绕过 GitHub 日志掩码）后下载并秒删运行记录。该手法已在私有仓库与 GitHub Enterprise 环境中得手，Wiz 恢复出 850+ 被攻陷账户下的 13,500+ 个植入分支，且截至 1024 仍在演进。 原文链接： https://thehackernews.com/2026/10/gheistusesstolengithubtokensto.html 评分：91 ｜ 来源：The Hacker News 摘要： Huntress 披露一场 AitM（中间人）中继活动：攻击者捕获登录会话后重放窃得的 signin token，在 79 家组织内成功登录 497 次，最终攻陷 97 个账户并注册 48 个 rogue Entra 设备、篡改 MFA 设置维持访问。超过 20 万次登录尝试可追溯至同一 193.26.115.0/24 段。 原文链接： https://thehackernews.com/2026/10/microsoft365tokenreplayattacks.html 评分：90 ｜ 来源：BleepingComputer 摘要： 威胁情报厂商 Defused 警告，Fortinet FortiClient EMS 的未认证 SQL 注入漏洞 CVE202621643（影响 7.4.4，已在 7.4.5+ 修复）约 4 天前开始被在野利用——攻击者可通过 HTTP Site 头走私 SQL 语句实现任意命令执行。Shadowserver 追踪到 2,000+ 个 EMS 实例 Web 界面暴露，Fortinet 尚未将该漏洞标记为在野利用。 原文链接： https://www.bleepingcomputer.com/news/security/criticalfortinetforticlientemsflawnowexploitedinattacks/ 评分：89 ｜ 来源：The Hacker News 摘要： Bytecode Alliance 维护的 WebAssembly 运行时 Wasmtime 曝出两个 CVSS 9.9 严重漏洞（CVE2026115889 影响全架构、CVE2026115893 仅 ARM64），均位于默认编译器 Cranelift，可使恶意模块逃逸本应限定的沙箱。修复版本已于 1019/20 发布，维护方称暂无攻击报告。 原文链接： https://thehackernews.com/2026/10/twocriticalwasmtimeflawscouldlet.html 评分：87 ｜ 来源：The Hacker News 摘要： Trend Micro ZDI 在公开内核邮件列表披露 Linux 内核内置 SMB 服务 KSMBD 的两个 CVSS 9.0 远程代码执行缺陷（ZDICAN33774 无需认证、可达端口 445；ZDICAN33549 需 RDMA/SMB Direct）。截至披露尚无主线修复、无 CVE 编号，暴露 KSMBD 的服务器面临\"无补丁窗口\"。 原文链接： https://thehackernews.com/2026/10/twocvss90linuxksmbdrceflaws.html 本次共筛选 15 条新闻，最高分 95 分。 注：微信推送通道（企业微信 connector）当前未连接，本次仅生成本地报告文件，未实际发送推送。"
+ },
+ {
   "date": "2026-10-26",
   "url": "daily/daily_news_2026-10-26.html",
   "title": "网络安全日报 2026-10-26",
