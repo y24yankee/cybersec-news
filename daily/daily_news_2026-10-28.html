@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-28 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（及关联原始报道交叉核验）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-10-28">
+<meta property="og:description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（及关联原始报道交叉核验）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-28.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-10-28">
+<meta name="twitter:description" content="数据来源：The Hacker News、BleepingComputer、Hacker News（及关联原始报道交叉核验）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-28</h1>
+<blockquote>
+<p>数据来源：The Hacker News、BleepingComputer、Hacker News（及关联原始报道交叉核验）
+补丁日状态：MSRC <code>2026-Oct</code> 标题为「October 2026 Security Updates」（正式发布，无 Early），CurrentReleaseDate 2026-10-27 → 本月补丁板块已生成。</p>
+</blockquote>
+<hr />
+<h2 id="s1">今日 Top 5 新闻（按评分降序）</h2>
+<h3 id="s2">1. CyberStrikeAI：44 个 AI 智能体自主自动化攻击日本机构 【评分 93】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-10-27）</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/cyberstrikeai-uses-44-ai-agents-to.html</li>
+<li><strong>摘要</strong>：TrendAI 分析了三起针对日本组织的攻击环境，其中 "CyberStrikeAI" 框架将侦察、漏洞验证、利用、C2、持久化、数据窃取与报告拆分给 44 个协同 AI 智能体自动完成；10 月窗口内至少 16 家日本机构被纳入验证。这是首次披露多智能体 AI 端到端自主入侵的规模化实战。</li>
+<li><strong>评分理由</strong>：首次规模化实战的多智能体自主攻击框架，标志进攻性 AI 进入「工业化」阶段，新颖性与影响范围双高。</li>
+</ul>
+<h3 id="s3">2. GoAhead 嵌入式 Web 服务器 TLS 缺陷：吊销证书仍可通过、会话可被解密 【评分 90】</h3>
+<ul>
+<li><strong>来源</strong>：Cyber Kendra / The Hacker News（2026-10-27）</li>
+<li><strong>原文链接</strong>：https://www.cyberkendra.com/2026/10/critical-goahead-flaw-accepts-revoked-mtls-certificates.html</li>
+<li><strong>摘要</strong>：FoxIO 的 Sébastien Féry 披露 GoAhead（运行于路由器、打印机、网关、工业控制器的嵌入式 Web 服务器，号称数亿设备）三处 TLS 缺陷：OpenSSL 后端未开启 CRL 校验（CVE-2026-115881，CVSS 9.1）导致已吊销客户端证书仍可登录；Mbed TLS 后端一处长度笔误使被动监听者可解密会话；LibreSSL 旧版可绕过证书链深度限制。已在 GoAhead 6.1.1 修复。</li>
+<li><strong>评分理由</strong>：波及数亿嵌入式设备的底层 TLS 信任缺陷，可绕过证书吊销并泄露会话密钥，影响范围极广。</li>
+</ul>
+<h3 id="s4">3. Microsoft Authenticator 缺陷：零权限 Android 应用即可窃取工作账户令牌 【评分 88】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-10-27）</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html</li>
+<li><strong>摘要</strong>：CVE-2026-80097（CVSS 8.6，Microsoft 定级 Important）存在于 Android 版 Authenticator 的账号代理（AccountChooserActivity）组件中：任意无权限应用可冒充 Teams 等受信任应用骗取工作账户令牌，实测可获取读取/发送邮件、读写文件与日历的完整权限。已在 6.2606.4246 版本修复；微软称尚未发现野利用。</li>
+<li><strong>评分理由</strong>：零权限应用即可冒充受信应用骗取企业 M365 令牌，直接暴露邮箱/文件/日历全权，企业影响重大。</li>
+</ul>
+<h3 id="s5">4. Apple 将已遭利用的 CoreGraphics 0day 修复回移植至老款 iPhone/iPad 【评分 86】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-10-27）</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html</li>
+<li><strong>摘要</strong>：CVE-2026-86950（CVSS 8.8）为 CoreGraphics 越界写漏洞，处理特制文件可触发任意代码执行；苹果确认其已在「针对特定个人的高复杂度定向攻击」中被利用（Meta Product Security 发现）。苹果本周将修复回移植至 iOS/iPadOS 18.7.11，覆盖 iPhone XS/XR、多款 iPad 等老设备。</li>
+<li><strong>评分理由</strong>：真实定向攻击中已在野利用的 0day，且涉及主流移动生态，回移植凸显老设备暴露面，时效性高。</li>
+</ul>
+<h3 id="s6">5. ASOS 确认数据泄露：社交工程窃取员工凭证，客户 PII 暴露 【评分 82】</h3>
+<ul>
+<li><strong>来源</strong>：BleepingComputer（2026-10-27 更新确认）</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/asos-links-data-breach-to-social-engineering-attack-credential-theft/</li>
+<li><strong>摘要</strong>：英国时尚电商 ASOS 确认，攻击者冒充可信联系人通过社交工程获取员工登录凭证，并借此访问其使用的第三方客户沟通平台，导致客户全名、联系方式及部分非个人账号信息泄露（未涉及支付卡与密码）。自称 "Xuanye Group" 的团伙曾通过 App 推送「ASOS HACKED」施压。</li>
+<li><strong>评分理由</strong>：社交工程凭证窃取导致大量零售客户 PII 暴露，且为本周确认根因的知名品牌事件，影响面与时效性兼具。</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条候选新闻，选取 Top5，最高分 93 分。</p>
+<p><em>微信推送说明：当前企业微信 connector 未连接，推送通道不可用，本报告以本地文件交付；待通道恢复后将自动推送。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-10-27.html">← 前一天 2026-10-27</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,5 +1,18 @@
 [
  {
+  "date": "2026-10-28",
+  "url": "daily/daily_news_2026-10-28.html",
+  "title": "网络安全日报 2026-10-28",
+  "score": 93,
+  "cves": [
+   "CVE-2026-115881",
+   "CVE-2026-80097",
+   "CVE-2026-86950"
+  ],
+  "summary": "数据来源：The Hacker News、BleepingComputer、Hacker News（及关联原始报道交叉核验）",
+  "text": "数据来源：The Hacker News、BleepingComputer、Hacker News（及关联原始报道交叉核验） 补丁日状态：MSRC 2026Oct 标题为「October 2026 Security Updates」（正式发布，无 Early），CurrentReleaseDate 20261027 → 本月补丁板块已生成。 来源：The Hacker News（20261027） 原文链接：https://thehackernews.com/2026/10/cyberstrikeaiuses44aiagentsto.html 摘要：TrendAI 分析了三起针对日本组织的攻击环境，其中 \"CyberStrikeAI\" 框架将侦察、漏洞验证、利用、C2、持久化、数据窃取与报告拆分给 44 个协同 AI 智能体自动完成；10 月窗口内至少 16 家日本机构被纳入验证。这是首次披露多智能体 AI 端到端自主入侵的规模化实战。 评分理由：首次规模化实战的多智能体自主攻击框架，标志进攻性 AI 进入「工业化」阶段，新颖性与影响范围双高。 来源：Cyber Kendra / The Hacker News（20261027） 原文链接：https://www.cyberkendra.com/2026/10/criticalgoaheadflawacceptsrevokedmtlscertificates.html 摘要：FoxIO 的 Sébastien Féry 披露 GoAhead（运行于路由器、打印机、网关、工业控制器的嵌入式 Web 服务器，号称数亿设备）三处 TLS 缺陷：OpenSSL 后端未开启 CRL 校验（CVE2026115881，CVSS 9.1）导致已吊销客户端证书仍可登录；Mbed TLS 后端一处长度笔误使被动监听者可解密会话；LibreSSL 旧版可绕过证书链深度限制。已在 GoAhead 6.1.1 修复。 评分理由：波及数亿嵌入式设备的底层 TLS 信任缺陷，可绕过证书吊销并泄露会话密钥，影响范围极广。 来源：The Hacker News（20261027） 原文链接：https://thehackernews.com/2026/10/microsoftauthenticatorflawlet.html 摘要：CVE202680097（CVSS 8.6，Microsoft 定级 Important）存在于 Android 版 Authenticator 的账号代理（AccountChooserActivity）组件中：任意无权限应用可冒充 Teams 等受信任应用骗取工作账户令牌，实测可获取读取/发送邮件、读写文件与日历的完整权限。已在 6.2606.4246 版本修复；微软称尚未发现野利用。 评分理由：零权限应用即可冒充受信应用骗取企业 M365 令牌，直接暴露邮箱/文件/日历全权，企业影响重大。 来源：The Hacker News（20261027） 原文链接：https://thehackernews.com/2026/10/applebackportsfixforexploited.html 摘要：CVE202686950（CVSS 8.8）为 CoreGraphics 越界写漏洞，处理特制文件可触发任意代码执行；苹果确认其已在「针对特定个人的高复杂度定向攻击」中被利用（Meta Product Security 发现）。苹果本周将修复回移植至 iOS/iPadOS 18.7.11，覆盖 iPhone XS/XR、多款 iPad 等老设备。 评分理由：真实定向攻击中已在野利用的 0day，且涉及主流移动生态，回移植凸显老设备暴露面，时效性高。 来源：BleepingComputer（20261027 更新确认） 原文链接：https://www.bleepingcomputer.com/news/security/asoslinksdatabreachtosocialengineeringattackcredentialtheft/ 摘要：英国时尚电商 ASOS 确认，攻击者冒充可信联系人通过社交工程获取员工登录凭证，并借此访问其使用的第三方客户沟通平台，导致客户全名、联系方式及部分非个人账号信息泄露（未涉及支付卡与密码）。自称 \"Xuanye Group\" 的团伙曾通过 App 推送「ASOS HACKED」施压。 评分理由：社交工程凭证窃取导致大量零售客户 PII 暴露，且为本周确认根因的知名品牌事件，影响面与时效性兼具。 本次共筛选 15 条候选新闻，选取 Top5，最高分 93 分。 微信推送说明：当前企业微信 connector 未连接，推送通道不可用，本报告以本地文件交付；待通道恢复后将自动推送。"
+ },
+ {
   "date": "2026-10-27",
   "url": "daily/daily_news_2026-10-27.html",
   "title": "网络安全日报 2026-10-27",
