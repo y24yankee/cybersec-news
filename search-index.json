@@ -1,5 +1,19 @@
 [
  {
+  "date": "2026-10-29",
+  "url": "daily/daily_news_2026-10-29.html",
+  "title": "网络安全日报 2026-10-29",
+  "score": 93,
+  "cves": [
+   "CVE-2026-101767",
+   "CVE-2026-111497",
+   "CVE-2026-48356",
+   "CVE-2026-97631"
+  ],
+  "summary": "数据来源：The Hacker News、BleepingComputer、Hacker News（过去 24 小时内）；微软补丁数据来自 MSRC 公共 CVRF API（2026Oct，CurrentRelease 20261028）。",
+  "text": "数据来源：The Hacker News、BleepingComputer、Hacker News（过去 24 小时内）；微软补丁数据来自 MSRC 公共 CVRF API（2026Oct，CurrentRelease 20261028）。 评分：93 — 理由：两个漏洞均被确认在野利用，且 Brotli 为基础解码库，影响 91% 的云环境与大量 Node.js/多语言产品，影响面极广。 来源： The Hacker News 摘要： CISA 于 10 月 27 日将 Adobe Commerce/Magento 的 CVE202648356（PolyShell，CVSS 9.3，危险类型文件上传 RCE）与 Google Brotli 解码库的 CVE2026111497（Node2Shell/Broccoli2Shell，CVSS 9.2）列入已知被利用漏洞目录。Sansec 观察到攻击者借 PolyShell 攻陷数百家电商店铺注入恶意加载器；多家威胁情报厂商已捕获针对 CVE2026111497 的在野利用流量，目标为可解压攻击者控制 Brotli 流的服务。Wiz 称 91% 云环境存在易受该 Brotli 漏洞影响的资源。 原文链接： https://thehackernews.com/2026/10/adobecommercepolyshellattacksbreach.html 评分：90 — 理由：AI 首次公开展示自主发现并串联多平台漏洞、产出可运行利用链，标志漏洞利用能力的一次能力跃迁，具里程碑意义。 来源： The Hacker News 摘要： Anthropic 前沿红队披露，一个未发布的研究模型在受控环境下自主发现 Chrome、Safari、Android、Windows、Linux 中的多处缺陷，并将其串联为可用的概念验证利用：Chrome 链从 V8 内存损坏一路逃逸沙箱并运行代码；Safari 链关闭同源策略读取其他站点数据；Windows/Linux 链可在无需登录的情况下造成网络侧拒绝服务或提权。所有漏洞均已先行报送厂商并修复，Apple、Google 发布记录中已致谢 Anthropic/Claude。 原文链接： https://thehackernews.com/2026/10/anthropicsunreleasedaimodelchains.html 评分：89 — 理由：未认证 SQL 注入可链式 RCE、直击企业核心 ERP（财务/人事/采购数据），补丁发布后极短时间内即出现在野探测，时效性强。 来源： The Hacker News 摘要： Defused Cyber 称其 Oracle EBS 蜜罐于 10 月 27 日记录到针对 CVE2026101767（CVSS 9.8，Oracle Application Object Library 不当认证/未认证 SQL 注入链至 RCE）的探索性利用。Horizon3.ai 指出，攻击者可向 /OAHTML/AppsTCFServer 发送特制请求，以 APPS 数据库用户执行 SQL，进而以 EBS 应用账户运行系统命令，可读取或修改财务、薪资、HR、采购等数据。该漏洞已在 Oracle 上月关键补丁更新中修复，建议立即升级或移除相关 URL 允许列表。 原文链接： https://thehackernews.com/2026/10/hackerstargetcriticaloraclee.html 评分：87 — 理由：漏洞自 2010 年起潜伏、影响绝大多数服务器/数据中心固件，攻击窗口位于操作系统加载前的网络启动阶段，且尚无稳定修复版本，防御真空期长。 来源： The Hacker News 摘要： TianoCore（EDK II 维护方）于 10 月 22 日发布通告，披露 PXE 网络启动代码中的缓冲区溢出 CVE202697631（CVSS 9.5）。攻击者在目标机器网络启动时发送超过 504 字节的伪造错误/状态消息即可溢出固定缓冲区；虽简单利用仅导致启动挂起，但针对特定固件构建可植入代码，在 Secure Boot 等启动期防护生效前运行。该缺陷存在于 edk2stable202608 及更早版本，波及 AMI、Insyde、Phoenix 等主流固件及 RHEL/SUSE/Debian 的 edk2 包；目前修复已合入源码但尚无稳定发布版本，主要风险集中在需网络启动的服务器与数据中心设备。 原文链接： https://thehackernews.com/2026/10/critical16yearolduefiflawcanrun.html 评分：86 — 理由：2.6 万余台客户服务器受影响、客户 FX 交易账户被冒用下单、勒索软件与信息泄露双重威胁，现实业务与金融影响重大。 来源： The Hacker News 摘要： 日本 GMO Internet Group 旗下 Onamae.com Desktop Cloud（托管用于 FX 外汇交易的 Windows 桌面）遭第三方入侵，攻击者于 10 月 20 日植入恶意程序、窃取客户信息并索要约 5000 万美元（约 80 亿日元）赎金，GMO 拒绝支付。事件导致 OANDA Japan 等券商确认客户账户遭冒用登录并发生非本人交易，GMO 于 10 月 28 日启动最高 100 万美元的「网络犯罪悬赏」征集线索，攻击者还威胁对 70 余家证券/FX 机构的客户账户继续操纵、并据此前通告于 10 月 27 日中午发起勒索软件攻击。 原文链接： https://thehackernews.com/2026/10/japansgmooffers1millionbountyto.html 本次共筛选 15 条候选新闻，最高分 93 分。 微信推送说明：企业微信（WeCom）连接器当前不可用，本次按既定默认跳过实际发送，仅以本地文件交付本日报。"
+ },
+ {
   "date": "2026-10-28",
   "url": "daily/daily_news_2026-10-28.html",
   "title": "网络安全日报 2026-10-28",

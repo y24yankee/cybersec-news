@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-10-28T00:00:00Z</updated>
+  <updated>2026-10-29T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-10-29</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-29.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-29.html</id>
+    <updated>2026-10-29T00:00:00Z</updated>
+    <summary>数据来源：The Hacker News、BleepingComputer、Hacker News（过去 24 小时内）；微软补丁数据来自 MSRC 公共 CVRF API（2026Oct，CurrentRelease 20261028）。</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-10-28</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-28.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-10.html</id>
     <updated>2026-10-10T00:00:00Z</updated>
     <summary>每日自动检索 Hacker News / The Hacker News / BleepingComputer 等来源，按严重性、新颖性、影响范围、时效性评分筛选 Top5。补丁板块仅在微软正式 Patch Tuesday 发布后附加（见文末说明）。</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-10-09</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-09.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-09.html</id>
-    <updated>2026-10-09T00:00:00Z</updated>
-    <summary>数据来源：The Hacker News、BleepingComputer、Hacker News（及上述站点讨论指向的原始报道）</summary>
   </entry>
 </feed>
