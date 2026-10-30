@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-10-31 | 网络安全新闻中心</title>
+<meta name="description" content="每日自动聚合 Hacker News、The Hacker News、BleepingComputer 等来源，按严重性 / 新颖性 / 影响范围 / 时效性评分筛选 Top5；微软补丁日（Patch Tuesday）正式发布后附加独立补丁板块（不计入新闻评分与 Top5）。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-10-31">
+<meta property="og:description" content="每日自动聚合 Hacker News、The Hacker News、BleepingComputer 等来源，按严重性 / 新颖性 / 影响范围 / 时效性评分筛选 Top5；微软补丁日（Patch Tuesday）正式发布后附加独立补丁板块（不计入新闻评分与 Top5）。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-31.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-10-31">
+<meta name="twitter:description" content="每日自动聚合 Hacker News、The Hacker News、BleepingComputer 等来源，按严重性 / 新颖性 / 影响范围 / 时效性评分筛选 Top5；微软补丁日（Patch Tuesday）正式发布后附加独立补丁板块（不计入新闻评分与 Top5）。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-10-31</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">🔝 今日 Top5 新闻（按评分降序）</a></li>
+<li><a href="#s7">推送与统计</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>每日自动聚合 Hacker News、The Hacker News、BleepingComputer 等来源，按严重性 / 新颖性 / 影响范围 / 时效性评分筛选 Top5；微软补丁日（Patch Tuesday）正式发布后附加独立补丁板块（不计入新闻评分与 Top5）。</p>
+</blockquote>
+<hr />
+<h2 id="s1">🔝 今日 Top5 新闻（按评分降序）</h2>
+<h3 id="s2">1. 币安遭安全入侵：约 63 亿美元资产受影响，近 30 亿美元已被冻结</h3>
+<ul>
+<li><strong>评分：95 分</strong> — 影响规模极巨（涉加密资产巨头、数十亿美元量级），疑似朝鲜 TraderTraitor 国家级团伙，24 小时内持续发酵。</li>
+<li><strong>来源：</strong> The Hacker News / BleepingComputer / SecurityWeek</li>
+<li><strong>摘要：</strong> 币安称平台发生"安全事件"，约 63 亿美元资产受影响，Tether 与 Circle 已分别冻结约 15.67 亿与 8 亿 USDT。初步调查指向一名 DevOps 工程师笔记本被攻陷，攻击者可访问服务容器并提交未授权提现交易；币安表示无钱包私钥泄露证据，将由 SAFU 基金兜底损失。区块链分析将此次创纪录的加密盗窃与朝鲜黑客关联。</li>
+<li><strong>原文链接：</strong></li>
+<li>The Hacker News：https://thehackernews.com/2026/10/binance-suffers-security-breach.html</li>
+<li>BleepingComputer：https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/</li>
+</ul>
+<h3 id="s3">2. Drupal Commerce Core 高危授权绕过漏洞 CVE-2026-118539 已在野利用</h3>
+<ul>
+<li><strong>评分：92 分</strong> — 高危 0day 式在野利用、无需认证即可触及、影响 4.2 万+ 电商站点，直接冲击商家资金。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> Drupal 警告其 Commerce Core 模块存在"高度严重"的缺失授权漏洞 CVE-2026-118539（Drupal 自行评分 21/25，暂无 CVSS），攻击者可篡改订单状态、价格与优惠券，造成商家财务损失，且已被确认在野利用。受影响版本为 3.x 早于 3.3.13 及 2.x 早于 8.x-2.41，官方建议升级并审计近期订单。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html</li>
+</ul>
+<h3 id="s4">3. CISA 将 GitLab 10.0 分 RCE 与思科防火墙 DoS 漏洞纳入 KEV（11 月 1 日截止）</h3>
+<ul>
+<li><strong>评分：90 分</strong> — 两项均确认在野利用，其中 GitLab CVE-2026-97229 为无需认证的代码执行（CVSS 10.0），联邦限期紧迫。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> CISA 于 10 月 29 日将两个在野利用漏洞加入 KEV：GitLab CE/EE 的 CVE-2026-97229（整数溢出/正则编译缺陷，CVSS 10.0，未经认证即可在服务器执行任意代码）与 Cisco Secure Firewall ASA/FTD 的 CVE-2026-76418（未认证远程触发设备重载致 DoS，CVSS 8.6）。Alpine Linux 曾遭针对性探测，联邦机构须于 11 月 1 日前修复。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html</li>
+</ul>
+<h3 id="s5">4. Warp Panda（UNC5221）借 VMware ESX 零日 CVE-2026-41709 致盲审计日志</h3>
+<ul>
+<li><strong>评分：89 分</strong> — 国家级（疑似中国背景）团伙将低分漏洞武器化、针对美国法律行业，战术新颖（隐匿取证痕迹）。</li>
+<li><strong>来源：</strong> SecurityWeek / ThreatCluster（CrowdStrike 披露）</li>
+<li><strong>摘要：</strong> CrowdStrike 披露中国背景组织 Warp Panda（亦称 UNC5221 / Armory Castle）在 2026 年初将 VMware ESX 的 CVE-2026-41709（日志不充分，CVSS 2.7）作为零日利用，使已获取管理员权限的攻击者可执行未记录操作、削弱入侵审计可见性，攻击美国法律行业等目标。CISA 已于 10 月 28 日将其列入 KEV（联邦 11 月 11 日截止）。</li>
+<li><strong>原文链接：</strong> https://threatcluster.io/article/chinese-hackers-quietly-used-low-severity-esxi-logging-flaw--1009fdc6</li>
+</ul>
+<h3 id="s6">5. Hugging Face 恶意模型活动回潮：31 个仓库借 trust_remote_code 劫持 GPU 挖矿</h3>
+<ul>
+<li><strong>评分：88 分</strong> — AI 供应链投毒、借可信平台传播、覆盖 3.2 万次下载，新颖性强。</li>
+<li><strong>来源：</strong> SANS ISC Stormcast / Pluto Security</li>
+<li><strong>摘要：</strong> Pluto Security 追踪到 31 个伪装成 Qwen2 小模型的恶意 Hugging Face 仓库，加载时若启用 <code>trust_remote_code=True</code> 即运行其 Python 代码，安装无文件加密货币矿工、看门狗乃至反向 Shell，针对自托管推理（Xinference、GPUStack）的 GPU 主机。该活动在平台下架数日内即回潮，累计超 3.2 万次下载。</li>
+<li><strong>原文链接：</strong> https://pluto.security/blog/hugging-face-malware-campaign-load-mine/</li>
+</ul>
+<hr />
+<h2 id="s7">推送与统计</h2>
+<ul>
+<li>本次共筛选 <strong>15</strong> 条新闻（Hacker News / The Hacker News / BleepingComputer 三来源各候选，去重后取 Top5），<strong>最高分 95 分</strong>。</li>
+<li>微信推送：企业微信 connector 当前未连接，按既定默认跳过实际发送，本报告以本地文件交付。</li>
+</ul>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-10-30.html">← 前一天 2026-10-30</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

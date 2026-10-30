@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-10-30T00:00:00Z</updated>
+  <updated>2026-10-31T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-10-31</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-31.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-31.html</id>
+    <updated>2026-10-31T00:00:00Z</updated>
+    <summary>每日自动聚合 Hacker News、The Hacker News、BleepingComputer 等来源，按严重性 / 新颖性 / 影响范围 / 时效性评分筛选 Top5；微软补丁日（Patch Tuesday）正式发布后附加独立补丁板块（不计入新闻评分与 Top5）。</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-10-30</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-30.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-12.html</id>
     <updated>2026-10-12T00:00:00Z</updated>
     <summary>数据来源：Hacker News / The Hacker News / Bleeping Computer（过去 24 小时）。评分标准：严重性  新颖性  影响范围  时效性；补丁严重级别数据不计入新闻评分。</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-10-11</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-11.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-11.html</id>
-    <updated>2026-10-11T00:00:00Z</updated>
-    <summary>数据来源：Hacker News（news.ycombinator.com）、The Hacker News（thehackernews.com）、Bleeping Computer（bleepingcomputer.com）</summary>
   </entry>
 </feed>

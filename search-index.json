@@ -1,5 +1,19 @@
 [
  {
+  "date": "2026-10-31",
+  "url": "daily/daily_news_2026-10-31.html",
+  "title": "网络安全日报 2026-10-31",
+  "score": 95,
+  "cves": [
+   "CVE-2026-118539",
+   "CVE-2026-41709",
+   "CVE-2026-76418",
+   "CVE-2026-97229"
+  ],
+  "summary": "每日自动聚合 Hacker News、The Hacker News、BleepingComputer 等来源，按严重性 / 新颖性 / 影响范围 / 时效性评分筛选 Top5；微软补丁日（Patch Tuesday）正式发布后附加独立补丁板块（不计入新闻评分与 Top5）。",
+  "text": "每日自动聚合 Hacker News、The Hacker News、BleepingComputer 等来源，按严重性 / 新颖性 / 影响范围 / 时效性评分筛选 Top5；微软补丁日（Patch Tuesday）正式发布后附加独立补丁板块（不计入新闻评分与 Top5）。 评分：95 分 — 影响规模极巨（涉加密资产巨头、数十亿美元量级），疑似朝鲜 TraderTraitor 国家级团伙，24 小时内持续发酵。 来源： The Hacker News / BleepingComputer / SecurityWeek 摘要： 币安称平台发生\"安全事件\"，约 63 亿美元资产受影响，Tether 与 Circle 已分别冻结约 15.67 亿与 8 亿 USDT。初步调查指向一名 DevOps 工程师笔记本被攻陷，攻击者可访问服务容器并提交未授权提现交易；币安表示无钱包私钥泄露证据，将由 SAFU 基金兜底损失。区块链分析将此次创纪录的加密盗窃与朝鲜黑客关联。 原文链接： The Hacker News：https://thehackernews.com/2026/10/binancesufferssecuritybreach.html BleepingComputer：https://www.bleepingcomputer.com/news/security/binancelinks63billioncryptothefttocompromiseddevopslaptop/ 评分：92 分 — 高危 0day 式在野利用、无需认证即可触及、影响 4.2 万+ 电商站点，直接冲击商家资金。 来源： The Hacker News 摘要： Drupal 警告其 Commerce Core 模块存在\"高度严重\"的缺失授权漏洞 CVE2026118539（Drupal 自行评分 21/25，暂无 CVSS），攻击者可篡改订单状态、价格与优惠券，造成商家财务损失，且已被确认在野利用。受影响版本为 3.x 早于 3.3.13 及 2.x 早于 8.x2.41，官方建议升级并审计近期订单。 原文链接： https://thehackernews.com/2026/10/hackersactivelyexploithighly.html 评分：90 分 — 两项均确认在野利用，其中 GitLab CVE202697229 为无需认证的代码执行（CVSS 10.0），联邦限期紧迫。 来源： The Hacker News 摘要： CISA 于 10 月 29 日将两个在野利用漏洞加入 KEV：GitLab CE/EE 的 CVE202697229（整数溢出/正则编译缺陷，CVSS 10.0，未经认证即可在服务器执行任意代码）与 Cisco Secure Firewall ASA/FTD 的 CVE202676418（未认证远程触发设备重载致 DoS，CVSS 8.6）。Alpine Linux 曾遭针对性探测，联邦机构须于 11 月 1 日前修复。 原文链接： https://thehackernews.com/2026/10/cisaaddsactivelyexploitedgitlabrce.html 评分：89 分 — 国家级（疑似中国背景）团伙将低分漏洞武器化、针对美国法律行业，战术新颖（隐匿取证痕迹）。 来源： SecurityWeek / ThreatCluster（CrowdStrike 披露） 摘要： CrowdStrike 披露中国背景组织 Warp Panda（亦称 UNC5221 / Armory Castle）在 2026 年初将 VMware ESX 的 CVE202641709（日志不充分，CVSS 2.7）作为零日利用，使已获取管理员权限的攻击者可执行未记录操作、削弱入侵审计可见性，攻击美国法律行业等目标。CISA 已于 10 月 28 日将其列入 KEV（联邦 11 月 11 日截止）。 原文链接： https://threatcluster.io/article/chinesehackersquietlyusedlowseverityesxiloggingflaw1009fdc6 评分：88 分 — AI 供应链投毒、借可信平台传播、覆盖 3.2 万次下载，新颖性强。 来源： SANS ISC Stormcast / Pluto Security 摘要： Pluto Security 追踪到 31 个伪装成 Qwen2 小模型的恶意 Hugging Face 仓库，加载时若启用 trustremotecode=True 即运行其 Python 代码，安装无文件加密货币矿工、看门狗乃至反向 Shell，针对自托管推理（Xinference、GPUStack）的 GPU 主机。该活动在平台下架数日内即回潮，累计超 3.2 万次下载。 原文链接： https://pluto.security/blog/huggingfacemalwarecampaignloadmine/ 本次共筛选 15 条新闻（Hacker News / The Hacker News / BleepingComputer 三来源各候选，去重后取 Top5），最高分 95 分。 微信推送：企业微信 connector 当前未连接，按既定默认跳过实际发送，本报告以本地文件交付。"
+ },
+ {
   "date": "2026-10-30",
   "url": "daily/daily_news_2026-10-30.html",
   "title": "网络安全日报 2026-10-30",
