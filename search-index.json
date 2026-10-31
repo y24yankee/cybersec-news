@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-11-01",
+  "url": "daily/daily_news_2026-11-01.html",
+  "title": "网络安全日报 2026-11-01",
+  "score": 92,
+  "cves": [
+   "CVE-2026-111585"
+  ],
+  "summary": "采集时间：20261101 07:00（北京时间）｜数据窗口：过去约 24–48 小时（20261030  20261031）",
+  "text": "采集时间：20261101 07:00（北京时间）｜数据窗口：过去约 24–48 小时（20261030  20261031） 评分标准：严重性  新颖性  影响范围  时效性；补丁项不计入新闻评分、不进入 Top5。 评分：92 — 理由：区块链情报机构自身被入侵且疑由自主 AI 代理实施，客户含执法/金融机构，暴露的身份元数据可被精准钓鱼，新颖性与影响面兼具。 来源： The Hacker News（BleepingComputer 亦有报道） 摘要： 区块链分析公司 Chainalysis 披露，本月有外部攻击者在未经授权的情况下利用其内部系统与管理工具，访问了用户 ID、姓名、邮箱及组织角色标签等客户身份数据。公司称暂无迹象表明调查内容、明文密码、MFA 密钥或会话令牌遭泄露，并强调该事件与近期币安被盗无关；其客户群涵盖执法机构、政府与金融机构，暴露的「姓名+邮箱+角色」构成高保真钓鱼目标。 原文链接： https://thehackernews.com/2026/10/chainalysisconfirmsintrusioninto.html 评分：89 — 理由：远程控制信任模型被反转，恶意/被控主机可令控制端崩溃乃至（Windows）远程代码执行，无需密码、默认配置即可触发，冲击大量 MSP/IT 支持场景。 来源： The Hacker News（Hacker News 同期热议） 摘要： TeamViewer 修复了一个堆溢出漏洞（CVE2026111585，CVSS 8.8）：攻击者在远程会话中通过发送超大的屏幕尺寸值触发整数溢出，使控制端（viewer）内存分配过小，随后到达的屏幕数据越界写入。最低后果是令控制端 TeamViewer 会话崩溃；在 Windows 上研究人员已演示绕过系统漏洞利用防护、在控制端执行任意代码。该漏洞影响 15.83 之前的全平台客户端、便携版与 Android 远程控制应用，仅需用户接受会话即可触发，无需密码或额外点击。 原文链接： https://thehackernews.com/2026/10/teamviewerflawletsremotecomputers.html （厂商公告：https://www.teamviewer.com/en/resources/trustcenter/securitybulletins/tv20261011/） 评分：88 — 理由：AI 聊天会话被用作 RCE 载体并泄露私密对话，属新颖的「对话即攻击面」场景，影响全球 ChatGPT 用户。 来源： The Hacker News 摘要： 研究人员发现，一个经过特殊构造的「共享 ChatGPT 链接」可在打开者的会话上下文中执行攻击者控制的代码，并可能读取该用户的私密聊天内容。该问题将 AI 助手会话本身变成可被利用的攻击面，用户在没有主动运行任何脚本的情况下即面临代码执行与数据泄露风险。 原文链接： https://thehackernews.com/2026/10/asharedchatgptlinkcouldrun.html 评分：87 — 理由：AI 开发工具供应链投毒，开发者机器被植入持久 SSH 后门，关联 Cursor Marketplace 失陷，开发环境成为高危入口。 来源： The Hacker News 摘要： 一款官方的 Claude Code 扩展在 Cursor 扩展市场（Open VSX 注册表）被篡改为恶意版本，安装后会在开发者机器上植入持久化的 SSH 后门。该事件被追溯至 Cursor Marketplace 自身的失陷，表明 AI 编程工具生态的供应链正成为攻击者重点目标，受影响的开发者机器可能长期被远程控制。 原文链接： https://thehackernews.com/2026/10/officialclaudecodevscodeextension.html 评分：78 — 理由：互联网级威胁情报，攻击频次与规模显著上升、转向短时高频，对防御侧容量与响应提出新要求。 来源： The Hacker News 摘要： Cloudflare 发布 2026 年第三季度威胁情报：本季共缓解 1820 万次网络层 DDoS 攻击，较去年同期增长 38%，攻击形态呈现「更短、更高频」的脉冲式打击特征。报告还覆盖僵尸网络、僵尸流量来源与主要被利用的协议/服务，为企业评估防御基线提供量化参考。 原文链接： https://thehackernews.com/2026/10/cloudflarereports182millionnetwork.html The Hacker News：已成功抓取首页，本日报 5 条均来自其 20261030  1031 真实发布的文章（链接经首页核验存在）。 BleepingComputer：本站启用了 Cloudflare 浏览器挑战，本环境（WebFetch 与 curl）均被拦截，无法直接抓取首页；其中 Chainalysis 事件已由多家媒体确认 BC 亦有报道，故在来源中注明。其余 BC 原创条目因无法核验可访问链接，未纳入 Top5。 Hacker News：news.ycombinator.com 站点与 hn.algolia.com API 在本环境均不可达（历史一致），无法获取 HN 原生链接；本日报中以「Hacker News 同期热议」标注的相关条目，已改用其原始报道/厂商公告链接代表，确保可访问、不编造。 本次共筛选 14 条候选新闻，最高分 92 分。 注：微信（企业微信）推送通道当前未连接，本报告已生成本地 Markdown 文件，实际推送待通道就绪后发送。"
+ },
+ {
   "date": "2026-10-31",
   "url": "daily/daily_news_2026-10-31.html",
   "title": "网络安全日报 2026-10-31",
