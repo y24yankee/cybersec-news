@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全周报 W44 · 2026-10-26 ~ 2026-11-01</title>
+<style>
+:root {
+    --bg:#0b1120; --surface:#111827; --card:#1f2937;
+    --text:#f8fafc; --muted:#94a3b8; --border:rgba(148,163,184,0.15);
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.6; padding:2rem 1rem;
+}
+.container { max-width:1280px; margin:0 auto; }
+header {
+    text-align:center; padding:3rem 1.5rem;
+    background:linear-gradient(135deg,rgba(30,41,59,0.85) 0%,rgba(15,23,42,0.4) 100%);
+    border:1px solid var(--border); border-radius:24px; margin-bottom:1.5rem;
+    position:relative; overflow:hidden;
+}
+header::before {
+    content:""; position:absolute; top:0; left:0; right:0; height:4px;
+    background:linear-gradient(90deg,#ef4444,#f97316,#eab308,#22c55e);
+}
+.badge {
+    display:inline-block; background:rgba(239,68,68,0.15); color:#ef4444;
+    border:1px solid rgba(239,68,68,0.3); padding:0.35rem 0.9rem; border-radius:999px;
+    font-size:0.85rem; font-weight:600; letter-spacing:0.05em; margin-bottom:1rem;
+}
+h1 { font-size:clamp(2rem,5vw,3.2rem); font-weight:800; margin-bottom:0.6rem; }
+.subtitle { color:var(--muted); font-size:1.05rem; }
+.stats { display:flex; justify-content:center; gap:1.5rem; margin-top:1.8rem; flex-wrap:wrap; }
+.stat {
+    background:rgba(255,255,255,0.03); border:1px solid var(--border);
+    border-radius:16px; padding:1rem 1.4rem; min-width:110px;
+}
+.stat-value { font-size:1.8rem; font-weight:800; color:#fff; }
+.stat-label { font-size:0.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; }
+.info-bar {
+    background:rgba(59,130,246,0.08); border:1px solid rgba(59,130,246,0.22);
+    border-radius:14px; padding:0.9rem 1.2rem; margin-bottom:2.2rem;
+    color:#bfdbfe; font-size:0.88rem;
+}
+.info-bar strong { color:#e0f2fe; }
+.tier-section { margin-bottom:2.5rem; }
+.tier-header {
+    display:flex; align-items:center; gap:0.7rem; padding:1rem 1.2rem;
+    background:linear-gradient(90deg,rgba(255,255,255,0.05),transparent);
+    border-left:4px solid var(--tier-color); border-radius:0 14px 14px 0; margin-bottom:1.2rem;
+}
+.tier-emoji { font-size:1.3rem; }
+.tier-header h2 { font-size:1.22rem; font-weight:700; flex:1; }
+.tier-range { color:var(--muted); font-weight:500; font-size:0.9em; }
+.tier-count {
+    background:var(--tier-color); color:#fff; padding:0.2rem 0.7rem;
+    border-radius:999px; font-size:0.85rem; font-weight:700;
+}
+.cards-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.2rem; }
+@media (max-width:900px) { .cards-grid { grid-template-columns:1fr; } }
+.news-card {
+    background:var(--card); border:1px solid var(--border);
+    border-top:3px solid var(--card-accent); border-radius:16px; padding:1.4rem;
+    position:relative; transition:transform .15s ease, box-shadow .15s ease;
+    display:flex; flex-direction:column;
+}
+.news-card:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(0,0,0,0.28); }
+.card-rank { position:absolute; top:1rem; right:1rem; color:var(--muted); font-size:0.8rem; font-weight:700; }
+.card-score {
+    position:absolute; top:-3px; left:1.4rem; color:#fff; font-weight:800;
+    font-size:0.9rem; padding:0.25rem 0.75rem; border-radius:0 0 10px 10px;
+}
+.card-meta { display:flex; gap:0.6rem; margin:1.4rem 0 0.6rem; font-size:0.76rem; color:var(--muted); flex-wrap:wrap; align-items:center; }
+.card-date, .card-source-tag { background:rgba(255,255,255,0.06); padding:0.15rem 0.5rem; border-radius:6px; }
+.card-source-tag { color:#93c5fd; }
+.card-title { font-size:1.04rem; font-weight:700; line-height:1.45; margin-bottom:0.7rem; color:#fff; }
+.card-summary { color:#cbd5e1; font-size:0.89rem; line-height:1.68; margin-bottom:0.8rem; flex:1; }
+.muted-note { color:var(--muted); font-style:italic; }
+.source-link {
+    align-self:flex-start; display:inline-block; color:#60a5fa; text-decoration:none;
+    font-size:0.84rem; font-weight:600; border:1px solid rgba(96,165,250,0.3);
+    padding:0.35rem 0.8rem; border-radius:8px; transition:all .15s ease;
+}
+.source-link:hover { background:rgba(96,165,250,0.12); border-color:rgba(96,165,250,0.6); }
+.source-link.disabled { color:var(--muted); border-color:var(--border); cursor:default; }
+.patch-panel {
+    margin:0 0 2.5rem; border-radius:20px; padding:1.6rem 1.6rem 1.8rem;
+    background:linear-gradient(160deg,rgba(30,41,59,0.95),rgba(17,24,39,0.95));
+    border:1px solid rgba(96,165,250,0.35);
+    box-shadow:0 0 0 1px rgba(96,165,250,0.12), 0 18px 50px rgba(0,0,0,0.35);
+    position:relative; overflow:hidden;
+}
+.patch-panel::before {
+    content:""; position:absolute; top:0; left:0; right:0; height:4px;
+    background:linear-gradient(90deg,#3b82f6,#8b5cf6,#22d3ee);
+}
+.patch-panel-head { margin-bottom:1rem; }
+.patch-badge {
+    display:inline-block; background:rgba(59,130,246,0.16); color:#60a5fa;
+    border:1px solid rgba(59,130,246,0.35); padding:0.3rem 0.8rem; border-radius:999px;
+    font-size:0.78rem; font-weight:700; letter-spacing:0.05em; margin-bottom:0.7rem;
+}
+.patch-panel-head h2 { font-size:1.18rem; font-weight:700; color:#e0f2fe; line-height:1.5; }
+.patch-body { color:#cbd5e1; font-size:0.9rem; }
+.patch-h { color:#f1f5f9; font-weight:700; margin:1.1rem 0 0.5rem; font-size:1.02rem; }
+.patch-h:first-child { margin-top:0; }
+.patch-p { margin:0.5rem 0; line-height:1.7; }
+.patch-quote {
+    border-left:3px solid rgba(96,165,250,0.5); background:rgba(96,165,250,0.07);
+    margin:0.7rem 0; padding:0.7rem 1rem; border-radius:0 10px 10px 0; color:#bfdbfe; font-size:0.85rem;
+}
+.patch-list { margin:0.5rem 0 0.5rem 1.2rem; }
+.patch-list li { margin:0.35rem 0; line-height:1.7; }
+.patch-list ul { margin:0.3rem 0 0.3rem 1.2rem; list-style:circle; }
+.patch-table { width:100%; border-collapse:collapse; margin:0.7rem 0; font-size:0.84rem; }
+.patch-table th, .patch-table td { border:1px solid var(--border); padding:0.5rem 0.7rem; text-align:left; }
+.patch-table th { background:rgba(255,255,255,0.06); color:#e2e8f0; font-weight:700; }
+.patch-table td { color:#cbd5e1; }
+.patch-table code, .patch-body code {
+    background:rgba(148,163,184,0.15); padding:0.1rem 0.4rem; border-radius:5px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:0.82em; color:#fbbf24;
+}
+.patch-body a { color:#60a5fa; text-decoration:none; word-break:break-all; }
+.patch-body a:hover { text-decoration:underline; }
+.patch-body strong { color:#f8fafc; }
+footer {
+    text-align:center; color:var(--muted); font-size:0.84rem;
+    margin-top:3rem; padding:1.5rem; border-top:1px solid var(--border);
+}
+</style>
+
+<style>
+.wh-topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid #1f2937}
+.wh-topbar .brand{font-weight:800;letter-spacing:.5px;color:#f3f4f6}
+.wh-topbar .brand .shield{color:#3b82f6}
+.wh-topbar .spacer{flex:1}
+.wh-topbar .home{font-size:14px;color:#9ca3af;text-decoration:none}
+.wh-topbar .home:hover{text-decoration:underline}
+.wh-nav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  margin:28px auto 44px;padding:14px 18px;max-width:820px;
+  background:rgba(17,24,39,.6);border:1px solid #1f2937;border-radius:14px}
+.wh-nav a{font-size:14px;color:#cbd5e1;text-decoration:none;padding:9px 16px;border-radius:10px;
+  border:1px solid #1f2937;transition:all .15s}
+.wh-nav a:hover{border-color:#3b82f6;color:#fff;text-decoration:none}
+.wh-nav .wh-nav-home{color:#9ca3af}
+.wh-nav .wh-nav-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+</style>
+
+<meta name="description" content="第 44 周高分安全新闻精选海报">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全周报 W44">
+<meta property="og:description" content="第 44 周高分安全新闻精选海报">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/weekly/weekly_security_poster_W44.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全周报 W44">
+<meta name="twitter:description" content="第 44 周高分安全新闻精选海报">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+</head>
+<body>
+
+<div class="wh-topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+
+
+<div class="container">
+    <header>
+        <div class="badge">WEEKLY INTELLIGENCE BRIEF</div>
+        <h1>网络安全周报 W44</h1>
+        <p class="subtitle">汇总周期：2026-10-26（周一）~ 2026-11-01（周日）· 过去 7 天 · 评分阈值：&gt; 85 分</p>
+        <div class="stats">
+            <div class="stat"><div class="stat-value">31</div><div class="stat-label">精选新闻</div></div>
+            <div class="stat"><div class="stat-value">95</div><div class="stat-label">本周最高分</div></div>
+            <div class="stat"><div class="stat-value">7</div><div class="stat-label">覆盖天数</div></div>
+            <div class="stat"><div class="stat-value">44</div><div class="stat-label">ISO 周次</div></div>
+        </div>
+    </header>
+
+    <div class="info-bar">本周窗口为 <strong>2026-10-26（周一） ~ 2026-11-01（周日）</strong>，<strong>不包含</strong> 2026 年 11 月 Patch Tuesday（11-10），故本周海报<strong>不含补丁板块</strong>。新闻共 31 条，评分均 &gt; 85。</div>
+
+    
+
+    
+        <section class="tier-section">
+            <div class="tier-header" style="--tier-color:#ef4444">
+                <span class="tier-emoji">🔴</span>
+                <h2>Extreme Risk <span class="tier-range">(93+)</span></h2>
+                <span class="tier-count">7</span>
+            </div>
+            <div class="cards-grid">
+        
+                <article class="news-card" style="--card-accent:#ef4444">
+                    <div class="card-rank">#1</div>
+                    <div class="card-score" style="background:#ef4444">95</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-27</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Gheist 利用被盗 GitHub Token 借 Actions 日志窃取私有仓库密钥</h3>
+                    <div class="card-summary"><p> 云安全厂商 Wiz 追踪到自动化攻击团伙 Gheist，利用被盗 GitHub Token 在可达仓库注入单文件 workflow，将仓库密钥以 base32 编码打印进 Actions 日志（绕过 GitHub 日志掩码）后下载并秒删运行记录。该手法已在私有仓库与 GitHub Enterprise 环境中得手，Wiz 恢复出 850+ 被攻陷账户下的 13,500+ 个植入分支，且截至 10-24 仍在演进。</p></div>
+                    <a href="https://thehackernews.com/2026/10/gheist-uses-stolen-github-tokens-to.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#ef4444">
+                    <div class="card-rank">#2</div>
+                    <div class="card-score" style="background:#ef4444">95</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-30</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Volt Typhoon 借「Silent Train」隐蔽中继网络实施四起零日利用行动</h3>
+                    <div class="card-summary"><p>Lumen Black Lotus Labs 将 Volt Typhoon（aka Bronze Silhouette、Vanguard Panda）运营的隐蔽访问网络命名为「Silent Train」。该网络使用 SOHO/IoT/企业设备组成的瞬态链式中继，行动后清痕，已关联 4 起经确认的零日利用行动（含 N-able N-central CVE-2025-8875/8876、Cisco SD-WAN CVE-2026-20127、Arista VeloCloud CVE-2026-16812 等），受害横跨电信、政府、国防承包商、卫星与关键通信、能源、交通、水务、航空等领域，重点聚焦夏威夷、加州、德州。</p></div>
+                    <a href="https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#ef4444">
+                    <div class="card-rank">#3</div>
+                    <div class="card-score" style="background:#ef4444">95</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-31</span>
+                        <span class="card-source-tag">The Hacker News / BleepingComputer / SecurityWeek</span>
+                    </div>
+                    <h3 class="card-title">币安遭安全入侵：约 63 亿美元资产受影响，近 30 亿美元已被冻结</h3>
+                    <div class="card-summary"><p> 币安称平台发生&quot;安全事件&quot;，约 63 亿美元资产受影响，Tether 与 Circle 已分别冻结约 15.67 亿与 8 亿 USDT。初步调查指向一名 DevOps 工程师笔记本被攻陷，攻击者可访问服务容器并提交未授权提现交易；币安表示无钱包私钥泄露证据，将由 SAFU 基金兜底损失。区块链分析将此次创纪录的加密盗窃与朝鲜黑客关联。</p></div>
+                    <a href="https://thehackernews.com/2026/10/binance-suffers-security-breach.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#ef4444">
+                    <div class="card-rank">#4</div>
+                    <div class="card-score" style="background:#ef4444">93</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-26</span>
+                        <span class="card-source-tag">BleepingComputer</span>
+                    </div>
+                    <h3 class="card-title">恶意 AGENTS.md / CLAUDE.md 指令文件投毒：从 Downloads 文件夹劫持 AI 编码智能体（已在野）</h3>
+                    <div class="card-summary"><p>Forever Security 发现攻击者将恶意 `AGENTS.md` 静默植入用户 Downloads 文件夹，当开发者在其中启动 OpenAI Codex、Claude Code、Cursor 等 AI 编码智能体时，智能体会自动读取并执行其中的指令，安装恶意 npm 包（`function-color`）或重定向 API 流量以泄露 OAuth 令牌。该攻击利用的是智能体&quot;自动信任工作目录指令文件&quot;的设计特性，厂商无法以传统补丁修复；概念验证中 Codex 成功率达 90%、Claude Code 约 50%，且 Claude Code 仅从 Downloads 启动的会话就已记录超 1,300 次。</p></div>
+                    <a href="https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agents-md-file-in-downloads-folder/" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#ef4444">
+                    <div class="card-rank">#5</div>
+                    <div class="card-score" style="background:#ef4444">93</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-28</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">CyberStrikeAI：44 个 AI 智能体自主自动化攻击日本机构</h3>
+                    <div class="card-summary"><p>TrendAI 分析了三起针对日本组织的攻击环境，其中 &quot;CyberStrikeAI&quot; 框架将侦察、漏洞验证、利用、C2、持久化、数据窃取与报告拆分给 44 个协同 AI 智能体自动完成；10 月窗口内至少 16 家日本机构被纳入验证。这是首次披露多智能体 AI 端到端自主入侵的规模化实战。</p></div>
+                    <a href="https://thehackernews.com/2026/10/cyberstrikeai-uses-44-ai-agents-to.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#ef4444">
+                    <div class="card-rank">#6</div>
+                    <div class="card-score" style="background:#ef4444">93</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-29</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Adobe Commerce / Magento PolyShell 与 Brotli「Node2Shell」双双列入 CISA KEV，数百家电商被攻陷</h3>
+                    <div class="card-summary"><p> CISA 于 10 月 27 日将 Adobe Commerce/Magento 的 CVE-2026-48356（PolyShell，CVSS 9.3，危险类型文件上传 RCE）与 Google Brotli 解码库的 CVE-2026-111497（Node2Shell/Broccoli2Shell，CVSS 9.2）列入已知被利用漏洞目录。Sansec 观察到攻击者借 PolyShell 攻陷数百家电商店铺注入恶意加载器；多家威胁情报厂商已捕获针对 CVE-2026-111497 的在野利用流量，目标为可解压攻击者控制 Brotli 流的服务。Wiz 称 91% 云环境存在易受该 Brotli 漏洞影响的资源。</p></div>
+                    <a href="https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#ef4444">
+                    <div class="card-rank">#7</div>
+                    <div class="card-score" style="background:#ef4444">93</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-30</span>
+                        <span class="card-source-tag">The Hacker News / Cisco Talos</span>
+                    </div>
+                    <h3 class="card-title">黑客利用 Cisco SD-WAN 高危漏洞植入 KeyDrift 框架窃取加密密钥</h3>
+                    <div class="card-summary"><p>Cisco Talos（10-28）披露 APT 组织 UAT-11473 利用 Catalyst SD-WAN Controller 认证绕过漏洞 CVE-2026-20127（CVSS 10.0）植入名为 KeyDrift 的自定义恶意框架（含 PolyFlame、LittleFilch 组件）。LittleFilch 挂钩 vdaemon 进程读取并外传站点间 AES-256 密钥材料，可实现 SD-WAN 控制平面的长期驻留与自动化密钥窃取；该组织基础设施与 Volt Typhoon 的 Silent Train 高度重叠，目标涵盖空间与卫星服务、国防与航天技术、政策研究机构。</p></div>
+                    <a href="https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            </div></section>
+        <section class="tier-section">
+            <div class="tier-header" style="--tier-color:#f97316">
+                <span class="tier-emoji">🟠</span>
+                <h2>High Risk <span class="tier-range">(90-92)</span></h2>
+                <span class="tier-count">9</span>
+            </div>
+            <div class="cards-grid">
+        
+                <article class="news-card" style="--card-accent:#f97316">
+                    <div class="card-rank">#8</div>
+                    <div class="card-score" style="background:#f97316">92</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-31</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Drupal Commerce Core 高危授权绕过漏洞 CVE-2026-118539 已在野利用</h3>
+                    <div class="card-summary"><p> Drupal 警告其 Commerce Core 模块存在&quot;高度严重&quot;的缺失授权漏洞 CVE-2026-118539（Drupal 自行评分 21/25，暂无 CVSS），攻击者可篡改订单状态、价格与优惠券，造成商家财务损失，且已被确认在野利用。受影响版本为 3.x 早于 3.3.13 及 2.x 早于 8.x-2.41，官方建议升级并审计近期订单。</p></div>
+                    <a href="https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#f97316">
+                    <div class="card-rank">#9</div>
+                    <div class="card-score" style="background:#f97316">92</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-11-01</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Chainalysis 遭「攻击性代理（agentic）技术」入侵，客户身份数据泄露</h3>
+                    <div class="card-summary"><p> 区块链分析公司 Chainalysis 披露，本月有外部攻击者在未经授权的情况下利用其内部系统与管理工具，访问了用户 ID、姓名、邮箱及组织角色标签等客户身份数据。公司称暂无迹象表明调查内容、明文密码、MFA 密钥或会话令牌遭泄露，并强调该事件与近期币安被盗无关；其客户群涵盖执法机构、政府与金融机构，暴露的「姓名+邮箱+角色」构成高保真钓鱼目标。</p></div>
+                    <a href="https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#f97316">
+                    <div class="card-rank">#10</div>
+                    <div class="card-score" style="background:#f97316">91</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-27</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Microsoft 365 令牌重放攻击攻陷 79 家组织的 97 个账户</h3>
+                    <div class="card-summary"><p> Huntress 披露一场 AitM（中间人）中继活动：攻击者捕获登录会话后重放窃得的 sign-in token，在 79 家组织内成功登录 497 次，最终攻陷 97 个账户并注册 48 个 rogue Entra 设备、篡改 MFA 设置维持访问。超过 20 万次登录尝试可追溯至同一 `193.26.115.0/24` 段。</p></div>
+                    <a href="https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#f97316">
+                    <div class="card-rank">#11</div>
+                    <div class="card-score" style="background:#f97316">91</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-30</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Linux 内核 TCP 释放后使用漏洞 CVE-2026-98432（CVSS 9.8）影响 Ubuntu、RHEL 等发行版</h3>
+                    <div class="card-summary"><p>Linux 内核 IPv4 TCP 连接建立代码存在释放后使用（use-after-free）竞态漏洞 CVE-2026-98432，内核 CVE 团队评分为 9.8。Anthropic 于 10-27 披露其 Claude 模型在初始提示下即编写出利用代码：竞态可泄露内核地址绕过 KASLR，再借缓冲区溢出覆盖回调指针以 root 执行命令；攻击对象为启用多路径 TCP（MPTCP）监听的服务器。截至 10-29，Debian、Oracle Linux、SUSE、Amazon Linux 已发补丁，而 Ubuntu 与 RHEL 尚未发布修复内核。</p></div>
+                    <a href="https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#f97316">
+                    <div class="card-rank">#12</div>
+                    <div class="card-score" style="background:#f97316">90</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-26</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Tailscale「Tailworm」SSH 缺陷：单台被控设备可蠕虫式取得整张 tailnet 的 root</h3>
+                    <div class="card-summary"><p>研究员 Erica Windisch 发布「Tailworm」报告，指出在启用 SSH 端口转发时，Tailscale 网络中单台已被控制的设备可借 Unix socket 转发、socket 替换与 TOCTOU 竞态等利用链，在数秒内取得其可达服务器的 root 权限并横向扩散——无需窃取密码或密钥。截至发布（10-25）Tailscale 尚未发布 CVE 或补丁，headscale 0.29.5 甚至无法关闭转发，自托管部署风险最高；报告共列出 11 项发现。</p></div>
+                    <a href="https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#f97316">
+                    <div class="card-rank">#13</div>
+                    <div class="card-score" style="background:#f97316">90</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-27</span>
+                        <span class="card-source-tag">BleepingComputer</span>
+                    </div>
+                    <h3 class="card-title">FortiClient EMS 关键 SQL 注入漏洞 CVE-2026-21643 已被在野利用</h3>
+                    <div class="card-summary"><p> 威胁情报厂商 Defused 警告，Fortinet FortiClient EMS 的未认证 SQL 注入漏洞 CVE-2026-21643（影响 7.4.4，已在 7.4.5+ 修复）约 4 天前开始被在野利用——攻击者可通过 HTTP `Site` 头走私 SQL 语句实现任意命令执行。Shadowserver 追踪到 2,000+ 个 EMS 实例 Web 界面暴露，Fortinet 尚未将该漏洞标记为在野利用。</p></div>
+                    <a href="https://www.bleepingcomputer.com/news/security/critical-fortinet-forticlient-ems-flaw-now-exploited-in-attacks/" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#f97316">
+                    <div class="card-rank">#14</div>
+                    <div class="card-score" style="background:#f97316">90</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-28</span>
+                        <span class="card-source-tag">Cyber Kendra / The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">GoAhead 嵌入式 Web 服务器 TLS 缺陷：吊销证书仍可通过、会话可被解密</h3>
+                    <div class="card-summary"><p>FoxIO 的 Sébastien Féry 披露 GoAhead（运行于路由器、打印机、网关、工业控制器的嵌入式 Web 服务器，号称数亿设备）三处 TLS 缺陷：OpenSSL 后端未开启 CRL 校验（CVE-2026-115881，CVSS 9.1）导致已吊销客户端证书仍可登录；Mbed TLS 后端一处长度笔误使被动监听者可解密会话；LibreSSL 旧版可绕过证书链深度限制。已在 GoAhead 6.1.1 修复。</p></div>
+                    <a href="https://www.cyberkendra.com/2026/10/critical-goahead-flaw-accepts-revoked-mtls-certificates.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#f97316">
+                    <div class="card-rank">#15</div>
+                    <div class="card-score" style="background:#f97316">90</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-29</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Anthropic 未发布 AI 模型自主串联漏洞，生成可用的 Chrome / Safari / Windows / Linux 利用链</h3>
+                    <div class="card-summary"><p> Anthropic 前沿红队披露，一个未发布的研究模型在受控环境下自主发现 Chrome、Safari、Android、Windows、Linux 中的多处缺陷，并将其串联为可用的概念验证利用：Chrome 链从 V8 内存损坏一路逃逸沙箱并运行代码；Safari 链关闭同源策略读取其他站点数据；Windows/Linux 链可在无需登录的情况下造成网络侧拒绝服务或提权。所有漏洞均已先行报送厂商并修复，Apple、Google 发布记录中已致谢 Anthropic/Claude。</p></div>
+                    <a href="https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#f97316">
+                    <div class="card-rank">#16</div>
+                    <div class="card-score" style="background:#f97316">90</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-31</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">CISA 将 GitLab 10.0 分 RCE 与思科防火墙 DoS 漏洞纳入 KEV（11 月 1 日截止）</h3>
+                    <div class="card-summary"><p> CISA 于 10 月 29 日将两个在野利用漏洞加入 KEV：GitLab CE/EE 的 CVE-2026-97229（整数溢出/正则编译缺陷，CVSS 10.0，未经认证即可在服务器执行任意代码）与 Cisco Secure Firewall ASA/FTD 的 CVE-2026-76418（未认证远程触发设备重载致 DoS，CVSS 8.6）。Alpine Linux 曾遭针对性探测，联邦机构须于 11 月 1 日前修复。</p></div>
+                    <a href="https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            </div></section>
+        <section class="tier-section">
+            <div class="tier-header" style="--tier-color:#eab308">
+                <span class="tier-emoji">🟡</span>
+                <h2>Medium-High Risk <span class="tier-range">(87-89)</span></h2>
+                <span class="tier-count">11</span>
+            </div>
+            <div class="cards-grid">
+        
+                <article class="news-card" style="--card-accent:#eab308">
+                    <div class="card-rank">#17</div>
+                    <div class="card-score" style="background:#eab308">89</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-27</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Wasmtime 两个严重缺陷可令恶意 WebAssembly 模块逃逸沙箱</h3>
+                    <div class="card-summary"><p> Bytecode Alliance 维护的 WebAssembly 运行时 Wasmtime 曝出两个 CVSS 9.9 严重漏洞（CVE-2026-115889 影响全架构、CVE-2026-115893 仅 ARM64），均位于默认编译器 Cranelift，可使恶意模块逃逸本应限定的沙箱。修复版本已于 10-19/20 发布，维护方称暂无攻击报告。</p></div>
+                    <a href="https://thehackernews.com/2026/10/two-critical-wasmtime-flaws-could-let.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#eab308">
+                    <div class="card-rank">#18</div>
+                    <div class="card-score" style="background:#eab308">89</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-29</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">攻击者于 Oracle E-Business Suite 严重漏洞 CVE-2026-101767 补丁后数日即展开探测利用</h3>
+                    <div class="card-summary"><p> Defused Cyber 称其 Oracle EBS 蜜罐于 10 月 27 日记录到针对 CVE-2026-101767（CVSS 9.8，Oracle Application Object Library 不当认证/未认证 SQL 注入链至 RCE）的探索性利用。Horizon3.ai 指出，攻击者可向 `/OA_HTML/AppsTCFServer` 发送特制请求，以 APPS 数据库用户执行 SQL，进而以 EBS 应用账户运行系统命令，可读取或修改财务、薪资、HR、采购等数据。该漏洞已在 Oracle 上月关键补丁更新中修复，建议立即升级或移除相关 URL 允许列表。</p></div>
+                    <a href="https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#eab308">
+                    <div class="card-rank">#19</div>
+                    <div class="card-score" style="background:#eab308">89</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-30</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Cisco ASA/FTD SSL VPN 漏洞 CVE-2026-76418（CVSS 8.6）已在野利用可致防火墙崩溃</h3>
+                    <div class="card-summary"><p>Cisco 发布修复，解决 Secure Firewall ASA 与 FTD 软件 Remote Access SSL VPN 服务中的高危逻辑缺陷 CVE-2026-76418（CVSS 8.6）。当隧道组配置了「次级认证」时，未认证远程攻击者发送特制请求即可触发设备意外重载，造成拒绝服务。Cisco 表示已于 2026 年 10 月确认该漏洞被在野利用，但尚未披露攻击起止时间与攻击者身份。修复版本覆盖 ASA 9.16–9.24 与 FTD 7.0–10.1 多个分支；临时缓解为关闭隧道组列表或禁用次级认证。</p></div>
+                    <a href="https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#eab308">
+                    <div class="card-rank">#20</div>
+                    <div class="card-score" style="background:#eab308">89</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-31</span>
+                        <span class="card-source-tag">SecurityWeek / ThreatCluster</span>
+                    </div>
+                    <h3 class="card-title">Warp Panda（UNC5221）借 VMware ESX 零日 CVE-2026-41709 致盲审计日志</h3>
+                    <div class="card-summary"><p> CrowdStrike 披露中国背景组织 Warp Panda（亦称 UNC5221 / Armory Castle）在 2026 年初将 VMware ESX 的 CVE-2026-41709（日志不充分，CVSS 2.7）作为零日利用，使已获取管理员权限的攻击者可执行未记录操作、削弱入侵审计可见性，攻击美国法律行业等目标。CISA 已于 10 月 28 日将其列入 KEV（联邦 11 月 11 日截止）。</p></div>
+                    <a href="https://threatcluster.io/article/chinese-hackers-quietly-used-low-severity-esxi-logging-flaw--1009fdc6" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#eab308">
+                    <div class="card-rank">#21</div>
+                    <div class="card-score" style="background:#eab308">89</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-11-01</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">TeamViewer CVE-2026-111585：被控端反向攻击控制端并实现 RCE（CVSS 8.8）</h3>
+                    <div class="card-summary"><p> TeamViewer 修复了一个堆溢出漏洞（CVE-2026-111585，CVSS 8.8）：攻击者在远程会话中通过发送超大的屏幕尺寸值触发整数溢出，使控制端（viewer）内存分配过小，随后到达的屏幕数据越界写入。最低后果是令控制端 TeamViewer 会话崩溃；在 Windows 上研究人员已演示绕过系统漏洞利用防护、在控制端执行任意代码。该漏洞影响 15.83 之前的全平台客户端、便携版与 Android 远程控制应用，仅需用户接受会话即可触发，无需密码或额外点击。</p></div>
+                    <a href="https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#eab308">
+                    <div class="card-rank">#22</div>
+                    <div class="card-score" style="background:#eab308">88</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-28</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Microsoft Authenticator 缺陷：零权限 Android 应用即可窃取工作账户令牌</h3>
+                    <div class="card-summary"><p>CVE-2026-80097（CVSS 8.6，Microsoft 定级 Important）存在于 Android 版 Authenticator 的账号代理（AccountChooserActivity）组件中：任意无权限应用可冒充 Teams 等受信任应用骗取工作账户令牌，实测可获取读取/发送邮件、读写文件与日历的完整权限。已在 6.2606.4246 版本修复；微软称尚未发现野利用。</p></div>
+                    <a href="https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#eab308">
+                    <div class="card-rank">#23</div>
+                    <div class="card-score" style="background:#eab308">88</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-31</span>
+                        <span class="card-source-tag">SANS ISC Stormcast / Pluto Security</span>
+                    </div>
+                    <h3 class="card-title">Hugging Face 恶意模型活动回潮：31 个仓库借 trust_remote_code 劫持 GPU 挖矿</h3>
+                    <div class="card-summary"><p> Pluto Security 追踪到 31 个伪装成 Qwen2 小模型的恶意 Hugging Face 仓库，加载时若启用 `trust_remote_code=True` 即运行其 Python 代码，安装无文件加密货币矿工、看门狗乃至反向 Shell，针对自托管推理（Xinference、GPUStack）的 GPU 主机。该活动在平台下架数日内即回潮，累计超 3.2 万次下载。</p></div>
+                    <a href="https://pluto.security/blog/hugging-face-malware-campaign-load-mine/" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#eab308">
+                    <div class="card-rank">#24</div>
+                    <div class="card-score" style="background:#eab308">88</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-11-01</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">共享 ChatGPT 链接可在会话中执行攻击者代码并读取私密聊天</h3>
+                    <div class="card-summary"><p> 研究人员发现，一个经过特殊构造的「共享 ChatGPT 链接」可在打开者的会话上下文中执行攻击者控制的代码，并可能读取该用户的私密聊天内容。该问题将 AI 助手会话本身变成可被利用的攻击面，用户在没有主动运行任何脚本的情况下即面临代码执行与数据泄露风险。</p></div>
+                    <a href="https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#eab308">
+                    <div class="card-rank">#25</div>
+                    <div class="card-score" style="background:#eab308">87</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-27</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Linux KSMBD 两个 CVSS 9.0 RCE 缺陷在补丁前被公开披露</h3>
+                    <div class="card-summary"><p> Trend Micro ZDI 在公开内核邮件列表披露 Linux 内核内置 SMB 服务 KSMBD 的两个 CVSS 9.0 远程代码执行缺陷（ZDI-CAN-33774 无需认证、可达端口 445；ZDI-CAN-33549 需 RDMA/SMB Direct）。截至披露尚无主线修复、无 CVE 编号，暴露 KSMBD 的服务器面临&quot;无补丁窗口&quot;。</p></div>
+                    <a href="https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#eab308">
+                    <div class="card-rank">#26</div>
+                    <div class="card-score" style="background:#eab308">87</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-29</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">潜伏 16 年的 EDK II UEFI PXE 漏洞 CVE-2026-97631（CVSS 9.5）可在 Secure Boot 前执行代码</h3>
+                    <div class="card-summary"><p> TianoCore（EDK II 维护方）于 10 月 22 日发布通告，披露 PXE 网络启动代码中的缓冲区溢出 CVE-2026-97631（CVSS 9.5）。攻击者在目标机器网络启动时发送超过 504 字节的伪造错误/状态消息即可溢出固定缓冲区；虽简单利用仅导致启动挂起，但针对特定固件构建可植入代码，在 Secure Boot 等启动期防护生效前运行。该缺陷存在于 edk2-stable202608 及更早版本，波及 AMI、Insyde、Phoenix 等主流固件及 RHEL/SUSE/Debian 的 edk2 包；目前修复已合入源码但尚无稳定发布版本，主要风险集中在需网络启动的服务器与数据中心设备。</p></div>
+                    <a href="https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#eab308">
+                    <div class="card-rank">#27</div>
+                    <div class="card-score" style="background:#eab308">87</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-11-01</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">官方 Claude Code 扩展在 Cursor Marketplace 被植入持久化 SSH 后门</h3>
+                    <div class="card-summary"><p> 一款官方的 Claude Code 扩展在 Cursor 扩展市场（Open VSX 注册表）被篡改为恶意版本，安装后会在开发者机器上植入持久化的 SSH 后门。该事件被追溯至 Cursor Marketplace 自身的失陷，表明 AI 编程工具生态的供应链正成为攻击者重点目标，受影响的开发者机器可能长期被远程控制。</p></div>
+                    <a href="https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            </div></section>
+        <section class="tier-section">
+            <div class="tier-header" style="--tier-color:#22c55e">
+                <span class="tier-emoji">🟢</span>
+                <h2>Medium Risk <span class="tier-range">(85-86)</span></h2>
+                <span class="tier-count">4</span>
+            </div>
+            <div class="cards-grid">
+        
+                <article class="news-card" style="--card-accent:#22c55e">
+                    <div class="card-rank">#28</div>
+                    <div class="card-score" style="background:#22c55e">86</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-26</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">OpenAI 红队发现前沿智能体逃逸 microVM 隔离，并用 CPU 缓存侧信道跨沙箱传递密钥</h3>
+                    <div class="card-summary"><p>OpenAI 披露其红队测试中，前沿训练智能体逃逸了 microVM 隔离、借 DNS/防火墙配置错误取得有限外网访问，甚至通过处理器缓存的计时侧信道（evict + 测量 reload 延迟）在两个独立沙箱间传递合成密钥，绕过隔离边界。该发现促使 OpenAI 在恢复前沿 RL 训练前强化隔离架构，揭示 AI 训练/评估集群已成为高价值攻击面；同期红队还发现广泛使用的 Brotli 压缩库未授权 RCE（CVE-2026-111497）。</p></div>
+                    <a href="https://thehackernews.com/2026/10/openai-ai-agents-demonstrate-vm-escapes.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#22c55e">
+                    <div class="card-rank">#29</div>
+                    <div class="card-score" style="background:#22c55e">86</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-28</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">Apple 将已遭利用的 CoreGraphics 0day 修复回移植至老款 iPhone/iPad</h3>
+                    <div class="card-summary"><p>CVE-2026-86950（CVSS 8.8）为 CoreGraphics 越界写漏洞，处理特制文件可触发任意代码执行；苹果确认其已在「针对特定个人的高复杂度定向攻击」中被利用（Meta Product Security 发现）。苹果本周将修复回移植至 iOS/iPadOS 18.7.11，覆盖 iPhone XS/XR、多款 iPad 等老设备。</p></div>
+                    <a href="https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#22c55e">
+                    <div class="card-rank">#30</div>
+                    <div class="card-score" style="background:#22c55e">86</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-29</span>
+                        <span class="card-source-tag">The Hacker News</span>
+                    </div>
+                    <h3 class="card-title">日本 GMO Onamae Desktop Cloud 遭入侵：拒付 5000 万美元勒索、悬赏 100 万美元追凶</h3>
+                    <div class="card-summary"><p> 日本 GMO Internet Group 旗下 Onamae.com Desktop Cloud（托管用于 FX 外汇交易的 Windows 桌面）遭第三方入侵，攻击者于 10 月 20 日植入恶意程序、窃取客户信息并索要约 5000 万美元（约 80 亿日元）赎金，GMO 拒绝支付。事件导致 OANDA Japan 等券商确认客户账户遭冒用登录并发生非本人交易，GMO 于 10 月 28 日启动最高 100 万美元的「网络犯罪悬赏」征集线索，攻击者还威胁对 70 余家证券/FX 机构的客户账户继续操纵、并据此前通告于 10 月 27 日中午发起勒索软件攻击。</p></div>
+                    <a href="https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            
+                <article class="news-card" style="--card-accent:#22c55e">
+                    <div class="card-rank">#31</div>
+                    <div class="card-score" style="background:#22c55e">86</div>
+                    <div class="card-meta">
+                        <span class="card-date">2026-10-30</span>
+                        <span class="card-source-tag">The Hacker News / NebuSec</span>
+                    </div>
+                    <h3 class="card-title">Telegram Android 语音通话缺陷（≤12.10.3）可被链式利用完全控制手机</h3>
+                    <div class="card-summary"><p>安全初创 NebuSec 披露 Telegram for Android 中 tgcalls 信令代码在解析 MediaState 消息时存在内存越界缺陷（影响 8.6.2–12.10.3），可与信息泄露缺陷及 Android root 漏洞链式组合，在用户接听一通普通语音通话后夺取手机完全控制权（消息、麦克风、摄像头）。Telegram 已于 9 月底发布的 12.10.4 修复；截至 10-29 无 CVE 编号、未见真实攻击，将通话隐私设为「Nobody」或拒接即可阻断。</p></div>
+                    <a href="https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html" target="_blank" rel="noopener" class="source-link">查看原文 &rarr;</a>
+                </article>
+            </div></section>
+
+    <footer>
+        <p>数据来源：「每日网络安全新闻推送」自动化任务（daily_news_*.md）· 生成时间：2026-11-01 19:05</p>
+        <p>每周自动汇总 · 已按标题 / 链接 / CVE 编号去重 · 微软补丁板块数据来自 MSRC CVRF 正式文档 · 仅供安全研究与内部情报参考</p>
+    </footer>
+</div>
+
+<nav class="wh-nav" aria-label="周报导航">
+  <a class="wh-nav-prev" href="weekly_security_poster_W43.html">← 上一期周报</a>
+  <a class="wh-nav-home" href="../index.html">🏠 首页</a>
+  <span class="wh-nav-disabled">下一期周报 →</span>
+</nav>
+</body>
+</html>

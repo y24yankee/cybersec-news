@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-11-01T00:00:00Z</updated>
+  <updated>2026-11-02T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-11-02</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-02.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-02.html</id>
+    <updated>2026-11-02T00:00:00Z</updated>
+    <summary>采集时间：20261102 07:00（北京时间）｜来源：The Hacker News、BleepingComputer、Hacker News 及关联厂商/媒体公告</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-11-01</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-01.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-14.html</id>
     <updated>2026-10-14T00:00:00Z</updated>
     <summary>数据来源：Hacker News / The Hacker News / BleepingComputer 等公开安全媒体（过去 24 小时）；微软补丁板块数据来自 MSRC CVRF 2026Oct 文档真实解析。</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-10-13</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-13.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-13.html</id>
-    <updated>2026-10-13T00:00:00Z</updated>
-    <summary>数据来源：The Hacker News、BleepingComputer、Hacker News（三来源检索，过去 24 小时）</summary>
   </entry>
 </feed>

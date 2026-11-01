@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-02 | 网络安全新闻中心</title>
+<meta name="description" content="采集时间：20261102 07:00（北京时间）｜来源：The Hacker News、BleepingComputer、Hacker News 及关联厂商/媒体公告">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-02">
+<meta property="og:description" content="采集时间：20261102 07:00（北京时间）｜来源：The Hacker News、BleepingComputer、Hacker News 及关联厂商/媒体公告">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-02.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-02">
+<meta name="twitter:description" content="采集时间：20261102 07:00（北京时间）｜来源：The Hacker News、BleepingComputer、Hacker News 及关联厂商/媒体公告">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-02</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">今日 Top5 新闻</a></li>
+<li><a href="#s7">来源采集说明</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>采集时间：2026-11-02 07:00（北京时间）｜来源：The Hacker News、BleepingComputer、Hacker News 及关联厂商/媒体公告
+评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性；补丁严重级别数据不计入新闻评分、不进入 Top5。</p>
+</blockquote>
+<h2 id="s1">今日 Top5 新闻</h2>
+<h3 id="s2">1. Polymarket 交易员因第三方脚本被劫持损失约 270 万美元【评分 92】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：预测市场平台 Polymarket 页面加载的第三方前端分析脚本（DebugBear）被攻击者劫持，在已登录用户的浏览器中执行恶意代码，导致约 270 万美元客户资金被盗。攻击通过篡改 CDN 托管的第三方脚本实现，Polymarket 正以更严格的 CSP、版本固定（pinned versions）与沙箱化重建第三方脚本防线。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html</li>
+<li><strong>评分理由</strong>：供应链/第三方脚本劫持直接造成大额资金损失、影响广泛金融用户，新颖性强。</li>
+</ul>
+<h3 id="s3">2. NetamLoader 恶意软件以 .NET 注入瞄准亚洲政府 Windows 10 系统【评分 90】</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（Kaspersky 研究）</li>
+<li><strong>摘要</strong>：Kaspersky 发现名为 NetamLoader 的加载器，通过 .NET 注入进入隔离 AppDomain 周期拉取并执行 XAML 指令，专门针对一款面向政府定制的 Windows 10 版本（疑似 Windows 10 中国政府版）发起攻击，目前已在亚洲发现受害者。该活动显示出明确的国家级定向意图。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/netamloader-malware-targets-government.html</li>
+<li><strong>评分理由</strong>：国家级 APT 定向政府系统、采用 .NET 注入新手法，严重性高。</li>
+</ul>
+<h3 id="s4">3. Amadeus 订位系统遭入侵，六大亚洲航司逾 18 万乘客预订数据暴露【评分 88】</h3>
+<ul>
+<li><strong>来源</strong>：BleepingComputer（经 NetEase/163 转载）；BreachNews 综合报道</li>
+<li><strong>摘要</strong>：航空技术巨头 Amadeus 的旅客服务系统被未授权方利用系统账户凭据长期访问（窗口长达三年：2023-08 至 2026-09），波及日本航空（约 9.2 万客户）、全日空、国泰、大韩、韩亚及马来西亚航空等，合计逾 18 万条预订/乘客记录暴露，部分含护照号等敏感信息。根因为其旅行预订展示环境漏洞。</li>
+<li><strong>原文链接</strong>：https://www.163.com/dy/article/LAM0RTR60511A5GF.html</li>
+<li><strong>评分理由</strong>：单一供应商凭据失陷横向波及数百家航司，影响范围大、持续三年，是供应链风险典型案例。</li>
+</ul>
+<h3 id="s5">4. 日本 GMO 互联网集团遭疑似朝鲜关联组织攻击，FX 云服务被入侵【评分 86】</h3>
+<ul>
+<li><strong>来源</strong>：联合新闻（Yonhap，经 news.jkn.co.kr）；共同社（Kyodo）</li>
+<li><strong>摘要</strong>：日本 IT 巨头 GMO Internet Group 确认其外汇自动交易云服务「Onamae.com Desktop Cloud」遭攻击，疑似朝鲜关联黑客组织所为（攻击者披露站点 IP 与朝方历史所用一致，但含多国伪装痕迹）。攻击者声称渗透约 2.7 万台服务器与 PC、窃取客户信息并索要 100 万美元；GMO 拒绝支付并反向悬赏 100 万美元征集线索。</li>
+<li><strong>原文链接</strong>：https://news.jkn.co.kr/editions/english/post/1064036</li>
+<li><strong>评分理由</strong>：朝鲜关联组织针对金融基础设施、出现勒索与悬赏对抗，时效性强（今日披露）。</li>
+</ul>
+<h3 id="s6">5. Northflank 云平台遭入侵，客户 AI API 密钥被解密并滥用【评分 84】</h3>
+<ul>
+<li><strong>来源</strong>：BleepingComputer（经 InYourGeek 综合报道）；Northflank 事件页</li>
+<li><strong>摘要</strong>：云应用托管平台 Northflank 于 10 月 30 日披露入侵事件，要求所有客户假定其环境变量已被解密并立即轮换密钥；随后多名客户报告平台上存储的 AI 服务商 API 密钥遭未授权使用（LLMjacking）。该事件被 Wiz 归入「Black October」AI 开发者平台攻击潮（至少 9 起同类事件）。</li>
+<li><strong>原文链接</strong>：https://inyourgeek.com/en/articles/2026-11-01-northflank-pirate-des-cles-d-api-ia-de-ses</li>
+<li><strong>评分理由</strong>：云托管平台凭据大规模失陷、AI 密钥被滥用，影响广大开发者，凸显 AI 平台供应链风险。</li>
+</ul>
+<hr />
+<h2 id="s7">来源采集说明</h2>
+<ul>
+<li>The Hacker News、BreachNews 直链对自动化访问返回 Cloudflare 挑战页（HTTP 403），属反爬机制，<strong>在常规浏览器中可正常打开</strong>，链接均来自真实文章。</li>
+<li>BleepingComputer 本环境仍受 Cloudflare 拦截（与历史一致），其报道内容经 NetEase（163.com）、InYourGeek 等可访问的二次来源交叉核验后引用。</li>
+<li>Hacker News 官网与 Algolia API 本环境不可达（与历史一致）；本日报以 THN/BC 及关联厂商/媒体公告为主要信源，HN 热议话题已并入主流媒体原发报道覆盖。</li>
+<li>已主动排除近三日（10-31、11-01）Top5 中已出现的条目（Binance 63 亿、Drupal Commerce、GitLab/Cisco ASA KEV、VMware ESX、Hugging Face、Chainalysis、TeamViewer、共享 ChatGPT 链接 RCE、Claude Code Cursor 后门、Cloudflare DDoS 等），避免连日重复。</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 15 条候选新闻，最高分 92 分。</strong></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-01.html">← 前一天 2026-11-01</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
