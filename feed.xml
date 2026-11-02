@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-11-02T00:00:00Z</updated>
+  <updated>2026-11-03T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-11-03</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-03.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-03.html</id>
+    <updated>2026-11-03T00:00:00Z</updated>
+    <summary>来源采集说明：BleepingComputer 受 Cloudflare 拦截、Hacker News 站点/Algolia API 在本运行环境不可达，故今日新闻以央视新闻、WIRED、Tom's Hardware / Cisco Talos、太平洋科技、CNCERT / 安全牛等可访问来源为主。以下 5 条原文链接</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-11-02</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-02.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-15.html</id>
     <updated>2026-10-15T00:00:00Z</updated>
     <summary>每日自动推送 · 评分筛选 Top5 新闻 + 微软补丁安全级别（Patch Tuesday）独立板块</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-10-14</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-14.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-14.html</id>
-    <updated>2026-10-14T00:00:00Z</updated>
-    <summary>数据来源：Hacker News / The Hacker News / BleepingComputer 等公开安全媒体（过去 24 小时）；微软补丁板块数据来自 MSRC CVRF 2026Oct 文档真实解析。</summary>
   </entry>
 </feed>
