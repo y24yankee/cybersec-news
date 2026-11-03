@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-04 | 网络安全新闻中心</title>
+<meta name="description" content="自动抓取并评分自 The Hacker News、Bleeping Computer、Hacker News 过去 24–48 小时的安全新闻，按「严重性  新颖性  影响范围  时效性」筛选出当日最值得关注的 5 条（补丁数据不计入新闻评分）。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-04">
+<meta property="og:description" content="自动抓取并评分自 The Hacker News、Bleeping Computer、Hacker News 过去 24–48 小时的安全新闻，按「严重性  新颖性  影响范围  时效性」筛选出当日最值得关注的 5 条（补丁数据不计入新闻评分）。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-04.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-04">
+<meta name="twitter:description" content="自动抓取并评分自 The Hacker News、Bleeping Computer、Hacker News 过去 24–48 小时的安全新闻，按「严重性  新颖性  影响范围  时效性」筛选出当日最值得关注的 5 条（补丁数据不计入新闻评分）。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-04</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. Red Hat 修复 9.8 分 Linux 内核 TCP 远程代码执行漏洞（CVE-2026-98432）</a></li>
+<li><a href="#s2">2. FBI 将币安 63 亿美元加密货币失窃归因朝鲜黑客（史上最大加密劫案）</a></li>
+<li><a href="#s3">3. Google 捣毁 130 万台 Android TV 盒子组成的 XCPE 僵尸网络（供应链后门）</a></li>
+<li><a href="#s4">4. Barracuda 两漏洞可链式组合绕过授权并获取 root（CVE-2026-116606 / CVE-2026-111560）</a></li>
+<li><a href="#s5">5. Chainstack 生产系统遭 AI 驱动攻击，客户数据与密码哈希泄露</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>自动抓取并评分自 The Hacker News、Bleeping Computer、Hacker News 过去 24–48 小时的安全新闻，按「严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性」筛选出当日最值得关注的 5 条（补丁数据不计入新闻评分）。</p>
+</blockquote>
+<hr />
+<h2 id="s1">1. Red Hat 修复 9.8 分 Linux 内核 TCP 远程代码执行漏洞（CVE-2026-98432）</h2>
+<ul>
+<li><strong>评分：95 / 100</strong></li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html</li>
+<li><strong>摘要：</strong> Linux 内核 IPv4 TCP 代码中存在一处自 4.4 版本起便存在的释放后使用（use-after-free）漏洞，可被远程、未授权攻击者触发并实现远程代码执行，Linux 内核团队与 Red Hat 均将其评为 CVSS 9.8（Critical）。Red Hat 已为 RHEL 8/9/10 发布修复内核，而 Ubuntu 针对三个最新 LTS 版本的修复目前仍停留在可选测试通道、尚无正式更新时间表，大量暴露的 Linux 主机面临窗口期风险。</li>
+</ul>
+<h2 id="s2">2. FBI 将币安 63 亿美元加密货币失窃归因朝鲜黑客（史上最大加密劫案）</h2>
+<ul>
+<li><strong>评分：93 / 100</strong></li>
+<li><strong>来源：</strong> Bleeping Computer</li>
+<li><strong>原文链接：</strong> https://bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop</li>
+<li><strong>摘要：</strong> 币安确认约 63 亿美元加密资产被盗，溯源指向一名 DevOps 工程师被攻陷的笔记本，攻击者在访问服务容器后提交了未授权提现交易；区块链分析机构 TRM 与 Chainalysis 高度确信由朝鲜国家背景团伙 TraderTraitor（Lazarus/APT38）实施，使其成为有记录以来最大的加密货币失窃案（约为 2025 年 Bybit 案的 4 倍）。稳定币发行方已冻结约 27 亿美元，但攻击者仍掌控约 24 亿美元无法被冻结的资产。</li>
+</ul>
+<h2 id="s3">3. Google 捣毁 130 万台 Android TV 盒子组成的 XCPE 僵尸网络（供应链后门）</h2>
+<ul>
+<li><strong>评分：92 / 100</strong></li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/google-disrupts-13-million-device.html</li>
+<li><strong>摘要：</strong> Google 联合执法机构打掉了由逾 130 万台 Android TV 机顶盒组成的 XCPE 僵尸网络，并高度确信设备厂商 Videostrong（深圳）在多年间、跨多品牌产品中故意预置名为 x.cpe 的后门并出售给犯罪团伙使用。后门仍固化在设备中、用户无法自行清除，被用于广告欺诈与将家庭网络流量作为代理转发；Google 通过法律手段接管了控制域名及十余个经此后门投放的恶意家族的控制域。</li>
+</ul>
+<h2 id="s4">4. Barracuda 两漏洞可链式组合绕过授权并获取 root（CVE-2026-116606 / CVE-2026-111560）</h2>
+<ul>
+<li><strong>评分：90 / 100</strong></li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html</li>
+<li><strong>摘要：</strong> Barracuda 披露两个可链式利用的漏洞：预授权授权绕过 CVE-2026-116606（CVSS 9.3）与命令注入 CVE-2026-111560（CVSS 8.6），组合后可绕过授权控制并以 root 权限接管受影响设备。受影响产品覆盖 Email Security Gateway、WAF、应用交付控制器（ADC）、Web Security Gateway 等多款安全网关，利用需能访问设备管理接口，但一旦得手危害极大。</li>
+</ul>
+<h2 id="s5">5. Chainstack 生产系统遭 AI 驱动攻击，客户数据与密码哈希泄露</h2>
+<ul>
+<li><strong>评分：88 / 100</strong></li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/chainstack-reports-production-systems.html</li>
+<li><strong>摘要：</strong> 区块链基础设施提供商 Chainstack 披露其部分生产基础设施遭未授权访问，事件被评估为上周曝光的一起大规模「AI 驱动」攻击行动的一部分，攻击者通过第三方组件先侵入开发环境，再横向升级突破生产环境并获取客户数据与密码哈希。公司于 10 月 31 日检测并切断了攻击路径，目前正加固系统，该事件凸显 AI 自动化攻击对供应链与上游客体的规模化威胁。</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 15 条候选新闻（三来源各取代表性条目），取评分最高的 5 条，最高分 95 分。</strong></p>
+<hr />
+<h3 id="s6">📌 微软补丁日提示（Patch Tuesday）</h3>
+<p>经查询 MSRC 官方更新列表（<code>/cvrf/v3.0/updates</code>），<strong>当前暂无 <code>2026-Nov</code> 正式条目</strong>（最新仍为 <code>2026-Oct</code> 的 "October 2026 Security Updates"），即 11 月补丁尚未以正式 "Security Updates" 名义发布，故本日报<strong>不生成补丁严重级别板块</strong>。</p>
+<ul>
+<li><strong>距下次补丁日约还有 6 天</strong>：2026 年 11 月补丁日 = 太平洋时间 11 月 10 日（周二）10:00 ≈ 北京时间 11 月 11 日（周三）凌晨 1–2 点。</li>
+<li>待 MSRC 出现标题为正式 <strong>"[Month] [Year] Security Updates"</strong>（不含 "Early"）的 <code>2026-Nov</code> 条目后，将在本日报文末追加独立的补丁严重级别板块（统计 Critical/Important/Moderate/Low 分级、提取 CVSS≥9.0 清单及在野利用状态），该板块不进入 Top5 评分。</li>
+</ul>
+<blockquote>
+<p>注：企业微信推送通道当前不可用（connector 未连接），本次仅生成本地文件交付，未执行实际推送。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-03.html">← 前一天 2026-11-03</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

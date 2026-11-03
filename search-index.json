@@ -1,5 +1,18 @@
 [
  {
+  "date": "2026-11-04",
+  "url": "daily/daily_news_2026-11-04.html",
+  "title": "网络安全日报 2026-11-04",
+  "score": 95,
+  "cves": [
+   "CVE-2026-111560",
+   "CVE-2026-116606",
+   "CVE-2026-98432"
+  ],
+  "summary": "自动抓取并评分自 The Hacker News、Bleeping Computer、Hacker News 过去 24–48 小时的安全新闻，按「严重性  新颖性  影响范围  时效性」筛选出当日最值得关注的 5 条（补丁数据不计入新闻评分）。",
+  "text": "自动抓取并评分自 The Hacker News、Bleeping Computer、Hacker News 过去 24–48 小时的安全新闻，按「严重性  新颖性  影响范围  时效性」筛选出当日最值得关注的 5 条（补丁数据不计入新闻评分）。 评分：95 / 100 来源： The Hacker News 原文链接： https://thehackernews.com/2026/11/redhatpatches98ratedlinuxtcprce.html 摘要： Linux 内核 IPv4 TCP 代码中存在一处自 4.4 版本起便存在的释放后使用（useafterfree）漏洞，可被远程、未授权攻击者触发并实现远程代码执行，Linux 内核团队与 Red Hat 均将其评为 CVSS 9.8（Critical）。Red Hat 已为 RHEL 8/9/10 发布修复内核，而 Ubuntu 针对三个最新 LTS 版本的修复目前仍停留在可选测试通道、尚无正式更新时间表，大量暴露的 Linux 主机面临窗口期风险。 评分：93 / 100 来源： Bleeping Computer 原文链接： https://bleepingcomputer.com/news/security/binancelinks63billioncryptothefttocompromiseddevopslaptop 摘要： 币安确认约 63 亿美元加密资产被盗，溯源指向一名 DevOps 工程师被攻陷的笔记本，攻击者在访问服务容器后提交了未授权提现交易；区块链分析机构 TRM 与 Chainalysis 高度确信由朝鲜国家背景团伙 TraderTraitor（Lazarus/APT38）实施，使其成为有记录以来最大的加密货币失窃案（约为 2025 年 Bybit 案的 4 倍）。稳定币发行方已冻结约 27 亿美元，但攻击者仍掌控约 24 亿美元无法被冻结的资产。 评分：92 / 100 来源： The Hacker News 原文链接： https://thehackernews.com/2026/11/googledisrupts13milliondevice.html 摘要： Google 联合执法机构打掉了由逾 130 万台 Android TV 机顶盒组成的 XCPE 僵尸网络，并高度确信设备厂商 Videostrong（深圳）在多年间、跨多品牌产品中故意预置名为 x.cpe 的后门并出售给犯罪团伙使用。后门仍固化在设备中、用户无法自行清除，被用于广告欺诈与将家庭网络流量作为代理转发；Google 通过法律手段接管了控制域名及十余个经此后门投放的恶意家族的控制域。 评分：90 / 100 来源： The Hacker News 原文链接： https://thehackernews.com/2026/11/barracudaflawscouldbechainedto.html 摘要： Barracuda 披露两个可链式利用的漏洞：预授权授权绕过 CVE2026116606（CVSS 9.3）与命令注入 CVE2026111560（CVSS 8.6），组合后可绕过授权控制并以 root 权限接管受影响设备。受影响产品覆盖 Email Security Gateway、WAF、应用交付控制器（ADC）、Web Security Gateway 等多款安全网关，利用需能访问设备管理接口，但一旦得手危害极大。 评分：88 / 100 来源： The Hacker News 原文链接： https://thehackernews.com/2026/11/chainstackreportsproductionsystems.html 摘要： 区块链基础设施提供商 Chainstack 披露其部分生产基础设施遭未授权访问，事件被评估为上周曝光的一起大规模「AI 驱动」攻击行动的一部分，攻击者通过第三方组件先侵入开发环境，再横向升级突破生产环境并获取客户数据与密码哈希。公司于 10 月 31 日检测并切断了攻击路径，目前正加固系统，该事件凸显 AI 自动化攻击对供应链与上游客体的规模化威胁。 本次共筛选 15 条候选新闻（三来源各取代表性条目），取评分最高的 5 条，最高分 95 分。 经查询 MSRC 官方更新列表（/cvrf/v3.0/updates），当前暂无 2026Nov 正式条目（最新仍为 2026Oct 的 \"October 2026 Security Updates\"），即 11 月补丁尚未以正式 \"Security Updates\" 名义发布，故本日报不生成补丁严重级别板块。 距下次补丁日约还有 6 天：2026 年 11 月补丁日 = 太平洋时间 11 月 10 日（周二）10:00 ≈ 北京时间 11 月 11 日（周三）凌晨 1–2 点。 待 MSRC 出现标题为正式 \"[Month] [Year] Security Updates\"（不含 \"Early\"）的 2026Nov 条目后，将在本日报文末追加独立的补丁严重级别板块（统计 Critical/Important/Moderate/Low 分级、提取 CVSS≥9.0 清单及在野利用状态），该板块不进入 Top5 评分。 注：企业微信推送通道当前不可用（connector 未连接），本次仅生成本地文件交付，未执行实际推送。"
+ },
+ {
   "date": "2026-11-03",
   "url": "daily/daily_news_2026-11-03.html",
   "title": "网络安全日报 2026-11-03",
