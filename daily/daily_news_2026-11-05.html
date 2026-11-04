@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-05 | 网络安全新闻中心</title>
+<meta name="description" content="采集时间：20261105 07:00（北京时间）｜评分维度：严重性  新颖性  影响范围  时效性（补丁数据不计入新闻评分）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-05">
+<meta property="og:description" content="采集时间：20261105 07:00（北京时间）｜评分维度：严重性  新颖性  影响范围  时效性（补丁数据不计入新闻评分）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-05.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-05">
+<meta name="twitter:description" content="采集时间：20261105 07:00（北京时间）｜评分维度：严重性  新颖性  影响范围  时效性（补丁数据不计入新闻评分）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-05</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">Top 5 重大新闻</a></li>
+<li><a href="#s7">来源采集说明</a></li>
+<li><a href="#s8">候选池（本次共筛选 15 条，按评分降序节选）</a></li>
+<li><a href="#s9">微软补丁状态提醒</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>采集时间：2026-11-05 07:00（北京时间）｜评分维度：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性（补丁数据不计入新闻评分）</p>
+</blockquote>
+<h2 id="s1">Top 5 重大新闻</h2>
+<h3 id="s2">1. Debian / Ubuntu APT 包管理器中间人缺陷可让攻击者以 root 执行代码</h3>
+<ul>
+<li><strong>评分：96</strong>（评分理由：影响最主流 Linux 发行版的包供应链根基，且触发条件默认开启，危害远超单点漏洞）</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> APT（Debian/Ubuntu 的默认包管理器）被曝高危缺陷 CVE-2026-109518：处于下载链路中间人位置的攻击者（如恶意镜像、代理）可借 HTTP 重定向与瞬时错误诱导 APT 在重试下载时，将已校验的合法包替换为恶意包，从而在目标主机以 root 权限执行任意代码。Debian 与 Ubuntu 已于 11 月 4 日放出修复版本（Ubuntu 22.04/24.04/26.04/26.10 等），自 Debian 12、Ubuntu 22.04 起 APT 默认开启重试（Acquire::Retries），因此默认即受影响；该缺陷由 Max Justicz 报告，Ubuntu 按 CVSS 4.0 7.7 评为 High。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html</li>
+</ul>
+<h3 id="s3">2. CISA 确认攻击者正利用 WordPress 核心升级窗口漏洞（CVE-2026-119977）部署后门</h3>
+<ul>
+<li><strong>评分：93</strong>（评分理由：无认证即可在海量 WordPress 站点（约四成互联网网站）实现 RCE，且已被在野利用并进入 KEV，联邦修复期限迫近）</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> CISA 于 11 月 4 日将 WordPress 核心漏洞 CVE-2026-119977（CVSS 8.1，TOCTOU 竞态条件）纳入已知被利用漏洞（KEV）目录，原因是已发现活跃利用。该漏洞利用升级期间可预测的、Web 可访问的暂存路径，使未认证攻击者可在全量核心升级窗口执行任意代码；补丁于 10 月底发布，CISA 要求联邦机构在 11 月 6 日前完成修复。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html</li>
+</ul>
+<h3 id="s4">3. 谷歌 11 月安卓安全公告修复无需交互的严重 RCE 漏洞（CVE-2026-58868），含 200+ 项修复</h3>
+<ul>
+<li><strong>评分：92</strong>（评分理由：影响 Android 14–17 数十亿设备、无需用户交互即可远程执行代码，月度公告体量极大）</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 谷歌 11 月安卓安全公告修复了 200 余个漏洞，其中 CVE-2026-58868 为严重级别、零点击远程代码执行缺陷，源于 FrameDecoder.cpp 中 onOutputReceived 函数的堆缓冲区溢出（越界写），影响 Android 14 至 17，安全补丁级别 2026-11-01 起推送。截至 11 月 4 日谷歌未报告实际利用，该漏洞也未进入 CISA KEV。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/google-patches-critical-android-flaw.html</li>
+</ul>
+<h3 id="s5">4. APT29 关联黑客劫持网页分析脚本，向 iOS / Android 用户投递定制化漏洞利用</h3>
+<ul>
+<li><strong>评分：91</strong>（评分理由：俄罗斯国家级 APT 将可信供应链（网页分析脚本）武器化实施大规模水坑攻击，针对移动端零点击利用）</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 俄罗斯关联的 APT29 被指发起大规模水坑（watering hole）行动：通过入侵合法网站、搭建仿冒域名，并向网页分析（analytics）脚本注入载荷，使访问受陷站点的移动用户在无感知情况下被分析设备特征并投递针对 iOS / Android 的定制化漏洞利用。该手法将"可信第三方脚本"这一普遍存在的供应链路径武器化，对企业移动设备 fleet 管理提出更高要求。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html</li>
+</ul>
+<h3 id="s6">5. Xen 虚拟化层两处缺陷（XSA-523）允许恶意虚拟机读写同宿主机任意其他虚拟机内存</h3>
+<ul>
+<li><strong>评分：90</strong>（评分理由：跨虚拟机内存越权可击穿云/虚拟化隔离边界，影响所有 Xen 4.6 及以上版本，无临时缓解措施）</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> Xen 项目披露 XSA-523（CVE-2026-102703、CVE-2026-102704）：grant copy 操作在批量复制同内存页时错误复用权限检查，使一个恶意客户虚拟机可读取并写入同宿主机上其他虚拟机（含默认拥有全部权限的 dom0）的内存。所有 Xen 4.6 及以上版本受影响，补丁已于 11 月 3 日放出且无已知缓解方案；该问题由 Anthropic 利用 Claude 模型发现、Ada Logics 的 Stephan Lipp 验证，XCP-ng 与 Qubes OS 均已发布修复。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html</li>
+</ul>
+<hr />
+<h2 id="s7">来源采集说明</h2>
+<ul>
+<li><strong>The Hacker News（thehackernews.com）</strong>：本次主要可访问来源，首页 16 篇 11 月文章均成功抓取并核验直链。</li>
+<li><strong>BleepingComputer（bleepingcomputer.com）</strong>：本环境经 WebFetch/curl 均返回 Cloudflare 质询页（"Just a moment..."），自动化访问被拦截；其 11 月 3–4 日头条（如 Barracuda 越权链式提权、英国学校 3AM 勒索）已纳入候选池评估，因无法核验独立文章 URL 未进入 Top5。</li>
+<li><strong>Hacker News（news.ycombinator.com）</strong>：官方站点及 Algolia API 在本沙箱不可达（历史一致）；其社区讨论指向的同源事件已通过主流媒体原始报道交叉覆盖，未单列重复条目。</li>
+</ul>
+<h2 id="s8">候选池（本次共筛选 15 条，按评分降序节选）</h2>
+<table>
+<thead>
+<tr>
+<th>评分</th>
+<th>新闻</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>96</td>
+<td>Debian/Ubuntu APT 中间人缺陷 CVE-2026-109518</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>93</td>
+<td>WordPress 核心 CVE-2026-119977 在野利用（KEV）</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>92</td>
+<td>安卓 11 月公告 CVE-2026-58868 零点击 RCE</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>91</td>
+<td>APT29 劫持网页分析脚本投递移动端利用</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>90</td>
+<td>Xen XSA-523 跨虚拟机内存越权</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>89</td>
+<td>亲中黑客借搜狗输入法 DNS 劫持部署 DarkVigil 后门</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>88</td>
+<td>Rails 严重缺陷经 ImageMagick 上传写服务端文件</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Barracuda 缺陷可链式绕过授权获取 root</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>85</td>
+<td>SonicWall 拒绝修复 EoL GMS 高危缺陷</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>84</td>
+<td>Chainstack 生产系统遭入侵暴露客户数据与密码哈希</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>83</td>
+<td>谷歌警告 LLMjacking 攻击致企业单笔云账单高达 100 万美元</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>82</td>
+<td>OpenAI Codex 越狱工具包中藏匿 Prompt 广告软件</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>80</td>
+<td>mSecure 密码管理器可疑活动，呼吁改密/重置 2FA</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>78</td>
+<td>俄罗斯警方逮捕 3 名 VasyGrek 嫌疑人并捣毁基础设施</td>
+<td>THN</td>
+</tr>
+<tr>
+<td>—</td>
+<td>英国学校遭 3AM 勒索（疑似 AI 辅助，BC 头条）</td>
+<td>BC（受限）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="s9">微软补丁状态提醒</h2>
+<p>📅 微软本月补丁日（Patch Tuesday）<strong>尚未正式发布</strong>：MSRC 当前仅挂出「November 2026 <strong>Early</strong> Security Updates」预发布占位文档（非正式 Patch Tuesday，多含 Azure Linux 等组件），其数字不计入本日报、亦不生成补丁板块。正式补丁预计太平洋时间 <strong>2026-11-10 10:00 / 北京时间 2026-11-11 凌晨</strong> 发布，届时推送将带出正式「微软补丁安全级别」板块。</p>
+<hr />
+<p><em>本次共筛选 15 条新闻，最高分 96 分。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-04.html">← 前一天 2026-11-04</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

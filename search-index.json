@@ -1,5 +1,20 @@
 [
  {
+  "date": "2026-11-05",
+  "url": "daily/daily_news_2026-11-05.html",
+  "title": "网络安全日报 2026-11-05",
+  "score": 96,
+  "cves": [
+   "CVE-2026-102703",
+   "CVE-2026-102704",
+   "CVE-2026-109518",
+   "CVE-2026-119977",
+   "CVE-2026-58868"
+  ],
+  "summary": "采集时间：20261105 07:00（北京时间）｜评分维度：严重性  新颖性  影响范围  时效性（补丁数据不计入新闻评分）",
+  "text": "采集时间：20261105 07:00（北京时间）｜评分维度：严重性  新颖性  影响范围  时效性（补丁数据不计入新闻评分） 评分：96（评分理由：影响最主流 Linux 发行版的包供应链根基，且触发条件默认开启，危害远超单点漏洞） 来源： The Hacker News 摘要： APT（Debian/Ubuntu 的默认包管理器）被曝高危缺陷 CVE2026109518：处于下载链路中间人位置的攻击者（如恶意镜像、代理）可借 HTTP 重定向与瞬时错误诱导 APT 在重试下载时，将已校验的合法包替换为恶意包，从而在目标主机以 root 权限执行任意代码。Debian 与 Ubuntu 已于 11 月 4 日放出修复版本（Ubuntu 22.04/24.04/26.04/26.10 等），自 Debian 12、Ubuntu 22.04 起 APT 默认开启重试（Acquire::Retries），因此默认即受影响；该缺陷由 Max Justicz 报告，Ubuntu 按 CVSS 4.0 7.7 评为 High。 原文链接： https://thehackernews.com/2026/11/debianandubuntuaptflawletsmitm.html 评分：93（评分理由：无认证即可在海量 WordPress 站点（约四成互联网网站）实现 RCE，且已被在野利用并进入 KEV，联邦修复期限迫近） 来源： The Hacker News 摘要： CISA 于 11 月 4 日将 WordPress 核心漏洞 CVE2026119977（CVSS 8.1，TOCTOU 竞态条件）纳入已知被利用漏洞（KEV）目录，原因是已发现活跃利用。该漏洞利用升级期间可预测的、Web 可访问的暂存路径，使未认证攻击者可在全量核心升级窗口执行任意代码；补丁于 10 月底发布，CISA 要求联邦机构在 11 月 6 日前完成修复。 原文链接： https://thehackernews.com/2026/11/cisaconfirmshackersexploiting.html 评分：92（评分理由：影响 Android 14–17 数十亿设备、无需用户交互即可远程执行代码，月度公告体量极大） 来源： The Hacker News 摘要： 谷歌 11 月安卓安全公告修复了 200 余个漏洞，其中 CVE202658868 为严重级别、零点击远程代码执行缺陷，源于 FrameDecoder.cpp 中 onOutputReceived 函数的堆缓冲区溢出（越界写），影响 Android 14 至 17，安全补丁级别 20261101 起推送。截至 11 月 4 日谷歌未报告实际利用，该漏洞也未进入 CISA KEV。 原文链接： https://thehackernews.com/2026/11/googlepatchescriticalandroidflaw.html 评分：91（评分理由：俄罗斯国家级 APT 将可信供应链（网页分析脚本）武器化实施大规模水坑攻击，针对移动端零点击利用） 来源： The Hacker News 摘要： 俄罗斯关联的 APT29 被指发起大规模水坑（watering hole）行动：通过入侵合法网站、搭建仿冒域名，并向网页分析（analytics）脚本注入载荷，使访问受陷站点的移动用户在无感知情况下被分析设备特征并投递针对 iOS / Android 的定制化漏洞利用。该手法将\"可信第三方脚本\"这一普遍存在的供应链路径武器化，对企业移动设备 fleet 管理提出更高要求。 原文链接： https://thehackernews.com/2026/11/apt29linkedhackershijackweb.html 评分：90（评分理由：跨虚拟机内存越权可击穿云/虚拟化隔离边界，影响所有 Xen 4.6 及以上版本，无临时缓解措施） 来源： The Hacker News 摘要： Xen 项目披露 XSA523（CVE2026102703、CVE2026102704）：grant copy 操作在批量复制同内存页时错误复用权限检查，使一个恶意客户虚拟机可读取并写入同宿主机上其他虚拟机（含默认拥有全部权限的 dom0）的内存。所有 Xen 4.6 及以上版本受影响，补丁已于 11 月 3 日放出且无已知缓解方案；该问题由 Anthropic 利用 Claude 模型发现、Ada Logics 的 Stephan Lipp 验证，XCPng 与 Qubes OS 均已发布修复。 原文链接： https://thehackernews.com/2026/11/xenhypervisorflawsletonemalicious.html The Hacker News（thehackernews.com）：本次主要可访问来源，首页 16 篇 11 月文章均成功抓取并核验直链。 BleepingComputer（bleepingcomputer.com）：本环境经 WebFetch/curl 均返回 Cloudflare 质询页（\"Just a moment...\"），自动化访问被拦截；其 11 月 3–4 日头条（如 Barracuda 越权链式提权、英国学校 3AM 勒索）已纳入候选池评估，因无法核验独立文章 URL 未进入 Top5。 Hacker News（news.ycombinator.com）：官方站点及 Algolia API 在本沙箱不可达（历史一致）；其社区讨论指向的同源事件已通过主流媒体原始报道交叉覆盖，未单列重复条目。 | 评分 | 新闻 | 来源 | |||| | 96 | Debian/Ubuntu APT 中间人缺陷 CVE2026109518 | THN | | 93 | WordPress 核心 CVE2026119977 在野利用（KEV） | THN | | 92 | 安卓 11 月公告 CVE202658868 零点击 RCE | THN | | 91 | APT29 劫持网页分析脚本投递移动端利用 | THN | | 90 | Xen XSA523 跨虚拟机内存越权 | THN | | 89 | 亲中黑客借搜狗输入法 DNS 劫持部署 DarkVigil 后门 | THN | | 88 | Rails 严重缺陷经 ImageMagick 上传写服务端文件 | THN | | 87 | Barracuda 缺陷可链式绕过授权获取 root | THN | | 85 | SonicWall 拒绝修复 EoL GMS 高危缺陷 | THN | | 84 | Chainstack 生产系统遭入侵暴露客户数据与密码哈希 | THN | | 83 | 谷歌警告 LLMjacking 攻击致企业单笔云账单高达 100 万美元 | THN | | 82 | OpenAI Codex 越狱工具包中藏匿 Prompt 广告软件 | THN | | 80 | mSecure 密码管理器可疑活动，呼吁改密/重置 2FA | THN | | 78 | 俄罗斯警方逮捕 3 名 VasyGrek 嫌疑人并捣毁基础设施 | THN | | — | 英国学校遭 3AM 勒索（疑似 AI 辅助，BC 头条） | BC（受限） | 📅 微软本月补丁日（Patch Tuesday）尚未正式发布：MSRC 当前仅挂出「November 2026 Early Security Updates」预发布占位文档（非正式 Patch Tuesday，多含 Azure Linux 等组件），其数字不计入本日报、亦不生成补丁板块。正式补丁预计太平洋时间 20261110 10:00 / 北京时间 20261111 凌晨 发布，届时推送将带出正式「微软补丁安全级别」板块。 本次共筛选 15 条新闻，最高分 96 分。"
+ },
+ {
   "date": "2026-11-04",
   "url": "daily/daily_news_2026-11-04.html",
   "title": "网络安全日报 2026-11-04",
