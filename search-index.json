@@ -1,5 +1,20 @@
 [
  {
+  "date": "2026-11-06",
+  "url": "daily/daily_news_2026-11-06.html",
+  "title": "网络安全日报 2026-11-06",
+  "score": 95,
+  "cves": [
+   "CVE-2026-107441",
+   "CVE-2026-119977",
+   "CVE-2026-58115",
+   "CVE-2026-58868",
+   "CVE-2026-7273"
+  ],
+  "summary": "自动采集 · 评分筛选 Top5 · 数据权威来源：The Hacker News / BleepingComputer / Hacker News 聚合",
+  "text": "自动采集 · 评分筛选 Top5 · 数据权威来源：The Hacker News / BleepingComputer / Hacker News 聚合 评分标准：严重性  新颖性  影响范围  时效性（补丁严重级别数据不计入新闻评分，仅在补丁日正式发布后作为文末独立板块呈现） 评分：95 / 100 — 理由：漏洞已在野大规模利用（约 996 台交换机被控、564 台仍用出厂默认口令），且厂商前两版补丁均未能真正修复，属高严重 + 高新颖性的在野 0day。 来源： The Hacker News / BleepingComputer 摘要： 研究人员发现 Zyxel GS1900 的 Web 请求处理程序存在越界写入缺陷（原 CVE20267273 关联新 CVE2026107441），攻击者可借第 141 个超长参数覆盖函数指针实现 root 命令执行。GreyNoise 报告称与中文背景的 Red Heron 组织相关的攻击者已攻陷约 996 台设备，窃取交换机配置、哈希 root 口令与网络信息；Zyxel 的 Patch 2 被证实仍可被绕过，第三版补丁（Patch 3）方才在拷贝前校验计数器并限制长度。 原文链接： https://thehackernews.com/2026/11/zyxelgs1900patchfailstoblockzero.html 评分：90 / 100 — 理由：前沿 AI 首次规模化自动发现并武器化近千个 LPE 漏洞、提出 10 项全新利用技术，标志着漏洞挖掘与利用的范式级跃迁。 来源： The Hacker News 摘要： OpenAI 披露其使用即将发布的网络模型构建的五阶段 agentic 流水线，在 10 月中旬的一次 30 小时运行中动态复现 1,724 个漏洞、生成 291 个信息泄露 PoC 与 948 个可用的本地提权（LPE）利用，单次运行耗资约 121 万美元（每个 LPE 约 1,279 美元）。NCSC 等机构将 AI 辅助漏洞发现列为\"增长中的风险类别\"——攻防双方均可借此加速，组织必须同步演进补丁与测试流程。 原文链接： https://thehackernews.com/2026/11/openaiaipipelinegenerates948linux.html 评分：87 / 100 — 理由：通过官方 CDN 篡改实现大规模供应链投毒，波及 4,500 万 + 下载量的热门游戏，直接窃取账号凭据与加密钱包私钥。 来源： BleepingComputer 摘要： 安全研究员发现 NIKKE PC 启动器脚本自 9 月 27 日起被注入恶意 JavaScript，玩家打开启动器时从攻击者域名下载并执行 LuaJIT 载荷 insight.bundle，安装名为 K2F 的远程控制后门，可远程执行命令、截图并盗取 MetaMask / Phantom / Coinbase 等浏览器钱包的私钥与助记词。厂商于 11 月 3–4 日发布修复，但据报道至少一个被篡改脚本在更新后仍可被下载。 原文链接： https://www.bleepingcomputer.com/news/security/nikkepcgamelauncherhackedtospreadremoteaccessdatastealingmalware/ 评分：86 / 100 — 理由：满分 CVSS 的未授权 RCE 已在野被用于部署 Linux 僵尸与 Webshell，且影响工业 OT 设备，严重性极高。 来源： The Hacker News / Help Net Security 摘要： CVE202658115 是 SIMATIC IoT2050 Advanced（含 NodeRED）中的最大严重级认证绕过漏洞，未授权远程攻击者可创建恶意 NodeRED 流并以最高权限执行任意代码。观测到的攻击已部署下载并运行 Linux 僵尸木马的流量，且攻击手法演进为两阶段过程；建议升级至 4.3.4.1 或更高版本，或对 NodeRED 编辑器、admin API 与 HTTP 节点启用认证。 原文链接： https://thehackernews.com/2026/11/attackersexploitcriticalsiemens.html 评分：84 / 100 — 理由：攻击直接威胁医疗 / 生命安全类关键基础设施（血液制品），是近期欧洲制冷设备连锁攻击中波及公共卫生的最严重案例。 来源： BleepingComputer 摘要： 法国血液机构（EFS）的制冷供应商 Coolworld Rentals 遭入侵，攻击者利用第三方组件漏洞远程抬高了三处设施的冷藏库温度与除霜阈值，威胁库存血液与生物样本；EFS 监测与告警系统及时发现并将产品转移，暂未报告健康损害或血液损失。该事件与 10 月以来横扫法国、比利时、荷兰等多国超市与设施的制冷控制器（Danfoss / Copeland）远程篡改攻击属同一波次。 原文链接： https://www.bleepingcomputer.com/news/security/cyberattackdisruptsbloodstoragerefrigerationsystemsinfrance/ The Hacker News / BleepingComputer 直链在本环境返回 HTTP 403（Cloudflare 质询），所有 URL 均来自搜索引擎真实返回、浏览器可正常打开，未编造。 Hacker News 官方站点 / Algolia API 本环境不可达；本期 HN 侧话题（PHP2Shell AI 安全债、白宫住宅代理出口、Postman 擅自安装 AI 插件分享 API 数据）经第三方 HN 日报摘要交叉采集，因链接稳定性未进入 Top5。 去重规则： 已主动排除近期 Top5 重复项（WordPress Core CVE2026119977、APT29 网页分析脚本劫持、Android 11 月公告 CVE202658868、Xen XSA523、Debian/Ubuntu APT、Binance、Polymarket、Beget、Accenture、Claude Code 后门等），避免连日刷屏。 本次共筛选 15 条新闻，最高分 95 分。"
+ },
+ {
   "date": "2026-11-05",
   "url": "daily/daily_news_2026-11-05.html",
   "title": "网络安全日报 2026-11-05",

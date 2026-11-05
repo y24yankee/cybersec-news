@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-06 | 网络安全新闻中心</title>
+<meta name="description" content="自动采集 · 评分筛选 Top5 · 数据权威来源：The Hacker News / BleepingComputer / Hacker News 聚合">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-06">
+<meta property="og:description" content="自动采集 · 评分筛选 Top5 · 数据权威来源：The Hacker News / BleepingComputer / Hacker News 聚合">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-06.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-06">
+<meta name="twitter:description" content="自动采集 · 评分筛选 Top5 · 数据权威来源：The Hacker News / BleepingComputer / Hacker News 聚合">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-06</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. Zyxel GS1900 补丁未能封堵零日漏洞，近千台交换机遭 root 命令执行攻击</a></li>
+<li><a href="#s2">2. OpenAI AI 流水线 30 小时生成 948 个 Linux 本地提权漏洞利用</a></li>
+<li><a href="#s3">3. 《胜利女神：NIKKE》PC 启动器遭供应链篡改，投放窃密与盗币木马</a></li>
+<li><a href="#s4">4. 攻击者利用 Siemens IoT2050 严重漏洞（CVSS 10.0）植入远程命令后门</a></li>
+<li><a href="#s5">5. 网络攻击扰乱法国血液储藏制冷系统，危及输血用血浆安全</a></li>
+<li><a href="#s6">来源采集说明</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>自动采集 · 评分筛选 Top5 · 数据权威来源：The Hacker News / BleepingComputer / Hacker News 聚合
+评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性（补丁严重级别数据不计入新闻评分，仅在补丁日正式发布后作为文末独立板块呈现）</p>
+</blockquote>
+<hr />
+<h2 id="s1">1. Zyxel GS1900 补丁未能封堵零日漏洞，近千台交换机遭 root 命令执行攻击</h2>
+<ul>
+<li><strong>评分：95 / 100</strong> — 理由：漏洞已在野大规模利用（约 996 台交换机被控、564 台仍用出厂默认口令），且厂商前两版补丁均未能真正修复，属高严重 + 高新颖性的在野 0day。</li>
+<li><strong>来源：</strong> The Hacker News / BleepingComputer</li>
+<li><strong>摘要：</strong> 研究人员发现 Zyxel GS1900 的 Web 请求处理程序存在越界写入缺陷（原 CVE-2026-7273 关联新 CVE-2026-107441），攻击者可借第 141 个超长参数覆盖函数指针实现 root 命令执行。GreyNoise 报告称与中文背景的 Red Heron 组织相关的攻击者已攻陷约 996 台设备，窃取交换机配置、哈希 root 口令与网络信息；Zyxel 的 Patch 2 被证实仍可被绕过，第三版补丁（Patch 3）方才在拷贝前校验计数器并限制长度。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html</li>
+</ul>
+<h2 id="s2">2. OpenAI AI 流水线 30 小时生成 948 个 Linux 本地提权漏洞利用</h2>
+<ul>
+<li><strong>评分：90 / 100</strong> — 理由：前沿 AI 首次规模化自动发现并武器化近千个 LPE 漏洞、提出 10 项全新利用技术，标志着漏洞挖掘与利用的范式级跃迁。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> OpenAI 披露其使用即将发布的网络模型构建的五阶段 agentic 流水线，在 10 月中旬的一次 30 小时运行中动态复现 1,724 个漏洞、生成 291 个信息泄露 PoC 与 948 个可用的本地提权（LPE）利用，单次运行耗资约 121 万美元（每个 LPE 约 1,279 美元）。NCSC 等机构将 AI 辅助漏洞发现列为"增长中的风险类别"——攻防双方均可借此加速，组织必须同步演进补丁与测试流程。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html</li>
+</ul>
+<h2 id="s3">3. 《胜利女神：NIKKE》PC 启动器遭供应链篡改，投放窃密与盗币木马</h2>
+<ul>
+<li><strong>评分：87 / 100</strong> — 理由：通过官方 CDN 篡改实现大规模供应链投毒，波及 4,500 万 + 下载量的热门游戏，直接窃取账号凭据与加密钱包私钥。</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> 安全研究员发现 NIKKE PC 启动器脚本自 9 月 27 日起被注入恶意 JavaScript，玩家打开启动器时从攻击者域名下载并执行 LuaJIT 载荷 insight.bundle，安装名为 K2F 的远程控制后门，可远程执行命令、截图并盗取 MetaMask / Phantom / Coinbase 等浏览器钱包的私钥与助记词。厂商于 11 月 3–4 日发布修复，但据报道至少一个被篡改脚本在更新后仍可被下载。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/nikke-pc-game-launcher-hacked-to-spread-remote-access-data-stealing-malware/</li>
+</ul>
+<h2 id="s4">4. 攻击者利用 Siemens IoT2050 严重漏洞（CVSS 10.0）植入远程命令后门</h2>
+<ul>
+<li><strong>评分：86 / 100</strong> — 理由：满分 CVSS 的未授权 RCE 已在野被用于部署 Linux 僵尸与 Webshell，且影响工业 OT 设备，严重性极高。</li>
+<li><strong>来源：</strong> The Hacker News / Help Net Security</li>
+<li><strong>摘要：</strong> CVE-2026-58115 是 SIMATIC IoT2050 Advanced（含 Node-RED）中的最大严重级认证绕过漏洞，未授权远程攻击者可创建恶意 Node-RED 流并以最高权限执行任意代码。观测到的攻击已部署下载并运行 Linux 僵尸木马的流量，且攻击手法演进为两阶段过程；建议升级至 4.3.4.1 或更高版本，或对 Node-RED 编辑器、admin API 与 HTTP 节点启用认证。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html</li>
+</ul>
+<h2 id="s5">5. 网络攻击扰乱法国血液储藏制冷系统，危及输血用血浆安全</h2>
+<ul>
+<li><strong>评分：84 / 100</strong> — 理由：攻击直接威胁医疗 / 生命安全类关键基础设施（血液制品），是近期欧洲制冷设备连锁攻击中波及公共卫生的最严重案例。</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> 法国血液机构（EFS）的制冷供应商 Coolworld Rentals 遭入侵，攻击者利用第三方组件漏洞远程抬高了三处设施的冷藏库温度与除霜阈值，威胁库存血液与生物样本；EFS 监测与告警系统及时发现并将产品转移，暂未报告健康损害或血液损失。该事件与 10 月以来横扫法国、比利时、荷兰等多国超市与设施的制冷控制器（Danfoss / Copeland）远程篡改攻击属同一波次。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/cyberattack-disrupts-blood-storage-refrigeration-systems-in-france/</li>
+</ul>
+<hr />
+<h2 id="s6">来源采集说明</h2>
+<ul>
+<li><strong>The Hacker News / BleepingComputer</strong> 直链在本环境返回 HTTP 403（Cloudflare 质询），所有 URL 均来自搜索引擎真实返回、浏览器可正常打开，未编造。</li>
+<li><strong>Hacker News</strong> 官方站点 / Algolia API 本环境不可达；本期 HN 侧话题（PHP2Shell AI 安全债、白宫住宅代理出口、Postman 擅自安装 AI 插件分享 API 数据）经第三方 HN 日报摘要交叉采集，因链接稳定性未进入 Top5。</li>
+<li><strong>去重规则：</strong> 已主动排除近期 Top5 重复项（WordPress Core CVE-2026-119977、APT29 网页分析脚本劫持、Android 11 月公告 CVE-2026-58868、Xen XSA-523、Debian/Ubuntu APT、Binance、Polymarket、Beget、Accenture、Claude Code 后门等），避免连日刷屏。</li>
+</ul>
+<hr />
+<p><strong>本次共筛选 15 条新闻，最高分 95 分。</strong></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-05.html">← 前一天 2026-11-05</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
