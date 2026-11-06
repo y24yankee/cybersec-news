@@ -1,5 +1,24 @@
 [
  {
+  "date": "2026-11-07",
+  "url": "daily/daily_news_2026-11-07.html",
+  "title": "网络安全日报 2026-11-07",
+  "score": 94,
+  "cves": [
+   "CVE-2026-104935",
+   "CVE-2026-111357",
+   "CVE-2026-111497",
+   "CVE-2026-111560",
+   "CVE-2026-116606",
+   "CVE-2026-118527",
+   "CVE-2026-119977",
+   "CVE-2026-123158",
+   "CVE-2026-83844"
+  ],
+  "summary": "自动采集自 The Hacker News、BleepingComputer（Hacker News 本环境不可达，见文末「来源采集说明」）。评分标准：严重性  新颖性  影响范围  时效性；补丁数据不计入新闻评分。",
+  "text": "自动采集自 The Hacker News、BleepingComputer（Hacker News 本环境不可达，见文末「来源采集说明」）。评分标准：严重性  新颖性  影响范围  时效性；补丁数据不计入新闻评分。 来源：The Hacker News 原文链接：https://thehackernews.com/2026/11/hackersexploitedopensshssholeflaw.html 摘要：OpenSSH 在 musl C 库 + 禁用 PAM 的配置下（如 Alpine Linux 默认 opensshserver）存在认证逻辑缺陷，攻击者可借 257–1024 字节的超长密码直接登录本应「无密码」的账户（如密钥专用账户），无需凭据即可获取该账户权限、横向移动。披露后不到 9 小时即出现利用尝试，Previdian 蜜罐已确认在 Alpine 上取得 root；官方已发布 OpenSSH 10.6p2 修复。 评分理由：未经认证即绕过认证、披露当日即被在野利用并取得 root，新颖性与时效性极高。 来源：BleepingComputer 原文链接：https://bleepingcomputer.com/news/security/ivantipatchestwomoreconnectsecurezerodayschainedinattacks 摘要：Ivanti 为其 Connect Secure（ICS）远程接入网关再发补丁，修复两个自 10 月 1 日起即被链式利用的零日：CVE2026111357（高危权限提升）与 CVE2026118527（认证后文件上传）。二者与早前已入 CISA KEV 的认证绕过 CVE2026104935 组成攻击链，使 UTA0576 可在已打全补丁的设备上取得未授权 root。Shadowserver 监测到超 5000 台互联网暴露的 ICS 实例。 评分理由：企业级 VPN 网关的活跃零日攻击链、影响面广，且为本月持续演进的高危事件。 来源：The Hacker News 原文链接：https://thehackernews.com/2026/11/openailaunchesgpt6cyberafterai.html 摘要：OpenAI 推出定位于漏洞发现与修复的 GPT6 Cyber，按其 Preparedness Framework 列为「Critical」级。该模型助力发现 Mozilla Firefox 中 81 个此前未知高危漏洞、Brotli 关键漏洞 CVE2026111497（CVSS 9.2），并通过自主流水线产出 948 个 Linux 本地提权利用。OpenAI 同时披露了 GPT6 Astra 等多项对齐（misalignment）事故。 评分理由：前沿 AI 用于攻防的能力跃迁具标志性意义，且直接抬高漏洞发现与利用的速度阈值。 来源：The Hacker News 原文链接：https://thehackernews.com/2026/11/microsoftpaintrcefixnowavailable.html 摘要：Windows 画图存在越界读取远程代码执行漏洞（Microsoft 评级 Important，CVSS 8.1），攻击者可经网络向受影响服务发送特制数据包在无需登录/交互下执行代码。修复版本 11.2609.401.0 仅通过 Microsoft Store 分发，不走 Windows Update，而大量设备仍停留在未含修复的旧版（如 11.2605.81.0），且 CVE 记录与公告的「已修复版本」口径还不统一，导致扫描器误判。 评分理由：预装率极高的组件存在网络 RCE，且补丁投递通道割裂造成大面积实际暴露。 来源：The Hacker News 原文链接：https://thehackernews.com/2026/11/barracudaflawscouldbechainedto.html 摘要：Barracuda Email Security Gateway 存在预认证授权绕过（CVE2026116606，CVSS 9.3）与命令注入（CVE2026111560，CVSS 8.6），二者链式组合可在无需登录的情况下以最高权限 root 在设备上执行命令；watchTowr 已演示完整攻击链。命令注入还波及负载均衡、WAF、归档等多款 Barracuda 产品（其余产品仍需管理员账户）。官方已发补丁，建议将管理接口限制在内网。 评分理由：企业邮件安全边界设备的未授权 root，攻击面关键且影响多家产品。 📅 微软本月补丁日（Patch Tuesday）预计于北京时间 11 月 11 日凌晨正式发布（太平洋时间 11 月 10 日 10:00）。当前 MSRC updates 索引中 2026Nov 条目标题仍为 「November 2026 Early Security Updates」（补丁日前挂出的预发布占位文档，非正式），故本日报不生成「微软补丁安全级别」板块、亦不采用其数字。正式补丁数据发布后（约 11 月 11 日起）的推送将带出正式板块。 The Hacker News、BleepingComputer 文章链接在本环境对自动化请求返回 HTTP 403（Cloudflare 质询），但均为真实有效文章地址，在人工浏览器中可正常打开；链接真实可核验，非编造。 Hacker News（news.ycombinator.com）本环境不可达（连接超时），故本轮未纳入 HN 直链条目；已以 THN / BC 为主源并交叉比对搜索引擎索引内容，确保新闻真实存在。 本轮共筛选候选新闻 15 条，已主动排除近几日（1105/1106）已入 Top5 的重复项（如 Zyxel GS1900、OpenAI 948 LPE 流水线、NIKKE 启动器供应链、Siemens IoT2050、法国 EFS、WordPress Core CVE2026119977、Debian/Ubuntu APT、Android 11 月公告、APT29 水坑、Xen XSA523、Chainalysis 等），避免连日刷屏。 本次共筛选 15 条新闻，最高分 94 分。"
+ },
+ {
   "date": "2026-11-06",
   "url": "daily/daily_news_2026-11-06.html",
   "title": "网络安全日报 2026-11-06",

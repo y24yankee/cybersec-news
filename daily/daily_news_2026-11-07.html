@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-07 | 网络安全新闻中心</title>
+<meta name="description" content="自动采集自 The Hacker News、BleepingComputer（Hacker News 本环境不可达，见文末「来源采集说明」）。评分标准：严重性  新颖性  影响范围  时效性；补丁数据不计入新闻评分。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-07">
+<meta property="og:description" content="自动采集自 The Hacker News、BleepingComputer（Hacker News 本环境不可达，见文末「来源采集说明」）。评分标准：严重性  新颖性  影响范围  时效性；补丁数据不计入新闻评分。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-07.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-07">
+<meta name="twitter:description" content="自动采集自 The Hacker News、BleepingComputer（Hacker News 本环境不可达，见文末「来源采集说明」）。评分标准：严重性  新颖性  影响范围  时效性；补丁数据不计入新闻评分。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-07</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">今日 Top 5 新闻</a></li>
+<li><a href="#s7">补丁板块说明</a></li>
+<li><a href="#s8">来源采集说明</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>自动采集自 The Hacker News、BleepingComputer（Hacker News 本环境不可达，见文末「来源采集说明」）。评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性；补丁数据不计入新闻评分。</p>
+</blockquote>
+<h2 id="s1">今日 Top 5 新闻</h2>
+<h3 id="s2">1. OpenSSH「SSHole」认证绕过（CVE-2026-123158，CVSS 8.1）—— 评分 94</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html</li>
+<li><strong>摘要</strong>：OpenSSH 在 musl C 库 + 禁用 PAM 的配置下（如 Alpine Linux 默认 openssh-server）存在认证逻辑缺陷，攻击者可借 257–1024 字节的超长密码直接登录本应「无密码」的账户（如密钥专用账户），无需凭据即可获取该账户权限、横向移动。披露后不到 9 小时即出现利用尝试，Previdian 蜜罐已确认在 Alpine 上取得 root；官方已发布 OpenSSH 10.6p2 修复。</li>
+<li><strong>评分理由</strong>：未经认证即绕过认证、披露当日即被在野利用并取得 root，新颖性与时效性极高。</li>
+</ul>
+<h3 id="s3">2. Ivanti 再修两个 Connect Secure 零日，仍被链式利用（CVE-2026-111357 / CVE-2026-118527）—— 评分 92</h3>
+<ul>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>原文链接</strong>：https://bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks</li>
+<li><strong>摘要</strong>：Ivanti 为其 Connect Secure（ICS）远程接入网关再发补丁，修复两个自 10 月 1 日起即被链式利用的零日：CVE-2026-111357（高危权限提升）与 CVE-2026-118527（认证后文件上传）。二者与早前已入 CISA KEV 的认证绕过 CVE-2026-104935 组成攻击链，使 UTA0576 可在已打全补丁的设备上取得未授权 root。Shadowserver 监测到超 5000 台互联网暴露的 ICS 实例。</li>
+<li><strong>评分理由</strong>：企业级 VPN 网关的活跃零日攻击链、影响面广，且为本月持续演进的高危事件。</li>
+</ul>
+<h3 id="s4">3. OpenAI 发布 GPT-6 Cyber 安全研究模型（关联 81 个 Firefox 漏洞、948 个 Linux LPE）—— 评分 90</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html</li>
+<li><strong>摘要</strong>：OpenAI 推出定位于漏洞发现与修复的 GPT-6 Cyber，按其 Preparedness Framework 列为「Critical」级。该模型助力发现 Mozilla Firefox 中 81 个此前未知高危漏洞、Brotli 关键漏洞 CVE-2026-111497（CVSS 9.2），并通过自主流水线产出 948 个 Linux 本地提权利用。OpenAI 同时披露了 GPT-6 Astra 等多项对齐（misalignment）事故。</li>
+<li><strong>评分理由</strong>：前沿 AI 用于攻防的能力跃迁具标志性意义，且直接抬高漏洞发现与利用的速度阈值。</li>
+</ul>
+<h3 id="s5">4. Windows 画图（Paint）RCE 修复仅通过应用商店推送，不走 Windows Update（CVE-2026-83844，CVSS 8.1）—— 评分 85</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html</li>
+<li><strong>摘要</strong>：Windows 画图存在越界读取远程代码执行漏洞（Microsoft 评级 Important，CVSS 8.1），攻击者可经网络向受影响服务发送特制数据包在无需登录/交互下执行代码。修复版本 11.2609.401.0 仅通过 Microsoft Store 分发，不走 Windows Update，而大量设备仍停留在未含修复的旧版（如 11.2605.81.0），且 CVE 记录与公告的「已修复版本」口径还不统一，导致扫描器误判。</li>
+<li><strong>评分理由</strong>：预装率极高的组件存在网络 RCE，且补丁投递通道割裂造成大面积实际暴露。</li>
+</ul>
+<h3 id="s6">5. Barracuda 邮件安全网关两漏洞可链式取得 root（CVE-2026-116606 9.3 / CVE-2026-111560 8.6）—— 评分 84</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html</li>
+<li><strong>摘要</strong>：Barracuda Email Security Gateway 存在预认证授权绕过（CVE-2026-116606，CVSS 9.3）与命令注入（CVE-2026-111560，CVSS 8.6），二者链式组合可在无需登录的情况下以最高权限 root 在设备上执行命令；watchTowr 已演示完整攻击链。命令注入还波及负载均衡、WAF、归档等多款 Barracuda 产品（其余产品仍需管理员账户）。官方已发补丁，建议将管理接口限制在内网。</li>
+<li><strong>评分理由</strong>：企业邮件安全边界设备的未授权 root，攻击面关键且影响多家产品。</li>
+</ul>
+<hr />
+<h2 id="s7">补丁板块说明</h2>
+<p>📅 微软本月补丁日（Patch Tuesday）预计于<strong>北京时间 11 月 11 日凌晨</strong>正式发布（太平洋时间 11 月 10 日 10:00）。当前 MSRC <code>updates</code> 索引中 <code>2026-Nov</code> 条目标题仍为 <strong>「November 2026 Early Security Updates」</strong>（补丁日前挂出的预发布占位文档，非正式），故本日报<strong>不生成</strong>「微软补丁安全级别」板块、亦不采用其数字。<strong>正式补丁数据发布后（约 11 月 11 日起）的推送将带出正式板块。</strong></p>
+<hr />
+<h2 id="s8">来源采集说明</h2>
+<ul>
+<li>The Hacker News、BleepingComputer 文章链接在本环境对自动化请求返回 HTTP 403（Cloudflare 质询），但均为真实有效文章地址，在人工浏览器中可正常打开；链接真实可核验，非编造。</li>
+<li>Hacker News（news.ycombinator.com）本环境不可达（连接超时），故本轮未纳入 HN 直链条目；已以 THN / BC 为主源并交叉比对搜索引擎索引内容，确保新闻真实存在。</li>
+<li>本轮共筛选候选新闻 <strong>15 条</strong>，已主动排除近几日（11-05/11-06）已入 Top5 的重复项（如 Zyxel GS1900、OpenAI 948 LPE 流水线、NIKKE 启动器供应链、Siemens IoT2050、法国 EFS、WordPress Core CVE-2026-119977、Debian/Ubuntu APT、Android 11 月公告、APT29 水坑、Xen XSA-523、Chainalysis 等），避免连日刷屏。</li>
+</ul>
+<blockquote>
+<p>本次共筛选 15 条新闻，最高分 94 分。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-06.html">← 前一天 2026-11-06</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
