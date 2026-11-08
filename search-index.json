@@ -1,5 +1,17 @@
 [
  {
+  "date": "2026-11-09",
+  "url": "daily/daily_news_2026-11-09.html",
+  "title": "网络安全日报 2026-11-09",
+  "score": 92,
+  "cves": [
+   "CVE-2026-86296",
+   "CVE-2026-86510"
+  ],
+  "summary": "来源采集说明：本期于北京时间 20261109 07:00 自动采集。The Hacker News 首页与搜索可用；BleepingComputer 直接抓取受 Cloudflare 质询拦截（自动化请求返回 403，浏览器可正常打开），经搜索索引返回真实可访问文章 URL；Hacker News（news.ycom",
+  "text": "来源采集说明：本期于北京时间 20261109 07:00 自动采集。The Hacker News 首页与搜索可用；BleepingComputer 直接抓取受 Cloudflare 质询拦截（自动化请求返回 403，浏览器可正常打开），经搜索索引返回真实可访问文章 URL；Hacker News（news.ycombinator.com）官方站点与 Algolia API 本环境不可达（与近期运行一致），其话题经可访问的 HN 镜像/聚合源交叉采集。周末（117118）主流来源发稿稀少，故选取 115117 期间最新、且未在近期 Top5 中重复的高价值条目。 评分：92 / 100 来源：The Hacker News（20261107） 摘要：研究人员发现，Claude Code 的「Don't Ask Again」信任配置文件会被开发者误提交至公开仓库，导致其中包含的密码、API 密钥与私钥随之暴露。该文件已在 GitHub 上至少 1,122 份公开副本中出现，凸显 AI 编程助手在权限持久化方面的配置风险。 原文链接：https://thehackernews.com/2026/11/claudecodesdontaskagainfile.html 评分理由：AI 开发工具默认信任文件被大规模误提交，影响面覆盖大量开发者与企业的真实凭据，新颖性高。 评分：89 / 100 来源：BleepingComputer 摘要：一起进行中的恶意活动利用 SEO 优化的假冒 GitHub 仓库冒充 LastPass 等至少 40 个品牌，投递此前未公开的信息窃取木马 Rapuncel。该木马还配套一个微软签名的恶意内核驱动（Alinubx.sys），可终止 145 款杀软与 EDR 进程，绕过 PPL 保护。 原文链接：https://bleepingcomputer.com/news/security/fakelastpassauthenticatorgithubrepospushnewrapuncelinfostealer 评分理由：新型窃密即服务结合签名 EDRkiller 驱动，对抗能力强、品牌仿冒面广，危害性高。 评分：87 / 100 来源：BleepingComputer 摘要：DLink 披露 DIR822A 双频路由器存在栈溢出零日漏洞 CVE202686296，无需认证或用户交互，同局域网内即可触发远程代码执行，且研究者已公开 PoC。DLink 仍在调查、暂未发布补丁，另有一项关键越界写漏洞 CVE202686510 同在评估中。 原文链接：https://bleepingcomputer.com/news/security/dlinkwarnsofmaxseverityzerodaybugindir822arouters 评分理由：无补丁的公开 PoC 零日、可远程 RCE，legacy 设备易被僵尸网络利用，时效性与影响范围俱佳。 评分：85 / 100 来源：The Hacker News（20261106） 摘要：新型 Linux 恶意软件 CWPdoor 通过被篡改的 cwpsrv（Control Web Panel 管理界面所用的网页服务器）传播，使攻击者可在受感染服务器上悄无声息地执行命令。由于利用被投毒的合法组件，该后门难以被常规检测发现，且不留下明显日志。 原文链接：https://thehackernews.com/2026/11/hackershidelinuxbackdoorincontrol.html 评分理由：针对广泛部署的 CWP 管理面板、具备无日志隐蔽执行能力，对托管与运维场景威胁直接。 评分：83 / 100 来源：The Hacker News（20261106） 摘要：安全研究显示，恶意浏览器扩展能够滥用 Claude Dispatch 等 AI 代理的指令通道，在用户计算机上执行任意代码。该手法无需传统漏洞利用即可借合法 AI 工作流落地，进一步模糊了 AI 助手与攻击面的边界。 原文链接：https://thehackernews.com/2026/11/maliciousbrowserextensionscoulduse.html 评分理由：将 AI 代理指令信道转化为代码执行载体，攻击路径新颖，对使用 AI 工具的终端用户影响广泛。 本次共筛选 15 条新闻（三来源各最多 5 条），最高分 92 分。 📅 微软本月补丁日（Patch Tuesday）预计于北京时间 20261111 凌晨正式发布（太平洋时间 20261110 10:00），届时推送将带出正式「微软补丁安全级别」板块。当前 MSRC 索引中 2026Nov 条目仍为 \"November 2026 Early Security Updates\" 预发布占位文档（非正式的 Patch Tuesday），故本期不生成补丁板块、亦不采用其任何数字。"
+ },
+ {
   "date": "2026-11-08",
   "url": "daily/daily_news_2026-11-08.html",
   "title": "网络安全日报 2026-11-08",

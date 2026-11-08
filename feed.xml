@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-11-08T00:00:00Z</updated>
+  <updated>2026-11-09T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-11-09</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-09.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-09.html</id>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <summary>来源采集说明：本期于北京时间 20261109 07:00 自动采集。The Hacker News 首页与搜索可用；BleepingComputer 直接抓取受 Cloudflare 质询拦截（自动化请求返回 403，浏览器可正常打开），经搜索索引返回真实可访问文章 URL；Hacker News（news.ycom</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-11-08</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-08.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-21.html</id>
     <updated>2026-10-21T00:00:00Z</updated>
     <summary>数据来源：Hacker News、The Hacker News、BleepingComputer（及关联 CERT/厂商公告交叉核验）</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-10-20</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-20.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-20.html</id>
-    <updated>2026-10-20T00:00:00Z</updated>
-    <summary>数据来源：The Hacker News、BleepingComputer、Hacker News（热议话题以主流媒体原发报道代表；HN 官网/Algolia API 在本环境不可达）。</summary>
   </entry>
 </feed>
