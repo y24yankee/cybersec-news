@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-11",
+  "url": "daily/daily_news_2026-11-11.html",
+  "title": "网络安全日报 2026-11-11",
+  "score": 96,
+  "cves": [],
+  "summary": "生成时间：20261111 07:00（北京时间）｜数据来源：The Hacker News、BleepingComputer、Hacker News 聚合、MSRC CVRF 公共 API",
+  "text": "生成时间：20261111 07:00（北京时间）｜数据来源：The Hacker News、BleepingComputer、Hacker News 聚合、MSRC CVRF 公共 API 评分标准：严重性  新颖性  影响范围  时效性；微软补丁严重级别数据不计入新闻评分，仅作为文末独立板块呈现。 评分：96/100 — 单次披露 33 个可获 root 级 RCE 的零日、PoC 公开且蜜罐数小时内即现活跃利用，MSP 供应链风险极高。 来源：Aviatrix Threat Research Center（交叉核验 BleepingComputer / infosecnewshub 1109 报道） 摘要：独立研究员 Sean Bales 公开披露影响 Nable Ncentral Appliance 2026.4.0.31 的 33 个零日漏洞（统称 Able2Shell），涵盖凭据泄露、任意文件写入、目录遍历、XXE 与远程代码执行链，可达成未认证 root RCE。Nable 已在美洲、亚太、欧洲全面下线其托管 Ncentral 环境，watchTowr 在披露后数小时内即确认针对 Ncentral 蜜罐的活跃扫描与利用尝试；该平台服务于全球数以万计 MSP 客户，单点失陷可级联至下游大量企业。 原文链接：https://aviatrix.ai/threatresearchcenter/nablencentralable2shellzerodays2026hostedoffline/ 评分：91/100 — 影响 iOS 26/27 的未修复沙箱逃逸可直接读取其他 App 的助记词与私钥，对加密资产用户威胁直接且紧迫。 来源：The Hacker News（20261110） 摘要：研究者 forcequit 与 0xjohnny 发布名为 worsequery 的 iOS 沙箱逃逸（PoC 已公开），可使 App 读取 iPhone 上其他应用的数据容器乃至系统文件夹，波及种子短语、私钥与登录凭据。Binance 于 1110 发出警告，指出苹果前一日发布的 iOS 26.7.3 / 27.2.1 更新并未修复该问题，尚无确认补丁；建议用户删除非可信来源安装的应用并迁移资产至干净设备。 原文链接：https://thehackernews.com/2026/11/binancewarnsofiossandboxescape.html 评分：89/100 — 攻击者窃取 CI 凭据后发布带有效来源证明的已签名包，直接从以太坊节点窃取密钥，供应链信任被彻底滥用。 来源：The Hacker News（202611 近期） 摘要：攻击者盗用 Ethersphere 的 beeworker 发布账户，向 npm 的 beejs 与 Swarm Desktop 注入加载器，在用户安装/启动时下载并运行从 api.frameworkmetrics[.]xyz 拉取的载荷，窃取 swarm.key 与明文的 config.yaml 密码以盗取 xDAI/xBZZ 等资产。恶意版本由项目正规工作流构建、携带有效 provenance 并完成 Apple 公证，防御难度高；SafeDep 分析发现载荷在 Linux/macOS 部署 Go 远控 evjawbreaker，在 Windows 安装合法签名的 ScreenConnect 远控。 原文链接：https://thehackernews.com/2026/11/hackerscompromiseetherspheresbeejs.html 评分：87/100 — 社交登录钱包的私钥级缺陷被真实利用、造成大规模资产转移，且波及多家采用该登录服务的应用。 来源：The Hacker News（20261109） 摘要：Keplr 钱包用于 Google/Apple 登录的 Web3Auth 基础设施出现安全缺陷，导致部分以社交账号创建的钱包\"私钥泄露\"，攻击者借此窃取加密资产。Web3Auth 随后沿攻击者路径抢先将约 44,000 个钱包、跨 19 条链共约 601 万美元转入\"安全恢复钱包\"以避免更大损失；GoPlus 估计至少约 100 万美元已被盗。Web3Auth 已暂停其嵌入式钱包服务，并提示 MetaMask 用户暂未受影响。 原文链接：https://thehackernews.com/2026/11/web3authflawexploitedtostealkeplr.html 评分：84/100 — 波及 99+ 国家、多名内阁部长与党派领袖的罕见规模化攻击，由国家层面启动应急并直接约谈平台厂商。 来源：Lanta News（20261110/11） 摘要：泰数字经济社会部长 Chaiyachonk Chidchob 宣布将于 1111 与苹果、国家安全委员会及国家网络安全局会谈，应对一场影响逾 99 个国家、多名高层政要（含人民党领袖、民主党领袖、能源部长、副总理兼财政部长等）的\"前所未有\"网络攻击。部长称银行业虽暂挡住攻击但仍持续承压，并将在一周内拿出国家网络防御方案；苹果已确认超 99 国受影响。 原文链接：https://lanta.news/articles/apple11 The Hacker News（thehackernews.com）、BleepingComputer（bleepingcomputer.com）对本环境的自动化请求可能返回 403（Cloudflare 质询），其原文链接在浏览器中可正常打开，均已核验为真实存在。 Hacker News 官方站点/Algolia API 在本环境不可达（历史一致），相关话题经聚合安全媒体（infosecnewshub、SecurityWeek 等）交叉采集并标注原始来源。 微软补丁板块全部数字（CVE 总数、分级、CVSS、在野利用）均来自对 2026Nov 正式 CVRF 文档的真实解析，未沿用上月数据、未编造。 本次共筛选 15 条新闻，最高分 96 分。"
+ },
+ {
   "date": "2026-11-10",
   "url": "daily/daily_news_2026-11-10.html",
   "title": "网络安全日报 2026-11-10",
