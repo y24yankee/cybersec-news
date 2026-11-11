@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-12 | 网络安全新闻中心</title>
+<meta name="description" content="自动采集 · 评分筛选 Top5 · 文末附微软补丁安全级别独立板块（Patch Tuesday 正式发布后）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-12">
+<meta property="og:description" content="自动采集 · 评分筛选 Top5 · 文末附微软补丁安全级别独立板块（Patch Tuesday 正式发布后）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-12.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-12">
+<meta name="twitter:description" content="自动采集 · 评分筛选 Top5 · 文末附微软补丁安全级别独立板块（Patch Tuesday 正式发布后）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-12</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">来源采集说明</a></li>
+<li><a href="#s2">Top 5 最值得关注新闻（纯新闻条目，不含补丁板块）</a></li>
+<li><a href="#s8">本次统计</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>自动采集 · 评分筛选 Top5 · 文末附微软补丁安全级别独立板块（Patch Tuesday 正式发布后）</p>
+</blockquote>
+<h2 id="s1">来源采集说明</h2>
+<ul>
+<li><strong>The Hacker News（THN）</strong>：首页抓取成功，5 篇 11-11 文章均含真实直链（本环境对 thehackernews.com 自动化请求偶发 403 Cloudflare 质询，浏览器可正常打开，已在条目中标注可访问原文链接）。</li>
+<li><strong>BleepingComputer（BC）</strong>：受 Cloudflare 质询页拦截（历史一致），经搜索索引与厂商官方公告交叉核验，采用真实可访问的原文/官方链接。</li>
+<li><strong>Hacker News（news.ycombinator.com）</strong>：本环境官方站点与 Algolia API 均不可达（返回 000 / fetch failed，历史一致），<strong>未纳入直链条目</strong>；以可访问的第三方权威来源（Recorded Future / GBHackers / SecurityWeek 等）补充候选，并在下方透明标注。</li>
+<li>共筛选 <strong>15 条候选新闻</strong>（THN 5 + BC 5 + 第三方补充 5），按评分取前 5；主动排除近期 Top5 已覆盖的重复项（N-able Able2Shell、Binance iOS 沙箱逃逸、Ethersphere bee-js、Web3Auth/Keplr、泰国政要攻击、OpenSSH SSHole、Vanderbilt BYOD、WorkOS ARTEX、Beget、Accenture 等），避免连日刷屏。</li>
+</ul>
+<hr />
+<h2 id="s2">Top 5 最值得关注新闻（纯新闻条目，不含补丁板块）</h2>
+<h3 id="s3">1. Zoom Workplace 关键漏洞可实现无认证远程权限提升（评分：95）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-11-11）</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html</li>
+<li><strong>摘要</strong>：Zoom 修复影响 Windows 版 Zoom Workplace 的两个漏洞，其中 CVE-2026-108186（CVSS 9.6）为输入验证缺陷，攻击者无需认证即可经网络将权限提升至系统级；另一项 CVE-2026-108187（CVSS 8.1）为来源校验缺陷。受影响版本为 7.1.0–7.1.7，需升级至 7.1.8 及以上。</li>
+<li><strong>评分理由</strong>：无认证 + 远程 + 提权，影响主流视频会议客户端，利用门槛低、覆盖面广。</li>
+</ul>
+<h3 id="s4">2. 逾 3.5 万款 Grok 自建应用暴露联网，部分泄露 X / SpaceXSI 机密数据（评分：90）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-11-11）</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html</li>
+<li><strong>摘要</strong>：安全公司 Claroc 发现 37,571 款 Grok 自建应用中 35,578 款无需登录即可公开访问，约 1/10 含内部业务或个人数据。其中包括 X 与 Grok 开发商 SpaceXSI 员工的 24 款内部应用（含保密入职计划、594 个账户的 sales 地图、标注机密的联邦机构广告提案），以及 30 余家其他组织（含 6 家财富 500）的敏感信息。SpaceXSI 已下架其 24 款应用。</li>
+<li><strong>评分理由</strong>：规模大、涉国家级/上市企业机密外泄，暴露 AI 低代码应用的默认公开配置风险。</li>
+</ul>
+<h3 id="s5">3. 开源 AI 渗透平台 AntiFox 被滥用于窃取 AWS 生产密钥（评分：88）</h3>
+<ul>
+<li><strong>来源</strong>：The Hacker News（2026-11-11）</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html</li>
+<li><strong>摘要</strong>：Arctic Wolf Labs 披露，攻击者将开源「自主渗透测试」平台 AntiFox 托管于阿里云实例，对暴露的 Web 服务实施 Web 利用、落 WebShell，进而发现配置、校验凭据、枚举云资源并窃取 AWS 密钥，横向移动至受害云环境。该项目在 GitHub 已被 fork 251 次、star 474 次。</li>
+<li><strong>评分理由</strong>：AI Agent 攻防工具被直接武器化、链路化窃取云凭据，代表攻击基础设施的新趋势。</li>
+</ul>
+<h3 id="s6">4. Notion 因第三方 AI 厂商 Fireworks 泄露 AI 对话记录（评分：84）</h3>
+<ul>
+<li><strong>来源</strong>：BleepingComputer（2026-11-11 报道；Notion 官方安全公告）</li>
+<li><strong>原文链接</strong>：https://www.notion.com/security/advisories/security-incident-involving-a-third-party-ai-vendor</li>
+<li><strong>摘要</strong>：Notion 确认其 AI 基础设施供应商 Fireworks AI 遭入侵，导致 Notion AI「Insights」功能的对话记录暴露于不足 1% 的工作区。Fireworks 于 11-02 通知、Notion 于 11-03 切断连接并删除其数据，11-09 通知受影响客户；绝大多数记录「不可归因」（未标注用户/工作区），但对话中可能含敏感内容。Notion 建议曾粘贴密码/API 密钥的用户立即轮换。</li>
+<li><strong>评分理由</strong>：典型第三方 AI 供应链泄露，即便主产品未破亦可外泄用户输入，影响企业数据治理。</li>
+</ul>
+<h3 id="s7">5. GhostFrame：新型 ESXi 植入框架将虚拟机管理程序变为勒索跳板（评分：83）</h3>
+<ul>
+<li><strong>来源</strong>：Recorded Future（Insikt Group）经 GBHackers / CybersecurityNews 报道（2026-11-10/11）</li>
+<li><strong>原文链接</strong>：https://gbhackers.com/new-ghostframe-malware-targets-vmware-esxi-servers/</li>
+<li><strong>摘要</strong>：Recorded Future 披露此前未公开的后渗透框架 GhostFrame，需先获得 ESXi 主机 root 权限，随后以统一面板实现持久化、命令执行、虚拟机枚举、VNC 中继、SOCKS5 内网穿透及凭据窃取（含 NTLM/WDigest/Kerberos/NTDS.dit），关联 TAG-218（与 Settra 勒索活动重叠）。其通过修改启动脚本每 5 秒反复关闭 ESXi 防火墙与 execInstalledOnly 限制实现持久化。</li>
+<li><strong>评分理由</strong>：虚拟化层（hypervisor）成为勒索控制点，单台宿主机可波及全部虚拟机，暴露检测盲区，企业需重新评估虚拟化安全。</li>
+</ul>
+<blockquote>
+<p>其他高强度候选（未进 Top5，避免连日重复）：SGLang 推理引擎 RCE 攻陷 NEAR AI（TEE 机密模式数据泄露，THN 11-10，约 100 用户）；Railway 客户 AI 密钥被盗致约 74 万美元盗用（THN 11-11）；eMudhra 再撤销 8 个受影响中间 CA（THN 11-11）；SAP 四月度补丁 4 个 CVSS 10.0、Adobe 修复 110 漏洞、Intel/AMD 芯片补丁 200+（SecurityWeek，属补丁类不计入新闻评分）。</p>
+</blockquote>
+<hr />
+<h2 id="s8">本次统计</h2>
+<p>本次共筛选 <strong>15</strong> 条新闻候选，最高分 <strong>95</strong> 分（Zoom Workplace 无认证提权 CVE-2026-108186）。</p>
+<blockquote>
+<p>微信推送：企业微信 connector 当前未连接，按既定默认跳过实际发送，仅本地文件交付。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-11.html">← 前一天 2026-11-11</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

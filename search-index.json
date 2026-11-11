@@ -1,5 +1,17 @@
 [
  {
+  "date": "2026-11-12",
+  "url": "daily/daily_news_2026-11-12.html",
+  "title": "网络安全日报 2026-11-12",
+  "score": 95,
+  "cves": [
+   "CVE-2026-108186",
+   "CVE-2026-108187"
+  ],
+  "summary": "自动采集 · 评分筛选 Top5 · 文末附微软补丁安全级别独立板块（Patch Tuesday 正式发布后）",
+  "text": "自动采集 · 评分筛选 Top5 · 文末附微软补丁安全级别独立板块（Patch Tuesday 正式发布后） The Hacker News（THN）：首页抓取成功，5 篇 1111 文章均含真实直链（本环境对 thehackernews.com 自动化请求偶发 403 Cloudflare 质询，浏览器可正常打开，已在条目中标注可访问原文链接）。 BleepingComputer（BC）：受 Cloudflare 质询页拦截（历史一致），经搜索索引与厂商官方公告交叉核验，采用真实可访问的原文/官方链接。 Hacker News（news.ycombinator.com）：本环境官方站点与 Algolia API 均不可达（返回 000 / fetch failed，历史一致），未纳入直链条目；以可访问的第三方权威来源（Recorded Future / GBHackers / SecurityWeek 等）补充候选，并在下方透明标注。 共筛选 15 条候选新闻（THN 5 + BC 5 + 第三方补充 5），按评分取前 5；主动排除近期 Top5 已覆盖的重复项（Nable Able2Shell、Binance iOS 沙箱逃逸、Ethersphere beejs、Web3Auth/Keplr、泰国政要攻击、OpenSSH SSHole、Vanderbilt BYOD、WorkOS ARTEX、Beget、Accenture 等），避免连日刷屏。 来源：The Hacker News（20261111） 原文链接：https://thehackernews.com/2026/11/criticalzoomworkplaceflawcould.html 摘要：Zoom 修复影响 Windows 版 Zoom Workplace 的两个漏洞，其中 CVE2026108186（CVSS 9.6）为输入验证缺陷，攻击者无需认证即可经网络将权限提升至系统级；另一项 CVE2026108187（CVSS 8.1）为来源校验缺陷。受影响版本为 7.1.0–7.1.7，需升级至 7.1.8 及以上。 评分理由：无认证 + 远程 + 提权，影响主流视频会议客户端，利用门槛低、覆盖面广。 来源：The Hacker News（20261111） 原文链接：https://thehackernews.com/2026/11/over35000grokbuiltappsexposed.html 摘要：安全公司 Claroc 发现 37,571 款 Grok 自建应用中 35,578 款无需登录即可公开访问，约 1/10 含内部业务或个人数据。其中包括 X 与 Grok 开发商 SpaceXSI 员工的 24 款内部应用（含保密入职计划、594 个账户的 sales 地图、标注机密的联邦机构广告提案），以及 30 余家其他组织（含 6 家财富 500）的敏感信息。SpaceXSI 已下架其 24 款应用。 评分理由：规模大、涉国家级/上市企业机密外泄，暴露 AI 低代码应用的默认公开配置风险。 来源：The Hacker News（20261111） 原文链接：https://thehackernews.com/2026/11/antifoxaipentestingplatformlinked.html 摘要：Arctic Wolf Labs 披露，攻击者将开源「自主渗透测试」平台 AntiFox 托管于阿里云实例，对暴露的 Web 服务实施 Web 利用、落 WebShell，进而发现配置、校验凭据、枚举云资源并窃取 AWS 密钥，横向移动至受害云环境。该项目在 GitHub 已被 fork 251 次、star 474 次。 评分理由：AI Agent 攻防工具被直接武器化、链路化窃取云凭据，代表攻击基础设施的新趋势。 来源：BleepingComputer（20261111 报道；Notion 官方安全公告） 原文链接：https://www.notion.com/security/advisories/securityincidentinvolvingathirdpartyaivendor 摘要：Notion 确认其 AI 基础设施供应商 Fireworks AI 遭入侵，导致 Notion AI「Insights」功能的对话记录暴露于不足 1% 的工作区。Fireworks 于 1102 通知、Notion 于 1103 切断连接并删除其数据，1109 通知受影响客户；绝大多数记录「不可归因」（未标注用户/工作区），但对话中可能含敏感内容。Notion 建议曾粘贴密码/API 密钥的用户立即轮换。 评分理由：典型第三方 AI 供应链泄露，即便主产品未破亦可外泄用户输入，影响企业数据治理。 来源：Recorded Future（Insikt Group）经 GBHackers / CybersecurityNews 报道（20261110/11） 原文链接：https://gbhackers.com/newghostframemalwaretargetsvmwareesxiservers/ 摘要：Recorded Future 披露此前未公开的后渗透框架 GhostFrame，需先获得 ESXi 主机 root 权限，随后以统一面板实现持久化、命令执行、虚拟机枚举、VNC 中继、SOCKS5 内网穿透及凭据窃取（含 NTLM/WDigest/Kerberos/NTDS.dit），关联 TAG218（与 Settra 勒索活动重叠）。其通过修改启动脚本每 5 秒反复关闭 ESXi 防火墙与 execInstalledOnly 限制实现持久化。 评分理由：虚拟化层（hypervisor）成为勒索控制点，单台宿主机可波及全部虚拟机，暴露检测盲区，企业需重新评估虚拟化安全。 其他高强度候选（未进 Top5，避免连日重复）：SGLang 推理引擎 RCE 攻陷 NEAR AI（TEE 机密模式数据泄露，THN 1110，约 100 用户）；Railway 客户 AI 密钥被盗致约 74 万美元盗用（THN 1111）；eMudhra 再撤销 8 个受影响中间 CA（THN 1111）；SAP 四月度补丁 4 个 CVSS 10.0、Adobe 修复 110 漏洞、Intel/AMD 芯片补丁 200+（SecurityWeek，属补丁类不计入新闻评分）。 本次共筛选 15 条新闻候选，最高分 95 分（Zoom Workplace 无认证提权 CVE2026108186）。 微信推送：企业微信 connector 当前未连接，按既定默认跳过实际发送，仅本地文件交付。"
+ },
+ {
   "date": "2026-11-11",
   "url": "daily/daily_news_2026-11-11.html",
   "title": "网络安全日报 2026-11-11",
