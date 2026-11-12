@@ -1,5 +1,18 @@
 [
  {
+  "date": "2026-11-13",
+  "url": "daily/daily_news_2026-11-13.html",
+  "title": "网络安全日报 2026-11-13",
+  "score": 94,
+  "cves": [
+   "CVE-2026-0322",
+   "CVE-2026-110697",
+   "CVE-2026-123710"
+  ],
+  "summary": "生成时间：20261113 07:00（北京时间）｜数据来源：The Hacker News、BleepingComputer、Hacker News 检索；微软 MSRC CVRF 公共 API",
+  "text": "生成时间：20261113 07:00（北京时间）｜数据来源：The Hacker News、BleepingComputer、Hacker News 检索；微软 MSRC CVRF 公共 API The Hacker News / BleepingComputer：通过搜索引擎索引与官方公告交叉采集，原文直链真实有效；两站对自动化爬虫返回 Cloudflare 质询（HTTP 403），但在浏览器中可正常打开，已在各条目标注真实来源链接。 Hacker News：官方站点（news.ycombinator.com）与 Algolia API 在本环境不可达（历史一致），相关话题经 The Hacker News、The Register、安全聚合媒体交叉采集并标注真实来源，未单独以 HN 帖列入 Top5。 补丁日校验：MSRC /cvrf/v3.0/updates 索引中 2026Nov 条目标题为 \"November 2026 Security Updates\"（无 Early，状态 Final，初版发布 20261110，最新修订 20261112）→ 判定正式 Patch Tuesday 已发布，故文末附「微软补丁安全级别」独立板块。 评分：94 分 — 理由：影响规模极大（6.1 万仓库被探测、1,800+ 仓库实际失陷、含财富 100 强与政府账户），且自动化窃取 AWS/Azure/GCP 云凭据与 AI 工具令牌，供应链风险极高。 来源：The Hacker News 摘要：Aikido Security 追踪到一起名为 wfxloot 的活动——攻击者用窃取的 4,837 个 GitHub 账户，自 11 月 10 日起向 61,764 个仓库提交伪装成「docs: dependency audit notes」的探测 PR，命中可写权限后注入约 1,500 行窃取脚本，盗取 GitHub Actions 密钥、云凭据、SSH/GPG、OpenAI/Anthropic/Cursor/Copilot 等令牌，并通过 OIDC 兑换长期云凭据后 1 分钟内回滚抹痕。至少 1,835 个仓库确认失陷，部分载荷还被自动发布到 Packagist 与 Go 模块，触及下游依赖生态。 原文链接：https://thehackernews.com/2026/11/4837hijackedgithubaccountsranci.html 评分：90 分 — 理由：全球Top级航运物流企业沦陷，攻击者声称窃取约 100GB 数据（含明文密码、33 个 SUPERADMIN 账户），并借并购遗留系统打入，示范性强。 来源：BleepingComputer 摘要：马士基（A.P. Moller–Maersk）确认其此前收购公司遗留下的一套本地系统遭未授权访问并发生数据提取，事件目前被隔离在该遗留系统。勒索组织 WhiteArmor 将其列入数据泄露站，声称掌握约 100GB 来自 OCF/LF Logistics 平台的物流与供应链数据，并要求 30 天内以比特币支付 500 万美元，宣称数据含近 3 万条司机记录、明文密码、签收回单及 27,842 条移动设备日志。马士基表示现有调查强烈表明尚无敏感数据被公开泄露，客户订舱与货运平台仍可正常使用。 原文链接：https://www.bleepingcomputer.com/news/security/maerskconfirmsdatabreachaswhitearmorransomwaredemands5million/ 评分：89 分 — 理由：针对 MSP 远程管理控制台的供应链式攻击，90 分钟内横扫 288 台终端，且恶意工具包具备反调查「诱捕技术员」自传播能力，波及托管服务生态。 来源：The Register（另据 Huntress / ConnectWise 公告） 摘要：攻击者劫持多家云托管 ConnectWise ScreenConnect 控制台，借助第三方扩展 RMM+（1.0.31/1.0.32）默认空访问密钥导致的认证绕过（可绕过 MFA），在约 90 分钟内向 48 个组织、至少 288 台终端下发名为 SCKit 的 16 文件恶意工具包，安装流氓 ScreenConnect 客户端维持持久后门并窃取会话 Cookie。ConnectWise 已在约 400 个合作伙伴云环境中禁用 RMM+ 系列 5 款扩展，并强调停用扩展与改密不足以清除已建立的持久化。Huntress 提示调查感染机时切勿经 ScreenConnect 远程连接，以免技术员工位被反向感染。 原文链接：https://www.theregister.com/security/2026/11/12/hackersexploitingscreenconnectpluginflawtospreadmalwareacrosshundredsofpcs/5309361 评分：88 分 — 理由：直击容器镜像仓库核心信任模型，默认开启匿名访问时可无认证利用，能投毒 CI/CD 流水线，属典型软件供应链风险。 来源：The Hacker News（亦见 SecurityWeek / Red Hat 公告） 摘要：Red Hat 披露 Quay 容器镜像仓库两个严重漏洞：CVE2026123710（CVSS 9.8）利用密钥轮换接口未校验令牌用途的逻辑缺陷，攻击者可植入无过期、重启后仍存活的受信任签名密钥，从而读取或覆盖任意仓库的私有镜像（含内嵌密钥与凭据）；CVE2026110697（CVSS 9.9）为机器人账户列举中的 SQL LIKE 通配符注入，单租户可窃取其他租户的机器人令牌。Red Hat 已发布 8 个 Quay 3 分支的修复构建；在补丁落地前，应封堵 /keys 端点、关闭匿名访问并审计信任密钥。 原文链接：https://thehackernews.com/2026/11/criticalredhatquayflawlets.html 评分：85 分 — 理由：防火墙/边界安全设备上的认证后远程代码执行且已被在野利用、已入 CISA KEV，攻陷安全设备将获得网络内强势立足点。 来源：Palo Alto Networks 安全公告（另见新加坡 CSA、英国 NHS 警报） 摘要：CVE20260322（CVSS 4.0 评分 8.6，代码注入类）位于 PANOS 管理接口，已认证且具有网络访问权的攻击者可借此在防火墙上以 root 权限执行任意代码；Palo Alto 称已观察到非常有限的在野利用，CISA 已将其加入 Known Exploited Vulnerabilities 目录。受影响涵盖 PASeries / VMSeries 防火墙及 Panorama，Prisma Access 与 Cloud NGFW 不受影响；厂商强调无临时规避措施，必须升级至各维护分支的修复版本，并将管理接口访问限制在受信任内网 IP。 原文链接：https://security.paloaltonetworks.com/CVE20260322 本次共筛选 15 条候选新闻（三来源各 5 条），经去重与评分后选出 Top 5。 最高分：94 分（GitHub「wfxloot」大规模 CI 凭据窃取）。 已主动排除与近期（1111、1112）Top5 重复条目（Nable Ncentral Able2Shell、Binance iOS 沙箱、Ethersphere beejs、Web3Auth·Keplr、Zoom Workplace、Grok 自建应用、AntiFox、Notion·Fireworks、GhostFrame ESXi 等），避免连日刷屏。 📌 微信推送说明：企业微信 connector 当前未连接，按既定默认跳过实际发送，本报告以本地文件交付。"
+ },
+ {
   "date": "2026-11-12",
   "url": "daily/daily_news_2026-11-12.html",
   "title": "网络安全日报 2026-11-12",

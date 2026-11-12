@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-13 | 网络安全新闻中心</title>
+<meta name="description" content="生成时间：20261113 07:00（北京时间）｜数据来源：The Hacker News、BleepingComputer、Hacker News 检索；微软 MSRC CVRF 公共 API">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-13">
+<meta property="og:description" content="生成时间：20261113 07:00（北京时间）｜数据来源：The Hacker News、BleepingComputer、Hacker News 检索；微软 MSRC CVRF 公共 API">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-13.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-13">
+<meta name="twitter:description" content="生成时间：20261113 07:00（北京时间）｜数据来源：The Hacker News、BleepingComputer、Hacker News 检索；微软 MSRC CVRF 公共 API">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-13</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">来源采集说明</a></li>
+<li><a href="#s2">Top 5 重点新闻（按评分排序，纯新闻条目，不含补丁数据）</a></li>
+<li><a href="#s8">统计</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>生成时间：2026-11-13 07:00（北京时间）｜数据来源：The Hacker News、BleepingComputer、Hacker News 检索；微软 MSRC CVRF 公共 API</p>
+</blockquote>
+<h2 id="s1">来源采集说明</h2>
+<ul>
+<li><strong>The Hacker News / BleepingComputer</strong>：通过搜索引擎索引与官方公告交叉采集，原文直链真实有效；两站对自动化爬虫返回 Cloudflare 质询（HTTP 403），但在浏览器中可正常打开，已在各条目标注真实来源链接。</li>
+<li><strong>Hacker News</strong>：官方站点（news.ycombinator.com）与 Algolia API 在本环境不可达（历史一致），相关话题经 The Hacker News、The Register、安全聚合媒体交叉采集并标注真实来源，未单独以 HN 帖列入 Top5。</li>
+<li><strong>补丁日校验</strong>：MSRC <code>/cvrf/v3.0/updates</code> 索引中 <code>2026-Nov</code> 条目标题为 <strong>"November 2026 Security Updates"</strong>（无 Early，状态 Final，初版发布 2026-11-10，最新修订 2026-11-12）→ 判定<strong>正式 Patch Tuesday 已发布</strong>，故文末附「微软补丁安全级别」独立板块。</li>
+</ul>
+<hr />
+<h2 id="s2">Top 5 重点新闻（按评分排序，纯新闻条目，不含补丁数据）</h2>
+<h3 id="s3">1. GitHub「wfx-loot」大规模凭证窃取：4,837 个账户被用于投送 CI 密钥窃取器</h3>
+<ul>
+<li><strong>评分：94 分</strong> — 理由：影响规模极大（6.1 万仓库被探测、1,800+ 仓库实际失陷、含财富 100 强与政府账户），且自动化窃取 AWS/Azure/GCP 云凭据与 AI 工具令牌，供应链风险极高。</li>
+<li><strong>来源</strong>：The Hacker News</li>
+<li><strong>摘要</strong>：Aikido Security 追踪到一起名为 wfx-loot 的活动——攻击者用窃取的 4,837 个 GitHub 账户，自 11 月 10 日起向 61,764 个仓库提交伪装成「docs: dependency audit notes」的探测 PR，命中可写权限后注入约 1,500 行窃取脚本，盗取 GitHub Actions 密钥、云凭据、SSH/GPG、OpenAI/Anthropic/Cursor/Copilot 等令牌，并通过 OIDC 兑换长期云凭据后 1 分钟内回滚抹痕。至少 1,835 个仓库确认失陷，部分载荷还被自动发布到 Packagist 与 Go 模块，触及下游依赖生态。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html</li>
+</ul>
+<h3 id="s4">2. 航运巨头马士基确认数据泄露，WhiteArmor 勒索组织索要 500 万美元</h3>
+<ul>
+<li><strong>评分：90 分</strong> — 理由：全球Top级航运物流企业沦陷，攻击者声称窃取约 100GB 数据（含明文密码、33 个 SUPER_ADMIN 账户），并借并购遗留系统打入，示范性强。</li>
+<li><strong>来源</strong>：BleepingComputer</li>
+<li><strong>摘要</strong>：马士基（A.P. Moller–Maersk）确认其此前收购公司遗留下的一套本地系统遭未授权访问并发生数据提取，事件目前被隔离在该遗留系统。勒索组织 WhiteArmor 将其列入数据泄露站，声称掌握约 100GB 来自 OCF/LF Logistics 平台的物流与供应链数据，并要求 30 天内以比特币支付 500 万美元，宣称数据含近 3 万条司机记录、明文密码、签收回单及 27,842 条移动设备日志。马士基表示现有调查强烈表明尚无敏感数据被公开泄露，客户订舱与货运平台仍可正常使用。</li>
+<li><strong>原文链接</strong>：https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/</li>
+</ul>
+<h3 id="s5">3. ConnectWise ScreenConnect 遭 SCKit 蠕虫打击：48 家组织、288 台终端 90 分钟内被控</h3>
+<ul>
+<li><strong>评分：89 分</strong> — 理由：针对 MSP 远程管理控制台的供应链式攻击，90 分钟内横扫 288 台终端，且恶意工具包具备反调查「诱捕技术员」自传播能力，波及托管服务生态。</li>
+<li><strong>来源</strong>：The Register（另据 Huntress / ConnectWise 公告）</li>
+<li><strong>摘要</strong>：攻击者劫持多家云托管 ConnectWise ScreenConnect 控制台，借助第三方扩展 RMM+（1.0.31/1.0.32）默认空访问密钥导致的认证绕过（可绕过 MFA），在约 90 分钟内向 48 个组织、至少 288 台终端下发名为 SCKit 的 16 文件恶意工具包，安装流氓 ScreenConnect 客户端维持持久后门并窃取会话 Cookie。ConnectWise 已在约 400 个合作伙伴云环境中禁用 RMM+ 系列 5 款扩展，并强调停用扩展与改密不足以清除已建立的持久化。Huntress 提示调查感染机时切勿经 ScreenConnect 远程连接，以免技术员工位被反向感染。</li>
+<li><strong>原文链接</strong>：https://www.theregister.com/security/2026/11/12/hackers-exploiting-screenconnect-plugin-flaw-to-spread-malware-across-hundreds-of-pcs/5309361</li>
+</ul>
+<h3 id="s6">4. Red Hat Quay 曝两个严重漏洞（CVSS 9.8 / 9.9）：可读取并覆盖所有私有容器镜像</h3>
+<ul>
+<li><strong>评分：88 分</strong> — 理由：直击容器镜像仓库核心信任模型，默认开启匿名访问时可无认证利用，能投毒 CI/CD 流水线，属典型软件供应链风险。</li>
+<li><strong>来源</strong>：The Hacker News（亦见 SecurityWeek / Red Hat 公告）</li>
+<li><strong>摘要</strong>：Red Hat 披露 Quay 容器镜像仓库两个严重漏洞：CVE-2026-123710（CVSS 9.8）利用密钥轮换接口未校验令牌用途的逻辑缺陷，攻击者可植入无过期、重启后仍存活的受信任签名密钥，从而读取或覆盖任意仓库的私有镜像（含内嵌密钥与凭据）；CVE-2026-110697（CVSS 9.9）为机器人账户列举中的 SQL LIKE 通配符注入，单租户可窃取其他租户的机器人令牌。Red Hat 已发布 8 个 Quay 3 分支的修复构建；在补丁落地前，应封堵 <code>/keys</code> 端点、关闭匿名访问并审计信任密钥。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html</li>
+</ul>
+<h3 id="s7">5. Palo Alto PAN-OS 管理接口 RCE（CVE-2026-0322）已在野利用，可获 root 权限</h3>
+<ul>
+<li><strong>评分：85 分</strong> — 理由：防火墙/边界安全设备上的认证后远程代码执行且已被在野利用、已入 CISA KEV，攻陷安全设备将获得网络内强势立足点。</li>
+<li><strong>来源</strong>：Palo Alto Networks 安全公告（另见新加坡 CSA、英国 NHS 警报）</li>
+<li><strong>摘要</strong>：CVE-2026-0322（CVSS 4.0 评分 8.6，代码注入类）位于 PAN-OS 管理接口，已认证且具有网络访问权的攻击者可借此在防火墙上以 root 权限执行任意代码；Palo Alto 称已观察到非常有限的在野利用，CISA 已将其加入 Known Exploited Vulnerabilities 目录。受影响涵盖 PA-Series / VM-Series 防火墙及 Panorama，Prisma Access 与 Cloud NGFW 不受影响；厂商强调无临时规避措施，必须升级至各维护分支的修复版本，并将管理接口访问限制在受信任内网 IP。</li>
+<li><strong>原文链接</strong>：https://security.paloaltonetworks.com/CVE-2026-0322</li>
+</ul>
+<hr />
+<h2 id="s8">统计</h2>
+<ul>
+<li>本次共筛选 <strong>15</strong> 条候选新闻（三来源各 5 条），经去重与评分后选出 Top 5。</li>
+<li><strong>最高分：94 分</strong>（GitHub「wfx-loot」大规模 CI 凭据窃取）。</li>
+<li>已主动排除与近期（11-11、11-12）Top5 重复条目（N-able N-central Able2Shell、Binance iOS 沙箱、Ethersphere bee-js、Web3Auth·Keplr、Zoom Workplace、Grok 自建应用、AntiFox、Notion·Fireworks、GhostFrame ESXi 等），避免连日刷屏。</li>
+</ul>
+<blockquote>
+<p>📌 微信推送说明：企业微信 connector 当前未连接，按既定默认跳过实际发送，本报告以本地文件交付。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-12.html">← 前一天 2026-11-12</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
