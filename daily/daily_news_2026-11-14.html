@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-14 | 网络安全新闻中心</title>
+<meta name="description" content="生成时间：20261114 07:00（北京时间）｜来源筛选：The Hacker News、BleepingComputer、Hacker News（及关联厂商/威胁情报公告交叉核验）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-14">
+<meta property="og:description" content="生成时间：20261114 07:00（北京时间）｜来源筛选：The Hacker News、BleepingComputer、Hacker News（及关联厂商/威胁情报公告交叉核验）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-14.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-14">
+<meta name="twitter:description" content="生成时间：20261114 07:00（北京时间）｜来源筛选：The Hacker News、BleepingComputer、Hacker News（及关联厂商/威胁情报公告交叉核验）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-14</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">一、今日 Top 5 新闻（综合严重/新颖/影响/时效评分）</a></li>
+<li><a href="#s7">三、统计与说明</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>生成时间：2026-11-14 07:00（北京时间）｜来源筛选：The Hacker News、BleepingComputer、Hacker News（及关联厂商/威胁情报公告交叉核验）
+说明：Hacker News 官方站点与 Algolia API 在本环境不可达（与历史一致），HN 侧话题已通过 The Register / SecurityWeek / 厂商公告等可访问来源交叉采集；BleepingComputer 与部分 The Hacker News 直链对本环境自动化请求返回 Cloudflare 质询页（HTTP 403），在常规浏览器中可正常打开，链接真实有效。</p>
+</blockquote>
+<hr />
+<h2 id="s1">一、今日 Top 5 新闻（综合严重/新颖/影响/时效评分）</h2>
+<h3 id="s2">1. 黑客利用 PHP2Shell 漏洞攻陷 Check Point 网关，部署 TSGA 后门并擦除 ESXi</h3>
+<ul>
+<li><strong>评分：92 / 100</strong></li>
+<li><strong>评分理由：</strong> 国家级间谍活动结合破坏性擦除器、针对多国组织，且利用最新披露的 Gaia OS 提权 0day，危害与新颖性双高。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 未知攻击者自 10 月 30 日起利用未修补 Check Point 安全网关的 PHP2Shell 漏洞（CVE-2026-109618 / CVE-2026-109619）取得初始访问，随后通过 Gaia OS 此前未披露的本地提权漏洞 <strong>CVE-2026-123039（CVSS 7.8）</strong> 部署持久化后门 <strong>TSGA / TSProxy</strong>，并横向至 VMware ESXi 投放 <code>destroy_v6</code> 擦除器、留下政治性勒索信。Check Point 将活动归因于中国背景的 <strong>Armory Castle（原 UNC5221）</strong>：攻击使用了 LightNode VPS 基础设施，且扫描集中在北京时间工作时段。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html</li>
+</ul>
+<h3 id="s3">2. PostgreSQL 一次性修补 52 个漏洞，含一个 22 年历史的"已认证 RCE"缺陷</h3>
+<ul>
+<li><strong>评分：90 / 100</strong></li>
+<li><strong>评分理由：</strong> 影响几乎所有 PostgreSQL 部署的"已认证 RCE"配合 22 年历史缺陷被公开利用方法，影响范围极广。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> PostgreSQL 发布更新修复 52 个安全缺陷，其中 <strong>CVE-2026-6460（CVSS 8.8）</strong> 是一个可追溯到 2004 年的类型混淆缺陷，允许能创建对象的数据库用户在当前服务器上执行代码（已公开可用 PoC）。影响 18.7 / 17.12 / 16.16 / 15.20 / 14.25 之前的所有大版本，涉及 AWS（Aurora/RDS）、Azure PostgreSQL、Google（AlloyDB）、Supabase、Databricks 等托管服务；修复还需同步重建所有 C 语言扩展。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html</li>
+</ul>
+<h3 id="s4">3. Apache HTTP Server 修补 mod_http2 关键 HTTP/2 远程代码执行漏洞</h3>
+<ul>
+<li><strong>评分：88 / 100</strong></li>
+<li><strong>评分理由：</strong> 无认证 RCE 叠加约五分之一网站使用的庞大暴露面，且为已确认可利用的竞态缺陷，时效性极强。</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> Apache 软件基金会修复了 <code>mod_http2</code> 模块中的并发竞态堆破坏漏洞 <strong>CVE-2026-119618</strong>，未认证攻击者可在 httpd 2.4.55–2.4.70 及独立 mod_h2 2.0.8–2.0.42 上实现远程代码执行。该漏洞由 Anthropic OSS Scanner 与 Google Cloud 漏洞研究团队发现；Wiz 遥测显示 64% 云环境存在脆弱资源、约半数对外暴露。watchTowr 与 Wiz 均建议"立即打补丁或暂时关闭 h2"。</li>
+<li><strong>原文链接：</strong> https://bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/</li>
+</ul>
+<h3 id="s5">4. Operation Endgame 摧毁 Gootloader、CastleRAT、StealC 基础设施，缴获 640 万被盗登录凭证</h3>
+<ul>
+<li><strong>评分：86 / 100</strong></li>
+<li><strong>评分理由：</strong> 大规模正面打击勒索/窃密产业链，覆盖 4 万+ 受害者、640 万凭证，执法意义与影响范围显著（防御性利好）。</li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 本周一次国际执法行动（Europol / Eurojust 协调，加拿大、丹麦、德国、荷兰、英国、美国及 Microsoft 等私营伙伴）打掉 <strong>Gootloader、CastleRAT、StealC</strong> 背后的服务器与域名，缴获约 <strong>640 万份</strong>属于 4 万+ 受害者的被盗登录凭证。Gootloader 自 2018 年以来已感染至少 2.5 万台计算机，经 WordPress 站点 SEO 投毒传播并转售初始访问给勒索团伙；德国 BKA 通报全案。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html</li>
+</ul>
+<h3 id="s6">5. CrowdStrike FalconFlank 零日赋予攻击者 SYSTEM 权限（研究者 Nightmare Eclipse）</h3>
+<ul>
+<li><strong>评分：85 / 100</strong></li>
+<li><strong>评分理由：</strong> 新披露的无补丁 Windows / 安全产品提权 0day，且同一研究者集中"放毒"多个 0day，新颖性与潜在滥用风险高。</li>
+<li><strong>来源：</strong> BleepingComputer</li>
+<li><strong>摘要：</strong> 化名 <strong>Nightmare Eclipse</strong>（Abdelhamid Naceri）的研究者公开了 CrowdStrike Falcon 传感器零日利用 <strong>FalconFlank</strong>，可在最新 Windows 11 25H2 / Server 2025 + Falcon 环境下以 SYSTEM 权限起 shell（滥用 Office 恶意宏修复特性）。同期该研究者还放出 Kaspersky Endpoint、GenDigital Avast、Nvidia 等多个 0day；安全专家 Kevin Beaumont 已确认这些提权利用真实可用。相关漏洞尚无 CVE 编号、尚无官方补丁。</li>
+<li><strong>原文链接：</strong> https://bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges</li>
+</ul>
+<hr />
+<h2 id="s7">三、统计与说明</h2>
+<ul>
+<li>本次共筛选 <strong>15 条</strong>候选新闻（三来源各至多 5 条），综合评分后取前 5 条呈现。</li>
+<li><strong>最高分：92 分</strong>（PHP2Shell → Check Point 网关 TSGA 后门 + ESXi 擦除器）。</li>
+<li>已主动排除与近期（11-11～11-13）Top 5 重复项（N-able Able2Shell、Binance iOS 沙箱、Ethersphere、Web3Auth/Keplr、Zoom、Grok 自建应用、AntiFox、Notion、GhostFrame ESXi、GitHub wfx-loot、马士基 WhiteArmor、ConnectWise ScreenConnect SCKit、Red Hat Quay、Palo Alto PAN-OS、OpenSSH SSHole、Vanderbilt BYOD 等），避免连日刷屏。</li>
+<li>微信推送：企业微信 connector 当前未连接，无法实际推送；按既定默认仅以本地文件交付（见下方附件）。</li>
+</ul>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-13.html">← 前一天 2026-11-13</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
