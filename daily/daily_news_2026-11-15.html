@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-15 | 网络安全新闻中心</title>
+<meta name="description" content="自动推送 · 数据来源：Hacker News / The Hacker News / BleepingComputer（过去 24–48 小时）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-15">
+<meta property="og:description" content="自动推送 · 数据来源：Hacker News / The Hacker News / BleepingComputer（过去 24–48 小时）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-15.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-15">
+<meta name="twitter:description" content="自动推送 · 数据来源：Hacker News / The Hacker News / BleepingComputer（过去 24–48 小时）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-15</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">🔝 今日 Top 5 安全新闻</a></li>
+<li><a href="#s7">📌 统计</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>自动推送 · 数据来源：Hacker News / The Hacker News / BleepingComputer（过去 24–48 小时）
+补丁日校验：MSRC <code>updates</code> 中 <code>2026-Nov</code> 条目标题为「November 2026 Security Updates」（无 Early，Status Final）→ 正式 Patch Tuesday 已发布，文末附独立板块。</p>
+</blockquote>
+<hr />
+<h2 id="s1">🔝 今日 Top 5 安全新闻</h2>
+<h3 id="s2">1. FBI 发布 FLASH 警报：自动化 AI 攻击框架 ARTEX 以"机器速度"接管入侵链</h3>
+<ul>
+<li><strong>评分：95 / 100</strong> — <em>理由：国家级威胁 actor 将 LLM 智能体武器化，把"侦察→横向移动→数据窃取"压缩到 3 小时内，且已出现 1,600+ 暴露控制台，新颖性与影响范围俱高。</em></li>
+<li><strong>来源：</strong> The Hacker News / The Record（FBI FLASH-20261113-001，2026-11-13）</li>
+<li><strong>摘要：</strong> FBI 警告，开源框架 ARTEX 已被用于自动化多阶段网络入侵，部分入侵从初始定向到拿下特权访问不到 3 小时；Cisco Talos 识别出 2,500+ 关联 C2 地址、700+ 暴露的 PentAGI 实例，并指认 VAPOR PANDA 借其攻击 14 国 200+ 组织。框架无自有模型，可接入 Claude、GPT、DeepSeek、Grok 等，攻击者实例中中国模型占比最高（DeepSeek Flash 为主）。</li>
+<li><strong>原文链接：</strong> https://glitchwire.com/news/fbi-issues-flash-alert-on-artex-the-ai-agent-framework-automating-network-intrus</li>
+</ul>
+<h3 id="s3">2. Mior 与 Skyfall 攻击击穿 AMD SEV-SNP 机密虚拟机隔离</h3>
+<ul>
+<li><strong>评分：90 / 100</strong> — <em>理由：全新 host 侧攻击类，攻破硬件级云租户隔离（含远程证明伪造），动摇机密计算的信任根基，影响主流云上的 AMD EPYC 工作负载。</em></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-13）</li>
+<li><strong>摘要：</strong> ETH Zurich 与 Google 研究团队公开两种攻击：Mior 在 SEV-SNP 启动阶段篡改反向映射表（RMP），可读写加密 VM 内存并伪造签名证明报告；Skyfall 借瞬态调度侧信道（TSA）恢复寄存器与磁盘加密密钥。二者均需控制 hypervisor（Mior 还需 BIOS/UEFI + PCIe 设备），AMD 已发布 8/12 固件与微码，平台固件计划 11–12 月推送。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/new-mior-and-skyfall-attacks-let-rogue.html</li>
+</ul>
+<h3 id="s4">3. CISA 将 UnrealIRCd 命令注入漏洞 CVE-2026-114713 列入 KEV，已遭在野利用</h3>
+<ul>
+<li><strong>评分：88 / 100</strong> — <em>理由：确认在野利用的服务器级命令注入（CVSS 8.6），影响广泛部署的开源 IRC 服务，CISA KEV 强制联邦机构 11/16 前修复，时效性与现实威胁突出。</em></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-14）</li>
+<li><strong>摘要：</strong> UnrealIRCd 6.0.0–6.2.7.0 的 labeled-response 模块未转义 IRCv3 <code>label</code> 标签，导致多服务器网络中任意用户可注入以服务器权限执行的 server-to-server 命令。维护者称其为 15 年来最严重问题，漏洞披露后一天即出现利用；联邦机构须在 BOD 26-04 下于 2026-11-16 前完成修复，升级至 6.2.7.1 或部署 spamfilter 临时缓解。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html</li>
+</ul>
+<h3 id="s5">4. 朝鲜"FaceStealer"借助 AI 深伪视频会议窃取超 4 亿美元加密货币</h3>
+<ul>
+<li><strong>评分：85 / 100</strong> — <em>理由：国家级团伙以深伪视频通话 + 盗号联系人实施社工，18 个月窃取 4 亿+美元并缴获 12 亿，且已延伸至开源软件供应链，影响范围与新颖性显著。</em></li>
+<li><strong>来源：</strong> 美国司法部 / FBI（2026-11-12 至 11-13）</li>
+<li><strong>摘要：</strong> 朝鲜黑客（Sapphire Sleet / UNC1069 / BlueNoroff）通过劫持社交账号邀请目标进入伪造 Zoom/Teams 会议，播放预录或 AI 深伪视频获取信任，再以"修复音频"为由诱导执行恶意脚本，窃走加密货币与恢复短语，并持续录制新受害者人脸用于下一轮。FBI 已查封相关云基础设施与 900+ 段受害者摄像头录像，DOJ 同时冻结/没收自 Binance 窃取的 12 亿美元。</li>
+<li><strong>原文链接：</strong> https://www.justice.gov/usao-cdca/pr/justice-department-announces-actions-disrupt-north-koreas-massive-theft-cryptocurrency</li>
+</ul>
+<h3 id="s6">5. Trezor 确认 CryptoBilis 所售 Safe 5 钱包藏硬件窃密植入板，砍掉 80% 经销商</h3>
+<ul>
+<li><strong>评分：80 / 100</strong> — <em>理由：供应链硬件植入直接收割助记词、影响自托管用户资产安全，厂商被迫大幅收缩经销网络，现实危害明确。</em></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-12）</li>
+<li><strong>摘要：</strong> Trezor 确认 3 台自东南亚经销商 CryptoBilis 购买的 Safe 5 中藏有额外电路板，夹在主控板与屏幕之间，复制屏幕上显示的助记词/密码短语并经移动网络发往攻击者服务器。11/11 发布的固件 2.13.1 可阻止已知植入继续窃取，但无法保护已外泄的备份；Trezor 已将经销网络缩减约 80%，并建议 3 月以来自该经销商购机者迁移至全新钱包与种子。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html</li>
+</ul>
+<hr />
+<h2 id="s7">📌 统计</h2>
+<p>本次共筛选 <strong>15</strong> 条候选新闻（Hacker News / The Hacker News / BleepingComputer 三源合计，各 ≤5 条），选取评分最高的 <strong>5</strong> 条纳入 Top5；最高分 <strong>95</strong> 分（ARTEX 自动化 AI 攻击框架）。</p>
+<blockquote>
+<p>⚠️ 微信/企业微信推送通道当前未连接，本次仅生成报告文件，未实际推送。请连接对应 Connector 后重跑推送步骤。</p>
+</blockquote>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-14.html">← 前一天 2026-11-14</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-11-15",
+  "url": "daily/daily_news_2026-11-15.html",
+  "title": "网络安全日报 2026-11-15",
+  "score": 95,
+  "cves": [
+   "CVE-2026-114713"
+  ],
+  "summary": "自动推送 · 数据来源：Hacker News / The Hacker News / BleepingComputer（过去 24–48 小时）",
+  "text": "自动推送 · 数据来源：Hacker News / The Hacker News / BleepingComputer（过去 24–48 小时） 补丁日校验：MSRC updates 中 2026Nov 条目标题为「November 2026 Security Updates」（无 Early，Status Final）→ 正式 Patch Tuesday 已发布，文末附独立板块。 评分：95 / 100 — 理由：国家级威胁 actor 将 LLM 智能体武器化，把\"侦察→横向移动→数据窃取\"压缩到 3 小时内，且已出现 1,600+ 暴露控制台，新颖性与影响范围俱高。 来源： The Hacker News / The Record（FBI FLASH20261113001，20261113） 摘要： FBI 警告，开源框架 ARTEX 已被用于自动化多阶段网络入侵，部分入侵从初始定向到拿下特权访问不到 3 小时；Cisco Talos 识别出 2,500+ 关联 C2 地址、700+ 暴露的 PentAGI 实例，并指认 VAPOR PANDA 借其攻击 14 国 200+ 组织。框架无自有模型，可接入 Claude、GPT、DeepSeek、Grok 等，攻击者实例中中国模型占比最高（DeepSeek Flash 为主）。 原文链接： https://glitchwire.com/news/fbiissuesflashalertonartextheaiagentframeworkautomatingnetworkintrus 评分：90 / 100 — 理由：全新 host 侧攻击类，攻破硬件级云租户隔离（含远程证明伪造），动摇机密计算的信任根基，影响主流云上的 AMD EPYC 工作负载。 来源： The Hacker News（20261113） 摘要： ETH Zurich 与 Google 研究团队公开两种攻击：Mior 在 SEVSNP 启动阶段篡改反向映射表（RMP），可读写加密 VM 内存并伪造签名证明报告；Skyfall 借瞬态调度侧信道（TSA）恢复寄存器与磁盘加密密钥。二者均需控制 hypervisor（Mior 还需 BIOS/UEFI + PCIe 设备），AMD 已发布 8/12 固件与微码，平台固件计划 11–12 月推送。 原文链接： https://thehackernews.com/2026/11/newmiorandskyfallattacksletrogue.html 评分：88 / 100 — 理由：确认在野利用的服务器级命令注入（CVSS 8.6），影响广泛部署的开源 IRC 服务，CISA KEV 强制联邦机构 11/16 前修复，时效性与现实威胁突出。 来源： The Hacker News（20261114） 摘要： UnrealIRCd 6.0.0–6.2.7.0 的 labeledresponse 模块未转义 IRCv3 label 标签，导致多服务器网络中任意用户可注入以服务器权限执行的 servertoserver 命令。维护者称其为 15 年来最严重问题，漏洞披露后一天即出现利用；联邦机构须在 BOD 2604 下于 20261116 前完成修复，升级至 6.2.7.1 或部署 spamfilter 临时缓解。 原文链接： https://thehackernews.com/2026/11/attackersexploitunrealircdflawthat.html 评分：85 / 100 — 理由：国家级团伙以深伪视频通话 + 盗号联系人实施社工，18 个月窃取 4 亿+美元并缴获 12 亿，且已延伸至开源软件供应链，影响范围与新颖性显著。 来源： 美国司法部 / FBI（20261112 至 1113） 摘要： 朝鲜黑客（Sapphire Sleet / UNC1069 / BlueNoroff）通过劫持社交账号邀请目标进入伪造 Zoom/Teams 会议，播放预录或 AI 深伪视频获取信任，再以\"修复音频\"为由诱导执行恶意脚本，窃走加密货币与恢复短语，并持续录制新受害者人脸用于下一轮。FBI 已查封相关云基础设施与 900+ 段受害者摄像头录像，DOJ 同时冻结/没收自 Binance 窃取的 12 亿美元。 原文链接： https://www.justice.gov/usaocdca/pr/justicedepartmentannouncesactionsdisruptnorthkoreasmassivetheftcryptocurrency 评分：80 / 100 — 理由：供应链硬件植入直接收割助记词、影响自托管用户资产安全，厂商被迫大幅收缩经销网络，现实危害明确。 来源： The Hacker News（20261112） 摘要： Trezor 确认 3 台自东南亚经销商 CryptoBilis 购买的 Safe 5 中藏有额外电路板，夹在主控板与屏幕之间，复制屏幕上显示的助记词/密码短语并经移动网络发往攻击者服务器。11/11 发布的固件 2.13.1 可阻止已知植入继续窃取，但无法保护已外泄的备份；Trezor 已将经销网络缩减约 80%，并建议 3 月以来自该经销商购机者迁移至全新钱包与种子。 原文链接： https://thehackernews.com/2026/11/trezorconfirmshiddenhardware.html 本次共筛选 15 条候选新闻（Hacker News / The Hacker News / BleepingComputer 三源合计，各 ≤5 条），选取评分最高的 5 条纳入 Top5；最高分 95 分（ARTEX 自动化 AI 攻击框架）。 ⚠️ 微信/企业微信推送通道当前未连接，本次仅生成报告文件，未实际推送。请连接对应 Connector 后重跑推送步骤。"
+ },
+ {
   "date": "2026-11-14",
   "url": "daily/daily_news_2026-11-14.html",
   "title": "网络安全日报 2026-11-14",

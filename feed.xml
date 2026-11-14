@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-11-14T00:00:00Z</updated>
+  <updated>2026-11-15T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-11-15</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-15.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-15.html</id>
+    <updated>2026-11-15T00:00:00Z</updated>
+    <summary>自动推送 · 数据来源：Hacker News / The Hacker News / BleepingComputer（过去 24–48 小时）</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-11-14</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-14.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-27.html</id>
     <updated>2026-10-27T00:00:00Z</updated>
     <summary>数据来源：Hacker News / The Hacker News / BleepingComputer（过去 24 小时）</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-10-26</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-26.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-10-26.html</id>
-    <updated>2026-10-26T00:00:00Z</updated>
-    <summary>来源筛选：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时，三来源各取 5 条候选，共 15 条，评后取 Top5）。</summary>
   </entry>
 </feed>
