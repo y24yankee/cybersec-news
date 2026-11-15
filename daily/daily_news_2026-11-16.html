@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-16 | 网络安全新闻中心</title>
+<meta name="description" content="来源： The Hacker News（20261115）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-16">
+<meta property="og:description" content="来源： The Hacker News（20261115）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-16.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-16">
+<meta name="twitter:description" content="来源： The Hacker News（20261115）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-16</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">今日 Top 5 网络安全新闻</a></li>
+<li><a href="#s7">来源采集说明</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">今日 Top 5 网络安全新闻</h2>
+<h3 id="s2">1. Cursor 供应链投毒：Fireworks AI 密钥被盗致恶意 Claude Code 扩展投放 5,000 名开发者，Uber 驾照数据外泄</h3>
+<ul>
+<li><strong>评分：92</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-15）</li>
+<li><strong>摘要：</strong> Cursor 披露，攻击者利用从 Fireworks AI 泄露事件中窃取的访问密钥，复制其只读存储桶中的历史编码代理痕迹，并提取出未脱敏的 API 凭证。10 月 29 日，攻击者用窃取凭证将两款植入持久 SSH 后门的恶意 Claude Code 扩展（2.1.312 / 2.1.313）直接写入 Cursor 扩展市场缓存，约 11 小时内最多 5,000 名开发者可能中招；同期 Uber 也确认因 Fireworks 凭证失陷导致数千名美国司机驾照信息被盗。</li>
+<li><strong>评分理由：</strong> AI 开发工具供应链投毒叠加大规模下游数据泄露，影响开发者与普通用户，严重性与新颖性俱高。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html</li>
+</ul>
+<h3 id="s3">2. npm "indexed-btree" 恶意包把载荷藏进运行时方法 + 以太坊智能合约 C2，近 200 万周下载</h3>
+<ul>
+<li><strong>评分：90</strong></li>
+<li><strong>来源：</strong> BleepingComputer / Checkmarx Zero</li>
+<li><strong>摘要：</strong> 攻击者仿冒合法库 sorted-btree 发布 indexed-btree、btree-core 等 11 个恶意包，将加载器隐藏在 <code>BTree.prototype.set()</code> 中，仅在应用以特定键值调用该方法时触发，绕开 npm v12 对安装生命周期脚本的管控。载荷借助以太坊 Sepolia 测试网智能合约（EtherHiding）获取加密二阶段木马，经 Slack / Telegram 机器人外传主机指纹，运营者钱包已获利约 109 ETH。</li>
+<li><strong>评分理由：</strong> 运行时触发 + 区块链 C2 代表供应链攻击手法的实质演进，可规避静态扫描，且下载量巨大。</li>
+<li><strong>原文链接：</strong> https://technewsreel.com/cybersecurity/npm-indexed-btree-malware-bypasses-security-via-runtime-code-injection</li>
+</ul>
+<h3 id="s4">3. 德国军方无人机停飞：Quantum Systems 的 QBase 更新服务器被植入恶意更新</h3>
+<ul>
+<li><strong>评分：88</strong></li>
+<li><strong>来源：</strong> BleepingComputer（2026-11-13，Bill Toulas）</li>
+<li><strong>摘要：</strong> 德国国防科技公司 Quantum Systems 确认 10 月底检测到"敌对行为者"的攻击；据 Der Spiegel 与金融时报报道，攻击者攻陷了其地面控制与任务规划软件 QBase 的更新分发服务器，并向客户推送了一次计划外更新。德军已将该公司无人机（含 Vector / Falke 侦察型）预防性停飞并排除在一次演习之外，德国军方反情报机构 MAD、联邦情报局 BfV 与联邦网络安全局 BSI 均介入调查。</li>
+<li><strong>评分理由：</strong> 针对国防供应链的更新通道投毒直接导致军用无人机停运，命中关键基础设施且手法新颖。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/</li>
+</ul>
+<h3 id="s5">4. SignDrop 零日：把 Windows CLFS 防护改造成 SYSTEM 提权，可关闭 EDR，暂无补丁</h3>
+<ul>
+<li><strong>评分：87</strong></li>
+<li><strong>来源：</strong> The Hacker News / BleepingComputer</li>
+<li><strong>摘要：</strong> 研究员 Abdelhamid Naceri（Nightmare Eclipse）于 11 月 10 日公开 SignDrop 概念验证，滥用微软 2025 年 10 月为 CLFS 驱动引入的日志认证机制：诱导 Defender 等特权进程打开特制日志，使伴随的 <code>.cnpf</code> 认证文件以 SYSTEM 权限创建且保留攻击者可写权限，进而提权至 SYSTEM。研究者估计约 80% 的 Windows 安装可能受影响，韩国 78researchlab 复核确认可利用但稳定性不足；微软尚未确认漏洞、分配 CVE 或发布补丁，并称 Defender 可检测阻断、暂未见在野利用。</li>
+<li><strong>评分理由：</strong> 无补丁零日叠加"以防护养攻击"的新颖手法和可关闭 EDR 的潜力，潜在影响面极大。</li>
+<li><strong>原文链接：</strong> https://hackernews.cc/post/64901</li>
+</ul>
+<h3 id="s6">5. SilentAir 国家级间谍：攻陷亚洲多国运营商，借 SS7 / Diameter 截取短信二次验证码</h3>
+<ul>
+<li><strong>评分：85</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-13）</li>
+<li><strong>摘要：</strong> 瑞典电信安全公司 Enea 披露，代号 SilentAir 的国家级威胁组织自 2025 年初起攻陷至少 6 个亚洲国家的移动运营商内部核心网设备，通过 SS7 / Diameter 信令向归属网络发送伪造位置更新，将目标来电与短信（主要为中国台湾地区政要与政府要员）重定向至受控节点。研究观察到部分目标在改道后 SMS 双因素验证码被即时截获（占其观测攻击的 18.3%），并配合夜间静默短信探测；Enea 判断其为国家背景行为体，目前活动已被遏制但可能卷土重来。</li>
+<li><strong>评分理由：</strong> 国家级长期潜伏叠加电信核心网信令滥用，绕过终端防护直接威胁高价值账户的短信 2FA。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html</li>
+</ul>
+<hr />
+<h2 id="s7">来源采集说明</h2>
+<ul>
+<li>三源检索：The Hacker News、BleepingComputer、Hacker News（news.ycombinator.com）。THN 两条直链（Cursor、SilentAir）经抓取确认 HTTP 200；BleepingComputer（Quantum Systems）为官方原文直链，npm indexed-btree 经聚合安全媒体 Checkmarx Zero 报道交叉核验（BC/部分聚合站对本环境自动化请求返回 000/403，浏览器可正常打开）；Hacker News 官方站点与 Algolia 本环境不可达（历史一致），SignDrop 话题经中文安全媒体 hackernews.cc（HTTP 200）交叉采集。</li>
+<li>主动排除与近 5 日 Top5 重复的条目：ARTEX、Mior+Skyfall、UnrealIRCd、FaceStealer、Trezor、Check Point PHP2Shell、PostgreSQL、Apache mod_http2、Operation Endgame、FalconFlank、GitHub wfx-loot、ScreenConnect SCKit、Red Hat Quay、PAN-OS、N-able Able2Shell、Notion/Fireworks 等，避免连续刷屏。所有补丁板块数字均来自今日真实解析的正式 CVRF 文档。</li>
+</ul>
+<p>本次共筛选 15 条新闻，最高分 92 分。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-15.html">← 前一天 2026-11-15</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
