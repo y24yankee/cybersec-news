@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-17 | 网络安全新闻中心</title>
+<meta name="description" content="来源： The Hacker News（20261116，Google Threat Intelligence Group 报告）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-17">
+<meta property="og:description" content="来源： The Hacker News（20261116，Google Threat Intelligence Group 报告）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-17.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-17">
+<meta name="twitter:description" content="来源： The Hacker News（20261116，Google Threat Intelligence Group 报告）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-17</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">今日 Top 5 网络安全新闻</a></li>
+<li><a href="#s7">来源采集说明</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">今日 Top 5 网络安全新闻</h2>
+<h3 id="s2">1. Google 揭露攻击者用 AI agent 自动逆向补丁、生成并运行漏洞利用，首次实现"无人在环"</h3>
+<ul>
+<li><strong>评分：94</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-16，Google Threat Intelligence Group 报告）</li>
+<li><strong>摘要：</strong> Google GTIG 于 11 月 16 日披露，威胁行为者的攻击手法已从"手工提示聊天机器人"升级为部署 ARTEX、CAIRN、PentAGI、CyberStrikeAI 等自主多智能体进攻框架，以机器速度执行多阶段入侵。最引人注目的是，在一台暴露的暂存服务器上发现名为 <strong>exploit_agent</strong> 的框架：它持续对热门 Web 应用打补丁前后的代码做差分分析，自动识别被修复的漏洞、起草利用代码并直接对真实目标执行，全程无需人工审批——这是首次观察到漏洞发现与利用被完全自动化。受害者遥测指向法国媒体、娱乐与教育站点；GTIG 指出 0day 数量变化不大，真正被 AI 急剧压缩的是"补丁发布→可利用"的 n-day 窗口。</li>
+<li><strong>评分理由：</strong> 首次观察到"无人在环"的全自动补丁逆向与武器化，代表攻防节奏的根本性转变，新颖性极高且影响整个威胁态势。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html</li>
+</ul>
+<h3 id="s3">2. Citrix NetScaler 三零日在野利用链：内存溢出 DoS 叠加预认证 RCE，逾 2 万实例暴露</h3>
+<ul>
+<li><strong>评分：92</strong></li>
+<li><strong>来源：</strong> Cybersecurity Dive / secnews（综合 Rapid7、Shadowserver、GTIG &amp; Mandiant，2026-11-16）</li>
+<li><strong>摘要：</strong> Citrix 敦促客户立即修补 NetScaler ADC / Gateway 中被作为零日在野利用的内存溢出漏洞 <strong>CVE-2026-88779</strong>（SAML 配合 Gateway/AAA 时可触发拒绝服务）。Rapid7 观察到攻击者将其与此前的 RCE 漏洞 CVE-2026-88771 通过"预认证日志投毒 + SAML 解析崩溃"链式利用；Shadowserver 识别出超过 <strong>2 万个</strong> 互联网暴露、可能受影响的实例，多个行业与政府机构据报已被疑似国家级行为体攻陷。GTIG/Mandiant 发现 Whipshot（C2）与 Slapshot（持久化）自定义 web shell，且攻击者会清除本地日志， researchers 警告"仅打补丁不足以清除已感染系统"。CISA 已将该漏洞纳入 KEV 目录并发布 Sigma 检测规则。</li>
+<li><strong>评分理由：</strong> 在野零日 + 疑似国家级组织 + 大规模暴露实例 + 已确认入侵，严重性与影响范围俱高。</li>
+<li><strong>原文链接：</strong> https://secnews.in/article/?slug=article-citrix-netscaler-cve-2026-88779-zero-day</li>
+</ul>
+<h3 id="s4">3. Danfoss 制冷控制器 6 个未修补预认证 RCE：无需登录即可 root 接管，最新固件仍不修</h3>
+<ul>
+<li><strong>评分：90</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-16，Midnight Blue 研究）</li>
+<li><strong>摘要：</strong> 荷兰安全公司 Midnight Blue 披露，Danfoss <strong>AK-SM800A</strong> 制冷控制器存在 6 个可由远程未认证攻击者利用的漏洞，其中 5 个位于以 root 运行的 Web 请求处理器中、无需登录；研究员不到一小时即人工发现全部缺陷，并在旧固件上成功以 root 执行代码。关键是<strong>目前没有补丁</strong>，最新固件 5.4.0 也不修复（其构建时间早于研究员报告），且设备无安全启动，攻击者可植入能挺过恢复出厂与固件更新的代码、甚至令设备彻底变砖。比利时、爱尔兰与德国政府机构本周紧急警告运营商立即将管理接口从互联网下线——此前欧洲已发生两波针对联网制冷控制器的攻击，造成异常除霜与货品损毁。</li>
+<li><strong>评分理由：</strong> OT/关键基础设施预认证 root RCE、无补丁且最新固件无效，叠加欧洲在野攻击与多国政府预警。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/six-unpatched-danfoss-refrigeration.html</li>
+</ul>
+<h3 id="s5">4. NoisyTCP：潜伏 11 年的 Linux 内核漏洞可无认证远程崩溃 Nginx / Apache / SSH 服务器</h3>
+<ul>
+<li><strong>评分：88</strong></li>
+<li><strong>来源：</strong> BleepingComputer（2026-11-16，研究员 Hyunwoo Kim）</li>
+<li><strong>摘要：</strong> 一个沉寂约 11 年的 Linux 内核缺陷 <strong>CVE-2026-99288</strong>（NoisyTCP）被披露，影响几乎所有 Linux 发行版。该漏洞源于 TCP 无锁连接查找中的竞态：回收的 socket 内存在正确初始化和哈希前被访问，未认证攻击者可通过特制 TCP 包利用 SYN cookie 处理与 socket 哈希之间的时序触发 NULL 指针解引用，导致内核崩溃（DoS）。由于缺陷位于内核网络路径而非单个应用，默认配置下运行 Nginx、Apache 或 SSH 的服务器均可被远程打瘫；不过竞态窗口较窄，需多 RX 队列或 RPS 环境，且不会造成数据篡改或代码执行。修复已合入主线内核，无法立即打补丁者可临时禁用 SYN cookie 并改为单 RX 队列。</li>
+<li><strong>评分理由：</strong> 影响面几乎覆盖全部 Linux 发行版、默认配置即可被无认证远程触发，历史跨度长、新颖性与影响范围突出（仅 DoS 略减分）。</li>
+<li><strong>原文链接：</strong> https://bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers</li>
+</ul>
+<h3 id="s6">5. BO Team 用 Log4Shell 攻陷 VMware vCenter 与代码签名服务器，酝酿供应链攻击</h3>
+<ul>
+<li><strong>评分：86</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-16，卡巴斯基 ICS CERT 报告）</li>
+<li><strong>摘要：</strong> 卡巴斯基 ICS CERT 披露，被归因于 BO Team（又名 Black Owl，疑为乌克兰背景）的组织对一家俄罗斯软件开发商发动长达数月的渗透。攻击者从暴露的 SSH 服务切入，利用仍存在 <strong>Log4Shell（CVE-2021-44228）</strong> 的 VMware vCenter 7.0.3 获得 root 命令行，随后以 cron 植入伪装成 PostgreSQL 组件的每小时后门（借 nofrillsdns 动态 DNS 唤活），逐步攻陷虚拟化集群、GitLab、Ansible 与域控，最终触及公司<strong>软件代码签名服务器</strong>——卡巴斯基判断其意图是在签名前注入恶意代码、实施供应链攻击，或窃取数字签名用于签发恶意软件。攻击者全程大量使用 RDP/SSH/SCP 等合法工具、清除日志以规避检测。</li>
+<li><strong>评分理由：</strong> 老漏洞 Log4Shell 仍在野命中，叠加长期潜伏、全基础设施沦陷与代码签名服务器失守的供应链风险。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html</li>
+</ul>
+<hr />
+<h2 id="s7">来源采集说明</h2>
+<ul>
+<li>三源检索：The Hacker News、BleepingComputer、Hacker News（news.ycombinator.com）。THN 三条直链（Google GTIG、Danfoss、BO Team）经抓取确认 HTTP 200 并核实正文；Citrix 一条经 Cybersecurity Dive/secnews 综合 Rapid7、Shadowserver、GTIG &amp; Mandiant 多源交叉核验；NoisyTCP 为 BleepingComputer 官方原文直链（该站对本环境自动化请求返回 Cloudflare 质询，浏览器可正常打开）。Hacker News 官方站点与 Algolia 本环境不可达（历史一致），HN 侧相关安全话题经聚合源交叉采集。</li>
+<li>主动排除与近 5 日 Top5 重复的条目：Cursor 供应链投毒、npm indexed-btree、Quantum Systems 无人机、SignDrop CLFS、SilentAir、ARTEX（FBI FLASH）、Mior+Skyfall、UnrealIRCd、FaceStealer、Trezor、Check Point PHP2Shell、PostgreSQL、Apache mod_http2、Operation Endgame、FalconFlank 等，避免连续刷屏。第 1 条为 Google GTIG 11-16 新报告，聚焦于首次全自动补丁逆向的 exploit_agent，与 11-15 推送的 FBI ARTEX FLASH 属不同报告与不同发现。所有补丁板块数字均来自今日真实解析的正式 CVRF 文档。</li>
+</ul>
+<p>本次共筛选 15 条新闻，最高分 94 分。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-16.html">← 前一天 2026-11-16</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

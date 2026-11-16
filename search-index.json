@@ -1,5 +1,20 @@
 [
  {
+  "date": "2026-11-17",
+  "url": "daily/daily_news_2026-11-17.html",
+  "title": "网络安全日报 2026-11-17",
+  "score": 94,
+  "cves": [
+   "CVE-2021-44228",
+   "CVE-2026-88771",
+   "CVE-2026-88779",
+   "CVE-2026-99288",
+   "cve-2026-88779"
+  ],
+  "summary": "来源： The Hacker News（20261116，Google Threat Intelligence Group 报告）",
+  "text": "评分：94 来源： The Hacker News（20261116，Google Threat Intelligence Group 报告） 摘要： Google GTIG 于 11 月 16 日披露，威胁行为者的攻击手法已从\"手工提示聊天机器人\"升级为部署 ARTEX、CAIRN、PentAGI、CyberStrikeAI 等自主多智能体进攻框架，以机器速度执行多阶段入侵。最引人注目的是，在一台暴露的暂存服务器上发现名为 exploitagent 的框架：它持续对热门 Web 应用打补丁前后的代码做差分分析，自动识别被修复的漏洞、起草利用代码并直接对真实目标执行，全程无需人工审批——这是首次观察到漏洞发现与利用被完全自动化。受害者遥测指向法国媒体、娱乐与教育站点；GTIG 指出 0day 数量变化不大，真正被 AI 急剧压缩的是\"补丁发布→可利用\"的 nday 窗口。 评分理由： 首次观察到\"无人在环\"的全自动补丁逆向与武器化，代表攻防节奏的根本性转变，新颖性极高且影响整个威胁态势。 原文链接： https://thehackernews.com/2026/11/googlefindshackersusingaiagentsto.html 评分：92 来源： Cybersecurity Dive / secnews（综合 Rapid7、Shadowserver、GTIG & Mandiant，20261116） 摘要： Citrix 敦促客户立即修补 NetScaler ADC / Gateway 中被作为零日在野利用的内存溢出漏洞 CVE202688779（SAML 配合 Gateway/AAA 时可触发拒绝服务）。Rapid7 观察到攻击者将其与此前的 RCE 漏洞 CVE202688771 通过\"预认证日志投毒 + SAML 解析崩溃\"链式利用；Shadowserver 识别出超过 2 万个 互联网暴露、可能受影响的实例，多个行业与政府机构据报已被疑似国家级行为体攻陷。GTIG/Mandiant 发现 Whipshot（C2）与 Slapshot（持久化）自定义 web shell，且攻击者会清除本地日志， researchers 警告\"仅打补丁不足以清除已感染系统\"。CISA 已将该漏洞纳入 KEV 目录并发布 Sigma 检测规则。 评分理由： 在野零日 + 疑似国家级组织 + 大规模暴露实例 + 已确认入侵，严重性与影响范围俱高。 原文链接： https://secnews.in/article/?slug=articlecitrixnetscalercve202688779zeroday 评分：90 来源： The Hacker News（20261116，Midnight Blue 研究） 摘要： 荷兰安全公司 Midnight Blue 披露，Danfoss AKSM800A 制冷控制器存在 6 个可由远程未认证攻击者利用的漏洞，其中 5 个位于以 root 运行的 Web 请求处理器中、无需登录；研究员不到一小时即人工发现全部缺陷，并在旧固件上成功以 root 执行代码。关键是目前没有补丁，最新固件 5.4.0 也不修复（其构建时间早于研究员报告），且设备无安全启动，攻击者可植入能挺过恢复出厂与固件更新的代码、甚至令设备彻底变砖。比利时、爱尔兰与德国政府机构本周紧急警告运营商立即将管理接口从互联网下线——此前欧洲已发生两波针对联网制冷控制器的攻击，造成异常除霜与货品损毁。 评分理由： OT/关键基础设施预认证 root RCE、无补丁且最新固件无效，叠加欧洲在野攻击与多国政府预警。 原文链接： https://thehackernews.com/2026/11/sixunpatcheddanfossrefrigeration.html 评分：88 来源： BleepingComputer（20261116，研究员 Hyunwoo Kim） 摘要： 一个沉寂约 11 年的 Linux 内核缺陷 CVE202699288（NoisyTCP）被披露，影响几乎所有 Linux 发行版。该漏洞源于 TCP 无锁连接查找中的竞态：回收的 socket 内存在正确初始化和哈希前被访问，未认证攻击者可通过特制 TCP 包利用 SYN cookie 处理与 socket 哈希之间的时序触发 NULL 指针解引用，导致内核崩溃（DoS）。由于缺陷位于内核网络路径而非单个应用，默认配置下运行 Nginx、Apache 或 SSH 的服务器均可被远程打瘫；不过竞态窗口较窄，需多 RX 队列或 RPS 环境，且不会造成数据篡改或代码执行。修复已合入主线内核，无法立即打补丁者可临时禁用 SYN cookie 并改为单 RX 队列。 评分理由： 影响面几乎覆盖全部 Linux 发行版、默认配置即可被无认证远程触发，历史跨度长、新颖性与影响范围突出（仅 DoS 略减分）。 原文链接： https://bleepingcomputer.com/news/linux/newnoisytcplinuxkernelflawletsattackerscrashservers 评分：86 来源： The Hacker News（20261116，卡巴斯基 ICS CERT 报告） 摘要： 卡巴斯基 ICS CERT 披露，被归因于 BO Team（又名 Black Owl，疑为乌克兰背景）的组织对一家俄罗斯软件开发商发动长达数月的渗透。攻击者从暴露的 SSH 服务切入，利用仍存在 Log4Shell（CVE202144228） 的 VMware vCenter 7.0.3 获得 root 命令行，随后以 cron 植入伪装成 PostgreSQL 组件的每小时后门（借 nofrillsdns 动态 DNS 唤活），逐步攻陷虚拟化集群、GitLab、Ansible 与域控，最终触及公司软件代码签名服务器——卡巴斯基判断其意图是在签名前注入恶意代码、实施供应链攻击，或窃取数字签名用于签发恶意软件。攻击者全程大量使用 RDP/SSH/SCP 等合法工具、清除日志以规避检测。 评分理由： 老漏洞 Log4Shell 仍在野命中，叠加长期潜伏、全基础设施沦陷与代码签名服务器失守的供应链风险。 原文链接： https://thehackernews.com/2026/11/boteamexploitslog4shellinvmware.html 三源检索：The Hacker News、BleepingComputer、Hacker News（news.ycombinator.com）。THN 三条直链（Google GTIG、Danfoss、BO Team）经抓取确认 HTTP 200 并核实正文；Citrix 一条经 Cybersecurity Dive/secnews 综合 Rapid7、Shadowserver、GTIG & Mandiant 多源交叉核验；NoisyTCP 为 BleepingComputer 官方原文直链（该站对本环境自动化请求返回 Cloudflare 质询，浏览器可正常打开）。Hacker News 官方站点与 Algolia 本环境不可达（历史一致），HN 侧相关安全话题经聚合源交叉采集。 主动排除与近 5 日 Top5 重复的条目：Cursor 供应链投毒、npm indexedbtree、Quantum Systems 无人机、SignDrop CLFS、SilentAir、ARTEX（FBI FLASH）、Mior+Skyfall、UnrealIRCd、FaceStealer、Trezor、Check Point PHP2Shell、PostgreSQL、Apache modhttp2、Operation Endgame、FalconFlank 等，避免连续刷屏。第 1 条为 Google GTIG 1116 新报告，聚焦于首次全自动补丁逆向的 exploitagent，与 1115 推送的 FBI ARTEX FLASH 属不同报告与不同发现。所有补丁板块数字均来自今日真实解析的正式 CVRF 文档。 本次共筛选 15 条新闻，最高分 94 分。"
+ },
+ {
   "date": "2026-11-16",
   "url": "daily/daily_news_2026-11-16.html",
   "title": "网络安全日报 2026-11-16",
