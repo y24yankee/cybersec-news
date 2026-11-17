@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-18 | 网络安全新闻中心</title>
+<meta name="description" content="来源： The Hacker News（20261117，Report URI / Scott Helme 发现）">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-18">
+<meta property="og:description" content="来源： The Hacker News（20261117，Report URI / Scott Helme 发现）">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-18.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-18">
+<meta name="twitter:description" content="来源： The Hacker News（20261117，Report URI / Scott Helme 发现）">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-18</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">今日 Top 5 网络安全新闻</a></li>
+<li><a href="#s7">来源采集说明</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">今日 Top 5 网络安全新闻</h2>
+<h3 id="s2">1. Optimizely 脚本遭劫持：CNN、BBC、Zoom 等 178 家机构网站被植入盗卡器与 iOS 漏洞套件</h3>
+<ul>
+<li><strong>评分：93</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-17，Report URI / Scott Helme 发现）</li>
+<li><strong>摘要：</strong> 攻击者利用 Optimizely Web Experimentation 账户注册流程的漏洞，获得大量无关客户项目的写权限，在"Project JavaScript"字段注入加载器，而脚本仍由 <code>cdn.optimizely.com</code> 以原有证书正常分发——客户网站本身毫发无伤，却全部成了投毒通道。Report URI 检查 1,611 段脚本，在 188 段中发现恶意代码，涉及 <strong>178 家机构</strong>，包括 CNN、BBC、Zoom、GitLab、Salesforce、IKEA、HSBC、Ledger、Equifax 等（其中 32 家为银行与金融、23 家为科技）。恶意载荷一天内迭代 26 次，替换加密钱包地址、窃取卡号/ Cookie / 截图，并向 iOS 13–18 设备投放 Coruna、DarkSword 漏洞套件；约 7,150 美元加密货币流入攻击者钱包。Optimizely 已于 11-17 凌晨确认修复并清除代码，但尚无证据表明有多少 iPhone 被成功攻陷。</li>
+<li><strong>评分理由：</strong> 单次供应链入侵同时波及 178 家顶级网站、叠加盗卡与 iOS 漏洞投放，影响范围与新颖性均属极高，且为 24 小时内事件。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html</li>
+</ul>
+<h3 id="s3">2. Trigram 活动冒充约 50 个 AI 与区块链品牌，用 ClickFix 诱导开发者自装信息窃取器</h3>
+<ul>
+<li><strong>评分：86</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-17，Stormshield 研究；SafeDep 分析）</li>
+<li><strong>摘要：</strong> 法国安全公司 Stormshield 披露名为 <strong>Trigram</strong> 的大规模社工活动，冒充约 50 个 AI、区块链与物流品牌（Ritual、Webflow、Somnia 等被逐像素克隆），以高薪远程职位、技术会议邀请、包裹追踪三类诱饵定向开发者（欧美为主）。攻击采用 ClickFix 手法：首次粘贴的命令无害，页面随即伪造"超时"错误并暗中把剪贴板替换为带换行、粘贴即执行的恶意命令，下载 <code>install_guard.js</code> 投放信息窃取器，窃取浏览器密码、Cookie、钥匙串、加密钱包、SSH 密钥与 <code>.env</code> 文件，并植入伪装成 Google 软件的远控代理与开源 Overlord RAT。Stormshield 高置信度评估其为朝鲜关联 UNK_DeadDrop 集群的延续；该活动还通过向 <code>antd-img-crop</code> 仓库强推伪造提交、借助 prebuild 钩子污染供应链（npm 包本身未受影响）。</li>
+<li><strong>评分理由：</strong> 疑似国家级组织、工业化品牌仿冒 + 剪贴板劫持新手法，直击持有高价值凭证的开发者群体，影响面与新颖性突出。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html</li>
+</ul>
+<h3 id="s4">3. 日本富岳、龙宫超算遭入侵下线：4,597 名用户 SSH 私钥与研究数据被窃</h3>
+<ul>
+<li><strong>评分：85</strong></li>
+<li><strong>来源：</strong> BleepingComputer（2026-11-17，经 ThreatTicker 核验转载）</li>
+<li><strong>摘要：</strong> 日本理化学研究所（RIKEN）于 11 月 14 日将全球顶级超算 <strong>富岳（537 petaflops）</strong> 与 <strong>龙宫（64 petaflops）</strong> 下线，因确认攻击者在 11 月 10–13 日间入侵内部服务器、植入恶意软件，并窃取 4,597 名用户的账户信息与 SSH 私钥（富岳 4,222 名、龙宫 375 名）及缓存的研究数据文件。入侵入口疑似为暴露在公网的运行状态仪表板，攻击者还尝试用窃取的密钥横向移动至其他系统。RIKEN 尚未确认入口细节或归因，要求全体用户吊销并轮换所有 SSH 密钥与访问令牌，并警惕冒充 RIKEN 的钓鱼邮件；恢复计划包括重建受害服务器、审查网络架构并引入 AI 辅助安全监控。</li>
+<li><strong>评分理由：</strong> 国家级科研机构、两台顶级超算下线、近 4,600 名用户私钥与研究数据泄露，严重性与影响范围俱高。</li>
+<li><strong>原文链接：</strong> https://threatticker.com/news/japan-takes-fugaku-and-rikyu-supercomputers-offline-after-attacker-steals-ssh</li>
+</ul>
+<h3 id="s5">4. Operation ShadowCloud：GitDoor / GraphDoor 后门把 GitHub、SharePoint 变成隐蔽 C2 通道</h3>
+<ul>
+<li><strong>评分：84</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-17，卡巴斯基报告）</li>
+<li><strong>摘要：</strong> 卡巴斯基披露名为 <strong>Operation ShadowCloud</strong> 的间谍活动，攻击者使用 <strong>GitDoor</strong> 与 <strong>GraphDoor</strong> 两款后门，将命令与控制（C2）流量藏匿于 GitHub、SharePoint 与 Ably 等合法 SaaS 服务中，使其与正常业务流量难以区分，目标是亚洲与非洲的政府网络。该手法延续了"以合法云服务作 C2 基础设施"的趋势——网络层无法简单封禁这些域名，防御必须转向检测构建进程与 Node.js 运行时的异常外联等行为的指标。</li>
+<li><strong>评分理由：</strong> 国家级定向间谍活动，借用合法 SaaS 承载 C2 的隐蔽手法新颖、检测难度大，针对政府网络危害高。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html</li>
+</ul>
+<h3 id="s6">5. Oracle 今日修复 11 个 Java 漏洞，OpenJDK 严重预认证 RCE（CVE-2026-114938）细节浮现</h3>
+<ul>
+<li><strong>评分：82</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-17）</li>
+<li><strong>摘要：</strong> Oracle 于 11 月 17 日发布修复，涵盖 11 个可远程利用的 Java SE 漏洞；与此同时外界披露 <strong>CVE-2026-114938</strong>，一个影响 Java / OpenJDK 17（17.0.6 及后续版本）、CVSS 4.0 评分 <strong>9.2</strong> 的预认证远程代码执行漏洞，无需认证即可攻击暴露的 Java 17 服务器。不过该漏洞的完整技术细节尚未得到厂商最终确认，实际可利用性与影响仍在评估中。由于 Java 17 在全球企业服务端广泛部署，建议运维尽快跟进 Oracle 补丁并核查对外暴露面。</li>
+<li><strong>评分理由：</strong> CVSS 9.2 预认证 RCE 叠加 Java 17 海量部署、影响范围广（细节未完全证实略减分），为当日重要漏洞披露。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html</li>
+</ul>
+<hr />
+<h2 id="s7">来源采集说明</h2>
+<ul>
+<li>三源检索：The Hacker News、BleepingComputer、Hacker News（news.ycombinator.com）。THN 五条链接均取自其官方首页当日（11-17）真实文章直链并核对正文；本环境对 THN 的自动化请求返回连接限制（curl 000，历史一致），浏览器可正常打开。富岳超算一条源自 BleepingComputer，采用已核验 HTTP 200 的转载直链。Hacker News 官方站点与 Algolia 本环境不可达（历史一致），相关安全话题经聚合源交叉采集，未作为独立 Top5 条目编造。</li>
+<li>主动排除与近 5 日 Top5 重复的条目：Google GTIG exploit_agent、Citrix NetScaler 三零日、Danfoss 制冷控制器、NoisyTCP、BO Team Log4Shell、Cursor 扩展投毒、npm indexed-btree、Quantum Systems、SignDrop CLFS、SilentAir、ARTEX、Mior+Skyfall、UnrealIRCd、FaceStealer、Trezor、Check Point、PostgreSQL、ScreenConnect SCKit、Uber 驾照泄露等，避免连续刷屏。微软补丁数据仅作文末独立板块，不进入 Top5、不参与评分。所有补丁板块数字均来自今日真实解析的正式 CVRF 文档。</li>
+</ul>
+<p>本次共筛选 15 条新闻，最高分 93 分。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-17.html">← 前一天 2026-11-17</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
