@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-11-19",
+  "url": "daily/daily_news_2026-11-19.html",
+  "title": "网络安全日报 2026-11-19",
+  "score": 94,
+  "cves": [
+   "CVE-2026-115731"
+  ],
+  "summary": "评分标准：严重性  新颖性  影响范围  时效性（满分 100）。微软补丁严重级别数据不计入评分、不进入 Top5，仅在文末独立板块呈现。",
+  "text": "评分标准：严重性  新颖性  影响范围  时效性（满分 100）。微软补丁严重级别数据不计入评分、不进入 Top5，仅在文末独立板块呈现。 评分：94 分 来源： The Hacker News（20261118） 摘要： CISA 于 11 月 17 日将 Puppet Server 反序列化远程代码执行漏洞 CVE2026115731 加入已知利用漏洞目录（KEV），理由是存在在野利用证据。任何持有 CA 签名代理证书的客户端都可通过 PUT 请求提交特制 richdata 类型，以服务账户身份在服务器上执行任意代码；若证书颁发机构自动签名且缺乏强校验，未认证的网络攻击者即可获取有效证书并利用。修复版本为 Puppet Enterprise 2026.0.1/2025.12.1/2023.8.13、Puppet Core 9.1.3/8.22.2 及对应 OpenVox 版本，联邦机构须在 12 月 1 日前修复。 评分理由： 关键基础设施管理平台控制平面的在野 RCE，严重性与影响范围均属顶级，且当日新入 KEV。 原文链接： https://thehackernews.com/2026/11/hackersexploitingcriticalpuppetrce.html 评分：92 分 来源： The Hacker News（20261118） 摘要： 攻击者于 11 月 17 日相隔 33 分钟向 PyPI 发布微软 Agent Framework 元包 agentframework 的恶意版本 1.26.1 与 1.26.2，借助 .pth 启动钩子在每次 Python 启动时静默执行凭证窃取程序，即便应用从未导入该包也会触发。窃取范围涵盖 Azure CLI、Azure DevOps、GitHub Actions OIDC、npm、Docker、Git、Hugging Face 凭证，并主动向实例元数据服务申请新的托管身份令牌，数据经压缩编码后外传至硬编码 webhook；该包月下载量约 19 万次，两版本已被隔离。这是继 5 月 TeamPCP 投毒 durabletask 后今年第二起微软名下 PyPI 供应链事件。 评分理由： 针对 AI 开发生态的官方包投毒，手法新颖（.pth 免导入触发）、影响面广且可签发新令牌，需彻底轮换凭证。 原文链接： https://thehackernews.com/2026/11/attackerscompromisemicrosoftsagent.html 评分：90 分 来源： BleepingComputer（20261117） 摘要： 安全研究员 Alon Hertz 团队注册了 Kokoro 项目公开文件 DONATE.md 中列出的失效域名 hexgrad.com，通过密码重置接管了这个月下载量近 1300 万次的开源语音合成模型的 Hugging Face 发布账户。团队用消费级显卡在 87 秒内微调模型权重，使模型输出与输入文本不符的语音，而代码、文件格式、体积与架构均未改变，传统恶意软件扫描与代码审查无法发现异常。Google、NVIDIA、Intel、AMD、AWS 的工具或指南均支持该模型；研究者未上传被篡改权重，Hugging Face 截至报道时未回应。 评分理由： 权重级投毒绕过代码扫描属新型攻击面，叠加超千万月下载量与多家厂商依赖，供应链风险突出。 原文链接： https://www.bleepingcomputer.com/news/security/researchershijackhuggingfaceaccountforpopularkokoroaimodel/ 评分：88 分 来源： The Hacker News（20261118） 摘要： 谷歌 Mandiant 与威胁情报组披露，俄罗斯国家支持的间谍组织 Cold Relic（旧称 COLDRIVER/UNC4057/Star Blizzard）通过窃取的 Super Admin 凭证配合 MFA 推送疲劳攻击攻入一家美国机构的 Google Workspace，注册恶意 passkey 与 OAuth 同步长期驻留，并通过 Google Takeout 批量导出全域文件与员工名录。随后该组织冒充首家受害机构员工，经加密通讯应用向第二家依赖 Microsoft Entra ID 联邦 SSO 的美国机构发送钓鱼链接，窃取 Entra ID 凭证与令牌并再次落脚；美方将其与俄联邦安全局（FSB）关联。 评分理由： 国家级 APT 的\"单一云失陷→链式入侵\"新手法，凸显身份与 passkey 持久化的防御盲区。 原文链接： https://thehackernews.com/2026/11/russiancoldrelichackersusestolen.html 评分：86 分 来源： The Hacker News（20261118） 摘要： 柏林工业大学研究人员发现，在 AMD 及部分英特尔平台上，攻击者只需打开机箱即可重置 Windows Hello 与 BitLocker PIN 的 TPM 锁定计数机制，使短 PIN 暴露于猜测攻击。实验室测试中，研究人员用该方法在数天内破解出 AMD 笔记本的 4 位 Hello PIN 与英特尔笔记本的 6 位 BitLocker PIN。该攻击针对设备物理接触场景，绕过了用于限制 PIN 尝试次数的硬件防护。 评分理由： 针对广泛部署的 Windows Hello/BitLocker 的新型硬件绕过手法，新颖性高，具现实物理攻击价值。 原文链接： https://thehackernews.com/2026/11/flashchipattackbypassestpmlockout.html 本次共筛选 15 条新闻，最高分 94 分。 来源采集说明：本环境对 thehackernews.com 直连请求返回网络不可达（000）、bleepingcomputer.com 返回 403（Cloudflare 质询），浏览器可正常打开；上述原文链接均来自真实搜索结果并经多源交叉核验，未编造。Hacker News 官方站点/Algolia 在本环境持续不可达，HN 相关安全话题经聚合源交叉采集。微软补丁板块全部数字来自当日真实解析的 2026Nov CVRF 正式文档。"
+ },
+ {
   "date": "2026-11-18",
   "url": "daily/daily_news_2026-11-18.html",
   "title": "网络安全日报 2026-11-18",
