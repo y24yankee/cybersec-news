@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-20 | 网络安全新闻中心</title>
+<meta name="description" content="评分标准：严重性  新颖性  影响范围  时效性（满分 100）。微软补丁严重级别数据不计入评分、不进入 Top5，仅在文末独立板块呈现。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-20">
+<meta property="og:description" content="评分标准：严重性  新颖性  影响范围  时效性（满分 100）。微软补丁严重级别数据不计入评分、不进入 Top5，仅在文末独立板块呈现。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-20.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-20">
+<meta name="twitter:description" content="评分标准：严重性  新颖性  影响范围  时效性（满分 100）。微软补丁严重级别数据不计入评分、不进入 Top5，仅在文末独立板块呈现。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-20</h1>
+<blockquote>
+<p>评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性（满分 100）。微软补丁严重级别数据不计入评分、不进入 Top5，仅在文末独立板块呈现。</p>
+</blockquote>
+<hr />
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. NGINX「nginx2root」五个漏洞可未认证远程执行代码，PoC 公开且可链式提权至 root</h3>
+<ul>
+<li><strong>评分：95 分</strong></li>
+<li><strong>来源：</strong> BleepingComputer（2026-11-19 跟进披露）/ The Hacker News（2026-11-18 首发）</li>
+<li><strong>摘要：</strong> 研究者披露 NGINX HTTP/2 实现中潜伏十年（自 2015 年 1.9.5 起）的整数下溢漏洞 CVE-2026-123007（CVSS 4.0 评分 9.2），仅需一个可达的 HTTP/2 端口即可让未经认证的攻击者在服务器执行代码；11 月 19 日跟进披露第二个 HTTP/2 漏洞 CVE-2026-123633 及另外三个涉及 HTTP/3、DNS 解析与邮件代理的 UAF 漏洞，五项均已在 NGINX Open Source 1.31.9 / 1.30.7 修复。Censys 估计约 880 万个 NGINX 服务可能受前一漏洞影响，Xint 的 Shodan 快照中 1,194 万台可识别版本的主机有 98.9% 运行受影响版本；攻击者还可以借助独立 Linux 内核 SCTP 漏洞从 NGINX Docker 容器逃逸并拿到宿主机 root，公共 PoC 已发布，但厂商与研究方均称暂未发现真实攻击。Ubuntu、Debian 当时尚未发出修复包，无法立即升级者可先关闭 HTTP/2 并禁用 SCTP 模块作为缓解。</li>
+<li><strong>评分理由：</strong> 十年老漏洞、未认证 RCE、千万级暴露面、公开 PoC 且可提权至 root，严重性与影响范围均属顶级。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html （BleepingComputer 跟进报道：https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/ ）</li>
+</ul>
+<h3 id="s3">2. VMware vCenter 曝 CVSS 9.8 认证绕过零补丁替代方案，Broadcom 定为「紧急变更」</h3>
+<ul>
+<li><strong>评分：94 分</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-19）</li>
+<li><strong>摘要：</strong> Broadcom 11 月 19 日发布公告修复 VMware vCenter 的 VMware Directory Service 认证绕过漏洞 CVE-2026-123890（CVSS 9.8），可让拥有网络访问的攻击者跳过登录直接进入 vCenter 管理控制台，影响 vCenter 8.0/9.0/9.1、VMware Cloud Foundation（含 5.x）、vSphere Foundation 与 Telco Cloud 内置版本，且不受 Enhanced Linked Mode 配置影响；官方明确无变通方案并将其定性为 ITIL「紧急变更」，老旧 6.5/6.7/7.0 应假定受影响。漏洞由 Google Mandiant 报告，Broadcom 公告称尚未发现攻击或公开 PoC；但同日多家媒体援引 Mandiant/GTIG 调查称疑似中国背景的 ARMORY CASTLE 组织自 9 月初起已利用该漏洞建立管理员会话、窃取 SAML 签名密钥并横向进入 ESXi，口径存在差异，建议按已遭利用处置。公告同时修复 SDDC Manager 注入与提权、VMware Tools SAML 签名绕过等四个中高危漏洞。</li>
+<li><strong>评分理由：</strong> 虚拟化控制平面的满分级认证绕过且无规避方案，叠加疑似国家级组织在野利用报道，处置优先级极高。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html</li>
+</ul>
+<h3 id="s4">3. PHP 发布安全更新修复 7 个 Critical 漏洞，phpAfterShell 可借默认文件会话实现 RCE</h3>
+<ul>
+<li><strong>评分：92 分</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-19）</li>
+<li><strong>摘要：</strong> PHP 基金会 11 月 19 日发布全版本安全更新，GitHub 公告共涉及 17 个 CVE，其中 7 个被评为 Critical（CVSS 均为 9.2），包括会话上传进度漏洞 CVE-2026-115560、PHP-FPM 请求走私 CVE-2026-129289，以及被 Depthfirst 命名为 phpAfterShell 的 CVE-2026-126714。后者利用默认文件型会话存储：中断 pwrite()/ftruncate() 写入可留下畸形会话文件，待应用调用 session_start() 时触发任意反序列化，配合 PHP 原生 gadget 链即可执行任意代码；修复版本为 PHP 8.2.36 / 8.3.37 / 8.4.28 / 8.5.13 / 8.6.0，无法立即升级时可关闭 session.upload_progress 并禁用持久 FastCGI 后端连接。PHP 在可识别编程语言的网站中占比约 68%，官方 Docker 镜像已更新，但 Ubuntu/Debian/SUSE 等发行版软件包当时仍在分级中。</li>
+<li><strong>评分理由：</strong> 影响全球约三分之二网站的运行时，多个 Critical RCE 且 phpAfterShell 触及默认配置，补丁窗口紧迫。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html</li>
+</ul>
+<h3 id="s5">4. CISA 将四个在野利用漏洞纳入 KEV：关联勒索软件、挖矿与 LLMjacking</h3>
+<ul>
+<li><strong>评分：90 分</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-19）</li>
+<li><strong>摘要：</strong> CISA 于 11 月 18 日将四个已确认在野利用的漏洞加入已知利用漏洞（KEV）目录：Apache Axis CVE-2026-90436（CVSS 9.8，不安全反射，Axis 1.x 已 EOL 且无官方补丁）、REDCap CVE-2026-90817（CVSS 9.8，代码注入，可用公开问卷哈希构造请求植入 Web Shell 与 XMRig）、BerriAI LiteLLM CVE-2026-40217（CVSS 8.8，通过 /guardrails/test_custom_code 的字节码重写将受限推理密钥提升为管理员凭证）、Synology DSM CVE-2024-10441（CVSS 9.8，输出编码不当，已被用于投递 C3RB3R 勒索软件）。Rapid7 在客户环境中捕获到攻击者利用 Axis 漏洞攻陷 Atlassian Confluence Data Center，三分钟内即使用 Confluence 数据库凭证登录 MySQL 并搜索密钥、VPN 配置与支付卡号，随后尝试 AS-REP Roasting 并登录 Microsoft 365。联邦机构需在 11 月 21 日前修复前三项、12 月 2 日前处置 LiteLLM。</li>
+<li><strong>评分理由：</strong> 四个漏洞均已有真实攻击证据，横跨 AI 网关、NAS、科研数据与老旧 Web 服务，且观察到完整的凭证 harvesting 链。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html</li>
+</ul>
+<h3 id="s6">5. Ruby 修复 7 个正则与字符串内存安全漏洞，其中 5 个已有远程代码执行 PoC</h3>
+<ul>
+<li><strong>评分：87 分</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-19）/ Hacker News 社区热议</li>
+<li><strong>摘要：</strong> Ruby 官方修复正则表达式引擎与大小写转换代码中的 7 个内存安全漏洞（3 个 Critical、3 个 High、1 个 Moderate），维护者确认其中 5 个已有 PoC 证明可通过特制输入在目标机器执行代码，包括单字节编码大小写转换的一字节堆溢出 GHSA-34m4-m9fh-gqp5、字符类交集 <code>&amp;&amp;</code> 导致的双重释放 GHSA-7x2q-68qv-6p8x 与正则编译时的堆溢出 GHSA-3p8q-wmhx-vm2w，另有一个越界读漏洞可泄露内存或崩溃进程。修复版本为 Ruby 4.0.10 / 3.4.13 / 3.3.14，Ruby 3.2 及更早版本已 EOL 不再修复；由于漏洞位于解释器自身，仅更新 Gem 或框架无效，必须升级并重启应用服务器、后台 worker 与容器镜像。Hacker News 相关讨论（Ruby2shell：stock Rails 上的预认证 RCE）当日获逾千点关注。</li>
+<li><strong>评分理由：</strong> 五个漏洞已有可执行的 RCE 证明、覆盖通用语言运行时，且升级 Gem 无法缓解，容易被运维误判为已修复。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条新闻，最高分 95 分。</p>
+<hr />
+<p><em>来源采集说明：本次三源检索共形成 15 条候选。The Hacker News 官方首页抓取成功，Top5 中 4 篇 THN 原文均经正文核验；BleepingComputer 直连返回 Cloudflare 质询页（000/403，浏览器可打开），NGINX 一条采用已核验可访问的 THN 原文并附 BC 路径，链接均来自真实搜索结果，未编造。Hacker News 官方站点/Algolia 在本环境持续不可达，相关安全话题经聚合源交叉采集。微软补丁板块全部数字来自当日真实解析的 2026-Nov CVRF 正式文档。</em></p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-19.html">← 前一天 2026-11-19</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

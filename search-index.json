@@ -1,5 +1,25 @@
 [
  {
+  "date": "2026-11-20",
+  "url": "daily/daily_news_2026-11-20.html",
+  "title": "网络安全日报 2026-11-20",
+  "score": 95,
+  "cves": [
+   "CVE-2024-10441",
+   "CVE-2026-115560",
+   "CVE-2026-123007",
+   "CVE-2026-123633",
+   "CVE-2026-123890",
+   "CVE-2026-126714",
+   "CVE-2026-129289",
+   "CVE-2026-40217",
+   "CVE-2026-90436",
+   "CVE-2026-90817"
+  ],
+  "summary": "评分标准：严重性  新颖性  影响范围  时效性（满分 100）。微软补丁严重级别数据不计入评分、不进入 Top5，仅在文末独立板块呈现。",
+  "text": "评分标准：严重性  新颖性  影响范围  时效性（满分 100）。微软补丁严重级别数据不计入评分、不进入 Top5，仅在文末独立板块呈现。 评分：95 分 来源： BleepingComputer（20261119 跟进披露）/ The Hacker News（20261118 首发） 摘要： 研究者披露 NGINX HTTP/2 实现中潜伏十年（自 2015 年 1.9.5 起）的整数下溢漏洞 CVE2026123007（CVSS 4.0 评分 9.2），仅需一个可达的 HTTP/2 端口即可让未经认证的攻击者在服务器执行代码；11 月 19 日跟进披露第二个 HTTP/2 漏洞 CVE2026123633 及另外三个涉及 HTTP/3、DNS 解析与邮件代理的 UAF 漏洞，五项均已在 NGINX Open Source 1.31.9 / 1.30.7 修复。Censys 估计约 880 万个 NGINX 服务可能受前一漏洞影响，Xint 的 Shodan 快照中 1,194 万台可识别版本的主机有 98.9% 运行受影响版本；攻击者还可以借助独立 Linux 内核 SCTP 漏洞从 NGINX Docker 容器逃逸并拿到宿主机 root，公共 PoC 已发布，但厂商与研究方均称暂未发现真实攻击。Ubuntu、Debian 当时尚未发出修复包，无法立即升级者可先关闭 HTTP/2 并禁用 SCTP 模块作为缓解。 评分理由： 十年老漏洞、未认证 RCE、千万级暴露面、公开 PoC 且可提权至 root，严重性与影响范围均属顶级。 原文链接： https://thehackernews.com/2026/11/10yearoldnginxhttp2flawlets.html （BleepingComputer 跟进报道：https://www.bleepingcomputer.com/news/security/criticalnginxnginx2rootbugsletattackershijackservers/ ） 评分：94 分 来源： The Hacker News（20261119） 摘要： Broadcom 11 月 19 日发布公告修复 VMware vCenter 的 VMware Directory Service 认证绕过漏洞 CVE2026123890（CVSS 9.8），可让拥有网络访问的攻击者跳过登录直接进入 vCenter 管理控制台，影响 vCenter 8.0/9.0/9.1、VMware Cloud Foundation（含 5.x）、vSphere Foundation 与 Telco Cloud 内置版本，且不受 Enhanced Linked Mode 配置影响；官方明确无变通方案并将其定性为 ITIL「紧急变更」，老旧 6.5/6.7/7.0 应假定受影响。漏洞由 Google Mandiant 报告，Broadcom 公告称尚未发现攻击或公开 PoC；但同日多家媒体援引 Mandiant/GTIG 调查称疑似中国背景的 ARMORY CASTLE 组织自 9 月初起已利用该漏洞建立管理员会话、窃取 SAML 签名密钥并横向进入 ESXi，口径存在差异，建议按已遭利用处置。公告同时修复 SDDC Manager 注入与提权、VMware Tools SAML 签名绕过等四个中高危漏洞。 评分理由： 虚拟化控制平面的满分级认证绕过且无规避方案，叠加疑似国家级组织在野利用报道，处置优先级极高。 原文链接： https://thehackernews.com/2026/11/criticalvmwarevcenterflawcvss98.html 评分：92 分 来源： The Hacker News（20261119） 摘要： PHP 基金会 11 月 19 日发布全版本安全更新，GitHub 公告共涉及 17 个 CVE，其中 7 个被评为 Critical（CVSS 均为 9.2），包括会话上传进度漏洞 CVE2026115560、PHPFPM 请求走私 CVE2026129289，以及被 Depthfirst 命名为 phpAfterShell 的 CVE2026126714。后者利用默认文件型会话存储：中断 pwrite()/ftruncate() 写入可留下畸形会话文件，待应用调用 sessionstart() 时触发任意反序列化，配合 PHP 原生 gadget 链即可执行任意代码；修复版本为 PHP 8.2.36 / 8.3.37 / 8.4.28 / 8.5.13 / 8.6.0，无法立即升级时可关闭 session.uploadprogress 并禁用持久 FastCGI 后端连接。PHP 在可识别编程语言的网站中占比约 68%，官方 Docker 镜像已更新，但 Ubuntu/Debian/SUSE 等发行版软件包当时仍在分级中。 评分理由： 影响全球约三分之二网站的运行时，多个 Critical RCE 且 phpAfterShell 触及默认配置，补丁窗口紧迫。 原文链接： https://thehackernews.com/2026/11/phpfixes7criticalflawsincluding.html 评分：90 分 来源： The Hacker News（20261119） 摘要： CISA 于 11 月 18 日将四个已确认在野利用的漏洞加入已知利用漏洞（KEV）目录：Apache Axis CVE202690436（CVSS 9.8，不安全反射，Axis 1.x 已 EOL 且无官方补丁）、REDCap CVE202690817（CVSS 9.8，代码注入，可用公开问卷哈希构造请求植入 Web Shell 与 XMRig）、BerriAI LiteLLM CVE202640217（CVSS 8.8，通过 /guardrails/testcustomcode 的字节码重写将受限推理密钥提升为管理员凭证）、Synology DSM CVE202410441（CVSS 9.8，输出编码不当，已被用于投递 C3RB3R 勒索软件）。Rapid7 在客户环境中捕获到攻击者利用 Axis 漏洞攻陷 Atlassian Confluence Data Center，三分钟内即使用 Confluence 数据库凭证登录 MySQL 并搜索密钥、VPN 配置与支付卡号，随后尝试 ASREP Roasting 并登录 Microsoft 365。联邦机构需在 11 月 21 日前修复前三项、12 月 2 日前处置 LiteLLM。 评分理由： 四个漏洞均已有真实攻击证据，横跨 AI 网关、NAS、科研数据与老旧 Web 服务，且观察到完整的凭证 harvesting 链。 原文链接： https://thehackernews.com/2026/11/cisawarnsof4exploitedflawslinked.html 评分：87 分 来源： The Hacker News（20261119）/ Hacker News 社区热议 摘要： Ruby 官方修复正则表达式引擎与大小写转换代码中的 7 个内存安全漏洞（3 个 Critical、3 个 High、1 个 Moderate），维护者确认其中 5 个已有 PoC 证明可通过特制输入在目标机器执行代码，包括单字节编码大小写转换的一字节堆溢出 GHSA34m4m9fhgqp5、字符类交集 && 导致的双重释放 GHSA7x2q68qv6p8x 与正则编译时的堆溢出 GHSA3p8qwmhxvm2w，另有一个越界读漏洞可泄露内存或崩溃进程。修复版本为 Ruby 4.0.10 / 3.4.13 / 3.3.14，Ruby 3.2 及更早版本已 EOL 不再修复；由于漏洞位于解释器自身，仅更新 Gem 或框架无效，必须升级并重启应用服务器、后台 worker 与容器镜像。Hacker News 相关讨论（Ruby2shell：stock Rails 上的预认证 RCE）当日获逾千点关注。 评分理由： 五个漏洞已有可执行的 RCE 证明、覆盖通用语言运行时，且升级 Gem 无法缓解，容易被运维误判为已修复。 原文链接： https://thehackernews.com/2026/11/rubyreleasesfixesfor7regexand.html 本次共筛选 15 条新闻，最高分 95 分。 来源采集说明：本次三源检索共形成 15 条候选。The Hacker News 官方首页抓取成功，Top5 中 4 篇 THN 原文均经正文核验；BleepingComputer 直连返回 Cloudflare 质询页（000/403，浏览器可打开），NGINX 一条采用已核验可访问的 THN 原文并附 BC 路径，链接均来自真实搜索结果，未编造。Hacker News 官方站点/Algolia 在本环境持续不可达，相关安全话题经聚合源交叉采集。微软补丁板块全部数字来自当日真实解析的 2026Nov CVRF 正式文档。"
+ },
+ {
   "date": "2026-11-19",
   "url": "daily/daily_news_2026-11-19.html",
   "title": "网络安全日报 2026-11-19",
