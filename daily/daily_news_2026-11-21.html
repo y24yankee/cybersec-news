@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-21 | 网络安全新闻中心</title>
+<meta name="description" content="评分标准：严重性  新颖性  影响范围  时效性（满分 100）。微软补丁严重级别数据不计入评分、不进入 Top5，仅在文末独立板块呈现。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-21">
+<meta property="og:description" content="评分标准：严重性  新颖性  影响范围  时效性（满分 100）。微软补丁严重级别数据不计入评分、不进入 Top5，仅在文末独立板块呈现。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-21.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-21">
+<meta name="twitter:description" content="评分标准：严重性  新颖性  影响范围  时效性（满分 100）。微软补丁严重级别数据不计入评分、不进入 Top5，仅在文末独立板块呈现。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-21</h1>
+<blockquote>
+<p>评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性（满分 100）。微软补丁严重级别数据不计入评分、不进入 Top5，仅在文末独立板块呈现。</p>
+</blockquote>
+<hr />
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. Cisco Expressway 严重漏洞遭在野利用，攻击者拿到 root 后横向渗透至内网</h3>
+<ul>
+<li><strong>评分：95 分</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-20）</li>
+<li><strong>摘要：</strong> 俄罗斯安全公司 F6 报告首例 Cisco Expressway 漏洞 CVE-2026-76466（CVSS 9.8）在野利用：攻击者在公开 PoC 后不久攻陷两台面向互联网的 X15.5.3 设备，以 root 权限通过集群节点进入某俄罗斯组织内网另外两台设备。漏洞源于集群持久 Cookie 与 TLS Verify Mode 下客户端证书校验不足，持有 Cookie 的远程未认证攻击者可调用数据库服务 RPC 命令并以 root 执行任意系统命令；攻击者随后投放自定义 Python 脚本扫描内网、枚举 SMB、访问 SQL Server/WinRM 并翻查 GitLab 仓库窃取凭证。Cisco 已于 10 月 21 日在 X15.5.20 修复且无变通方案，F6 建议将 TCP 4371–4372 限制在可信集群节点之间，并排查 <code>erlang.log</code> 中 <code>wombat@127.0.0.1</code> 与 <code>/mnt/harddisk/i{0-9}{4}[a-zA-Z]?/*.py</code> 等痕迹。</li>
+<li><strong>评分理由：</strong> CVSS 9.8 未认证 root RCE 已有确凿在野利用证据，PoC 公开后极短窗口即被武器化，且形成从边界设备到内网的完整横向链条。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html</li>
+</ul>
+<h3 id="s3">2. 中国背景攻击者用开源 AI 工具 Cairn 自主发现零日，11 分钟拿下大学服务器 root</h3>
+<ul>
+<li><strong>评分：94 分</strong></li>
+<li><strong>来源：</strong> BleepingComputer（2026-11-20）/ The Register、Amazon Threat Intelligence 交叉核验</li>
+<li><strong>摘要：</strong> Amazon 威胁情报披露，疑似中国背景攻击者用开源自主渗透框架 Cairn，仅给出「获取 shell 访问」这一高层指令，让 AI 代理自行对开源医学影像应用 MONAI Label 的上传接口做路径遍历测试，约 11 分钟即从 API 测绘发展到任意文件写入，随后植入 <code>sitecustomize.py</code> 反向 Shell 拿到 root。攻击集中在中国大陆以外东亚高校、持续约 48 小时（9 月 8–10 日），代理还曾对 Redis 进行 16 小时 148 步尝试和对 GPU 服务器 3 万余次凭证喷洒（均失败）；Amazon 因攻击者的 Cairn 实例未设认证而发现该行动，并判定此漏洞高置信度为当时无补丁、无公告的零日，项目方 11 月 18 日发布 GHSA-qc22-rmgc-vg94 修复（影响 ≤0.8.5）。Gambit Security 另记录同一工具在 9 月涉及至少 105 次攻击、波及至少 27 家公司，Google 亦称其被用于攻击美国航空航天企业。</li>
+<li><strong>评分理由：</strong> AI 代理独立完成「发现零日→编写利用→提权 root」全链条，把补丁窗口压缩到分钟级，兼具国家级背景与确认在野利用，手法新颖性极高。</li>
+<li><strong>原文链接：</strong> https://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382 （BleepingComputer 同日报道：https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/ ）</li>
+</ul>
+<h3 id="s4">3. Linux KVM 漏洞让客户机读取宿主机 127GB 内存，云上跨租户数据可被窃取</h3>
+<ul>
+<li><strong>评分：92 分</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-20）</li>
+<li><strong>摘要：</strong> Terra Security 研究者发现 KVM 漏洞 CVE-2026-99312：AMD 处理器且开启嵌套虚拟化的宿主机上，客户机 VM 重置嵌套 VM 时 KVM 未恢复外层 VM 的嵌套页表指针，指向已释放内存页；内核复用该页后客户机可伪造页表条目指向宿主机任意物理页。在 DigitalOcean 的实测中，研究者从自己的 Droplet 读到宿主机内核版本横幅及约 127GB 只读宿主机内存（共享服务器上可能包含其他客户数据），并在自建 AMD 裸机上成功向宿主机内核活页写入 32 字节。修复已进入 7.3.5、6.18.64、6.12.118 稳定内核，但 Debian/Ubuntu/RHEL 发行版当时多未提供修复包，临时缓解需在宿主机关闭 <code>kvm_amd</code> 的 nested 参数并重启；利用需先控制客户机 root，尚无在野利用或公开利用代码。</li>
+<li><strong>评分理由：</strong> 跨虚拟机读取宿主机内存直击云多租户隔离根基，影响主流公有云与自建虚拟化平台，且发行版修复尚缺位。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html</li>
+</ul>
+<h3 id="s5">4. F5 紧急修复 BIG-IP 五个未认证 RCE 漏洞，17.7 万台设备暴露在互联网</h3>
+<ul>
+<li><strong>评分：90 分</strong></li>
+<li><strong>来源：</strong> BleepingComputer（2026-11-20）</li>
+<li><strong>摘要：</strong> F5 发布带外紧急热修复，处理 BIG-IP APM 与 iRules 组件中五个 Critical 栈缓冲区溢出漏洞（CVE-2026-121805、CVE-2026-120292、CVE-2026-120285、CVE-2026-116953、CVE-2026-123637），未认证远程攻击者可触发 TMM 崩溃甚至执行任意代码；另修复 APM SAML 整数下溢高危漏洞 CVE-2026-126822（可致 DoS）。漏洞仅影响数据面、需特定 iRules 命令或 APM 按请求策略配置，厂商称无变通或缓解措施、暂无在野利用；Shadowserver 观测到超过 17.7 万个 BIG-IP 实例和 1.46 万个带 APM 指纹的 IP 暴露在线，而 CISA 自 2021 年 11 月已将 7 个 F5 漏洞列入 KEV、其中 4 个被勒索团伙使用，且 F5 在 2025 年 8 月曾遭国家级入侵导致源码与未公开漏洞信息失窃。</li>
+<li><strong>评分理由：</strong> 五个未认证远程代码执行漏洞叠加 17 万级暴露面与无缓解措施，且该平台有反复被国家级和勒索组织利用的历史。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/</li>
+</ul>
+<h3 id="s6">5. 华硕 Control Center Express 曝 CVSS 10.0 硬编码密钥，可伪造管理员令牌接管终端 fleet</h3>
+<ul>
+<li><strong>评分：88 分</strong></li>
+<li><strong>来源：</strong> BleepingComputer（2026-11-19/20）</li>
+<li><strong>摘要：</strong> 华硕发布 Control Center Express（ACCE）1.7.29，修复三个 Critical 漏洞：CVE-2026-114202（CVSS 4.0 满分 10.0）因硬编码加密密钥，远程未认证攻击者可伪造认证令牌直接获得管理控制台管理员权限；CVE-2026-114204（9.0）可对最近登录账户伪造会话令牌绕过认证；CVE-2026-114205（9.4）允许低权限用户创建管理员账户。ACCE 是面向企业与 IT 服务商的集中式 PC 管理控制台，支持 200 多款商用/工作站主板，一旦控制台失守即可波及全部受管终端；厂商要求升级到 1.7.29 并通过 Client Agent Updater 同步更新客户端代理，官方未公布变通方案，也未报告在野利用或公开 PoC。需注意 CVE 记录仅列受影响版本至 1.7.27，而公告写明「1.7.29 之前均受影响」，谨慎起见应将低于 1.7.29 的版本一律视为需升级。</li>
+<li><strong>评分理由：</strong> 满分 CVSS、无需认证与用户交互即可接管管理控制台，并放大到其管理的成百上千台企业终端。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条新闻，最高分 95 分。</p>
+<blockquote>
+<p>采集说明：The Hacker News 首页与原文正文可正常读取；BleepingComputer 对本环境自动化请求返回 Cloudflare 质询（403），链接路径来自搜索结果与多方交叉核验，浏览器可正常打开；Hacker News 官方站点与 Algolia 本环境不可达，相关安全话题（如 OpenSSL CVE-2026-121481 缓冲区溢出，HN 280 分 / https://news.ycombinator.com/item?id=50569226 ）经公开讨论索引与 GitHub PR #33652（https://github.com/openssl/openssl/pull/33652 ）交叉确认。已主动排除近 5 日 Top5 重复项（NGINX nginx2root、VMware vCenter、phpAfterShell、CISA KEV 四漏洞、Ruby 7 漏洞、Google GTIG exploit_agent、Citrix NetScaler、Danfoss、NoisyTCP、BO Team、Optimizely、ShadowCloud、Perforce Puppet、agent-framework PyPI、闪存芯片绕过 TPM 等）。</p>
+</blockquote>
+<hr />
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-20.html">← 前一天 2026-11-20</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
