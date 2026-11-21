@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-11-22",
+  "url": "daily/daily_news_2026-11-22.html",
+  "title": "网络安全日报 2026-11-22",
+  "score": 91,
+  "cves": [
+   "CVE-2026-40671"
+  ],
+  "summary": "检索窗口：过去 24 小时（20261121）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性  新颖性  影响范围  时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。",
+  "text": "检索窗口：过去 24 小时（20261121）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性  新颖性  影响范围  时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。 评分：91 来源： The Hacker News 摘要： 安全研究者 Abdelhamid Naceri（MSNightmare / Nightmare Eclipse）公开披露零日手法「FastUnlock」：攻击者借锁屏「忘记 PIN」入口用 Win+U 调出讲述人（Narrator），在不可见的后台窗口与设置界面间导航，最终以锁屏账户 WsiAccount 上下文从 U 盘运行程序。ThreatLocker 当日独立复现确认可在已安装 2026 年 11 月更新的 Windows 11 26H2 上约 5 分钟攻破；默认 TPMonly 模式的 BitLocker 因启动时已解锁磁盘而无效。该手法需物理接触且要求设备存在关联的微软账户，目前无 CVE、无官方补丁，也未见在野利用。 原文链接： https://thehackernews.com/2026/11/newunpatchedwindows0dayfastunlock.html 评分理由： 影响全量 Windows 11 终端的无补丁 0day，且借辅助功能击穿「锁屏 + 磁盘加密」默认信任模型，新颖性与影响范围俱佳，仅因需物理接触略有扣分。 评分：89 来源： Bleeping Computer 摘要： BleepingComputer 于 11 月 21 日报道，FBI 正调查其国家犯罪信息中心（NCIC）疑似被入侵事件；CNN 援引两名知情人士称入侵系近几日发现，AP、Fox News 随后以各自匿名信源跟进。NCIC 是全美逾 1.8 万家执法机构查询通缉犯、失踪人口、被盗车辆枪支与保护令的核心共享系统，若完整性遭篡改，前线警员依据的记录将不再可信。这是 FBI 两个月内第二起曝光的入侵（9 月 FBIJobs.gov 事件被归咎于未修补的 Oracle PeopleSoft 漏洞），目前无归因、无确认数据外泄，FBI 未予置评。 原文链接： https://www.bleepingcomputer.com/news/security/fbireportedlyhackedagainthistimetargetingnationwidepolicedatabase/ 评分理由： 国家级执法核心系统疑似被攻破，影响全美执法机构且涉及记录完整性风险，规模与敏感性极高，仅因事件尚未官方确认略降分。 评分：87 来源： The Hacker News 摘要： GnuPG 披露 GPGME 2.3.0 之前版本存在严重 doublefree 内存破坏漏洞：OpenPGP 密钥中异常冗长的用户 ID 可触发该缺陷，导致应用数据泄露，且不能排除远程代码执行风险。影响面覆盖邮件客户端、XMPP 客户端、Samba、Gpg4win、GnuPG Desktop 与 VSDesktop 等依赖 GPGME 的广泛软件。GnuPG 已发布修复版本，建议相关应用尽快升级。 原文链接： https://thehackernews.com/2026/11/gnupgwarnscriticalgpgmeflawcould.html 评分理由： 漏洞位于被广泛复用的加密基础库，波及众多桌面与企业应用且存在 RCE 风险，严重性与影响范围突出，已修复略减分。 评分：85 来源： The Hacker News 摘要： ThreatFabric 详述此前未知的 Android 恶意软件框架 Bazuka：具备 LLM 辅助的受害者管理与 23 个功能模块，通过伪造屏幕覆盖层隐匿凭据窃取与设备控制。其组件支持键盘记录、2FA 与短信拦截、加密货币地址替换、远程控制、数据窃取及基于 WebSocket 的 C2 通信，并滥用无障碍服务与无线调试提权，投递器可伪装成「TikTok 高级版」。该框架代表了 AI 辅助恶意软件运营的新形态。 原文链接： https://thehackernews.com/2026/11/bazukaandroidmalwareusesfakescreen.html 评分理由： LLM 驱动的模块化移动恶意软件框架属新颖攻击手法，功能全面且伪装性强，影响范围广，尚无大规模在野数据略降分。 评分：83 来源： The Hacker News / Palo Alto Networks Unit 42 摘要： Unit 42 报告称，与 Com 团伙关联的攻击者以语音钓鱼（vishing）手段，针对金融服务、医疗与法律行业窃取数据并实施勒索。研究识别出 CLCRI1264、CLCRI1274 等活动集群，使用 AiTM 代理、未经授权的 MFA 设备注册、会话令牌及脚本化访问攫取 Microsoft 365、SharePoint 与 OneDrive 数据；活动中还使用一款可窃取凭据、Cookie 与浏览器数据并实现远程控制的恶意浏览器扩展。 原文链接： https://unit42.paloaltonetworks.com/comaffiliatevishingattacks/ 评分理由： 结合 AiTM、MFA 滥用与恶意扩展的链状攻击直指企业云数据，涉及多行业、有一手研究支撑，时效性符合但非单一爆发事件。 Hacker News（news.ycombinator.com）： 本环境对 HN 官方站点与其 Algolia 接口持续不可达（历史一致），今日 HN 讨论热点（FastUnlock、AMD Skyfall CVE202640671 等）经 The Hacker News、SecurityWeek、The Register 等可访问安全媒体交叉采集并标注真实来源直链；与近 5 日 Top5 重复者（MONAI Label / Cairn、Linux KVM、F5 BIGIP、Cisco Expressway、AMD Skyfall 等）已剔除。 The Hacker News： 首页抓取成功，Top5 中 FastUnlock、GPGME、Bazuka 三条原文均来自该站真实直链并经正文核验。 Bleeping Computer： 自动化请求触发 Cloudflare 质询（403），原文路径经搜索结果与多家聚合源交叉核验真实，浏览器可正常打开；FBI NCIC 条目采用其官方直链。 本次共筛选 15 条新闻，最高分 91 分。"
+ },
+ {
   "date": "2026-11-21",
   "url": "daily/daily_news_2026-11-21.html",
   "title": "网络安全日报 2026-11-21",
