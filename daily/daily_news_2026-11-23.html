@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-23 | 网络安全新闻中心</title>
+<meta name="description" content="检索窗口：过去 24 小时（20261122）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性  新颖性  影响范围  时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-23">
+<meta property="og:description" content="检索窗口：过去 24 小时（20261122）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性  新颖性  影响范围  时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-23.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-23">
+<meta name="twitter:description" content="检索窗口：过去 24 小时（20261122）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性  新颖性  影响范围  时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-23</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. 黑客利用 GL.iNet 云管理漏洞，向路由器与 KVM 设备投送后门与反向 Shell</a></li>
+<li><a href="#s2">2. Ghostscript 沙箱逃逸 RCE：普通上传/预览/打印即可在服务器执行命令（CVE-2026-125396）</a></li>
+<li><a href="#s3">3. 单个恶意网页即可全程劫持 Meta Muse AI 助手并攫取私密对话与凭证</a></li>
+<li><a href="#s4">4. Rackspace Spot 遭入侵：泄露凭据可读取客户 Kubernetes Secrets</a></li>
+<li><a href="#s5">5. 微软披露 Entra Connect Health 漏洞被利用，泄露租户管理员数据</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>检索窗口：过去 24 小时（2026-11-22）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。</p>
+</blockquote>
+<hr />
+<h2 id="s1">1. 黑客利用 GL.iNet 云管理漏洞，向路由器与 KVM 设备投送后门与反向 Shell</h2>
+<ul>
+<li><strong>评分：94</strong></li>
+<li><strong>来源：</strong> Bleeping Computer</li>
+<li><strong>摘要：</strong> GL.iNet 于 11 月 20 日确认，攻击者利用其 GoodCloud 云远程管理服务的漏洞入侵客户设备，植入定制恶意软件、后门与 root 级反向 Shell（回连 170.39.226[.]219），可完全远程控制 infected 路由器与 KVM 设备——后者提供对服务器的带外控制，等于把「控制台席位」交给攻击者。研究员对 183 台自有/托管路由器检测发现 152 台有可疑活动，其中 24 台存在 root 反向 Shell、47 台有旧后门、81 台有攻击者命令执行痕迹。厂商已阻断攻击路径并修复云端漏洞，但强调修复不会清除已感染设备上的恶意软件，稳定固件于 11 月 22 日发布。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/</li>
+<li><strong>评分理由：</strong> 在野利用 + 边界/KVM 设备 + 后门持久化 + 已确认大量设备失陷，严重性、影响范围与时效性均突出，属典型的供应链式边界攻击。</li>
+</ul>
+<h2 id="s2">2. Ghostscript 沙箱逃逸 RCE：普通上传/预览/打印即可在服务器执行命令（CVE-2026-125396）</h2>
+<ul>
+<li><strong>评分：91</strong></li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 安全公司 pwn.ai 演示了 Ghostscript 中一处已修复的 use-after-free 漏洞（CVE-2026-125396，CVSS 8.5）：精心构造的 PostScript/PDF 可关闭 -dSAFER 沙箱检查，在处理服务器上执行命令。研究覆盖约 10 款流行应用，多条路径无需登录——匿名 Debian 打印队列、Roundcube 邮箱打开附件即触发、WordPress 插件 Forminator 与 Essential Addons for Elementor 的公开上传表单；由于 ImageMagick、Pillow、libvips、Qt 等库会间接调用 Ghostscript，即使文件名为 .png/.jpg 也可能启动解释器。Artifex 已于 9 月 8 日在 10.08.0 修复，暂无在野利用，但多个 Linux 发行版与容器内置副本修补进度不一。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html</li>
+<li><strong>评分理由：</strong> 经普通上传即可 RCE、影响面横跨海量 Linux 服务器/容器与主流应用，且多为间接依赖难以察觉，新颖性与影响范围俱佳，因已修复且无在野利用略降分。</li>
+</ul>
+<h2 id="s3">3. 单个恶意网页即可全程劫持 Meta Muse AI 助手并攫取私密对话与凭证</h2>
+<ul>
+<li><strong>评分：89</strong></li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> NebuSec 披露实验室研究：恶意网页被 Meta 个人 AI 助手 Muse 打开后，可在不触发任何批准提示的情况下，将用户私聊记录与存储记忆外传至外部服务器并可篡改；研究者 further 串联 Muse 内置浏览器漏洞与 Linux 内核漏洞，取得用户云主机 root 权限，触及凭证库、已保存文件与负责管控外发的 Sentinel 层，实现对该云机的完全控制。攻击未逃逸至底层共享服务器或其他用户，NebuSec 称所有缺陷已在披露前修复，Meta 未公开置评。这被视为「浏览器 → 内核 → AI 凭证」的新型 Agent 攻击链。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html</li>
+<li><strong>评分理由：</strong> 一条网页链击穿 AI Agent 多层隔离、触及凭证与记忆，代表新兴高价值攻击面，新颖性极强；因属实验室演示、未波及真实用户适当扣分。</li>
+</ul>
+<h2 id="s4">4. Rackspace Spot 遭入侵：泄露凭据可读取客户 Kubernetes Secrets</h2>
+<ul>
+<li><strong>评分：87</strong></li>
+<li><strong>来源：</strong> Bleeping Computer</li>
+<li><strong>摘要：</strong> Rackspace 通知客户，攻击者于 11 月 17 日约 00:20–22:00 UTC 使用泄露凭据进入其 Spot 云 Kubernetes 平台，在部分客户组织中冒充合法用户，创建 Pod、读取 Kubernetes Secrets 并列举节点与卷，还可读取用户的 Spot API/刷新令牌。这些 Secrets 通常存放数据库密码、云密钥、注册表与第三方 API 令牌，意味着一次入侵可横向进入下游客户环境；更糟的是入侵由客户次日上报而非平台告警发现，控制台停机一度令客户无法轮换已泄凭据，服务至 11 月 21 日才完全恢复。Rackspace 已吊销令牌、移除恶意 Pod 并轮换密钥，未披露受影响客户数与是否数据被窃。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/</li>
+<li><strong>评分理由：</strong> 云管理平台凭据失陷可读取任意集群 Secret 并波及下游，影响范围与供应链风险高，22 小时未被平台发现凸显检测缺失。</li>
+</ul>
+<h2 id="s5">5. 微软披露 Entra Connect Health 漏洞被利用，泄露租户管理员数据</h2>
+<ul>
+<li><strong>评分：84</strong></li>
+<li><strong>来源：</strong> Bleeping Computer</li>
+<li><strong>摘要：</strong> 微软通知客户，攻击者利用其 Entra Connect Health 服务的 API 漏洞，读取租户级元数据，包括管理员与技术联系人邮箱、租户 ID、初始域名、国家/地区码、许可层级、目录同步状态与一张过期的 Connect Health 代理证书。微软称未发现密码、令牌、有效密钥或配置被改，11 月 19 日已在服务端修复、客户无需更新；但暴露的信息精准描绘企业身份架构与管理员名单，是定向钓鱼、语音钓鱼与 MFA 疲劳攻击的理想素材，建议相关租户强化特权账户防钓鱼 MFA 并审查登录审计日志。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/</li>
+<li><strong>评分理由：</strong> 身份基础设施漏洞已在野泄露管理员与租户配置，可直接喂给针对性社工攻击，影响面广且契合近期身份攻击趋势，因未涉凭据泄露略降分。</li>
+</ul>
+<hr />
+<h3 id="s6">来源采集说明</h3>
+<ul>
+<li><strong>Hacker News（news.ycombinator.com）：</strong> 本环境对 HN 官方站点与其 Algolia 接口持续不可达（历史一致）；今日 HN 讨论热点（AI 供应链 canary 凭证、FBI NCIC、GPGME 通告等）经 The Hacker News、BleepingComputer、SecurityWeek、The Register 等可访问来源交叉采集并标注真实直链；与近 5 日 Top5 重复者（FBI NCIC、GPGME、Bazuka、Cairn MONAI、Cisco Expressway、VMware vCenter、NGINX、Optimizely 等）已剔除。</li>
+<li><strong>The Hacker News：</strong> 首页与文章直链抓取成功，Top5 中 Ghostscript、Meta Muse 两条均为该站真实直链并经正文核验（HTTP 200）。</li>
+<li><strong>Bleeping Computer：</strong> 自动化请求触发 Cloudflare 质询（403，历史一致），原文路径经搜索结果与多家聚合源（cybernoz、defend.network、dugganusa 等）交叉核验真实，浏览器可正常打开；GL.iNet、Rackspace Spot、Entra 三条均采用其官方直链。</li>
+</ul>
+<p>本次共筛选 15 条新闻，最高分 94 分。</p>
+<hr />
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-22.html">← 前一天 2026-11-22</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
