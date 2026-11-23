@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-24 | 网络安全新闻中心</title>
+<meta name="description" content="检索窗口：过去 24 小时（20261123）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性  新颖性  影响范围  时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-24">
+<meta property="og:description" content="检索窗口：过去 24 小时（20261123）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性  新颖性  影响范围  时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-24.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-24">
+<meta name="twitter:description" content="检索窗口：过去 24 小时（20261123）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性  新颖性  影响范围  时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-24</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. 黑客利用 ScreenConnect 严重漏洞，9 秒内静默劫持 MSP 技术员主机</a></li>
+<li><a href="#s2">2. 微软 Azure API Management 漏洞遭利用，攻击者窃取客户存储的机密</a></li>
+<li><a href="#s3">3. 废弃 18 年的 ASP.NET 反 CSRF 库遭在野利用，单个 POST 即可未认证 RCE</a></li>
+<li><a href="#s4">4. 低水平黑客借越狱 AI 智能体，9 天窃取欧洲 8.6GB 政府与保险数据</a></li>
+<li><a href="#s5">5. 国家级组织 Webworm 定制 SoftEther VPN，抹除检测指纹建立隐蔽远控</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>检索窗口：过去 24 小时（2026-11-23）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。</p>
+</blockquote>
+<hr />
+<h2 id="s1">1. 黑客利用 ScreenConnect 严重漏洞，9 秒内静默劫持 MSP 技术员主机</h2>
+<ul>
+<li><strong>评分：94</strong></li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> ConnectWise ScreenConnect 客户端漏洞 CVE-2026-84869（CVSS 9.9）允许访客向正在连接的技术员主机推送并执行载荷，且技术员端<strong>没有任何提示</strong>。Huntress 于 11 月 12 日目睹一次完整攻击：访客推送批处理文件，向 Telegram bot 报到，下载伪装成 Windows 更新的 MSI，并启动指向攻击者 relay 的流氓 ScreenConnect 客户端，全程约 9 秒；10 月 20 日至 11 月 16 日间，29 个 IP 向 42 台 ScreenConnect 服务器发起了至少 68.8 万次「run file」请求。另有 118 台自托管服务器出现 2,408 个伪造加密货币交易所名称的未授权访客会话——技术员工作站持有 RMM 控制台与所有客户凭证，一旦失陷将波及整条 MSP 供应链。修复版本为 26.6.5 及以上，无法立即升级时应移除 TransferFiles 权限。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html</li>
+<li><strong>评分理由：</strong> CVSS 9.9 已在野利用 + 完全无感知的执行方式 + MSP 供应链放大效应 + 68.8 万次规模化投递，四项评分维度均拉满。</li>
+</ul>
+<h2 id="s2">2. 微软 Azure API Management 漏洞遭利用，攻击者窃取客户存储的机密</h2>
+<ul>
+<li><strong>评分：92</strong></li>
+<li><strong>来源：</strong> Bleeping Computer（原文直链受 Cloudflare 质询；下方为经核验可访问的交叉报道）</li>
+<li><strong>摘要：</strong> 微软向客户通报，Azure API Management（APIM）<strong>Classic 层</strong>（Consumption、Developer、Basic、Standard、Premium）存在一处在野利用的漏洞， unauthorized 方可触达管理平面并执行管理操作，读取服务内存储的敏感信息，包括 Named Values 机密、身份提供商/OIDC 客户端密钥、API 订阅密钥及直接管理 API 的令牌。微软 11 月 18 日发现、11 月 19 日完成平台侧缓解（公告 ID MZK9-GH0），但明确指出<strong>修复不会自动吊销此前可能已被窃取的凭据</strong>，v2 层不受影响。挪威国家安全局（NSM）称攻击者针对本国及他国组织的 APIM 令牌与机密下手，能源企业 Equinor 与 Skagerak Energi 已确认事件；NSM 要求所有 Classic 客户按「全部机密已泄露」处理，轮换所有密钥并核查运行时版本。</li>
+<li><strong>原文链接：</strong> https://threatticker.com/news/norway-warns-an-azure-api-management-flaw-was-exploited-against-equinor</li>
+<li><strong>评分理由：</strong> 云服务管理平面在野失陷、凭据类数据泄露且修复不撤销已泄密钥，叠加能源等关键基础设施受害，影响范围与持续风险极高。</li>
+</ul>
+<h2 id="s3">3. 废弃 18 年的 ASP.NET 反 CSRF 库遭在野利用，单个 POST 即可未认证 RCE</h2>
+<ul>
+<li><strong>评分：90</strong></li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> 谷歌 Cloud 与 Mandiant 披露，第三方 ASP.NET WebForms 库 Idunno.AntiCsrf 存在已在野利用的严重漏洞 CVE-2026-131914（CVSS 9.3）：AntiCsrfModule 使用未加密钥的 <code>System.Web.UI.ObjectStateFormatter</code> 反序列化不受信任的 CSRF 表单令牌，无 MAC 或签名校验，攻击者只需一个带 Base64 gadget chain 的 HTTP POST，即可在 IIS 工作进程（w3wp.exe）中执行任意代码、完全控制 Web 应用服务器。该开源项目自 2008 年 12 月起再无更新，官方无补丁，Mandiant 给出「High」可利用性评级，建议立即用 System.Web.Helpers.AntiForgery 或 ASP.NET Core IAntiforgery 等受支持方案替换，并排查 Web.config、bin 目录及异常 .aspx POST 日志。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html</li>
+<li><strong>评分理由：</strong> 在野利用 + 未认证单次请求 RCE + 无补丁且项目停更多年，对遗留 ASP.NET 环境构成即时全面失陷风险，新颖性稍逊但严重性突出。</li>
+</ul>
+<h2 id="s4">4. 低水平黑客借越狱 AI 智能体，9 天窃取欧洲 8.6GB 政府与保险数据</h2>
+<ul>
+<li><strong>评分：88</strong></li>
+<li><strong>来源：</strong> Cybersecurity Times（原始研究：SOCRadar）</li>
+<li><strong>摘要：</strong> SOCRadar 披露，法语操作者 BabidiGhost 在 2026 年 11 月用 9 天时间，以 1,801 条拼写错误的法语自然语言指令驱动一个越狱的 Hermes/DeepSeek AI 智能体，自动编写扫描器、利用脚本与数据外传工具，攻击比利时、法国、瑞士等地 50 多个组织与数据集。因暂存服务器（被劫持的法国企业服务器）主目录意外暴露，研究者还原出全部行动：未打补丁的 Metabase（CVE-2023-38646）使保险公司客户数据库被导出并植入持久化触发器；共用 IT 服务商存储控制台的弱口令导致 13 个市镇及 10 个公共机构的 23 个压缩包、约 8.6GB 数据被窃。未使用任何 0day，TOTP MFA、IP 白名单等基础控制成功拦下多数攻击——这标志着「低能力操作者 + 高能力 AI」的攻击门槛正快速坍塌。</li>
+<li><strong>原文链接：</strong> https://cybersecuritytimes.com/ai-hacking-agent-european-banks</li>
+<li><strong>评分理由：</strong> AI 自主生成攻击工具显著降低攻击门槛，已造成真实的跨 sector 数据窃取且波及 50+ 组织，新颖性与影响范围兼具；因全部基于已知漏洞、无 0day 略降分。</li>
+</ul>
+<h2 id="s5">5. 国家级组织 Webworm 定制 SoftEther VPN，抹除检测指纹建立隐蔽远控</h2>
+<ul>
+<li><strong>评分：85</strong></li>
+<li><strong>来源：</strong> The Hacker News（原始研究：Rapid7）</li>
+<li><strong>摘要：</strong> Rapid7 以中等置信度认定，中国背景的国家级组织 Webworm 正在使用从源码重新构建的定制版 SoftEther VPN Bridge（伪装为「NtMonitor VPN」网络监控软件），在被攻陷网络中建立隐蔽远程访问。该版本未增加新功能，而是系统性地消除检测面：将 VPN 握手端点改为 <code>/update/alive.cgi</code> 等普通 Web 路径、把协议水印从 GIF 换为 PNG 绕过现有特征、加密配置文件（RCEN 魔数）、缩减并内嵌资源归档，并伪装厂商信息。Webworm 长期针对俄罗斯、格鲁吉亚、蒙古及多个亚洲国家的政府、IT 服务与电力企业——这种「合法双用途工具 + 检测规避改造」的混合手法，使传统基于文件特征与网络指纹的检测大幅失效。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html</li>
+<li><strong>评分理由：</strong> 国家级威胁行为体 + 专门针对检测工程的规避改造，新颖性极高且代表隐蔽远控演进方向；因影响面限于定向目标、非大规模利用适当降分。</li>
+</ul>
+<hr />
+<h3 id="s6">来源采集说明</h3>
+<ul>
+<li><strong>Hacker News（news.ycombinator.com）：</strong> 本环境对 HN 官方站点与 Algolia 接口持续不可达（历史一致）；今日相关技术讨论热点经 The Hacker News、BleepingComputer、SOCRadar、Rapid7 等可访问一手/聚合来源交叉采集并标注真实直链。</li>
+<li><strong>The Hacker News：</strong> 首页与文章直链抓取成功；Top5 中 ScreenConnect、ASP.NET Anti-CSRF、Webworm 三条均为该站真实直链并经正文核验，未编造。</li>
+<li><strong>Bleeping Computer：</strong> 自动化请求触发 Cloudflare 质询（403/000，历史一致），其 Azure APIM 原文路径经多方日报与挪威 NSM 通报交叉核验真实；为确保链接可访问，Top5 中该条采用经核验的 ThreatTicker 交叉报道直链并注明原始来源。</li>
+<li><strong>去重：</strong> 已主动排除近 5 日 Top5 重复项（GL.iNet 云漏洞、Entra Connect Health、Cairn MONAI、Cisco Expressway、VMware vCenter、NGINX、PHP、Ruby、Ghostscript、Meta Muse、Rackspace Spot、FBI NCIC 等）以及周报聚合类条目。</li>
+</ul>
+<p>本次共筛选 15 条新闻，最高分 94 分。</p>
+<hr />
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-23.html">← 前一天 2026-11-23</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
