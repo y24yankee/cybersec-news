@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-25 | 网络安全新闻中心</title>
+<meta name="description" content="检索窗口：过去 24 小时（20261124）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性  新颖性  影响范围  时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-25">
+<meta property="og:description" content="检索窗口：过去 24 小时（20261124）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性  新颖性  影响范围  时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-25.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-25">
+<meta name="twitter:description" content="检索窗口：过去 24 小时（20261124）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性  新颖性  影响范围  时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-25</h1>
+<nav class="toc"><h4>目录</h4>
+<ol>
+<li><a href="#s1">1. 伊朗背景新组织 Volant Manticore 用 IPFS 搭建难以取缔的 C2 后门</a></li>
+<li><a href="#s2">2. GT13 行动攻陷 22 家组织的 Check Point 管理服务器，防火墙策略被卸载</a></li>
+<li><a href="#s3">3. N-able MailAssure 在野漏洞入 CISA KEV：认证用户可探测并攻击内网服务</a></li>
+<li><a href="#s4">4. INCEPTION 勒索团伙冒充法律部门语音钓鱼，70+ 域名瞄准全球 SSO 凭据</a></li>
+<li><a href="#s5">5. 改一个 bit 即绕过 Windows 代码完整性：Project Zero 披露 .NET 加载逻辑缺陷</a></li>
+</ol>
+</nav>
+
+<blockquote>
+<p>检索窗口：过去 24 小时（2026-11-24）；候选来源：Hacker News、The Hacker News、Bleeping Computer。评分标准：严重性 &gt; 新颖性 &gt; 影响范围 &gt; 时效性（满分 100）。补丁严重级别数据不计入新闻评分、不进入 Top5。</p>
+</blockquote>
+<hr />
+<h2 id="s1">1. 伊朗背景新组织 Volant Manticore 用 IPFS 搭建难以取缔的 C2 后门</h2>
+<ul>
+<li><strong>评分：92</strong></li>
+<li><strong>来源：</strong> The Hacker News（原始研究：Check Point Research）</li>
+<li><strong>摘要：</strong> Check Point 披露了一个此前未记录的伊朗背景间谍组织 Volant Manticore，自 2025 年 8 月底起针对塞浦路斯的电信运营商、航空公司与关键基础设施发动攻击，并于 2026 年 9 月起把矛头转向沙特 Healthcare 机构。其核心武器 KuboShell 是一款 Windows 后门，通过 Pinata 服务把指令以内容哈希形式存放在去中心化 IPFS 网络上，每 60 秒取一次命令并用隐藏 PowerShell 执行——没有可查封的单一 C2 服务器，传统域名封禁与沉洞手段基本失效。投放手法包括 AI 生成的虚假简历（"Athena Marinou"）和来自被攻陷沙特医院邮箱的 <code>AI_Healthcare_Seminar.zip</code>，得手后再投递 Homa 框架与 MeshCentral、N-able 等合法 RMM 工具实现长期驻留。Check Point 判断该组织由 MuddyWater 老成员分裂而出，与伊朗情报与安全部（MOIS）有关。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html</li>
+<li><strong>评分理由：</strong> 国家级威胁行为体 + 全新 IPFS 去中心化 C2 手法 + 针对电信/航空/医疗关键行业，新颖性与严重性同时拉满。</li>
+</ul>
+<h2 id="s2">2. GT13 行动攻陷 22 家组织的 Check Point 管理服务器，防火墙策略被卸载</h2>
+<ul>
+<li><strong>评分：90</strong></li>
+<li><strong>来源：</strong> Bleeping Computer（原始研究：GreyNoise；自动化请求受 Cloudflare 质询，正文经交叉报道核验）</li>
+<li><strong>摘要：</strong> GreyNoise 追踪到一场针对 Check Point Security Management Server 的持续入侵行动（GT13），已确认 17 个国家 22 家组织的 24 台管理服务器失陷，受害方包括政府机构、金融机构以及能源、交通、矿业和制造企业。攻击流量来自 99 个疑似被劫持的 Check Point 设备与 ExpressVPN 出口 IP，攻击者先利用 CVE-2026-61500 攻下一台 Rejetto HTTP 文件服务器作为中继，再用 CVE-2026-16232（SmartConsole 认证绕过，7 月已被确认为在野 0day）执行 100 余项管理任务。GreyNoise 记录到 1,400+ 网络会话、800 条命令行痕迹，攻击者窃取防火墙数据库、内部 CA 与凭据，在一家受害环境中签发新证书并直接卸载安全策略使防火墙失去防护；10 月 26 日对全部 24 台服务器批量签发证书的尝试虽失败，却暴露了完整受害者名单。GreyNoise 认为行动 11 月 2 日后仍在继续，已通报各国 CERT；是否使用 AI 攻击工具尚未证实。</li>
+<li><strong>原文链接：</strong> https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/</li>
+<li><strong>评分理由：</strong> 安全设备本身被大规模攻陷并被用于横向移动、22 家组织跨 17 国受影响，且疑似仍在活动，影响范围与持续风险极高。</li>
+</ul>
+<h2 id="s3">3. N-able MailAssure 在野漏洞入 CISA KEV：认证用户可探测并攻击内网服务</h2>
+<ul>
+<li><strong>评分：89</strong></li>
+<li><strong>来源：</strong> The Hacker News</li>
+<li><strong>摘要：</strong> CISA 于 11 月 23 日把 N-able MailAssure 的 CVE-2026-134624（CVSS 9.3）加入已知利用漏洞目录（KEV），该 SSRF 漏洞位于 LDAP 同步连接检查功能，已认证的 API 用户可让服务连接任意内网主机和端口、探测可达性并向内部服务发送构造数据。漏洞利用源于 N-able 上周披露的安全事件：11 月 16 日 Mail Assure 与 SpamExperts Hosted Cloud 服务中断，截至 11 月 21 日控制面板与 API 才恢复，公司称利用仅局限于一台托管服务器且整改后未再发现恶意活动。同批入榜的还有 MONAI Label 的 CVE-2026-133968（CVSS 9.8 路径遍历，未认证写任意文件可 RCE），已被疑似中国背景团伙用 CAIRN AI 智能体在约 11 分钟内自主发现并武器化，写入 <code>sitecustomize.py</code> 建立 root reverse shell；AWS 另披露 ARTEX 智能体活动已波及包括 John Deere、SharkNinja 在内的 100 多家企业。FCEB 机构须在 11 月 26 日前完成修复。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html</li>
+<li><strong>评分理由：</strong> CISA KEV 确认在野利用 + 邮件安全网关处于信任边界内侧 + AI 智能体自主发现 0day 的链式放大效应，严重性与时效性均高。</li>
+</ul>
+<h2 id="s4">4. INCEPTION 勒索团伙冒充法律部门语音钓鱼，70+ 域名瞄准全球 SSO 凭据</h2>
+<ul>
+<li><strong>评分：87</strong></li>
+<li><strong>来源：</strong> The Hacker News（原始研究：Okta Threat Intelligence / ReversingLabs / Unit 42）</li>
+<li><strong>摘要：</strong> Okta 威胁情报团队认定，自 3 月起追踪的语音钓鱼集群 O-UNC-053 疑似已改换旗号，自 11 月 16 日起把窃得的数据挂到新勒索站点 INCEPTION 上；此前该集群的数据发布在 ShinyHunters 泄漏站，INCEPTION 则在暗网上否认与 ShinyHunters 有关。攻击者以 <code>legal-&lt;target&gt;.com</code>、<code>legaldept-&lt;target&gt;.com</code> 等"法律部门"主题域名（10 月以来已发现 70 余个）搭建与 Okta/NetIQ 登录页高度相似的钓鱼套件，通过电话诱导员工报出一次性验证码并批准 MFA 推送，进而接管 SaaS 账号、外传数据并实施勒索；已确认的仿冒域名涉及 PepsiCo、Dropbox、AMD、Duolingo、Western Union、Activision Blizzard、Twitch 等，覆盖科技、医疗、金融、游戏、零售、法律等多个行业。ReversingLabs 指出这些域名多在夜间批量注册并藏于 Cloudflare 之后，对非目标访客则跳转至企业真实登录页以规避扫描。该钓鱼套件无法绕过 Passkey 与 Okta FastPass 等抗钓鱼认证。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html</li>
+<li><strong>评分理由：</strong> 60+ 全球知名品牌被仿冒、70 余个定向域名加上成熟的社工接管链条，影响面广且代表 MFA 绕过的主流方向；因依赖社工而非技术漏洞略降分。</li>
+</ul>
+<h2 id="s5">5. 改一个 bit 即绕过 Windows 代码完整性：Project Zero 披露 .NET 加载逻辑缺陷</h2>
+<ul>
+<li><strong>评分：85</strong></li>
+<li><strong>来源：</strong> The Hacker News（原始研究：Google Project Zero）</li>
+<li><strong>摘要：</strong> Google Project Zero 研究员 James Forshaw 披露，.NET Framework 4 在把文件作为可执行映像加载失败时会退回到"从内存中的普通副本运行"路径，该路径跳过映像校验，导致多道 Windows 防护被同一行为绕过。清除 .NET 文件头中的 <code>IMAGE_FILE_EXECUTABLE_IMAGE</code> 标志位这一个 bit，即可让 Windows 在启用 UMCI 的 Windows 11 S Mode 上加载未签名 .NET 程序集（CVE-2026-108398，CVSS 8.8，微软 10 月 13 日已修）；同样的加载行为也绕过了 Windows 主机上 VirtualBox 的进程加固（CVE-2026-87268，CVSS 7.8，Oracle 9 月已修，影响 7.2.16/7.2.18）。研究员还通过劫持 WerSecureFault.exe 加载的 COM 对象，无需管理员权限把测试代码注入最高保护级别的 PPL 进程——微软 10 月的修复未改变这一路径，该绕过目前没有独立 CVE。两项漏洞均为本地、低权限触发，并非远程拿下主机的通道。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/google-researcher-shows-how-single-bit.html</li>
+<li><strong>评分理由：</strong> 单 bit 修改即穿透代码完整性与 PPL 隔离，研究新颖性极高；因需本地立足点且厂商均已补丁，实际受影响范围有限而降分。</li>
+</ul>
+<hr />
+<h3 id="s6">来源采集说明</h3>
+<ul>
+<li><strong>Hacker News（news.ycombinator.com）：</strong> 本环境对 HN 官方站点与 Algolia 接口持续不可达（历史一致）；今日相关技术讨论热点经 The Hacker News、BleepingComputer、Check Point Research、Google Project Zero 等可访问一手/聚合来源交叉采集并标注真实直链。</li>
+<li><strong>The Hacker News：</strong> 首页抓取成功，11 月 24 日共 10 篇文章；Top5 中 Volant Manticore、N-able MailAssure、INCEPTION、Project Zero 四条均为该站真实直链并经正文核验，未编造。</li>
+<li><strong>Bleeping Computer：</strong> 自动化请求触发 Cloudflare 质询（403/000，历史一致），GT13 报道的原文路径与事实经 protect.computer、cve.tools、fastnexa 等多源交叉核验；可访问的交叉报道见 https://protect.computer/news/2026-11-24-check-point-management-servers-gt13-campaign 。</li>
+<li><strong>去重：</strong> 已主动排除近 5 日 Top5 重复项（ScreenConnect、Azure APIM、ASP.NET AntiCsrf、越狱 AI 智能体、Webworm、VMware vCenter、Cairn MONAI、GL.iNet、Entra Connect Health、Ghostscript、Meta Muse、Rackspace Spot 等）以及周报聚合类条目；微软补丁数据仅作文末独立板块。</li>
+</ul>
+<p>本次共筛选 15 条新闻，最高分 92 分。</p>
+<hr />
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-24.html">← 前一天 2026-11-24</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
