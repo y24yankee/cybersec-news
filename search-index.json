@@ -1,5 +1,20 @@
 [
  {
+  "date": "2026-11-26",
+  "url": "daily/daily_news_2026-11-26.html",
+  "title": "网络安全日报 2026-11-26",
+  "score": 95,
+  "cves": [
+   "CVE-2026-120705",
+   "CVE-2026-129243",
+   "CVE-2026-129245",
+   "CVE-2026-129514",
+   "CVE-2026-132165"
+  ],
+  "summary": "评分：95 / 100",
+  "text": "评分：95 / 100 来源：The Hacker News（20261125） 摘要：攻击者利用隐藏在 Hex.pm 请求解析器中近十年的漏洞 CVE2026129514（CVSS 10.0），于本周一在 6 台生产服务器上执行任意操作系统命令；该漏洞在路由与认证之前触发，一个未认证的 POST 请求即可利用。维护方在 15 分钟内完成全服务器补丁，核查未发现包被篡改，但无法排除邮箱、密码哈希与双因素密钥等账户数据被读取，已强制全体用户登出并要求重置密码与 2FA。作为 Elixir/Erlang 生态的核心包注册表，该事件构成典型的上游供应链风险。 评分理由：满分 CVSS 10.0 + 在野实打实的服务器沦陷 + 影响整个 Elixir/Erlang 软件供应链，严重性与影响范围均属顶级。 原文链接：https://thehackernews.com/2026/11/hackersexploitedcvss100hexpmrce.html 评分：93 / 100 来源：The Hacker News（20261125） 摘要：watchTowr 观察到攻击者正在利用 GeoServer 两个新修补漏洞 CVE2026120705（任意文件读取，CVSS 8.6）与 CVE2026129243（授权错误，CVSS 8.8），向服务器发送基于错误的探测请求以验证可利用性。Eye Security 与 Rapid7 研究人员指出，结合硬编码签名密钥漏洞 CVE2026129245（CVSS 9.2）可伪造管理员会话，再经 JDBC 反序列化执行任意代码，构成完整的未认证远程代码执行链。官方已发布 2.27.7 / 2.28.6 / 3.0.2 修复版本，敦促立即升级。 评分理由：在野利用 + 多漏洞串联成无需认证的 RCE + 全球大量暴露在外的地理空间服务器受影响，攻击链新颖且危害直接。 原文链接：https://thehackernews.com/2026/11/hackersexploittwogeoserverflawsas.html 评分：91 / 100 来源：The Hacker News（20261125） 摘要：CISA 周二将 Drupal 核心漏洞 CVE2026132165（Fail2Install，CVSS 9.8）加入已知利用漏洞（KEV）目录，要求联邦机构在 11 月 27 日前完成修复。该漏洞源于安装器未能安全失败，攻击者可在特定条件下通过 install.php 重新安装 Drupal，从而在无需认证的情况下接管现有站点或执行任意代码；Searchlight Cyber 已披露技术细节与攻击者植入的 SQLite/PHP 载荷。这是三天内 Drupal 就同一安装器组件发布的第二则严重安全公告。 评分理由：CVSS 9.8 预认证 RCE 已确认在野利用并被 CISA 列入 KEV，全球 Drupal 站点面广，紧迫性极高。 原文链接：https://thehackernews.com/2026/11/drupalfail2installexploitdetails.html 评分：88 / 100 来源：Bleeping Computer（经 SC World 交叉印证，20261125） 摘要：据报道，不明攻击者入侵了美国中央情报局（CIA）、国家情报总监办公室（ODNI）与国家地理空间情报局（NGA）的开源情报（OSINT）分析系统，入侵疑似使用了开源 LLM 驱动的自主渗透测试框架 ARTEX。官员确认事件未波及机密数据或网络，但尚未披露入侵途径、受影响范围，也无组织认领。该事件与同期欧盟委员会 EU Academy 数据泄露（同样关联 ARTEX）共同显示，AI 驱动的自动化攻击框架正被多个威胁行为者用于攻破高价值目标。 评分理由：国家级情报机构目标 + AI 自主攻击框架的新颖手法 + 与近期多起政府入侵形成连续性，但细节仍未经官方完整确认故略降分。 原文链接：https://www.scworld.com/brief/usintelligenceandfinancialagenciesfacerecentcyberattacks 评分：86 / 100 来源：The Hacker News（20261125） 摘要：美国财政部金融犯罪执法网络（FinCEN）披露其部分系统遭\"未经授权访问\"，并已预防性下线部分系统。该机构负责收集全美银行的可疑活动报告（SAR）等《银行保密法》申报文件；为应对中断，官方将 11 月 18 日至 12 月 29 日到期的部分申报延长至 12 月 30 日。官方未说明入侵起始时间、数据是否被窃取或责任方，目前无组织认领；这是继 FBI NCIC 数据库之后又一美国联邦机构遭入侵。 评分理由：政府金融监管机构遭入侵并直接影响全美银行合规申报，与近期多起联邦机构事件叠加，影响面与关注度较高。 原文链接：https://thehackernews.com/2026/11/ustreasurysfincentakessomesystems.html 本次共筛选 15 条新闻，最高分 95 分。"
+ },
+ {
   "date": "2026-11-25",
   "url": "daily/daily_news_2026-11-25.html",
   "title": "网络安全日报 2026-11-25",

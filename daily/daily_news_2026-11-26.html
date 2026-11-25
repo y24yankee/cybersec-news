@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-26 | 网络安全新闻中心</title>
+<meta name="description" content="评分：95 / 100">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-26">
+<meta property="og:description" content="评分：95 / 100">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-26.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-26">
+<meta name="twitter:description" content="评分：95 / 100">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-26</h1>
+<h2 id="s1">Top 5 安全新闻</h2>
+<h3 id="s2">1. Hex.pm 遭 CVSS 10.0 满分 RCE 攻击，6 台生产服务器被攻陷</h3>
+<ul>
+<li><strong>评分</strong>：95 / 100</li>
+<li><strong>来源</strong>：The Hacker News（2026-11-25）</li>
+<li><strong>摘要</strong>：攻击者利用隐藏在 Hex.pm 请求解析器中近十年的漏洞 CVE-2026-129514（CVSS 10.0），于本周一在 6 台生产服务器上执行任意操作系统命令；该漏洞在路由与认证之前触发，一个未认证的 POST 请求即可利用。维护方在 15 分钟内完成全服务器补丁，核查未发现包被篡改，但无法排除邮箱、密码哈希与双因素密钥等账户数据被读取，已强制全体用户登出并要求重置密码与 2FA。作为 Elixir/Erlang 生态的核心包注册表，该事件构成典型的上游供应链风险。</li>
+<li><strong>评分理由</strong>：满分 CVSS 10.0 + 在野实打实的服务器沦陷 + 影响整个 Elixir/Erlang 软件供应链，严重性与影响范围均属顶级。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html</li>
+</ul>
+<h3 id="s3">2. 攻击者利用 GeoServer 双漏洞，研究人员警告可串联为未认证 RCE 攻击链</h3>
+<ul>
+<li><strong>评分</strong>：93 / 100</li>
+<li><strong>来源</strong>：The Hacker News（2026-11-25）</li>
+<li><strong>摘要</strong>：watchTowr 观察到攻击者正在利用 GeoServer 两个新修补漏洞 CVE-2026-120705（任意文件读取，CVSS 8.6）与 CVE-2026-129243（授权错误，CVSS 8.8），向服务器发送基于错误的探测请求以验证可利用性。Eye Security 与 Rapid7 研究人员指出，结合硬编码签名密钥漏洞 CVE-2026-129245（CVSS 9.2）可伪造管理员会话，再经 JDBC 反序列化执行任意代码，构成完整的未认证远程代码执行链。官方已发布 2.27.7 / 2.28.6 / 3.0.2 修复版本，敦促立即升级。</li>
+<li><strong>评分理由</strong>：在野利用 + 多漏洞串联成无需认证的 RCE + 全球大量暴露在外的地理空间服务器受影响，攻击链新颖且危害直接。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html</li>
+</ul>
+<h3 id="s4">3. Drupal「Fail2Install」严重 RCE 漏洞遭在野利用，CISA 紧急纳入 KEV</h3>
+<ul>
+<li><strong>评分</strong>：91 / 100</li>
+<li><strong>来源</strong>：The Hacker News（2026-11-25）</li>
+<li><strong>摘要</strong>：CISA 周二将 Drupal 核心漏洞 CVE-2026-132165（Fail2Install，CVSS 9.8）加入已知利用漏洞（KEV）目录，要求联邦机构在 11 月 27 日前完成修复。该漏洞源于安装器未能安全失败，攻击者可在特定条件下通过 install.php 重新安装 Drupal，从而在无需认证的情况下接管现有站点或执行任意代码；Searchlight Cyber 已披露技术细节与攻击者植入的 SQLite/PHP 载荷。这是三天内 Drupal 就同一安装器组件发布的第二则严重安全公告。</li>
+<li><strong>评分理由</strong>：CVSS 9.8 预认证 RCE 已确认在野利用并被 CISA 列入 KEV，全球 Drupal 站点面广，紧迫性极高。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html</li>
+</ul>
+<h3 id="s5">4. 美国 CIA 等多家情报机构非密系统疑遭 ARTEX AI 攻击框架入侵</h3>
+<ul>
+<li><strong>评分</strong>：88 / 100</li>
+<li><strong>来源</strong>：Bleeping Computer（经 SC World 交叉印证，2026-11-25）</li>
+<li><strong>摘要</strong>：据报道，不明攻击者入侵了美国中央情报局（CIA）、国家情报总监办公室（ODNI）与国家地理空间情报局（NGA）的开源情报（OSINT）分析系统，入侵疑似使用了开源 LLM 驱动的自主渗透测试框架 ARTEX。官员确认事件未波及机密数据或网络，但尚未披露入侵途径、受影响范围，也无组织认领。该事件与同期欧盟委员会 EU Academy 数据泄露（同样关联 ARTEX）共同显示，AI 驱动的自动化攻击框架正被多个威胁行为者用于攻破高价值目标。</li>
+<li><strong>评分理由</strong>：国家级情报机构目标 + AI 自主攻击框架的新颖手法 + 与近期多起政府入侵形成连续性，但细节仍未经官方完整确认故略降分。</li>
+<li><strong>原文链接</strong>：https://www.scworld.com/brief/us-intelligence-and-financial-agencies-face-recent-cyberattacks</li>
+</ul>
+<h3 id="s6">5. 美国财政部金融犯罪执法网络（FinCEN）遭入侵，部分系统下线</h3>
+<ul>
+<li><strong>评分</strong>：86 / 100</li>
+<li><strong>来源</strong>：The Hacker News（2026-11-25）</li>
+<li><strong>摘要</strong>：美国财政部金融犯罪执法网络（FinCEN）披露其部分系统遭"未经授权访问"，并已预防性下线部分系统。该机构负责收集全美银行的可疑活动报告（SAR）等《银行保密法》申报文件；为应对中断，官方将 11 月 18 日至 12 月 29 日到期的部分申报延长至 12 月 30 日。官方未说明入侵起始时间、数据是否被窃取或责任方，目前无组织认领；这是继 FBI NCIC 数据库之后又一美国联邦机构遭入侵。</li>
+<li><strong>评分理由</strong>：政府金融监管机构遭入侵并直接影响全美银行合规申报，与近期多起联邦机构事件叠加，影响面与关注度较高。</li>
+<li><strong>原文链接</strong>：https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条新闻，最高分 95 分。</p>
+<hr />
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-25.html">← 前一天 2026-11-25</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
