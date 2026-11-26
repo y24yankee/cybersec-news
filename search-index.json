@@ -1,5 +1,24 @@
 [
  {
+  "date": "2026-11-27",
+  "url": "daily/daily_news_2026-11-27.html",
+  "title": "网络安全日报 2026-11-27",
+  "score": 94,
+  "cves": [
+   "CVE-2026-103406",
+   "CVE-2026-109618",
+   "CVE-2026-109619",
+   "CVE-2026-133303",
+   "CVE-2026-133323",
+   "CVE-2026-133469",
+   "CVE-2026-46300",
+   "CVE-2026-99362",
+   "cve-2026-99362"
+  ],
+  "summary": "评分：94 / 100",
+  "text": "评分：94 / 100 来源：The Hacker News（20261126） 摘要：SafeDep 与 Apiiro 报告称，PolinRider 活动已被检测到出现在至少 7,609 个 GitHub 仓库、涉及 2,330 个账户，攻击者把 58 行 Python loader 藏在 utils 包或 conftest.py 中，开发者构建项目甚至仅在 VS Code 打开文件夹即可触发。loader 读取指定以太坊钱包最新交易，把交易输入数据解码为 JavaScript 交给 Node.js 执行，并从伪造钱包地址中解析 C2 IP（NullReceiver 技术），使得关停单一服务器无效——一笔新交易即可让所有 loader 转向新地址。该活动可追溯至 2025 年 2 月，是针对开发者机器、开源供应链与云环境的国家级持续投毒行动。 评分理由：国家级威胁行为者 + 区块链隐藏 C2 的新颖手法 + 7,600 余个仓库的庞大供应链影响面，三项评分维度均接近满分。 原文链接：https://thehackernews.com/2026/11/northkorealinkedpolinriderpoisons.html 评分：93 / 100 来源：Hacker News（20261126 上榜，166 分）/ OpenSec Intelligence 研究原文（20261125） 摘要：Linux 内核 NFS 服务端 nfsd 存在预认证堆溢出漏洞 CVE202699362（CVSS 9.8），客户端可把 NFSv4.1 回复缓存协商为 0 字节，诱使服务端把 80 字节 SEQUENCE 回复拷入零长度缓冲区，其中 61 字节越界、约 40 字节由攻击者控制。OpenSec 用其 Antara 研究框架独立完成了从越界写、泄露 3.8KB 内核堆绕过 KASLR、伪造释放与回调占位的完整链条，仅凭一个到 tcp/2049 的 TCP 连接即取得 root shell；漏洞自 2014 年 Linux 3.16 起存在，影响文件服务器、NAS、构建农场与 Kubernetes 存储节点。修复版本为 6.12.117 / 6.18.61 / 7.3.2 / 7.4rc1，利用代码目前未公开、暂无在野利用报告，管理员应打补丁并重启，或先限制 2049 端口访问。 评分理由：CVSS 9.8 预认证远程 root + 潜伏 12 年的基础设施级影响面 + AI 自主完成利用链的新颖性，仅因暂无在野利用略降分。 原文链接：https://opensec.in/blog/nfs2rootcve202699362 （HN 讨论：https://news.ycombinator.com/item?id=50647161 ） 评分：91 / 100 来源：The Hacker News / Bleeping Computer / Hacker News（1500 分，20261126） 摘要：1Password 披露 11 月 19 日起一名员工的公司 GitHub 账户被攻陷，攻击者借该身份进入私有代码仓库并向后端服务推送恶意代码，下载了部分客户的姓名、邮箱、账户与用户标识、公钥、SRP 协议参数以及邀请/配置/账户恢复邮件中的令牌，同时复制了源代码并进入 CI/CD 系统。公司强调密码库内容、密钥、账户恢复密钥均未被访问，受影响用户为少数且已单独通知；目前已禁用涉事账户、吊销令牌、恢复干净服务版本并把邮件验证码从 6 位升至 10 位字符。实际风险集中在针对已知 1Password 用户的定向钓鱼。 评分理由：密码管理器这类高信任目标被供应链路径攻破，牵涉真实客户数据与 CI/CD 访问，且当日 HN 热度极高（1500 分）。 原文链接：https://thehackernews.com/2026/11/1passwordhackedcustomerdataand.html （官方公告：https://1password.com/blog/updateonnov2026securityincident ；BC 报道：https://www.bleepingcomputer.com/news/security/1passwordcustomerdatastolenafteremployeegithubaccountbreach/ ） 评分：90 / 100 来源：Bleeping Computer（20261126） 摘要：Palo Alto Networks 在 PANSA20260015 公告中确认，攻击者正把 PHP2Shell（CVE2026109618 / CVE2026109619，未认证 RCE）与 Linux 内核 XFRM ESPinTCP 提权漏洞 Fragnesia（CVE202646300）串成攻击链，针对互联网暴露的 PANOS 管理接口投放 PHP webshell 并以 root 执行命令。厂商称所有观察到的利用都发生在管理面暴露于公网的设备上，且 PHP2Shell 是在 PANOS 上利用 Fragnesia 的唯一已知路径；CISA 早在 10 月 28 日就警告过该链条，Dream Security 曾在美、日、韩及中国台湾地区发现受害者。修复已覆盖 PANOS 10.2 / 11.1 / 11.2 / 12.1 / 12.2 五个分支，最优先的缓解是把管理接口从公网撤下并限制为可信内网地址。 评分理由：厂商首次确认自家防火墙产品在野遭漏洞链利用并可直接拿到 root，暴露面明确、修复读紧迫。 原文链接：https://www.bleepingcomputer.com/news/security/paloaltonetworkswarnsoffragnesiaflawexploitedinpanosattacks/ （交叉印证：https://protect.computer/news/20261126panosfragnesiaphp2shellchain ） 评分：89 / 100 来源：The Hacker News / CISA（20261125 发布，1126 报道） 摘要：CISA 于 11 月 25 日把 10 个已遭利用的漏洞加入 KEV 目录，其中 5 个影响 Mitel MiCollab 音视频会议组件，包括 CVSS 10.0 的命令注入 CVE2026133323 与 9.0 的 XML 注入 CVE2026133303。Accenture Apex Labs 发现某受害者在补丁发布前一天即被植入 webshell，攻击者首个请求后 12 分钟执行命令、30 分钟取得 MiCollab 服务器 root、32 分钟用 LDAP 连接器凭据登录域控，怀疑为 AI 辅助的数据窃取行动；另有 Vates Xen Orchestra 认证绕过（CVE2026133469，9.8）、HPE Juniper Session Smart 未认证 root 命令注入（CVE2026103406，9.8）及 3 个 Danfoss 制冷控制器漏洞。联邦机构需在 11 月 28 日前修复其中 8 项。 评分理由：单批次 10 个在野漏洞 + 含满分 RCE 与 0day 预补丁利用 + 30 分钟内从入口到域控的完整攻击速度，威胁紧迫度高。 原文链接：https://thehackernews.com/2026/11/hackersexploit10vulnerabilities.html （CISA 原始公告：https://www.cisa.gov/newsevents/alerts/2026/11/25/cisaadds10knownexploitedvulnerabilitiescatalog ） 本次共筛选 15 条新闻，最高分 94 分。"
+ },
+ {
   "date": "2026-11-26",
   "url": "daily/daily_news_2026-11-26.html",
   "title": "网络安全日报 2026-11-26",

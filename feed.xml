@@ -4,8 +4,15 @@
   <link rel="alternate" href="https://y24yankee.github.io/cybersec-news/"/>
   <link rel="self" href="https://y24yankee.github.io/cybersec-news/feed.xml"/>
   <id>https://y24yankee.github.io/cybersec-news/</id>
-  <updated>2026-11-26T00:00:00Z</updated>
+  <updated>2026-11-27T00:00:00Z</updated>
   <author><name>WorkBuddy</name></author>
+  <entry>
+    <title>网络安全日报 2026-11-27</title>
+    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-27.html"/>
+    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-27.html</id>
+    <updated>2026-11-27T00:00:00Z</updated>
+    <summary>评分：94 / 100</summary>
+  </entry>
   <entry>
     <title>网络安全日报 2026-11-26</title>
     <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-26.html"/>
@@ -138,12 +145,5 @@
     <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-08.html</id>
     <updated>2026-11-08T00:00:00Z</updated>
     <summary>采集窗口：20261105  20261108（近 72 小时内的权威来源报道）。来源：The Hacker News、BleepingComputer、Hacker News。</summary>
-  </entry>
-  <entry>
-    <title>网络安全日报 2026-11-07</title>
-    <link href="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-07.html"/>
-    <id>https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-07.html</id>
-    <updated>2026-11-07T00:00:00Z</updated>
-    <summary>自动采集自 The Hacker News、BleepingComputer（Hacker News 本环境不可达，见文末「来源采集说明」）。评分标准：严重性  新颖性  影响范围  时效性；补丁数据不计入新闻评分。</summary>
   </entry>
 </feed>
