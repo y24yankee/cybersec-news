@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-28",
+  "url": "daily/daily_news_2026-11-28.html",
+  "title": "网络安全日报 2026-11-28",
+  "score": 95,
+  "cves": [],
+  "summary": "数据来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时）；补丁板块数据源：微软 MSRC CVRF v3.0 公共 API。",
+  "text": "数据来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时）；补丁板块数据源：微软 MSRC CVRF v3.0 公共 API。 评分：95/100 来源： The Hacker News（20261127） 摘要： 研究员 ek0ms savi0r 披露 Cacti Core 1.2.31 的零日利用链，从全新未认证会话出发，仅 4 个 HTTP 请求即可执行任意命令，全程无需登录、API Key 或钓鱼。攻击链结合访客可写数值参数、二阶 SQL 注入、LIMIT 子句堆叠语句与 poller 直接拼接 popen() 执行数据库存储命令四大缺陷；Cacti 常存有路由器、交换机、服务器凭据，被攻陷后可作为横向移动到整个监控网络的跳板。目前尚无 CVE 编号与官方补丁，临时缓解为禁用访客账户并限制 Web 界面访问。 评分理由： 未认证 RCE + 潜在 root + 二阶 SQLi/popen 新颖利用链 + 无补丁，且 Cacti 在企业与 ISP 中部署广泛，严重性、新颖性与影响范围全部拉满。 原文链接： https://thehackernews.com/2026/11/unpatchedcactizerodayenablesrcein.html 评分：92/100 来源： The Hacker News（20261127，引述 AhnLab） 摘要： 攻击者污染了 SoftwareOK 官网分发的 Windows 工具 QDir 与 DesktopOK 安装程序，证据显示不仅直接下载被篡改，已安装程序的更新过程同样被劫持。确认受影响的版本包括 QDir 12.83/12.84/12.85.0.0 与 DesktopOK 12.82/12.85.0.0：恶意包在运行正常程序的同时从外部服务器下载 Python RAT，可执行 Shell/Python 代码、传文件、截屏并收集系统信息，还伪装成 Microsoft Edge 创建计划任务持久化。AhnLab 提醒单纯卸载重装无法清除已植入的 RAT，需核验哈希、排查可疑 Python 环境并全盘查杀。 评分理由： 官方下载与更新双渠道被污染的敏感供应链攻击，威胁常具高权限的 IT 管理员工作站，隐蔽性强、影响面大。 原文链接： https://thehackernews.com/2026/11/hackerstrojanizeofficialqdirand.html 评分：90/100 来源： Bleeping Computer / SecurityWeek（20261127） 摘要： SAP 证实其开发环境出现异常活动并采取保护措施，德国《明镜》援引内部通知称，攻击者窃取了员工认证令牌，得以在 GitHub 上复制并篡改源代码。据 Handelsblatt 报道，SAP 已更换签名密钥、限制 GitHub 访问并暂停自动化开发流程；公司称暂未发现客户业务数据被未授权访问，也不确定是否触及专有代码。消息人士称攻击可能受 AI 辅助，但尚未证实，另一起勒索团伙本月早些时候将 SAP 列入泄露站点，两起事件疑似无关。 评分理由： 全球大型企业软件巨头的源代码供应链被入侵，涉及令牌失窃、代码篡改与签名密钥更换，潜在下游影响广泛。 原文链接： https://www.securityweek.com/sapconfirmscyberattacksourcecodereportedlycompromised/ （Bleeping Computer 同题报道：https://www.bleepingcomputer.com/news/security/sapconfirmssecurityincidentaftersuspiciousgithubactivity/ ） 评分：88/100 来源： The Hacker News（20261127） 摘要： 瑞士国家网络安全中心披露，该国确认的 5 起 AI 代理发起的攻击中 4 起成功突破受害者 IT 系统，其中 3 起针对关键基础设施运营商、2 起得手，为全国首例。攻击使用可自主发现弱点并发起攻击的\"攻击性代理框架\"，能并行扫描未修补漏洞、遇阻即变换手法，显著压缩检测与响应时间。意大利 CSIRT、英国 NCSC 同期发出同类预警，指出 AI 辅助攻击自 2026 年 9 月起明显上升，欧盟委员会此前亦确认遭 ARTEX 入侵。 评分理由： 国家级机构首次正式确认 AI 代理攻陷关键基础设施，叠加多国同步预警，代表威胁态势的结构性转变，新颖性与严重性突出。 原文链接： https://thehackernews.com/2026/11/switzerlandconfirmsaiassisted.html 评分：86/100 来源： The Hacker News（20261127，引述 eSentire） 摘要： 攻击者通过伪造截图工具下载站诱导用户安装微软商店中由 ETPS Ltd 发布的 Electron 应用\"Setup Assistant\"，该签名应用实为后门，可联系 C2 下发混淆的 PowerShell/JavaScript。其最终载荷为此前未记录的 Vinci RAT，能指纹识别主机、枚举安全工具、开启远程/反向 Shell、执行 Shellcode/DLL/EXE，并通过禁用 AMSI、每 10 分钟运行的计划任务实现持久化。eSentire 称 11 月 10 日已上报滥用表单却被告知\"不违反条款\"，该应用目前已从商店下架。 评分理由： 滥用微软商店这一可信分发渠道投递新型 RAT，配合搜索劫持与 AMSI 绕过，攻击链的隐蔽性与持久化能力强。 原文链接： https://thehackernews.com/2026/11/microsoftstoreappfounddelivering.html 本次共筛选 15 条新闻，最高分 95 分。"
+ },
+ {
   "date": "2026-11-27",
   "url": "daily/daily_news_2026-11-27.html",
   "title": "网络安全日报 2026-11-27",

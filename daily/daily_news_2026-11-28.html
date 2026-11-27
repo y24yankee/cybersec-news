@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全日报 2026-11-28 | 网络安全新闻中心</title>
+<meta name="description" content="数据来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时）；补丁板块数据源：微软 MSRC CVRF v3.0 公共 API。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="网络安全新闻中心">
+<meta property="og:title" content="网络安全日报 2026-11-28">
+<meta property="og:description" content="数据来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时）；补丁板块数据源：微软 MSRC CVRF v3.0 公共 API。">
+<meta property="og:url" content="https://y24yankee.github.io/cybersec-news/daily/daily_news_2026-11-28.html">
+<meta property="og:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="网络安全日报 2026-11-28">
+<meta name="twitter:description" content="数据来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时）；补丁板块数据源：微软 MSRC CVRF v3.0 公共 API。">
+<meta name="twitter:image" content="https://y24yankee.github.io/cybersec-news/og-default.png">
+
+<style>
+:root{
+  --bg:#0b1120; --card:#111827; --card-border:#1f2937;
+  --text:#f3f4f6; --muted:#9ca3af; --accent:#3b82f6;
+  --accent-soft:rgba(59,130,246,.15); --gold:#fbbf24;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:12px;
+  padding:14px 24px;background:rgba(11,17,32,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--card-border)}
+.topbar .brand{font-weight:800;letter-spacing:.5px}
+.topbar .brand .shield{color:var(--accent)}
+.topbar .spacer{flex:1}
+.topbar .home{font-size:14px;color:var(--muted)}
+.wrap{max-width:900px;margin:0 auto;padding:32px 24px 64px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;margin-top:24px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:32px 0 12px;color:#e5e7eb}
+h3{font-size:17px;margin:24px 0 8px;color:#e5e7eb}
+blockquote{margin:14px 0;padding:10px 16px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--muted);border-radius:0 8px 8px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--card-border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#0f172a;color:#cbd5e1;font-weight:700}
+tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+hr{border:none;border-top:1px solid var(--card-border);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul,ol{padding-left:22px}
+code{background:#0f172a;padding:2px 6px;border-radius:6px;font-size:13px}
+footer{color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.daynav{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;
+  padding:14px 24px;background:rgba(17,24,39,.6);border-top:1px solid var(--card-border);font-size:14px}
+.daynav a{color:#cbd5e1;text-decoration:none;padding:7px 14px;border-radius:10px;
+  border:1px solid var(--card-border);transition:all .15s}
+.daynav a:hover{border-color:var(--accent);color:#fff}
+.daynav .dn-home{color:#9ca3af}
+.daynav .dn-disabled{opacity:.35;pointer-events:none;border-style:dashed}
+.toc{background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+  padding:16px 20px;margin:0 0 24px}
+.toc h4{margin:0 0 10px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.5px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:5px 0}
+.toc a{color:#cbd5e1}
+.toc a:hover{color:#fff}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:9px 16px;border-radius:0 0 10px 0;z-index:100;font-size:14px}
+.skip:focus{left:12px;top:12px;text-decoration:none}
+a:focus-visible,input:focus-visible,button:focus-visible,
+.row-main:focus-visible,.rcard:focus-visible,.totop:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;padding:9px 15px;
+  border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,.45);z-index:20}
+.totop:hover{text-decoration:none;opacity:.9}
+/* ---- Mobile responsive (< 640px) ---- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:10px 12px}
+  .topbar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .topbar .brand{font-size:15px;flex-basis:100%}
+  .topbar .search{flex:1 1 100%!important;min-width:0!important;order:3}
+  .topbar .home{font-size:12px;order:2}
+  .topbar .rss{order:4;font-size:12px}
+  .row{padding:10px 12px;gap:8px}
+  .row .date{min-width:0;font-size:13px;flex-shrink:0}
+  .row .desc{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row-main{gap:6px}
+  .tag-week{font-size:11px;padding:1px 5px;flex-shrink:0}
+  .score{font-size:11px;padding:1px 6px;flex-shrink:0}
+  h1{font-size:22px}
+  .section-title h2{font-size:18px}
+  .section-title .count{font-size:12px}
+  .hero{padding:16px 14px}
+  .hero h2{font-size:18px}
+  .results .rcard{padding:10px 12px}
+  .results .rcard .rtitle{font-size:15px}
+  .totop{right:12px;bottom:12px;padding:7px 12px;font-size:12px}
+  .grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="shield">🛡️</span> 网络安全新闻中心</span>
+  <span class="spacer"></span>
+  <a class="home" href="../index.html">← 返回首页</a>
+</div>
+<div class="wrap">
+  <article class="card">
+<h1>网络安全日报 2026-11-28</h1>
+<blockquote>
+<p>数据来源：Hacker News、The Hacker News、Bleeping Computer（过去 24 小时）；补丁板块数据源：微软 MSRC CVRF v3.0 公共 API。</p>
+</blockquote>
+<hr />
+<h2 id="s1">Top 5 网络安全新闻</h2>
+<h3 id="s2">1. Cacti 未修复零日 4HTTP2SHELL：4 个 HTTP 请求即可未认证拿到 RCE，可提至 root</h3>
+<ul>
+<li><strong>评分：95/100</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-27）</li>
+<li><strong>摘要：</strong> 研究员 ek0ms savi0r 披露 Cacti Core 1.2.31 的零日利用链，从全新未认证会话出发，仅 4 个 HTTP 请求即可执行任意命令，全程无需登录、API Key 或钓鱼。攻击链结合访客可写数值参数、二阶 SQL 注入、LIMIT 子句堆叠语句与 poller 直接拼接 popen() 执行数据库存储命令四大缺陷；Cacti 常存有路由器、交换机、服务器凭据，被攻陷后可作为横向移动到整个监控网络的跳板。目前尚无 CVE 编号与官方补丁，临时缓解为禁用访客账户并限制 Web 界面访问。</li>
+<li><strong>评分理由：</strong> 未认证 RCE + 潜在 root + 二阶 SQLi/popen 新颖利用链 + 无补丁，且 Cacti 在企业与 ISP 中部署广泛，严重性、新颖性与影响范围全部拉满。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html</li>
+</ul>
+<h3 id="s3">2. Q-Dir 与 DesktopOK 官方安装包遭投毒，投递 Python 远控木马</h3>
+<ul>
+<li><strong>评分：92/100</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-27，引述 AhnLab）</li>
+<li><strong>摘要：</strong> 攻击者污染了 SoftwareOK 官网分发的 Windows 工具 Q-Dir 与 DesktopOK 安装程序，证据显示不仅直接下载被篡改，已安装程序的更新过程同样被劫持。确认受影响的版本包括 Q-Dir 12.83/12.84/12.85.0.0 与 DesktopOK 12.82/12.85.0.0：恶意包在运行正常程序的同时从外部服务器下载 Python RAT，可执行 Shell/Python 代码、传文件、截屏并收集系统信息，还伪装成 Microsoft Edge 创建计划任务持久化。AhnLab 提醒单纯卸载重装无法清除已植入的 RAT，需核验哈希、排查可疑 Python 环境并全盘查杀。</li>
+<li><strong>评分理由：</strong> 官方下载与更新双渠道被污染的敏感供应链攻击，威胁常具高权限的 IT 管理员工作站，隐蔽性强、影响面大。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/hackers-trojanize-official-q-dir-and.html</li>
+</ul>
+<h3 id="s4">3. SAP 确认遭入侵，黑客疑窃取并篡改 GitHub 源代码</h3>
+<ul>
+<li><strong>评分：90/100</strong></li>
+<li><strong>来源：</strong> Bleeping Computer / SecurityWeek（2026-11-27）</li>
+<li><strong>摘要：</strong> SAP 证实其开发环境出现异常活动并采取保护措施，德国《明镜》援引内部通知称，攻击者窃取了员工认证令牌，得以在 GitHub 上复制并篡改源代码。据 Handelsblatt 报道，SAP 已更换签名密钥、限制 GitHub 访问并暂停自动化开发流程；公司称暂未发现客户业务数据被未授权访问，也不确定是否触及专有代码。消息人士称攻击可能受 AI 辅助，但尚未证实，另一起勒索团伙本月早些时候将 SAP 列入泄露站点，两起事件疑似无关。</li>
+<li><strong>评分理由：</strong> 全球大型企业软件巨头的源代码供应链被入侵，涉及令牌失窃、代码篡改与签名密钥更换，潜在下游影响广泛。</li>
+<li><strong>原文链接：</strong> https://www.securityweek.com/sap-confirms-cyberattack-source-code-reportedly-compromised/ （Bleeping Computer 同题报道：https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/ ）</li>
+</ul>
+<h3 id="s5">4. 瑞士首次确认 AI 代理攻击成功入侵关键基础设施运营商</h3>
+<ul>
+<li><strong>评分：88/100</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-27）</li>
+<li><strong>摘要：</strong> 瑞士国家网络安全中心披露，该国确认的 5 起 AI 代理发起的攻击中 4 起成功突破受害者 IT 系统，其中 3 起针对关键基础设施运营商、2 起得手，为全国首例。攻击使用可自主发现弱点并发起攻击的"攻击性代理框架"，能并行扫描未修补漏洞、遇阻即变换手法，显著压缩检测与响应时间。意大利 CSIRT、英国 NCSC 同期发出同类预警，指出 AI 辅助攻击自 2026 年 9 月起明显上升，欧盟委员会此前亦确认遭 ARTEX 入侵。</li>
+<li><strong>评分理由：</strong> 国家级机构首次正式确认 AI 代理攻陷关键基础设施，叠加多国同步预警，代表威胁态势的结构性转变，新颖性与严重性突出。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html</li>
+</ul>
+<h3 id="s6">5. 微软商店应用被用作后门，投递未记录的 Vinci RAT 可远程控制主机</h3>
+<ul>
+<li><strong>评分：86/100</strong></li>
+<li><strong>来源：</strong> The Hacker News（2026-11-27，引述 eSentire）</li>
+<li><strong>摘要：</strong> 攻击者通过伪造截图工具下载站诱导用户安装微软商店中由 ETPS Ltd 发布的 Electron 应用"Setup Assistant"，该签名应用实为后门，可联系 C2 下发混淆的 PowerShell/JavaScript。其最终载荷为此前未记录的 Vinci RAT，能指纹识别主机、枚举安全工具、开启远程/反向 Shell、执行 Shellcode/DLL/EXE，并通过禁用 AMSI、每 10 分钟运行的计划任务实现持久化。eSentire 称 11 月 10 日已上报滥用表单却被告知"不违反条款"，该应用目前已从商店下架。</li>
+<li><strong>评分理由：</strong> 滥用微软商店这一可信分发渠道投递新型 RAT，配合搜索劫持与 AMSI 绕过，攻击链的隐蔽性与持久化能力强。</li>
+<li><strong>原文链接：</strong> https://thehackernews.com/2026/11/microsoft-store-app-found-delivering.html</li>
+</ul>
+<hr />
+<p>本次共筛选 15 条新闻，最高分 95 分。</p>
+  </article>
+  <footer>本页由自动化采集生成 · 仅供安全研究参考</footer>
+</div>
+<nav class="daynav" aria-label="日报导航">
+  <a class="dn-prev" href="daily_news_2026-11-27.html">← 前一天 2026-11-27</a>
+  <a class="dn-home" href="../index.html">🏠 首页</a>
+  <span class="dn-disabled">后一天 →</span>
+</nav>
+
+<a class="totop" href="#top">↑ 顶部</a>
+<script>
+document.querySelectorAll('a.totop').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
